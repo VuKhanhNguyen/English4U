@@ -1,0 +1,28 @@
+{
+  "book": "Destination B2",
+  "units": [
+    {
+      "id": "b2-unit-1",
+      "title": "Unit 1: Present time",
+      "grammar": [
+        {
+          "structure": "Present perfect",
+          "usage": "Past action with present result",
+          "example": "I have finished my homework."
+        }
+      ],
+      "vocabulary": [
+        {
+          "word": "Fascinate",
+          "type": "verb",
+          "meaning": "To attract strongly",
+          "example": "The subject fascinates me."
+        }
+      ],
+      "wordFormation": [],
+      "wordPatterns": [],
+      "phrasalVerbs": [],
+      "collocations": []
+    }
+  ]
+}

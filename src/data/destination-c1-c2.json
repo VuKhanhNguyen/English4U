@@ -1,0 +1,28 @@
+{
+  "book": "Destination C1 & C2",
+  "units": [
+    {
+      "id": "c1-unit-1",
+      "title": "Unit 1: Advanced grammar",
+      "grammar": [
+        {
+          "structure": "Inversion",
+          "usage": "Emphasis in formal English",
+          "example": "Seldom do we see such things."
+        }
+      ],
+      "vocabulary": [
+        {
+          "word": "Ubiquitous",
+          "type": "adjective",
+          "meaning": "Present everywhere",
+          "example": "Smartphones are ubiquitous."
+        }
+      ],
+      "wordFormation": [],
+      "wordPatterns": [],
+      "phrasalVerbs": [],
+      "collocations": []
+    }
+  ]
+}

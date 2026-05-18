@@ -1,0 +1,74 @@
+{
+  "book": "Destination B1",
+  "units": [
+    {
+      "id": "b1-unit-1",
+      "title": "Unit 1: Present time",
+      "grammar": [
+        {
+          "structure": "Present simple",
+          "usage": "Facts, habits, routines, schedules",
+          "example": "I study English every day."
+        },
+        {
+          "structure": "Present continuous",
+          "usage": "Actions happening now, temporary situations",
+          "example": "I am studying English right now."
+        }
+      ],
+      "vocabulary": [
+        {
+          "word": "Baffle",
+          "type": "verb",
+          "meaning": "To confuse completely",
+          "example": "The question baffled me."
+        }
+      ],
+      "wordFormation": [
+        {
+          "word": "Care",
+          "type": "noun/verb",
+          "meaning": "Attention or thought",
+          "example": "careful, careless, carelessly"
+        }
+      ],
+      "wordPatterns": [
+        {
+          "verb": "Decide",
+          "pattern": "decide to do",
+          "example": "I decided to learn English."
+        }
+      ],
+      "phrasalVerbs": [
+        {
+          "phrasalVerb": "Give up",
+          "meaning": "To stop trying",
+          "example": "Never give up learning."
+        }
+      ],
+      "collocations": [
+        {
+          "word": "Attention",
+          "collocation": "Pay attention (to)",
+          "meaning": "To focus on something"
+        }
+      ]
+    },
+    {
+      "id": "b1-unit-2",
+      "title": "Unit 2: Past time",
+      "grammar": [
+        {
+          "structure": "Past simple",
+          "usage": "Completed actions in the past",
+          "example": "I went to the store."
+        }
+      ],
+      "vocabulary": [],
+      "wordFormation": [],
+      "wordPatterns": [],
+      "phrasalVerbs": [],
+      "collocations": []
+    }
+  ]
+}
