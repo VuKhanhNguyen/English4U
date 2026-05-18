@@ -4,9 +4,9 @@ import { LearningExplorerSection } from "@/components/sections/learning-explorer
 import { notFound } from "next/navigation";
 
 interface DestinationPageProps {
-  params: {
+  params: Promise<{
     level: string;
-  };
+  }>;
 }
 
 export function generateStaticParams() {
@@ -17,8 +17,9 @@ export function generateStaticParams() {
   ];
 }
 
-export default function DestinationPage({ params }: DestinationPageProps) {
-  const { level } = params;
+export default async function DestinationPage({ params }: DestinationPageProps) {
+  const resolvedParams = await params;
+  const { level } = resolvedParams;
 
   // Validate path parameter
   if (level !== "b1" && level !== "b2" && level !== "c1-c2") {

@@ -37,7 +37,7 @@ export function Navbar() {
         {/* Desktop Nav */}
         <nav className="hidden md:flex items-center gap-8">
           <Link
-            href="#about"
+            href="/#about"
             className="text-sm font-medium hover:text-accent-green transition-colors"
           >
             About
@@ -91,13 +91,13 @@ export function Navbar() {
             </AnimatePresence>
           </div>
           <Link
-            href="#resources"
+            href="/#resources"
             className="text-sm font-medium hover:text-accent-green transition-colors"
           >
             Resources
           </Link>
           <Link
-            href="#contact"
+            href="/#contact"
             className="text-sm font-medium hover:text-accent-green transition-colors"
           >
             Contact
