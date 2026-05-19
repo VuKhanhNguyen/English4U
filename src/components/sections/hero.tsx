@@ -4,10 +4,22 @@ import * as React from "react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 
-export function HeroSection() {
-  const text1 = "Master English";
-  const text2 = "Grammar & Vocabulary";
-  const text3 = "Learn Destination B1, B2, C1 & C2 with structured grammar tables, vocabulary systems, word formation, collocations, and phrasal verbs.";
+export interface HeroSectionProps {
+  hideButtons?: boolean;
+  title1?: string;
+  title2?: string;
+  subtitle?: string;
+}
+
+export function HeroSection({
+  hideButtons = false,
+  title1 = "Master English",
+  title2 = "Grammar & Vocabulary",
+  subtitle = "Learn Destination B1, B2, C1 & C2 with structured grammar tables, vocabulary systems, word formation, collocations, and phrasal verbs.",
+}: HeroSectionProps = {}) {
+  const text1 = title1;
+  const text2 = title2;
+  const text3 = subtitle;
 
   const [t1, setT1] = React.useState("");
   const [t2, setT2] = React.useState("");
@@ -127,20 +139,24 @@ export function HeroSection() {
       <div className="absolute bottom-20 right-10 w-48 h-48 border-2 border-canvas-white/40 rounded-[40px] rotate-12 opacity-50 blur-sm z-[2] pointer-events-none" />
 
       <div className="container mx-auto px-6 relative z-10 flex flex-col items-center text-center">
-        <h1 className="text-display-sm md:text-display lg:text-display-lg font-bold leading-[1.14] tracking-[-1.344px] text-midnight-ink max-w-4xl min-h-[2.3em] md:min-h-[2.3em]">
+        <h1 className={`text-display-sm md:text-display lg:text-display-lg font-bold leading-[1.14] tracking-[-1.344px] text-midnight-ink max-w-4xl ${text2 ? 'min-h-[2.3em] md:min-h-[2.3em]' : 'min-h-[1.2em] md:min-h-[1.2em]'}`}>
           <span>
             {t1}
             {hasStarted && (phase === "typing-1" || phase === "deleting-1") && (
               <span className="animate-pulse inline-block ml-0.5 font-light text-accent-green">|</span>
             )}
           </span>
-          <br />
-          <span>
-            {t2}
-            {hasStarted && (phase === "typing-2" || phase === "deleting-2") && (
-              <span className="animate-pulse inline-block ml-0.5 font-light text-accent-green">|</span>
-            )}
-          </span>
+          {text2 && (
+            <>
+              <br />
+              <span>
+                {t2}
+                {hasStarted && (phase === "typing-2" || phase === "deleting-2") && (
+                  <span className="animate-pulse inline-block ml-0.5 font-light text-accent-green">|</span>
+                )}
+              </span>
+            </>
+          )}
         </h1>
 
         <p className="mt-6 text-subheading md:text-heading-sm font-medium text-[#111111] max-w-2xl min-h-[4.5em] md:min-h-[3.5em]">
@@ -152,22 +168,24 @@ export function HeroSection() {
           </span>
         </p>
 
-        <motion.div
-          className="mt-10 flex flex-col sm:flex-row gap-4"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 3.5, ease: "easeOut" }}
-        >
-          <Button variant="primary" className="h-[48px] px-8 text-base">
-            Explore Destination B1
-          </Button>
-          <Button
-            variant="ghost"
-            className="h-[48px] px-8 text-base bg-canvas-white"
+        {!hideButtons && (
+          <motion.div
+            className="mt-10 flex flex-col sm:flex-row gap-4"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 3.5, ease: "easeOut" }}
           >
-            Start Learning
-          </Button>
-        </motion.div>
+            <Button variant="primary" className="h-[48px] px-8 text-base">
+              Explore Destination B1
+            </Button>
+            <Button
+              variant="ghost"
+              className="h-[48px] px-8 text-base bg-canvas-white"
+            >
+              Start Learning
+            </Button>
+          </motion.div>
+        )}
       </div>
     </section>
   );

@@ -29,10 +29,12 @@ const books = [b1Data, b2Data, c1c2Data];
 
 interface LearningExplorerSectionProps {
   bookLevel?: "b1" | "b2" | "c1-c2";
+  hideHeader?: boolean;
 }
 
 export function LearningExplorerSection({
   bookLevel,
+  hideHeader = false,
 }: LearningExplorerSectionProps = {}) {
   const levelMap = {
     b1: 0,
@@ -63,21 +65,23 @@ export function LearningExplorerSection({
   };
 
   return (
-    <section className="py-64 bg-pale-ash ">
+    <section className="py-16 md:py-24 bg-pale-ash">
       <div className="container mx-auto px-6">
         <div className="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
-          <div>
-            <h2 className="text-display-sm font-bold tracking-tight text-midnight-ink mb-4">
-              Learning Explorer
-            </h2>
-            <p className="text-body text-[#737373] max-w-xl">
-              Dive deep into the structured content. Expand a unit, select a
-              category, and use the search to quickly find specific rules or
-              vocabulary.
-            </p>
-          </div>
+          {!hideHeader && (
+            <div>
+              <h2 className="text-display-sm font-bold tracking-tight text-midnight-ink mb-4">
+                Learning Explorer
+              </h2>
+              <p className="text-body text-[#737373] max-w-xl">
+                Dive deep into the structured content. Expand a unit, select a
+                category, and use the search to quickly find specific rules or
+                vocabulary.
+              </p>
+            </div>
+          )}
 
-          <div className="w-full md:w-[300px] relative">
+          <div className="w-full md:w-[300px] relative ml-auto">
             <Search className="absolute left-3 top-1/2 -translate-y-1/2 text-[#737373] w-[16px] h-[16px]" />
             <Input
               placeholder="Search grammar, vocabulary..."
