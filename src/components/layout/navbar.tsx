@@ -25,7 +25,7 @@ export function Navbar() {
   return (
     <header className="fixed top-4 left-0 right-0 z-50 px-4 md:px-8 pointer-events-none">
       <div
-        className={`mx-auto max-w-6xl w-full h-[64px] flex items-center justify-between px-6 rounded-full border border-charcoal-border bg-canvas-white/90 backdrop-blur-md shadow-subtle transition-all duration-300 pointer-events-auto`}
+        className={`mx-auto max-w-6xl w-full h-[64px] flex items-center justify-between px-6 rounded-full border border-charcoal-border bg-canvas-white/70 backdrop-blur-xl shadow-subtle transition-all duration-300 pointer-events-auto`}
       >
         <Link
           href="/"
@@ -63,7 +63,7 @@ export function Navbar() {
                   animate={{ opacity: 1, y: 0, scale: 1 }}
                   exit={{ opacity: 0, y: 10, scale: 0.95 }}
                   transition={{ duration: 0.15, ease: "easeOut" }}
-                  className="absolute left-0 top-full min-w-[160px] bg-canvas-white border border-charcoal-border rounded-md shadow-subtle-2 p-2 z-50 mt-2"
+                  className="absolute left-0 top-full min-w-[160px] bg-canvas-white/70 backdrop-blur-xl border border-charcoal-border rounded-md shadow-subtle-2 p-2 z-50 mt-2"
                 >
                   <Link
                     href="/destination/b1"
@@ -121,7 +121,7 @@ export function Navbar() {
                 animate={{ opacity: 1, y: 0, scale: 1 }}
                 exit={{ opacity: 0, y: 10, scale: 0.95 }}
                 transition={{ duration: 0.15, ease: "easeOut" }}
-                className="absolute right-0 top-full min-w-[220px] bg-canvas-white border border-charcoal-border rounded-md shadow-subtle-2 p-3 z-50 mt-2 flex flex-col gap-3 pointer-events-auto"
+                className="absolute right-0 top-full min-w-[220px] bg-canvas-white/70 backdrop-blur-xl border border-charcoal-border rounded-md shadow-subtle-2 p-3 z-50 mt-2 flex flex-col gap-3 pointer-events-auto"
               >
                 {/* Dark/Light mode toggle */}
                 <div className="flex items-center justify-between">

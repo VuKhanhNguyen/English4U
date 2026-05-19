@@ -66,7 +66,7 @@ export function LearningExplorerSection({
 
   return (
     <section className="py-16 md:py-24 bg-pale-ash">
-      <div className="container mx-auto px-6">
+      <div className="max-w-6xl mx-auto px-6 md:px-12 lg:px-16">
         <div className="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
           {!hideHeader && (
             <div>
@@ -85,7 +85,7 @@ export function LearningExplorerSection({
             <Search className="absolute left-3 top-1/2 -translate-y-1/2 text-[#737373] w-[16px] h-[16px]" />
             <Input
               placeholder="Search grammar, vocabulary..."
-              className="pl-9 bg-canvas-white"
+              className="pl-9 bg-canvas-white/70 backdrop-blur-md"
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
             />
@@ -109,7 +109,7 @@ export function LearningExplorerSection({
             </Tabs>
           </div>
         ) : (
-          <div className="mb-8 p-6 bg-canvas-white border border-charcoal-border rounded-lg shadow-subtle flex items-center justify-between">
+          <div className="mb-8 p-6 bg-canvas-white/70 backdrop-blur-xl border border-charcoal-border rounded-lg shadow-subtle flex items-center justify-between">
             <div>
               <span className="text-xs font-bold uppercase tracking-wider text-accent-green bg-midnight-ink px-3 py-1 rounded-full border border-charcoal-border">
                 {activeBook.book}
@@ -130,7 +130,7 @@ export function LearningExplorerSection({
         )}
 
         {/* Units Accordion */}
-        <div className="bg-canvas-white border border-charcoal-border rounded-lg shadow-subtle p-2 md:p-6">
+        <div className="bg-canvas-white/70 backdrop-blur-xl border border-charcoal-border rounded-lg shadow-subtle p-2 md:p-6">
           <Accordion
             type="single"
             collapsible

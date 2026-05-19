@@ -64,7 +64,7 @@ export function InteractivePlaypen() {
 
   return (
     <section className="py-24 bg-pale-ash border-t border-charcoal-border">
-      <div className="container mx-auto px-6">
+      <div className="max-w-6xl mx-auto px-6 md:px-12 lg:px-16">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           {/* Column 1: Info and Action */}
           <div className="lg:col-span-5">
@@ -92,13 +92,13 @@ export function InteractivePlaypen() {
                     }}
                     className={`flex items-center justify-between p-4 rounded-lg border-2 text-left transition-all duration-200 cursor-pointer ${
                       activeTab === tab.id
-                        ? "bg-canvas-white border-midnight-ink shadow-subtle text-midnight-ink translate-x-2"
+                        ? "bg-canvas-white/70 backdrop-blur-md border-midnight-ink shadow-subtle text-midnight-ink translate-x-2"
                         : "bg-transparent border-transparent hover:border-charcoal-border/30 text-midnight-ink/60 hover:text-midnight-ink"
                     }`}
                   >
                     <div className="flex items-center gap-3">
                       <div
-                        className={`p-2 rounded-md border border-charcoal-border ${activeTab === tab.id ? "bg-accent-green" : "bg-canvas-white"}`}
+                        className={`p-2 rounded-md border border-charcoal-border ${activeTab === tab.id ? "bg-accent-green" : "bg-canvas-white/60 backdrop-blur-sm"}`}
                       >
                         <Icon className="w-16px h-16px text-midnight-ink" />
                       </div>
@@ -117,7 +117,7 @@ export function InteractivePlaypen() {
           <div className="lg:col-span-7">
             <Card
               variant="content"
-              className="bg-canvas-white border-2 border-midnight-ink rounded-lg shadow-subtle p-6 md:p-8 relative overflow-hidden"
+              className="bg-canvas-white/70 backdrop-blur-xl border-2 border-midnight-ink rounded-lg shadow-subtle p-6 md:p-8 relative overflow-hidden"
             >
               {/* Simulated Header */}
               <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center pb-6 border-b border-charcoal-border gap-4 mb-6">
@@ -270,7 +270,7 @@ export function InteractivePlaypen() {
                                 Root: {row.root}
                               </h4>
                               <div className="grid grid-cols-4 gap-2 text-center min-w-[400px]">
-                                <div className="p-2 bg-canvas-white border border-charcoal-border rounded">
+                                <div className="p-2 bg-canvas-white/60 backdrop-blur-sm border border-charcoal-border rounded">
                                   <p className="text-[9px] font-bold text-midnight-ink/40 uppercase">
                                     Noun
                                   </p>
@@ -278,7 +278,7 @@ export function InteractivePlaypen() {
                                     {row.noun}
                                   </p>
                                 </div>
-                                <div className="p-2 bg-canvas-white border border-charcoal-border rounded">
+                                <div className="p-2 bg-canvas-white/60 backdrop-blur-sm border border-charcoal-border rounded">
                                   <p className="text-[9px] font-bold text-midnight-ink/40 uppercase">
                                     Verb
                                   </p>
@@ -286,7 +286,7 @@ export function InteractivePlaypen() {
                                     {row.verb}
                                   </p>
                                 </div>
-                                <div className="p-2 bg-canvas-white border border-charcoal-border rounded">
+                                <div className="p-2 bg-canvas-white/60 backdrop-blur-sm border border-charcoal-border rounded">
                                   <p className="text-[9px] font-bold text-midnight-ink/40 uppercase">
                                     Adj
                                   </p>
@@ -294,7 +294,7 @@ export function InteractivePlaypen() {
                                     {row.adj}
                                   </p>
                                 </div>
-                                <div className="p-2 bg-canvas-white border border-charcoal-border rounded">
+                                <div className="p-2 bg-canvas-white/60 backdrop-blur-sm border border-charcoal-border rounded">
                                   <p className="text-[9px] font-bold text-midnight-ink/40 uppercase">
                                     Adv
                                   </p>

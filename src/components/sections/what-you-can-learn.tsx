@@ -72,7 +72,7 @@ export function WhatYouCanLearnSection() {
                 transition={{ duration: 0.5, delay: index * 0.08 }}
                 whileHover={{ y: -6 }}
               >
-                <Card variant="content" className="h-full flex flex-col p-6 shadow-subtle hover:shadow-subtle-2 transition-all border border-charcoal-border bg-canvas-white relative overflow-hidden group">
+                <Card variant="content" className="h-full flex flex-col p-6 shadow-subtle hover:shadow-subtle-2 transition-all border border-charcoal-border bg-canvas-white/70 backdrop-blur-xl relative overflow-hidden group">
                   <div className={`absolute top-0 left-0 right-0 h-2 border-b border-charcoal-border ${feat.colorClass}`} />
                   
                   <div className="mt-4 mb-6 flex items-center justify-between">

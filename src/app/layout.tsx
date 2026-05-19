@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import TargetCursor from "@/components/ui/target-cursor";
 
 // We use Inter as a temporary fallback if Satoshi is not available.
 // In globals.css, Satoshi is prioritized in the font stack.
@@ -19,6 +20,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${inter.variable} antialiased min-h-screen bg-canvas-white text-midnight-ink flex flex-col`}>
+        <TargetCursor />
         {children}
       </body>
     </html>

@@ -24,7 +24,7 @@ export function BentoFeatures() {
       className="py-24 border-t border-charcoal-border overflow-hidden"
       style={{ background: "linear-gradient(#89e5f0, #b6eff6 27%, #ccf3fa 35%, #c5f3f8 55%)" }}
     >
-      <div className="container mx-auto px-6">
+      <div className="max-w-6xl mx-auto px-6 md:px-12 lg:px-16">
         {/* Header */}
         <div className="text-center mb-16">
           <span className="text-xs font-bold uppercase tracking-wider text-accent-green bg-midnight-ink px-3 py-1 rounded-full border border-charcoal-border">
@@ -44,7 +44,7 @@ export function BentoFeatures() {
           {/* Card 1: Smart Search Filter (Col Span 2) */}
           <Card
             variant="content"
-            className="md:col-span-2 md:row-span-1 bg-canvas-white border-2 border-midnight-ink rounded-lg shadow-subtle p-6 flex flex-col justify-between overflow-hidden relative group"
+            className="md:col-span-2 md:row-span-1 bg-canvas-white/70 backdrop-blur-xl border-2 border-midnight-ink rounded-lg shadow-subtle p-6 flex flex-col justify-between overflow-hidden relative group"
           >
             <div className="absolute top-0 left-0 right-0 h-1.5 bg-card-saffron border-b border-charcoal-border" />
             <div>
@@ -101,8 +101,8 @@ export function BentoFeatures() {
             variant="content"
             className={`md:col-span-1 md:row-span-1 border-2 border-midnight-ink rounded-lg shadow-subtle p-6 flex flex-col justify-between transition-all duration-300 relative overflow-hidden cursor-pointer select-none group ${
               bentoTheme === "dark"
-                ? "bg-midnight-ink text-canvas-white"
-                : "bg-canvas-white text-midnight-ink"
+                ? "bg-midnight-ink/80 backdrop-blur-xl text-canvas-white"
+                : "bg-canvas-white/70 backdrop-blur-xl text-midnight-ink"
             }`}
             onClick={() =>
               setBentoTheme(bentoTheme === "light" ? "dark" : "light")
@@ -154,7 +154,7 @@ export function BentoFeatures() {
           {/* Card 3: Word Family Tree (Col Span 1) */}
           <Card
             variant="content"
-            className="md:col-span-1 md:row-span-1 bg-canvas-white border-2 border-midnight-ink rounded-lg shadow-subtle p-6 flex flex-col justify-between overflow-hidden relative group"
+            className="md:col-span-1 md:row-span-1 bg-canvas-white/70 backdrop-blur-xl border-2 border-midnight-ink rounded-lg shadow-subtle p-6 flex flex-col justify-between overflow-hidden relative group"
           >
             <div className="absolute top-0 left-0 right-0 h-1.5 bg-card-lavender border-b border-charcoal-border" />
             <div>
@@ -195,7 +195,7 @@ export function BentoFeatures() {
           {/* Card 4: Connected Collocations Map (Col Span 2) */}
           <Card
             variant="content"
-            className="md:col-span-2 md:row-span-1 bg-canvas-white border-2 border-midnight-ink rounded-lg shadow-subtle p-6 flex flex-col justify-between overflow-hidden relative group"
+            className="md:col-span-2 md:row-span-1 bg-canvas-white/70 backdrop-blur-xl border-2 border-midnight-ink rounded-lg shadow-subtle p-6 flex flex-col justify-between overflow-hidden relative group"
           >
             <div className="absolute top-0 left-0 right-0 h-1.5 bg-card-pink border-b border-charcoal-border" />
             <div>
@@ -232,7 +232,7 @@ export function BentoFeatures() {
           {/* Card 5: Full Syllabus Grid (Col Span 3) */}
           <Card
             variant="content"
-            className="md:col-span-3 md:row-span-1 bg-canvas-white border-2 border-midnight-ink rounded-lg shadow-subtle p-6 flex flex-col justify-between overflow-hidden relative group"
+            className="md:col-span-3 md:row-span-1 bg-canvas-white/70 backdrop-blur-xl border-2 border-midnight-ink rounded-lg shadow-subtle p-6 flex flex-col justify-between overflow-hidden relative group"
           >
             <div className="absolute top-0 left-0 right-0 h-1.5 bg-accent-green border-b border-charcoal-border" />
             <div>
