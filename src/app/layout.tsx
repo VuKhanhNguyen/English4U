@@ -5,6 +5,7 @@ import TargetCursor from "@/components/ui/target-cursor";
 import GradualBlur from "@/components/ui/gradual-blur";
 import SplashCursor from "@/components/ui/splash-cursor";
 import DotField from "@/components/DotField";
+import PageTransitionLoader from "@/components/ui/page-transition-loader";
 import { cn } from "@/lib/utils";
 
 const geist = Geist({subsets:['latin'],variable:'--font-sans'});
@@ -27,6 +28,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={cn("font-sans", geist.variable)}>
       <body className={`${inter.variable} antialiased min-h-screen bg-canvas-white text-midnight-ink flex flex-col`}>
+        <PageTransitionLoader />
         <SplashCursor />
         <TargetCursor />
         <GradualBlur preset="page-header" zIndex={40} />
