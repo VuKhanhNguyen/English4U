@@ -4,6 +4,7 @@ import "./globals.css";
 import TargetCursor from "@/components/ui/target-cursor";
 import GradualBlur from "@/components/ui/gradual-blur";
 import SplashCursor from "@/components/ui/splash-cursor";
+import DotField from "@/components/DotField";
 import { cn } from "@/lib/utils";
 
 const geist = Geist({subsets:['latin'],variable:'--font-sans'});
@@ -29,6 +30,9 @@ export default function RootLayout({
         <SplashCursor />
         <TargetCursor />
         <GradualBlur preset="page-header" zIndex={40} />
+        <div className="fixed inset-0 pointer-events-none -z-10 overflow-hidden">
+          <DotField />
+        </div>
         {children}
       </body>
     </html>

@@ -3,6 +3,7 @@
 import * as React from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Search } from "lucide-react";
+import { cn } from "@/lib/utils";
 
 import b1Data from "@/data/destination-b1.json";
 import b2Data from "@/data/destination-b2.json";
@@ -30,11 +31,13 @@ const books = [b1Data, b2Data, c1c2Data];
 interface LearningExplorerSectionProps {
   bookLevel?: "b1" | "b2" | "c1-c2";
   hideHeader?: boolean;
+  className?: string;
 }
 
 export function LearningExplorerSection({
   bookLevel,
   hideHeader = false,
+  className,
 }: LearningExplorerSectionProps = {}) {
   const levelMap = {
     b1: 0,
@@ -65,8 +68,13 @@ export function LearningExplorerSection({
   };
 
   return (
-    <section className="py-16 md:py-24 bg-pale-ash">
-      <div className="max-w-6xl mx-auto px-6 md:px-12 lg:px-16">
+    <section className={cn("py-16 md:py-24 bg-pale-ash relative overflow-hidden", className)}>
+      {/* Blurry Background Image Layer */}
+      <div 
+        className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat blur-[6px] scale-105 pointer-events-none"
+        style={{ backgroundImage: "url('/imgs/bg3.png')" }}
+      />
+      <div className="max-w-6xl mx-auto px-6 md:px-12 lg:px-16 relative z-10">
         <div className="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
           {!hideHeader && (
             <div>

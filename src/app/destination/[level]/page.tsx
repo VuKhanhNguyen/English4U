@@ -2,6 +2,7 @@ import { Navbar } from "@/components/layout/navbar";
 import { Footer } from "@/components/layout/footer";
 import { HeroSection } from "@/components/sections/hero";
 import { LearningExplorerSection } from "@/components/sections/learning-explorer";
+import FloatingLines from "@/components/FloatingLines";
 import { notFound } from "next/navigation";
 
 interface DestinationPageProps {
@@ -33,9 +34,15 @@ export default async function DestinationPage({
   }
 
   return (
-    <div className="flex flex-col min-h-screen bg-pale-ash">
+    <div className="flex flex-col min-h-screen relative overflow-hidden">
+      {/* Base background color */}
+      <div className="fixed inset-0 bg-pale-ash -z-20" />
+      {/* FloatingLines animation layer */}
+      <div className="fixed inset-0 pointer-events-none -z-10 overflow-hidden">
+        <FloatingLines />
+      </div>
       <Navbar />
-      <main className="flex-grow">
+      <main className="flex-grow relative z-10">
         <HeroSection
           hideButtons={true}
           title1="Learning Explorer"
@@ -45,6 +52,7 @@ export default async function DestinationPage({
         <LearningExplorerSection
           bookLevel={level as "b1" | "b2" | "c1-c2"}
           hideHeader={true}
+          className="bg-transparent"
         />
       </main>
       <Footer />
