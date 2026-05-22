@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, Geist } from "next/font/google";
+import { IBM_Plex_Mono, Noto_Serif, Inter } from "next/font/google";
 import "./globals.css";
 import TargetCursor from "@/components/ui/target-cursor";
 import GradualBlur from "@/components/ui/gradual-blur";
@@ -8,12 +8,23 @@ import DotField from "@/components/DotField";
 import PageTransitionLoader from "@/components/ui/page-transition-loader";
 import { cn } from "@/lib/utils";
 
-const geist = Geist({subsets:['latin'],variable:'--font-sans'});
+const ibmPlexMono = IBM_Plex_Mono({
+  subsets: ["latin"],
+  weight: ["400", "500", "700"],
+  variable: "--font-abc-diatype-mono",
+});
 
+const notoSerif = Noto_Serif({
+  subsets: ["latin"],
+  weight: ["400", "700"],
+  variable: "--font-untitled-serif",
+});
 
-// We use Inter as a temporary fallback if Satoshi is not available.
-// In globals.css, Satoshi is prioritized in the font stack.
-const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
+const inter = Inter({
+  subsets: ["latin"],
+  weight: ["400", "500", "700"],
+  variable: "--font-untitled-sans",
+});
 
 export const metadata: Metadata = {
   title: "English4U - Master English Grammar & Vocabulary",
@@ -26,11 +37,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={cn("font-sans", geist.variable)}>
-      <body className={`${inter.variable} antialiased min-h-screen bg-canvas-white text-midnight-ink flex flex-col`}>
+    <html lang="en" className={cn(ibmPlexMono.variable, notoSerif.variable, inter.variable)}>
+      <body className="antialiased min-h-screen bg-paper-canvas text-ink flex flex-col font-abc-diatype-mono">
         <PageTransitionLoader />
         <SplashCursor />
-        <TargetCursor />
+        {/* <TargetCursor /> */}
         <GradualBlur preset="page-header" zIndex={40} />
         <div className="fixed inset-0 pointer-events-none -z-10 overflow-hidden">
           <DotField />

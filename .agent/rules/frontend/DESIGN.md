@@ -1,57 +1,68 @@
-# Brainfish — Style Reference
-> Playful productivity, layered surfaces.
+# Monad — Style Reference
+> Softly lit control panel
 
 **Theme:** light
 
-Brainfish presents a vibrant, playful productivity aesthetic with a dominant light theme and an energetic neon green accent. The interface combines crisp black text and borders with soft, rounded backgrounds for interactive elements. Imagery is abstract or illustrative, maintaining a lighthearted feel. Subtle shadows with a slight offset add a tangible, almost physical quality to components, contrasting with flat backgrounds.
+Monad employs a high-contrast, minimalist design with a soft, almost ephemeral quality achieved through understated typography and subtle, diffused gradients. The color palette is predominantly achromatic, allowing a single soft blue-gray wash to introduce a hint of color, primarily in background elements. Components generally favor soft curves and thin borders over heavy fills, maintaining an open, airy feel. The overall impression is one of clarity and focused information delivery, avoiding visual noise.
 
 ## Tokens — Colors
 
 | Name | Value | Token | Role |
 |------|-------|-------|------|
-| Midnight Ink | `#000000` | `--color-midnight-ink` | Primary text, strong borders, dark shadows — defines crisp edges and high contrast |
-| Canvas White | `#ffffff` | `--color-canvas-white` | Page backgrounds, primary card surfaces, ghost button fills — provides a bright, expansive base |
-| Charcoal Border | `#171717` | `--color-charcoal-border` | Muted borders, secondary text, and less prominent shadow base — adds definition without being as stark as Midnight Ink |
-| Shadow Base | `#0a0a0d` | `--color-shadow-base` | Common shadow color — contributes to the subtle lift and depth of elements |
-| Pale Ash | `#f5f5f5` | `--color-pale-ash` | Subtle background for footer sections — breaks up large expanses of Canvas White |
-| Accent Green | `#a3e635` | `--color-accent-green` | Primary action buttons, active states, brand icons, and decorative fills — signals interaction and highlights key information with high energy |
-| Card Saffron | `#fef3c8` | `--color-card-saffron` | Background for specific informational cards — adds a warm, inviting tone to content blocks |
-| Card Lavender | `#fae9ff` | `--color-card-lavender` | Background for specific informational cards — introduces a soft, playful tint |
-| Card Mint | `#d2fae5` | `--color-card-mint` | Background for specific informational cards — provides a cool, tranquil surface |
-| Card Pink | `#f5d1fe` | `--color-card-pink` | Background for specific informational cards — a soft, decorative pop of color |
-| Highlight Yellow | `#fbbf25` | `--color-highlight-yellow` | Callout card backgrounds, decorative elements — a vivid, attention-grabbing yellow |
-| Honey Dew Gradient | `linear-gradient(rgb(253, 229, 177), rgb(252, 214, 131))` | `--color-honey-dew-gradient` | Decorative background gradient used in some sections — a soft, warm wash |
-| Lime Spritz Gradient | `linear-gradient(rgb(219, 244, 181), rgb(198, 238, 137))` | `--color-lime-spritz-gradient` | Decorative background gradient used in some sections — a light, refreshing green blend |
-| Sky Breeze Gradient | `linear-gradient(rgb(137, 229, 240), rgb(182, 239, 246) 27%, rgb(204, 243, 250) 35%, rgb(197, 243, 248) 55%)` | `--color-sky-breeze-gradient` | Primary hero background gradient, evoking an open sky with clouds — sets a light, optimistic tone |
+| Ink | `#000000` | `--color-ink` | Primary text, primary icon, strong borders, dark surface backgrounds |
+| Paper Canvas | `#f6f3f1` | `--color-paper-canvas` | Page backgrounds, card backgrounds, light element borders |
+| Off-Black | `#242424` | `--color-off-black` | Secondary text, button backgrounds, accent borders for ghost elements, navigation text |
+| Pale Stone | `#4e4d4d` | `--color-pale-stone` | Muted body text, secondary heading text, subtle borders |
+| Whisper Gray | `#3d3d3d` | `--color-whisper-gray` | Decorative lines, subtle text elements |
+| Atmosphere Wash | `#cfdaf5` | `--color-atmosphere-wash` | Soft card backgrounds, decorative background fills – provides a cool, airy presence |
+| Subtle Link | `#333333` | `--color-subtle-link` | Understated link text and associated borders |
+| Faint Text | `#797776` | `--color-faint-text` | Tertiary text or secondary link text for reduced emphasis |
+| Sunset Violet gradient | `linear-gradient(rgba(255, 148, 115, 0.8) 7%, rgba(160, 181, 235, 0.8) 83.82%)` | `--color-sunset-violet-gradient` | Decorative visual element; evokes warmth and transition. Primary hue is a soft orange |
+| Sky Mint Gradient | `linear-gradient(rgb(160, 181, 235), rgb(167, 252, 205))` | `--color-sky-mint-gradient` | Decorative visual element; suggests freshness and clarity. Primary hue is a soft blue |
+| Amber Glow Gradient | `linear-gradient(270deg, rgba(226, 193, 97, 0.7) 23.5%, rgba(243, 122, 10, 0.7) 76%)` | `--color-amber-glow-gradient` | Decorative visual element; adds a bright and energetic accent. Primary hue is a soft yellow |
 
 ## Tokens — Typography
 
-### Satoshi — The primary typeface for all textual elements. Its consistent presence and moderate weights contribute to clear, readable content across all scales, from small UI labels to large headlines. Custom font, no system substitute provides the same character. · `--font-satoshi`
-- **Substitute:** system-ui
-- **Weights:** 500, 700
-- **Sizes:** 12px, 14px, 16px, 18px, 20px, 24px, 32px, 36px, 48px, 64px
-- **Line height:** 1.14, 1.16, 1.33, 1.38, 1.40, 1.42, 1.44, 1.50, 1.57, 1.67
-- **Letter spacing:** -0.0210em at 64px, -0.0200em at 48px, -0.0170em at 36px, -0.0100em at 24px, -0.0090em at 20px, -0.0060em at 18px
-- **Role:** The primary typeface for all textual elements. Its consistent presence and moderate weights contribute to clear, readable content across all scales, from small UI labels to large headlines. Custom font, no system substitute provides the same character.
+### ABC Diatype Mono — Primary UI font for all interactive elements, body text, and monospaced content. Its fixed-width character evokes precision and technicality, while its range of tracking values allows for both compact and airy presentations. · `--font-abc-diatype-mono`
+- **Substitute:** IBM Plex Mono
+- **Weights:** 400, 500
+- **Sizes:** 12px, 14px, 16px, 18px, 20px, 28px
+- **Line height:** 1.00, 1.20, 1.30, 1.35
+- **Letter spacing:** -0.0330em, -0.0250em, -0.0220em, -0.0200em, -0.0140em, 0.0500em
+- **Role:** Primary UI font for all interactive elements, body text, and monospaced content. Its fixed-width character evokes precision and technicality, while its range of tracking values allows for both compact and airy presentations.
+
+### Untitled Serif — Display and section headings. The serif typeface provides a touch of classic authority, contrasting subtly with the monospace UI elements, and its specific negative letter-spacing contributes to its restrained, sophisticated presence. · `--font-untitled-serif`
+- **Substitute:** Noto Serif
+- **Weights:** 400
+- **Sizes:** 24px, 28px, 32px, 40px, 80px
+- **Line height:** 1.20
+- **Letter spacing:** -0.0200em
+- **Role:** Display and section headings. The serif typeface provides a touch of classic authority, contrasting subtly with the monospace UI elements, and its specific negative letter-spacing contributes to its restrained, sophisticated presence.
+
+### Untitled Sans — Used for specific body text instances, acting as a clean, highly readable alternative to the monospace text for longer content blocks. Its tight letter-spacing ensures a compact feel. · `--font-untitled-sans`
+- **Substitute:** Inter
+- **Weights:** 400
+- **Sizes:** 16px
+- **Line height:** 1.35
+- **Letter spacing:** -0.0200em
+- **Role:** Used for specific body text instances, acting as a clean, highly readable alternative to the monospace text for longer content blocks. Its tight letter-spacing ensures a compact feel.
 
 ### Type Scale
 
 | Role | Size | Line Height | Letter Spacing | Token |
 |------|------|-------------|----------------|-------|
-| caption | 12px | 1.67 | — | `--text-caption` |
-| body-sm | 14px | 1.57 | — | `--text-body-sm` |
-| body | 16px | 1.5 | — | `--text-body` |
-| subheading | 18px | 1.44 | -0.108px | `--text-subheading` |
-| heading-sm | 20px | 1.42 | -0.18px | `--text-heading-sm` |
-| heading | 24px | 1.4 | -0.24px | `--text-heading` |
-| heading-lg | 32px | 1.38 | -0.544px | `--text-heading-lg` |
-| display-sm | 36px | 1.33 | -0.612px | `--text-display-sm` |
-| display | 48px | 1.16 | -0.96px | `--text-display` |
-| display-lg | 64px | 1.14 | -1.344px | `--text-display-lg` |
+| caption | 12px | 1.35 | 0.05px | `--text-caption` |
+| body-sm | 14px | 1.3 | -0.014px | `--text-body-sm` |
+| body | 16px | 1.35 | -0.02px | `--text-body` |
+| subheading | 20px | 1.2 | -0.02px | `--text-subheading` |
+| heading-sm | 24px | 1.2 | -0.02px | `--text-heading-sm` |
+| heading | 28px | 1.2 | -0.02px | `--text-heading` |
+| heading-lg | 40px | 1.2 | -0.02px | `--text-heading-lg` |
+| display | 80px | 1.2 | -0.02px | `--text-display` |
 
 ## Tokens — Spacing & Shapes
 
-**Base unit:** 4px
+**Base unit:** 8px
 
 **Density:** comfortable
 
@@ -59,156 +70,149 @@ Brainfish presents a vibrant, playful productivity aesthetic with a dominant lig
 
 | Name | Value | Token |
 |------|-------|-------|
-| 4 | 4px | `--spacing-4` |
 | 8 | 8px | `--spacing-8` |
-| 12 | 12px | `--spacing-12` |
 | 16 | 16px | `--spacing-16` |
 | 24 | 24px | `--spacing-24` |
-| 28 | 28px | `--spacing-28` |
 | 32 | 32px | `--spacing-32` |
 | 40 | 40px | `--spacing-40` |
-| 44 | 44px | `--spacing-44` |
-| 48 | 48px | `--spacing-48` |
-| 60 | 60px | `--spacing-60` |
-| 64 | 64px | `--spacing-64` |
+| 72 | 72px | `--spacing-72` |
 | 80 | 80px | `--spacing-80` |
-| 88 | 88px | `--spacing-88` |
-| 100 | 100px | `--spacing-100` |
-| 120 | 120px | `--spacing-120` |
+| 200 | 200px | `--spacing-200` |
+| 216 | 216px | `--spacing-216` |
 
 ### Border Radius
 
 | Element | Value |
 |---------|-------|
-| cards | 8px |
-| badges | 100px |
-| buttons | 4px |
-| default | 4px |
-| largeCards | 16px |
-| extraLargeCards | 20px |
+| tags | 2000px |
+| cards | 40px |
+| other | 100px |
+| buttons | 100px |
 
 ### Shadows
 
 | Name | Value | Token |
 |------|-------|-------|
-| subtle | `rgb(10, 10, 13) 2px 2px 0px 0px` | `--shadow-subtle` |
-| subtle-2 | `rgb(10, 10, 13) 4px 4px 0px 0px` | `--shadow-subtle-2` |
-| subtle-3 | `rgb(10, 10, 13) 1px 1px 0px 0px` | `--shadow-subtle-3` |
-| subtle-4 | `rgb(23, 23, 23) 4px 4px 0px 0px` | `--shadow-subtle-4` |
+| md | `rgba(0, 0, 0, 0.1) 0px 0px 10px 0px` | `--shadow-md` |
 
 ### Layout
 
+- **Page max-width:** 1432px
 - **Section gap:** 40px
-- **Card padding:** 24px
-- **Element gap:** 24px
+- **Card padding:** 40px
+- **Element gap:** 16px
 
 ## Components
 
-### Primary Action Button
-**Role:** Main call-to-action button.
+### Primary Filled Button
+**Role:** Call-to-action button for initiating primary actions.
 
-Accent Green (#a3e635) background, Midnight Ink (#000000) text, 4px border-radius, 12px vertical padding, 24px horizontal padding. Features a subtle Charcoal Border (#171717) and Shadow Base (#0a0a0d) 1px 1px 0px 0px box-shadow.
+Background: 'Off-Black' (#242424), Text: 'Paper Canvas' (#f6f3f1). Padding: 16px horizontal, 16px vertical. Radius: 100px. Uses ABC Diatype Mono, weight 400.
 
-### Ghost Action Button
-**Role:** Secondary or outlined actions.
+### Secondary Ghost Button
+**Role:** Call-to-action button for secondary actions.
 
-Canvas White (#ffffff) background, Midnight Ink (#000000) text, 4px border-radius, 8px vertical padding, 16px horizontal padding. Features a Charcoal Border (#171717) and Shadow Base (#0a0a0d) 1px 1px 0px 0px box-shadow.
+Background: transparent. Border: 1px solid 'Off-Black' (#242424). Text: 'Off-Black' (#242424). Padding: 16px horizontal, 16px vertical. Radius: 100px. Uses ABC Diatype Mono, weight 400.
 
-### Text Link Button
-**Role:** Minimal or inline actions.
+### Inline Text Link
+**Role:** Navigational or contextual links within body text.
 
-Transparent background, Charcoal Border (#222222) and text. No border-radius. 2px top padding, 4px bottom padding, 0px horizontal padding.
+Text: 'Ink' (#000000) or 'Subtle Link' (#333333). Padding: 5px horizontal. No border or background. Uses ABC Diatype Mono.
 
-### Content Card
-**Role:** Information display card.
+### Hero Headline
+**Role:** Prominent display text for main page sections.
 
-Canvas White (#ffffff) background, 8px border-radius, 24px padding. No box-shadow for this variant. Features a 1px solid Charcoal Border (#171717).
+Text: 'Ink' (#000000). Font: Untitled Serif, weight 400, size 80px, lineHeight 1.2, letterSpacing -0.0200em.
 
-### Shadowed Content Card
-**Role:** Prominent information display card.
+### Feature Card
+**Role:** Container for showcasing features or information blocks.
 
-Canvas White (#ffffff) background, 4px border-radius, 18px padding. Features an offset box-shadow: rgb(10, 10, 13) 1px 1px 0px 0px.
+Background: 'Atmosphere Wash' (#cfdaf5). Border-radius: 40px. Padding: 40px. No explicit shadow, relies on background color differentiation.
 
-### Feature Card (Highlight Yellow)
-**Role:** Specific feature highlight or testimonial card.
+### Navigation Item
+**Role:** Top navigation links.
 
-Highlight Yellow (#fbbf25) background, 8px border-radius, 16px vertical padding, 24px horizontal padding. No box-shadow.
+Text: 'Off-Black' (#242424). Underlined on hover with 'Off-Black'. Uses ABC Diatype Mono. Padding: 8px vertical, 10px horizontal.
 
-### Subtle Background Card (No Padding)
-**Role:** Sectional content container with minimal visual hierarchy.
+### Notification Bar
+**Role:** Top-level information banner.
 
-Transparent background, 0px border-radius, 0px padding top/bottom, 32px padding left/right. No box-shadow or border. Used for full-width content blocks.
+Background: 'Ink' (#000000). Text: 'Paper Canvas' (#f6f3f1). Button text: 'Paper Canvas' (#f6f3f1), button border: 'Paper Canvas' (#f6f3f1). Font: ABC Diatype Mono, size 14px.
 
-### Pill Badge
-**Role:** Categorization or tagging element.
+### FAQ Accordion Item
+**Role:** Interactive question and answer section.
 
-Canvas White (#ffffff) background, Midnight Ink (#000000) text, 100px border-radius for a pill shape, 6px vertical padding, 14px horizontal padding. Features a 1px solid Charcoal Border (#171717).
+Background: transparent. Border-bottom: 1px solid 'Pale Stone' (#4e4d4d). Text: 'Ink' (#000000) or 'Pale Stone' (#4e4d4d). Font: ABC Diatype Mono, weight 400.
 
-### Text Input Field
-**Role:** User input element.
+### Diagram Node Tag
+**Role:** Small, descriptive labels within visual diagrams.
 
-Canvas White (#ffffff) background, Midnight Ink (#000000) text, 4px border-radius, 12px padding all sides. Border color is a muted gray (#737373).
+Background: transparent. Border: 1px solid 'Ink' (#000000) or 'Off-Black' (#242424) or 'Faint Text' (#797776). Text: matching border color. Radius: 2000px (pill shape). Font: ABC Diatype Mono, size 12px, letterSpacing 0.0500em.
 
 ## Do's and Don'ts
 
 ### Do
-- Use Accent Green (#a3e635) for all primary calls-to-action and active state indicators.
-- Apply a subtle offset shadow (rgb(10, 10, 13) 2px 2px 0px 0px) to interactive elements and important cards for a 'lifted' effect.
-- Prioritize Satoshi for all text, using varying weights and sizes from the scale to establish hierarchy and ensure consistency.
-- Maintain high contrast text at 21.0:1 (Midnight Ink on Canvas White or Pale Ash) for optimal readability.
-- Utilize 4px border-radius for buttons and input fields to convey a consistent, subtle roundness.
-- Employ the 8px border-radius for standalone content cards, adding a softer, more approachable feel.
-- Use distinct accent colors (Card Saffron, Card Lavender, Card Mint, Card Pink, Highlight Yellow) for content cards to visually differentiate sections and information types.
+- Prioritize 'ABC Diatype Mono' for all UI elements and body text to maintain the brand's precision-oriented voice.
+- Use 'Untitled Serif' exclusively for primary section headings and display text to establish visual hierarchy and gravitas.
+- Apply 'Ink' (#000000) for all primary text and critical interactive elements, ensuring high contrast against light backgrounds.
+- Employ 'Paper Canvas' (#f6f3f1) as the default background for general page content and 'Atmosphere Wash' (#cfdaf5) for subtle visual differentiation on cards or specific content blocks.
+- Ensure all buttons have a 100px border-radius, creating a consistent 'pill' shape.
+- Utilize a minimal 1px border for ghost buttons and tags, defaulting to 'Off-Black' (#242424) or 'Ink' (#000000) for definition.
+- Maintain 40px of internal padding for cards and primary CTAs to create generous breathing room.
 
 ### Don't
-- Avoid using bright, saturated colors for large background areas; reserve Canvas White or Pale Ash for expansive surfaces.
-- Do not deviate from the Satoshi typeface; avoid system fonts or other custom fonts.
-- Never apply aggressive or large drop shadows; stick to the specified subtle offset shadow values.
-- Do not use dark backgrounds for main content sections; the theme is primarily light.
-- Avoid random border-radii; adhere strictly to the 4px, 8px, and 100px values outlined for specific components.
-- Do not use gradients for all backgrounds; reserve them for specific hero or decorative sections as defined.
-- Refrain from using thin fonts for body text; Satoshi at 500 weight is the baseline for readability.
+- Avoid using bright, saturated colors for primary UI elements; reserve them strictly for decorative gradients or illustrations and only as an accent.
+- Do not introduce sharp corners into interactive elements or cards; all elements should adhere to the established radii of 40px, 100px, or 2000px.
+- Do not use heavy shadows or gradients on interactive elements; rely on color contrast and subtle borders for distinction.
+- Refrain from using multiple font families beyond the defined 'ABC Diatype Mono', 'Untitled Serif', and 'Untitled Sans'.
+- Do not deviate from the specified letter-spacing for headings; the negative tracking is a signature visual characteristic.
+- Avoid dense or cluttered layouts; prioritize ample whitespace and consistent section gaps (40px) to maintain clarity.
+- Do not use dark backgrounds for sections without explicit reasoning; maintain the dominant light theme.
+
+## Surfaces
+
+| Level | Name | Value | Purpose |
+|-------|------|-------|---------|
+| 0 | Paper Canvas | `#f6f3f1` | Base page background |
+| 1 | Atmosphere Wash | `#cfdaf5` | Elevated card and section backgrounds |
+| 2 | Off-Black | `#242424` | Primary filled button backgrounds, dark UI elements |
+| 3 | Ink | `#000000` | Top-level notification bar, highest contrast elements |
 
 ## Elevation
 
-- **Button:** `rgb(10, 10, 13) 2px 2px 0px 0px`
-- **Navigation Item:** `rgb(10, 10, 13) 2px 2px 0px 0px`
-- **Card (prominent):** `rgb(10, 10, 13) 1px 1px 0px 0px`
-- **Other:** `rgb(10, 10, 13) 2px 2px 0px 0px`
+- **Floating Elements / Popovers:** `rgba(0, 0, 0, 0.1) 0px 0px 10px 0px`
 
 ## Imagery
 
-This design system uses a mix of abstract and illustrative graphics. Graphics are typically contained and used decoratively or to explain concepts. The hero section features light blue gradients with simple white outlined cloud illustrations and small, outlined fish illustrations, creating a playful, ethereal atmosphere. Other sections incorporate simple line icons (like 'Knowledge' or 'Distribution' icons) with a moderate stroke weight, typically monochromatic or occasionally accented with brand colors. Photography is not present. The overall role of imagery is atmospheric and explanatory, presented with a light touch and low density, keeping the UI text-dominant.
+This site features abstract, somewhat ethereal illustrations and small product-like diagrams rather than photography. Illustrations are colorful, often incorporating linear gradients, and appear contained within sections as decorative elements or to explain concepts. Icons are outlined, fine-lined, and predominantly 'Ink' (#000000) or 'Pale Stone' (#4e4d4d), used minimally for functionality rather than decoration. Imagery is used to provide visual breathing room and metaphoric explanation, not direct product showcase or social proof, and keeps a relatively low density on the page.
 
 ## Layout
 
-The page structure utilizes a full-bleed layout for the hero section, featuring a light blue gradient background with centered large headlines. Subsequent sections alternate between full-width color bands (often with subtle gradient backgrounds like Honey Dew or Lime Spritz) and contained content blocks. Content is typically arranged in centered stacks or alternating text-left/image-right (or text-left/card-right) patterns. A 3-column card grid is often used for feature showcases. Vertical spacing between sections is generous and consistent. The navigation is a sticky top bar with a contained max-width, featuring primary action buttons prominently.
+The page uses a contained layout with a maximum width of 1432px, centered for content. The hero section features a centered headline and subtext over whitespace, followed by primary and secondary call-to-action buttons. Sections maintain a consistent vertical rhythm with 40px section gaps. Content is arranged in alternating patterns, typically featuring text on one side and a visual element or card on the other, or stacked elements for FAQs. Navigation is a sticky top bar with left-aligned branding and right-aligned actions, featuring a distinct black notification bar above it. Overall density is comfortable and spacious.
 
 ## Agent Prompt Guide
 
 Quick Color Reference:
 text: #000000
-background: #ffffff
-border: #171717
-accent: #a3e635
-primary action: #a3e635 (filled action)
+background: #f6f3f1
+border: #242424
+accent: #cfdaf5
+primary action: no distinct CTA color
 
 Example Component Prompts:
-Create a Primary Action Button: #a3e635 background, #000000 text, 9999px radius, compact pill padding. Use this filled treatment for the main CTA.
 
-Create a testimonial card: Feature Card (Highlight Yellow #fbbf25) 8px radius, 16px 24px padding. Quote text at 16px Satoshi weight 500 (#000000). Author and title at 14px Satoshi weight 500 (#000000). Below the quote, a Pill Badge (Canvas White #ffffff background, Midnight Ink text, 100px radius, 6px 14px padding, 1px solid Charcoal Border).
+1. Create a Hero Section with a primary headline: 'Security Data Pipelines, Made Easy' using Untitled Serif weight 400, 80px, #000000, letter-spacing -0.0200em. Below it, a monochromatic filled button 'Get Started' with background #242424, text #f6f3f1, 100px radius, 16px vertical padding, 16px horizontal padding, using ABC Diatype Mono 400.
 
-Create a general content section: Canvas White background. Headline at 48px Satoshi weight 700 (#000000, letter-spacing -0.96px). Body text at 16px Satoshi weight 500 (#000000). A Ghost Action Button (Canvas White #ffffff background, Midnight Ink text, 4px radius, 8px 16px padding) with a 1px solid Charcoal Border (#171717) and Shadow Base (#0a0a0d) 1px 1px 0px 0px box-shadow.
+2. Design a Feature Card for 'Managed Data Pipelines'. Background #cfdaf5, border-radius 40px, internal padding 40px. The feature title 'Managed Data Pipelines' uses ABC Diatype Mono weight 500, 20px, #000000. Underneath, a short description 'Connect any security tool in minutes...' uses ABC Diatype Mono weight 400, 16px, #4e4d4d.
 
-Create a text input field: Canvas White background, Midnight Ink (#000000) text, 4px radius, 12px padding. Border color: #737373.
-
+3. Construct a Navigation Bar. Background #f6f3f1. On the left, brand logo. On the right, a ghost button link 'Get A Demo >' with text #242424, a 1px border #242424, 100px radius, 16px vertical padding, 16px horizontal padding. Other navigation links like 'Platform' use ABC Diatype Mono weight 400, 16px, #242424, with no background or border.
 
 ## Similar Brands
 
-- **Airtable** — Playful brand colors with rounded corners and a generally light UI aesthetic.
-- **Notion** — Clean, predominantly white/light grey UI, sharp typography, and functional but minimal accent colors.
-- **Linear** — Crisp typography and borders on a light canvas, with subtle shadows and a precise information density.
-- **Figma** — Similar approach to UI elements with distinct border-radii, emphasis on a light theme, and clear, functional type hierarchy.
+- **Linear** — High-contrast monochrome interface with a single accent color, sharp typographic choices, and clean, functional component design.
+- **Vercel** — Prominent use of monospace typography in UI, minimalist layout, and focus on subtle shading/gradients for visual interest rather than heavy colors.
+- **Stripe** — Clear information hierarchy, restrained use of color, and emphasis on elegant typography, especially for headings and body text.
+- **Figma** — Dominant white/light backgrounds, emphasis on clean, functional UI components, and subtle use of color for interactive states and accents.
 
 ## Quick Start
 
@@ -217,105 +221,93 @@ Create a text input field: Canvas White background, Midnight Ink (#000000) text,
 ```css
 :root {
   /* Colors */
-  --color-midnight-ink: #000000;
-  --color-canvas-white: #ffffff;
-  --color-charcoal-border: #171717;
-  --color-shadow-base: #0a0a0d;
-  --color-pale-ash: #f5f5f5;
-  --color-accent-green: #a3e635;
-  --color-card-saffron: #fef3c8;
-  --color-card-lavender: #fae9ff;
-  --color-card-mint: #d2fae5;
-  --color-card-pink: #f5d1fe;
-  --color-highlight-yellow: #fbbf25;
-  --color-honey-dew-gradient: #fce5b1;
-  --gradient-honey-dew-gradient: linear-gradient(rgb(253, 229, 177), rgb(252, 214, 131));
-  --color-lime-spritz-gradient: #dbeecf;
-  --gradient-lime-spritz-gradient: linear-gradient(rgb(219, 244, 181), rgb(198, 238, 137));
-  --color-sky-breeze-gradient: #89e5f0;
-  --gradient-sky-breeze-gradient: linear-gradient(rgb(137, 229, 240), rgb(182, 239, 246) 27%, rgb(204, 243, 250) 35%, rgb(197, 243, 248) 55%);
+  --color-ink: #000000;
+  --color-paper-canvas: #f6f3f1;
+  --color-off-black: #242424;
+  --color-pale-stone: #4e4d4d;
+  --color-whisper-gray: #3d3d3d;
+  --color-atmosphere-wash: #cfdaf5;
+  --color-subtle-link: #333333;
+  --color-faint-text: #797776;
+  --color-sunset-violet-gradient: #ffa773;
+  --gradient-sunset-violet-gradient: linear-gradient(rgba(255, 148, 115, 0.8) 7%, rgba(160, 181, 235, 0.8) 83.82%);
+  --color-sky-mint-gradient: #a0b5eb;
+  --gradient-sky-mint-gradient: linear-gradient(rgb(160, 181, 235), rgb(167, 252, 205));
+  --color-amber-glow-gradient: #e2c161;
+  --gradient-amber-glow-gradient: linear-gradient(270deg, rgba(226, 193, 97, 0.7) 23.5%, rgba(243, 122, 10, 0.7) 76%);
 
   /* Typography — Font Families */
-  --font-satoshi: 'Satoshi', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-abc-diatype-mono: 'ABC Diatype Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  --font-untitled-serif: 'Untitled Serif', ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+  --font-untitled-sans: 'Untitled Sans', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 
   /* Typography — Scale */
   --text-caption: 12px;
-  --leading-caption: 1.67;
+  --leading-caption: 1.35;
+  --tracking-caption: 0.05px;
   --text-body-sm: 14px;
-  --leading-body-sm: 1.57;
+  --leading-body-sm: 1.3;
+  --tracking-body-sm: -0.014px;
   --text-body: 16px;
-  --leading-body: 1.5;
-  --text-subheading: 18px;
-  --leading-subheading: 1.44;
-  --tracking-subheading: -0.108px;
-  --text-heading-sm: 20px;
-  --leading-heading-sm: 1.42;
-  --tracking-heading-sm: -0.18px;
-  --text-heading: 24px;
-  --leading-heading: 1.4;
-  --tracking-heading: -0.24px;
-  --text-heading-lg: 32px;
-  --leading-heading-lg: 1.38;
-  --tracking-heading-lg: -0.544px;
-  --text-display-sm: 36px;
-  --leading-display-sm: 1.33;
-  --tracking-display-sm: -0.612px;
-  --text-display: 48px;
-  --leading-display: 1.16;
-  --tracking-display: -0.96px;
-  --text-display-lg: 64px;
-  --leading-display-lg: 1.14;
-  --tracking-display-lg: -1.344px;
+  --leading-body: 1.35;
+  --tracking-body: -0.02px;
+  --text-subheading: 20px;
+  --leading-subheading: 1.2;
+  --tracking-subheading: -0.02px;
+  --text-heading-sm: 24px;
+  --leading-heading-sm: 1.2;
+  --tracking-heading-sm: -0.02px;
+  --text-heading: 28px;
+  --leading-heading: 1.2;
+  --tracking-heading: -0.02px;
+  --text-heading-lg: 40px;
+  --leading-heading-lg: 1.2;
+  --tracking-heading-lg: -0.02px;
+  --text-display: 80px;
+  --leading-display: 1.2;
+  --tracking-display: -0.02px;
 
   /* Typography — Weights */
+  --font-weight-regular: 400;
   --font-weight-medium: 500;
-  --font-weight-bold: 700;
 
   /* Spacing */
-  --spacing-unit: 4px;
-  --spacing-4: 4px;
+  --spacing-unit: 8px;
   --spacing-8: 8px;
-  --spacing-12: 12px;
   --spacing-16: 16px;
   --spacing-24: 24px;
-  --spacing-28: 28px;
   --spacing-32: 32px;
   --spacing-40: 40px;
-  --spacing-44: 44px;
-  --spacing-48: 48px;
-  --spacing-60: 60px;
-  --spacing-64: 64px;
+  --spacing-72: 72px;
   --spacing-80: 80px;
-  --spacing-88: 88px;
-  --spacing-100: 100px;
-  --spacing-120: 120px;
+  --spacing-200: 200px;
+  --spacing-216: 216px;
 
   /* Layout */
+  --page-max-width: 1432px;
   --section-gap: 40px;
-  --card-padding: 24px;
-  --element-gap: 24px;
+  --card-padding: 40px;
+  --element-gap: 16px;
 
   /* Border Radius */
-  --radius-md: 4px;
-  --radius-lg: 8px;
-  --radius-xl: 12px;
-  --radius-2xl: 16px;
-  --radius-2xl-2: 20px;
+  --radius-3xl: 40px;
   --radius-full: 100px;
+  --radius-full-2: 2000px;
 
   /* Named Radii */
-  --radius-cards: 8px;
-  --radius-badges: 100px;
-  --radius-buttons: 4px;
-  --radius-default: 4px;
-  --radius-largecards: 16px;
-  --radius-extralargecards: 20px;
+  --radius-tags: 2000px;
+  --radius-cards: 40px;
+  --radius-other: 100px;
+  --radius-buttons: 100px;
 
   /* Shadows */
-  --shadow-subtle: rgb(10, 10, 13) 2px 2px 0px 0px;
-  --shadow-subtle-2: rgb(10, 10, 13) 4px 4px 0px 0px;
-  --shadow-subtle-3: rgb(10, 10, 13) 1px 1px 0px 0px;
-  --shadow-subtle-4: rgb(23, 23, 23) 4px 4px 0px 0px;
+  --shadow-md: rgba(0, 0, 0, 0.1) 0px 0px 10px 0px;
+
+  /* Surfaces */
+  --surface-paper-canvas: #f6f3f1;
+  --surface-atmosphere-wash: #cfdaf5;
+  --surface-off-black: #242424;
+  --surface-ink: #000000;
 }
 ```
 
@@ -324,83 +316,66 @@ Create a text input field: Canvas White background, Midnight Ink (#000000) text,
 ```css
 @theme {
   /* Colors */
-  --color-midnight-ink: #000000;
-  --color-canvas-white: #ffffff;
-  --color-charcoal-border: #171717;
-  --color-shadow-base: #0a0a0d;
-  --color-pale-ash: #f5f5f5;
-  --color-accent-green: #a3e635;
-  --color-card-saffron: #fef3c8;
-  --color-card-lavender: #fae9ff;
-  --color-card-mint: #d2fae5;
-  --color-card-pink: #f5d1fe;
-  --color-highlight-yellow: #fbbf25;
-  --color-honey-dew-gradient: #fce5b1;
-  --color-lime-spritz-gradient: #dbeecf;
-  --color-sky-breeze-gradient: #89e5f0;
+  --color-ink: #000000;
+  --color-paper-canvas: #f6f3f1;
+  --color-off-black: #242424;
+  --color-pale-stone: #4e4d4d;
+  --color-whisper-gray: #3d3d3d;
+  --color-atmosphere-wash: #cfdaf5;
+  --color-subtle-link: #333333;
+  --color-faint-text: #797776;
+  --color-sunset-violet-gradient: #ffa773;
+  --color-sky-mint-gradient: #a0b5eb;
+  --color-amber-glow-gradient: #e2c161;
 
   /* Typography */
-  --font-satoshi: 'Satoshi', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-abc-diatype-mono: 'ABC Diatype Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  --font-untitled-serif: 'Untitled Serif', ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+  --font-untitled-sans: 'Untitled Sans', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 
   /* Typography — Scale */
   --text-caption: 12px;
-  --leading-caption: 1.67;
+  --leading-caption: 1.35;
+  --tracking-caption: 0.05px;
   --text-body-sm: 14px;
-  --leading-body-sm: 1.57;
+  --leading-body-sm: 1.3;
+  --tracking-body-sm: -0.014px;
   --text-body: 16px;
-  --leading-body: 1.5;
-  --text-subheading: 18px;
-  --leading-subheading: 1.44;
-  --tracking-subheading: -0.108px;
-  --text-heading-sm: 20px;
-  --leading-heading-sm: 1.42;
-  --tracking-heading-sm: -0.18px;
-  --text-heading: 24px;
-  --leading-heading: 1.4;
-  --tracking-heading: -0.24px;
-  --text-heading-lg: 32px;
-  --leading-heading-lg: 1.38;
-  --tracking-heading-lg: -0.544px;
-  --text-display-sm: 36px;
-  --leading-display-sm: 1.33;
-  --tracking-display-sm: -0.612px;
-  --text-display: 48px;
-  --leading-display: 1.16;
-  --tracking-display: -0.96px;
-  --text-display-lg: 64px;
-  --leading-display-lg: 1.14;
-  --tracking-display-lg: -1.344px;
+  --leading-body: 1.35;
+  --tracking-body: -0.02px;
+  --text-subheading: 20px;
+  --leading-subheading: 1.2;
+  --tracking-subheading: -0.02px;
+  --text-heading-sm: 24px;
+  --leading-heading-sm: 1.2;
+  --tracking-heading-sm: -0.02px;
+  --text-heading: 28px;
+  --leading-heading: 1.2;
+  --tracking-heading: -0.02px;
+  --text-heading-lg: 40px;
+  --leading-heading-lg: 1.2;
+  --tracking-heading-lg: -0.02px;
+  --text-display: 80px;
+  --leading-display: 1.2;
+  --tracking-display: -0.02px;
 
   /* Spacing */
-  --spacing-4: 4px;
   --spacing-8: 8px;
-  --spacing-12: 12px;
   --spacing-16: 16px;
   --spacing-24: 24px;
-  --spacing-28: 28px;
   --spacing-32: 32px;
   --spacing-40: 40px;
-  --spacing-44: 44px;
-  --spacing-48: 48px;
-  --spacing-60: 60px;
-  --spacing-64: 64px;
+  --spacing-72: 72px;
   --spacing-80: 80px;
-  --spacing-88: 88px;
-  --spacing-100: 100px;
-  --spacing-120: 120px;
+  --spacing-200: 200px;
+  --spacing-216: 216px;
 
   /* Border Radius */
-  --radius-md: 4px;
-  --radius-lg: 8px;
-  --radius-xl: 12px;
-  --radius-2xl: 16px;
-  --radius-2xl-2: 20px;
+  --radius-3xl: 40px;
   --radius-full: 100px;
+  --radius-full-2: 2000px;
 
   /* Shadows */
-  --shadow-subtle: rgb(10, 10, 13) 2px 2px 0px 0px;
-  --shadow-subtle-2: rgb(10, 10, 13) 4px 4px 0px 0px;
-  --shadow-subtle-3: rgb(10, 10, 13) 1px 1px 0px 0px;
-  --shadow-subtle-4: rgb(23, 23, 23) 4px 4px 0px 0px;
+  --shadow-md: rgba(0, 0, 0, 0.1) 0px 0px 10px 0px;
 }
 ```

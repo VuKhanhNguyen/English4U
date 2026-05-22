@@ -7,7 +7,7 @@ function Badge({ className, ...props }: BadgeProps) {
   return (
     <div
       className={cn(
-        "inline-flex items-center rounded-full border border-charcoal-border bg-canvas-white px-3.5 py-1.5 text-xs font-semibold text-midnight-ink transition-colors focus:outline-none focus:ring-2 focus:ring-charcoal-border focus:ring-offset-2",
+        "inline-flex items-center rounded-full border border-off-black bg-transparent px-3 py-1 text-xs font-mono font-medium text-ink transition-colors focus:outline-none focus:ring-2 focus:ring-off-black focus:ring-offset-2",
         className
       )}
       {...props}
