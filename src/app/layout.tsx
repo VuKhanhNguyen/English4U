@@ -29,6 +29,10 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: "English4U - Master English Grammar & Vocabulary",
   description: "Learn Destination B1, B2, C1 & C2 with structured grammar tables, vocabulary systems, word formation, collocations, and phrasal verbs.",
+  icons: {
+    icon: "/imgs/logo2.ico",
+    apple: "/imgs/logo2.ico",
+  },
 };
 
 export default function RootLayout({

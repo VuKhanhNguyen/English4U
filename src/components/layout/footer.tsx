@@ -1,27 +1,136 @@
 import * as React from "react"
 import Link from "next/link"
+import { SocialIcon } from "react-social-icons"
 
 export function Footer() {
   return (
-    <footer className="bg-paper-canvas border-t border-off-black py-12 mt-auto font-abc-diatype-mono">
-      <div className="container mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6">
-        <div className="flex flex-col gap-2">
-          <Link href="/" className="text-2xl font-bold tracking-tight text-ink">
-            English4<span className="text-off-black underline">U</span>
-          </Link>
-          <p className="text-sm text-faint-text max-w-sm">
-            A modern, structured English learning platform for mastering Grammar and Vocabulary.
-          </p>
+    <footer className="bg-gradient-to-b from-[#1c2431] to-[#111721] text-neutral-300 pt-16 pb-12 mt-auto font-abc-diatype-mono border-t border-[#2d3748]/30">
+      <div className="container mx-auto px-6 max-w-6xl">
+        {/* Main Columns */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-8 mb-16">
+          {/* Column 1: Brand Info */}
+          <div className="flex flex-col gap-4">
+            <div className="flex items-center gap-3">
+              <Link href="/" className="flex items-center gap-3">
+                <img 
+                  src="/imgs/logo2.png" 
+                  alt="English4U Logo" 
+                  className="h-[45px] w-auto object-contain"
+                />
+                <span className="text-white font-bold tracking-wider text-lg uppercase font-sans">
+                  English4U
+                </span>
+              </Link>
+            </div>
+            <p className="text-[#8ea0b5] text-sm leading-relaxed max-w-xs font-sans mt-2">
+              Speak English confidently every day!
+              <br />
+              Learning English has never been easier!
+              <br />
+              Grow your skills and future opportunities!
+              </p>
+          </div>
+
+          {/* Column 2: Quick Links */}
+          <div className="flex flex-col gap-4 md:pl-12">
+            <h3 className="text-white font-bold tracking-wide text-base font-sans">
+              Quick Links
+            </h3>
+            <ul className="flex flex-col gap-3">
+              <li>
+                <Link 
+                  href="/" 
+                  className="text-[#8ea0b5] hover:text-white transition-colors text-sm underline decoration-[#8ea0b5]/50 hover:decoration-white"
+                >
+                  Home
+                </Link>
+              </li>
+              <li>
+                <Link 
+                  href="/#about" 
+                  className="text-[#8ea0b5] hover:text-white transition-colors text-sm underline decoration-[#8ea0b5]/50 hover:decoration-white"
+                >
+                  About
+                </Link>
+              </li>
+              <li>
+                <Link 
+                  href="/#resources" 
+                  className="text-[#8ea0b5] hover:text-white transition-colors text-sm underline decoration-[#8ea0b5]/50 hover:decoration-white"
+                >
+                  Resources
+                </Link>
+              </li>
+              <li>
+                <Link 
+                  href="/#contact" 
+                  className="text-[#8ea0b5] hover:text-white transition-colors text-sm underline decoration-[#8ea0b5]/50 hover:decoration-white"
+                >
+                  Contact
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* Column 3: Connect */}
+          <div className="flex flex-col gap-4">
+            <h3 className="text-white font-bold tracking-wide text-base font-sans">
+              Connect
+            </h3>
+            
+            {/* Social Icons */}
+            <div className="flex items-center gap-3">
+              <SocialIcon 
+                url="https://linkedin.com" 
+                bgColor="transparent" 
+                fgColor="#8ea0b5" 
+                style={{ height: 35, width: 35 }}
+                label="LinkedIn"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:scale-110 transition-transform duration-200"
+              />
+              <SocialIcon 
+                url="https://facebook.com" 
+                bgColor="transparent" 
+                fgColor="#8ea0b5" 
+                style={{ height: 35, width: 35 }}
+                label="Facebook"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:scale-110 transition-transform duration-200"
+              />
+              <SocialIcon 
+                url="https://github.com" 
+                bgColor="transparent" 
+                fgColor="#8ea0b5" 
+                style={{ height: 35, width: 35 }}
+                label="GitHub"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:scale-110 transition-transform duration-200"
+              />
+            </div>
+
+            {/* Contact Email */}
+            <div className="mt-2">
+              <a 
+                href="mailto:nguyenvukhanh392@gmail.com" 
+                className="text-[#8ea0b5] hover:text-white transition-colors text-sm underline decoration-[#8ea0b5]/50 hover:decoration-white font-sans"
+              >
+                nguyenvukhanh392@gmail.com
+              </a>
+            </div>
+          </div>
         </div>
-        
-        <div className="flex gap-6 text-sm font-normal">
-          <Link href="#" className="text-off-black hover:underline hover:decoration-off-black transition-all">Terms</Link>
-          <Link href="#" className="text-off-black hover:underline hover:decoration-off-black transition-all">Privacy</Link>
-          <Link href="#" className="text-off-black hover:underline hover:decoration-off-black transition-all">Contact</Link>
+
+        {/* Divider Line */}
+        <hr className="border-[#2d3748]/30 mb-8" />
+
+        {/* Copyright Text */}
+        <div className="text-center text-xs text-[#5a6e85]">
+          &copy; {new Date().getFullYear()} English4U. All rights reserved.
         </div>
-      </div>
-      <div className="container mx-auto px-6 mt-12 text-center text-xs text-faint-text">
-        &copy; {new Date().getFullYear()} English4U. All rights reserved.
       </div>
     </footer>
   )

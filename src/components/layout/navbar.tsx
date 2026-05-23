@@ -29,9 +29,9 @@ export function Navbar() {
       >
         <Link
           href="/"
-          className="text-2xl font-bold tracking-tight text-ink"
+          className="flex items-center"
         >
-          English4<span className="text-off-black underline">U</span>
+          <img src="/imgs/logo2.png" alt="English4U Logo" className="h-[50px] w-auto" />
         </Link>
 
         {/* Desktop Nav */}
