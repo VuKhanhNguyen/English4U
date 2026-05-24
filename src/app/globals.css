@@ -123,7 +123,29 @@
 }
 
 html, body {
-  @apply font-abc-diatype-mono bg-paper-canvas text-ink scroll-smooth;
+  @apply font-abc-diatype-mono bg-paper-canvas text-ink;
+}
+
+/* Lenis smooth scroll */
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis-scrolling iframe {
+  pointer-events: none;
 }
 
 @theme inline {
