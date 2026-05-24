@@ -29,6 +29,316 @@ import {
 
 const books = [b1Data, b2Data, c1c2Data];
 
+function renderTextWithLinks(text: string) {
+  if (!text) return null;
+  // Regex to match markdown links: [link text](url)
+  const regex = /\[([^\]]+)\]\(([^)]+)\)/g;
+  const parts = [];
+  let lastIndex = 0;
+  let match;
+
+  while ((match = regex.exec(text)) !== null) {
+    const [fullMatch, linkText, url] = match;
+    const matchIndex = match.index;
+
+    // Add text before the match
+    if (matchIndex > lastIndex) {
+      parts.push(text.substring(lastIndex, matchIndex));
+    }
+
+    // Add the link element
+    parts.push(
+      <a
+        key={url + matchIndex}
+        href={url}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="underline text-indigo-600 hover:text-indigo-800 font-bold"
+      >
+        {linkText}
+      </a>
+    );
+
+    lastIndex = matchIndex + fullMatch.length;
+  }
+
+  // Add remaining text
+  if (lastIndex < text.length) {
+    parts.push(text.substring(lastIndex));
+  }
+
+  return parts.length > 0 ? parts : text;
+}
+
+function RichGrammarRenderer({ richGrammar }: { richGrammar: any[] }) {
+  return (
+    <div className="space-y-10">
+      {(richGrammar || []).map((section: any, sIdx: number) => (
+        <div
+          key={sIdx}
+          className="border border-off-black/20 rounded-[16px] p-6 md:p-8 bg-paper-canvas shadow-subtle relative overflow-hidden"
+        >
+          {/* Subtle design element */}
+          <div className="absolute top-0 right-0 w-24 h-24 bg-atmosphere-wash/10 rounded-full blur-xl pointer-events-none" />
+          
+          <h3 className="text-subheading font-heading font-bold text-ink mb-6 pb-2 border-b border-off-black/10 flex items-center justify-between">
+            {section.title}
+          </h3>
+          <div className="space-y-8">
+            {(section.blocks || []).map((block: any, bIdx: number) => {
+              if (block.type === "title") {
+                return (
+                  <h4
+                    key={bIdx}
+                    className="text-body font-bold text-ink font-mono mt-6 mb-3 border-l-4 border-off-black pl-3"
+                  >
+                    {block.content}
+                  </h4>
+                );
+              }
+              if (block.type === "table") {
+                return (
+                  <div key={bIdx} className="space-y-2">
+                    {block.tableName && (
+                      <h5 className="text-body-sm font-bold text-whisper-gray font-mono">
+                        {block.tableName}
+                      </h5>
+                    )}
+                    <div className="overflow-x-auto border border-off-black rounded-lg bg-paper-canvas">
+                      <table className="w-full text-sm border-collapse text-left">
+                        <thead>
+                          <tr className="bg-atmosphere-wash border-b border-off-black font-mono text-ink">
+                            {(block.headers || []).map((h: string, hIdx: number) => (
+                              <th
+                                key={hIdx}
+                                className="p-3 border-r border-off-black last:border-r-0 font-bold whitespace-nowrap"
+                              >
+                                {h}
+                              </th>
+                            ))}
+                          </tr>
+                        </thead>
+                        <tbody>
+                          {(block.rows || []).map((row: any, rIdx: number) => (
+                            <tr
+                              key={rIdx}
+                              className="border-b border-off-black last:border-b-0 font-mono hover:bg-atmosphere-wash/10 transition-colors"
+                            >
+                              {row.type && (
+                                <td
+                                  className="p-3 border-r border-off-black font-bold bg-atmosphere-wash/20 align-middle text-ink"
+                                  rowSpan={row.rowspan}
+                                >
+                                  {row.type}
+                                </td>
+                              )}
+                              {row.subject && (
+                                <td className="p-3 border-r border-off-black text-ink whitespace-pre-line align-middle">
+                                  {row.subject}
+                                </td>
+                              )}
+                              {row.form !== undefined && (
+                                <td className="p-3 border-r border-off-black text-ink font-semibold whitespace-pre-line align-middle">
+                                  {row.form}
+                                </td>
+                              )}
+                              {row.example && (
+                                <td className="p-3 text-pale-stone whitespace-pre-line italic align-middle">
+                                  {row.example}
+                                </td>
+                              )}
+                            </tr>
+                          ))}
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                );
+              }
+              if (block.type === "generic-table") {
+                return (
+                  <div key={bIdx} className="space-y-2">
+                    {block.tableName && (
+                      <h5 className="text-body-sm font-bold text-whisper-gray font-mono">
+                        {block.tableName}
+                      </h5>
+                    )}
+                    <div className="overflow-x-auto border border-off-black rounded-lg bg-paper-canvas">
+                      <table className="w-full text-sm border-collapse text-left">
+                        <thead>
+                          <tr className="bg-atmosphere-wash border-b border-off-black font-mono text-ink">
+                            {(block.headers || []).map((h: string, hIdx: number) => (
+                              <th
+                                key={hIdx}
+                                className="p-3 border-r border-off-black last:border-r-0 font-bold whitespace-nowrap"
+                              >
+                                {h}
+                              </th>
+                            ))}
+                          </tr>
+                        </thead>
+                        <tbody>
+                          {(block.rows || []).map((row: string[], rIdx: number) => (
+                            <tr
+                              key={rIdx}
+                              className="border-b border-off-black last:border-b-0 font-mono hover:bg-atmosphere-wash/10 transition-colors"
+                            >
+                              {(row || []).map((cell: string, cIdx: number) => (
+                                <td
+                                  key={cIdx}
+                                  className="p-3 border-r border-off-black last:border-r-0 text-ink whitespace-pre-line align-top"
+                                >
+                                  {renderTextWithLinks(cell)}
+                                </td>
+                              ))}
+                            </tr>
+                          ))}
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                );
+              }
+              if (block.type === "list") {
+                return (
+                  <div key={bIdx} className="font-mono text-sm text-ink space-y-4">
+                    {block.intro && (
+                      <p className="text-body-sm leading-relaxed whitespace-pre-line text-off-black">
+                        {renderTextWithLinks(block.intro)}
+                      </p>
+                    )}
+                    {block.items ? (
+                      <div className="space-y-4">
+                        {(block.items || []).map((item: any, iIdx: number) => (
+                          <div key={iIdx} className="space-y-2 border border-off-black/10 rounded-lg p-4 bg-paper-canvas/50">
+                            <p className="font-bold text-ink flex items-center gap-2">
+                              <span className="w-2 h-2 rounded-full bg-[#ffa773]" />
+                              {item.label}
+                            </p>
+                            <ul className="list-none pl-4 space-y-2 text-off-black">
+                              {(item.bullets || []).map((b: string, bulIdx: number) => (
+                                <li key={bulIdx} className="flex gap-2 items-start whitespace-pre-line text-body-sm">
+                                  <span className="text-off-black font-bold">✓</span>
+                                  <span>{renderTextWithLinks(b)}</span>
+                                </li>
+                              ))}
+                            </ul>
+                          </div>
+                        ))}
+                      </div>
+                    ) : (
+                      <ul className="list-none pl-2 space-y-2.5">
+                        {(block.bullets || []).map((b: string, bulIdx: number) => (
+                          <li key={bulIdx} className="flex gap-2 items-start whitespace-pre-line text-body-sm text-off-black leading-relaxed">
+                            <span className="text-indigo-600 font-bold">•</span>
+                            <span>{renderTextWithLinks(b)}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    )}
+                  </div>
+                );
+              }
+              if (block.type === "pronunciation") {
+                return (
+                  <div key={bIdx} className="font-mono text-sm text-ink space-y-4">
+                    {block.table && (
+                      <div className="overflow-x-auto border border-off-black rounded-lg">
+                        <table className="w-full text-sm border-collapse text-left">
+                          <thead>
+                            <tr className="bg-atmosphere-wash border-b border-off-black font-mono text-ink">
+                              <th className="p-3 border-r border-off-black font-bold w-[100px]">Pronunciation</th>
+                              <th className="p-3 font-bold">Pronunciation rules</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            {(block.table || []).map((row: any, rIdx: number) => (
+                              <tr key={rIdx} className="border-b border-off-black last:border-b-0 hover:bg-atmosphere-wash/10 transition-colors">
+                                <td className="p-3 border-r border-off-black font-bold text-indigo-600 bg-atmosphere-wash/10 align-middle text-center">{row[0]}</td>
+                                <td className="p-3 whitespace-pre-line text-off-black align-middle">{row[1]}</td>
+                              </tr>
+                            ))}
+                          </tbody>
+                        </table>
+                      </div>
+                    )}
+
+                    {block.blackboard && (
+                      <div className="bg-[#1b261a] text-[#f4eedb] border-[6px] border-[#3e2e1d] rounded-lg p-6 shadow-md relative overflow-hidden font-sans">
+                        {/* Chalk dust effect */}
+                        <div className="absolute inset-0 bg-[radial-gradient(rgba(255,255,255,0.06)_1px,transparent_1px)] bg-size-[12px_12px] pointer-events-none" />
+                        <h5 className="font-heading font-bold text-center text-[#fffbdf] text-base mb-4 underline decoration-sunset-violet-gradient decoration-wavy underline-offset-4">
+                          {block.blackboard.title}
+                        </h5>
+                        <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 text-center font-mono">
+                          {(block.blackboard.items || []).map((item: string, itIdx: number) => {
+                            const [word, phonetic] = item.split(": ");
+                            return (
+                              <div key={itIdx} className="p-2 border border-[#f4eedb]/20 bg-[#253224] rounded flex flex-col justify-center min-h-[64px]">
+                                <span className="font-bold text-[#fffbdf] text-sm">{word}</span>
+                                <span className="text-[#a5d29a] text-xs mt-1 font-semibold">{phonetic}</span>
+                              </div>
+                            );
+                          })}
+                        </div>
+                      </div>
+                    )}
+
+                    {block.note && (
+                      <div className="p-4 bg-honey-dew-gradient/10 border border-off-black/20 rounded-lg text-ink italic text-body-sm flex gap-3 items-center">
+                        <span className="text-xl">💡</span>
+                        <span>{renderTextWithLinks(block.note)}</span>
+                      </div>
+                    )}
+                  </div>
+                );
+              }
+              if (block.type === "stative-verbs") {
+                return (
+                  <div key={bIdx} className="font-mono text-sm text-ink space-y-4">
+                    <p className="whitespace-pre-line leading-relaxed text-off-black text-body-sm">
+                      {block.description}
+                    </p>
+                    <div className="overflow-x-auto border border-off-black rounded-lg bg-paper-canvas">
+                      <table className="w-full text-sm border-collapse text-left">
+                        <thead>
+                          <tr className="bg-atmosphere-wash border-b border-off-black font-mono text-ink">
+                            <th className="p-3 border-r border-off-black font-bold">Stative Verb</th>
+                            <th className="p-3 border-r border-off-black font-bold">Meaning</th>
+                            <th className="p-3 border-r border-off-black font-bold">Stative Verb</th>
+                            <th className="p-3 font-bold">Meaning</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          {(block.table || []).map((row: any, rIdx: number) => (
+                            <tr key={rIdx} className="border-b border-off-black last:border-b-0 hover:bg-atmosphere-wash/10 transition-colors">
+                              <td className="p-3 border-r border-off-black font-bold text-ink align-middle">{row[0]}</td>
+                              <td className="p-3 border-r border-off-black text-pale-stone align-middle">{row[1]}</td>
+                              <td className="p-3 border-r border-off-black font-bold text-ink align-middle">{row[2]}</td>
+                              <td className="p-3 text-pale-stone align-middle">{row[3]}</td>
+                            </tr>
+                          ))}
+                        </tbody>
+                      </table>
+                    </div>
+                    {block.note && (
+                      <div className="p-4 bg-atmosphere-wash/30 border border-off-black/20 rounded-lg text-ink font-semibold text-body-sm flex gap-3 items-center">
+                        <span className="text-xl">⚠️</span>
+                        <span>{renderTextWithLinks(block.note)}</span>
+                      </div>
+                    )}
+                  </div>
+                );
+              }
+              return null;
+            })}
+          </div>
+        </div>
+      ))}
+    </div>
+  );
+}
+
 interface LearningExplorerSectionProps {
   bookLevel?: "b1" | "b2" | "c1-c2";
   hideHeader?: boolean;
@@ -60,10 +370,11 @@ export function LearningExplorerSection({
   const activeBook = books[selectedBookIndex];
 
   // A basic filtering function for the tables based on the search query
-  const filterData = (data: any[], keysToSearch: string[]) => {
-    if (!searchQuery) return data;
+  const filterData = (data: any[] | undefined, keysToSearch: string[]) => {
+    const safeData = data || [];
+    if (!searchQuery) return safeData;
     const query = searchQuery.toLowerCase();
-    return data.filter((item) =>
+    return safeData.filter((item) =>
       keysToSearch.some((key) => item[key]?.toLowerCase().includes(query)),
     );
   };
@@ -142,31 +453,55 @@ export function LearningExplorerSection({
           <Accordion
             type="single"
             collapsible
-            defaultValue={activeBook.units[0]?.id}
+            defaultValue={activeBook?.units?.[0]?.id}
             className="w-full"
           >
-            {activeBook.units.map((unit) => (
+            {(activeBook?.units || []).map((unit: any) => (
               <AccordionItem key={unit.id} value={unit.id} className="border-b border-pale-stone">
                 <AccordionTrigger className="text-subheading font-mono font-medium hover:no-underline py-5 text-ink">
                   {unit.title}
                 </AccordionTrigger>
                 <AccordionContent className="pt-2 pb-6">
-                  <Tabs defaultValue="grammar" className="w-full mt-4">
+                  <Tabs
+                    defaultValue={
+                      unit.richGrammar || (unit.grammar && unit.grammar.length > 0)
+                        ? "grammar"
+                        : "vocabulary"
+                    }
+                    className="w-full mt-4"
+                  >
                     <TabsList className="mb-6 flex-wrap h-auto p-1 rounded-[24px]">
-                      <TabsTrigger value="grammar" className="rounded-full">Grammar</TabsTrigger>
-                      <TabsTrigger value="vocabulary" className="rounded-full">Vocabulary</TabsTrigger>
-                      <TabsTrigger value="wordFormation" className="rounded-full">
-                        Word Formation
-                      </TabsTrigger>
-                      <TabsTrigger value="wordPatterns" className="rounded-full">
-                        Word Patterns
-                      </TabsTrigger>
-                      <TabsTrigger value="phrasalVerbs" className="rounded-full">
-                        Phrasal Verbs
-                      </TabsTrigger>
-                      <TabsTrigger value="collocations" className="rounded-full">
-                        Collocations
-                      </TabsTrigger>
+                      {(unit.richGrammar || (unit.grammar && unit.grammar.length > 0)) && (
+                        <TabsTrigger value="grammar" className="rounded-full">Grammar</TabsTrigger>
+                      )}
+                      {unit.vocabulary && unit.vocabulary.length > 0 && (
+                        <TabsTrigger value="vocabulary" className="rounded-full">Vocabulary</TabsTrigger>
+                      )}
+                      {unit.wordFormation && unit.wordFormation.length > 0 && (
+                        <TabsTrigger value="wordFormation" className="rounded-full">
+                          Word Formation
+                        </TabsTrigger>
+                      )}
+                      {unit.wordPatterns && unit.wordPatterns.length > 0 && (
+                        <TabsTrigger value="wordPatterns" className="rounded-full">
+                          Word Patterns
+                        </TabsTrigger>
+                      )}
+                      {unit.phrasalVerbs && unit.phrasalVerbs.length > 0 && (
+                        <TabsTrigger value="phrasalVerbs" className="rounded-full">
+                          Phrasal Verbs
+                        </TabsTrigger>
+                      )}
+                      {unit.prepositionalPhrases && unit.prepositionalPhrases.length > 0 && (
+                        <TabsTrigger value="prepositionalPhrases" className="rounded-full">
+                          Prepositional Phrases
+                        </TabsTrigger>
+                      )}
+                      {unit.collocations && unit.collocations.length > 0 && (
+                        <TabsTrigger value="collocations" className="rounded-full">
+                          Collocations
+                        </TabsTrigger>
+                      )}
                     </TabsList>
 
                     {/* Grammar Tab */}
@@ -174,48 +509,52 @@ export function LearningExplorerSection({
                       value="grammar"
                       className="animate-in fade-in slide-in-from-bottom-2"
                     >
-                      <Table>
-                        <TableHeader>
-                          <TableRow>
-                            <TableHead className="w-[200px] font-mono text-ink">
-                              Structure
-                            </TableHead>
-                            <TableHead className="font-mono text-ink">Usage</TableHead>
-                            <TableHead className="font-mono text-ink">Example</TableHead>
-                          </TableRow>
-                        </TableHeader>
-                        <TableBody>
-                          {filterData(unit.grammar, [
-                            "structure",
-                            "usage",
-                            "example",
-                          ]).map((row, idx) => (
-                            <TableRow key={idx}>
-                              <TableCell className="font-mono font-medium text-ink">
-                                {row.structure}
-                              </TableCell>
-                              <TableCell className="font-mono text-off-black">{row.usage}</TableCell>
-                              <TableCell className="font-mono italic text-pale-stone">
-                                {row.example}
-                              </TableCell>
-                            </TableRow>
-                          ))}
-                          {filterData(unit.grammar, [
-                            "structure",
-                            "usage",
-                            "example",
-                          ]).length === 0 && (
+                      {unit.richGrammar && !searchQuery ? (
+                        <RichGrammarRenderer richGrammar={unit.richGrammar} />
+                      ) : (
+                        <Table>
+                          <TableHeader>
                             <TableRow>
-                              <TableCell
-                                colSpan={3}
-                                className="text-center py-8 font-mono text-pale-stone"
-                              >
-                                No data found.
-                              </TableCell>
+                              <TableHead className="w-[200px] font-mono text-ink">
+                                Structure
+                              </TableHead>
+                              <TableHead className="font-mono text-ink">Usage</TableHead>
+                              <TableHead className="font-mono text-ink">Example</TableHead>
                             </TableRow>
-                          )}
-                        </TableBody>
-                      </Table>
+                          </TableHeader>
+                          <TableBody>
+                            {filterData(unit.grammar, [
+                              "structure",
+                              "usage",
+                              "example",
+                            ]).map((row, idx) => (
+                              <TableRow key={idx}>
+                                <TableCell className="font-mono font-medium text-ink">
+                                  {row.structure}
+                                </TableCell>
+                                <TableCell className="font-mono text-off-black">{row.usage}</TableCell>
+                                <TableCell className="font-mono italic text-pale-stone">
+                                  {row.example}
+                                </TableCell>
+                              </TableRow>
+                            ))}
+                            {filterData(unit.grammar, [
+                              "structure",
+                              "usage",
+                              "example",
+                            ]).length === 0 && (
+                              <TableRow>
+                                <TableCell
+                                  colSpan={3}
+                                  className="text-center py-8 font-mono text-pale-stone"
+                                >
+                                  No data found.
+                                </TableCell>
+                              </TableRow>
+                            )}
+                          </TableBody>
+                        </Table>
+                      )}
                     </TabsContent>
 
                     {/* Vocabulary Tab */}
@@ -224,8 +563,8 @@ export function LearningExplorerSection({
                       className="animate-in fade-in slide-in-from-bottom-2"
                     >
                       <Table>
-                        <TableHeader>
-                          <TableRow>
+                        <TableHeader className="bg-atmosphere-wash">
+                          <TableRow className="hover:bg-transparent">
                             <TableHead className="w-[150px] font-mono text-ink">Word</TableHead>
                             <TableHead className="w-[100px] font-mono text-ink">Type</TableHead>
                             <TableHead className="font-mono text-ink">Meaning</TableHead>
@@ -275,12 +614,12 @@ export function LearningExplorerSection({
                       className="animate-in fade-in slide-in-from-bottom-2"
                     >
                       <Table>
-                        <TableHeader>
-                          <TableRow>
+                        <TableHeader className="bg-atmosphere-wash">
+                          <TableRow className="hover:bg-transparent">
                             <TableHead className="w-[150px] font-mono text-ink">Word</TableHead>
-                            <TableHead className="w-[100px] font-mono text-ink">Type</TableHead>
+                            <TableHead className="w-[100px] font-mono text-ink">Type / Form</TableHead>
                             <TableHead className="font-mono text-ink">Meaning</TableHead>
-                            <TableHead className="font-mono text-ink">Forms / Example</TableHead>
+                            <TableHead className="font-mono text-ink">Example / Detail</TableHead>
                           </TableRow>
                         </TableHeader>
                         <TableBody>
@@ -291,7 +630,7 @@ export function LearningExplorerSection({
                             "example",
                           ]).map((row, idx) => (
                             <TableRow key={idx}>
-                              <TableCell className="font-mono font-medium text-ink">
+                              <TableCell className="font-mono font-medium text-ink font-semibold">
                                 {row.word}
                               </TableCell>
                               <TableCell>
@@ -299,8 +638,8 @@ export function LearningExplorerSection({
                                   {row.type}
                                 </span>
                               </TableCell>
-                              <TableCell className="font-mono text-off-black">{row.meaning}</TableCell>
-                              <TableCell className="font-mono italic text-pale-stone">
+                              <TableCell className="font-mono text-off-black whitespace-pre-line">{row.meaning}</TableCell>
+                              <TableCell className="font-mono italic text-pale-stone whitespace-pre-line">
                                 {row.example}
                               </TableCell>
                             </TableRow>
@@ -326,13 +665,13 @@ export function LearningExplorerSection({
                       className="animate-in fade-in slide-in-from-bottom-2"
                     >
                       <Table>
-                        <TableHeader>
-                          <TableRow>
-                            <TableHead className="w-[150px] font-mono text-ink">
-                              Verb / Noun
+                        <TableHeader className="bg-atmosphere-wash">
+                          <TableRow className="hover:bg-transparent">
+                            <TableHead className="w-[200px] font-mono text-ink">
+                              Word
                             </TableHead>
-                            <TableHead className="font-mono text-ink">Pattern</TableHead>
-                            <TableHead className="font-mono text-ink">Example</TableHead>
+                            <TableHead className="w-[100px] font-mono text-ink">Type</TableHead>
+                            <TableHead className="font-mono text-ink">Pattern & Example</TableHead>
                           </TableRow>
                         </TableHeader>
                         <TableBody>
@@ -342,11 +681,13 @@ export function LearningExplorerSection({
                             "example",
                           ]).map((row, idx) => (
                             <TableRow key={idx}>
-                              <TableCell className="font-mono font-medium text-ink">
+                              <TableCell className="font-mono font-medium text-ink font-semibold">
                                 {row.verb}
                               </TableCell>
-                              <TableCell className="font-mono text-off-black">{row.pattern}</TableCell>
-                              <TableCell className="font-mono italic text-pale-stone">
+                              <TableCell className="font-mono text-off-black font-semibold">
+                                {row.pattern}
+                              </TableCell>
+                              <TableCell className="font-mono text-pale-stone whitespace-pre-line">
                                 {row.example}
                               </TableCell>
                             </TableRow>
@@ -372,8 +713,8 @@ export function LearningExplorerSection({
                       className="animate-in fade-in slide-in-from-bottom-2"
                     >
                       <Table>
-                        <TableHeader>
-                          <TableRow>
+                        <TableHeader className="bg-atmosphere-wash">
+                          <TableRow className="hover:bg-transparent">
                             <TableHead className="w-[200px] font-mono text-ink">
                               Phrasal Verb
                             </TableHead>
@@ -388,11 +729,11 @@ export function LearningExplorerSection({
                             "example",
                           ]).map((row, idx) => (
                             <TableRow key={idx}>
-                              <TableCell className="font-mono font-medium text-ink">
+                              <TableCell className="font-mono font-medium text-ink font-semibold">
                                 {row.phrasalVerb}
                               </TableCell>
-                              <TableCell className="font-mono text-off-black">{row.meaning}</TableCell>
-                              <TableCell className="font-mono italic text-pale-stone">
+                              <TableCell className="font-mono text-off-black whitespace-pre-line">{row.meaning}</TableCell>
+                              <TableCell className="font-mono italic text-pale-stone whitespace-pre-line">
                                 {row.example}
                               </TableCell>
                             </TableRow>
@@ -412,14 +753,54 @@ export function LearningExplorerSection({
                       </Table>
                     </TabsContent>
 
+                    {/* Prepositional Phrases Tab */}
+                    <TabsContent
+                      value="prepositionalPhrases"
+                      className="animate-in fade-in slide-in-from-bottom-2"
+                    >
+                      <Table>
+                        <TableHeader className="bg-atmosphere-wash">
+                          <TableRow className="hover:bg-transparent">
+                            <TableHead className="w-[250px] font-mono text-ink">
+                              Prepositional Phrase
+                            </TableHead>
+                            <TableHead className="font-mono text-ink">Meaning</TableHead>
+                          </TableRow>
+                        </TableHeader>
+                        <TableBody>
+                          {filterData(unit.prepositionalPhrases, [
+                            "phrase",
+                            "meaning",
+                          ]).map((row, idx) => (
+                            <TableRow key={idx}>
+                              <TableCell className="font-mono font-medium text-ink font-semibold">
+                                {row.phrase}
+                              </TableCell>
+                              <TableCell className="font-mono text-off-black whitespace-pre-line">{row.meaning}</TableCell>
+                            </TableRow>
+                          ))}
+                          {filterData(unit.prepositionalPhrases, ["phrase"]).length === 0 && (
+                            <TableRow>
+                              <TableCell
+                                colSpan={2}
+                                className="text-center py-8 font-mono text-pale-stone"
+                              >
+                                No data found.
+                              </TableCell>
+                            </TableRow>
+                          )}
+                        </TableBody>
+                      </Table>
+                    </TabsContent>
+
                     {/* Collocations Tab */}
                     <TabsContent
                       value="collocations"
                       className="animate-in fade-in slide-in-from-bottom-2"
                     >
                       <Table>
-                        <TableHeader>
-                          <TableRow>
+                        <TableHeader className="bg-atmosphere-wash">
+                          <TableRow className="hover:bg-transparent">
                             <TableHead className="w-[150px] font-mono text-ink">
                               Base Word
                             </TableHead>
