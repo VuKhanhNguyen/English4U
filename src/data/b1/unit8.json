@@ -1,0 +1,85 @@
+{
+  "id": "b1-unit-8",
+  "title": "Unit 8: Prepositions of time and place",
+  "grammar": [
+    {
+      "structure": "Prepositions of time: in, on, at",
+      "usage": "Used to describe months, years, seasons, days, dates, and clock times",
+      "example": "My birthday is on 11th April."
+    },
+    {
+      "structure": "Prepositions of place: in, on, at",
+      "usage": "Used to describe cities, countries, surfaces, islands, and exact locations",
+      "example": "Your passport is in the drawer."
+    }
+  ],
+  "richGrammar": [
+    {
+      "title": "A) CÁCH SỬ DỤNG GIỚI TỪ \"IN\", \"ON\", \"AT\"",
+      "blocks": [
+        {
+          "type": "title",
+          "content": "1. PREPOSITIONS OF TIME AND PLACE"
+        },
+        {
+          "type": "generic-table",
+          "headers": ["Preposition of", "IN", "ON", "AT"],
+          "rows": [
+            [
+              "**TIME**",
+              "- **Months**\n  EX: Japan is wonderful in MAY.\n- **Year**\n  EX: I first went to Paris in 2005\n- **Seasons**\n  EX: We often go skiing in winter\n- **Parts of the day**\n  EX: My train leaves in the afternoon",
+              "- **Days**\n  EX: I got a new car on Saturday\n- **Dates**\n  EX: My birthday is on 11th April.",
+              "- **Clock times**\n  EX: There's a bus at 10.15\n- **Holiday periods**\n  EX: What are you doing at Christmas"
+            ],
+            [
+              "**PLACES**",
+              "- **Towns & cities**\n  EX: There's a famous castle in Edinburgh\n- **Countries & continents**\n  EX: My brother is in Mexico\n- **Areas and regions**\n  EX: What's life like in the desert?\n- **Inside an object**\n  EX: Your passport is in the drawer\n- **Inside a room**\n  EX: I've left the tickets in the living room.\n- **Inside a building**\n  EX: Tom has been in the travel agents for an hour!"
+              ,
+              "- **Islands**\n  EX: Last year, we stayed on New York.\n- **Pages**\n  EX: There are some useful Italian phrases on page 97.\n- **On top of an object**\n  EX: Did you put your car keys on the kitchen table?\n- **On a surface**\n  EX: There's a timetable on the wall.",
+              "- **Exact places**\n  EX: What's it like at the North Pole?\n- **Addresses**\n  EX: My cousin lives at 132 London Road.\n- **Building, when talking about activities that happen there**\n  EX: I think John is at the cinema watching Titanic\n- **Activities**\n  EX: Rania isn't here. She's at a party."
+            ],
+            [
+              "**PHRASES**",
+              "- In a minute / an hour\n- In front of\n- In the middle of\n- In the future",
+              "- On the beach\n- On the left / right\n- On my birthday / anniversary",
+              "- At the moment\n- At night\n- At the top / bottom\n- At the door / window"
+            ]
+          ]
+        },
+        {
+          "type": "title",
+          "content": "2. NOTES ON PREPOSITIONS"
+        },
+        {
+          "type": "list",
+          "bullets": [
+            "**Motion Verbs**: With motion verbs (verbs expressing movement) like *come*, *go*, *move*, *run*, *walk*... use **TO** instead of *in*, *on*, or *at*.\n- EX: Let's go to the beach.",
+            "**Time Transitions**: Use **IN** for parts of the day, but use **ON** when specifying a day.\n- EX: We're flying to Japan **IN** the morning.\n- EX: We're flying to Japan **ON** Tuesday night.",
+            "**No Preposition**: Do not use a preposition before *tomorrow*, *yesterday*, *tomorrow morning*, *yesterday night*, etc.\n- EX: We're flying to Japan tomorrow.",
+            "**Area Scale**: Use **IN** for larger areas where the speaker is. Use **AT** for smaller areas or specific points on a journey.\n- EX: Let's meet **AT** Galaxy Cinema.\n- EX: Let's go skiing **IN** the Phu Quoc beach."
+          ]
+        }
+      ]
+    }
+  ],
+  "vocabulary": [
+    { "word": "wonderful", "type": "adj", "meaning": "extremely good, beautiful, or pleasant", "example": "We had a wonderful holiday in Hawaii." },
+    { "word": "castle", "type": "n", "meaning": "large building built in the past with thick walls to defend against attack", "example": "The royal family lives in an ancient castle." },
+    { "word": "region", "type": "n", "meaning": "particular area or part of a country or the world", "example": "This region is known for its beautiful lakes." },
+    { "word": "passport", "type": "n", "meaning": "official document for travel to other countries", "example": "Don't forget to pack your passport before going to the airport." },
+    { "word": "island", "type": "n", "meaning": "piece of land completely surrounded by water", "example": "They spent their vacation on a tropical island." },
+    { "word": "timetable", "type": "n", "meaning": "list showing the times when events or trains are scheduled to happen", "example": "According to the bus timetable, the next one is at 4:30." },
+    { "word": "forest", "type": "n", "meaning": "large area of land covered with trees", "example": "Many wild animals live in the deep forest." },
+    { "word": "statue", "type": "n", "meaning": "model of a person or animal made of stone, metal, or wood", "example": "There is a large marble statue of a famous leader in the park." },
+    { "word": "drive", "type": "v", "meaning": "control and guide the movement of a vehicle", "example": "She learned how to drive a car when she was eighteen." },
+    { "word": "sheep", "type": "n", "meaning": "farm animal with thick wool that is eaten as meat", "example": "A herd of sheep was grazing in the green field." },
+    { "word": "field", "type": "n", "meaning": "area of land used for growing crops or keeping animals", "example": "The cows were standing in the grassy field." },
+    { "word": "jetlag", "type": "n", "meaning": "tiredness felt after a long flight across different time zones", "example": "It took him three days to recover from his jetlag." },
+    { "word": "awake", "type": "v", "meaning": "stop sleeping or make someone stop sleeping", "example": "The loud noise awoke the sleeping baby." }
+  ],
+  "wordFormation": [],
+  "wordPatterns": [],
+  "phrasalVerbs": [],
+  "prepositionalPhrases": [],
+  "collocations": []
+}

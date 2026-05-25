@@ -1,0 +1,128 @@
+{
+  "id": "b1-unit-7",
+  "title": "Unit 7: Future time",
+  "grammar": [
+    {
+      "structure": "Present continuous & Present simple",
+      "usage": "Future arrangements and fixed timetables/schedules",
+      "example": "We're driving to Berlin this weekend."
+    },
+    {
+      "structure": "Will & Be going to",
+      "usage": "Predictions, intentions, offers, and spontaneous decisions",
+      "example": "I will help you with your homework. / I'm going to travel next week."
+    }
+  ],
+  "richGrammar": [
+    {
+      "title": "A) FUTURE TIME",
+      "blocks": [
+        {
+          "type": "title",
+          "content": "1. PRESENT CONTINUOUS & PRESENT SIMPLE"
+        },
+        {
+          "type": "list",
+          "items": [
+            {
+              "label": "Present Continuous (Future arrangements)",
+              "bullets": [
+                "**Arrangements**: We use the present continuous to talk about arrangements (future plans already decided and arranged with other people).\nEX: We're driving to Berlin this weekend.",
+                "**Watch out - Intentions**: Things we want to do in the future but have not arranged are called 'intentions'. We do not use the present continuous for intentions. We use *be going to* instead.\nEX: ✗ I'm becoming an explorer when I grow up.\nEX: ✓ I'm going to be an explorer when I grow up.",
+                "**Watch out - Predictions**: We do not use the present continuous for predictions. We use *will* or *be going to* instead.\nEX: ✗ Do you think you're enjoying your trip to Berlin next week?\nEX: ✓ Do you think you'll enjoy your trip to Berlin next week?"
+              ]
+            },
+            {
+              "label": "Present Simple (Future timetables/schedules)",
+              "bullets": [
+                "**Timetables & Schedules**: We use the present simple to talk about future events that are part of a timetable, programme, or fixed schedule.\nEX: The train leaves at 8:30 tomorrow morning.\nEX: What time does the lesson start?"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "title",
+          "content": "2. FORM OF WILL & BE GOING TO"
+        },
+        {
+          "type": "generic-table",
+          "headers": ["WILL", "BE GOING TO"],
+          "rows": [
+            [
+              "**Positive (+)**\nS + will + V_bare\nEX: Will you pass this card to me after finishing?",
+              "**Positive (+)**\nS + am / is / are + going to + V_bare\nEX: When I grow up, I am going to play trumpet in rock music band!"
+            ],
+            [
+              "**Negative (-)**\nS + will + not + V_bare\n(won't)\nEX: Lan will not visit museum on her trip to Hanoi.",
+              "**Negative (-)**\nS + am / is / are + not + going to + V_bare\n(isn't / aren't going to)\nEX: Nam is not going to invite all class to his birthday party – just some his close friends."
+            ],
+            [
+              "**Interrogative (?)**\nWill + S + V_bare?\nEX: Will you invite all of us?",
+              "**Interrogative (?)**\nAm / Is / Are + S + going to + V_bare?\nEX: Is Minh going to be on time?"
+            ]
+          ]
+        },
+        {
+          "type": "title",
+          "content": "3. COMPARE WILL & BE GOING TO"
+        },
+        {
+          "type": "generic-table",
+          "headers": ["WILL", "BE GOING TO"],
+          "rows": [
+            [
+              "**Future events**\nEX: The new airport will be the most modern in Singapore.",
+              "**Future events**\nEX: This new university is going to be the most expensive in this area."
+            ],
+            [
+              "**Predictions (without evidence)**\nEX: You'll have a great time in Bhutan.",
+              "**Intentions / Plans**\nEX: I am going to be a doctor when I grow up.\n*(✗ I am being a doctor when I grow up.)*"
+            ],
+            [
+              "**Offers and requests**\nEX: We'll help you get ready for your birthday party.",
+              "**Predictions (based on present evidence)**\nEX: It's going to rain, so take an umbrella.\n*(✗ Do you think it is raining soon?)*"
+            ],
+            [
+              "**Spontaneous decisions (made at the moment of speaking)**\nEX: I'll go to Cambodia this summer.",
+              ""
+            ],
+            [
+              "**Note: Do not use Will for arrangements (already planned or arranged)**\n*(✗ We will visit grandmother this weekend.)*",
+              ""
+            ]
+          ]
+        }
+      ]
+    }
+  ],
+  "vocabulary": [
+    { "word": "encyclopaedia", "type": "n", "meaning": "book or set of books giving information on many subjects", "example": "You can find information about dinosaurs in the encyclopaedia." },
+    { "word": "subtraction", "type": "n", "meaning": "process of taking one number away from another", "example": "Children learn addition and subtraction in primary school." },
+    { "word": "multiplication", "type": "n", "meaning": "mathematical operation of scaling one number by another", "example": "Multiplication is easier to do if you memorize the times tables." },
+    { "word": "crossword", "type": "n", "meaning": "word puzzle where letters are filled in a grid of squares", "example": "He enjoys solving the daily crossword in the newspaper." },
+    { "word": "intention", "type": "n", "meaning": "something that you plan or want to do", "example": "She has no intention of changing her mind." },
+    { "word": "prediction", "type": "n", "meaning": "statement about what you think will happen in the future", "example": "His prediction about the match score was completely correct." },
+    { "word": "offer", "type": "n, v", "meaning": "act of asking someone if they would like to have or do something", "example": "Thank you for your kind offer of help." },
+    { "word": "request", "type": "n, v", "meaning": "act of politely asking for something", "example": "The library received a request for a rare history book." },
+    { "word": "arrangement", "type": "n", "meaning": "plan or preparation for a future event", "example": "We made an arrangement to meet at the cinema at 7 p.m." },
+    { "word": "evidence", "type": "n", "meaning": "facts or signs that show something is true", "example": "The police found no evidence of a crime." },
+    { "word": "explore", "type": "v", "meaning": "travel through an unfamiliar area to learn about it", "example": "They want to explore the ancient caves in the forest." },
+    { "word": "grow up", "type": "v phr", "meaning": "develop from a child into an adult", "example": "What do you want to be when you grow up?" },
+    { "word": "tourist", "type": "n", "meaning": "person who is visiting a place for pleasure or holiday", "example": "The historic city attracts thousands of tourists every summer." },
+    { "word": "delicious", "type": "adj", "meaning": "having a very pleasant taste or smell", "example": "This chocolate cake is absolutely delicious!" },
+    { "word": "furniture", "type": "n", "meaning": "chairs, tables, beds, and other movable items in a house", "example": "They bought some new furniture for their living room." },
+    { "word": "snowboarding", "type": "n", "meaning": "sport of sliding down a snow-covered hill on a board", "example": "He goes snowboarding every winter in the mountains." },
+    { "word": "excited (about)", "type": "adj", "meaning": "feeling very happy and enthusiastic about something", "example": "The children are excited about going to the zoo tomorrow." },
+    { "word": "dentist", "type": "n", "meaning": "person who is qualified to treat people's teeth", "example": "You should visit the dentist twice a year for a checkup." },
+    { "word": "beard", "type": "n", "meaning": "hair that grows on the chin and cheeks of a man's face", "example": "He decided to grow a beard for the winter." },
+    { "word": "paintbrush", "type": "n", "meaning": "brush used for putting paint on a surface or canvas", "example": "Dip the paintbrush into the blue paint." },
+    { "word": "scientist", "type": "n", "meaning": "person who studies or works in a field of science", "example": "Scientists are researching new ways to produce clean energy." },
+    { "word": "terrible", "type": "adj", "meaning": "extremely bad, unpleasant, or serious", "example": "The weather was terrible, with heavy rain and strong winds." },
+    { "word": "weather", "type": "n", "meaning": "conditions in the atmosphere like temperature, wind, and rain", "example": "What is the weather like in Hanoi today?" }
+  ],
+  "wordFormation": [],
+  "wordPatterns": [],
+  "phrasalVerbs": [],
+  "prepositionalPhrases": [],
+  "collocations": []
+}

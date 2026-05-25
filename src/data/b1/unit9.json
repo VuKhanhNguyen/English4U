@@ -1,0 +1,140 @@
+{
+  "id": "b1-unit-9",
+  "title": "Unit 9: Journey and travel",
+  "grammar": [],
+  "vocabulary": [
+    { "word": "abroad", "type": "adv", "meaning": "in or to a foreign country", "example": "He decided to study abroad in Germany next year." },
+    { "word": "accommodation", "type": "n", "meaning": "place such as a room or house for someone to live or stay in", "example": "The hotel offers comfortable accommodation for tourists." },
+    { "word": "book", "type": "v", "meaning": "reserve a place, ticket, or hotel room in advance", "example": "We should book our flight tickets early." },
+    { "word": "break", "type": "n", "meaning": "short period of rest or relaxation", "example": "Let's take a ten-minute break from studying." },
+    { "word": "cancel", "type": "v", "meaning": "decide that a planned event or reservation will not happen", "example": "They had to cancel the flight due to bad weather." },
+    { "word": "catch", "type": "v", "meaning": "board a train, bus, or plane in time", "example": "Hurry up if you want to catch the last bus!" },
+    { "word": "coach", "type": "n", "meaning": "comfortable bus used for carrying passengers on long journeys", "example": "We traveled to London by coach." },
+    { "word": "convenient", "type": "adj", "meaning": "suitable for your needs and causing no difficulty", "example": "The supermarket is in a very convenient location." },
+    { "word": "crash", "type": "v, n", "meaning": "hit another vehicle or object violently; an accident involving vehicles", "example": "The car crashed into a tree, but luckily no one was injured." },
+    { "word": "crowded", "type": "adj", "meaning": "very full of people", "example": "The train station was crowded with commuters." },
+    { "word": "cruise", "type": "n", "meaning": "holiday spent traveling on a large ship", "example": "They went on a cruise around the Mediterranean." },
+    { "word": "delay", "type": "v, n", "meaning": "make someone or something late; period of time you must wait", "example": "The train was delayed by an hour." },
+    { "word": "destination", "type": "n", "meaning": "place to which someone or something is going", "example": "Paris is a popular tourist destination." },
+    { "word": "ferry", "type": "n", "meaning": "boat that carries passengers and vehicles across a river or sea", "example": "We took the ferry to cross the river." },
+    { "word": "flight", "type": "n", "meaning": "journey made by flying in an aircraft", "example": "Our flight to Tokyo was smooth and comfortable." },
+    { "word": "foreign", "type": "adj", "meaning": "belonging to a country other than your own", "example": "Learning a foreign language opens up many opportunities." },
+    { "word": "harbour", "type": "n", "meaning": "area of water on the coast where ships can tie up safely", "example": "Several fishing boats were docked in the harbour." },
+    { "word": "journey", "type": "n", "meaning": "act of traveling from one place to another, especially a long distance", "example": "The journey across the desert took three days." },
+    { "word": "luggage", "type": "n", "meaning": "bags and suitcases you carry when traveling", "example": "You must keep your luggage with you at all times." },
+    { "word": "nearby", "type": "adj, adv", "meaning": "not far away; close", "example": "They live in a nearby town." },
+    { "word": "pack", "type": "v", "meaning": "put clothes and items into a bag or suitcase for travel", "example": "I need to pack my suitcase tonight." },
+    { "word": "passport", "type": "n", "meaning": "official document showing your identity for international travel", "example": "You need a valid passport to travel abroad." },
+    { "word": "platform", "type": "n", "meaning": "flat area next to a railway track where passengers get on and off trains", "example": "The train for Paris leaves from platform 5." },
+    { "word": "public transport", "type": "n phr", "meaning": "buses, trains, and other transport open to the general public", "example": "Using public transport is better for the environment." },
+    { "word": "reach", "type": "v", "meaning": "arrive at a place or destination", "example": "We reached the hotel just before midnight." },
+    { "word": "resort", "type": "n", "meaning": "place where many people go for holidays or recreation", "example": "We stayed at a luxury beach resort." },
+    { "word": "souvenir", "type": "n", "meaning": "something you buy to remember a place you visited", "example": "She bought a keychain as a souvenir of her trip to Rome." },
+    { "word": "traffic", "type": "n", "meaning": "vehicles moving on a road or public highway", "example": "There was a lot of traffic on the highway this morning." },
+    { "word": "trip", "type": "n", "meaning": "journey to a place and back again, especially for pleasure or a short time", "example": "We are planning a weekend trip to the mountains." },
+    { "word": "vehicle", "type": "n", "meaning": "machine used for transporting people or goods, such as a car or truck", "example": "Tractors and trucks are heavy vehicles." },
+    { "word": "suitable (for)", "type": "adj", "meaning": "acceptable or right for a particular person or situation", "example": "This hotel is suitable for families with children." },
+    { "word": "tightly", "type": "adv", "meaning": "fitting closely or held firmly", "example": "Hold my hand tightly so you don't get lost." },
+    { "word": "helicopter", "type": "n", "meaning": "aircraft without wings that flies using overhead blades", "example": "The rescue team arrived in a helicopter." },
+    { "word": "station", "type": "n", "meaning": "building where trains or buses stop for passengers", "example": "Meet me at the railway station at 6 p.m." },
+    { "word": "cowboy", "type": "n", "meaning": "man who rides a horse and looks after cattle, especially in the US", "example": "The cowboy rode his horse across the ranch." },
+    { "word": "horse", "type": "n", "meaning": "large animal with four legs and a mane, used for riding", "example": "He learned to ride a horse when he was a teenager." },
+    { "word": "famous", "type": "adj", "meaning": "known and recognized by many people", "example": "The city is famous for its beautiful bridges." },
+    { "word": "appointment", "type": "n", "meaning": "arrangement to meet someone at a particular time and place", "example": "I have a doctor's appointment at 10 o'clock." }
+  ],
+  "phrasalVerbs": [
+    { "phrasalVerb": "get in(to)", "meaning": "enter a car or small vehicle", "example": "EX: Get into the car, we're leaving now." },
+    { "phrasalVerb": "get off", "meaning": "leave a bus, train, plane, or bicycle", "example": "EX: Make sure you take all your bags when you get off the train." },
+    { "phrasalVerb": "get on(to)", "meaning": "board a bus, train, plane, or bicycle", "example": "EX: I got onto the bus at High Street." },
+    { "phrasalVerb": "get out (of)", "meaning": "leave a car, room, building, or area", "example": "EX: She got out of the taxi and walked into the hotel." },
+    { "phrasalVerb": "go away", "meaning": "leave a place or depart on holiday", "example": "EX: We're going away for the weekend." },
+    { "phrasalVerb": "go back (to)", "meaning": "return to a place or person", "example": "EX: I must go back to the office; I left my phone there." },
+    { "phrasalVerb": "set off", "meaning": "start a journey", "example": "EX: They set off early in the morning to avoid the traffic." },
+    { "phrasalVerb": "take off", "meaning": "leave the ground and start to fly", "example": "EX: The plane took off on time despite the rain." }
+  ],
+  "prepositionalPhrases": [
+    { "phrase": "by air/sea/bus/car/etc.", "meaning": "method of transport used for travel", "example": "EX: It is much faster to travel to London by air." },
+    { "phrase": "on board", "meaning": "on or in a ship, train, or aircraft", "example": "EX: There were over three hundred passengers on board the flight." },
+    { "phrase": "on foot", "meaning": "walking rather than riding in a vehicle", "example": "EX: The museum is close enough to reach on foot." },
+    { "phrase": "on holiday", "meaning": "taking a vacation or period of rest away from work", "example": "EX: They are currently on holiday in Spain." },
+    { "phrase": "on schedule", "meaning": "happening at the planned or expected time", "example": "EX: The train arrived exactly on schedule." },
+    { "phrase": "on the coast", "meaning": "located on the land near the sea", "example": "EX: They bought a beautiful holiday home on the coast." }
+  ],
+  "wordFormation": [
+    {
+      "word": "attract",
+      "type": "verb",
+      "meaning": "attract: pull or draw interest / attractive: beautiful or pleasant to look at / attraction: interesting place or event that tourists visit",
+      "example": "EX: The theme park attracts millions of visitors.\nEX: She wore an attractive dress to the party.\nEX: The Eiffel Tower is a famous tourist attraction."
+    },
+    {
+      "word": "back",
+      "type": "noun/adjective",
+      "meaning": "back: rear part of the body or object / backwards: in the direction that is behind you",
+      "example": "EX: He wrote his name on the back of the envelope.\nEX: She took a step backwards to look at the painting."
+    },
+    {
+      "word": "choose",
+      "type": "verb",
+      "meaning": "choose / chose / chosen: select from a number of options / choice: act of selecting or the range of options available",
+      "example": "EX: You can choose whichever book you like.\nEX: He had to make a difficult choice between two jobs."
+    },
+    {
+      "word": "comfort",
+      "type": "noun/verb",
+      "meaning": "comfort: state of physical ease / comfortable: providing physical ease / uncomfortable: not providing ease; causing discomfort",
+      "example": "EX: These soft pillows provide a lot of comfort.\nEX: The hotel rooms were warm and comfortable.\nEX: That wooden chair is very uncomfortable to sit on."
+    },
+    {
+      "word": "depart",
+      "type": "verb",
+      "meaning": "depart: leave or start a journey / departure: act of leaving a place",
+      "example": "EX: The train will depart from platform 3 at 9:00.\nEX: Passengers should check the departure screens."
+    },
+    {
+      "word": "direct",
+      "type": "verb/adjective",
+      "meaning": "direct: straight or without stopping / direction: path along which something moves or points",
+      "example": "EX: There is a direct flight from Hanoi to Tokyo.\nEX: The guide pointed in the direction of the museum."
+    },
+    {
+      "word": "drive",
+      "type": "verb",
+      "meaning": "drive / drove / driven: operate and guide a vehicle / driver: person who drives a vehicle",
+      "example": "EX: My father drives to work every day.\nEX: The bus driver was very friendly."
+    },
+    {
+      "word": "fly",
+      "type": "verb",
+      "meaning": "fly / flew / flown: move through the air / flight: journey made by flying",
+      "example": "EX: Birds can fly high in the sky.\nEX: We booked a flight to Paris."
+    },
+    {
+      "word": "travel",
+      "type": "verb/noun",
+      "meaning": "travel: make a journey / traveller: person who travels",
+      "example": "EX: They love to travel to foreign countries.\nEX: The hotel is popular with business travellers."
+    },
+    {
+      "word": "visit",
+      "type": "verb/noun",
+      "meaning": "visit: go to see a person or place / visitor: person who visits a person or place",
+      "example": "EX: We plan to visit the museum tomorrow.\nEX: The museum has a guide to help visitors."
+    }
+  ],
+  "wordPatterns": [
+    { "verb": "close to", "pattern": "adjective", "meaning": "near in distance or relationship", "example": "EX: Our house is very close to the station." },
+    { "verb": "famous for", "pattern": "adjective", "meaning": "known by many people for a particular feature or achievement", "example": "EX: Paris is famous for its art and cuisine." },
+    { "verb": "far from", "pattern": "adjective", "meaning": "at a great distance from a place", "example": "EX: The hotel is far from the city center." },
+    { "verb": "late for", "pattern": "adjective", "meaning": "arriving after the planned or expected time", "example": "EX: He was late for school this morning." },
+    { "verb": "suitable for", "pattern": "adjective", "meaning": "right or acceptable for a particular purpose or person", "example": "EX: This movie is not suitable for young children." },
+    { "verb": "arrive at/in", "pattern": "verb", "meaning": "reach a place at the end of a journey", "example": "EX: We arrived at the station just in time.\nEX: They arrived in Tokyo yesterday." },
+    { "verb": "ask (sb) about", "pattern": "verb", "meaning": "politely question someone about a subject", "example": "EX: Ask the tourist guide about the local history." },
+    { "verb": "ask for", "pattern": "verb", "meaning": "request something from someone", "example": "EX: He asked for a glass of water." },
+    { "verb": "look at", "pattern": "verb", "meaning": "direct your eyes towards something to see it", "example": "EX: Look at the beautiful view from this window." },
+    { "verb": "prepare for", "pattern": "verb", "meaning": "make things ready for a future event", "example": "EX: She is preparing for her final exams." },
+    { "verb": "provide sb with", "pattern": "verb", "meaning": "give something useful or necessary to someone", "example": "EX: The school provides students with textbooks." },
+    { "verb": "wait for", "pattern": "verb", "meaning": "stay in a place until someone or something arrives", "example": "EX: I am waiting for the bus." }
+  ],
+  "collocations": []
+}
