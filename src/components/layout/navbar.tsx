@@ -91,7 +91,7 @@ export function Navbar() {
             </AnimatePresence>
           </div>
           <Link
-            href="/#resources"
+            href="/resources"
             className="text-sm font-normal text-off-black px-[10px] py-[8px] hover:underline hover:decoration-off-black transition-all"
           >
             Resources

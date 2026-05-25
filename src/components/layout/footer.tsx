@@ -55,7 +55,7 @@ export function Footer() {
               </li>
               <li>
                 <Link 
-                  href="/#resources" 
+                  href="/resources" 
                   className="text-[#8ea0b5] hover:text-white transition-colors text-sm underline decoration-[#8ea0b5]/50 hover:decoration-white"
                 >
                   Resources
