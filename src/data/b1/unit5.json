@@ -1,0 +1,204 @@
+{
+  "id": "b1-unit-5",
+  "title": "Unit 5: Past perfect time",
+  "grammar": [
+    {
+      "structure": "Past perfect simple",
+      "usage": "Actions that happened before another action or time in the past",
+      "example": "He had gone out when I came into the house."
+    },
+    {
+      "structure": "Past perfect continuous",
+      "usage": "Actions continuing up to a point in the past, emphasizing duration or cause",
+      "example": "It had been raining very hard for two hours before it stopped."
+    }
+  ],
+  "richGrammar": [
+    {
+      "title": "A) PAST PERFECT SIMPLE",
+      "blocks": [
+        {
+          "type": "title",
+          "content": "1. FORM OF PAST PERFECT SIMPLE"
+        },
+        {
+          "type": "table",
+          "tableName": "S + had + past participle (= V3 / V(ed))",
+          "headers": ["Type", "Structure", "Example"],
+          "rows": [
+            { "type": "Positive (+)", "subject": "S + had + V3/ed", "example": "EX: He had gone out when I came into the house." },
+            { "type": "Negative (-)", "subject": "S + had + not + V3/ed", "example": "EX: She hadn't come home when I got there." },
+            { "type": "Interrogative (?)", "subject": "Had + S + V3/ed?", "example": "EX: Had the film started when you arrived at the cinema?" }
+          ]
+        },
+        {
+          "type": "title",
+          "content": "2. HOW TO CHANGE VERBS INTO THE PAST"
+        },
+        {
+          "type": "title",
+          "content": "2.1. REGULAR VERBS: ADD ED (Refer to Unit 2)"
+        },
+        {
+          "type": "list",
+          "bullets": [
+            "a) Add ed to the end of the verb:\nEX: watch → watched; turn → turned; want → wanted; attach → attached",
+            "b) If the verb ends with \"e\", just add \"d\":\nEX: type → typed; smile → smiled; agree → agreed",
+            "c) If the verb has ONE syllable, ends with ONE consonant, and has ONE vowel before the consonant, double the last consonant and add \"-ed\":\nEX: stop → stopped; shop → shopped; tap → tapped\n* Note: Some words don't follow this rule: commit → committed; travel → travelled; prefer → preferred",
+            "d) Verbs ending with \"y\":\n- If \"y\" is preceded by a vowel (e, u, o, a, i), keep \"y\" and add ed. EX: enjoy → enjoyed; play → played; stay → stayed\n- If \"y\" is preceded by a consonant, change \"y\" to \"i\" and add ed. EX: carry → carried; study → studied; hurry → hurried"
+          ]
+        },
+        {
+          "type": "title",
+          "content": "2.2. IRREGULAR VERBS (Continued from Unit 2)"
+        },
+        {
+  "type": "generic-table",
+  "headers": ["Vbare", "V3", "meaning", "Vbare", "V3", "meaning"],
+  "rows": [
+    ["go", "gone", "move from one place to another", "keep", "kept", "continue to have or hold something"],
+    ["see", "seen", "notice with the eyes", "take", "taken", "move or carry something away"],
+    ["smell", "smelt", "notice a scent with the nose", "understand", "understood", "know the meaning of something"],
+    ["break", "broken", "separate into pieces by force", "know", "known", "have information in your mind"],
+    ["tell", "told", "give information to someone", "write", "written", "make words on paper or a screen"],
+    ["think", "thought", "have an opinion or belief", "hear", "heard", "receive sound through ears"],
+    ["say", "said", "speak words to express thoughts", "come", "come", "move toward a place"],
+    ["hold", "held", "carry or support with your hands", "buy", "bought", "get something by paying money"]
+  ]
+},
+        {
+          "type": "title",
+          "content": "2.3. IRREGULAR VERBS PDF LINK"
+        },
+        {
+          "type": "list",
+          "bullets": [
+            "To learn and look up irregular verbs (V2/V3) quickly, you can open the online lookup table here:\n- [List of irregular verbs](https://cdn.thuvienphapluat.vn/phap-luat/2022-2/NHPT/bang-360-dong-tu-bat-quy-tac-tvpl.pdf)\n- [Oxford Dictionary](https://www.oxfordlearnersdictionaries.com/)"
+          ]
+        },
+        {
+          "type": "title",
+          "content": "3. USING THE PAST PERFECT SIMPLE"
+        },
+        {
+          "type": "list",
+          "bullets": [
+            "a) Use Past Perfect simple in case of 2 actions happened in the past, we use past perfect simple for the action that happened before and past simple for the action that happened after.\nEX: I met her after she had divorced.",
+            "b) Past perfect simple is used to express an action that happened and was completed before a certain time in the past, or before another action that also ended in the past.\nEX: We had had lunch when she arrived.",
+            "c) Action happens as a prerequisite for another action.\nEX: I had prepared for the exams and was ready to do well.",
+            "d) In conditional sentences type 3 to express a unreal condition.\nEX: She would have come to the party if she had been invited.",
+            "e) Action happens in a period of time in the past, before another time in the past.\nEX: I had lived abroad for twenty years when I received the transfer."
+          ]
+        },
+        {
+          "type": "title",
+          "content": "3.1. SIGNAL WORDS & NOTES"
+        },
+        {
+          "type": "list",
+          "items": [
+            {
+              "label": "Signal words",
+              "bullets": [
+                "a) In the sentence appears words such as:\n- By: I'd finished my homework by 9 o'clock.\n- By the time: By the time I got the class, the lesson had started.\n- Before: The teacher had checked the answers before the lesson.\n- After: I left after I'd finished the test.\n- Just: Simon had just finished the test when the bell rang.\n- When: I left when I'd finished the test.",
+                "b) Depends on the meaning."
+              ]
+            },
+            {
+              "label": "Notes",
+              "bullets": [
+                "Using the simple past or the past perfect can change the meaning of a sentence.\n- EX: The lesson started when I arrived.\n  → The lesson started when I arrived.\n- EX: The lesson had started when I arrived.\n  → The lesson had started when I arrived."
+              ]
+            }
+          ]
+        },
+        {
+          "type": "title",
+          "content": "4. PRESENT PERFECT VS. PAST PERFECT"
+        },
+        {
+          "type": "generic-table",
+          "headers": ["Present perfect (have/has + V3/ed)", "Past perfect (had + V3/ed)"],
+          "rows": [
+            [
+              "→ Reference time: present",
+              "→ Reference time: past"
+            ],
+            [
+              "→ Express an action that happened in the past and continues to the present or an action that happened at an unspecified time in the past.",
+              "→ Express an action that happened and continued up to a certain time in the past (the time in the past is specified)."
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "title": "B) PAST PERFECT CONTINUOUS",
+      "blocks": [
+        {
+          "type": "title",
+          "content": "1. FORM OF PAST PERFECT CONTINUOUS"
+        },
+        {
+          "type": "table",
+          "tableName": "S + had + been + V-ing",
+          "headers": ["Type", "Structure", "Example"],
+          "rows": [
+            { "type": "Positive (+)", "subject": "S + had + been + V-ing", "example": "EX: It had been raining very hard for two hours before it stopped." },
+            { "type": "Negative (-)", "subject": "S + had + not + been + V-ing", "example": "EX: My father hadn't been doing anything when my mother came home." },
+            { "type": "Interrogative (?)", "subject": "Had + S + been + V-ing?", "example": "EX: Had she been watching TV for 4 hours before she went to eat dinner?" }
+          ]
+        },
+        {
+          "type": "title",
+          "content": "2. USING PAST PERFECT CONTINUOUS"
+        },
+        {
+          "type": "list",
+          "bullets": [
+            "a) Express an action that was happening before another action in the past (emphasizing continuity).\nEX: I had been thinking about that before you mentioned it.",
+            "b) Express an action that was the cause of something in the past.\nEX: Sam gained weight (=result) because she had been overeating (=reason).",
+            "c) Express an action that happened to prepare for another action.\nEX: I had been practicing for five months and was ready for the championship.",
+            "d) Express an action that happened continuously before another action in the past.\nEX: She had been walking for 2 hours before 11 p.m. last night.\nEX: My younger brother had been crying for almost 1 hour before lunchtime.",
+            "e) Emphasize an action that left a result in the past.\nEX: Yesterday morning, he was exhausted because he had been working on his report all night.\nEX: She would have been more confident if she had been preparing better."
+          ]
+        },
+        {
+          "type": "title",
+          "content": "3. SIGNAL WORDS"
+        },
+        {
+          "type": "list",
+          "items": [
+            {
+              "label": "Signal words",
+              "bullets": [
+                "a) In the sentence appears words such as:\n- until then\n- by then\n- prior to that time\n- before, after\n- all day, all night...",
+                "b) Depends on the meaning."
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "vocabulary": [
+  { "word": "homework", "type": "n", "meaning": "schoolwork done at home", "example": "I have to finish my homework before I can play video games." },
+  { "word": "grammar", "type": "n", "meaning": "rules for forming words and sentences", "example": "English grammar can be difficult to master." },
+  { "word": "headache", "type": "n", "meaning": "pain inside the head", "example": "She has a terrible headache and needs to rest." },
+  { "word": "housework", "type": "n", "meaning": "work done to clean and care for a house", "example": "My brother and I help our parents with the housework." },
+  { "word": "flooded", "type": "adj", "meaning": "covered with water", "example": "The streets were flooded after the heavy rain." },
+  { "word": "crash", "type": "v", "meaning": "hit something violently", "example": "The two cars crashed at the intersection." },
+  { "word": "fantastic", "type": "adj", "meaning": "extremely good or wonderful", "example": "We had a fantastic time at the concert last night." },
+  { "word": "nervous", "type": "adj", "meaning": "worried or anxious", "example": "He was nervous about speaking in front of the class." },
+  { "word": "read (sth) out", "type": "v phr", "meaning": "read words aloud so people can hear", "example": "The teacher asked me to read out the answers." },
+  { "word": "envelope", "type": "n", "meaning": "paper cover for a letter", "example": "Put the letter in the envelope and mail it." },
+  { "word": "geography", "type": "n", "meaning": "study of the Earth's surface and countries", "example": "We are learning about the rivers of Asia in geography class." },
+  { "word": "shout with joy", "type": "v phr", "meaning": "cry out loudly because of happiness", "example": "The children shouted with joy when they heard the good news." }
+],
+  "wordFormation": [],
+  "wordPatterns": [],
+  "phrasalVerbs": [],
+  "prepositionalPhrases": [],
+  "collocations": []
+}

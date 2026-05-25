@@ -5,9 +5,19 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Search } from "lucide-react";
 import { cn } from "@/lib/utils";
 
-import b1Data from "@/data/destination-b1.json";
+import unit1 from "@/data/b1/unit1.json";
+import unit2 from "@/data/b1/unit2.json";
+import unit3 from "@/data/b1/unit3.json";
+import unit4 from "@/data/b1/unit4.json";
+import unit5 from "@/data/b1/unit5.json";
+import unit6 from "@/data/b1/unit6.json";
 import b2Data from "@/data/destination-b2.json";
 import c1c2Data from "@/data/destination-c1-c2.json";
+
+const b1Data = {
+  book: "Destination B1",
+  units: [unit1, unit2, unit3, unit4, unit5, unit6],
+};
 
 import { Card } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";

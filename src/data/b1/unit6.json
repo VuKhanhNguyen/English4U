@@ -1,0 +1,149 @@
+{
+  "id": "b1-unit-6",
+  "title": "Unit 6: Learning and doing",
+  "grammar": [],
+  "vocabulary": [
+    { "word": "achieve", "type": "v", "meaning": "succeed in reaching a goal, especially by effort", "example": "She worked hard to achieve her goal of becoming a doctor." },
+    { "word": "brain", "type": "n", "meaning": "organ of the body that controls thought and movement", "example": "The human brain is incredibly complex." },
+    { "word": "clever", "type": "adj", "meaning": "quick to learn and understand things", "example": "He is a clever boy who solves puzzles quickly." },
+    { "word": "concentrate", "type": "v", "meaning": "give all your attention to something", "example": "Please be quiet; I need to concentrate on my homework." },
+    { "word": "consider", "type": "v", "meaning": "think carefully about something before making a choice", "example": "We need to consider all options before deciding." },
+    { "word": "course", "type": "n", "meaning": "series of lessons or lectures on a particular subject", "example": "I am taking an English course this summer." },
+    { "word": "degree", "type": "n", "meaning": "qualification given to a student after completing university", "example": "She has a bachelor's degree in chemistry." },
+    { "word": "experience", "type": "n", "meaning": "knowledge or skill gained from doing things", "example": "Do you have any experience in customer service?" },
+    { "word": "expert", "type": "n", "meaning": "person with a high level of knowledge or skill in a subject", "example": "He is an expert in computer software." },
+    { "word": "fail", "type": "v", "meaning": "not pass an exam or not succeed in doing something", "example": "He failed his driving test the first time." },
+    { "word": "guess", "type": "v", "meaning": "give an answer without being sure it is correct", "example": "Can you guess how old he is?" },
+    { "word": "hesitate", "type": "v", "meaning": "pause before doing something because you are not sure", "example": "Don't hesitate to ask if you have any questions." },
+    { "word": "instruction", "type": "n", "meaning": "statement telling someone what to do or how to do it", "example": "Follow the instructions on the box carefully." },
+    { "word": "make progress", "type": "v phr", "meaning": "develop or improve in skills or knowledge", "example": "She is making great progress in her piano lessons." },
+    { "word": "make sure", "type": "v phr", "meaning": "check to be certain that something is correct or true", "example": "Make sure you lock the door before leaving." },
+    { "word": "mark", "type": "n", "meaning": "score or grade given to a student's work", "example": "She got a high mark on her history test." },
+    { "word": "mental", "type": "adj", "meaning": "relating to the mind and thinking", "example": "Chess is a game that requires mental effort." },
+    { "word": "pass", "type": "v", "meaning": "succeed in an exam or test", "example": "I hope I will pass my English exam." },
+    { "word": "qualification", "type": "n", "meaning": "official record showing you finished a training course", "example": "He has the right qualifications for the teaching job." },
+    { "word": "remind", "type": "v", "meaning": "make someone remember something they have to do", "example": "Remind me to call the dentist tomorrow." },
+    { "word": "report", "type": "n", "meaning": "written or spoken description of a situation or event", "example": "She has to write a monthly report for her manager." },
+    { "word": "revise", "type": "v", "meaning": "study materials again to prepare for an exam", "example": "I must revise my notes tonight for the test tomorrow." },
+    { "word": "search", "type": "v", "meaning": "look carefully in a place to find something", "example": "I searched the whole house for my keys." },
+    { "word": "skill", "type": "n", "meaning": "ability to do something well because of practice", "example": "Writing is an important skill in communication." },
+    { "word": "smart", "type": "adj", "meaning": "clever and intelligent", "example": "She is a smart student who always gets good grades." },
+    { "word": "subject", "type": "n", "meaning": "area of knowledge studied in school or university", "example": "Maths is my favorite subject." },
+    { "word": "take/sit an exam", "type": "v phr", "meaning": "do an official test of knowledge or ability", "example": "We have to take a final exam next week." },
+    { "word": "talented", "type": "adj", "meaning": "having a natural ability to do something well", "example": "She is a talented musician who plays three instruments." },
+    { "word": "term", "type": "n", "meaning": "one of the periods of time that a school year is divided into", "example": "The exams will take place at the end of this term." },
+    { "word": "wonder", "type": "v", "meaning": "ask yourself questions or want to know something", "example": "I wonder if it will rain tomorrow." },
+    { "word": "arithmetic", "type": "n", "meaning": "part of mathematics involving numbers and calculations", "example": "She excels at basic arithmetic like addition and multiplication." },
+    { "word": "astronomy", "type": "n", "meaning": "scientific study of stars, planets, and space", "example": "He is interested in astronomy and bought a telescope." },
+    { "word": "astrology", "type": "n", "meaning": "study of the movements of stars to predict the future", "example": "She reads her horoscope every day because she likes astrology." },
+    { "word": "experiment", "type": "n", "meaning": "scientific test done to learn something or show a fact", "example": "We performed an experiment in the chemistry lab today." },
+    { "word": "chemistry", "type": "n", "meaning": "science that studies substances and how they react", "example": "Chemistry lessons involve learning about elements and molecules." },
+    { "word": "disaster", "type": "n", "meaning": "sudden event that causes great damage or suffering", "example": "The earthquake was a terrible disaster for the town." },
+    { "word": "dictionary", "type": "n", "meaning": "book or online tool that lists words and their meanings", "example": "You should look up unfamiliar words in a dictionary." },
+    { "word": "neatly", "type": "adv", "meaning": "in a clean, tidy, and orderly way", "example": "She writes very neatly in her notebook." },
+    { "word": "carefully", "type": "adv", "meaning": "with great attention and avoiding mistakes or danger", "example": "Drive carefully when the roads are wet." },
+    { "word": "poem", "type": "n", "meaning": "piece of writing in short lines, often with rhyming words", "example": "She wrote a beautiful poem about spring." },
+    { "word": "composition", "type": "n", "meaning": "short piece of writing about a subject, like an essay", "example": "The students were asked to write a composition about their holidays." },
+    { "word": "award", "type": "n", "meaning": "prize given to someone for an achievement", "example": "He received an award for being the best employee." },
+    { "word": "advertisement", "type": "n", "meaning": "picture, short film, or text that tries to sell something", "example": "I saw an advertisement for a new smartphone on TV." },
+    { "word": "afraid", "type": "adj", "meaning": "feeling fear or worry about something bad", "example": "Many young children are afraid of the dark." },
+    { "word": "prize", "type": "n", "meaning": "something valuable given to the winner of a competition", "example": "She won first prize in the national spelling bee." },
+    { "word": "what a shame!", "type": "n phr", "meaning": "phrase used to express disappointment or regret", "example": "What a shame that you couldn't come to our party!" },
+    { "word": "Dinosaur", "type": "n", "meaning": "large reptile that lived millions of years ago", "example": "The museum has a complete skeleton of a dinosaur." }
+  ],
+  "phrasalVerbs": [
+    { "phrasalVerb": "cross out", "meaning": "draw a line through a word or mistake", "example": "EX: Just cross out the wrong word and write the correct one above it." },
+    { "phrasalVerb": "look up", "meaning": "find information in a book, dictionary, or online", "example": "EX: You should look up the meaning of this word in the dictionary." },
+    { "phrasalVerb": "point out", "meaning": "show or tell someone an important fact", "example": "EX: The guide pointed out the historical monuments in the city." },
+    { "phrasalVerb": "read out", "meaning": "read words aloud so that other people can hear", "example": "EX: The teacher asked the student to read out the poem." },
+    { "phrasalVerb": "rip up", "meaning": "tear paper into small pieces", "example": "EX: She ripped up the old letters and threw them away." },
+    { "phrasalVerb": "rub out", "meaning": "remove written marks using an eraser", "example": "EX: You can rub out the pencil marks if they are incorrect." },
+    { "phrasalVerb": "turn over", "meaning": "turn a page or object so the other side faces up", "example": "EX: Please turn over the test sheet when the exam begins." },
+    { "phrasalVerb": "write down", "meaning": "write information on paper so you don't forget it", "example": "EX: Write down his phone number before you forget it." }
+  ],
+  "prepositionalPhrases": [
+    { "phrase": "by heart", "meaning": "from memory; learned so you can repeat it perfectly", "example": "EX: She learned the whole poem by heart." },
+    { "phrase": "for instance", "meaning": "for example", "example": "EX: Many countries, for instance, France and Italy, are famous for food." },
+    { "phrase": "in conclusion", "meaning": "finally; as a final statement or summary", "example": "EX: In conclusion, I would like to thank all of you for coming." },
+    { "phrase": "in fact", "meaning": "actually; in reality (used to emphasize a fact)", "example": "EX: He looks young, but in fact he is over fifty." },
+    { "phrase": "in favour (of)", "meaning": "supporting or agreeing with a plan or person", "example": "EX: Most of the committee members were in favour of the proposal." },
+    { "phrase": "in general", "meaning": "usually; considering things as a whole", "example": "EX: In general, the public transport in this city is very efficient." }
+  ],
+  "wordFormation": [
+    {
+      "word": "begin",
+      "type": "verb",
+      "meaning": "begin / began / begun: start doing something / beginner: person who is starting to learn a skill / beginning: start of something",
+      "example": "EX: The concert will begin shortly.\nEX: This course is suitable for complete beginners.\nEX: The beginning of the film was very exciting."
+    },
+    {
+      "word": "brave",
+      "type": "adjective",
+      "meaning": "brave: courageous; not afraid / bravery: courageous behavior",
+      "example": "EX: The brave firefighter saved the child.\nEX: She was awarded a medal for her bravery."
+    },
+    {
+      "word": "correct",
+      "type": "verb/adjective",
+      "meaning": "correct: free from error; right / correction: change made to make something correct / incorrect: not correct; wrong",
+      "example": "EX: Please check if your answers are correct.\nEX: The teacher made some corrections to my essay.\nEX: His calculation was incorrect."
+    },
+    {
+      "word": "divide",
+      "type": "verb",
+      "meaning": "divide: separate into parts or groups / division: act of splitting something or a section of an organization",
+      "example": "EX: The teacher divided the class into four groups.\nEX: The division of labor was equal among the team members."
+    },
+    {
+      "word": "educate",
+      "type": "verb",
+      "meaning": "educate: teach or train someone / education: process of teaching and learning, especially in schools",
+      "example": "EX: She was educated at a private school.\nEX: Everyone has the right to a good education."
+    },
+    {
+      "word": "instruct",
+      "type": "verb",
+      "meaning": "instruct: direct or teach someone / instruction: detailed information on how to do something / instructor: person who teaches a skill",
+      "example": "EX: The manager instructed the team on the new project.\nEX: Read the instructions before using the machine.\nEX: He works as a driving instructor."
+    },
+    {
+      "word": "memory",
+      "type": "noun",
+      "meaning": "memory: ability to remember things / memorise: learn something so that you remember it exactly / memorial: object built to honor a person or event",
+      "example": "EX: She has a very good memory for names.\nEX: The students had to memorise the poem.\nEX: A war memorial stands in the center of the town."
+    },
+    {
+      "word": "refer",
+      "type": "verb",
+      "meaning": "refer: direct someone's attention to something / reference: act of mentioning or looking at something for information",
+      "example": "EX: Please refer to the user manual for details.\nEX: Keep this dictionary nearby for quick reference."
+    },
+    {
+      "word": "silent",
+      "type": "adjective",
+      "meaning": "silent: quiet; without any sound / silence: complete lack of sound / silently: in a quiet way without speaking",
+      "example": "EX: The room was completely silent.\nEX: They listened to the news in silence.\nEX: She walked silently across the wooden floor."
+    },
+    {
+      "word": "simple",
+      "type": "adjective",
+      "meaning": "simple: easy to understand or do / simplify: make something easier to understand / simplicity: quality of being easy to understand",
+      "example": "EX: The instructions are very simple to follow.\nEX: We need to simplify the process to save time.\nEX: I like the simplicity of this software's design."
+    }
+  ],
+  "wordPatterns": [
+    { "verb": "capable of", "pattern": "adjective", "meaning": "having the ability or power to do something", "example": "EX: She is capable of passing the exam easily." },
+    { "verb": "talented at", "pattern": "adjective", "meaning": "having a natural ability or skill in something", "example": "EX: She is talented at music." },
+    { "verb": "cheat at/in", "pattern": "verb", "meaning": "be dishonest in a game or test", "example": "EX: He was caught cheating in the chemistry exam." },
+    { "verb": "confuse sth and/with", "pattern": "verb", "meaning": "mix up two things in your mind", "example": "EX: People often confuse me with my twin brother." },
+    { "verb": "continue with", "pattern": "verb", "meaning": "keep doing an activity without stopping", "example": "EX: You should continue with your studies." },
+    { "verb": "cope with", "pattern": "verb", "meaning": "deal successfully with a difficult situation", "example": "EX: It can be hard to cope with exam stress." },
+    { "verb": "help (sb) with", "pattern": "verb", "meaning": "give assistance to someone with something", "example": "EX: Can you help me with my geography project?" },
+    { "verb": "know about", "pattern": "verb", "meaning": "have information or understanding of a subject", "example": "EX: She knows a lot about astronomy." },
+    { "verb": "learn about", "pattern": "verb", "meaning": "gain knowledge or information about something", "example": "EX: We are learning about history in school today." },
+    { "verb": "succeed in", "pattern": "verb", "meaning": "achieve something that you have been trying to do", "example": "EX: He succeeded in passing the difficult test." },
+    { "verb": "an opinion about/of", "pattern": "noun", "meaning": "thought or belief about something", "example": "EX: What is your opinion about the new school rules?" },
+    { "verb": "a question about", "pattern": "noun", "meaning": "sentence or phrase that asks for information", "example": "EX: The student asked a question about the experiment." }
+  ],
+  "collocations": []
+}

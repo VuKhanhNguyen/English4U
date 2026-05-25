@@ -1,0 +1,284 @@
+{
+  "id": "b1-unit-2",
+  "title": "Unit 2: Past time",
+  "grammar": [
+    {
+      "structure": "Past simple",
+      "usage": "Completed actions in the past",
+      "example": "I went to the store."
+    }
+  ],
+  "richGrammar": [
+    {
+      "title": "A) PAST SIMPLE",
+      "blocks": [
+        {
+          "type": "title",
+          "content": "1. FORM OF PAST SIMPLE"
+        },
+        {
+          "type": "table",
+          "tableName": "\"TO BE\" => S + was / were + (adj)",
+          "headers": ["Type", "Subject", "To be", "Example"],
+          "rows": [
+            { "type": "Positive (+)", "subject": "I / He / She / It\nSingular Nouns, Uncountable Nouns", "form": "was", "example": "EX: I was so bored this morning!\nEX: Lan was so excited about camping yesterday.", "rowspan": 2 },
+            { "subject": "You/We/They\nPlural Nouns", "form": "were", "example": "EX: They were in Nha Trang on their last holiday." },
+            { "type": "Negative (-)", "subject": "I / He / She / It\nSingular Nouns, Uncountable Nouns", "form": "was not\n(wasn't)", "example": "EX: She wasn't happy last night because her mother went on business trip.", "rowspan": 2 },
+            { "subject": "You/We/They\nPlural Nouns", "form": "were not\n(weren't)", "example": "EX: We weren't at home yesterday." },
+            { "type": "Interrogative (?)", "subject": "Was | I / He / She / It\nSingular Nouns, Uncountable Nouns", "form": "", "example": "EX: Was he interested?\n→ Yes, he was.\n→ No, he wasn't.", "rowspan": 2 },
+            { "subject": "Were | You/We/They\nPlural Nouns", "form": "", "example": "EX: Were you tired?\n→ Yes, we were." }
+          ]
+        },
+        {
+          "type": "table",
+          "tableName": "VERB (V2 / V(ed))",
+          "headers": ["Type", "Subject", "Verb Form", "Example"],
+          "rows": [
+            { "type": "Positive (+)", "subject": "S +", "form": "V2 / V(ed)", "example": "EX: She watched this film last Friday with her friends.", "rowspan": 1 },
+            { "type": "Negative (-)", "subject": "S +", "form": "didn't + V_bare\n(V1/base form)", "example": "EX: He didn't play soccer with us yesterday.", "rowspan": 1 },
+            { "type": "Interrogative (?)", "subject": "Did | S", "form": "V_bare\n(V1/base form)", "example": "EX: Did she miss the train yesterday?\n→ Yes, she did.\n→ No, she didn't.", "rowspan": 1 }
+          ]
+        },
+        {
+          "type": "title",
+          "content": "2. HOW TO CHANGE VERBS INTO THE PAST"
+        },
+        {
+          "type": "title",
+          "content": "2.1. REGULAR VERBS: ADD ED"
+        },
+        {
+          "type": "list",
+          "bullets": [
+            "a) Add ed to the end of the verb:\nEX: watch → watched; turn → turned; want → wanted; attach → attached",
+            "b) If the verb ends with \"e\", just add \"d\":\nEX: type → typed; smile → smiled; agree → agreed",
+            "c) If the verb has ONE syllable, ends with ONE consonant, and has ONE vowel before the consonant, double the last consonant and add \"-ed\":\nEX: stop → stopped; shop → shopped; tap → tapped\n* Note: Some words don't follow this rule: commit → committed; travel → travelled; prefer → preferred",
+            "d) Verbs ending with \"y\":\n- If \"y\" is preceded by a vowel (e, u, o, a, i), keep \"y\" and add ed. EX: enjoy → enjoyed; play → played; stay → stayed\n- If \"y\" is preceded by a consonant, change \"y\" to \"i\" and add ed. EX: carry → carried; study → studied; hurry → hurried"
+          ]
+        },
+        {
+          "type": "title",
+          "content": "2.2. PRONUNCIATION OF THE ENDING ED"
+        },
+        {
+          "type": "pronunciation",
+          "table": [
+            ["/id/", "When the verb ends with the sound /t/, /d/\nEX: noted, added, decided..."],
+            ["/t/", "When the verb ends with the sound /ch/, /s/, /x/, /sh/, /k/, /f/, /p/\nEX: watched, fixed, coughed..."],
+            ["/d/", "When the verb ends with the remaining consonants and vowels\nEX: smiled, played..."]
+          ],
+          "blackboard": {
+            "title": "Exception words (pronounce ed as /id/):",
+            "items": [
+              "aged: /ˈeɪdʒɪd/ (old)",
+              "blessed: /ˈblesɪd/ (holy)",
+              "crooked: /ˈkrʊkɪd/ (bent)",
+              "dogged: /ˈdɒɡɪd/ (persistent)",
+              "naked: /ˈneɪkɪd/ (bare)",
+              "learned: /ˈlɜːnɪd/ (educated)",
+              "ragged: /ˈræɡɪd/ (tattered)",
+              "wicked: /ˈwɪkɪd/ (mischievous)",
+              "wretched: /ˈretʃɪd/ (miserable)"
+            ]
+          }
+        },
+        {
+          "type": "title",
+          "content": "2.3. IRREGULAR VERBS"
+        },
+        {
+          "type": "list",
+          "bullets": [
+            "To learn and look up irregular verbs (V2/V3) quickly, you can open the online lookup table here:\n- [List of irregular verbs](https://cdn.thuvienphapluat.vn/phap-luat/2022-2/NHPT/bang-360-dong-tu-bat-quy-tac-tvpl.pdf)\n- [Oxford Dictionary](https://www.oxfordlearnersdictionaries.com/)"
+          ]
+        },
+        {
+          "type": "title",
+          "content": "3. USING THE PAST SIMPLE"
+        },
+        {
+          "type": "list",
+          "items": [
+            {
+              "label": "Main Usage",
+              "bullets": [
+                "a) Expressing an action that happened and ended in the past:\nEX: He visited his school yesterday.\nEX: She came to her grandmother's house last week.",
+                "b) Expressing a series of actions that happened in the past:\nEX: She went home, switched on her laptop and checked her emails first.",
+                "c) Expressing an action that interrupted an ongoing action in the past:\nEX: When I was cooking, my parents came."
+              ]
+            },
+            {
+              "label": "Signal words",
+              "bullets": [
+                "a) When the sentence contains adverbs of past time:\n- yesterday, ago, last (week, year, month), in the past, the day before\n- time periods that have passed in the day (today, this morning, this afternoon)\n- an hour/ a week/ a year ago...",
+                "b) After words/structures such as:\n- as if, as though (as if)\n- it's time (it's time to)\n- if only, wish (wish)\n- would sooner/ rather (prefer)"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "B) PAST CONTINUOUS",
+      "blocks": [
+        {
+          "type": "title",
+          "content": "1. FORM OF PAST CONTINUOUS"
+        },
+        {
+          "type": "table",
+          "tableName": "S + was / were + V-ing",
+          "headers": ["Type", "Subject", "Be", "V-ing", "Example"],
+          "rows": [
+            { "type": "Positive (+)", "subject": "He/She/It\nSingular Nouns\nUncountable Nouns", "form": "was", "example": "EX: The cat was sleeping when we came home.", "rowspan": 2 },
+            { "subject": "You/We/They\nPlural Nouns", "form": "were", "example": "EX: We were just talking about it before you arrived." },
+            { "type": "Negative (-)", "subject": "He/She/It\nSingular Nouns\nUncountable Nouns", "form": "was not\n(wasn't)", "example": "EX: He wasn't working when his boss came yesterday.", "rowspan": 2 },
+            { "subject": "You/We/They\nPlural Nouns", "form": "were not\n(weren't)", "example": "EX: They weren't practicing for their match." },
+            { "type": "Interrogative (?)", "subject": "Was | He/She/It\nSingular Nouns\nUncountable Nouns", "form": "", "example": "EX: Was your grandmother going to Ben Thanh market at 7 A.M. yesterday?\n→ Yes, she was.\n→ No, she wasn't.", "rowspan": 3 },
+            { "subject": "Were | You/We/They\nPlural Nouns", "form": "", "example": "EX: The sun was rising, and the birds were singing this morning!" },
+            { "subject": "Wh- + was/were + S", "form": "", "example": "EX: Why were you continuously arguing this issue?" }
+          ]
+        },
+        {
+          "type": "title",
+          "content": "2. USING PAST CONTINUOUS"
+        },
+        {
+          "type": "list",
+          "bullets": [
+            "a) Expressing an action that was happening at a specific time in the past:\nEX: At 9 A.M. yesterday, he was watching Spider Man.",
+            "b) Expressing two actions happening at the same time in the past:\nEX: While I was taking a bath, she was using my computer.",
+            "c) Expressing an action that was happening when another action interrupted it:\nEX: When I was cooking, the light went out.",
+            "d) Expressing repeated actions in the past that annoyed someone:\nEX: When he worked here, he was always making noise."
+          ]
+        },
+        {
+          "type": "title",
+          "content": "3. SIGNAL WORDS & NOTES"
+        },
+        {
+          "type": "list",
+          "items": [
+            {
+              "label": "Signal words",
+              "bullets": [
+                "a) Time adverbs in the past with a specific time:\n- at + hour + past time (at 12 o'clock last night, ...)\n- at this time + past time (at this time two weeks ago, ...)\n- an hour/ a week/ a year ago... in + year (in 2000, in 2005)",
+                "b) In sentences with \"when\" or \"while\" indicating an ongoing action interrupted by another action."
+              ]
+            },
+            {
+              "label": "Special Notes",
+              "bullets": [
+                "When encountering: While; When; at that time; ... → consider using past continuous.\n- EX: The man was sending his letter in the post office at that time.\n- EX: She was dancing while I was singing."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "C) USED TO",
+      "blocks": [
+        {
+          "type": "title",
+          "content": "1. STRUCTURE OF USED TO"
+        },
+        {
+          "type": "table",
+          "tableName": "used to + V_bare",
+          "headers": ["Type", "Structure", "Example"],
+          "rows": [
+            { "type": "Affirmative (+)", "subject": "S + used to + V (bare)", "form": "", "example": "EX: We used to go to school together.\n(We used to go to school together.)" },
+            { "type": "Negative (-)", "subject": "S + didn't + use to + V (bare)", "form": "", "example": "EX: We didn't use to be vegetarians.\n(We didn't use to be vegetarians.)" },
+            { "type": "Interrogative (?)", "subject": "Did + S + use to + V (bare)?", "form": "", "example": "EX: Did he use to work in the office very late at night?\n(Did he use to work in the office very late at night?)" }
+          ]
+        },
+        {
+          "type": "title",
+          "content": "2. USING USED TO"
+        },
+        {
+          "type": "list",
+          "bullets": [
+            "a) To express a habit in the past:\nEX: I used to walk to school when I was a child.",
+            "b) To express a state / condition in the past:\nEX: She used to have long hair but nowadays this hair is very short."
+          ]
+        },
+        {
+          "type": "title",
+          "content": "3. COMPARE USED TO - BE USED TO - GET USED TO"
+        },
+        {
+          "type": "generic-table",
+          "headers": ["USED TO", "BE USED TO", "GET USED TO"],
+          "rows": [
+            [
+              "used to + V",
+              "be used to + N / V-ing\nnot used to + N / V-ing",
+              "get used to + N / V-ing"
+            ],
+            [
+              "Used to refer to a past habit that is no longer practiced.",
+              "Expresses familiarity with something that has been done repeatedly, indicating no longer strange or difficult.",
+              "Expresses a process of gradually becoming accustomed to something."
+            ],
+            [
+              "EX: When I was 6, I used to eat ice-cream everyday.\n(When I was 6, I used to eat ice-cream everyday.)",
+              "EX: I am used to getting up lately in the morning. (I'm used to getting up lately in the morning...)\n\nEX: I am not used to the new system in the factory yet. (I'm not used to the new system...)",
+              "EX: He gets used to American food.\n(He gets used to American food.)"
+            ]
+          ]
+        },
+        {
+          "type": "pronunciation",
+          "blackboard": {
+            "title": "Examples (Illustrations):",
+            "items": [
+              "Used to: \"When I was teenager, I used to eat pizza almost every day.\"",
+              "Get used to: \"I get used to using chopsticks!\"",
+              "Be used to ...: \"I'm used to getting up lately in the morning.\"",
+              "Not be used to ...: \"I'm not used to the new system in the factory yet.\""
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "vocabulary": [
+    { "word": "repeat", "type": "v", "meaning": "say or do again", "example": "Can you repeat the question?" },
+    { "word": "theatre", "type": "n", "meaning": "place for plays or movies", "example": "We went to the theatre last night." },
+    { "word": "spend", "type": "v", "meaning": "use money or time", "example": "I spend my free time reading." },
+    { "word": "progress", "type": "n", "meaning": "improvement or forward movement", "example": "The project is in progress." },
+    { "word": "washing-up", "type": "n", "meaning": "washing dishes and plates", "example": "It's your turn to do the washing-up." },
+    { "word": "post-office", "type": "n", "meaning": "place to send mail or packages", "example": "I need to go to the post-office." },
+    { "word": "mistake", "type": "n", "meaning": "something done wrong; error", "example": "Everyone makes mistakes." },
+    { "word": "run (out)", "type": "v", "meaning": "move quickly out of a place", "example": "They ran out of the room." },
+    { "word": "umbrella", "type": "n", "meaning": "thing used to protect from rain", "example": "Take an umbrella, it's raining." },
+    { "word": "earthquake", "type": "n", "meaning": "sudden shaking of the ground", "example": "The earthquake shook the building." },
+    { "word": "slip", "type": "v", "meaning": "slide accidentally on a wet surface", "example": "She slipped on the ice." },
+    { "word": "skiing", "type": "n", "meaning": "sport of moving over snow on skis", "example": "They love skiing in the winter." },
+    { "word": "chef", "type": "n", "meaning": "professional cook", "example": "The chef prepared a delicious meal." },
+    { "word": "argue", "type": "v", "meaning": "disagree angrily with words", "example": "They argue about money all the time." },
+    { "word": "band", "type": "n", "meaning": "group of musicians playing together", "example": "The band played at the concert." },
+    { "word": "alarm clock", "type": "n", "meaning": "clock that wakes you up", "example": "My alarm clock rings at 6 A.M." },
+    { "word": "trumpet", "type": "n", "meaning": "brass musical instrument", "example": "He plays the trumpet in the band." },
+    { "word": "neighbor", "type": "n", "meaning": "person living near you", "example": "Our neighbor is very friendly." },
+    { "word": "complain", "type": "v", "meaning": "say that you are not satisfied", "example": "They complain about the weather." },
+    { "word": "shine", "type": "v", "meaning": "give out or reflect light", "example": "The sun shines brightly." },
+    { "word": "downstairs", "type": "adv", "meaning": "on a lower floor of a building", "example": "He went downstairs to the kitchen." },
+    { "word": "nervous", "type": "adj", "meaning": "worried or anxious", "example": "I feel nervous before exams." },
+    { "word": "toast", "type": "n", "meaning": "sliced bread made crisp by heat", "example": "I like butter on my toast." },
+    { "word": "fridge", "type": "n", "meaning": "cold box to keep food fresh", "example": "Put the milk in the fridge." },
+    { "word": "butter", "type": "n", "meaning": "yellow fat food made from milk", "example": "Can you get the butter out?" },
+    { "word": "accident", "type": "n", "meaning": "unplanned event causing damage or injury", "example": "It was a car accident." },
+    { "word": "surprised", "type": "adj", "meaning": "feeling wonder at something unexpected", "example": "She was surprised by the party." },
+    { "word": "disappointed", "type": "adj", "meaning": "sad because hopes were not met", "example": "He was disappointed with the test score." },
+    { "word": "supermarket", "type": "n", "meaning": "large food and grocery store", "example": "I buy groceries at the supermarket." },
+    { "word": "cabbage", "type": "n", "meaning": "round green or purple vegetable", "example": "I like cabbage salad." },
+    { "word": "blonde-hair", "type": "n phr", "meaning": "pale yellow or gold hair", "example": "She has long blonde-hair." }
+  ],
+  "wordFormation": [],
+  "wordPatterns": [],
+  "phrasalVerbs": [],
+  "collocations": []
+}

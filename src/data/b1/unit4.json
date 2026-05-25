@@ -1,0 +1,137 @@
+{
+  "id": "b1-unit-4",
+  "title": "Unit 4: Present perfect time",
+  "grammar": [
+    {
+      "structure": "Present perfect simple",
+      "usage": "Completed actions in the past with present result, habits up to now",
+      "example": "I have finished my homework."
+    },
+    {
+      "structure": "Present perfect continuous",
+      "usage": "Actions continuing up to now, emphasizing duration",
+      "example": "I have been studying English for three hours."
+    }
+  ],
+  "richGrammar": [
+    {
+      "title": "A) PRESENT PERFECT SIMPLE",
+      "blocks": [
+        {
+          "type": "title",
+          "content": "1. FORM OF PRESENT PERFECT SIMPLE"
+        },
+        {
+          "type": "table",
+          "tableName": "S + have / has + past participle (= V3 / V(ed))",
+          "headers": ["Type", "Subject", "Auxiliary", "Example"],
+          "rows": [
+            { "type": "Positive (+)", "subject": "He / She / It\nSingular Nouns", "form": "has", "example": "EX: John has already invited Tony to his birthday party.", "rowspan": 2 },
+            { "subject": "I / You / We / They\nPlural Nouns", "form": "have", "example": "EX: They have never played this game before." },
+            { "type": "Negative (-)", "subject": "He / She / It\nSingular Nouns", "form": "hasn't", "example": "EX: He hasn't finished his homework.", "rowspan": 2 },
+            { "subject": "I / You / We / They\nPlural Nouns", "form": "haven't", "example": "EX: They haven't arrived at the airport yet." },
+            { "type": "Interrogative (?)", "subject": "Has | He / She / It\nSingular Nouns", "form": "V3 / V(ed)", "example": "EX: Has your mother met our teacher yet?", "rowspan": 2 },
+            { "subject": "Have | I / You / We / They\nPlural Nouns", "form": "V3 / V(ed)", "example": "EX: Have you ever gone camping before?" }
+          ]
+        },
+        {
+          "type": "title",
+          "content": "2. USING PRESENT PERFECT SIMPLE"
+        },
+        {
+          "type": "list",
+          "bullets": [
+            "a) Action begins in the past and continues in the present.\nEX: It has rained since late night yesterday.",
+            "b) Describe an action that was done before and is still done now.\nEX: Mr. Tom has been the principal for three years.",
+            "c) An action completed in the past but important is the result in the present.\nEX: I've done all my homework."
+          ]
+        },
+        {
+          "type": "title",
+          "content": "3. NOTES & COMMON MISTAKES"
+        },
+        {
+          "type": "list",
+          "bullets": [
+            "1. Don't use present perfect to describe an action that happened in the past that should use past simple.\nEX: ✗ I have done my homework yesterday.\nEX: ✓ I did my homework yesterday.",
+            "2. Don't use past simple to describe an action that just happened in the past OR is still important to the present time.\nEX: ✗ I finished my homework! Can I watch TV now?\nEX: ✓ I've finished my homework! Can I watch TV now?"
+          ]
+        },
+        {
+          "type": "title",
+          "content": "4. SIGNAL WORDS"
+        },
+        {
+          "type": "list",
+          "bullets": [
+            "a) Common adverbs:\n- just, recently, lately, already, before, ever, never, yet\n- for + time period (EX: for 3 years)\n- since + time point (EX: since yesterday)\n- so far = until now = up to now = up to the present\n- in/ for/ during/ over + the past/ last + time period",
+            "b) Position of adverbs:\n- already, never, ever, just: after \"have/has\" and before V3/V(ed).\n- already: can also be at the end of the sentence.\n- yet: at the end of the sentence, often used in negative and interrogative sentences.\n- so far, recently, lately...: can be at the beginning or end of the sentence."
+          ]
+        }
+      ]
+    },
+    {
+      "title": "B) PRESENT PERFECT CONTINUOUS",
+      "blocks": [
+        {
+          "type": "title",
+          "content": "1. FORM OF PRESENT PERFECT CONTINUOUS"
+        },
+        {
+          "type": "table",
+          "tableName": "S + have/has + been + V-ing",
+          "headers": ["Type", "Subject", "Form", "Example"],
+          "rows": [
+            { "type": "Positive (+)", "subject": "He / She / It\nSingular Nouns\nUncountable Nouns", "form": "has been + V-ing", "example": "EX: He has been studying hard for his exams.", "rowspan": 2 },
+            { "subject": "I / You / We / They\nPlural Nouns", "form": "have been + V-ing", "example": "EX: The children have been sitting in their bedrooms for half a day." },
+            { "type": "Negative (-)", "subject": "He / She / It\nSingular Nouns\nUncountable Nouns", "form": "hasn't been + V-ing", "example": "EX: She hasn't been practicing for her concert.", "rowspan": 2 },
+            { "subject": "I / You / We / They\nPlural Nouns", "form": "haven't been + V-ing", "example": "EX: They haven't been planning for the BBQ." },
+            { "type": "Interrogative (?)", "subject": "Has | He / She / It\nSingular Nouns", "form": "been + V-ing", "example": "EX: Has he been practicing so hard for this competition?", "rowspan": 2 },
+            { "subject": "Have | I / You / We / They\nPlural Nouns", "form": "been + V-ing", "example": "EX: Have you been reading recently?" }
+          ]
+        },
+        {
+          "type": "title",
+          "content": "2. USING PRESENT PERFECT CONTINUOUS"
+        },
+        {
+          "type": "list",
+          "bullets": [
+            "a) Express an action that continues up to the present time or has just ended.\nEX: You've been writing this email for an hour. How long is it going to take you?",
+            "b) Common signal words: for, since, just..."
+          ]
+        },
+        {
+          "type": "title",
+          "content": "3. PRESENT PERFECT SIMPLE vs. PRESENT PERFECT CONTINUOUS"
+        },
+        {
+          "type": "list",
+          "bullets": [
+            "- Present Perfect Simple: Emphasize the result of an action (the action has ended and left a result).",
+            "- Present Perfect Continuous: Emphasize the process/continuity of a continuous action (the action is temporary, still continuing or continuing)."
+          ]
+        }
+      ]
+    }
+  ],
+  "vocabulary": [
+  { "word": "long-playing (LPs)", "type": "n", "meaning": "large vinyl disc for music", "example": "My grandfather has a collection of old long-playing records." },
+  { "word": "needle", "type": "n", "meaning": "thin pointed tool for sewing", "example": "She threaded the needle to sew the button." },
+  { "word": "noisy", "type": "adj", "meaning": "making a lot of loud sounds", "example": "The classroom was very noisy during the break." },
+  { "word": "fight", "type": "n", "meaning": "act of using physical force against someone", "example": "The two boys got into a fight after school." },
+  { "word": "volleyball", "type": "n", "meaning": "game where players hit a ball over a net", "example": "We played volleyball on the beach yesterday." },
+  { "word": "skier", "type": "n", "meaning": "person who travels over snow on skis", "example": "The professional skier slided down the mountain." },
+  { "word": "newspaper", "type": "n", "meaning": "large printed sheets containing news", "example": "He reads the morning newspaper with his coffee." },
+  { "word": "emphasize", "type": "v", "meaning": "give special importance to something", "example": "The teacher emphasized the importance of regular practice." },
+  { "word": "tidy", "type": "v", "meaning": "make a place clean and neat", "example": "You should tidy your bedroom before going out." },
+  { "word": "bedroom", "type": "n", "meaning": "room used for sleeping", "example": "My bedroom is on the second floor." },
+  { "word": "interview", "type": "v", "meaning": "ask someone questions for a job or news", "example": "They will interview several candidates tomorrow." },
+  { "word": "strange", "type": "adj", "meaning": "unusual or surprising; not familiar", "example": "I heard a strange noise in the kitchen." }
+],
+  "wordFormation": [],
+  "wordPatterns": [],
+  "phrasalVerbs": [],
+  "prepositionalPhrases": [],
+  "collocations": []
+}

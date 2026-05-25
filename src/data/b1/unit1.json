@@ -1,0 +1,218 @@
+{
+  "id": "b1-unit-1",
+  "title": "Unit 1: Present time",
+  "grammar": [
+    {
+      "structure": "Present simple",
+      "usage": "Facts, habits, routines, schedules",
+      "example": "I study English every day."
+    },
+    {
+      "structure": "Present continuous",
+      "usage": "Actions happening now, temporary situations",
+      "example": "I am studying English right now."
+    }
+  ],
+  "richGrammar": [
+    {
+      "title": "A) PRESENT SIMPLE",
+      "blocks": [
+        {
+          "type": "title",
+          "content": "1. FORM OF PRESENT SIMPLE"
+        },
+        {
+          "type": "table",
+          "tableName": "\"TO BE\"",
+          "headers": ["Type", "Subject", "To be", "Example"],
+          "rows": [
+            { "type": "Positive", "subject": "I", "form": "am", "example": "EX: I'm Lan.", "rowspan": 3 },
+            { "subject": "You/We/They", "form": "are", "example": "EX: We're students." },
+            { "subject": "He/She/It", "form": "is", "example": "EX: She is my teacher." },
+            { "type": "Negative", "subject": "I", "form": "am not", "example": "EX: I'm not Minh. I'm Lan.", "rowspan": 3 },
+            { "subject": "You/We/They", "form": "aren't", "example": "EX: We aren't doctors." },
+            { "subject": "He/She/It", "form": "isn't", "example": "EX: He isn't handsome." },
+            { "type": "Interrogative", "subject": "Am | I", "form": "", "example": "EX: Am I tall?\n→ Yes, you're tall.\n→ No, you're not tall.", "rowspan": 3 },
+            { "subject": "Are | You/We/They", "form": "", "example": "EX: Are you a student?\n→ Yes, I am.\n→ No, I am not." },
+            { "subject": "Is | He/She/It", "form": "", "example": "EX: Is it beautiful?\n→ Yes, it is.\n→ No, it isn't." }
+          ]
+        },
+        {
+          "type": "table",
+          "tableName": "VERB(V1 / V(s/es))",
+          "headers": ["Type", "Subject", "Auxiliary / Verb", "Example"],
+          "rows": [
+            { "type": "Positive", "subject": "I / You / We / They", "form": "V1", "example": "EX: I go to school by bus everyday.", "rowspan": 2 },
+            { "subject": "He / She / It", "form": "V(s/es)", "example": "EX: He goes to school by bike.\nException\nEX: She has a new dress. (have → has)" },
+            { "type": "Negative", "subject": "I / You / We / They", "form": "don't V1", "example": "EX: They don't go out in the evening.", "rowspan": 2 },
+            { "subject": "He / She / It", "form": "doesn't V1", "example": "EX: She doesn't buy that flower." },
+            { "type": "Interrogative", "subject": "Do | I / You / We / They", "form": "V1", "example": "EX: Do you play soccer?\n→ Yes, we do.", "rowspan": 2 },
+            { "subject": "Does | He / She / It", "form": "V1", "example": "EX: Does he walk to school everyday?\n→ No, he doesn't." }
+          ]
+        },
+        {
+          "type": "title",
+          "content": "2. USES OF PRESENT SIMPLE"
+        },
+        {
+          "type": "list",
+          "intro": "(Instructed by Otto Trung)\nThe present simple is used to express an action that is regular, habitual or repeated, or to express truth and obvious facts.",
+          "items": [
+            {
+              "label": "SIGNAL WORDS",
+              "bullets": [
+                "When the sentence contains adverbs of frequency: Always, usually, often, sometimes, frequently, seldom, rarely, hardly, never, generally, regularly...",
+                "Every day, week, month, year...",
+                "Once, twice, three times, four times.... a day, week, month, year..."
+              ]
+            },
+            {
+              "label": "POSITION OF FREQUENCY ADVERBS IN PRESENT SIMPLE",
+              "bullets": [
+                "These adverbs (Always, usually, often, sometimes, rarely, seldom...) usually appear before main verbs and after auxiliary verbs (be, do, have)."
+              ]
+            }
+          ]
+        },
+        {
+          "type": "title",
+          "content": "3. ADDING S/ES TO VERBS"
+        },
+        {
+          "type": "list",
+          "bullets": [
+            "a) Add s to the end of most verbs:\nEX: want → wants; work → works; ...",
+            "b) Add es to verbs ending in ch, sh, s, ss, x, z, o:\nEX: miss → misses; wash → washes; fix → fixes; teach → teaches; go → goes ...",
+            "c) Remove y and add ies after verbs ending in a consonant + y:\nEX: study → studies; fly → flies; try → tries ..."
+          ]
+        },
+        {
+          "type": "title",
+          "content": "4. PRONUNCIATION OF FINAL S/ES"
+        },
+        {
+          "type": "pronunciation",
+          "table": [
+            ["/s/", "When the word ends with /f/, /t/, /k/, /p/, /θ/\nEX: stops, works, months..."],
+            ["/iz/", "When the word ends with /s/, /z/, /ʃ/, /tʃ/, /ʒ/, /dʒ/\n→ (often ends with letters ce, x, z, sh, ch, s, ge)\nEX: changes, wishes..."],
+            ["/z/", "When the word ends with a vowel and the remaining consonants\nEX: dreams, belongs..."]
+          ],
+          "blackboard": {
+            "title": "Pronunciation examples:",
+            "items": [
+              "stops: /stɒps/",
+              "watches: /ˈwɒtʃɪz/",
+              "months: /mʌnθs/",
+              "supplies: /səˈplaɪz/"
+            ]
+          },
+          "note": "Note: It is important to check the dictionary to determine the final sounds and apply the rules above accurately."
+        }
+      ]
+    },
+    {
+      "title": "B) PRESENT CONTINUOUS",
+      "blocks": [
+        {
+          "type": "title",
+          "content": "1. STRUCTURE OF PRESENT CONTINUOUS"
+        },
+        {
+          "type": "table",
+          "tableName": "S + am/is/are + V-ing",
+          "headers": ["Type", "Subject", "Be", "V-ing", "Example"],
+          "rows": [
+            { "type": "Positive", "subject": "I", "form": "am", "example": "EX: I'm studying Math now.", "rowspan": 3 },
+            { "subject": "He/She/It\nSingular nouns\nUncountable nouns", "form": "is", "example": "EX: He's baking a cake.\nEX: The cat is playing with toys." },
+            { "subject": "You/We/They\nPlural nouns", "form": "are", "example": "EX: They're singing a song together.\nEX: The kids are playing outside." },
+            { "type": "Negative", "subject": "I", "form": "am not", "example": "EX: I am not cooking now.", "rowspan": 3 },
+            { "subject": "He/She/It\nSingular nouns\nUncountable nouns", "form": "isn't", "example": "EX: He's not feeding his dogs.\nEX: The bird isn't singing at the moment." },
+            { "subject": "You/We/They\nPlural nouns", "form": "aren't", "example": "EX: The guitarists are not practicing at present." },
+            { "type": "Interrogative", "subject": "Am | I", "form": "", "example": "EX: Are you doing homework?\n→ Yes, I am.", "rowspan": 4 },
+            { "subject": "Is | He/She/It\nSingular nouns\nUncountable nouns", "form": "", "example": "EX: Is John playing football now?\n→ No, he isn't." },
+            { "subject": "Are | You/We/They\nPlural nouns", "form": "", "example": "EX: Are they singing now?" },
+            { "subject": "Wh- + am/are/is (not) + S", "form": "", "example": "EX: What are you doing now?\nEX: Who is she studying with?" }
+          ]
+        },
+        {
+          "type": "title",
+          "content": "2. USES OF PRESENT CONTINUOUS"
+        },
+        {
+          "type": "list",
+          "intro": "(Instructed by Otto Trung)\nThe present continuous is used to express actions that are happening at the moment of speaking or around the time of speaking, and the action is not yet finished (still continuing).",
+          "items": [
+            {
+              "label": "Signal words",
+              "bullets": [
+                "a) When the sentence contains adverbs of time:\n- Now, right now, at this moment, at present\n- Today, this week...\n- It's + time + now (EX: It's 12 o'clock now)\n- Look!, Watch!, Listen!...",
+                "b) In the sentence appears verbs such as:\n- Keep silent! EX: The teacher is saying the main point of the lesson!\n- Watch out! (= Look out!) EX: Watch out! The train is coming!"
+              ]
+            },
+            {
+              "label": "Note",
+              "bullets": [
+                "Do not use the present continuous with verbs that express perception, awareness (Stative Verbs) such as: be, see, hear, feel, realize, seem, remember, forget, understand, know, like, want, glance, smell, love, hate, ..."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "C) STATIVE VERBS",
+      "blocks": [
+        {
+          "type": "stative-verbs",
+          "description": "Stative verbs are verbs that express a state.\nStative verbs are often related to: emotions, existence, desire, sense, possession, thoughts/opinion or measurement.",
+          "note": "Stative verbs are often not used in the continuous tense.",
+          "table": [
+            ["appear", "seem / look like", "love", "like very much"],
+            ["be", "exist", "need", "require"],
+            ["believe", "trust / think true", "prefer", "like better"],
+            ["belong to", "be owned by", "see", "notice with eyes"],
+            ["hate", "dislike strongly", "seem", "appear to be"],
+            ["have", "own / possess", "taste", "have a flavor"],
+            ["include", "contain", "think", "have an opinion"],
+            ["know", "have information", "understand", "know the meaning"],
+            ["like", "enjoy", "want", "desire"]
+          ]
+        }
+      ]
+    }
+  ],
+  "vocabulary": [
+    { "word": "habit", "type": "n", "meaning": "something that you do often and regularly, sometimes without knowing that you are doing it", "example": "Eating healthy is a good habit." },
+    { "word": "permanent", "type": "adj", "meaning": "lasting for a long time or forever; not temporary", "example": "This is my permanent address." },
+    { "word": "rarely", "type": "adv", "meaning": "not often; seldom", "example": "She rarely goes out at night." },
+    { "word": "annoy", "type": "v", "meaning": "to make someone feel slightly angry or irritated", "example": "Stop annoying me!" },
+    { "word": "prompt", "type": "n", "meaning": "a sign, word, or text that tells you what to do next", "example": "Follow the prompt to complete the action." },
+    { "word": "fast-food", "type": "n phr", "meaning": "hot food that is served very quickly in a restaurant and can be taken away", "example": "Fast-food is not good for health." },
+    { "word": "have a shower", "type": "v", "meaning": "to wash your body while standing under a spray of water", "example": "I always have a shower in the morning." },
+    { "word": "aunt", "type": "n", "meaning": "the sister of your father or mother, or the wife of your uncle", "example": "My aunt lives in Hanoi." },
+    { "word": "musician", "type": "n", "meaning": "a person who writes, sings, or plays music, especially as a job", "example": "He is a talented musician." },
+    { "word": "lie", "type": "n, v", "meaning": "to say something that you know is not true; a statement that is not true", "example": "Don't tell a lie." },
+    { "word": "liar", "type": "n", "meaning": "a person who tells lies and does not speak the truth", "example": "No one believes a liar." },
+    { "word": "touch", "type": "v", "meaning": "to put your hand or fingers on something", "example": "Don't touch that hot pan!" },
+    { "word": "button", "type": "n", "meaning": "a small, round object that you press to operate a machine or piece of equipment", "example": "Press the button to start." },
+    { "word": "washing machine", "type": "n phr", "meaning": "a household machine used for washing clothes", "example": "Put the clothes in the washing machine." },
+    { "word": "library", "type": "n", "meaning": "a building or room containing collections of books and periodicals for people to read or borrow", "example": "I study in the library." },
+    { "word": "expedition", "type": "n", "meaning": "an organized journey for a particular purpose, especially to explore a new place", "example": "They went on an expedition to the jungle." },
+    { "word": "jungle", "type": "n", "meaning": "a tropical forest where plants and trees grow very thickly together", "example": "The jungle is full of wild animals." },
+    { "word": "squash", "type": "v", "meaning": "to crush something, or to force yourself into a very small space", "example": "People squashed into the train." },
+    { "word": "squash", "type": "n", "meaning": "a game played by two people in a closed court using rackets and a small rubber ball", "example": "He plays squash every weekend." },
+    { "word": "upset", "type": "adj", "meaning": "worried, unhappy, or angry about something bad that has happened", "example": "She was upset about the news." },
+    { "word": "spell", "type": "v", "meaning": "to form a word with the correct letters in the correct order", "example": "How do you spell your name?" },
+    { "word": "sweater", "type": "n", "meaning": "a warm piece of clothing with long sleeves, made of wool or cotton", "example": "Put on a sweater, it's cold." },
+    { "word": "kite", "type": "n", "meaning": "a toy made of light frame covered with paper or cloth, flown in the air on a long string", "example": "They are flying a kite." },
+    { "word": "astronomy", "type": "n", "meaning": "the scientific study of the stars, planets, and other natural objects in space", "example": "He loves studying astronomy." },
+    { "word": "backgammon", "type": "n", "meaning": "a board game for two people played with dice and counters", "example": "Do you know how to play backgammon?" },
+    { "word": "throw", "type": "v", "meaning": "to send something through the air with force, especially by using your arm and hand", "example": "Throw the ball to me." },
+    { "word": "dice", "type": "n", "meaning": "a small cube with dots on each side, used in games of chance", "example": "Roll the dice to see who goes first." },
+    { "word": "chess", "type": "n", "meaning": "a game for two players who move 16 pieces each according to specific rules on a checkered board", "example": "They play chess every afternoon." }
+  ],
+  "wordFormation": [],
+  "wordPatterns": [],
+  "phrasalVerbs": [],
+  "collocations": []
+}

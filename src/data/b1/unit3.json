@@ -1,0 +1,152 @@
+{
+  "id": "b1-unit-3",
+  "title": "Unit 3: Fun and games",
+  "grammar": [],
+  "vocabulary": [
+    { "word": "beat", "type": "v", "meaning": "defeat an opponent in a game", "example": "Our team beat them 3-2." },
+    { "word": "defeat", "type": "n", "meaning": "failure to win a game or battle", "example": "She admitted defeat after a long match." },
+    { "word": "board game", "type": "n phr", "meaning": "game played on a board with pieces", "example": "Monopoly is a very popular board game." },
+    { "word": "captain", "type": "n", "meaning": "leader of a sports team or ship", "example": "Harry is the captain of the football club." },
+    { "word": "challenge", "type": "n", "meaning": "something difficult that tests your ability", "example": "Learning English is a big challenge." },
+    { "word": "champion", "type": "n", "meaning": "winner of a competition", "example": "She is the new chess champion." },
+    { "word": "cheat", "type": "v", "meaning": "be dishonest to win or get an advantage", "example": "He was caught cheating in the exam." },
+    { "word": "classical music", "type": "n", "meaning": "traditional orchestral music", "example": "He loves listening to classical music like Beethoven." },
+    { "word": "club", "type": "n", "meaning": "organization for people with shared interests", "example": "I recently joined a local sports club." },
+    { "word": "coach", "type": "n", "meaning": "person who trains an athlete or team", "example": "The coach gave us some useful advice." },
+    { "word": "competition", "type": "n", "meaning": "event where people try to win", "example": "He won first prize in the competition." },
+    { "word": "concert", "type": "n", "meaning": "live musical performance", "example": "We bought tickets for the pop concert." },
+    { "word": "entertaining", "type": "adj", "meaning": "interesting and enjoyable", "example": "The film was very entertaining." },
+    { "word": "folk music", "type": "n phr", "meaning": "traditional music of a country or culture", "example": "They played traditional folk music." },
+    { "word": "group", "type": "n", "meaning": "number of people or things together", "example": "A group of students stood outside." },
+    { "word": "gym", "type": "n", "meaning": "room or building for physical exercise", "example": "I go to the gym twice a week." },
+    { "word": "have fun!", "type": "v phr", "meaning": "enjoy yourself!", "example": "Have fun at the party tonight!" },
+    { "word": "interest", "type": "v, n", "meaning": "want to know or learn about something", "example": "Do you have any interest in sports?" },
+    { "word": "member", "type": "n", "meaning": "person belonging to a group or club", "example": "She is a member of the library." },
+    { "word": "opponent", "type": "n", "meaning": "person you play or fight against", "example": "He defeated his opponent in the final." },
+    { "word": "organise", "type": "v", "meaning": "plan or arrange an event", "example": "We need to organise a welcome party." },
+    { "word": "pleasure", "type": "n", "meaning": "feeling of happiness or enjoyment", "example": "It's a pleasure to meet you." },
+    { "word": "referee", "type": "n", "meaning": "official who controls a sports match", "example": "The referee blew his whistle to stop the match." },
+    { "word": "rhythm", "type": "n", "meaning": "regular pattern of sounds or movements", "example": "The drum has a fast rhythm." },
+    { "word": "risk", "type": "v, n", "meaning": "possibility of something bad happening", "example": "Starting a business is a big risk." },
+    { "word": "score", "type": "v, n", "meaning": "number of points won in a game", "example": "What's the final score of the game?" },
+    { "word": "support", "type": "v, n", "meaning": "help or encourage someone", "example": "Thank you for your support." },
+    { "word": "team", "type": "n", "meaning": "group of people playing or working together", "example": "We work well as a team." },
+    { "word": "train", "type": "v", "meaning": "practice a sport or skill", "example": "Athletes train hard every day." },
+    { "word": "video game", "type": "n", "meaning": "game played on a screen or console", "example": "He spends hours playing video games." },
+    { "word": "basketball", "type": "n", "meaning": "game where players throw a ball through a hoop", "example": "They are playing basketball in the yard." },
+    { "word": "whistle", "type": "n", "meaning": "small tool that makes a high sound when blown", "example": "The referee blew his whistle." },
+    { "word": "perform", "type": "v", "meaning": "entertain an audience by acting, singing, or dancing", "example": "The band will perform live tonight." },
+    { "word": "fair", "type": "n", "meaning": "outdoor event with games, rides, and stalls", "example": "We bought some toys at the local fair." },
+    { "word": "brilliant", "type": "adj", "meaning": "extremely clever or bright", "example": "She had a brilliant idea." },
+    { "word": "parachute jump", "type": "n phr", "meaning": "jumping from a plane wearing a parachute", "example": "He made a parachute jump from the plane." },
+    { "word": "dream", "type": "n", "meaning": "something you hope to achieve", "example": "My dream is to travel around the world." },
+    { "word": "local council", "type": "n phr", "meaning": "group of people who govern an area", "example": "The local council decided to build a new gym." },
+    { "word": "armchairs", "type": "n", "meaning": "comfortable chairs with sides to rest your arms", "example": "He sat comfortably in one of the armchairs." },
+    { "word": "afford", "type": "v", "meaning": "have enough money to buy something", "example": "I can't afford to buy that expensive car." },
+    { "word": "vegetarian", "type": "n", "meaning": "person who does not eat meat", "example": "She is a vegetarian and doesn't eat meat." },
+    { "word": "meat", "type": "n", "meaning": "flesh of an animal used as food", "example": "I don't eat much red meat." },
+    { "word": "stadium", "type": "n", "meaning": "large sports ground with seats around it", "example": "The stadium was packed with football fans." },
+    { "word": "fantastic", "type": "adj", "meaning": "extremely good or wonderful", "example": "We had a fantastic time at the park." },
+    { "word": "clap", "type": "v", "meaning": "hit your hands together to show approval", "example": "The audience clapped for the actors." },
+    { "word": "professional", "type": "adj", "meaning": "doing a job or sport for money", "example": "He is a professional football player." },
+    { "word": "honest", "type": "adj", "meaning": "telling the truth; not lying", "example": "Please be honest with me." },
+    { "word": "chase", "type": "v", "meaning": "run after someone or something to catch them", "example": "The dog chased the cat up the tree." },
+    { "word": "kitten", "type": "n", "meaning": "young cat", "example": "Our cat has just had four cute kittens." },
+    { "word": "skateboarding", "type": "n", "meaning": "sport of riding a skateboard", "example": "Skateboarding is popular among teenagers." }
+  ],
+  "phrasalVerbs": [
+    { "phrasalVerb": "carry on", "meaning": "continue doing something", "example": "EX: Carry on with your work while I am away." },
+    { "phrasalVerb": "eat out", "meaning": "eat at a restaurant instead of home", "example": "EX: We decided to eat out tonight." },
+    { "phrasalVerb": "give up", "meaning": "stop doing a habit or activity", "example": "EX: He gave up smoking last year." },
+    { "phrasalVerb": "join in", "meaning": "participate or take part in an activity", "example": "EX: Ask them if we can join in the game." },
+    { "phrasalVerb": "send off", "meaning": "make a player leave a game for breaking rules", "example": "EX: The player was sent off for a bad foul." },
+    { "phrasalVerb": "take up", "meaning": "start a new hobby or sport", "example": "EX: I've taken up painting recently." },
+    { "phrasalVerb": "turn down", "meaning": "reduce the volume; reject an offer", "example": "EX: Could you turn down the music? It's too loud." },
+    { "phrasalVerb": "turn up", "meaning": "increase the volume", "example": "EX: Turn up the radio, I love this song!" }
+  ],
+  "prepositionalPhrases": [
+    { "phrase": "for a long time", "meaning": "for a long period", "example": "EX: I haven't seen her for a long time." },
+    { "phrase": "for fun", "meaning": "for pleasure or enjoyment", "example": "EX: I only play games for fun." },
+    { "phrase": "in the middle (of)", "meaning": "at the central point of something", "example": "EX: He stood in the middle of the room." },
+    { "phrase": "in time (for)", "meaning": "early enough for something", "example": "EX: We arrived just in time for the film." },
+    { "phrase": "on CD/DVD/video", "meaning": "recorded on a disk or tape", "example": "EX: Is the movie released on DVD yet?" },
+    { "phrase": "on stage", "meaning": "performing in front of an audience", "example": "EX: The actors are performing on stage." }
+  ],
+  "wordFormation": [
+    {
+      "word": "act",
+      "type": "verb",
+      "meaning": "act: perform or take action / active: busy doing things / inactive: not doing anything / actor or actress: person who performs in a play or movie",
+      "example": "EX: He acted very well in the play.\nEX: She's an active member of the club.\nEX: My favorite actor is Johnny Depp."
+    },
+    {
+      "word": "athlete",
+      "type": "noun",
+      "meaning": "athlete: person who plays sports / athletic: strong and good at sports / athletics: sports like running and jumping",
+      "example": "EX: The athlete won a gold medal.\nEX: She has an athletic build.\nEX: Athletics is popular at school."
+    },
+    {
+      "word": "child",
+      "type": "noun",
+      "meaning": "children: more than one child / childhood: the time when you are a child",
+      "example": "EX: The children are playing in the park.\nEX: I had a very happy childhood."
+    },
+    {
+      "word": "collect",
+      "type": "verb",
+      "meaning": "collection: group of similar objects / collector: person who collects things",
+      "example": "EX: She has a collection of old coins.\nEX: He is a stamp collector."
+    },
+    {
+      "word": "entertain",
+      "type": "verb",
+      "meaning": "entertain: invite people and give them food or fun / entertainment: shows, films, or games that interest people",
+      "example": "EX: He entertained us with his stories.\nEX: There is live entertainment tonight."
+    },
+    {
+      "word": "hero",
+      "type": "noun",
+      "meaning": "heroic: very brave / hero: brave man or main male character / heroine: brave woman or main female character",
+      "example": "EX: He made a heroic rescue attempt.\nEX: The hero of the movie is a young detective.\nEX: She is a national heroine."
+    },
+    {
+      "word": "music",
+      "type": "noun",
+      "meaning": "musical: relating to music / musician: person who plays or writes music",
+      "example": "EX: He plays a musical instrument.\nEX: She is a talented musician."
+    },
+    {
+      "word": "play",
+      "type": "verb/noun",
+      "meaning": "player: person who plays a game / playful: full of fun and wanting to play",
+      "example": "EX: He is a tennis player.\nEX: The puppy is very playful."
+    },
+    {
+      "word": "sail",
+      "type": "verb/noun",
+      "meaning": "sailing: sport of using boats with sails / sailor: person who works on a ship",
+      "example": "EX: They went sailing in the lake.\nEX: The sailor steered the ship."
+    },
+    {
+      "word": "sing",
+      "type": "verb",
+      "meaning": "sing: make musical sounds with the voice / singer: person who sings / singing: activity of making musical sounds with the voice",
+      "example": "EX: She loves to sing pop songs.\nEX: He is a famous singer.\nEX: I heard singing next door."
+    }
+  ],
+  "wordPatterns": [
+    { "verb": "bored with", "pattern": "adjective", "meaning": "tired of something uninteresting", "example": "EX: The boys are bored with staying at home all day." },
+    { "verb": "crazy about", "pattern": "adjective", "meaning": "very excited or enthusiastic about something", "example": "EX: Tom is crazy about football." },
+    { "verb": "good at", "pattern": "adjective", "meaning": "able to do something well", "example": "EX: Helen is good at Maths (doing Maths)." },
+    { "verb": "interested in", "meaning": "wanting to learn or know more about something", "pattern": "adjective", "example": "EX: I'm interested in astronomy." },
+    { "verb": "keen on", "pattern": "adjective", "meaning": "very interested in an activity", "example": "EX: I am keen on reading books." },
+    { "verb": "popular with", "pattern": "adjective", "meaning": "liked by a specific group of people", "example": "EX: This game is popular with teenagers." },
+    { "verb": "feel like", "pattern": "verb", "meaning": "want to have or do something", "example": "EX: I feel like a complete idiot." },
+    { "verb": "listen to", "pattern": "verb", "meaning": "pay attention to sounds or music", "example": "EX: I'm fond of listening to folk music." },
+    { "verb": "take part in", "pattern": "verb", "meaning": "join or participate in an event", "example": "EX: She wants to take part in the competition." },
+    { "verb": "a book (by sb) about", "pattern": "noun", "meaning": "written work describing a specific topic", "example": "EX: He wrote a book about chess." },
+    { "verb": "a fan of", "pattern": "noun", "meaning": "person who admires someone or something greatly", "example": "EX: I am a fan of classical music." },
+    { "verb": "a game against", "pattern": "noun", "meaning": "a match played in competition with another side", "example": "EX: We played a game against the champions." }
+  ],
+  "collocations": []
+}
