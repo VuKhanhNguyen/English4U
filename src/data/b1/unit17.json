@@ -1,0 +1,128 @@
+{
+  "id": "b1-unit-17",
+  "title": "Unit 17: Relative clauses",
+  "grammar": [
+    {
+      "structure": "Relative pronouns & Relative adverbs",
+      "usage": "Used to connect clauses or describe nouns (who, which, whose, whom, that, where, when, why)",
+      "example": "This is the town where Albert Einstein was born."
+    },
+    {
+      "structure": "Defining vs. Non-defining relative clauses",
+      "usage": "Defining clauses give essential information without commas. Non-defining clauses give extra information with commas and cannot use 'that'.",
+      "example": "The man who is wearing the blue coat is a doctor. / The man over there, who is called Mr. Henry, is a doctor."
+    }
+  ],
+  "richGrammar": [
+    {
+      "title": "A) RELATIVE PRONOUNS AND ADVERBS",
+      "blocks": [
+        {
+          "type": "title",
+          "content": "1. RELATIVE PRONOUNS & ADVERBS DEFINITIONS"
+        },
+        {
+          "type": "generic-table",
+          "headers": ["Pronoun / Adverb", "Usage", "Example"],
+          "rows": [
+            [
+              "**WHO**",
+              "Used for people, as the subject of the relative clause. (Can also be used for animals/pets when named).",
+              "What's the name of the man who created the Internet?"
+            ],
+            [
+              "**WHICH**",
+              "Used for things or animals, as the subject or object of the relative clause.",
+              "The experiment which worked was the last one."
+            ],
+            [
+              "**WHOSE**",
+              "Used to show possession, for both people and things.",
+              "Do you know the boy whose mother is a nurse?"
+            ],
+            [
+              "**WHOM**",
+              "Used for people, as the object of the relative clause (often after prepositions).",
+              "I was invited by the professor whom I met at the conference."
+            ],
+            [
+              "**THAT**",
+              "Used to replace *who* or *which* in defining relative clauses.",
+              "I don't like the table that stands in the kitchen."
+            ],
+            [
+              "**WHERE**",
+              "Used to refer to places.",
+              "This is the town where Albert Einstein was born."
+            ],
+            [
+              "**WHEN**",
+              "Used to refer to times or dates.",
+              "That was the day when we met."
+            ],
+            [
+              "**WHY**",
+              "Used to refer to reasons.",
+              "I didn't know the reason why you didn't go to school."
+            ]
+          ]
+        },
+        {
+          "type": "title",
+          "content": "2. COMMON MISTAKE: REPEATING SUBJECTS"
+        },
+        {
+          "type": "list",
+          "bullets": [
+            "**Note:** When using a relative pronoun, do not repeat the subject pronoun in the relative clause.",
+            "✗ *What's the name of the man who he created this website.*",
+            "✓ *What's the name of the man who created this website.*"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "B) RELATIVE CLAUSES",
+      "blocks": [
+        {
+          "type": "title",
+          "content": "1. DEFINING VS. NON-DEFINING RELATIVE CLAUSES"
+        },
+        {
+          "type": "generic-table",
+          "headers": ["Non-defining Relative Clauses", "Defining Relative Clauses"],
+          "rows": [
+            [
+              "Provide extra information about a noun. The sentence is grammatically complete and makes sense even if the clause is removed.",
+              "Provide essential information about a noun. The sentence is incomplete or lacks specific meaning if the clause is removed."
+            ],
+            [
+              "Always separated by commas. We cannot use **THAT** to replace *who* or *which*.",
+              "Never separated by commas. All relative pronouns (including **THAT**) can be used."
+            ],
+            [
+              "EX: The man over there, who is called Mr. Henry, is a doctor.",
+              "EX: The man who is wearing the blue coat is a doctor."
+            ]
+          ]
+        }
+      ]
+    }
+  ],
+  "vocabulary": [
+    { "word": "nurse", "type": "n", "meaning": "person whose job is to care for ill or injured people, usually in a hospital", "example": "The nurse checked his temperature and gave him some medicine." },
+    { "word": "pilot", "type": "n", "meaning": "person who flies an aircraft", "example": "The pilot announced that the plane would land shortly." },
+    { "word": "comedy", "type": "n", "meaning": "funny movie, play, or show that makes people laugh", "example": "We watched a hilarious comedy at the cinema last night." },
+    { "word": "enormous", "type": "adj", "meaning": "extremely large in size, amount, or number", "example": "An enormous elephant stood in the middle of the clearing." },
+    { "word": "actuary", "type": "n", "meaning": "person whose job is to calculate insurance risks and premiums", "example": "He works as an actuary for a major insurance company." },
+    { "word": "predict", "type": "v", "meaning": "say what will happen in the future", "example": "It is difficult to predict the weather accurately." },
+    { "word": "insurance", "type": "n", "meaning": "agreement in which you pay a company money and they pay your costs if you have an accident or injury", "example": "You need travel insurance when going abroad." },
+    { "word": "probable", "type": "adj", "meaning": "likely to happen or be true", "example": "The probable cause of the fire was an electrical fault." },
+    { "word": "reliable", "type": "adj", "meaning": "trustworthy and able to be trusted or believed", "example": "He is a reliable friend who always keeps his word." }
+  ],
+  "wordFormation": [],
+  "wordPatterns": [],
+  "phrasalVerbs": [],
+  "prepositionalPhrases": [],
+  "collocations": []
+}

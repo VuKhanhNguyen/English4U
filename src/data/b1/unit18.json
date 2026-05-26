@@ -1,0 +1,142 @@
+{
+  "id": "b1-unit-18",
+  "title": "Unit 18: Inventions and technology",
+  "grammar": [],
+  "vocabulary": [
+    { "word": "artificial", "type": "adj", "meaning": "made by human skill; not natural", "example": "The soccer match was played on artificial grass." },
+    { "word": "automatic", "type": "adj", "meaning": "working by itself without human control", "example": "The building has automatic sliding doors at the entrance." },
+    { "word": "complicated", "type": "adj", "meaning": "difficult to understand or deal with because of having many parts", "example": "The instructions for setting up the router were very complicated." },
+    { "word": "decrease", "type": "v, n", "meaning": "make or become smaller or less; reduction in amount or size", "example": "The company hopes to decrease its expenses next month." },
+    { "word": "digital", "type": "adj", "meaning": "using or showing information in the form of electronic digits", "example": "She prefers a digital watch to a traditional analog one." },
+    { "word": "discover", "type": "v", "meaning": "find information, a place, or an object for the first time", "example": "Scientists have discovered a new planet in another solar system." },
+    { "word": "effect", "type": "n", "meaning": "change that is a result or consequence of an action or other cause", "example": "The new medicine had a very positive effect on his health." },
+    { "word": "equipment", "type": "n", "meaning": "set of tools or things needed for a particular activity", "example": "The laboratory is equipped with state-of-the-art research equipment." },
+    { "word": "estimate", "type": "v", "meaning": "guess the cost, size, or value of something based on information", "example": "It is difficult to estimate how many people will attend the conference." },
+    { "word": "exact", "type": "adj", "meaning": "completely correct and accurate in every detail", "example": "Can you tell me the exact time the train leaves?" },
+    { "word": "experiment", "type": "v, n", "meaning": "scientific test done to learn something or show a fact", "example": "The students performed a chemistry experiment in class today." },
+    { "word": "gadget", "type": "n", "meaning": "small device or tool, especially a useful or decorative one", "example": "A smartphone is a very useful technological gadget." },
+    { "word": "hardware", "type": "n", "meaning": "physical parts of a computer system", "example": "We need to upgrade our computer hardware to run this software." },
+    { "word": "invent", "type": "v", "meaning": "design or create something that did not exist before", "example": "Thomas Edison invented the light bulb in 1879." },
+    { "word": "involve", "type": "v", "meaning": "include something or someone as a necessary part", "example": "The science project involves a lot of research." },
+    { "word": "laboratory", "type": "n", "meaning": "room or building equipped for scientific research or tests", "example": "The scientists work in a modern research laboratory." },
+    { "word": "lack", "type": "v, n", "meaning": "not have enough of something; shortage of something", "example": "The plants died due to a lack of water." },
+    { "word": "laptop", "type": "n", "meaning": "portable computer that is small enough to use on your lap", "example": "She brought her laptop to the library to work on her essay." },
+    { "word": "maximum", "type": "adj", "meaning": "largest amount or number that is possible or allowed", "example": "The maximum speed limit on this highway is 120 km/h." },
+    { "word": "minimum", "type": "adj", "meaning": "smallest amount or number that is possible or allowed", "example": "The minimum age to drive a car is eighteen." },
+    { "word": "operate", "type": "v", "meaning": "work or control the functioning of a machine", "example": "He learned how to operate the heavy machinery safely." },
+    { "word": "plastic", "type": "n, adj", "meaning": "synthetic material that can be shaped into objects", "example": "We should reduce our use of single-use plastic bottles." },
+    { "word": "program", "type": "v, n", "meaning": "set of instructions that tells a computer what to do; write these instructions", "example": "She wrote a computer program to organize her files." },
+    { "word": "research", "type": "n", "meaning": "detailed study of a subject in order to discover new facts", "example": "They are carrying out research into new forms of clean energy." },
+    { "word": "run", "type": "v", "meaning": "operate or function, or cause a machine or program to function", "example": "Don't leave the car engine running while parked." },
+    { "word": "screen", "type": "n", "meaning": "flat surface on a television, computer, or phone where pictures are shown", "example": "The phone screen is cracked and needs to be replaced." },
+    { "word": "software", "type": "n", "meaning": "programs used by a computer", "example": "He installed a new antivirus software on his laptop." },
+    { "word": "sudden", "type": "adj", "meaning": "happening quickly and unexpectedly", "example": "There was a sudden change in the weather this afternoon." },
+    { "word": "technology", "type": "n", "meaning": "practical use of scientific discoveries, especially in industry", "example": "Modern technology has changed the way we communicate." },
+    { "word": "unique", "type": "adj", "meaning": "being the only one of its kind; very special", "example": "Every person's fingerprints are completely unique." },
+    { "word": "stereo", "type": "n", "meaning": "equipment for playing recorded sound through two speakers", "example": "He bought a new stereo system for his living room." },
+    { "word": "deaf", "type": "adj", "meaning": "unable to hear anything or unable to hear well", "example": "The deaf student uses sign language to communicate." },
+    { "word": "drug", "type": "n", "meaning": "medicine or chemical substance that has a physiological effect when ingested", "example": "The doctor prescribed a new drug to lower her blood pressure." },
+    { "word": "Malaria", "type": "n", "meaning": "serious disease spread by mosquito bites, causing fever and chills", "example": "Malaria is a major health problem in tropical regions." },
+    { "word": "Greek", "type": "n", "meaning": "language or a person from Greece", "example": "The word 'technology' comes from the Greek language." },
+    { "word": "physics", "type": "n", "meaning": "scientific study of matter, energy, and force", "example": "She is studying physics and chemistry in school." },
+    { "word": "attack", "type": "v", "meaning": "try to hurt or defeat someone using physical force", "example": "The army attacked the enemy castle at dawn." },
+    { "word": "jug", "type": "n", "meaning": "container for holding and pouring liquids, with a handle and mouth", "example": "She poured a glass of orange juice from the jug." },
+    { "word": "sodium", "type": "n", "meaning": "chemical element that is a soft, silver-white metal", "example": "Table salt is a compound made of sodium and chlorine." },
+    { "word": "fire brigade", "type": "n", "meaning": "organization of firefighters trained to put out fires", "example": "The fire brigade arrived quickly to extinguish the flames." }
+  ],
+  "phrasalVerbs": [
+    { "phrasalVerb": "break down", "meaning": "stop working (for a machine or vehicle)", "example": "EX: The car broke down on the way to the airport." },
+    { "phrasalVerb": "come across", "meaning": "find something or meet someone by chance", "example": "EX: I came across an old photo of my grandparents in the drawer." },
+    { "phrasalVerb": "find out", "meaning": "discover information or facts about something", "example": "EX: I need to find out what time the train leaves." },
+    { "phrasalVerb": "make up", "meaning": "invent an explanation or a story, especially to deceive", "example": "EX: He made up a story about why he was late." },
+    { "phrasalVerb": "pull off", "meaning": "break or detach something by pulling it forcefully", "example": "EX: Pull off the handle so we cannot open the cupboard." },
+    { "phrasalVerb": "throw away", "meaning": "get rid of something that is no longer wanted", "example": "EX: Don't throw away these newspapers; I want to read them." },
+    { "phrasalVerb": "turn off", "meaning": "stop a machine or light from working by pressing a button", "example": "EX: Remember to turn off the lights before you leave." },
+    { "phrasalVerb": "turn on", "meaning": "start a machine or light working by pressing a button", "example": "EX: Please turn on the air conditioner; it is hot in here." }
+  ],
+  "prepositionalPhrases": [
+    { "phrase": "at last", "meaning": "finally; after a long period of waiting or difficulty", "example": "EX: At last, the bus arrived after we waited for an hour." },
+    { "phrase": "by chance", "meaning": "accidentally; without planning or expectation", "example": "EX: We met in the supermarket by chance." },
+    { "phrase": "in my opinion", "meaning": "according to my belief or thoughts", "example": "EX: In my opinion, this book is very interesting." },
+    { "phrase": "in the end", "meaning": "finally; after a series of events or thoughts", "example": "EX: I thought we would get there by 3pm, but in the end, we arrived at 5pm." },
+    { "phrase": "in the future", "meaning": "at a time that is still to come", "example": "EX: What will transportation look like in the future?" },
+    { "phrase": "out of order", "meaning": "not working or out of stock", "example": "EX: The vending machine is out of order." }
+  ],
+  "wordFormation": [
+    {
+      "word": "boil",
+      "type": "verb",
+      "meaning": "boil: heat liquid until it bubbles / boiler: container for heating water / boiling: extremely hot or bubbling hot",
+      "example": "EX: Put the water on the stove to boil.\nEX: The plumber fixed our hot water boiler.\nEX: It is boiling hot in the desert."
+    },
+    {
+      "word": "chemist",
+      "type": "noun",
+      "meaning": "chemist: scientist who studies chemistry / chemical: substance produced by or used in a chemical process / chemistry: study of substances and reactions",
+      "example": "EX: The chemist is researching new materials.\nEX: Industrial waste contains many toxic chemicals.\nEX: I found school chemistry lessons very interesting."
+    },
+    {
+      "word": "conclude",
+      "type": "verb",
+      "meaning": "conclude: end or decide something / conclusion: final decision or ending of something",
+      "example": "EX: The meeting will conclude with a brief summary.\nEX: We reached a logical conclusion after looking at the facts."
+    },
+    {
+      "word": "examine",
+      "type": "verb",
+      "meaning": "examine: look at carefully to learn more / exam(ination): formal test of knowledge or physical inspection / examiner: person who checks or marks an exam",
+      "example": "EX: The doctor will examine your throat.\nEX: He is preparing for his driving examination.\nEX: The examiner checked our test papers."
+    },
+    {
+      "word": "fascinate",
+      "type": "verb",
+      "meaning": "fascinate: attract or interest someone greatly / fascination: feeling of being extremely interested / fascinating: extremely interesting",
+      "example": "EX: Space travel has always fascinated me.\nEX: The children watched the magician with fascination.\nEX: He gave a fascinating lecture on astronomy."
+    },
+    {
+      "word": "history",
+      "type": "noun",
+      "meaning": "historic: important in history / historical: relating to history / historian: person who studies or writes about history",
+      "example": "EX: This is a historic moment for the country.\nEX: He enjoys reading historical novels.\nEX: The historian wrote a book about the Roman Empire."
+    },
+    {
+      "word": "identical",
+      "type": "adjective",
+      "meaning": "identical: exactly the same / identically: in an exactly identical way",
+      "example": "EX: The twin sisters wore identical dresses.\nEX: The two rooms were decorated identically."
+    },
+    {
+      "word": "long",
+      "type": "adjective",
+      "meaning": "length: measurement of how long something is",
+      "example": "EX: The length of the table is two meters."
+    },
+    {
+      "word": "measure",
+      "type": "verb",
+      "meaning": "measure: find the size, weight, or amount of / measurement: size, weight, or amount found by measuring",
+      "example": "EX: We need to measure the width of the door.\nEX: Take the measurements of the room before buying furniture."
+    },
+    {
+      "word": "science",
+      "type": "noun",
+      "meaning": "science: systematic study of the structure and behavior of the physical world / scientist: person who works in science",
+      "example": "EX: Science has advanced rapidly in this century.\nEX: The scientist won a Nobel Prize for physics."
+    }
+  ],
+  "wordPatterns": [
+    { "verb": "different from/to", "pattern": "adjective", "meaning": "not the same as another thing or person", "example": "EX: Life in the city is very different from life in the countryside." },
+    { "verb": "full of", "pattern": "adjective", "meaning": "holding or containing as much as possible", "example": "EX: The room was full of children playing games." },
+    { "verb": "begin sth with", "pattern": "verb", "meaning": "start doing an activity with something specific", "example": "EX: Let's begin the meeting with a self-introduction." },
+    { "verb": "connect sth to/with", "pattern": "verb", "meaning": "join two things together", "example": "EX: You need to connect the printer to the laptop." },
+    { "verb": "disconnect sth from", "pattern": "verb", "meaning": "separate a device or thing from another", "example": "EX: Always disconnect the power plug from the socket before cleaning." },
+    { "verb": "fill sth with", "pattern": "verb", "meaning": "make something full of a substance", "example": "EX: Fill the jug with fresh water." },
+    { "verb": "result in", "pattern": "verb", "meaning": "cause a particular situation or outcome to happen", "example": "EX: The heavy rain resulted in severe flooding." },
+    { "verb": "a difference between", "pattern": "noun", "meaning": "way in which two or more things are not the same", "example": "EX: What is the difference between these two software versions?" },
+    { "verb": "an idea about", "pattern": "noun", "meaning": "opinion or thought about a subject", "example": "EX: Do you have any idea about how to solve this problem?" },
+    { "verb": "a number of", "pattern": "noun", "meaning": "several or many", "example": "EX: A number of students were absent today." },
+    { "verb": "a reason for", "pattern": "noun", "meaning": "fact or cause that explains why something happened or exists", "example": "EX: What is the reason for your delay?" },
+    { "verb": "a type of", "pattern": "noun", "meaning": "group of things that share similar features; kind of", "example": "EX: This is a rare type of flower." }
+  ],
+  "collocations": []
+}

@@ -1,0 +1,72 @@
+{
+  "id": "b1-unit-16",
+  "title": "Unit 16: Pronouns and possessive determiners",
+  "grammar": [
+    {
+      "structure": "Subject/Object pronouns, Possessive determiners/pronouns, Reflexive pronouns",
+      "usage": "Used to replace nouns, show ownership, or refer back to the subject of the clause.",
+      "example": "I saw myself in the mirror. / This is my book, and that one is yours."
+    }
+  ],
+  "richGrammar": [
+    {
+      "title": "A) PRONOUNS & POSSESSIVE DETERMINERS",
+      "blocks": [
+        {
+          "type": "title",
+          "content": "1. PRONOUNS AND POSSESSIVE DETERMINERS CHART"
+        },
+        {
+          "type": "generic-table",
+          "headers": ["Subject Pronoun", "Object Pronoun", "Possessive Determiner", "Possessive Pronoun", "Reflexive Pronoun"],
+          "rows": [
+            ["I", "Me", "My", "Mine", "myself"],
+            ["You", "You", "Yours", "Yours", "yourself"],
+            ["He", "Him", "His", "His", "Himself"],
+            ["She", "Her", "Her", "Hers", "Herself"],
+            ["It", "It", "Its", "X", "Itself"],
+            ["We", "Us", "Our", "Ours", "Ourselves"],
+            ["They", "Them", "Their", "Theirs", "Themselves"],
+            [
+              "Is the subject of a sentence.",
+              "Is the object of an action.",
+              "Expresses possession (followed by a noun).",
+              "Shows who owns something (not followed by a noun).",
+              "Describes an action where subject and object are the same, or emphasizes who did something."
+            ]
+          ]
+        },
+        {
+          "type": "title",
+          "content": "2. WATCH OUT! IT'S vs ITS"
+        },
+        {
+          "type": "list",
+          "bullets": [
+            "**It's** and **its** are different in meaning:",
+            "- **It's** is short for *it is* or *it has*.\n- **Its** is a possessive determiner showing ownership.",
+            "EX: *It's my dog. Here's the dog's water and here's its food.*"
+          ]
+        }
+      ]
+    }
+  ],
+  "vocabulary": [
+    { "word": "possessive", "type": "adj", "meaning": "showing a desire to own or dominate, or relating to ownership in grammar", "example": "In 'my car', 'my' is a possessive determiner." },
+    { "word": "aeroplane", "type": "n", "meaning": "vehicle with wings and one or more engines that flies through the air", "example": "The aeroplane flew high above the clouds." },
+    { "word": "discover", "type": "v", "meaning": "find information, a place, or an object for the first time", "example": "Columbus did not discover America, but he made it widely known." },
+    { "word": "penicillin", "type": "n", "meaning": "type of antibiotic medicine used to treat infections", "example": "Penicillin was discovered by Alexander Fleming in 1928." },
+    { "word": "equipment", "type": "n", "meaning": "set of tools or things needed for a particular activity", "example": "You need proper camping equipment before going to the forest." },
+    { "word": "describe", "type": "v", "meaning": "say or write what someone or something is like", "example": "Can you describe the man you saw yesterday?" },
+    { "word": "cure", "type": "n", "meaning": "medicine or treatment that makes an ill person healthy again", "example": "Scientists are searching for a cure for cancer." },
+    { "word": "blanket", "type": "n", "meaning": "thick warm cover used on a bed", "example": "She put an extra blanket on her bed because it was cold." },
+    { "word": "milkshake", "type": "n", "meaning": "sweet, cold drink made of milk, ice cream, and fruit syrup", "example": "I ordered a strawberry milkshake at the cafe." },
+    { "word": "borrow", "type": "v", "meaning": "take something from someone with the promise to return it later", "example": "Can I borrow your English textbook for a day?" },
+    { "word": "make a promise", "type": "v phr", "meaning": "tell someone that you will definitely do or not do something", "example": "He made a promise to help her with the homework." }
+  ],
+  "wordFormation": [],
+  "wordPatterns": [],
+  "phrasalVerbs": [],
+  "prepositionalPhrases": [],
+  "collocations": []
+}
