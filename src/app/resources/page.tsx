@@ -31,6 +31,8 @@ import unit6 from "@/data/b1/unit6.json";
 import unit7 from "@/data/b1/unit7.json";
 import unit8 from "@/data/b1/unit8.json";
 import unit9 from "@/data/b1/unit9.json";
+import unit10_11 from "@/data/b1/unit10_11.json";
+import unit12 from "@/data/b1/unit12.json";
 
 // Collect all units in one array
 const allUnits = [
@@ -43,6 +45,8 @@ const allUnits = [
   { unit: 7, data: unit7 },
   { unit: 8, data: unit8 },
   { unit: 9, data: unit9 },
+  { unit: 10, data: unit10_11 },
+  { unit: 12, data: unit12 },
 ];
 
 // Helper to extract base word from prepositional phrases
@@ -273,7 +277,7 @@ export default function ResourcesPage() {
                 All-in-One Destination B1 Synthesis
               </h1>
               <p className="text-body font-mono text-pale-stone">
-                An aggregated compilation of all vocabulary, phrasal verbs, prepositional phrases, word formations, and patterns from Units 1 to 6. Search across the entire B1 database instantly.
+                An aggregated compilation of all vocabulary, phrasal verbs, prepositional phrases, word formations, and patterns from Units 1 to 12. Search across the entire B1 database instantly.
               </p>
             </div>
 

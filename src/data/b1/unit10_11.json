@@ -1,0 +1,204 @@
+{
+  "id": "b1-unit-10-11",
+  "title": "Unit 10 & 11: Passive voice",
+  "grammar": [
+    {
+      "structure": "Passive 1: Simple tenses",
+      "usage": "Used when the doer of the action is unknown or when emphasizing the receiver of the action",
+      "example": "My bicycle was stolen yesterday."
+    },
+    {
+      "structure": "Passive 2: Continuous, Perfect, Going to & Modals",
+      "usage": "Passive structures for continuous tenses, perfect tenses, and modal verbs",
+      "example": "The car was being cleaned by my uncle. / Jenny should be told about this."
+    }
+  ],
+  "richGrammar": [
+    {
+      "title": "A) PASSIVE 1",
+      "blocks": [
+        {
+          "type": "title",
+          "content": "1. FORM OF PASSIVE 1 (SIMPLE TENSES)"
+        },
+        {
+          "type": "generic-table",
+          "headers": ["Tense / Category", "ACTIVE", "PASSIVE"],
+          "rows": [
+            [
+              "**Positive (+)**",
+              "",
+              ""
+            ],
+            [
+              "Present simple",
+              "S + V(s/es) + O\nEX: They always invite Tom.",
+              "O + am / is / are + V3/ed (+ by S)\nEX: Tom is always invited."
+            ],
+            [
+              "Past simple",
+              "S + V2/ed + O\nEX: They invited Tom.",
+              "O + was / were + V3/ed (+ by S)\nEX: Tom was invited."
+            ],
+            [
+              "Future simple",
+              "S + will + V_bare + O\nEX: They will invite Tom.",
+              "O + will be + V3/ed (+ by S)\nEX: Tom will be invited."
+            ],
+            [
+              "**Negative (-)**",
+              "",
+              ""
+            ],
+            [
+              "Present simple",
+              "S + don't / doesn't + V_bare + O\nEX: They don't invite Tom.",
+              "O + am / is / are + not + V3/ed (+ by S)\nEX: Tom isn't invited."
+            ],
+            [
+              "Past simple",
+              "S + didn't + V_bare + O\nEX: They didn't invite Tom.",
+              "O + was / were + not + V3/ed (+ by S)\nEX: Tom wasn't invited."
+            ],
+            [
+              "Future simple",
+              "S + won't + V_bare + O\nEX: They will not invite Tom.",
+              "O + will NOT be + V3/ed (+ by S)\nEX: Tom will not be invited."
+            ],
+            [
+              "**Interrogative (?)**",
+              "",
+              ""
+            ],
+            [
+              "Present simple",
+              "Do / does + S + V_bare + O?\nEX: Do they invite Tom?",
+              "Am / Is / Are + O + V3/ed (+ by S)?\nEX: Is Tom invited?"
+            ],
+            [
+              "Past simple",
+              "Did + S + V_bare + O?\nEX: Did they invite Tom?",
+              "Was / were + O + V3/ed (+ by S)?\nEX: Was Tom invited?"
+            ],
+            [
+              "Future simple",
+              "Will + S + V_bare + O?\nEX: Will they invite Tom?",
+              "Will + O + BE + V3/ed (+ by S)?\nEX: Will Tom be invited?"
+            ]
+          ]
+        },
+        {
+          "type": "title",
+          "content": "2. USING PASSIVE VOICE"
+        },
+        {
+          "type": "list",
+          "bullets": [
+            "1. When we do not know who performed the action.\nEX: My bicycle was stolen yesterday.",
+            "2. When we want to emphasize the receiver or object of the action rather than the doer.\nEX: An apple tree is planted in this garden this morning.",
+            "**Examples of sentence shifts:**\n- Active: *Did they take her to hospital in an ambulance?*\n  → Passive: *Was she taken to hospital in an ambulance?*\n- Active: *They will send the letters to first class.*\n  → Passive: *The letters will be sent to first class.*"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "B) PASSIVE 2",
+      "blocks": [
+        {
+          "type": "title",
+          "content": "1. FORM OF PASSIVE 2 (CONTINUOUS, PERFECT, GOING TO & MODALS)"
+        },
+        {
+          "type": "generic-table",
+          "headers": ["Structure / Tense", "ACTIVE", "PASSIVE"],
+          "rows": [
+            [
+              "**Present continuous**",
+              "S + am / is / are (+ not) + V-ing + O\n- EX: I am doing the washing up.\n- EX: They're not doing the washing up.",
+              "O + am / is / are (+ not) + BEING + V3/ed (+ by S)\n- EX: The washing up is being done.\n- EX: The washing up is NOT being done."
+            ],
+            [
+              "**Present perfect**",
+              "S + has / have (+ not) + V3/ed + O\n- EX: My cousin has sent the invitations.\n- EX: My cousin hasn't sent the invitations.",
+              "O + have / has (+ not) + BEEN + V3/ed (+ by S)\n- EX: The invitations have been sent by my cousin.\n- EX: The invitations haven't been sent by my cousin."
+            ],
+            [
+              "**Past continuous**",
+              "S + was / were (+ not) + V-ing + O\n- EX: My uncle was cleaning the car.\n- EX: My uncle was not cleaning the car at that moment.",
+              "O + was / were (+ not) + BEING + V3/ed (+ by S)\n- EX: The car was being cleaned by my uncle.\n- EX: The car was NOT being cleaned by my uncle at that moment."
+            ],
+            [
+              "**Past perfect**",
+              "S + had (+ not) + V3/ed + O\n- EX: Our neighbor had taken the children to the zoo.\n- EX: My aunt hadn't taken her twins to the zoo.",
+              "O + had (+ not) + BEEN + V3/ed (+ by S)\n- EX: The children had been taken to the zoo by our neighbor.\n- EX: The twins had not been taken to the zoo."
+            ],
+            [
+              "**Be going to**",
+              "S + BE going to + V_bare + O\n- EX: They're going to invite Lan to the party.",
+              "O + BE (+ not) going to + BE + V3/ed (+ by S)\n- EX: Lan is going to BE invited to the party."
+            ],
+            [
+              "**MIGHT (Modal)**",
+              "S + might (+ not) + V_bare + O\n- EX: They might invite Maudie to their anniversary party.\n- EX: They might NOT invite Maudie.",
+              "O + might (+ not) + BE + V3/ed (+ by S)\n- EX: Maudie might BE invited to their anniversary party.\n- EX: Maudie might NOT BE invited."
+            ],
+            [
+              "**SHOULD (Modal)**",
+              "S + should (+ not) + V_bare + O\n- EX: We should tell Jenny about this.\n- EX: We shouldn't tell Jenny.",
+              "O + should (+ not) + BE + V3/ed (+ by S)\n- EX: Jenny should BE told about this.\n- EX: Jenny should NOT BE told."
+            ],
+            [
+              "**MUST (Modal)**",
+              "S + must (+ not) + V_bare + O\n- EX: We must tell Tom about this.\n- EX: We must not tell Tom.",
+              "O + must (+ not) + BE + V3/ed (+ by S)\n- EX: Tom must BE told about this.\n- EX: Tom must NOT BE told."
+            ],
+            [
+              "**CAN (Modal)**",
+              "S + can (+ not) + V_bare + O\n- EX: We can hold the party at Jack's house.\n- EX: We can't hold the party.",
+              "O + can (+ not) + BE + V3/ed (+ by S)\n- EX: The party can BE held at Jack's house.\n- EX: The party can NOT BE held."
+            ]
+          ]
+        }
+      ]
+    }
+  ],
+  "vocabulary": [
+    { "word": "attraction", "type": "n", "meaning": "interesting place or event that people visit", "example": "The museum is a popular tourist attraction." },
+    { "word": "distance", "type": "n", "meaning": "amount of space between two points or places", "example": "The distance from Hanoi to Haiphong is about 100 kilometers." },
+    { "word": "amaze", "type": "v", "meaning": "surprise someone greatly; fill with wonder", "example": "His quick progress in English amazed all his teachers." },
+    { "word": "amazing", "type": "adj", "meaning": "extremely surprising or wonderful", "example": "The view from the top of the mountain was amazing." },
+    { "word": "toothbrush", "type": "n", "meaning": "small brush used for cleaning teeth", "example": "You should change your toothbrush every three months." },
+    { "word": "steal - stole - stolen", "type": "v", "meaning": "take something belonging to another person without permission", "example": "Someone stole his bicycle from the parking lot yesterday." },
+    { "word": "crime", "type": "n", "meaning": "activity that is against the law", "example": "The police are working hard to reduce crime in the city." },
+    { "word": "fingerprint", "type": "n", "meaning": "mark made by the tip of a person's finger", "example": "The detective found a fingerprint on the glass door." },
+    { "word": "feed", "type": "v", "meaning": "give food to a person, animal, or group", "example": "Don't forget to feed the cat before you go out." },
+    { "word": "organization", "type": "n", "meaning": "group of people working together for a shared purpose", "example": "She works for a charity organization that helps homeless kids." },
+    { "word": "keep in perfect condition", "type": "v phr", "meaning": "maintain something in excellent shape", "example": "The classic car is kept in perfect condition by its owner." },
+    { "word": "discount", "type": "n", "meaning": "reduction in the usual price of something", "example": "Students get a 10% discount on textbooks at this bookstore." },
+    { "word": "invitations", "type": "n", "meaning": "written or spoken requests to go somewhere or do something", "example": "We sent out thirty invitations to our wedding." },
+    { "word": "twins", "type": "n", "meaning": "two children born at the same time to the same mother", "example": "The twin sisters look so similar that it is hard to tell them apart." },
+    { "word": "spoon", "type": "n", "meaning": "tool with a shallow bowl and handle, used for eating or stirring", "example": "Use a spoon to eat your soup." },
+    { "word": "carnival", "type": "n", "meaning": "public festival with music, dancing, and street processions", "example": "The Rio Carnival is famous all over the world." },
+    { "word": "lorry", "type": "n", "meaning": "large, heavy motor vehicle for transporting goods", "example": "The lorry was carrying a load of bricks to the building site." },
+    { "word": "gorilla", "type": "n", "meaning": "largest type of ape, living in the forests of central Africa", "example": "We saw a family of gorillas at the wildlife park." },
+    { "word": "pirate", "type": "n", "meaning": "person who attacks and robs ships at sea", "example": "The children dressed up as pirates for the fancy-dress party." },
+    { "word": "balloon", "type": "n", "meaning": "small colored rubber bag filled with air or gas", "example": "The birthday party room was decorated with colorful balloons." },
+    { "word": "astronaut", "type": "n", "meaning": "person who is trained to travel in a spacecraft", "example": "Neil Armstrong was the first astronaut to walk on the moon." },
+    { "word": "clown", "type": "n", "meaning": "performer who wears funny clothes and makeup to make people laugh", "example": "The clown made animal shapes out of balloons for the kids." },
+    { "word": "fancy-dress", "type": "n", "meaning": "clothes worn for a party where people dress up as characters", "example": "Everyone wore a creative costume to the fancy-dress party." },
+    { "word": "decorate", "type": "v", "meaning": "make something look more attractive by adding items to it", "example": "They decorated the Christmas tree with lights and ornaments." },
+    { "word": "a pair of scissors", "type": "n", "meaning": "tool used for cutting paper, cloth, or hair", "example": "Use a pair of scissors to cut the wrapping paper." },
+    { "word": "candle", "type": "n", "meaning": "stick of wax with a wick that is burned to provide light", "example": "She blew out the candles on her birthday cake." },
+    { "word": "jacket", "type": "n", "meaning": "short coat with sleeves, worn on the upper body", "example": "Put on a warm jacket because it is cold outside." },
+    { "word": "soapy", "type": "adj", "meaning": "containing or covered with soap", "example": "Wash your hands with warm, soapy water." },
+    { "word": "credit card", "type": "n", "meaning": "small plastic card used to buy goods and pay for them later", "example": "Can I pay for my hotel room with a credit card?" },
+    { "word": "sweep", "type": "v", "meaning": "clean a floor using a broom or brush", "example": "She sweeps the kitchen floor every morning." },
+    { "word": "vacuum cleaner", "type": "n", "meaning": "machine that cleans floors by sucking up dirt and dust", "example": "We bought a new vacuum cleaner that is very quiet." },
+    { "word": "brush", "type": "n", "meaning": "tool with bristles or hairs used for cleaning, painting, or grooming", "example": "He used a stiff brush to clean his muddy shoes." }
+  ],
+  "wordFormation": [],
+  "wordPatterns": [],
+  "phrasalVerbs": [],
+  "prepositionalPhrases": [],
+  "collocations": []
+}

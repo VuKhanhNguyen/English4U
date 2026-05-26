@@ -1,0 +1,137 @@
+{
+  "id": "b1-unit-12",
+  "title": "Unit 12: People and relations",
+  "grammar": [],
+  "vocabulary": [
+    { "word": "apologise", "type": "v", "meaning": "say sorry for having done something wrong", "example": "You should apologise to her for being late." },
+    { "word": "boyfriend", "type": "n", "meaning": "male friend with whom someone has a romantic relationship", "example": "She introduced her new boyfriend to her parents." },
+    { "word": "close", "type": "adj", "meaning": "knowing someone very well and liking them very much", "example": "They have been close friends since childhood." },
+    { "word": "confident", "type": "adj", "meaning": "feeling sure about your own abilities or ideas", "example": "She is confident that she will pass the exam." },
+    { "word": "cool", "type": "adj", "meaning": "fashionable, attractive, or impressive", "example": "He looks really cool in his new leather jacket." },
+    { "word": "couple", "type": "n", "meaning": "two people who are married or in a relationship", "example": "The young couple walked hand in hand along the beach." },
+    { "word": "decorate", "type": "v", "meaning": "make something look more attractive by putting things on it", "example": "We decorated the hall with balloons for the party." },
+    { "word": "defend", "type": "v", "meaning": "protect someone or something from attack or harm", "example": "The soldiers fought bravely to defend their castle." },
+    { "word": "divorced", "type": "adj", "meaning": "no longer married because the marriage has legally ended", "example": "Her parents got divorced when she was ten years old." },
+    { "word": "flat", "type": "n", "meaning": "set of rooms for living in, usually on one floor of a building", "example": "They rented a small flat in the city center." },
+    { "word": "generous", "type": "adj", "meaning": "willing to give money, help, or gifts to others", "example": "It was very generous of him to pay for our dinner." },
+    { "word": "girlfriend", "type": "n", "meaning": "female friend with whom someone has a romantic relationship", "example": "He bought a beautiful necklace for his girlfriend." },
+    { "word": "grateful", "type": "adj", "meaning": "feeling or showing thanks for something good", "example": "I am extremely grateful for your help." },
+    { "word": "guest", "type": "n", "meaning": "person who is invited to visit someone's home or attend an event", "example": "We have several guests staying at our house this weekend." },
+    { "word": "independent", "type": "adj", "meaning": "not controlled or influenced by other people", "example": "She is an independent woman who lives on her own." },
+    { "word": "introduce", "type": "v", "meaning": "tell someone another person's name when they meet for the first time", "example": "Let me introduce you to my colleague, Sarah." },
+    { "word": "loving", "type": "adj", "meaning": "showing a lot of love and care for someone", "example": "He has a very warm and loving family." },
+    { "word": "loyal", "type": "adj", "meaning": "remaining constant in your support of a friend or country", "example": "A dog is known as a loyal companion." },
+    { "word": "mood", "type": "n", "meaning": "the way you are feeling at a particular time", "example": "She was in a good mood after receiving the good news." },
+    { "word": "neighbourhood", "type": "n", "meaning": "area of a town or city where people live", "example": "This is a quiet and safe neighbourhood." },
+    { "word": "ordinary", "type": "adj", "meaning": "not special or different in any way; usual", "example": "It was just an ordinary day at work." },
+    { "word": "patient", "type": "adj", "meaning": "able to stay calm and wait without getting angry", "example": "You need to be patient when teaching children." },
+    { "word": "private", "type": "adj", "meaning": "only for one person or group; not public", "example": "This is a private conversation; please leave us alone." },
+    { "word": "recognise", "type": "v", "meaning": "know someone or something because you have seen them before", "example": "I didn't recognise him at first because of his beard." },
+    { "word": "relation", "type": "n", "meaning": "member of your family; connection between two things", "example": "Is he a relation of yours?" },
+    { "word": "rent", "type": "v, n", "meaning": "pay money regularly to live in a house; the money paid", "example": "They decided to rent a house near the beach." },
+    { "word": "respect", "type": "v, n", "meaning": "admire someone because of their qualities or achievements; admiration", "example": "We should respect our teachers and elderly people." },
+    { "word": "single", "type": "adj", "meaning": "not married or in a romantic relationship", "example": "He is single and enjoys travelling around the world." },
+    { "word": "stranger", "type": "n", "meaning": "person you do not know", "example": "Don't talk to strangers when you walk home alone." },
+    { "word": "trust", "type": "v, n", "meaning": "believe that someone is good, honest, and reliable; belief in someone", "example": "Trust is very important in a friendship." },
+    { "word": "secret", "type": "n", "meaning": "something that is kept hidden or known by only a few people", "example": "Can you keep a secret?" },
+    { "word": "strict", "type": "adj", "meaning": "demanding that rules are obeyed and followed exactly", "example": "Our school has very strict rules about dress code." },
+    { "word": "freedom", "type": "n", "meaning": "state of being free to do what you want without control", "example": "Everyone values their freedom." },
+    { "word": "split up", "type": "v phr", "meaning": "end a marriage or romantic relationship", "example": "They decided to split up after being together for three years." },
+    { "word": "imagine", "type": "v", "meaning": "form a picture or idea of something in your mind", "example": "Can you imagine what life will be like in fifty years?" }
+  ],
+  "phrasalVerbs": [
+    { "phrasalVerb": "bring up", "meaning": "look after a child until they become an adult", "example": "EX: She brought up three children on her own." },
+    { "phrasalVerb": "fall out (with)", "meaning": "argue with someone and stop being friendly with them", "example": "EX: He fell out with his best friend over a silly argument." },
+    { "phrasalVerb": "get on (with)", "meaning": "have a good friendly relationship with someone", "example": "EX: I get on very well with my classmates." },
+    { "phrasalVerb": "go out with", "meaning": "have a romantic relationship with someone", "example": "EX: She has been going out with him for six months." },
+    { "phrasalVerb": "grow up", "meaning": "develop from being a child into an adult", "example": "EX: He grew up in a small town in the countryside." },
+    { "phrasalVerb": "let down", "meaning": "disappoint someone by failing to do what they expected", "example": "EX: I promised to help her, and I won't let her down." },
+    { "phrasalVerb": "look after", "meaning": "take care of someone or something", "example": "EX: Could you look after my cat while I am on holiday?" },
+    { "phrasalVerb": "split up", "meaning": "end a relationship or marriage", "example": "EX: They decided to split up after a long discussion." }
+  ],
+  "prepositionalPhrases": [
+    { "phrase": "by yourself", "meaning": "alone; without help from anyone else", "example": "EX: Did you build this bookshelf by yourself?" },
+    { "phrase": "in common (with)", "meaning": "sharing interests, beliefs, or features with someone else", "example": "EX: I don't have much in common with my brother." },
+    { "phrase": "in contact (with)", "meaning": "communicating or staying in touch with someone", "example": "EX: We still keep in contact with our primary school friends." },
+    { "phrase": "in love (with)", "meaning": "having strong romantic feelings for someone", "example": "EX: They fell in love with each other during college." },
+    { "phrase": "on purpose", "meaning": "intentionally; not by accident", "example": "EX: He broke the cup on purpose." },
+    { "phrase": "on your own", "meaning": "alone; by yourself", "example": "EX: She traveled to London on her own." }
+  ],
+  "wordFormation": [
+    {
+      "word": "able",
+      "type": "adjective",
+      "meaning": "ability: power or skill to do something / disabled: having a physical or mental condition that limits movements / unable: not able to do something",
+      "example": "EX: She has the ability to speak three languages.\nEX: The hotel provides facilities for disabled guests.\nEX: I was unable to contact him yesterday."
+    },
+    {
+      "word": "admire",
+      "type": "verb",
+      "meaning": "admire: respect and approve of someone / admiration: feeling of respect and approval",
+      "example": "EX: I admire her courage and dedication.\nEX: He looked at the painting with admiration."
+    },
+    {
+      "word": "care",
+      "type": "noun/verb",
+      "meaning": "careful: paying close attention to avoid danger or mistakes / careless: not paying enough attention; making mistakes",
+      "example": "EX: Please be careful when crossing the street.\nEX: It was a careless mistake to leave the keys in the car."
+    },
+    {
+      "word": "confident",
+      "type": "adjective",
+      "meaning": "confidence: feeling of trust or certainty in oneself or others",
+      "example": "EX: Regular practice will build your confidence."
+    },
+    {
+      "word": "forgive",
+      "type": "verb",
+      "meaning": "forgive / forgave / forgiven: stop feeling angry at someone for a mistake / forgiveness: act of forgiving someone",
+      "example": "EX: Please forgive me for forgetting your birthday.\nEX: She asked for his forgiveness."
+    },
+    {
+      "word": "honest",
+      "type": "adjective",
+      "meaning": "dishonest: not honest; telling lies or cheating / honesty: quality of being truthful and trustworthy",
+      "example": "EX: He was fired for being dishonest with customers.\nEX: Honesty is the best policy."
+    },
+    {
+      "word": "introduce",
+      "type": "verb",
+      "meaning": "introduction: act of presenting someone or something for the first time",
+      "example": "EX: The book has a brief introduction to grammar."
+    },
+    {
+      "word": "lie",
+      "type": "verb/noun",
+      "meaning": "liar: person who tells lies / lying: act of telling lies",
+      "example": "EX: Don't believe him; he is a known liar.\nEX: She was caught lying about her age."
+    },
+    {
+      "word": "person",
+      "type": "noun",
+      "meaning": "personality: qualities that make a person's character / personal: relating to a particular person rather than anyone else",
+      "example": "EX: She has a very outgoing personality.\nEX: This is my personal opinion on the matter."
+    },
+    {
+      "word": "relate",
+      "type": "verb",
+      "meaning": "relative: member of your family / relation: connection between two things / relationship: way in which two people or groups behave towards each other",
+      "example": "EX: All my relatives came to the family reunion.\nEX: There is a close relation between diet and health.\nEX: They have a very strong relationship."
+    }
+  ],
+  "wordPatterns": [
+    { "verb": "fond of", "pattern": "adjective", "meaning": "liking someone or something very much", "example": "EX: She is very fond of her grandchildren." },
+    { "verb": "jealous of", "pattern": "adjective", "meaning": "feeling angry or unhappy because someone has something you want", "example": "EX: He is jealous of his brother's success." },
+    { "verb": "kind to", "pattern": "adjective", "meaning": "helpful, friendly, and caring towards others", "example": "EX: Please be kind to animals." },
+    { "verb": "married to", "pattern": "adjective", "meaning": "having a husband or wife", "example": "EX: She is married to a famous writer." },
+    { "verb": "proud of", "pattern": "adjective", "meaning": "feeling pleased and satisfied with something you or someone close to you achieved", "example": "EX: Her parents are very proud of her achievements." },
+    { "verb": "admire sb for", "pattern": "verb", "meaning": "respect someone for a particular quality or action", "example": "EX: I admire him for his honesty." },
+    { "verb": "apologise (to sb) for", "pattern": "verb", "meaning": "tell someone that you are sorry for something", "example": "EX: You should apologise to them for the delay." },
+    { "verb": "argue (with sb) about", "pattern": "verb", "meaning": "speak angrily to someone because you disagree", "example": "EX: They always argue about money." },
+    { "verb": "care about", "pattern": "verb", "meaning": "feel that something is important and worth worrying about", "example": "EX: He cares deeply about the environment." },
+    { "verb": "chat (to sb) about", "pattern": "verb", "meaning": "talk in a friendly, informal way to someone about something", "example": "EX: We chatted about our school days for hours." },
+    { "verb": "an argument (with sb) about", "pattern": "noun", "meaning": "angry disagreement with someone about a subject", "example": "EX: I had a heated argument with my neighbor about the fence." },
+    { "verb": "a relationship with", "pattern": "noun", "meaning": "way in which two people or groups behave towards each other", "example": "EX: She has a very good working relationship with her boss." }
+  ],
+  "collocations": []
+}

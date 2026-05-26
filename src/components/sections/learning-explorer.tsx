@@ -14,12 +14,14 @@ import unit6 from "@/data/b1/unit6.json";
 import unit7 from "@/data/b1/unit7.json";
 import unit8 from "@/data/b1/unit8.json";
 import unit9 from "@/data/b1/unit9.json";
+import unit10_11 from "@/data/b1/unit10_11.json";
+import unit12 from "@/data/b1/unit12.json";
 import b2Data from "@/data/destination-b2.json";
 import c1c2Data from "@/data/destination-c1-c2.json";
 
 const b1Data = {
   book: "Destination B1",
-  units: [unit1, unit2, unit3, unit4, unit5, unit6, unit7, unit8, unit9],
+  units: [unit1, unit2, unit3, unit4, unit5, unit6, unit7, unit8, unit9, unit10_11, unit12],
 };
 
 import { Card } from "@/components/ui/card";
@@ -382,6 +384,20 @@ export function LearningExplorerSection({
 
   const activeBook = books[selectedBookIndex];
 
+  const totalUnitsCount = React.useMemo(() => {
+    if (!activeBook || !activeBook.units) return 0;
+    return activeBook.units.reduce((acc: number, unit: any) => {
+      if (!unit.id) return acc + 1;
+      const match = unit.id.match(/unit-(\d+)[-_](\d+)/) || unit.id.match(/unit-(\d+)-(\d+)/);
+      if (match) {
+        const start = parseInt(match[1], 10);
+        const end = parseInt(match[2], 10);
+        return acc + (end - start + 1);
+      }
+      return acc + 1;
+    }, 0);
+  }, [activeBook]);
+
   // A basic filtering function for the tables based on the search query
   const filterData = (data: any[] | undefined, keysToSearch: string[]) => {
     const safeData = data || [];
@@ -455,7 +471,7 @@ export function LearningExplorerSection({
                 Total Syllabus
               </p>
               <p className="text-heading-lg font-bold text-ink leading-none">
-                {activeBook.units.length} Units
+                {totalUnitsCount} Units
               </p>
             </div>
           </Card>
