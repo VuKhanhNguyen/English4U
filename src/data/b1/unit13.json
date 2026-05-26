@@ -1,0 +1,74 @@
+{
+  "id": "b1-unit-13",
+  "title": "Unit 13: Countable and uncountable nouns",
+  "grammar": [
+    {
+      "structure": "Countable vs. Uncountable nouns",
+      "usage": "Countable nouns have plural forms and use quantifiers like 'many' or 'few'. Uncountable nouns have only one form and use 'much' or 'little'.",
+      "example": "There are many shops in this town. / She gave me some good advice."
+    }
+  ],
+  "richGrammar": [
+    {
+      "title": "A) COUNTABLE & UNCOUNTABLE NOUNS",
+      "blocks": [
+        {
+          "type": "title",
+          "content": "1. USAGE OF COUNTABLE & UNCOUNTABLE NOUNS"
+        },
+        {
+          "type": "generic-table",
+          "headers": ["Feature", "Countable Nouns", "Uncountable Nouns"],
+          "rows": [
+            [
+              "**Form**",
+              "Have singular and plural forms (e.g. *shop* $\\rightarrow$ *shops*)",
+              "Have only one form (no plural form, e.g. *bread*, *homework*)"
+            ],
+            [
+              "**Verbs**",
+              "Can take singular or plural verbs depending on the noun form",
+              "Always take singular verbs"
+            ],
+            [
+              "**Examples**",
+              "A baby $\\rightarrow$ babies\nA shop $\\rightarrow$ many shops",
+              "Bread, hair, fruit, advice, furniture, homework..."
+            ],
+            [
+              "**Quantifiers**",
+              "a/an, many, a few, one, two, three...",
+              "a little, much, a bit, a piece of..."
+            ],
+            [
+              "**Irregulars / Special cases**",
+              "**Irregular plurals:**\n- A child $\\rightarrow$ two children\n- A foot $\\rightarrow$ two feet\n- A man $\\rightarrow$ two men\n- A woman $\\rightarrow$ two women\n- A person $\\rightarrow$ two people\n- A tooth $\\rightarrow$ two teeth",
+              "**Special nouns:**\n- Plural only (take plural verbs): *clothes*, *jeans*, *trousers*...\n- Some nouns have different meanings depending on whether they are countable or uncountable (e.g. *paper* vs *a paper*)."
+            ]
+          ]
+        }
+      ]
+    }
+  ],
+  "vocabulary": [
+    { "word": "marathon", "type": "n", "meaning": "long-distance running race, strictly of 26.2 miles", "example": "She is training hard to run her first marathon." },
+    { "word": "charity", "type": "n", "meaning": "organization that gives money, food, or help to people in need", "example": "The money raised will go to a local children's charity." },
+    { "word": "useful", "type": "adj", "meaning": "helping you to do or achieve something", "example": "The map was very useful for finding our way around the city." },
+    { "word": "absolutely", "type": "adv", "meaning": "completely or totally", "example": "You are absolutely right about the answer." },
+    { "word": "tank", "type": "n", "meaning": "large container for holding liquid or gas, or for keeping fish", "example": "We bought a new glass tank for our goldfish." },
+    { "word": "wedding reception", "type": "n", "meaning": "party held after a wedding ceremony", "example": "The wedding reception was held at a beautiful hotel near the beach." },
+    { "word": "cheese", "type": "n", "meaning": "food made from the pressed curds of milk", "example": "I like to put grated cheese on my pasta." },
+    { "word": "jar", "type": "n", "meaning": "cylindrical glass container, typically with a wide mouth and a lid", "example": "She opened a new jar of strawberry jam." },
+    { "word": "strawberry", "type": "n", "meaning": "small, sweet, red fruit with tiny seeds on its surface", "example": "Fresh strawberries and cream is a delicious dessert." },
+    { "word": "vase", "type": "n", "meaning": "container used for holding cut flowers", "example": "Put the roses in the vase on the dining table." },
+    { "word": "cough", "type": "n", "meaning": "act of forcing air out of your lungs with a sudden loud sound", "example": "He has a dry cough and a sore throat." },
+    { "word": "throat", "type": "n", "meaning": "front part of your neck, or the passage inside it", "example": "She drank warm honey water to soothe her sore throat." },
+    { "word": "cupboard", "type": "n", "meaning": "piece of furniture with doors and shelves used for storage", "example": "The cups are in the kitchen cupboard." },
+    { "word": "open-air market", "type": "n", "meaning": "outdoor market where goods are sold from stalls", "example": "We bought fresh vegetables at the open-air market." }
+  ],
+  "wordFormation": [],
+  "wordPatterns": [],
+  "phrasalVerbs": [],
+  "prepositionalPhrases": [],
+  "collocations": []
+}

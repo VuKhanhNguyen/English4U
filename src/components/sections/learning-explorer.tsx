@@ -16,12 +16,15 @@ import unit8 from "@/data/b1/unit8.json";
 import unit9 from "@/data/b1/unit9.json";
 import unit10_11 from "@/data/b1/unit10_11.json";
 import unit12 from "@/data/b1/unit12.json";
+import unit13 from "@/data/b1/unit13.json";
+import unit14 from "@/data/b1/unit14.json";
+import unit15 from "@/data/b1/unit15.json";
 import b2Data from "@/data/destination-b2.json";
 import c1c2Data from "@/data/destination-c1-c2.json";
 
 const b1Data = {
   book: "Destination B1",
-  units: [unit1, unit2, unit3, unit4, unit5, unit6, unit7, unit8, unit9, unit10_11, unit12],
+  units: [unit1, unit2, unit3, unit4, unit5, unit6, unit7, unit8, unit9, unit10_11, unit12, unit13, unit14, unit15],
 };
 
 import { Card } from "@/components/ui/card";

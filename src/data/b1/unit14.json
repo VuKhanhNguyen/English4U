@@ -1,0 +1,81 @@
+{
+  "id": "b1-unit-14",
+  "title": "Unit 14: Articles",
+  "grammar": [
+    {
+      "structure": "Indefinite, Definite & Zero Articles",
+      "usage": "Use 'a/an' for non-specific singular countables, 'the' for specific/unique items, and no article for general statements or proper nouns.",
+      "example": "I saw a dog. The dog was barking. I like dogs."
+    }
+  ],
+  "richGrammar": [
+    {
+      "title": "A) ARTICLES (A/AN, THE, NO ARTICLE)",
+      "blocks": [
+        {
+          "type": "title",
+          "content": "1. INDEFINITE, DEFINITE & ZERO ARTICLES"
+        },
+        {
+          "type": "generic-table",
+          "headers": ["Indefinite Article (A / AN)", "Definite Article (THE)", "No Article (Zero Article)"],
+          "rows": [
+            [
+              "**Use with singular countable nouns:**\n- Used before non-specific singular countable nouns.\n\n**Notes on A:**\n- Before consonant sounds: *a uniform*, *a university*.\n- Before 'half' following a unit: *a half of kg*, *a half of day*.\n- In fractions: *1/3 = a one third*.\n- For prices, speed, rates: *a 140km/h*.\n- In quantifiers: *a dozen*, *a lot of*, *a thousand*...\n\n**Notes on AN:**\n- Before vowel sounds: *an orange*, *an hour* (silent 'h').\n- Before abbreviations starting with vowel sounds: *an SOS*, *an X-ray*.",
+              "**Use with specific or unique nouns:**\n- Things that are unique: *the sun*, *the moon*, *the sky*.\n- Nouns already mentioned: *I bought a book. The book is interesting.*\n- Nouns defined by a phrase or clause: *The man in the black coat is my uncle.*\n- Nouns understood in context: *Close the door, please.*\n- With superlatives & ordinals: *the tallest*, *the first*, *the only*.\n- Singular nouns representing a species/class: *The cobra is a poisonous snake.*\n- In constructions: *The + of + noun* (e.g. *The Statue of Liberty*).\n- With plural family names: *The Smiths*.\n- Institutional destinations when visited for a secondary purpose: *They went to the school to see their children.*",
+              "**Use when speaking in general or with specific proper nouns:**\n- Before names of countries, continents, mountains, lakes, streets: *France*, *Asia*, *Mount Everest*, *Oxford Street*.\n- With plural countable nouns in general: *I like dogs.*\n- With abstract or uncountable nouns in general: *Men fear death. / The death of his father made him completely hopeless.*"
+            ]
+          ]
+        },
+        {
+          "type": "title",
+          "content": "2. COMMON CASES WITH OR WITHOUT ARTICLES"
+        },
+        {
+          "type": "generic-table",
+          "headers": ["Category", "A / AN", "THE", "No Article"],
+          "rows": [
+            [
+              "**Places**",
+              "✗",
+              "- **Seas & Rivers**: *the Atlantic*, *the Pacific*, *the Amazon*, *the Nile*...\n- **Some country names**: *the USA*, *the UK*...\n- **Public buildings**: *the theater*, *the cinema*...\n- **Nature & Space**: *the Earth*, *the world*, *the sky*, *the moon*, *the sun*, *the sea*, *the environment*",
+              "- **Towns & cities**: *Moscow*\n- **Most countries**: *France*\n- **Continents**: *Europe*\n- **Streets**: *Nguyen Hue street*\n- **Planets**: *Mars*, *Jupiter*..."
+            ],
+            [
+              "**Activities**",
+              "**Jobs & Professions:**\n- *have a job*\n- *work as a waiter*...",
+              "- **Media**: *on the radio*, *the media*\n- **Musical instruments**: *play the piano*",
+              "- **Common locations/routines**: *go to work*, *on TV*, *go shopping*, *play tennis*, *listen to music*, *go to school*, *be at school*, *be at university*\n- **School subjects**: *Maths*, *English*..."
+            ],
+            [
+              "**Time**",
+              "✗",
+              "- **Parts of the day**: *in the morning / afternoon / evening*\n- **Specific dates**: *on the 20th March*\n- **Decades**: *in the 1950s*",
+              "- **Days**: *Thursday*\n- **Months**: *May*\n- **Years**: *2009*\n- **Expressions**: *at night*"
+            ],
+            [
+              "**People**",
+              "✗",
+              "- **Titles & Roles**: *The King*, *the Prime Minister*\n- **Organizations**: *the army*, *the navy*, *the police*\n- **Nationalities (plural)**: *the Germans*, *the English*...",
+              "- **Titles after verbs**: *become King*\n- **Nationalities & Languages**: *he's English*, *speak English*"
+            ]
+          ]
+        }
+      ]
+    }
+  ],
+  "vocabulary": [
+    { "word": "insect", "type": "n", "meaning": "small animal with six legs and three body parts, often with wings", "example": "Ants, bees, and butterflies are all insects." },
+    { "word": "properly", "type": "adv", "meaning": "correctly or in a satisfactory way", "example": "Make sure you clean your teeth properly." },
+    { "word": "blame", "type": "v", "meaning": "say or think that someone is responsible for something bad", "example": "Don't blame me for the mistake; it wasn't my fault." },
+    { "word": "popular", "type": "adj", "meaning": "liked or enjoyed by many people", "example": "Football is the most popular sport in the country." },
+    { "word": "theft / thief", "type": "n", "meaning": "crime of stealing / person who steals", "example": "The police are investigating the car theft. / The thief stole her purse." },
+    { "word": "army", "type": "n", "meaning": "large organized group of soldiers trained to fight on land", "example": "He joined the army when he was eighteen." },
+    { "word": "soldier", "type": "n", "meaning": "person who serves in an army", "example": "The soldiers marched across the field." }
+  ],
+  "wordFormation": [],
+  "wordPatterns": [],
+  "phrasalVerbs": [],
+  "prepositionalPhrases": [],
+  "collocations": []
+}

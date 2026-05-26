@@ -1,0 +1,136 @@
+{
+  "id": "b1-unit-15",
+  "title": "Unit 15: Buying and selling",
+  "grammar": [],
+  "vocabulary": [
+    { "word": "advertisement", "type": "n", "meaning": "picture, short film, or text that tries to sell something", "example": "I saw an advertisement for a new smartphone on TV." },
+    { "word": "afford (sth)", "type": "v", "meaning": "have enough money or time to be able to buy or do something", "example": "We wonder if he could afford a new car." },
+    { "word": "bargain", "type": "n", "meaning": "something on sale at a lower price than its true value", "example": "At only $5, this shirt was a real bargain." },
+    { "word": "brand", "type": "n", "meaning": "type of product made by a particular company under a particular name", "example": "What brand of washing powder do you normally buy?" },
+    { "word": "catalogue", "type": "n", "meaning": "book or magazine showing a list of items you can buy", "example": "She looked through the clothing catalogue to find a new coat." },
+    { "word": "change", "type": "n", "meaning": "coins rather than paper money, or money returned when you pay with a larger bill", "example": "Here is your ticket and your change, sir." },
+    { "word": "coin", "type": "n", "meaning": "small, round piece of metal used as money", "example": "He flipped a coin to decide who would go first." },
+    { "word": "cost", "type": "v, n", "meaning": "amount of money needed to buy or do something; require payment of an amount", "example": "How much does this laptop cost? / The cost of living has risen." },
+    { "word": "customer", "type": "n", "meaning": "person who buys goods or services from a shop or business", "example": "The shop assistant was helping a customer find a dress." },
+    { "word": "debt", "type": "n", "meaning": "amount of money that you owe to someone", "example": "He spent years trying to pay off his credit card debt." },
+    { "word": "demand", "type": "v", "meaning": "ask for something forcefully, in a way that shows you expect it to be done", "example": "The workers demanded a pay rise from their manager." },
+    { "word": "export", "type": "v", "meaning": "send goods or services to another country for sale", "example": "Vietnam exports a large amount of rice every year." },
+    { "word": "fee", "type": "n", "meaning": "money paid to a professional person or organization for their work", "example": "The school fees must be paid at the beginning of the term." },
+    { "word": "fortune", "type": "n", "meaning": "large amount of money or wealth", "example": "He made a fortune by investing in the stock market." },
+    { "word": "import", "type": "v", "meaning": "bring goods or services into a country from abroad for sale", "example": "The country imports most of its oil from overseas." },
+    { "word": "invest", "type": "v", "meaning": "put money into a project or business to make a profit", "example": "He decided to invest his savings in real estate." },
+    { "word": "obtain", "type": "v", "meaning": "get or acquire something, especially by making an effort", "example": "You must obtain permission from the council before building." },
+    { "word": "owe", "type": "v", "meaning": "need to pay or give something to someone because they have lent it to you", "example": "I owe my brother ten dollars for the ticket." },
+    { "word": "own", "type": "v", "meaning": "have something that legally belongs to you", "example": "They own a beautiful house by the lake." },
+    { "word": "Pint of milk", "type": "n phr", "meaning": "unit of liquid measure equal to about 473 ml (in US) or 568 ml (in UK)", "example": "Please buy a pint of milk on your way home." },
+    { "word": "profit", "type": "n", "meaning": "money that you earn in business after paying all costs", "example": "The company made a huge profit this quarter." },
+    { "word": "property", "type": "n", "meaning": "land and buildings owned by someone, or objects belonging to someone", "example": "This building is private property; trespassing is forbidden." },
+    { "word": "purchase", "type": "v, n", "meaning": "buy something; act of buying something", "example": "She purchased a new laptop yesterday." },
+    { "word": "receipt", "type": "n", "meaning": "document showing that money has been paid for goods", "example": "Keep your receipt in case you want to return the dress." },
+    { "word": "require", "type": "v", "meaning": "need something or make something necessary", "example": "The job requires excellent communication skills." },
+    { "word": "sale", "type": "n", "meaning": "period during which a shop sells goods at reduced prices", "example": "I bought these shoes half-price in the winter sale." },
+    { "word": "save", "type": "v", "meaning": "keep money for future use rather than spending it", "example": "She is trying to save money to buy a new phone." },
+    { "word": "select", "type": "v", "meaning": "choose someone or something carefully from a group", "example": "Please select the option that best describes you." },
+    { "word": "supply", "type": "v, n", "meaning": "provide something that is needed; amount of something available for use", "example": "The company supplies office equipment to local businesses." },
+    { "word": "variety", "type": "n", "meaning": "many different types of things or people", "example": "The market offers a wide variety of fresh fruits." },
+    { "word": "waste", "type": "v, n", "meaning": "use more money, time, or energy than is useful; bad use of something", "example": "Don't waste your money on things you don't need." },
+    { "word": "worry", "type": "v", "meaning": "think about problems or unpleasant things that might happen in a way that makes you anxious", "example": "Don't worry about the exam; you have studied hard." },
+    { "word": "pocket money", "type": "n phr", "meaning": "small amount of money that parents give to children regularly", "example": "He gets five dollars of pocket money every week." },
+    { "word": "lawyer", "type": "n", "meaning": "person whose job is to guide people about the law and speak for them in court", "example": "She hired a lawyer to help her with the contract." }
+  ],
+  "phrasalVerbs": [
+    { "phrasalVerb": "add up", "meaning": "calculate the total of two or more numbers", "example": "EX: If you add up all these numbers, you get 100." },
+    { "phrasalVerb": "come back (from)", "meaning": "return from a place", "example": "EX: We just came back from our holiday in Paris yesterday." },
+    { "phrasalVerb": "give away", "meaning": "give something to someone without asking for money", "example": "EX: They are giving away free samples of the new shampoo." },
+    { "phrasalVerb": "hurry up", "meaning": "do something more quickly because there is not much time", "example": "EX: Hurry up, or we will miss the train!" },
+    { "phrasalVerb": "pay (sb) back", "meaning": "return money that you have borrowed from someone", "example": "EX: I will pay you back next week when I get my salary." },
+    { "phrasalVerb": "save up (for)", "meaning": "keep money regularly to buy something specific in the future", "example": "EX: She is saving up for a trip to Japan next summer." },
+    { "phrasalVerb": "take back", "meaning": "return something you have bought to a shop, or return an object to its owner", "example": "EX: If the dress doesn't fit, you can take it back to the shop." },
+    { "phrasalVerb": "take down", "meaning": "remove something that is on a wall or high place", "example": "EX: They took down the party decorations the day after the event." }
+  ],
+  "prepositionalPhrases": [
+    { "phrase": "by credit card/cheque", "meaning": "method of paying using a card or check", "example": "EX: Would you like to pay in cash or by credit card?" },
+    { "phrase": "for rent", "meaning": "available to be rented, like a house or room", "example": "EX: There is a small flat for rent near the university." },
+    { "phrase": "for sale", "meaning": "available to be bought", "example": "EX: That old house on the corner is finally for sale." },
+    { "phrase": "in cash", "meaning": "paying with paper notes and coins rather than a card", "example": "EX: He paid for the groceries in cash." },
+    { "phrase": "in debt", "meaning": "owing money to someone or a bank", "example": "EX: He ended up deep in debt after his business failed." },
+    { "phrase": "in good/bad condition", "meaning": "state of repair or health of an object or person", "example": "EX: The second-hand car is still in very good condition." }
+  ],
+  "wordFormation": [
+    {
+      "word": "add",
+      "type": "verb",
+      "meaning": "add: put together to increase size or number / addition: act of adding or a mathematical calculation",
+      "example": "EX: You can add some sugar to the tea.\nEX: In addition to his salary, he gets a monthly bonus."
+    },
+    {
+      "word": "afford",
+      "type": "verb",
+      "meaning": "affordable: cheap enough for most people to buy",
+      "example": "EX: The company aims to make housing more affordable."
+    },
+    {
+      "word": "compare",
+      "type": "verb",
+      "meaning": "compare: estimate, measure, or note the similarity or dissimilarity between / comparison: act of comparing two or more things",
+      "example": "EX: You can compare the prices of these two laptops.\nEX: The document makes a direct comparison between the two systems."
+    },
+    {
+      "word": "decide",
+      "type": "verb",
+      "meaning": "decide: make a choice after thinking carefully / decisive: able to make decisions quickly and confidently / decision: choice or judgment made after thinking",
+      "example": "EX: I can't decide which shirt to buy.\nEX: She is a decisive leader who gets things done.\nEX: He made a quick decision to join the club."
+    },
+    {
+      "word": "expense",
+      "type": "noun",
+      "meaning": "expense: cost required for something / (in)expensive: costing (little) a lot of money",
+      "example": "EX: Traveling abroad can be a huge expense.\nEX: This restaurant is delicious but very expensive."
+    },
+    {
+      "word": "judge",
+      "type": "verb/noun",
+      "meaning": "judge: form an opinion about someone or something / judgement: opinion or decision made after thinking carefully",
+      "example": "EX: Don't judge a book by its cover.\nEX: In my judgement, this is the best course of action."
+    },
+    {
+      "word": "serve",
+      "type": "verb",
+      "meaning": "service: act of helping or doing work for someone / servant: person who works in another person's house",
+      "example": "EX: The hotel provides excellent customer service.\nEX: The wealthy family hired two servants to clean the house."
+    },
+    {
+      "word": "true",
+      "type": "adjective",
+      "meaning": "truth: quality of being true; facts / untrue: not true; false / truthful: honest and always telling the truth",
+      "example": "EX: Tell me the truth about what happened.\nEX: The rumors about his resignation were untrue.\nEX: She gave a truthful account of the accident."
+    },
+    {
+      "word": "use",
+      "type": "verb/noun",
+      "meaning": "useful: helping you to do or achieve something / useless: not helping you to do or achieve anything",
+      "example": "EX: The guidebook was very useful during our trip.\nEX: A broken umbrella is completely useless in the rain."
+    },
+    {
+      "word": "value",
+      "type": "noun/verb",
+      "meaning": "valuable: worth a lot of money or very useful",
+      "example": "EX: The museum contains many valuable paintings."
+    }
+  ],
+  "wordPatterns": [
+    { "verb": "wrong about", "pattern": "adjective", "meaning": "mistaken about something", "example": "EX: I was completely wrong about his intentions." },
+    { "verb": "wrong with", "pattern": "adjective", "meaning": "there is a problem or issue with something", "example": "EX: There is something wrong with my computer; it won't turn on." },
+    { "verb": "belong to", "pattern": "verb", "meaning": "be the property of someone", "example": "EX: This laptop belongs to the school." },
+    { "verb": "borrow sth from", "pattern": "verb", "meaning": "take something from someone with the promise to return it", "example": "EX: Can I borrow a pen from you?" },
+    { "verb": "buy sth from", "pattern": "verb", "meaning": "get something by paying money to someone", "example": "EX: I bought this jacket from a local vintage shop." },
+    { "verb": "choose between", "pattern": "verb", "meaning": "make a choice between two or more options", "example": "EX: She had to choose between studying law or medicine." },
+    { "verb": "compare sth to/with", "pattern": "verb", "meaning": "examine two things to note their similarities or differences", "example": "EX: You can't compare my work with hers; they are completely different." },
+    { "verb": "decide on / upon", "pattern": "verb", "meaning": "make a final choice about something after thinking", "example": "EX: We finally decided on the blue paint for the kitchen." },
+    { "verb": "lend sth to", "pattern": "verb", "meaning": "give something to someone for a short time, expecting it back", "example": "EX: He lent his bicycle to his cousin for the weekend." },
+    { "verb": "pay for", "pattern": "verb", "meaning": "give money to get goods or services", "example": "EX: Who is going to pay for these drinks?" },
+    { "verb": "spend sth on", "pattern": "verb", "meaning": "use money or time on a specific activity or item", "example": "EX: She spends a lot of money on books." },
+    { "verb": "an advert(isement) for", "pattern": "noun", "meaning": "notice or picture promoting a product or service", "example": "EX: I saw a funny advertisement for a new soda brand." }
+  ],
+  "collocations": []
+}
