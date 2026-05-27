@@ -88,6 +88,38 @@ function extractPatternBaseWord(verbStr: string): string {
   return base.charAt(0).toUpperCase() + base.slice(1);
 }
 
+// Helper to abbreviate grammatical types/patterns (e.g. "verb" -> "v")
+function abbreviateType(typeStr: string): string {
+  if (!typeStr) return "";
+  return typeStr
+    .toLowerCase()
+    .split("/")
+    .map(slashPart => {
+      return slashPart
+        .split(",")
+        .map(commaPart => {
+          const trimmed = commaPart.trim();
+          switch (trimmed) {
+            case "verb": return "v";
+            case "noun": return "n";
+            case "adjective": return "adj";
+            case "adverb": return "adv";
+            case "preposition": return "prep";
+            case "pronoun": return "pron";
+            case "phrase": return "phr";
+            case "noun phrase": return "n phr";
+            case "verb phrase": return "v phr";
+            case "conjunction": return "conj";
+            case "determiner": return "det";
+            default: return trimmed;
+          }
+        })
+        .join(", ");
+    })
+    .join("/");
+}
+
+
 // Interface for word family items in Word Formation
 interface WordFamilyItem {
   forms: string[];
@@ -526,7 +558,7 @@ export default function ResourcesPage() {
                             <TableCell className="font-mono text-ink text-center text-xs font-semibold pt-5">{(currentPage - 1) * itemsPerPage + idx + 1}</TableCell>
                             <TableCell className="font-mono font-bold text-ink text-sm pt-5">
                               {row.word}
-                              <span className="block text-[10px] text-pale-stone font-normal mt-0.5">({row.type})</span>
+                              <span className="block text-[10px] text-pale-stone font-normal mt-0.5">({abbreviateType(row.type)})</span>
                             </TableCell>
                             <TableCell className="p-2">
                               <div className="divide-y divide-off-black/5 font-mono">
@@ -611,7 +643,7 @@ export default function ResourcesPage() {
                         <TableRow key={idx} className="hover:bg-atmosphere-wash/10 transition-colors">
                           <TableCell className="font-mono text-ink text-center text-xs font-semibold">{(currentPage - 1) * itemsPerPage + idx + 1}</TableCell>
                           <TableCell className="font-mono font-medium text-ink text-sm bg-atmosphere-wash/5 font-semibold text-center">{extractPatternBaseWord(row.verb)}</TableCell>
-                          <TableCell className="font-mono font-bold text-[#b91c1c] text-sm">{row.verb} <span className="text-[10px] text-pale-stone font-normal italic">({row.pattern})</span></TableCell>
+                          <TableCell className="font-mono font-bold text-[#b91c1c] text-sm">{row.verb} <span className="text-[10px] text-pale-stone font-normal italic">({abbreviateType(row.pattern)})</span></TableCell>
                           <TableCell className="font-mono text-off-black text-sm max-w-[250px] break-words">{row.meaning}</TableCell>
                           <TableCell className="font-mono italic text-pale-stone text-xs max-w-[320px] whitespace-pre-line">{row.example}</TableCell>
                           <TableCell className="font-mono text-xs text-pale-stone">

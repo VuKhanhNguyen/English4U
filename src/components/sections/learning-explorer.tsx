@@ -53,11 +53,42 @@ import {
 
 const books = [b1Data, b2Data, c1c2Data];
 
+function parseBoldAndItalic(text: string, baseKey: string): React.ReactNode[] {
+  if (!text) return [];
+  const regex = /\*\*([^*]+)\*\*/g;
+  const parts: React.ReactNode[] = [];
+  let lastIndex = 0;
+  let match;
+
+  while ((match = regex.exec(text)) !== null) {
+    const [fullMatch, boldText] = match;
+    const matchIndex = match.index;
+
+    if (matchIndex > lastIndex) {
+      parts.push(text.substring(lastIndex, matchIndex));
+    }
+
+    parts.push(
+      <strong key={`${baseKey}-bold-${matchIndex}`} className="font-bold italic text-indigo-600 bg-indigo-600/10 px-1 py-0.5 rounded">
+        {boldText}
+      </strong>
+    );
+
+    lastIndex = matchIndex + fullMatch.length;
+  }
+
+  if (lastIndex < text.length) {
+    parts.push(text.substring(lastIndex));
+  }
+
+  return parts.length > 0 ? parts : [text];
+}
+
 function renderTextWithLinks(text: string) {
   if (!text) return null;
   // Regex to match markdown links: [link text](url)
   const regex = /\[([^\]]+)\]\(([^)]+)\)/g;
-  const parts = [];
+  const parts: React.ReactNode[] = [];
   let lastIndex = 0;
   let match;
 
@@ -67,13 +98,14 @@ function renderTextWithLinks(text: string) {
 
     // Add text before the match
     if (matchIndex > lastIndex) {
-      parts.push(text.substring(lastIndex, matchIndex));
+      const textBefore = text.substring(lastIndex, matchIndex);
+      parts.push(...parseBoldAndItalic(textBefore, `before-${matchIndex}`));
     }
 
     // Add the link element
     parts.push(
       <a
-        key={url + matchIndex}
+        key={`${url}-${matchIndex}`}
         href={url}
         target="_blank"
         rel="noopener noreferrer"
@@ -88,10 +120,97 @@ function renderTextWithLinks(text: string) {
 
   // Add remaining text
   if (lastIndex < text.length) {
-    parts.push(text.substring(lastIndex));
+    const textRemaining = text.substring(lastIndex);
+    parts.push(...parseBoldAndItalic(textRemaining, `after-${lastIndex}`));
   }
 
-  return parts.length > 0 ? parts : text;
+  if (parts.length === 0) {
+    const boldParsed = parseBoldAndItalic(text, "only");
+    if (boldParsed.length === 1 && typeof boldParsed[0] === "string") {
+      return boldParsed[0];
+    }
+    return boldParsed.map((part, idx) => {
+      if (typeof part === "string") {
+        return <span key={`text-${idx}`}>{part}</span>;
+      }
+      return part;
+    });
+  }
+
+  return parts.map((part, idx) => {
+    if (typeof part === "string") {
+      return <span key={`text-${idx}`}>{part}</span>;
+    }
+    return part;
+  });
+}
+
+// Interface for word family items in Word Formation
+interface WordFamilyItem {
+  forms: string[];
+  meaning: string;
+}
+
+// Helper to parse word formation meanings into discrete forms and sub-meanings
+function parseWordFormationMeaning(meaning: string): WordFamilyItem[] {
+  const parts = meaning.split(/\s+\/\s+/);
+  const items: WordFamilyItem[] = [];
+  let pendingForms: string[] = [];
+  
+  for (const part of parts) {
+    if (part.includes(":")) {
+      const [formStr, ...meaningParts] = part.split(":");
+      const formMeaning = meaningParts.join(":").trim();
+      const currentForms = formStr.split("/").map(f => f.trim());
+      items.push({
+        forms: [...pendingForms, ...currentForms],
+        meaning: formMeaning
+      });
+      pendingForms = [];
+    } else {
+      pendingForms.push(part.trim());
+    }
+  }
+  
+  if (items.length === 0) {
+    items.push({
+      forms: [meaning],
+      meaning: ""
+    });
+  }
+  
+  return items;
+}
+
+// Helper to abbreviate grammatical types/patterns (e.g. "verb" -> "v")
+function abbreviateType(typeStr: string): string {
+  if (!typeStr) return "";
+  return typeStr
+    .toLowerCase()
+    .split("/")
+    .map(slashPart => {
+      return slashPart
+        .split(",")
+        .map(commaPart => {
+          const trimmed = commaPart.trim();
+          switch (trimmed) {
+            case "verb": return "v";
+            case "noun": return "n";
+            case "adjective": return "adj";
+            case "adverb": return "adv";
+            case "preposition": return "prep";
+            case "pronoun": return "pron";
+            case "phrase": return "phr";
+            case "noun phrase": return "n phr";
+            case "verb phrase": return "v phr";
+            case "conjunction": return "conj";
+            case "determiner": return "det";
+            default: return trimmed;
+          }
+        })
+        .join(", ");
+    })
+    .join("/");
 }
 
 function RichGrammarRenderer({ richGrammar }: { richGrammar: any[] }) {
@@ -655,9 +774,8 @@ export function LearningExplorerSection({
                         <TableHeader className="bg-atmosphere-wash">
                           <TableRow className="hover:bg-transparent">
                             <TableHead className="w-[150px] font-mono text-ink">Word</TableHead>
-                            <TableHead className="w-[100px] font-mono text-ink">Type / Form</TableHead>
-                            <TableHead className="font-mono text-ink">Meaning</TableHead>
-                            <TableHead className="font-mono text-ink">Example / Detail</TableHead>
+                            <TableHead className="w-[100px] font-mono text-ink">Type</TableHead>
+                            <TableHead className="font-mono text-ink">Word Family & Meanings</TableHead>
                           </TableRow>
                         </TableHeader>
                         <TableBody>
@@ -666,27 +784,63 @@ export function LearningExplorerSection({
                             "type",
                             "meaning",
                             "example",
-                          ]).map((row, idx) => (
-                            <TableRow key={idx}>
-                              <TableCell className="font-mono font-medium text-ink font-semibold">
-                                {row.word}
-                              </TableCell>
-                              <TableCell>
-                                <span className="inline-block text-caption font-mono text-off-black bg-transparent border border-off-black px-2.5 py-0.5 rounded-full">
-                                  {row.type}
-                                </span>
-                              </TableCell>
-                              <TableCell className="font-mono text-off-black whitespace-pre-line">{row.meaning}</TableCell>
-                              <TableCell className="font-mono italic text-pale-stone whitespace-pre-line">
-                                {row.example}
-                              </TableCell>
-                            </TableRow>
-                          ))}
+                          ]).map((row, idx) => {
+                            const parsedFamily = parseWordFormationMeaning(row.meaning);
+                            return (
+                              <TableRow key={idx} className="align-top">
+                                <TableCell className="font-mono font-medium text-ink font-semibold pt-4">
+                                  {row.word}
+                                </TableCell>
+                                <TableCell className="pt-4">
+                                  <span className="inline-block text-caption font-mono text-off-black bg-transparent border border-off-black px-2.5 py-0.5 rounded-full">
+                                    {abbreviateType(row.type)}
+                                  </span>
+                                </TableCell>
+                                <TableCell className="p-2">
+                                  <div className="divide-y divide-off-black/5 font-mono">
+                                    {parsedFamily.map((fam, fIdx) => {
+                                      const formsStr = fam.forms.join(" / ");
+                                      return (
+                                        <div key={fIdx} className="py-2.5 px-2 flex flex-col md:flex-row gap-2 md:gap-6 justify-between items-start">
+                                          <div className="md:w-[200px] shrink-0">
+                                            <span className="font-bold text-ink text-sm text-[#0f766e]">
+                                              {formsStr}
+                                            </span>
+                                          </div>
+                                          <div className="flex-1 space-y-1">
+                                            <p className="text-off-black text-sm leading-relaxed">{fam.meaning}</p>
+                                            {row.example && (
+                                              <div className="text-xs text-pale-stone italic mt-1 font-mono">
+                                                {row.example.split("\n").map((exLine: string, exIdx: number) => {
+                                                  const containsForm = fam.forms.some(f => {
+                                                    const stem = f.replace(/\(([^)]+)\)/g, '$1').toLowerCase();
+                                                    return exLine.toLowerCase().includes(stem);
+                                                  });
+                                                  if (containsForm || parsedFamily.length === 1) {
+                                                    return (
+                                                      <div key={exIdx} className="opacity-80">
+                                                        {exLine}
+                                                      </div>
+                                                    );
+                                                  }
+                                                  return null;
+                                                })}
+                                              </div>
+                                            )}
+                                          </div>
+                                        </div>
+                                      );
+                                    })}
+                                  </div>
+                                </TableCell>
+                              </TableRow>
+                            );
+                          })}
                           {filterData(unit.wordFormation, ["word"]).length ===
                             0 && (
                             <TableRow>
                               <TableCell
-                                colSpan={4}
+                                colSpan={3}
                                 className="text-center py-8 font-mono text-pale-stone"
                               >
                                 No data found.
@@ -722,8 +876,10 @@ export function LearningExplorerSection({
                               <TableCell className="font-mono font-medium text-ink font-semibold">
                                 {row.verb}
                               </TableCell>
-                              <TableCell className="font-mono text-off-black font-semibold">
-                                {row.pattern}
+                              <TableCell>
+                                <span className="inline-block text-caption font-mono text-off-black bg-transparent border border-off-black px-2.5 py-0.5 rounded-full">
+                                  {abbreviateType(row.pattern)}
+                                </span>
                               </TableCell>
                               <TableCell className="font-mono text-pale-stone whitespace-pre-line">
                                 {row.example}
