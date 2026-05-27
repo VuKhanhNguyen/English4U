@@ -1,0 +1,224 @@
+{
+  "id": "b1-unit-23",
+  "title": "Unit 23: Questions, question tags, and indirect questions",
+  "grammar": [
+    {
+      "structure": "Questions, Question Tags, Indirect Questions",
+      "usage": "Used to form direct questions in various tenses and voices, ask for agreement or verify statements using question tags, and ask questions politely using indirect structures.",
+      "example": "Do you feel cold? / Phil works here, doesn't he? / Can you tell me what flavor this drink is?"
+    }
+  ],
+  "richGrammar": [
+    {
+      "title": "A) QUESTIONS, QUESTION TAGS, INDIRECT QUESTIONS",
+      "blocks": [
+        {
+          "type": "title",
+          "content": "1. QUESTIONS FORMATION BY TENSE"
+        },
+        {
+          "type": "generic-table",
+          "headers": ["Tense / Aspect", "Active Statement Structure", "Question Form Structure & Examples"],
+          "rows": [
+            [
+              "**Simple Present**",
+              "S + V(s/es) + O",
+              "**Do / does + S + V_bare + O?**\nEX: Do you feel cold?"
+            ],
+            [
+              "**Simple Past**",
+              "S + V2/ed + O",
+              "**Did + S + V_bare + O?**\nEX: Did they go shopping?"
+            ],
+            [
+              "**Present Continuous**",
+              "S + am/is/are + V-ing + O",
+              "**Am/Is/Are + S + V-ing + O?**\nEX: Am I annoying you?"
+            ],
+            [
+              "**Past Continuous**",
+              "S + was/were + V-ing + O",
+              "**Was/Were + S + V-ing + O?**\nEX: Were they waiting for you?"
+            ],
+            [
+              "**Present Perfect**",
+              "S + have/has + V3/ed + O",
+              "**Has/Have + S + V3/ed + O?**\nEX: Have you been ill?"
+            ],
+            [
+              "**Past Perfect**",
+              "S + had + V3/ed + O",
+              "**Had + S + V3/ed + O?**\nEX: Had it started?"
+            ],
+            [
+              "**Modals**",
+              "S + modal + V_bare + O",
+              "**Modal + S + V_bare + O?**\nEX: Should I call the police?"
+            ],
+            [
+              "**WH- Questions**\n*(With Auxiliary)*",
+              "-",
+              "**Wh- + auxiliary (be/do/have/modal) + S + V + (O)?**\nEX: Who can I explain this situation to?\nEX: Why didn't you call me?"
+            ],
+            [
+              "**WH- Questions**\n*(Subject Question)*",
+              "-",
+              "**Wh- + V + O?**\nEX: Why did you do that? *(Note: 'Why' functions as an adverbial question word here, but keeps standard auxiliary inversion)*"
+            ]
+          ]
+        },
+        {
+          "type": "title",
+          "content": "WATCH OUT! QUESTIONS IN PASSIVE VOICE"
+        },
+        {
+          "type": "list",
+          "bullets": [
+            "To form questions in the passive voice, move the first auxiliary verb before the subject.",
+            "EX: *His leg was broken last weekend.* -> **Was his leg broken last weekend?**",
+            "EX: *Mr. Jenkins has been arrested.* -> **Has Mr. Jenkins been arrested?**"
+          ]
+        },
+        {
+          "type": "title",
+          "content": "2. QUESTION TAGS"
+        },
+        {
+          "type": "list",
+          "bullets": [
+            "We use question tags at the end of a sentence for two main reasons:",
+            "1. **To ask someone to agree with us**: EX: *It's beautiful, isn't it?*",
+            "2. **To check if a statement is correct**: EX: *You haven't been to university, have you?*",
+            "**Forming Question Tags**: Identify the tense and verb form of the main clause to select the appropriate tag."
+          ]
+        },
+        {
+          "type": "generic-table",
+          "headers": ["Main Clause", "Question Tag", "Example"],
+          "rows": [
+            [
+              "**Positive (+)**",
+              "Negative (-)",
+              "EX: Phil works here, **doesn't he?**"
+            ],
+            [
+              "**Negative (-)**",
+              "Positive (+)",
+              "EX: The phone didn't ring, **did it?**"
+            ]
+          ]
+        },
+        {
+          "type": "title",
+          "content": "WATCH OUT! QUESTION TAG SPECIAL RULES"
+        },
+        {
+          "type": "list",
+          "bullets": [
+            "1. Negative question tags must always be contracted.",
+            "   - EX: *You live in Ho Chi Minh City, don't you?* (✓)",
+            "   - EX: *You live in Ho Chi Minh City, do not you?* (✗)",
+            "2. For main clauses starting with 'I am', the tag is 'aren't I'. If the main clause is 'I am not', the tag is 'am I'.",
+            "   - EX: *I am correct, aren't I?* (✓)",
+            "   - EX: *I am correct, am not I?* (✗)",
+            "   - EX: *I am not wrong, am I?* (✓)",
+            "3. For main clauses starting with 'Let's', the question tag is 'shall we'.",
+            "   - EX: *Let's have dinner outside tonight, shall we?* (✓)"
+          ]
+        },
+        {
+          "type": "title",
+          "content": "3. INDIRECT QUESTIONS"
+        },
+        {
+          "type": "list",
+          "bullets": [
+            "Indirect questions are introduced by a polite phrase. They are used to make questions sound more polite.",
+            "**Word Order Rule**: In indirect questions, we do not use question word order (verb + subject) in the second part of the sentence; instead, we use statement word order (subject + verb)."
+          ]
+        },
+        {
+          "type": "generic-table",
+          "headers": ["Direct Question", "Indirect Question"],
+          "rows": [
+            [
+              "What flavor is this drink?",
+              "Can you tell me what flavor this drink is?"
+            ],
+            [
+              "What's the price of this car?",
+              "Could you let me know what the price of this car is?"
+            ],
+            [
+              "Where's the toilet?",
+              "I wonder if you could tell me where the toilet is?"
+            ],
+            [
+              "What is the capital of Brazil?",
+              "Do you know what the capital of Brazil is?"
+            ],
+            [
+              "Where's Tom living?",
+              "I wonder if you know where Tom is living?"
+            ]
+          ]
+        }
+      ]
+    }
+  ],
+  "vocabulary": [
+    {
+      "word": "prison",
+      "type": "n",
+      "meaning": "a building where criminals are kept as a punishment",
+      "example": "The judge sentenced the thief to three years in prison."
+    },
+    {
+      "word": "hair-cut",
+      "type": "n",
+      "meaning": "the act of having your hair cut, or the style in which it is cut",
+      "example": "He went to the barber's shop to get a fresh hair-cut before the wedding."
+    },
+    {
+      "word": "windowsill",
+      "type": "n",
+      "meaning": "a narrow shelf that is underneath a window",
+      "example": "She placed a small pot of flowers on the windowsill to catch the sunlight."
+    },
+    {
+      "word": "backward",
+      "type": "adv",
+      "meaning": "towards the direction that is behind you; or in a reverse or less developed state",
+      "example": "He took a step backward to look at the painting from a distance."
+    },
+    {
+      "word": "afterward",
+      "type": "adv",
+      "meaning": "at a later time; after something else has happened",
+      "example": "We had a nice dinner and went to the cinema afterward."
+    },
+    {
+      "word": "village",
+      "type": "n",
+      "meaning": "a small group of houses and other buildings in a rural area, smaller than a town",
+      "example": "My grandparents live in a quiet village near the mountains."
+    },
+    {
+      "word": "get sb into trouble",
+      "type": "v phr",
+      "meaning": "to cause someone to experience problems, difficulties, or punishment",
+      "example": "Lies and dishonest behavior will eventually get you into trouble."
+    },
+    {
+      "word": "post office",
+      "type": "n",
+      "meaning": "a public building where letters and parcels are mailed and stamps are sold",
+      "example": "I need to go to the post office to mail this package to my family."
+    }
+  ],
+  "wordFormation": [],
+  "wordPatterns": [],
+  "phrasalVerbs": [],
+  "prepositionalPhrases": [],
+  "collocations": []
+}

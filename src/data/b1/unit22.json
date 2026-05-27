@@ -1,0 +1,229 @@
+{
+  "id": "b1-unit-22",
+  "title": "Unit 22: Modals Perfect",
+  "grammar": [
+    {
+      "structure": "Modal + have + V3 / ed",
+      "usage": "Used to describe past actions concerning ability, criticism, probability, possibility, or expectation.",
+      "example": "You should have told me you were going shopping. / I could have played the guitar."
+    }
+  ],
+  "richGrammar": [
+    {
+      "title": "A) MODALS PERFECT",
+      "blocks": [
+        {
+          "type": "title",
+          "content": "1. STRUCTURE OF MODALS PERFECT"
+        },
+        {
+          "type": "list",
+          "bullets": [
+            "Form: **Modal + have + V3 / past participle**",
+            "This structure remains the same for all subjects (no third-person singular '-s')."
+          ]
+        },
+        {
+          "type": "generic-table",
+          "headers": ["Form", "Structure", "Example"],
+          "rows": [
+            [
+              "**Affirmative (+)**",
+              "S + modal + have + V3/ed",
+              "EX: You should have told me you were going shopping."
+            ],
+            [
+              "**Negative (-)**",
+              "S + modal + not + have + V3/ed\n(shouldn't / couldn't / mightn't have...)",
+              "EX: You shouldn't have told Liz what Bill said."
+            ],
+            [
+              "**Interrogative (?)**",
+              "Modal + S + have + V3/ed?",
+              "EX: Should I have told Carol to the party?"
+            ]
+          ]
+        },
+        {
+          "type": "title",
+          "content": "2. FUNCTIONS & USAGES"
+        },
+        {
+          "type": "generic-table",
+          "headers": ["Function", "Structure & Meaning", "Examples"],
+          "rows": [
+            [
+              "**Ability**",
+              "**Could + have + V3/ed**\nUsed to describe an action that someone did not do, even though they had the ability or opportunity to do it.",
+              "EX: I could have played the guitar.\n*(= I had the opportunity to play the guitar, but I didn't actually play it)*"
+            ],
+            [
+              "**Past Ability (Note)**",
+              "**Could + V_bare**\nTo express general ability in the past.",
+              "EX: I could play the guitar when I was seven.\n*(= I knew how to play the guitar)*"
+            ],
+            [
+              "**Criticism / Regret**",
+              "**Ought to / Should + have + V3/ed**\nUsed to criticize past actions or express regret that something didn't happen as it should have.",
+              "EX: You should have invited Carol to your party.\n*(= You didn't invite Carol and that was wrong)*"
+            ],
+            [
+              "**Probability (Past Deduction)**",
+              "**Must / can't + have + V3/ed**\nUsed to make logical deductions about past events based on strong evidence.",
+              "EX: They can't have had any sleep!\n*(= It is almost certain that they didn't have any sleep)*"
+            ],
+            [
+              "**Possibility (Past Guess)**",
+              "**Could / may / might + have + V3/ed**\nUsed to talk about a possibility in the past that we are not certain about.",
+              "EX: Helen might have found a new house.\n*(= It is possible, but I am not certain)*"
+            ],
+            [
+              "**Expectation**",
+              "**Ought to / Should + have + V3/ed**\nUsed to express that an expected past event did not happen.",
+              "EX: Jim should have arrived half an hour ago. I wonder where he is.\n*(= Actually Jim was expected to arrive but hasn't arrived yet)*\n\nEX: Henry should have taken an umbrella with him."
+            ]
+          ]
+        }
+      ]
+    }
+  ],
+  "vocabulary": [
+    {
+      "word": "harbour",
+      "type": "n",
+      "meaning": "a protected area of water next to the land where ships and boats can be safely kept",
+      "example": "The yacht sailed into the harbour just before the storm started."
+    },
+    {
+      "word": "souvenir",
+      "type": "n",
+      "meaning": "something you buy or keep to remember a place, holiday, or event",
+      "example": "She bought a small model of the Eiffel Tower as a souvenir of Paris."
+    },
+    {
+      "word": "concentrate",
+      "type": "v",
+      "meaning": "to direct all your attention or efforts towards a particular activity",
+      "example": "It is hard to concentrate on schoolwork when there is loud music playing."
+    },
+    {
+      "word": "reach",
+      "type": "v",
+      "meaning": "to arrive at a place or destination",
+      "example": "We finally reached the top of the mountain after hours of climbing."
+    },
+    {
+      "word": "arrive",
+      "type": "v",
+      "meaning": "to reach a place, especially at the end of a journey",
+      "example": "The train is scheduled to arrive at the station at 10:15 a.m."
+    },
+    {
+      "word": "platform",
+      "type": "n",
+      "meaning": "the area next to the tracks at a railway station where passengers get on and off trains",
+      "example": "The passengers waited on the platform for the train to arrive."
+    },
+    {
+      "word": "gravity",
+      "type": "n",
+      "meaning": "the force that pulls objects toward each other, especially toward the center of the Earth",
+      "example": "Gravity is the force that keeps our feet on the ground and causes objects to fall."
+    },
+    {
+      "word": "antibiotic",
+      "type": "n",
+      "meaning": "a medicine that kills bacteria and cures infections",
+      "example": "The doctor prescribed an antibiotic to cure his throat infection."
+    },
+    {
+      "word": "analyze",
+      "type": "v",
+      "meaning": "to examine something in detail to understand it better",
+      "example": "The scientists analyzed the water samples to check for pollution."
+    },
+    {
+      "word": "disease",
+      "type": "n",
+      "meaning": "an illness affecting humans, animals, or plants, often caused by infection",
+      "example": "Proper hygiene is essential to prevent the spread of infectious diseases."
+    },
+    {
+      "word": "participate",
+      "type": "v",
+      "meaning": "to take part in an activity or event",
+      "example": "Many students chose to participate in the school sports competition."
+    },
+    {
+      "word": "summarize",
+      "type": "v",
+      "meaning": "to express the main points of something in a short and concise way",
+      "example": "At the end of the presentation, he summarized the key findings."
+    },
+    {
+      "word": "instrument",
+      "type": "n",
+      "meaning": "a tool or device used for a particular task, or an object used to produce music",
+      "example": "The laboratory is equipped with high-precision scientific instruments."
+    },
+    {
+      "word": "violin",
+      "type": "n",
+      "meaning": "a wooden musical instrument with four strings, played with a bow",
+      "example": "She has been practicing the violin since she was six years old."
+    },
+    {
+      "word": "alien",
+      "type": "n",
+      "meaning": "a creature from another planet",
+      "example": "The movie is about a friendly alien who gets lost on Earth."
+    },
+    {
+      "word": "light bulb",
+      "type": "n",
+      "meaning": "a glass bulb containing a wire that provides light when electricity passes through it",
+      "example": "Thomas Edison is famous for inventing the electric light bulb."
+    },
+    {
+      "word": "professional",
+      "type": "adj",
+      "meaning": "relating to a job that requires special training; highly skilled",
+      "example": "She decided to seek professional advice before starting her business."
+    },
+    {
+      "word": "spare time",
+      "type": "n",
+      "meaning": "free time when you do not have to work or study",
+      "example": "In his spare time, he enjoys reading historical novels."
+    },
+    {
+      "word": "kick",
+      "type": "v",
+      "meaning": "to hit something with your foot",
+      "example": "He kicked the football into the goal to win the match."
+    },
+    {
+      "word": "stuck in traffic",
+      "type": "v phr",
+      "meaning": "delayed or unable to move due to a lot of vehicles on the road",
+      "example": "I am sorry for being late; I got stuck in traffic on the way here."
+    },
+    {
+      "word": "steal",
+      "type": "v",
+      "meaning": "to take something that belongs to someone else without permission",
+      "example": "A thief broke into the house and tried to steal the television."
+    },
+    {
+      "word": "get up",
+      "type": "v",
+      "meaning": "to rise from bed after sleeping",
+      "example": "I usually get up at 6:30 a.m. to get ready for school."
+    }
+  ],
+  "wordFormation": [],
+  "wordPatterns": [],
+  "phrasalVerbs": [],
+  "prepositionalPhrases": [],
+  "collocations": []
+}

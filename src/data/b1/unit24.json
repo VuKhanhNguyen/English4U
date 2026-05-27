@@ -1,0 +1,464 @@
+{
+  "id": "b1-unit-24",
+  "title": "Unit 24: People and society",
+  "grammar": [],
+  "vocabulary": [
+    {
+      "word": "admit",
+      "type": "v",
+      "meaning": "to agree that something is true, especially unwillingly",
+      "example": "He admitted that he had made a mistake."
+    },
+    {
+      "word": "arrest",
+      "type": "v",
+      "meaning": "to catch someone and take them to a police station because they are believed to have committed a crime",
+      "example": "The police arrested the suspect near the scene of the robbery."
+    },
+    {
+      "word": "charity",
+      "type": "n",
+      "meaning": "an organization set up to provide help and raise money for those in need",
+      "example": "She donated all her old books to a local charity."
+    },
+    {
+      "word": "commit",
+      "type": "v",
+      "meaning": "to do something illegal or perform a crime",
+      "example": "It is a serious offence to commit a crime in this country."
+    },
+    {
+      "word": "community",
+      "type": "n",
+      "meaning": "a group of people living in the same place or having a particular characteristic in common",
+      "example": "The local community came together to clean up the park."
+    },
+    {
+      "word": "court",
+      "type": "n",
+      "meaning": "a place where legal trials take place and law cases are decided",
+      "example": "The witness had to appear in court to give evidence."
+    },
+    {
+      "word": "criminal",
+      "type": "n, adj",
+      "meaning": "a person who has committed a crime; or relating to crime",
+      "example": "The police are searching for the criminal who robbed the bank. / Criminal behaviour will not be tolerated."
+    },
+    {
+      "word": "culture",
+      "type": "n",
+      "meaning": "the ideas, customs, and social behaviour of a particular people or society",
+      "example": "We learned a lot about Japanese culture during our trip."
+    },
+    {
+      "word": "familiar",
+      "type": "adj",
+      "meaning": "well known from long or close association",
+      "example": "The town looked familiar, even though I hadn't been there in years."
+    },
+    {
+      "word": "government",
+      "type": "n",
+      "meaning": "the group of people with the authority to govern a country or state",
+      "example": "The government announced new plans to improve public health services."
+    },
+    {
+      "word": "habit",
+      "type": "n",
+      "meaning": "something that you do often and regularly, sometimes without knowing you are doing it",
+      "example": "Biting your fingernails is a bad habit that is hard to break."
+    },
+    {
+      "word": "identity card",
+      "type": "n phr",
+      "meaning": "a card that carries official information about a person, such as their name and photo",
+      "example": "You must show your identity card to enter the secure building."
+    },
+    {
+      "word": "illegal",
+      "type": "adj",
+      "meaning": "contrary to or forbidden by law",
+      "example": "It is illegal to drive a car without a valid license."
+    },
+    {
+      "word": "politics",
+      "type": "n",
+      "meaning": "the activities associated with the governance of a country or area",
+      "example": "He is very interested in international politics and current affairs."
+    },
+    {
+      "word": "population",
+      "type": "n",
+      "meaning": "all the inhabitants of a particular place, country, or area",
+      "example": "The world population has increased rapidly over the last century."
+    },
+    {
+      "word": "prison",
+      "type": "n",
+      "meaning": "a building where criminals are kept as a punishment",
+      "example": "The thief was sent to prison for his crimes."
+    },
+    {
+      "word": "protest",
+      "type": "v, n",
+      "meaning": "to express strong disapproval or objection; or an organized public demonstration of objection",
+      "example": "Students protested against the tuition fee increase. / The peaceful protest took place in the main square."
+    },
+    {
+      "word": "resident",
+      "type": "n",
+      "meaning": "a person who lives in a particular place",
+      "example": "The residents of the street complained about the loud noise."
+    },
+    {
+      "word": "responsible",
+      "type": "adj",
+      "meaning": "having an obligation to do something, or having control over or care for someone",
+      "example": "Parents are responsible for the safety of their children."
+    },
+    {
+      "word": "rob",
+      "type": "v",
+      "meaning": "to take money or property from a person or place illegally by using force or threats",
+      "example": "Two masked men tried to rob the local grocery store."
+    },
+    {
+      "word": "routine",
+      "type": "n, adj",
+      "meaning": "a sequence of actions regularly followed; or performed as part of a regular procedure",
+      "example": "Exercise is part of my daily routine. / The doctor performed a routine checkup."
+    },
+    {
+      "word": "schedule",
+      "type": "n",
+      "meaning": "a plan that gives expected times for different things to happen",
+      "example": "We need to stick to our tight schedule to finish on time."
+    },
+    {
+      "word": "situation",
+      "type": "n",
+      "meaning": "a set of circumstances in which one finds oneself",
+      "example": "The emergency services managed to handle the difficult situation."
+    },
+    {
+      "word": "social",
+      "type": "adj",
+      "meaning": "relating to society or its organization",
+      "example": "Loneliness is a growing social problem in modern cities."
+    },
+    {
+      "word": "society",
+      "type": "n",
+      "meaning": "a large group of people who live together in an organized way",
+      "example": "We live in a multicultural society with diverse traditions."
+    },
+    {
+      "word": "steal",
+      "type": "v",
+      "meaning": "to take something that belongs to someone else without permission",
+      "example": "Someone tried to steal my bicycle from outside the shop."
+    },
+    {
+      "word": "tradition",
+      "type": "n",
+      "meaning": "a custom or belief that has existed for a long time",
+      "example": "It is a family tradition to eat dinner together on Sundays."
+    },
+    {
+      "word": "typical",
+      "type": "adj",
+      "meaning": "showing all the characteristics that you would expect from the particular person, thing, or group",
+      "example": "A typical working day for her starts at 8:00 a.m."
+    },
+    {
+      "word": "vote",
+      "type": "v, n",
+      "meaning": "to express a choice in an election, or an official choice made in an election",
+      "example": "Citizens will vote for the new president next month. / The proposal was passed by a majority vote."
+    },
+    {
+      "word": "youth club",
+      "type": "n phr",
+      "meaning": "a place where young people can meet and take part in activities",
+      "example": "He plays table tennis at the local youth club every Friday."
+    },
+    {
+      "word": "fingernails",
+      "type": "n",
+      "meaning": "the thin hard areas that cover the upper surface of the ends of the fingers",
+      "example": "She uses a file to keep her fingernails neat and clean."
+    },
+    {
+      "word": "horrible",
+      "type": "adj",
+      "meaning": "very unpleasant, bad, or shocking",
+      "example": "There was a horrible smell coming from the kitchen."
+    },
+    {
+      "word": "Democratic",
+      "type": "adj",
+      "meaning": "based on the principles of democracy; or relating to the Democratic Party",
+      "example": "The country held its first free and democratic elections."
+    },
+    {
+      "word": "parliament",
+      "type": "n",
+      "meaning": "the group of people who are elected to make and change the laws of a country",
+      "example": "The new law is currently being debated in parliament."
+    },
+    {
+      "word": "robbery",
+      "type": "n",
+      "meaning": "the crime of stealing from a place or person, especially using force",
+      "example": "The police arrived within minutes of the bank robbery."
+    },
+    {
+      "word": "plate",
+      "type": "n",
+      "meaning": "a flat, round dish from which food is eaten",
+      "example": "She served the cake on a beautiful ceramic plate."
+    },
+    {
+      "word": "rudely",
+      "type": "adv",
+      "meaning": "in an impolite or offensive way",
+      "example": "He rudely interrupted her while she was speaking."
+    },
+    {
+      "word": "unpleasant",
+      "type": "adj",
+      "meaning": "not pleasant; disagreeable, bad, or offensive",
+      "example": "The weather was cold and unpleasant."
+    },
+    {
+      "word": "punish",
+      "type": "v",
+      "meaning": "to make someone suffer for a crime or bad behaviour",
+      "example": "The teacher punished the student for cheating on the exam."
+    },
+    {
+      "word": "guilty",
+      "type": "adj",
+      "meaning": "responsible for a specified wrongdoing or crime",
+      "example": "The jury found the defendant guilty of theft."
+    },
+    {
+      "word": "hang around",
+      "type": "v phr",
+      "meaning": "to spend time in a place waiting or doing nothing",
+      "example": "Teenagers often hang around the shopping mall after school."
+    }
+  ],
+  "phrasalVerbs": [
+    {
+      "phrasalVerb": "break in (to)",
+      "meaning": "to enter a building by force, especially to steal something",
+      "example": "EX: A thief tried to break into the house while we were asleep."
+    },
+    {
+      "phrasalVerb": "catch up (with)",
+      "meaning": "to reach the same level or speed as someone who is ahead of you",
+      "example": "EX: She skipped many classes, so she had to study hard to catch up with her friends."
+    },
+    {
+      "phrasalVerb": "get away with",
+      "meaning": "to escape punishment for a wrong or illegal act",
+      "example": "EX: The criminal managed to get away with the robbery because there were no witnesses."
+    },
+    {
+      "phrasalVerb": "get up",
+      "meaning": "to rise from bed or a sitting position",
+      "example": "EX: What time do you usually get up on weekends?"
+    },
+    {
+      "phrasalVerb": "move in",
+      "meaning": "to start living in a new house or flat",
+      "example": "EX: We are planning to move in to our new apartment next Tuesday."
+    },
+    {
+      "phrasalVerb": "put away",
+      "meaning": "to return something to its correct place",
+      "example": "EX: Please put away your toys after you finish playing."
+    },
+    {
+      "phrasalVerb": "wake up",
+      "meaning": "to stop sleeping and open your eyes",
+      "example": "EX: The alarm goes off at 6 a.m., but I rarely wake up immediately."
+    },
+    {
+      "phrasalVerb": "wash up",
+      "meaning": "to wash the plates, cups, and cutlery after a meal",
+      "example": "EX: Whose turn is it to wash up after dinner tonight?"
+    }
+  ],
+  "prepositionalPhrases": [
+    {
+      "phrase": "against the law",
+      "meaning": "illegal; violating the law",
+      "example": "EX: Stealing or vandalizing public property is strictly against the law."
+    },
+    {
+      "phrase": "at the age of",
+      "meaning": "at a specific age or point of life",
+      "example": "EX: He learned to ride a bicycle at the age of five."
+    },
+    {
+      "phrase": "in public",
+      "meaning": "in a place where other people can see or hear you",
+      "example": "EX: It can be embarrassing to have an argument in public."
+    },
+    {
+      "phrase": "in response to",
+      "meaning": "as a reply or reaction to something",
+      "example": "EX: She wrote a letter to the newspaper in response to their article."
+    },
+    {
+      "phrase": "in touch (with)",
+      "meaning": "in communication with someone",
+      "example": "EX: I still keep in touch with my primary school friends."
+    },
+    {
+      "phrase": "in your teens/twenties/etc",
+      "meaning": "at the age period of 13-19, 20-29, etc.",
+      "example": "EX: Many people go to university in their early twenties."
+    }
+  ],
+  "wordFormation": [
+    {
+      "word": "agree",
+      "type": "verb",
+      "meaning": "agreement: a decision or arrangement between people / disagree: to have a different opinion",
+      "example": "EX: They signed a trade agreement. / We disagree on almost everything."
+    },
+    {
+      "word": "belief",
+      "type": "noun",
+      "meaning": "belief: a strong feeling that something is true or exists / believe: to accept something as true / believable or unbelievable: easy or difficult to accept as true",
+      "example": "EX: He has a strong belief in democracy. / I believe we can solve this problem. / The excuse he gave was not very believable."
+    },
+    {
+      "word": "courage",
+      "type": "noun",
+      "meaning": "courage: the ability to do something that frightens you; bravery / courageous: very brave",
+      "example": "EX: It takes courage to stand up for what you believe in. / The firefighter made a courageous attempt to save the family."
+    },
+    {
+      "word": "elect",
+      "type": "verb/adjective",
+      "meaning": "elect: choose someone by voting / election: the process of electing a representative",
+      "example": "EX: They elected a new mayor yesterday. / The presidential election takes place next year."
+    },
+    {
+      "word": "equal",
+      "type": "adjective",
+      "meaning": "equality: the state of being equal, especially in status, rights, or opportunities / unequal: not equal in quantity, size, or value",
+      "example": "EX: Women are fighting for equality in the workplace. / The two sides received unequal shares of the funding."
+    },
+    {
+      "word": "life",
+      "type": "noun",
+      "meaning": "live: to remain alive / alive: living; not dead",
+      "example": "EX: She wants to live in a peaceful country. / The doctors managed to keep the patient alive."
+    },
+    {
+      "word": "nation",
+      "type": "noun",
+      "meaning": "nationality: the status of belonging to a particular nation / national: relating to a nation; citizen / international: between two or more nations",
+      "example": "EX: What is your nationality? / The national library is closed on Sundays. / Geneva is home to many international organizations."
+    },
+    {
+      "word": "peace",
+      "type": "noun",
+      "meaning": "peace: freedom from disturbance; quiet / peaceful or peacefully: quiet and calm; in a calm way",
+      "example": "EX: The two countries are there at peace. / They live in a peaceful village in the countryside. / The conflict was resolved peacefully."
+    },
+    {
+      "word": "prison",
+      "type": "noun",
+      "meaning": "prisoner: a person kept in prison as a punishment",
+      "example": "EX: The prisoner escaped from his cell last night."
+    },
+    {
+      "word": "shoot",
+      "type": "verb",
+      "meaning": "shot: the act of firing a gun, or a hit / shooting: the act of firing a gun",
+      "example": "EX: He heard a loud shot in the distance. / Police are investigating the shooting near the bank."
+    }
+  ],
+  "wordPatterns": [
+    {
+      "verb": "angry (with sb) about",
+      "pattern": "adjective",
+      "meaning": "showing strong annoyance or displeasure about a matter",
+      "example": "EX: She was angry with him about his constant lateness."
+    },
+    {
+      "verb": "guilty of",
+      "pattern": "adjective",
+      "meaning": "responsible for a specified wrongdoing or crime",
+      "example": "EX: The jury found him guilty of robbery."
+    },
+    {
+      "verb": "accuse sb of",
+      "pattern": "verb",
+      "meaning": "to charge someone with a crime or wrongdoing",
+      "example": "EX: They accused her of stealing the watch."
+    },
+    {
+      "verb": "blame sb for",
+      "pattern": "verb",
+      "meaning": "to hold someone responsible for something bad",
+      "example": "EX: You can't blame me for the bad weather."
+    },
+    {
+      "verb": "blame sth on",
+      "pattern": "verb",
+      "meaning": "to assign the responsibility for something bad to someone/something",
+      "example": "EX: She blamed the mistake on a computer error."
+    },
+    {
+      "verb": "criticise sb for",
+      "pattern": "verb",
+      "meaning": "to express disapproval of someone because of their mistakes or faults",
+      "example": "EX: The teacher criticized the boy for not paying attention."
+    },
+    {
+      "verb": "forget about",
+      "pattern": "verb",
+      "meaning": "to stop thinking about or remembering something",
+      "example": "EX: Don't forget about the meeting tomorrow morning."
+    },
+    {
+      "verb": "forgive sb for",
+      "pattern": "verb",
+      "meaning": "to stop feeling angry or resentful towards someone for their mistake",
+      "example": "EX: I can't forgive him for lying to me."
+    },
+    {
+      "verb": "invite sb to",
+      "pattern": "verb",
+      "meaning": "to ask someone politely to go to an event",
+      "example": "EX: They invited us to their wedding party."
+    },
+    {
+      "verb": "punish sb for",
+      "pattern": "verb",
+      "meaning": "to make someone suffer for their crime or bad behaviour",
+      "example": "EX: The driver was punished for speeding."
+    },
+    {
+      "verb": "share sth with",
+      "pattern": "verb",
+      "meaning": "to give a portion of something to others",
+      "example": "EX: I'm happy to share my lunch with you."
+    },
+    {
+      "verb": "smile at",
+      "pattern": "verb",
+      "meaning": "to make a facial expression showing pleasure or amusement at someone",
+      "example": "EX: She smiled at the baby in the carriage."
+    }
+  ],
+  "collocations": []
+}
