@@ -1,0 +1,209 @@
+{
+  "id": "b1-unit-28-29",
+  "title": "Unit 28 & 29: Conditionals",
+  "grammar": [
+    {
+      "structure": "Conditionals (Zero, First, Second, Third, and Mixed)",
+      "usage": "Used to describe real or imaginary situations and their results in the past, present, or future.",
+      "example": "If people eat too much, they gain weight easily. / If I were you, I would follow her advice."
+    }
+  ],
+  "richGrammar": [
+    {
+      "title": "A) CONDITIONALS",
+      "blocks": [
+        {
+          "type": "title",
+          "content": "1. ZERO CONDITIONAL"
+        },
+        {
+          "type": "generic-table",
+          "headers": ["Structure", "Usage", "Example"],
+          "rows": [
+            [
+              "**If + S + V(s/es), S + V(s/es)**",
+              "Used to talk about habits, general truths, or facts that are always true.",
+              "EX: If people eat too much, they gain weight easily."
+            ]
+          ]
+        },
+        {
+          "type": "title",
+          "content": "2. FIRST CONDITIONAL"
+        },
+        {
+          "type": "generic-table",
+          "headers": ["Structure", "Usage", "Example"],
+          "rows": [
+            [
+              "**If + S + V(s/es), S + will + V_bare**",
+              "Used to talk about conditions that are possible in the present and their probable results in the future.",
+              "EX: If the weather is nice, I will go swimming tomorrow."
+            ]
+          ]
+        },
+        {
+          "type": "title",
+          "content": "WATCH OUT! FIRST CONDITIONAL SPECIAL RULES"
+        },
+        {
+          "type": "list",
+          "bullets": [
+            "- In addition to **will**, we can also use other modal verbs like **shall, can, might...** depending on the meaning.",
+            "  - EX: *If you get some rest, you might feel better tomorrow.*",
+            "- To give advice or make requests, we can replace **will** with an imperative form.",
+            "  - EX: *If you don't feel well, go home!*"
+          ]
+        },
+        {
+          "type": "title",
+          "content": "3. SECOND CONDITIONAL"
+        },
+        {
+          "type": "generic-table",
+          "headers": ["Structure", "Usage", "Example"],
+          "rows": [
+            [
+              "**If + S + V2/ed, S + would/could/should + V_bare**",
+              "Used to describe imaginary, hypothetical, or impossible situations in the present or future.",
+              "EX: If I were you, I would follow her advice."
+            ]
+          ]
+        },
+        {
+          "type": "title",
+          "content": "WATCH OUT! SECOND CONDITIONAL SPECIAL RULES"
+        },
+        {
+          "type": "list",
+          "bullets": [
+            "- To give advice, we can use the expression **If I were you...** (formal) or **If I was you...** (informal).",
+            "  - EX: *If I were you, I would eat less chocolate.* (More formal)",
+            "  - EX: *If I was you, I would eat less chocolate.* (More informal)"
+          ]
+        },
+        {
+          "type": "title",
+          "content": "4. THIRD CONDITIONAL"
+        },
+        {
+          "type": "generic-table",
+          "headers": ["Structure", "Usage", "Example"],
+          "rows": [
+            [
+              "**If + S + had + V3/ed, S + would/could/might + have + V3/ed**",
+              "Used to describe imaginary situations in the past that did not actually happen, often expressing regret or criticism.",
+              "EX: If I had studied the lessons, I could have answered the questions."
+            ]
+          ]
+        },
+        {
+          "type": "title",
+          "content": "WATCH OUT! THIRD CONDITIONAL SPECIAL RULES"
+        },
+        {
+          "type": "list",
+          "bullets": [
+            "- In addition to **would**, we can use **could** or **might** depending on the meaning (possibility or ability in the past).",
+            "  - EX: *If you had eaten a giant pizza, you might have been sick!*",
+            "  - EX: *If Mary had told me she was coming, I could have cooked a nice meal.*"
+          ]
+        },
+        {
+          "type": "title",
+          "content": "5. OTHER CONDITIONAL (MIXED CONDITIONAL - TYPE 2 & TYPE 3)"
+        },
+        {
+          "type": "generic-table",
+          "headers": ["Structure", "Usage Notes", "Example"],
+          "rows": [
+            [
+              "**If + S + had + V3/ed, S + would + V_bare**",
+              "Usually used when a past condition (Type 3) has a result or effect on the present (Type 2). It is often accompanied by time markers like **now, today...**",
+              "EX: If she hadn't stayed up late last night, she wouldn't be so tired now."
+            ]
+          ]
+        }
+      ]
+    }
+  ],
+  "vocabulary": [
+    {
+      "word": "pill",
+      "type": "n",
+      "meaning": "a small round piece of medicine that you swallow",
+      "example": "Take one pill with water twice a day after meals."
+    },
+    {
+      "word": "rest",
+      "type": "n",
+      "meaning": "a period of relaxing, sleeping, or doing nothing to recover strength",
+      "example": "You need to get some rest after that long journey."
+    },
+    {
+      "word": "heat",
+      "type": "v",
+      "meaning": "to make something hot or warm",
+      "example": "Could you heat up some soup for dinner?"
+    },
+    {
+      "word": "injection",
+      "type": "n",
+      "meaning": "the act of putting a drug or vaccine into someone's body using a needle",
+      "example": "The nurse gave her an injection to relieve the pain."
+    },
+    {
+      "word": "top",
+      "type": "n",
+      "meaning": "an item of clothing worn on the upper part of the body",
+      "example": "She wore a blue top and a white skirt to the party."
+    },
+    {
+      "word": "scream",
+      "type": "v",
+      "meaning": "to cry out loudly in a high voice due to fear, pain, or excitement",
+      "example": "The children screamed with joy when they saw the puppies."
+    },
+    {
+      "word": "vegetarian",
+      "type": "n",
+      "meaning": "a person who does not eat meat or fish",
+      "example": "He has been a strict vegetarian for over five years."
+    },
+    {
+      "word": "light a fire",
+      "type": "v phr",
+      "meaning": "to start a fire",
+      "example": "We gathered dry wood to light a fire near our campsite."
+    },
+    {
+      "word": "joke",
+      "type": "n",
+      "meaning": "something said or done to provoke laughter or amusement",
+      "example": "He told a funny joke that made everyone in the room laugh."
+    },
+    {
+      "word": "keep fit",
+      "type": "v phr",
+      "meaning": "to stay in good physical shape through exercise and healthy habits",
+      "example": "She does yoga and goes running to keep fit."
+    },
+    {
+      "word": "catch someone's attention",
+      "type": "v phr",
+      "meaning": "to attract someone's notice or make them look at you",
+      "example": "He waved his hands to catch the waiter's attention."
+    },
+    {
+      "word": "stairs",
+      "type": "n",
+      "meaning": "a set of steps leading from one floor of a building to another",
+      "example": "She ran up the stairs to get her jacket."
+    }
+  ],
+  "wordFormation": [],
+  "wordPatterns": [],
+  "phrasalVerbs": [],
+  "prepositionalPhrases": [],
+  "collocations": []
+}

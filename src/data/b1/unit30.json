@@ -1,0 +1,410 @@
+{
+  "id": "b1-unit-30",
+  "title": "Unit 30: Health and medicine",
+  "grammar": [],
+  "vocabulary": [
+    {
+      "word": "affect",
+      "type": "v",
+      "meaning": "to have an influence on or make a difference to",
+      "example": "The cold weather can affect your health if you don't dress warmly."
+    },
+    {
+      "word": "balance",
+      "type": "v, n",
+      "meaning": "to keep in a steady position, or a state where things are equal or in correct proportions",
+      "example": "Try to balance work and leisure time. / We need to maintain a healthy balance in our diet."
+    },
+    {
+      "word": "benefit",
+      "type": "v, n",
+      "meaning": "to receive an advantage, or an advantage or profit gained from something",
+      "example": "Regular exercise will benefit your cardiovascular system. / There are many health benefits to drinking water."
+    },
+    {
+      "word": "breathe",
+      "type": "v",
+      "meaning": "to take air into the lungs and send it out again",
+      "example": "Take a deep breath and breathe out slowly."
+    },
+    {
+      "word": "chew",
+      "type": "v",
+      "meaning": "to crush food with your teeth before swallowing it",
+      "example": "You should chew your food thoroughly before swallowing."
+    },
+    {
+      "word": "chop",
+      "type": "v",
+      "meaning": "to cut something into pieces with repeated sharp blows",
+      "example": "Chop the onions and carrots into small pieces for the soup."
+    },
+    {
+      "word": "contain",
+      "type": "v",
+      "meaning": "to have or hold something within",
+      "example": "Oranges contain a large amount of Vitamin C."
+    },
+    {
+      "word": "cough",
+      "type": "v, n",
+      "meaning": "to force air out of the lungs with a sudden sharp sound, or an illness that causes coughing",
+      "example": "He coughed to clear his throat. / She has a bad cough and a sore throat."
+    },
+    {
+      "word": "cure",
+      "type": "v, n",
+      "meaning": "to make someone healthy again, or a medicine or treatment that cures an illness",
+      "example": "Doctors managed to cure the patient's illness. / There is currently no cure for the common cold."
+    },
+    {
+      "word": "exercise",
+      "type": "v, n",
+      "meaning": "to do physical activity, or physical activity that you do to make your body strong",
+      "example": "She exercises in the gym three times a week. / Daily exercise is important for physical fitness."
+    },
+    {
+      "word": "flu",
+      "type": "n",
+      "meaning": "an infectious disease that causes fever, chills, and muscle aches",
+      "example": "He missed school because he caught the flu."
+    },
+    {
+      "word": "have an operation",
+      "type": "v phr",
+      "meaning": "to undergo a medical procedure where a doctor cuts into the body to repair or remove a part",
+      "example": "She had to have an operation on her knee after the sports injury."
+    },
+    {
+      "word": "healthy",
+      "type": "adj",
+      "meaning": "in a good physical or mental condition; not ill",
+      "example": "Eating fresh vegetables is part of a healthy lifestyle."
+    },
+    {
+      "word": "ignore",
+      "type": "v",
+      "meaning": "to refuse to take notice of or pay attention to someone or something",
+      "example": "You shouldn't ignore the warning signs of stress."
+    },
+    {
+      "word": "infection",
+      "type": "n",
+      "meaning": "a disease caused by germs or bacteria entering the body",
+      "example": "Wash the cut to prevent any bacterial infection."
+    },
+    {
+      "word": "ingredient",
+      "type": "n",
+      "meaning": "one of the foods that you use to make a particular dish",
+      "example": "Mix all the ingredients together in a large bowl."
+    },
+    {
+      "word": "injury",
+      "type": "n",
+      "meaning": "physical damage or harm done to a person's body",
+      "example": "He recovered quickly from his minor leg injury."
+    },
+    {
+      "word": "limit",
+      "type": "v, n",
+      "meaning": "to keep something within a certain size or amount, or the greatest amount allowed",
+      "example": "You should limit the amount of sugar you consume daily. / There is a speed limit of fifty miles per hour."
+    },
+    {
+      "word": "meal",
+      "type": "n",
+      "meaning": "an occasion when food is eaten, or the food eaten on such an occasion",
+      "example": "Breakfast is considered the most important meal of the day."
+    },
+    {
+      "word": "pill",
+      "type": "n",
+      "meaning": "a small round piece of medicine that you swallow",
+      "example": "The doctor told him to take one pill after each meal."
+    },
+    {
+      "word": "recover",
+      "type": "v",
+      "meaning": "to become well again after being ill or injured",
+      "example": "It took her several weeks to recover from the surgery."
+    },
+    {
+      "word": "salty",
+      "type": "adj",
+      "meaning": "tasting of or containing salt",
+      "example": "I don't like eating salty snacks."
+    },
+    {
+      "word": "slice",
+      "type": "v, n",
+      "meaning": "to cut food into thin, flat pieces, or a thin, flat piece of food",
+      "example": "Can you slice the bread for the sandwiches? / He ate a slice of chocolate cake."
+    },
+    {
+      "word": "sour",
+      "type": "adj",
+      "meaning": "having an acid taste like lemon or vinegar",
+      "example": "These green grapes are very sour."
+    },
+    {
+      "word": "spicy",
+      "type": "adj",
+      "meaning": "containing strong spices or having a hot flavor",
+      "example": "This spicy soup made my eyes water."
+    },
+    {
+      "word": "stir",
+      "type": "v",
+      "meaning": "to mix liquids or food by moving a spoon around in a circular pattern",
+      "example": "Stir the soup occasionally while it is boiling."
+    },
+    {
+      "word": "suffer",
+      "type": "v",
+      "meaning": "to experience physical or mental pain, or an illness",
+      "example": "Many people suffer from seasonal allergies in the spring."
+    },
+    {
+      "word": "taste",
+      "type": "v, n",
+      "meaning": "to have a particular flavor, or the flavor of something",
+      "example": "The soup tastes delicious. / This fruit has a very sweet taste."
+    },
+    {
+      "word": "treatment",
+      "type": "n",
+      "meaning": "the use of drugs or exercises to cure an illness or injury",
+      "example": "She is receiving medical treatment for her back pain."
+    },
+    {
+      "word": "vitamin",
+      "type": "n",
+      "meaning": "a natural substance found in food that is necessary for good health",
+      "example": "Fresh fruits are rich in vitamins and minerals."
+    },
+    {
+      "word": "epidemic",
+      "type": "n",
+      "meaning": "a widespread occurrence of an infectious disease in a community at a particular time",
+      "example": "The city took strict measures to prevent a flu epidemic."
+    },
+    {
+      "word": "malaria",
+      "type": "n",
+      "meaning": "a serious disease passed to humans by mosquitoes, causing fever and chills",
+      "example": "You should take malaria tablets if you travel to tropical regions."
+    }
+  ],
+  "phrasalVerbs": [
+    {
+      "phrasalVerb": "cut down (on)",
+      "meaning": "to reduce the amount or consumption of something",
+      "example": "EX: The doctor advised him to cut down on sugar."
+    },
+    {
+      "phrasalVerb": "fall down",
+      "meaning": "to slip or trip and fall to the ground",
+      "example": "EX: He tripped over the rug and fell down on the floor."
+    },
+    {
+      "phrasalVerb": "get over",
+      "meaning": "to recover from an illness, shock, or difficult situation",
+      "example": "EX: It took her a long time to get over the flu."
+    },
+    {
+      "phrasalVerb": "go off",
+      "meaning": "to become bad or stale (food or drink)",
+      "example": "EX: Put the milk in the fridge so it doesn't go off."
+    },
+    {
+      "phrasalVerb": "lie down",
+      "meaning": "to place oneself in a flat, horizontal position (usually to rest)",
+      "example": "EX: I'm feeling a bit dizzy, so I'm going to lie down for a while."
+    },
+    {
+      "phrasalVerb": "put on",
+      "meaning": "to gain weight",
+      "example": "EX: He put on a few kilograms over the holidays."
+    },
+    {
+      "phrasalVerb": "sit down",
+      "meaning": "to lower one's body into a sitting position on a chair or the ground",
+      "example": "EX: Please sit down and make yourself comfortable."
+    },
+    {
+      "phrasalVerb": "stand up",
+      "meaning": "to rise to an erect, standing position",
+      "example": "EX: Everyone stood up when the teacher entered the room."
+    }
+  ],
+  "prepositionalPhrases": [
+    {
+      "phrase": "at night",
+      "meaning": "during the night period",
+      "example": "EX: The streets are very quiet at night."
+    },
+    {
+      "phrase": "at risk",
+      "meaning": "in danger of being harmed or lost",
+      "example": "EX: People who don't exercise are at risk of heart disease."
+    },
+    {
+      "phrase": "in addition (to)",
+      "meaning": "as an extra thing or person",
+      "example": "EX: In addition to French, she speaks fluent Spanish."
+    },
+    {
+      "phrase": "in comparison to/with",
+      "meaning": "compared with",
+      "example": "EX: The new model is much faster in comparison with the old one."
+    },
+    {
+      "phrase": "in shape",
+      "meaning": "in good physical condition",
+      "example": "EX: He runs every morning to keep in shape."
+    },
+    {
+      "phrase": "on a diet",
+      "meaning": "eating less or specific food to lose weight or improve health",
+      "example": "EX: She is on a diet, so she avoids sugary desserts."
+    }
+  ],
+  "wordFormation": [
+    {
+      "word": "bake",
+      "type": "verb",
+      "meaning": "baker: a person who bakes bread and cakes / bakery: a shop where bread and cakes are made and sold",
+      "example": "EX: The baker prepared fresh loaves of bread. / I bought these pastries at the local bakery."
+    },
+    {
+      "word": "bend",
+      "type": "verb",
+      "meaning": "bent: curved or not straight; or a natural talent or inclination",
+      "example": "EX: The metal rod was bent. / She has a natural bent for painting."
+    },
+    {
+      "word": "cook",
+      "type": "verb/noun",
+      "meaning": "cooking: the activity of preparing food / cooker: an appliance used for cooking / cookery: the art or practice of cooking",
+      "example": "EX: She enjoys cooking Italian dishes. / We bought a new electric cooker for the kitchen. / He is taking a cookery course this semester."
+    },
+    {
+      "word": "intend",
+      "type": "verb",
+      "meaning": "intention: an aim, plan, or purpose / intentional: done on purpose; deliberate",
+      "example": "EX: He has no intention of leaving his job. / The referee ruled that the foul was intentional."
+    },
+    {
+      "word": "jog",
+      "type": "verb",
+      "meaning": "jogging: the activity of running at a steady, gentle pace / jogger: a person who jogs",
+      "example": "EX: Jogging is a great way to stay fit. / The park was filled with joggers in the morning."
+    },
+    {
+      "word": "medicine",
+      "type": "noun",
+      "meaning": "medical: relating to the practice of medicine or treatment",
+      "example": "EX: She is undergoing medical treatment for her knee injury."
+    },
+    {
+      "word": "pain",
+      "type": "noun",
+      "meaning": "painful: causing physical pain / painless: causing no physical pain",
+      "example": "EX: His broken arm was very painful. / The dentist promised that the treatment would be painless."
+    },
+    {
+      "word": "reduce",
+      "type": "verb",
+      "meaning": "reduction: the action of making something smaller or less in amount",
+      "example": "EX: There was a significant reduction in prices during the sale."
+    },
+    {
+      "word": "sense",
+      "type": "noun/verb",
+      "meaning": "sensible: having or showing good sense or judgment / sensitive: easily affected or offended",
+      "example": "EX: It is sensible to wear a seatbelt while driving. / His eyes are very sensitive to bright light."
+    },
+    {
+      "word": "weigh",
+      "type": "verb",
+      "meaning": "weight: how heavy someone or something is",
+      "example": "EX: He is trying to lose some weight by exercising."
+    }
+  ],
+  "wordPatterns": [
+    {
+      "verb": "addicted to",
+      "pattern": "adjective",
+      "meaning": "physically or mentally dependent on a substance or activity",
+      "example": "EX: He is addicted to playing video games."
+    },
+    {
+      "verb": "allergic to",
+      "pattern": "adjective",
+      "meaning": "having a strong reaction or illness caused by pollen, food, or other substances",
+      "example": "EX: She is allergic to peanuts."
+    },
+    {
+      "verb": "covered in/with",
+      "pattern": "adjective",
+      "meaning": "having a layer of something on the surface",
+      "example": "EX: The ground was covered in white snow."
+    },
+    {
+      "verb": "pleased with",
+      "pattern": "adjective",
+      "meaning": "happy or satisfied with something",
+      "example": "EX: The teacher was very pleased with our test results."
+    },
+    {
+      "verb": "combine sth with",
+      "pattern": "verb",
+      "meaning": "to join two or more things together",
+      "example": "EX: You can combine study with part-time work."
+    },
+    {
+      "verb": "complain (to sb) about",
+      "pattern": "verb",
+      "meaning": "to express dissatisfaction or annoyance about something",
+      "example": "EX: The residents complained to the council about the noise."
+    },
+    {
+      "verb": "die from/of",
+      "pattern": "verb",
+      "meaning": "to stop living as a result of an illness or cause",
+      "example": "EX: Many people die of heart disease every year."
+    },
+    {
+      "verb": "fight against",
+      "pattern": "verb",
+      "meaning": "to struggle or oppose someone/something in combat or competition",
+      "example": "EX: The local community is fighting against the new highway plan."
+    },
+    {
+      "verb": "recover from",
+      "pattern": "verb",
+      "meaning": "to become healthy again after an illness",
+      "example": "EX: He is still recovering from a bad cold."
+    },
+    {
+      "verb": "smell of",
+      "pattern": "verb/noun",
+      "meaning": "to have the scent of a particular thing",
+      "example": "EX: The kitchen smells of freshly baked bread."
+    },
+    {
+      "verb": "a cure for",
+      "pattern": "noun",
+      "meaning": "a medicine or treatment that cures a disease",
+      "example": "EX: Scientists are trying to find a cure for cancer."
+    },
+    {
+      "verb": "a recipe for",
+      "pattern": "noun",
+      "meaning": "a set of instructions for preparing a particular dish",
+      "example": "EX: She gave me a great recipe for chocolate cookies."
+    }
+  ],
+  "collocations": []
+}
