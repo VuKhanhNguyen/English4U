@@ -1,0 +1,404 @@
+{
+  "id": "b1-unit-27",
+  "title": "Unit 27: Working and earning",
+  "grammar": [],
+  "vocabulary": [
+    {
+      "word": "ambition",
+      "type": "n",
+      "meaning": "a strong desire to do or achieve something",
+      "example": "Her ambition is to become a successful doctor."
+    },
+    {
+      "word": "application",
+      "type": "n",
+      "meaning": "a formal request to an authority for something, e.g. a job; or a software program",
+      "example": "He submitted a job application to the technology company."
+    },
+    {
+      "word": "bank account",
+      "type": "n phr",
+      "meaning": "an arrangement with a bank in which the bank keeps customer's money",
+      "example": "She opened a new bank account to save money for university."
+    },
+    {
+      "word": "boss",
+      "type": "n",
+      "meaning": "a person who is in charge of other employees or an organization",
+      "example": "The boss asked us to complete the report by Friday afternoon."
+    },
+    {
+      "word": "career",
+      "type": "n",
+      "meaning": "an occupation undertaken for a significant period of a person's life and with opportunities for progress",
+      "example": "He is hoping to build a career in software engineering."
+    },
+    {
+      "word": "colleague",
+      "type": "n",
+      "meaning": "a person with whom one works, especially in a profession or business",
+      "example": "My colleague helped me prepare the presentation slides."
+    },
+    {
+      "word": "company",
+      "type": "n",
+      "meaning": "a commercial business or organization",
+      "example": "She works for an international shipping company."
+    },
+    {
+      "word": "contract",
+      "type": "n",
+      "meaning": "a written or spoken agreement, especially one concerning employment, sales, or tenancy",
+      "example": "Please read the employment contract carefully before signing it."
+    },
+    {
+      "word": "department",
+      "type": "n",
+      "meaning": "a division of a large organization or business, dealing with a specific area of activity",
+      "example": "He works in the sales and marketing department."
+    },
+    {
+      "word": "deserve",
+      "type": "v",
+      "meaning": "to be worthy of something because of one's actions",
+      "example": "You worked very hard, so you deserve a promotion."
+    },
+    {
+      "word": "earn",
+      "type": "v",
+      "meaning": "to receive money in return for work or services",
+      "example": "She earns a good salary working as an accountant."
+    },
+    {
+      "word": "fame",
+      "type": "n",
+      "meaning": "the state of being known or talked about by many people, especially of noteworthy achievements",
+      "example": "He achieved fame and fortune at a very young age."
+    },
+    {
+      "word": "goal",
+      "type": "n",
+      "meaning": "an aim or desired result",
+      "example": "Our primary goal is to finish the project on time."
+    },
+    {
+      "word": "impress",
+      "type": "v",
+      "meaning": "to make someone feel admiration or respect",
+      "example": "The job candidate impressed the manager during the interview."
+    },
+    {
+      "word": "income",
+      "type": "n",
+      "meaning": "money received, especially on a regular basis, for work or through investments",
+      "example": "The family spends a large portion of their income on rent."
+    },
+    {
+      "word": "industry",
+      "type": "n",
+      "meaning": "economic activity concerned with the processing of raw materials and manufacture of goods",
+      "example": "The tourism industry is vital to the local economy."
+    },
+    {
+      "word": "interview",
+      "type": "v, n",
+      "meaning": "to ask questions of someone to see if they are suitable for a job; or a formal meeting for this purpose",
+      "example": "The manager will interview three candidates tomorrow. / I have a job interview at 10 a.m."
+    },
+    {
+      "word": "leader",
+      "type": "n",
+      "meaning": "the person who leads or commands a group, organization, or country",
+      "example": "A good leader listens to the opinions of all team members."
+    },
+    {
+      "word": "manager",
+      "type": "n",
+      "meaning": "a person responsible for controlling or administering an organization or group of staff",
+      "example": "The manager approved our holiday requests."
+    },
+    {
+      "word": "pension",
+      "type": "n",
+      "meaning": "a regular payment made during a person's retirement",
+      "example": "My grandfather receives a monthly pension from his former employer."
+    },
+    {
+      "word": "poverty",
+      "type": "n",
+      "meaning": "the state of being extremely poor",
+      "example": "Many charities work to relieve poverty in developing nations."
+    },
+    {
+      "word": "pressure",
+      "type": "n",
+      "meaning": "the feel of stressful urgency caused by having too many demands on one's time or resources",
+      "example": "Students are under a lot of pressure during exam week."
+    },
+    {
+      "word": "previous",
+      "type": "adj",
+      "meaning": "existing or occurring before in time or order",
+      "example": "Do you have any previous experience in sales?"
+    },
+    {
+      "word": "profession",
+      "type": "n",
+      "meaning": "a paid occupation, especially one that involves prolonged training and a formal qualification",
+      "example": "Teaching is a very respected profession."
+    },
+    {
+      "word": "retire",
+      "type": "v",
+      "meaning": "to leave one's job and cease to work, typically because of having reached a particular age",
+      "example": "He plans to retire at the age of sixty and travel the world."
+    },
+    {
+      "word": "salary",
+      "type": "n",
+      "meaning": "a fixed regular payment, typically paid on a monthly basis, to an employee",
+      "example": "The company offers a competitive salary and health insurance."
+    },
+    {
+      "word": "staff",
+      "type": "n",
+      "meaning": "all the people employed by a particular organization",
+      "example": "The school staff are very dedicated and helpful."
+    },
+    {
+      "word": "strike",
+      "type": "n",
+      "meaning": "a refusal to work organized by a body of employees as a form of protest",
+      "example": "The bus drivers went on strike to demand better working conditions."
+    },
+    {
+      "word": "tax",
+      "type": "v, n",
+      "meaning": "a compulsory contribution to state revenue, levied by the government on workers' income and business profits",
+      "example": "The government decided to raise the tax on luxury goods. / The council taxes property owners annually."
+    },
+    {
+      "word": "wealthy",
+      "type": "adj",
+      "meaning": "having a great deal of money, resources, or assets; rich",
+      "example": "They live in a wealthy neighborhood in the outskirts of London."
+    },
+    {
+      "word": "neurologist",
+      "type": "n",
+      "meaning": "a doctor who specializes in treating diseases of the nervous system and brain",
+      "example": "The neurologist examined the patient's reflexes and brain scans."
+    }
+  ],
+  "phrasalVerbs": [
+    {
+      "phrasalVerb": "call off",
+      "meaning": "to cancel an event or agreement",
+      "example": "EX: The football match was called off due to heavy rain."
+    },
+    {
+      "phrasalVerb": "give back",
+      "meaning": "to return something to its owner",
+      "example": "EX: Please give back the book when you finish reading it."
+    },
+    {
+      "phrasalVerb": "go on",
+      "meaning": "to happen or take place",
+      "example": "EX: I wonder what is going on in the office next door."
+    },
+    {
+      "phrasalVerb": "put off",
+      "meaning": "to delay or postpone something to a later date",
+      "example": "EX: We had to put off the meeting until next Monday."
+    },
+    {
+      "phrasalVerb": "set up",
+      "meaning": "to start a business, organization, or system",
+      "example": "EX: She decided to set up her own clothing design business."
+    },
+    {
+      "phrasalVerb": "stay up",
+      "meaning": "to go to bed later than usual",
+      "example": "EX: The children stayed up late to watch the firework display."
+    },
+    {
+      "phrasalVerb": "take away",
+      "meaning": "to remove or carry something away",
+      "example": "EX: The waiter came to take away the empty plates."
+    },
+    {
+      "phrasalVerb": "take over",
+      "meaning": "to take control of something, e.g. a business or task",
+      "example": "EX: The large corporation plans to take over the small family business."
+    }
+  ],
+  "prepositionalPhrases": [
+    {
+      "phrase": "at the moment",
+      "meaning": "right now; at this present time",
+      "example": "EX: I am a bit busy at the moment, so can I call you back?"
+    },
+    {
+      "phrase": "in charge (of)",
+      "meaning": "responsible for or having control over something",
+      "example": "EX: Who is in charge of organizing the company conference?"
+    },
+    {
+      "phrase": "on business",
+      "meaning": "traveling for work purposes rather than pleasure",
+      "example": "EX: My father is away on business in Tokyo this week."
+    },
+    {
+      "phrase": "on strike",
+      "meaning": "taking part in an organized refusal to work",
+      "example": "EX: The factory workers have been on strike since last Tuesday."
+    },
+    {
+      "phrase": "on time",
+      "meaning": "punctual; not late",
+      "example": "EX: It is important to arrive on time for your job interview."
+    },
+    {
+      "phrase": "on/off duty",
+      "meaning": "performing or not performing one's regular work duties",
+      "example": "EX: The police officer was off duty when he witnessed the accident."
+    }
+  ],
+  "wordFormation": [
+    {
+      "word": "assist",
+      "type": "verb",
+      "meaning": "assistant: a person who helps someone in a job / assistance: help or support",
+      "example": "EX: He works as a shop assistant. / The charity provides financial assistance to families in need."
+    },
+    {
+      "word": "beg",
+      "type": "verb",
+      "meaning": "beg: to ask for food or money, or to make a strong request / beggar: a person who lives by asking for money or food",
+      "example": "EX: The poor man begged for food in the street. / The beggar sat at the corner of the busy street."
+    },
+    {
+      "word": "boss",
+      "type": "noun",
+      "meaning": "bossy: always telling people what to do in an annoying way",
+      "example": "EX: No one likes her because she is extremely bossy."
+    },
+    {
+      "word": "occupy",
+      "type": "verb",
+      "meaning": "occupation: a job or profession / office: a room or building where people work",
+      "example": "EX: Please state your name and occupation on the form. / Her office is on the third floor of the building."
+    },
+    {
+      "word": "employ",
+      "type": "verb",
+      "meaning": "employment: the state of having paid work / unemployment: the state of being unemployed / employer: a person or firm that employs people / employee: a person employed for wages or salary / unemployed: without a job",
+      "example": "EX: She found permanent employment as a software developer. / High unemployment is a major economic issue. / The company is a very fair employer. / All employees are required to wear identification badges. / He has been unemployed for three months."
+    },
+    {
+      "word": "fame",
+      "type": "noun",
+      "meaning": "famous: widely known or talked about",
+      "example": "EX: Paris is famous for its beautiful architecture and art."
+    },
+    {
+      "word": "office",
+      "type": "noun",
+      "meaning": "officer: a person holding a position of authority / (un)official: relating to an authority or public body, or not formal",
+      "example": "EX: A customs officer inspected our bags at the airport. / The team made an official announcement about the new manager."
+    },
+    {
+      "word": "retire",
+      "type": "verb",
+      "meaning": "retired: having ceased to work, typically due to age / retirement: the action or fact of leaving one's job",
+      "example": "EX: My father is retired, so he spends a lot of time gardening. / We held a small celebration for her retirement."
+    },
+    {
+      "word": "safe",
+      "type": "adjective",
+      "meaning": "save: to rescue or keep safe / unsafe: not safe; dangerous / safety: the condition of being protected from danger or harm",
+      "example": "EX: The firefighter managed to save the child. / Walking in this area at night is unsafe. / Road safety is an important topic for school children."
+    },
+    {
+      "word": "succeed",
+      "type": "verb",
+      "meaning": "success: the accomplishment of an aim or purpose / (un)successful: achieving or not achieving success",
+      "example": "EX: Hard work is key to achieving success in life. / The new marketing campaign was highly successful."
+    }
+  ],
+  "wordPatterns": [
+    {
+      "verb": "careful with",
+      "pattern": "adjective",
+      "meaning": "giving serious attention to what you are doing to avoid mistakes or danger",
+      "example": "EX: You must be careful with the glass cups."
+    },
+    {
+      "verb": "difficult for",
+      "pattern": "adjective",
+      "meaning": "hard to accomplish or deal with for someone",
+      "example": "EX: It is difficult for him to understand advanced mathematics."
+    },
+    {
+      "verb": "fed up with",
+      "pattern": "adjective",
+      "meaning": "annoyed or bored with a situation that has gone on for too long",
+      "example": "EX: She is fed up with her long daily commute."
+    },
+    {
+      "verb": "ready for",
+      "pattern": "adjective",
+      "meaning": "fully prepared for an event or action",
+      "example": "EX: Are you ready for the final exam?"
+    },
+    {
+      "verb": "responsible for",
+      "pattern": "adjective",
+      "meaning": "having control over or being accountable for something",
+      "example": "EX: Who is responsible for cleaning the kitchen?"
+    },
+    {
+      "verb": "apply for",
+      "pattern": "verb",
+      "meaning": "to make a formal request for something, e.g. a job or permission",
+      "example": "EX: He decided to apply for the position of sales manager."
+    },
+    {
+      "verb": "depend on",
+      "pattern": "verb",
+      "meaning": "to rely on or be controlled by",
+      "example": "EX: Our travel plans depend on the weather."
+    },
+    {
+      "verb": "inform sb about",
+      "pattern": "verb",
+      "meaning": "to tell someone about a specific topic",
+      "example": "EX: The company will inform all employees about the changes."
+    },
+    {
+      "verb": "refer to",
+      "pattern": "verb",
+      "meaning": "to mention or direct attention to",
+      "example": "EX: You can refer to the dictionary if you don't know the word."
+    },
+    {
+      "verb": "work as",
+      "pattern": "verb",
+      "meaning": "to perform the job of",
+      "example": "EX: She works as a primary school teacher."
+    },
+    {
+      "verb": "work for",
+      "pattern": "verb",
+      "meaning": "to be employed by a person or company",
+      "example": "EX: He works for a major technology firm in California."
+    },
+    {
+      "verb": "a kind of",
+      "pattern": "noun",
+      "meaning": "a type or category of something",
+      "example": "EX: What kind of music do you like listening to?"
+    }
+  ],
+  "collocations": []
+}

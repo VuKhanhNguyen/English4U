@@ -1,0 +1,257 @@
+{
+  "id": "b1-unit-26",
+  "title": "Unit 26: Comparatives and superlatives",
+  "grammar": [
+    {
+      "structure": "Comparatives & Superlatives (Adjectives & Adverbs)",
+      "usage": "Used to compare two things (comparative) or to compare one thing in a group with all others (superlative).",
+      "example": "My new job is more enjoyable than my old one. / Lan is the tallest in our class."
+    }
+  ],
+  "richGrammar": [
+    {
+      "title": "A) COMPARATIVE (SO SÁNH HƠN)",
+      "blocks": [
+        {
+          "type": "title",
+          "content": "1. COMPARATIVE FORMATION"
+        },
+        {
+          "type": "list",
+          "bullets": [
+            "We use comparatives to compare two different things, especially in sentences with the word **than**.",
+            "EX: *My new job is more enjoyable than my old one.*"
+          ]
+        },
+        {
+          "type": "generic-table",
+          "headers": ["Type", "Rule", "Base Word", "Comparative Form"],
+          "rows": [
+            [
+              "**1-syllable Adjective**",
+              "Add **-er**",
+              "hard",
+              "harder"
+            ],
+            [
+              "**1-syllable Adjective ending in -e**",
+              "Add **-r**",
+              "late",
+              "later"
+            ],
+            [
+              "**1-syllable Adjective ending in 1 vowel + 1 consonant**",
+              "Double final consonant + **-er**",
+              "big",
+              "bigger"
+            ],
+            [
+              "**2-syllable Adjective ending in -y**",
+              "Change **-y** to **-i** + **-er**",
+              "pretty",
+              "prettier"
+            ],
+            [
+              "**2 or more syllables Adjective**",
+              "Add **more / less** before adjective",
+              "interesting",
+              "more / less interesting"
+            ],
+            [
+              "**Irregular Adjectives**",
+              "Changes completely",
+              "good\nlittle\nmany\nbad\nfar\nmuch",
+              "better\nless\nmore\nworse\nfarther / further\nmore"
+            ],
+            [
+              "**General Adverbs**",
+              "Add **more / less** before adverb",
+              "carefully",
+              "more / less carefully"
+            ],
+            [
+              "**Irregular Adverbs**",
+              "Changes completely / follows regular patterns",
+              "well\nnear\nfast\nbadly\nlate\nfar\nearly",
+              "better\nnearer\nfaster\nworse\nlater\nfarther / further\nearlier"
+            ]
+          ]
+        },
+        {
+          "type": "title",
+          "content": "WATCH OUT! COMPARATIVE USAGE"
+        },
+        {
+          "type": "list",
+          "bullets": [
+            "Always use the correct comparative form instead of the regular adverb in comparisons.",
+            "EX: *We lost the match because we played worse than the other team did.* (✓)",
+            "EX: *We lost the match because we played badly than the other team did.* (✗)"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "B) SUPERLATIVE (SO SÁNH NHẤT)",
+      "blocks": [
+        {
+          "type": "title",
+          "content": "1. SUPERLATIVE FORMATION"
+        },
+        {
+          "type": "list",
+          "bullets": [
+            "We use superlatives to compare one thing in a group with all other things in that group.",
+            "The word **the** usually comes before the superlative form.",
+            "EX: *Lan is the tallest in our class.*"
+          ]
+        },
+        {
+          "type": "generic-table",
+          "headers": ["Type", "Rule", "Base Word", "Superlative Form"],
+          "rows": [
+            [
+              "**1-syllable Adjective**",
+              "Add **-est**",
+              "hard",
+              "hardest"
+            ],
+            [
+              "**1-syllable Adjective ending in -e**",
+              "Add **-st**",
+              "late",
+              "latest"
+            ],
+            [
+              "**1-syllable Adjective ending in 1 vowel + 1 consonant**",
+              "Double final consonant + **-est**",
+              "big",
+              "biggest"
+            ],
+            [
+              "**2-syllable Adjective ending in -y**",
+              "Change **-y** to **-i** + **-est**",
+              "pretty",
+              "prettiest"
+            ],
+            [
+              "**2 or more syllables Adjective**",
+              "Add **most / least** before adjective",
+              "interesting",
+              "most / least interesting"
+            ],
+            [
+              "**Irregular Adjectives**",
+              "Changes completely",
+              "good\nlittle\nmany\nbad\nfar\nmuch",
+              "best\nleast\nmost\nworst\nfarthest / furthest\nmost"
+            ],
+            [
+              "**General Adverbs**",
+              "Add **most / least** before adverb",
+              "carefully",
+              "most / least carefully"
+            ],
+            [
+              "**Irregular Adverbs**",
+              "Changes completely / follows regular patterns",
+              "well\nnear\nfast\nbadly\nlate\nfar\nearly",
+              "best\nnearest\nfastest\nworst\nlatest\nfarthest / furthest\nearliest"
+            ]
+          ]
+        },
+        {
+          "type": "title",
+          "content": "WATCH OUT! SUPERLATIVE USAGE"
+        },
+        {
+          "type": "list",
+          "bullets": [
+            "Ensure the superlative form of the adjective is used instead of the base or comparative form when modifying the noun.",
+            "EX: *Listen! I promise you this is the (funny) joke ever!*",
+            "--> *Listen! I promise you this is the funniest joke ever!*"
+          ]
+        }
+      ]
+    }
+  ],
+  "vocabulary": [
+    {
+      "word": "patient",
+      "type": "adj",
+      "meaning": "able to accept or tolerate delays, problems, or suffering without becoming annoyed or anxious",
+      "example": "You need to be patient when learning a new language."
+    },
+    {
+      "word": "asleep",
+      "type": "adj",
+      "meaning": "sleeping or in a state of sleep",
+      "example": "He was so tired that he fell asleep during the movie."
+    },
+    {
+      "word": "fair",
+      "type": "n",
+      "meaning": "an exhibition, typically with amusement rides and stalls, or a gathering for buying and selling",
+      "example": "The children had a great time playing games at the summer fair."
+    },
+    {
+      "word": "spicy",
+      "type": "adj",
+      "meaning": "containing strong spices or having a hot flavor",
+      "example": "This curry is very spicy, so make sure to have some water nearby."
+    },
+    {
+      "word": "thin",
+      "type": "adj",
+      "meaning": "having little thickness or small distance between opposite sides; or slim/lean",
+      "example": "He wore a thin jacket because the weather was relatively warm."
+    },
+    {
+      "word": "ghost",
+      "type": "n",
+      "meaning": "the spirit of a dead person, represented as a pale, transparent image",
+      "example": "Some people believe that this old castle is haunted by a ghost."
+    },
+    {
+      "word": "firm",
+      "type": "n",
+      "meaning": "a business organization or company",
+      "example": "She got a job as a junior accountant at a local law firm."
+    },
+    {
+      "word": "dirty",
+      "type": "adj",
+      "meaning": "covered or marked with an unclean substance; not clean",
+      "example": "Please put your dirty clothes in the laundry basket."
+    },
+    {
+      "word": "pigeon",
+      "type": "n",
+      "meaning": "a stout-bodied bird with a small head and short legs, common in cities",
+      "example": "A flock of pigeons gathered in the square to feed on bread crumbs."
+    },
+    {
+      "word": "pension",
+      "type": "n",
+      "meaning": "a regular payment made during a person's retirement from an investment fund",
+      "example": "He retired at the age of sixty-five and is now living on his pension."
+    },
+    {
+      "word": "deserve",
+      "type": "v",
+      "meaning": "to be worthy of something or have a right to it because of one's actions",
+      "example": "She worked extremely hard and fully deserves to win the award."
+    },
+    {
+      "word": "impress",
+      "type": "v",
+      "meaning": "to make someone feel admiration or respect",
+      "example": "His excellent command of English impressed the interview panel."
+    }
+  ],
+  "wordFormation": [],
+  "wordPatterns": [],
+  "phrasalVerbs": [],
+  "prepositionalPhrases": [],
+  "collocations": []
+}

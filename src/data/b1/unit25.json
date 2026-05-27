@@ -1,0 +1,100 @@
+{
+  "id": "b1-unit-25",
+  "title": "Unit 25: So, such, too, enough",
+  "grammar": [
+    {
+      "structure": "So, Such, Too, Enough",
+      "usage": "Used to add emphasis (so, such) or describe degree and adequacy (too, enough) in relation to adjectives, adverbs, nouns, and verbs.",
+      "example": "She is so famous that she gets recognized everywhere. / It's too hot for me in this room."
+    }
+  ],
+  "richGrammar": [
+    {
+      "title": "A) SO AND SUCH",
+      "blocks": [
+        {
+          "type": "title",
+          "content": "1. SO vs SUCH FORMATION"
+        },
+        {
+          "type": "generic-table",
+          "headers": ["Part of Speech", "SO Structure & Examples", "SUCH Structure & Examples"],
+          "rows": [
+            [
+              "**With Adjectives**",
+              "**So + Adj + that**\nEX: Paris Hilton is so famous that she gets recognized everywhere.",
+              "X"
+            ],
+            [
+              "**With Nouns**",
+              "**So + many/much + N + that**\nEX: We have so many pets that sometimes it's very noisy!\n\n**So + few/little + N + that**\nEX: There are so few cars in the parking lot.",
+              "**Such + a/an + adj + N (singular) + that**\nEX: Mr. Jones was such a kind man that I was sad when he moved to another town.\n\n**Such + adj + plural N + that**\nEX: Henry gets such good results that he was made manager.\n\n**Such + a lot of + N + that**\nEX: There was such a lot of smoke that I couldn't see anything.\n\n**Such + a/an + adj + N! (Exclamatory)**\nEX: Tom is such a naughty boy!"
+            ],
+            [
+              "**With Adverbs**",
+              "**So + Adverb + that**\nEX: Jenny works so well that she was made manager.",
+              "X"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "title": "B) TOO AND ENOUGH",
+      "blocks": [
+        {
+          "type": "title",
+          "content": "1. TOO vs ENOUGH FORMATION"
+        },
+        {
+          "type": "generic-table",
+          "headers": ["Part of Speech", "TOO Structure", "ENOUGH Structure"],
+          "rows": [
+            [
+              "**With Adjectives**",
+              "**Too + adj + (full infinitive)**\nEX: This soup is too hot to eat.",
+              "**Adj + enough + (full infinitive)**\nEX: He is tall enough to reach the top shelf."
+            ],
+            [
+              "**With Nouns**",
+              "**Too + many/much + N (+ full infinitive)**\nEX: There is too much noise in this room.",
+              "**Enough + noun (+ full infinitive)**\nEX: We have enough time to finish this project."
+            ],
+            [
+              "**With Verbs**",
+              "**V + too much**\nEX: He talks too much.",
+              "X"
+            ],
+            [
+              "**With Adverbs**",
+              "**Too + adverb (+ full infinitive)**\nEX: She drove too fast.",
+              "**Adverb + enough (+ full infinitive)**\nEX: He ran fast enough to win."
+            ]
+          ]
+        },
+        {
+          "type": "title",
+          "content": "WATCH OUT! TOO & ENOUGH USAGE RULES"
+        },
+        {
+          "type": "list",
+          "bullets": [
+            "1. Both **Too & Enough** can be followed by **FOR + object**.",
+            "   - EX: *It's too hot for me in this room.*",
+            "   - EX: *You're not old enough for the army.*",
+            "2. We only use **too** when describing something negative.",
+            "   - EX: *This soup is too salty, so we cannot eat it.*",
+            "3. We use **enough** in negative sentences when there is a lack of something necessary.",
+            "   - EX: *You're not working fast enough, so you won't finish on time.*"
+          ]
+        }
+      ]
+    }
+  ],
+  "vocabulary": [],
+  "wordFormation": [],
+  "wordPatterns": [],
+  "phrasalVerbs": [],
+  "prepositionalPhrases": [],
+  "collocations": []
+}
