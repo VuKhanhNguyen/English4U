@@ -1,0 +1,145 @@
+{
+  "id": "b1-unit-20",
+  "title": "Unit 20: Modals (Part 2)",
+  "grammar": [
+    {
+      "structure": "Modals of Obligation, Probability, and Possibility",
+      "usage": "Used to show obligation (must, have to, need to), lack of obligation (don't have to/need to, needn't), high probability (must, can't, couldn't), expectation (should, ought to), and speculation (could, may, might).",
+      "example": "All passengers must fasten their seatbelts. / The dog is wet; it must be raining outside."
+    }
+  ],
+  "richGrammar": [
+    {
+      "title": "A) MODALS",
+      "blocks": [
+        {
+          "type": "title",
+          "content": "1. OBLIGATION"
+        },
+        {
+          "type": "generic-table",
+          "headers": ["Time / Form", "Modal Verbs", "Examples"],
+          "rows": [
+            [
+              "**Present & Future**\n(Obligation / Necessity)",
+              "must / mustn't\nhave to\nneed to",
+              "EX: All passengers must fasten their seatbelts.\nEX: We need to pay the electricity bill today or else we cannot use it tonight."
+            ],
+            [
+              "**Present & Future**\n(No Obligation / No Necessity)",
+              "don't have to\ndon't need to\nneedn't",
+              "EX: You don't have to buy a present for this party.\nEX: You needn't tell Jenny about this."
+            ],
+            [
+              "**Past**\n(Obligation / Necessity)",
+              "had to",
+              "EX: Henry had to answer all the questions by the police."
+            ],
+            [
+              "**Past**\n(No Obligation / No Necessity)",
+              "didn't have to\ndidn't need to",
+              "EX: Lan didn't have to see the principal after class."
+            ]
+          ]
+        },
+        {
+          "type": "title",
+          "content": "2. PROBABILITY & POSSIBILITY"
+        },
+        {
+          "type": "generic-table",
+          "headers": ["Degree / Category", "Modal Verbs", "Examples & Explanations"],
+          "rows": [
+            [
+              "**Strong Probability / Deduction**\n(Based on present evidence)",
+              "must\ncan't\ncouldn't",
+              "EX: The dog is wet. It **must** be raining outside.\n*(Deduction based on the evidence that the dog is wet)*\n\nEX: Josh **can't** be the champion. He is a very terrible player.\n*(Deduction based on our knowledge of Josh's playing ability)*"
+            ],
+            [
+              "**Moderate Probability / Expectation**\n(Likely, but there is still a chance it might not happen)",
+              "should\nought to",
+              "EX: Anna is better at Maths than Bella, so Anna **should** win the competition.\n*(Expected outcome, though there is still a chance Bella could win)*"
+            ],
+            [
+              "**Speculative Possibility / Guess**\n(Possible but not certain)",
+              "could\nmay\nmight",
+              "EX: My sister's hairbrush **might** be in the living room.\n*(A guess or speculation that it is located there)*"
+            ]
+          ]
+        },
+        {
+          "type": "title",
+          "content": "WATCH OUT! REGISTER NOTES"
+        },
+        {
+          "type": "list",
+          "bullets": [
+            "**Must** is used mainly in written rules, instructions, or formal notices.",
+            "In spoken English, people usually replace **must** with **have to**."
+          ]
+        }
+      ]
+    }
+  ],
+  "vocabulary": [
+    {
+      "word": "obligation",
+      "type": "n",
+      "meaning": "an act or course of action to which a person is morally or legally bound; a duty or commitment",
+      "example": "We have an obligation to protect the environment for future generations."
+    },
+    {
+      "word": "electricity",
+      "type": "n",
+      "meaning": "a form of energy resulting from the existence of charged particles, used to power lights and appliances",
+      "example": "The electricity bill was much higher this month due to using the air conditioner daily."
+    },
+    {
+      "word": "project",
+      "type": "n",
+      "meaning": "a planned piece of work or activity that is finished over a period of time and intended to achieve a particular purpose",
+      "example": "Students are required to complete a group project on renewable energy sources."
+    },
+    {
+      "word": "passenger",
+      "type": "n",
+      "meaning": "a traveler on a public or private conveyance other than the driver, pilot, or crew",
+      "example": "All passengers must remain seated until the plane has come to a complete stop."
+    },
+    {
+      "word": "head teacher",
+      "type": "n",
+      "meaning": "the teacher who is in charge of a school; principal",
+      "example": "The head teacher warned students against arriving late to morning assemblies."
+    },
+    {
+      "word": "force",
+      "type": "v",
+      "meaning": "to make someone do something against their will or through physical strength",
+      "example": "You cannot force a child to play an instrument if they do not enjoy it."
+    },
+    {
+      "word": "spare room",
+      "type": "n",
+      "meaning": "a room in a house that is not used regularly, typically kept for guests to sleep in",
+      "example": "We prepared the spare room with clean sheets and towels for our visitors."
+    },
+    {
+      "word": "race",
+      "type": "n",
+      "meaning": "a competition between runners, horses, vehicles, etc., to see which is the fastest",
+      "example": "He trained hard every morning and ended up winning the marathon race."
+    },
+    {
+      "word": "costume",
+      "type": "n",
+      "meaning": "a set of clothes worn by an actor, singer, or performer, or by someone dressing up for a special event",
+      "example": "The actors wore authentic historical costumes for the theater play."
+    }
+  ],
+  "wordFormation": [],
+  "wordPatterns": [],
+  "phrasalVerbs": [],
+  "prepositionalPhrases": [],
+  "collocations": []
+}

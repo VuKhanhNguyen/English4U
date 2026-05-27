@@ -1,0 +1,176 @@
+{
+  "id": "b1-unit-19",
+  "title": "Unit 19: Modals (Part 1)",
+  "grammar": [
+    {
+      "structure": "Modals (can, could, may, might, will, would, must, should)",
+      "usage": "Used with a base verb to express ability, permission, advice, or possibility, keeping the same form for all subjects.",
+      "example": "She can't ride a bike. / Liam ought to watch less TV."
+    }
+  ],
+  "richGrammar": [
+    {
+      "title": "A) MODALS",
+      "blocks": [
+        {
+          "type": "title",
+          "content": "1. STRUCTURE OF MODALS"
+        },
+        {
+          "type": "list",
+          "bullets": [
+            "Modals are followed by a base verb: **S + Modal + V_bare** (e.g., *S + can + play*)",
+            "They use the same form for all subjects (no third-person singular '-s')."
+          ]
+        },
+        {
+          "type": "generic-table",
+          "headers": ["Positive (+)", "Negative (-)", "Positive (+)", "Negative (-)"],
+          "rows": [
+            ["Can", "Can't / cannot", "Could", "Couldn't / could not"],
+            ["May", "May not", "Might", "Mightn't / might not"],
+            ["Will / shall", "Will not / shall not", "Would", "Wouldn't / would not"],
+            ["Must", "Mustn't / must not", "Should", "Shouldn't / should not"]
+          ]
+        },
+        {
+          "type": "title",
+          "content": "WATCH OUT! SEMI-MODALS"
+        },
+        {
+          "type": "list",
+          "bullets": [
+            "**ought to / have to / need to** are expressions that function similarly to modals.",
+            "- **ought to** is followed by *to + V_bare* and acts like a standard modal verb.",
+            "- **have to / need to** have singular and plural forms, and change depending on the subject and tense."
+          ]
+        },
+        {
+          "type": "title",
+          "content": "2. USAGE OF MODALS (Part 1)"
+        },
+        {
+          "type": "generic-table",
+          "headers": ["Function", "Modal Verbs", "Examples"],
+          "rows": [
+            [
+              "**Ability in the present**",
+              "can / can't",
+              "EX: She can't ride a bike."
+            ],
+            [
+              "**Ability in the past**",
+              "could / couldn't",
+              "EX: He could play chess when he was a teenager."
+            ],
+            [
+              "**General Ability (All Tenses)**",
+              "be able to + V_bare",
+              "EX: She will be able to win the national championships!\nEX: Lan has been able to ride a scooter since she was 3."
+            ],
+            [
+              "**Asking for permission**",
+              "can / could / may",
+              "EX: Can I go out and have dinner with friends?"
+            ],
+            [
+              "**Giving permission**",
+              "can / may",
+              "EX: You may close the window if you are cold."
+            ],
+            [
+              "**Asking for / Giving advice**",
+              "should / ought to",
+              "EX: Liam ought to watch less TV and should go to bed early."
+            ]
+          ]
+        }
+      ]
+    }
+  ],
+  "vocabulary": [
+    {
+      "word": "fridge",
+      "type": "n",
+      "meaning": "a large electrical appliance used to keep food and drinks cold",
+      "example": "Please put the milk back in the fridge so it stays fresh."
+    },
+    {
+      "word": "freezer",
+      "type": "n",
+      "meaning": "an electrical container or compartment that keeps food frozen",
+      "example": "We stored the remaining meat in the freezer for next week."
+    },
+    {
+      "word": "mechanic",
+      "type": "n",
+      "meaning": "a person whose job is to repair and maintain car engines and other machinery",
+      "example": "The mechanic checked the engine and quickly fixed the problem."
+    },
+    {
+      "word": "battery-power",
+      "type": "n",
+      "meaning": "electrical energy that is stored in a battery and used to power devices",
+      "example": "This toy train runs on battery-power rather than being plugged into the wall."
+    },
+    {
+      "word": "skateboard",
+      "type": "n",
+      "meaning": "a flat board with small wheels underneath, stood on and ridden for sport or recreation",
+      "example": "He bought a new skateboard and practices tricks at the local park every afternoon."
+    },
+    {
+      "word": "calculation",
+      "type": "n",
+      "meaning": "a mathematical estimation or process of finding an answer",
+      "example": "After a quick calculation, I realized we didn't have enough money for dessert."
+    },
+    {
+      "word": "speed up",
+      "type": "v",
+      "meaning": "to accelerate or move faster",
+      "example": "You need to speed up if you want to overtake the slow truck in front of us."
+    },
+    {
+      "word": "slow down",
+      "type": "v",
+      "meaning": "to reduce speed or move more slowly",
+      "example": "Drivers must slow down when passing through a school zone."
+    },
+    {
+      "word": "awareness",
+      "type": "n",
+      "meaning": "knowledge or perception of a situation, fact, or issue",
+      "example": "The charity campaign successfully raised public awareness about plastic pollution."
+    },
+    {
+      "word": "permission",
+      "type": "n",
+      "meaning": "consent or authorization to do something",
+      "example": "She asked her teacher for permission to leave the classroom early."
+    },
+    {
+      "word": "rubbish",
+      "type": "n",
+      "meaning": "waste material; garbage or trash that is thrown away",
+      "example": "Don't leave your rubbish on the beach; put it in the waste bin."
+    },
+    {
+      "word": "trainers",
+      "type": "n",
+      "meaning": "soft, comfortable athletic shoes suitable for sports or casual wear",
+      "example": "He put on a pair of comfortable trainers before going out for a run."
+    },
+    {
+      "word": "energy",
+      "type": "n",
+      "meaning": "power derived from physical or chemical resources, especially to provide light, heat, or work machines",
+      "example": "Switching off household appliances when they are not in use saves a lot of energy."
+    }
+  ],
+  "wordFormation": [],
+  "wordPatterns": [],
+  "phrasalVerbs": [],
+  "prepositionalPhrases": [],
+  "collocations": []
+}

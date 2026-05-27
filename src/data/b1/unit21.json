@@ -1,0 +1,434 @@
+{
+  "id": "b1-unit-21",
+  "title": "Unit 21: Sending and receiving messages",
+  "grammar": [],
+  "vocabulary": [
+    {
+      "word": "accent",
+      "type": "n",
+      "meaning": "a distinctive way of pronouncing a language, especially one associated with a particular country, area, or social class",
+      "example": "She has a strong French accent when she speaks English."
+    },
+    {
+      "word": "announcement",
+      "type": "n",
+      "meaning": "a formal public statement about a fact, occurrence, or intention",
+      "example": "The head teacher made an announcement about the school trip."
+    },
+    {
+      "word": "broadcast",
+      "type": "v, n",
+      "meaning": "to send out programs on TV or radio, or a specific television/radio program",
+      "example": "The concert will be broadcast live tomorrow night. / I missed the evening news broadcast."
+    },
+    {
+      "word": "channel",
+      "type": "n",
+      "meaning": "a television station; or a passage of water",
+      "example": "What channel is the football match on?"
+    },
+    {
+      "word": "clear",
+      "type": "adj",
+      "meaning": "easy to perceive, understand, or interpret",
+      "example": "His explanation was very clear and easy to follow."
+    },
+    {
+      "word": "click",
+      "type": "v",
+      "meaning": "to press a button on a computer mouse or device",
+      "example": "Click on the link below to visit our website."
+    },
+    {
+      "word": "contact",
+      "type": "v, n",
+      "meaning": "to communicate with someone; or communication/relationship",
+      "example": "You can contact me by email or phone. / We must stay in close contact during the trip."
+    },
+    {
+      "word": "file",
+      "type": "n",
+      "meaning": "a collection of data stored on a computer, or a folder for paper documents",
+      "example": "Please save the file to your desktop."
+    },
+    {
+      "word": "formal",
+      "type": "adj",
+      "meaning": "serious and correct, suitable for official or serious situations",
+      "example": "You need to wear formal clothes to the job interview."
+    },
+    {
+      "word": "image",
+      "type": "n",
+      "meaning": "a picture, photo, or representation of something",
+      "example": "The website contains many beautiful images of nature."
+    },
+    {
+      "word": "informal",
+      "type": "adj",
+      "meaning": "relaxed and friendly, suitable for everyday conversations",
+      "example": "He sent an informal invitation to his friends for a barbecue."
+    },
+    {
+      "word": "internet",
+      "type": "n",
+      "meaning": "the global computer network providing information and communication facilities",
+      "example": "I use the internet to do research for my homework."
+    },
+    {
+      "word": "interrupt",
+      "type": "v",
+      "meaning": "to stop someone from speaking by saying or doing something",
+      "example": "It is impolite to interrupt when someone else is talking."
+    },
+    {
+      "word": "link",
+      "type": "v, n",
+      "meaning": "to connect two or more things; or a connection/web address",
+      "example": "The bridge links the island to the mainland. / Follow the link to read the article."
+    },
+    {
+      "word": "media",
+      "type": "n",
+      "meaning": "the main means of mass communication (broadcasting, publishing, and the internet) regarded collectively",
+      "example": "The news media reported on the change in weather."
+    },
+    {
+      "word": "mobile phone",
+      "type": "n phr",
+      "meaning": "a portable telephone that can make and receive calls",
+      "example": "I left my mobile phone at home, so I couldn't call you."
+    },
+    {
+      "word": "online",
+      "type": "adj, adv",
+      "meaning": "connected to the internet or happening on the internet",
+      "example": "Do you prefer shopping online or in stores? / I went online to find the flight schedule."
+    },
+    {
+      "word": "pause",
+      "type": "v, n",
+      "meaning": "to stop doing something for a short time; or a short break in action",
+      "example": "We paused the movie to get some snacks. / There was a brief pause in the conversation."
+    },
+    {
+      "word": "persuade",
+      "type": "v",
+      "meaning": "to convince someone to do something through reasoning or argument",
+      "example": "I managed to persuade my parents to let me go to the camp."
+    },
+    {
+      "word": "pronounce",
+      "type": "v",
+      "meaning": "to make the sound of a word or letter in a particular way",
+      "example": "How do you pronounce your last name?"
+    },
+    {
+      "word": "publish",
+      "type": "v",
+      "meaning": "to prepare and print a book, magazine, or other material for sale",
+      "example": "They plan to publish the new textbook next month."
+    },
+    {
+      "word": "report",
+      "type": "v, n",
+      "meaning": "to give a spoken or written account of something; or a detailed description of an event",
+      "example": "She was asked to report on the progress of the project. / The school report shows his grades are improving."
+    },
+    {
+      "word": "request",
+      "type": "v, n",
+      "meaning": "to ask for something politely; or a polite demand or wish",
+      "example": "He requested a glass of water. / The DJ played a song by request."
+    },
+    {
+      "word": "ring",
+      "type": "v",
+      "meaning": "to make a clear sound like a bell, or to phone someone",
+      "example": "I heard the front doorbell ring. / I will ring you when I arrive at the station."
+    },
+    {
+      "word": "signal",
+      "type": "n",
+      "meaning": "an electrical impulse or radio wave transmitted or received; or a gesture giving information",
+      "example": "The phone signal is very weak inside this building."
+    },
+    {
+      "word": "swear",
+      "type": "v",
+      "meaning": "to make a solemn promise; or to use offensive language",
+      "example": "I swear to tell the truth. / It is not polite to swear."
+    },
+    {
+      "word": "type",
+      "type": "v",
+      "meaning": "to write text using a keyboard",
+      "example": "She can type very quickly without looking at the keyboard."
+    },
+    {
+      "word": "viewer",
+      "type": "n",
+      "meaning": "a person who watches a television program, video, or movie",
+      "example": "Millions of viewers watched the live broadcast of the game."
+    },
+    {
+      "word": "website",
+      "type": "n",
+      "meaning": "a set of pages on the internet containing information",
+      "example": "You can find more details on our official website."
+    },
+    {
+      "word": "whisper",
+      "type": "v, n",
+      "meaning": "to speak very quietly using one's breath; or a low, quiet sound",
+      "example": "She whispered the secret in my ear. / They spoke in whispers so as not to wake the baby."
+    },
+    {
+      "word": "relative",
+      "type": "n",
+      "meaning": "a member of your family, such as an aunt, uncle, or cousin",
+      "example": "All of my relatives came to my grandparents' anniversary party."
+    },
+    {
+      "word": "the underground",
+      "type": "n",
+      "meaning": "an underground railway system; metro",
+      "example": "The quickest way to travel around London is by the underground."
+    },
+    {
+      "word": "excuse",
+      "type": "n",
+      "meaning": "a reason that you give to explain why you did something wrong or didn't do something",
+      "example": "He made a weak excuse for being late to class."
+    },
+    {
+      "word": "politician",
+      "type": "n",
+      "meaning": "a person who is active in party politics or government",
+      "example": "The politician gave a speech about improving public transportation."
+    },
+    {
+      "word": "adventure",
+      "type": "n",
+      "meaning": "an exciting and unusual, sometimes risky, experience or journey",
+      "example": "Traveling alone in the mountains was a great adventure."
+    },
+    {
+      "word": "interpreter",
+      "type": "n",
+      "meaning": "a person who translates speech orally from one language into another",
+      "example": "She worked as an interpreter at the international conference."
+    }
+  ],
+  "phrasalVerbs": [
+    {
+      "phrasalVerb": "call back",
+      "meaning": "to phone someone again or in return",
+      "example": "EX: I'm busy right now, so I'll call you back later."
+    },
+    {
+      "phrasalVerb": "come out",
+      "meaning": "to be published or made available to the public",
+      "example": "EX: When does the new magazine come out?"
+    },
+    {
+      "phrasalVerb": "cut off",
+      "meaning": "to stop the supply of something, or disconnect a phone call",
+      "example": "EX: Their electricity was cut off because they hadn't paid the bill."
+    },
+    {
+      "phrasalVerb": "fill in",
+      "meaning": "to complete a form by writing in the details",
+      "example": "EX: Please fill in this application form and return it to us."
+    },
+    {
+      "phrasalVerb": "hang up",
+      "meaning": "to end a phone call",
+      "example": "EX: Don't hang up yet, I have one more thing to say."
+    },
+    {
+      "phrasalVerb": "log off",
+      "meaning": "to stop using a computer system or website",
+      "example": "EX: Remember to log off when you are finished using the computer."
+    },
+    {
+      "phrasalVerb": "log on (to)",
+      "meaning": "to connect to a computer system or website",
+      "example": "EX: You need to log on to the school website to check your grades."
+    },
+    {
+      "phrasalVerb": "print out",
+      "meaning": "to produce a printed copy of a document from a computer",
+      "example": "EX: Could you print out this report for me?"
+    }
+  ],
+  "prepositionalPhrases": [
+    {
+      "phrase": "by e-mail/phone/letter",
+      "meaning": "by using email, phone, or letter",
+      "example": "EX: You can contact customer service by e-mail or phone."
+    },
+    {
+      "phrase": "on the Internet",
+      "meaning": "on the world wide web",
+      "example": "EX: I found a lot of useful information on the Internet."
+    },
+    {
+      "phrase": "on the news",
+      "meaning": "reported in the news",
+      "example": "EX: I heard about the traffic jam on the news this morning."
+    },
+    {
+      "phrase": "on the phone",
+      "meaning": "speaking using a telephone",
+      "example": "EX: My mother has been on the phone for an hour."
+    },
+    {
+      "phrase": "on the radio",
+      "meaning": "broadcasted on the radio",
+      "example": "EX: They played my favorite song on the radio."
+    },
+    {
+      "phrase": "on TV",
+      "meaning": "broadcasted on television",
+      "example": "EX: Is there anything interesting on TV tonight?"
+    }
+  ],
+  "wordFormation": [
+    {
+      "word": "certain",
+      "type": "adjective",
+      "meaning": "certain: sure or definite / certainly: without doubt, definitely / certainty: the state of being completely confident or sure about something",
+      "example": "EX: I am certain that we met before.\nEX: She will certainly pass the exam.\nEX: There is no certainty that it will rain tomorrow."
+    },
+    {
+      "word": "communicate",
+      "type": "verb",
+      "meaning": "communicate: share or exchange information / communication: the act of sharing or exchanging information",
+      "example": "EX: We communicate with our clients by email.\nEX: Good communication is key to a successful relationship."
+    },
+    {
+      "word": "connect",
+      "type": "verb",
+      "meaning": "connect: join two or more things together / connection: a link or relationship / disconnect: break the connection or turn off a device",
+      "example": "EX: You can connect your phone to the speaker via Bluetooth.\nEX: There is a strong connection between health and diet.\nEX: Please disconnect the charger when the battery is full."
+    },
+    {
+      "word": "deliver",
+      "type": "verb",
+      "meaning": "deliver: bring goods or letters to a destination / delivery: the act of bringing goods or letters to a destination",
+      "example": "EX: They deliver groceries to your door.\nEX: We offer free delivery on orders over fifty dollars."
+    },
+    {
+      "word": "express",
+      "type": "verb",
+      "meaning": "express: show a feeling or opinion by words or actions / expression: the act of showing a feeling or look on one's face / expressive: showing feelings or thoughts clearly",
+      "example": "EX: She found it difficult to express her feelings.\nEX: He had a sad expression on his face.\nEX: She has very expressive eyes."
+    },
+    {
+      "word": "inform",
+      "type": "verb",
+      "meaning": "inform: tell someone about facts or information / informative: providing useful or interesting information / information: facts provided or learned about something",
+      "example": "EX: Please inform us of any changes to your schedule.\nEX: The lecture about history was very informative.\nEX: You can get more information at the reception desk."
+    },
+    {
+      "word": "predict",
+      "type": "verb",
+      "meaning": "predict: say that an event will happen in the future / prediction: a statement about what will happen / predictable or unpredictable: behaving in a way that is expected or not expected",
+      "example": "EX: It is hard to predict the weather here.\nEX: His prediction about the match score was correct.\nEX: The ending of the movie was completely predictable."
+    },
+    {
+      "word": "secret",
+      "type": "noun/adjective",
+      "meaning": "secretly: in a private or hidden way / secrecy: the state of being kept secret",
+      "example": "EX: They secretly planned a surprise party for him.\nEX: The government operates in complete secrecy on this matter."
+    },
+    {
+      "word": "speak",
+      "type": "verb",
+      "meaning": "speak-spoke-spoken: talk or use voice / speaker: a person who speaks / speech: a formal talk given to an audience",
+      "example": "EX: She spoke to the manager about the problem.\nEX: The guest speaker gave an interesting talk.\nEX: The president delivered a long speech."
+    },
+    {
+      "word": "translate",
+      "type": "verb",
+      "meaning": "translate: change words from one language into another / translation: translated text or process of translating / translator: a person who translates written text",
+      "example": "EX: Can you translate this letter into English?\nEX: The book has been published in English translation.\nEX: She works as a French-to-English translator."
+    }
+  ],
+  "wordPatterns": [
+    {
+      "verb": "comment on",
+      "pattern": "verb",
+      "meaning": "to give an opinion about something",
+      "example": "EX: She declined to comment on the rumors."
+    },
+    {
+      "verb": "communicate with",
+      "pattern": "verb",
+      "meaning": "to exchange information or talk with someone",
+      "example": "EX: She communicates with her cousins using social media."
+    },
+    {
+      "verb": "glance at",
+      "pattern": "verb",
+      "meaning": "to look at someone or something very quickly",
+      "example": "EX: He glanced at his watch and realized he was late."
+    },
+    {
+      "verb": "receive sth from",
+      "pattern": "verb",
+      "meaning": "to get something from someone",
+      "example": "EX: I received a lovely postcard from my friend in Italy."
+    },
+    {
+      "verb": "reply to",
+      "pattern": "verb",
+      "meaning": "to answer someone or a message",
+      "example": "EX: Please reply to this email as soon as possible."
+    },
+    {
+      "verb": "send sth to sb",
+      "pattern": "verb",
+      "meaning": "to deliver something to someone",
+      "example": "EX: I will send the files to you tonight."
+    },
+    {
+      "verb": "talk (to sb) about",
+      "pattern": "verb",
+      "meaning": "to speak to someone about a specific subject",
+      "example": "EX: We need to talk to the teacher about the test."
+    },
+    {
+      "verb": "tell sb about",
+      "pattern": "verb",
+      "meaning": "to inform someone about something",
+      "example": "EX: Did you tell her about the change in plans?"
+    },
+    {
+      "verb": "translate (from sth) into",
+      "pattern": "verb",
+      "meaning": "to change words from one language to another",
+      "example": "EX: He translated the document from German into Spanish."
+    },
+    {
+      "verb": "write (to sb) about",
+      "pattern": "verb",
+      "meaning": "to write a message to someone regarding a topic",
+      "example": "EX: I wrote to my grandparents about my school grades."
+    },
+    {
+      "verb": "information about",
+      "pattern": "noun",
+      "meaning": "facts or data regarding a subject",
+      "example": "EX: We need more information about the hotel locations."
+    },
+    {
+      "verb": "a letter (from sb) about",
+      "pattern": "noun",
+      "meaning": "a written message from someone discussing a topic",
+      "example": "EX: She received a letter from the bank about her account."
+    }
+  ],
+  "collocations": []
+}
