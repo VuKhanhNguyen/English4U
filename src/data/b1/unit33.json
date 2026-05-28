@@ -1,0 +1,422 @@
+{
+  "id": "b1-unit-33",
+  "title": "Unit 33: Art and fashion",
+  "grammar": [],
+  "vocabulary": [
+    {
+      "word": "ancient",
+      "type": "adj",
+      "meaning": "belonging to the very distant past and no longer in existence",
+      "example": "We visited the ruins of an ancient temple in Greece."
+    },
+    {
+      "word": "checked",
+      "type": "adj",
+      "meaning": "patterned with alternating squares of different colors",
+      "example": "He wore a red and black checked flannel shirt."
+    },
+    {
+      "word": "cotton",
+      "type": "n",
+      "meaning": "a soft white fibrous substance used to make textile fabrics and clothes",
+      "example": "This t-shirt is made of 100% organic cotton."
+    },
+    {
+      "word": "create",
+      "type": "v",
+      "meaning": "to bring something into existence through creative effort",
+      "example": "The artist wanted to create a unique sculpture for the exhibition."
+    },
+    {
+      "word": "design",
+      "type": "v, n",
+      "meaning": "to plan and make a drawing of something, or a plan/drawing showing the look and function of something",
+      "example": "She designs custom wedding dresses. / The new building design is very modern."
+    },
+    {
+      "word": "fix",
+      "type": "v",
+      "meaning": "to repair or mend something that is broken",
+      "example": "Can you fix my broken bicycle chain?"
+    },
+    {
+      "word": "fold",
+      "type": "v",
+      "meaning": "to bend something over on itself so that one part of it covers another",
+      "example": "Please fold the laundry and put it in the drawers."
+    },
+    {
+      "word": "gallery",
+      "type": "n",
+      "meaning": "a room or building for the display or sale of works of art",
+      "example": "We went to the national gallery to see the new art exhibition."
+    },
+    {
+      "word": "improvement",
+      "type": "n",
+      "meaning": "an instance of making or becoming better; progress",
+      "example": "There has been a significant improvement in his test scores."
+    },
+    {
+      "word": "loose",
+      "type": "adj",
+      "meaning": "not firmly or tightly fixed in place; baggier or comfortable",
+      "example": "He wore a loose t-shirt because it was hot outside."
+    },
+    {
+      "word": "maintain",
+      "type": "v",
+      "meaning": "to cause or enable a state or situation to continue",
+      "example": "You must maintain a steady speed on the highway."
+    },
+    {
+      "word": "match",
+      "type": "v",
+      "meaning": "to correspond or be equal to in quality, color, or design",
+      "example": "These shoes don't match your dress."
+    },
+    {
+      "word": "material",
+      "type": "n",
+      "meaning": "the physical matter from which a thing is or can be made",
+      "example": "Wood is a durable material for making furniture."
+    },
+    {
+      "word": "notice",
+      "type": "v, n",
+      "meaning": "to observe or pay attention to, or information/warning given in advance",
+      "example": "I noticed a small mistake in the report. / The manager gave two weeks' notice before leaving."
+    },
+    {
+      "word": "pattern",
+      "type": "n",
+      "meaning": "a repeated decorative design",
+      "example": "The wallpaper has a beautiful floral pattern."
+    },
+    {
+      "word": "pile",
+      "type": "n",
+      "meaning": "a heap of things laid or lying one on top of another",
+      "example": "There was a large pile of books on the desk."
+    },
+    {
+      "word": "practical",
+      "type": "adj",
+      "meaning": "suitable for actual use rather than theoretical or artistic purposes",
+      "example": "She wore practical shoes suitable for walking in the mud."
+    },
+    {
+      "word": "rough",
+      "type": "adj",
+      "meaning": "having an uneven or irregular surface; not smooth",
+      "example": "The bark of the old tree was rough and dry."
+    },
+    {
+      "word": "shape",
+      "type": "n",
+      "meaning": "the external form or outline of someone or something",
+      "example": "The cookie cutter shapes the dough into stars."
+    },
+    {
+      "word": "silk",
+      "type": "n",
+      "meaning": "a fine, strong, soft lustrous fiber produced by silkworms",
+      "example": "She bought a beautiful silk scarf from the market."
+    },
+    {
+      "word": "sleeve",
+      "type": "n",
+      "meaning": "the part of a garment that covers some or all of a person's arm",
+      "example": "He rolled up his sleeves and started working."
+    },
+    {
+      "word": "smooth",
+      "type": "adj",
+      "meaning": "having an even and regular surface; free from perceptible projections or roughness",
+      "example": "The marble floor was smooth and shiny."
+    },
+    {
+      "word": "stretch",
+      "type": "v",
+      "meaning": "to pull something to make it longer or wider",
+      "example": "Stretch the rubber band as far as it can go."
+    },
+    {
+      "word": "striped",
+      "type": "adj",
+      "meaning": "marked with long, narrow bands of different color or texture",
+      "example": "He wore a black and white striped shirt."
+    },
+    {
+      "word": "style",
+      "type": "n",
+      "meaning": "a particular design, shape, or type of something",
+      "example": "She likes to try different styles of clothing."
+    },
+    {
+      "word": "suit",
+      "type": "v, n",
+      "meaning": "to be convenient for or go well with, or a set of outer clothes made of the same fabric",
+      "example": "That haircut really suits you. / He wore a dark blue suit to the job interview."
+    },
+    {
+      "word": "suitable",
+      "type": "adj",
+      "meaning": "right or appropriate for a particular person, purpose, or situation",
+      "example": "This movie is not suitable for young children."
+    },
+    {
+      "word": "tear",
+      "type": "v, n",
+      "meaning": "to pull apart or into pieces by force, or a hole or split caused by tearing",
+      "example": "Be careful not to tear the paper. / There was a small tear in the sleeve of his jacket."
+    },
+    {
+      "word": "tight",
+      "type": "adj",
+      "meaning": "fitting closely around your body or a particular object",
+      "example": "These shoes are too tight and hurt my feet."
+    },
+    {
+      "word": "tool",
+      "type": "n",
+      "meaning": "a device or implement, especially one held in the hand, used to carry out a particular function",
+      "example": "A hammer is a very useful tool for driving nails."
+    },
+    {
+      "word": "camel",
+      "type": "n",
+      "meaning": "a large animal with a long neck and one or two humps on its back, used in deserts",
+      "example": "We rode camels during our trip to the Sahara desert."
+    },
+    {
+      "word": "concrete",
+      "type": "adj, n",
+      "meaning": "a heavy building material made from a mixture of stone, sand, cement, and water, or specific/definite",
+      "example": "The building has a solid concrete foundation. / Can you give me a concrete example of this rule?"
+    },
+    {
+      "word": "poetry",
+      "type": "n",
+      "meaning": "literary work in which special intensity is given to the expression of feelings and ideas by the use of distinctive style and rhythm",
+      "example": "She enjoys reading and writing romantic poetry."
+    },
+    {
+      "word": "wardrobe",
+      "type": "n",
+      "meaning": "a large, tall cabinet in which clothes may be hung or stored",
+      "example": "He hung his new coats in the wardrobe."
+    }
+  ],
+  "phrasalVerbs": [
+    {
+      "phrasalVerb": "cut off",
+      "meaning": "to remove something by cutting",
+      "example": "EX: She cut off a piece of fabric to make a pocket."
+    },
+    {
+      "phrasalVerb": "do up",
+      "meaning": "to fasten or button up clothing",
+      "example": "EX: Could you help me do up the zip at the back of my dress?"
+    },
+    {
+      "phrasalVerb": "fill up",
+      "meaning": "to make something completely full",
+      "example": "EX: He filled up the car with petrol before the road trip."
+    },
+    {
+      "phrasalVerb": "have on",
+      "meaning": "to wear clothing or an accessory",
+      "example": "EX: She had a beautiful gold necklace on."
+    },
+    {
+      "phrasalVerb": "leave out",
+      "meaning": "to exclude or omit someone/something from a group or list",
+      "example": "EX: You can leave out the last paragraph if the essay is too long."
+    },
+    {
+      "phrasalVerb": "put on",
+      "meaning": "to dress oneself in clothing or footwear",
+      "example": "EX: Put on your coat; it's very cold outside."
+    },
+    {
+      "phrasalVerb": "take off",
+      "meaning": "to remove clothing or footwear",
+      "example": "EX: Please take off your shoes before entering the house."
+    },
+    {
+      "phrasalVerb": "try on",
+      "meaning": "to put on a garment to see if it fits and looks good",
+      "example": "EX: You should try on the jeans before buying them."
+    }
+  ],
+  "prepositionalPhrases": [
+    {
+      "phrase": "at the back (of)",
+      "meaning": "at the rear part of something",
+      "example": "EX: The garden is at the back of the house."
+    },
+    {
+      "phrase": "at the end (of)",
+      "meaning": "at the final part of something",
+      "example": "EX: We are planning to go on holiday at the end of July."
+    },
+    {
+      "phrase": "in fashion/style",
+      "meaning": "popular and trendy at a particular time",
+      "example": "EX: Striped shirts are in fashion this summer."
+    },
+    {
+      "phrase": "in front (of)",
+      "meaning": "directly ahead of or opposite",
+      "example": "EX: There is a beautiful fountain in front of the building."
+    },
+    {
+      "phrase": "in the corner (of)",
+      "meaning": "at the place where two lines or walls meet",
+      "example": "EX: He sat quietly in the corner of the cafe."
+    },
+    {
+      "phrase": "out of fashion/style",
+      "meaning": "no longer popular or trendy",
+      "example": "EX: Flared trousers went out of fashion many years ago."
+    }
+  ],
+  "wordFormation": [
+    {
+      "word": "art",
+      "type": "noun",
+      "meaning": "artist: a person who creates paintings or drawings / artistic: having or revealing natural creative skill",
+      "example": "EX: Picasso is a very famous artist. / She has a lot of artistic talent."
+    },
+    {
+      "word": "break",
+      "type": "verb",
+      "meaning": "break-broke-broken: separate into pieces / (un)breakable: easy or impossible to break",
+      "example": "EX: Be careful not to break the vase. / These plastic glasses are unbreakable."
+    },
+    {
+      "word": "free",
+      "type": "adjective",
+      "meaning": "freedom: the power or right to act, speak, or think as one wants",
+      "example": "EX: The prisoners fought for their freedom."
+    },
+    {
+      "word": "exhibit",
+      "type": "verb",
+      "meaning": "exhibition: a public display of works of art or items of interest",
+      "example": "EX: We visited a modern art exhibition yesterday."
+    },
+    {
+      "word": "compose",
+      "type": "verb",
+      "meaning": "composition: a work of music, literature, or art / composer: a person who writes music",
+      "example": "EX: Mozart wrote many famous musical compositions. / He is a talented classical composer."
+    },
+    {
+      "word": "hand",
+      "type": "noun",
+      "meaning": "handful: a quantity that fills the hand / handle: the part by which a tool, bag, or cup is held",
+      "example": "EX: He ate a handful of nuts. / The handle of the suitcase was broken."
+    },
+    {
+      "word": "imagine",
+      "type": "verb",
+      "meaning": "imagination: the faculty or action of forming new ideas or images / imaginative: having or showing creativity or inventiveness",
+      "example": "EX: Children have a very vivid imagination. / The book is full of imaginative stories."
+    },
+    {
+      "word": "intelligent",
+      "type": "adjective",
+      "meaning": "intelligence: the ability to acquire and apply knowledge and skills",
+      "example": "EX: Artificial intelligence is developing rapidly."
+    },
+    {
+      "word": "perfect",
+      "type": "adjective",
+      "meaning": "perfection: the state of being perfect / imperfect: not perfect; faulty",
+      "example": "EX: She strives for perfection in everything she does. / The diamond has a few minor imperfect details."
+    },
+    {
+      "word": "prepare",
+      "type": "verb",
+      "meaning": "preparation: the action or process of making ready for use or consideration",
+      "example": "EX: Proper preparation is key to passing the test."
+    }
+  ],
+  "wordPatterns": [
+    {
+      "verb": "amazed at/by",
+      "pattern": "adjective",
+      "meaning": "filled with wonder or surprise",
+      "example": "EX: She was amazed by the magician's tricks."
+    },
+    {
+      "verb": "disappointed with",
+      "pattern": "adjective",
+      "meaning": "sad or displeased because expectations were not met",
+      "example": "EX: He was disappointed with his test results."
+    },
+    {
+      "verb": "familiar with",
+      "pattern": "adjective",
+      "meaning": "having good knowledge or understanding of",
+      "example": "EX: Are you familiar with the rules of chess?"
+    },
+    {
+      "verb": "involved in",
+      "pattern": "adjective",
+      "meaning": "taking part in or actively associated with",
+      "example": "EX: Many local residents were involved in the community project."
+    },
+    {
+      "verb": "similar to",
+      "pattern": "adjective",
+      "meaning": "having a resemblance in appearance, character, or quantity",
+      "example": "EX: His jacket is very similar to mine."
+    },
+    {
+      "verb": "change sth (from sth) into",
+      "pattern": "verb",
+      "meaning": "to transform or make something different",
+      "example": "EX: The fairy changed the pumpkin into a carriage."
+    },
+    {
+      "verb": "describe sth as",
+      "pattern": "verb",
+      "meaning": "to depict or represent something in a particular way",
+      "example": "EX: She described the movie as exciting and fun."
+    },
+    {
+      "verb": "explain sth to",
+      "pattern": "verb",
+      "meaning": "to make something clear by describing it in more detail",
+      "example": "EX: Can you explain the homework to me?"
+    },
+    {
+      "verb": "remind sb of",
+      "pattern": "verb",
+      "meaning": "to cause someone to remember someone or something",
+      "example": "EX: This song reminds me of my childhood holidays."
+    },
+    {
+      "verb": "remove sth from",
+      "pattern": "verb",
+      "meaning": "to take something away from a place",
+      "example": "EX: Please remove your books from the dining table."
+    },
+    {
+      "verb": "an influence on",
+      "pattern": "noun",
+      "meaning": "the capacity to have an effect on character or development",
+      "example": "EX: Peer pressure can have a strong influence on teenagers."
+    },
+    {
+      "verb": "a picture of",
+      "pattern": "noun",
+      "meaning": "a painting, drawing, or photograph depicting something",
+      "example": "EX: She has a picture of her family on her desk."
+    }
+  ],
+  "collocations": []
+}

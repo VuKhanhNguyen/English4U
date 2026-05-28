@@ -1,0 +1,82 @@
+{
+  "id": "b1-unit-32",
+  "title": "Unit 32: Reported questions, orders, and requests",
+  "grammar": [
+    {
+      "structure": "Reported Questions, Orders, and Requests",
+      "usage": "Used to report questions, orders, and requests with correct reporting verbs, word order (subject + verb), and infinitives.",
+      "example": "He asked her if she had been to the gallery. / Mum told me to put my clothes in the drawer."
+    }
+  ],
+  "richGrammar": [
+    {
+      "title": "A) REPORTED QUESTIONS, ORDERS, REQUESTS",
+      "blocks": [
+        {
+          "type": "title",
+          "content": "1. REPORTED QUESTIONS"
+        },
+        {
+          "type": "generic-table",
+          "headers": ["Type", "Direct Question", "Reported Question (IF / WHETHER / WH-)"],
+          "rows": [
+            [
+              "**Auxiliary Questions**\n(Have / Do / Be)",
+              "'Have you been to the gallery?' he asked her.\n\n'Do you want a coat?' my aunt asked.\n\n'Are you making a baby doll?' I asked Jenny.",
+              "He asked her **if / whether** she had been to the gallery.\n\nMy aunt asked **if / whether** I wanted a coat.\n\nI asked Jenny **if / whether** she was making a baby doll."
+            ],
+            [
+              "**Modal Questions**\n(Can / Will / Shall / May)",
+              "'Can you paint?' Mary asked her friend.\n\n'Will you make me one?' I asked Henry.\n\n'Shall I wear a jacket?' I asked Mum.\n\n'May I borrow your coat?' Mr. Jones asked me.",
+              "Mary asked **if / whether** her friend could paint.\n\nI asked Henry **if / whether** he would make me one.\n\nI asked Mum **if / whether** I should wear a jacket.\n\nMr. Jones asked me **if / whether** he might borrow my coat."
+            ],
+            [
+              "**Wh- Questions**\n(What / Who / Which / When / Why / How)",
+              "'What kind of shoes are trending now?' asked Tom.\n\n'Who did you see at the fashion show?' Sarah asked Lily.\n\n'Which one do you want?' I asked my friend.\n\n'When will they finish these drawings?' my leader asked.\n\n'Why did you say that?' my cousin asked me.\n\n'How much did your hat cost?' Ed asked Carol.",
+              "Tom asked what kind of shoes were trending at that moment.\n\nSarah asked Lily who she had seen at the fashion show.\n\nI asked my friend which one he wanted.\n\nMy leader asked when they would finish those drawings.\n\nMy cousin asked why I had said that.\n\nEd asked Carol how much her hat had cost."
+            ]
+          ]
+        },
+        {
+          "type": "title",
+          "content": "2. REPORTED ORDERS & REQUESTS"
+        },
+        {
+          "type": "generic-table",
+          "headers": ["Type", "Direct Structure", "Reported Structure & Examples"],
+          "rows": [
+            [
+              "**Orders**\n",
+              "'Put your clothes in the drawer,' Mum said.\n\n'Don't wear the red one,' Alice said.",
+              "**S + told + O + (not) + to-infinitive**\n\nMum told me **to put** my clothes in the drawer.\n\nAlice told me **not to wear** the red one."
+            ],
+            [
+              "**Requests**\n",
+              "'Will you make me one?' I asked Terry.\n\n'Please don't move my pictures,' said Oliver.",
+              "**S + asked + O + (not) + to-infinitive**\n\nI asked Terry **to make** me one.\n\nOliver asked me **not to move** his pictures."
+            ]
+          ]
+        },
+        {
+          "type": "title",
+          "content": "WATCH OUT! WORD ORDER IN REPORTED QUESTIONS"
+        },
+        {
+          "type": "list",
+          "bullets": [
+            "- Do not use question word order (verb + subject) in reported questions.",
+            "- Use statement word order (subject + verb) instead.",
+            "  - EX: *Tom asked what kind of shoes were trending...* (✓)",
+            "  - EX: *Tom asked what kind of shoes were they trending...* (✗)"
+          ]
+        }
+      ]
+    }
+  ],
+  "vocabulary": [],
+  "wordFormation": [],
+  "wordPatterns": [],
+  "phrasalVerbs": [],
+  "prepositionalPhrases": [],
+  "collocations": []
+}

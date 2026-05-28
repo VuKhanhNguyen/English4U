@@ -1,0 +1,223 @@
+{
+  "id": "b1-unit-31",
+  "title": "Unit 31: Reported speech",
+  "grammar": [
+    {
+      "structure": "Reported Speech",
+      "usage": "Used to report what another person has said by making appropriate changes to tenses, pronouns, and time/place references.",
+      "example": "He said that she always wore a coat. / He told me he hadn't finished his work."
+    }
+  ],
+  "richGrammar": [
+    {
+      "title": "A) REPORTED SPEECH",
+      "blocks": [
+        {
+          "type": "title",
+          "content": "1. TENSE CHANGES IN REPORTED SPEECH"
+        },
+        {
+          "type": "list",
+          "bullets": [
+            "We use reported speech when we want to report what another person said.",
+            "Usually, the tenses shift back into the past when the reporting verb is in the past tense."
+          ]
+        },
+        {
+          "type": "generic-table",
+          "headers": ["Direct Speech Tense", "Reported Speech Tense", "Direct Example", "Reported Example"],
+          "rows": [
+            [
+              "**Present simple**",
+              "**Past simple**",
+              "\"She always wears a coat.\"",
+              "He said (that) she always wore a coat."
+            ],
+            [
+              "**Present continuous**",
+              "**Past continuous**",
+              "\"I am looking for my keys.\"",
+              "She said that she was looking for her keys."
+            ],
+            [
+              "**Present perfect continuous**",
+              "**Past perfect continuous**",
+              "\"I have been drawing all day,\" said Tom.",
+              "Tom said he had been drawing all day."
+            ],
+            [
+              "**Past simple**",
+              "**Past perfect simple**",
+              "\"My friend gave me a bar of chocolate yesterday.\"",
+              "She said her friend had given her a bar of chocolate the day before."
+            ],
+            [
+              "**Past continuous**",
+              "**Past perfect continuous**",
+              "\"I was writing a poem,\" said Tina.",
+              "Tina said she had been writing a poem."
+            ],
+            [
+              "**Will**",
+              "**Would**",
+              "\"I will finish my report in two days.\"",
+              "He said that he would finish his report in two days."
+            ],
+            [
+              "**Am/is/are going to**",
+              "**Was/were going to**",
+              "\"They are going to make a new one,\" said Joe.",
+              "Joe said they were going to make a new one."
+            ],
+            [
+              "**Can**",
+              "**Could**",
+              "\"I can draw quite well,\" Emma said.",
+              "Emma said she could draw quite well."
+            ],
+            [
+              "**Must / have to**",
+              "**Had to**",
+              "\"You have to visit the fashion show,\" he said.",
+              "He said we had to visit the fashion show."
+            ],
+            [
+              "**May**",
+              "**Might**",
+              "\"I may visit the Thien Mu Pagoda next week,\" said Hong.",
+              "Hong said she might visit the Thien Mu Pagoda the following week."
+            ]
+          ]
+        },
+        {
+          "type": "title",
+          "content": "2. PRONOUNS, DETERMINERS & TIME/PLACE CHANGES"
+        },
+        {
+          "type": "list",
+          "bullets": [
+            "**Pronouns & Determiners Changes**:",
+            "- **I** -> **he/she**",
+            "- **you** -> **I / me / they / them**",
+            "- **we** -> **they**",
+            "- **us** -> **them**",
+            "- **my** -> **his/her**",
+            "- **your** -> **my/their**",
+            "**Time & Place Expressions Changes**:",
+            "- **here** -> **there**",
+            "- **now** -> **then / at that moment**",
+            "- **tomorrow** -> **the next day / the following day**",
+            "- **tonight** -> **that night**",
+            "- **next week** -> **the following week**",
+            "- **yesterday** -> **the day before / the previous day**",
+            "- **last week** -> **the week before / the previous week**",
+            "- **ago** -> **before**"
+          ]
+        },
+        {
+          "type": "title",
+          "content": "3. REPORTING VERB TENSE & SPECIAL RULES"
+        },
+        {
+          "type": "list",
+          "bullets": [
+            "**Rule 1: Reporting verb in the present tense**",
+            "- If the reporting verb is in the present tense (e.g. *says, tells*), the tense in reported speech does not change.",
+            "  - EX: *Tom says, \"I am going to study architecture.\"* -> **Tom says he is going to study architecture.**",
+            "**Rule 2: Unchanged past perfect forms**",
+            "- Past perfect simple and past perfect continuous do not shift tense in reported speech.",
+            "  - EX: *\"I had seen the picture before,\" he said.* -> **He said he had seen the picture before.**",
+            "**Rule 3: Unchanged modal verbs**",
+            "- Modal verbs like *would, should, could, might* do not change form.",
+            "  - EX: *\"I might take up painting,\" she said.* -> **She said she might take up painting.**",
+            "**Rule 4: Other reporting verbs**",
+            "- You can use specific reporting verbs (e.g. *apologize, deny, promise, refuse*) to summarize the speaker's words.",
+            "  - EX: *\"I'm sorry I told everyone your secret,\" my sister said.* -> **My sister apologized for telling everyone my secret.**",
+            "  - EX: *\"I'll love you forever!\" Francis said to Elizabeth.* -> **Francis promised to love Elizabeth forever.**",
+            "  - EX: *\"No, I won't open the door!\" said Mandy.* -> **Mandy refused to open the door.**",
+            "  - EX: *\"I didn't give the money to John,\" said Ali.* -> **Ali denied giving the money to John.**"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "B) REPORTED SPEECH STRUCTURES",
+      "blocks": [
+        {
+          "type": "generic-table",
+          "headers": ["Type", "Reported Structure", "Example Sentence"],
+          "rows": [
+            [
+              "**Statements**\n(Statements)",
+              "S + told + O + (that) + S + V\nS + said + (that) + S + V",
+              "EX: He said to me \"I haven't finished my work.\"\n-> **He told me he hadn't finished his work.**"
+            ],
+            [
+              "**Yes/No Questions**\n(Yes/No questions)",
+              "S + asked/wanted to know/wondered + if/whether + S + V",
+              "EX: \"Are you angry?\" he asked.\n-> **He asked if/whether I was angry.**"
+            ],
+            [
+              "**Wh- Questions**\n(Wh- questions)",
+              "S + asked (+ O) / wanted to know / wondered + Wh-word + S + V",
+              "EX: \"What are you talking about?\" said the teacher.\n-> **The teacher asked us what we were talking about.**"
+            ],
+            [
+              "**Imperatives (Positive)**\n(Positive imperatives)",
+              "S + told / ordered + O + to-infinitive",
+              "EX: \"Please wait for me here, Mary,\" said Tom.\n-> **Tom told Mary to wait for him there.**"
+            ],
+            [
+              "**Imperatives (Negative)**\n(Negative imperatives)",
+              "S + told / ordered + O + not + to-infinitive",
+              "EX: \"Don't talk in class,\" the teacher said to us.\n-> **The teacher told us not to talk in class.**"
+            ]
+          ]
+        }
+      ]
+    }
+  ],
+  "vocabulary": [
+    {
+      "word": "wooden",
+      "type": "adj",
+      "meaning": "made of wood",
+      "example": "They sat on a simple wooden bench in the garden."
+    },
+    {
+      "word": "Encyclopaedia",
+      "type": "n",
+      "meaning": "a book or set of books giving information on many subjects",
+      "example": "He looked up the history of Rome in the encyclopaedia."
+    },
+    {
+      "word": "stomach",
+      "type": "n",
+      "meaning": "the organ in your body where food is digested",
+      "example": "He had a stomach ache after eating too much candy."
+    },
+    {
+      "word": "juggle",
+      "type": "v",
+      "meaning": "to continuously throw several objects into the air and catch them",
+      "example": "The street performer could juggle five balls at the same time."
+    },
+    {
+      "word": "score",
+      "type": "v",
+      "meaning": "to win a point in a game or sport",
+      "example": "She managed to score the winning goal in the final minute of the match."
+    },
+    {
+      "word": "drawer",
+      "type": "n",
+      "meaning": "a box-shaped container in a piece of furniture that slides in and out",
+      "example": "He kept his socks and t-shirts in the top drawer of the dresser."
+    }
+  ],
+  "wordFormation": [],
+  "wordPatterns": [],
+  "phrasalVerbs": [],
+  "prepositionalPhrases": [],
+  "collocations": []
+}
