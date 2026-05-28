@@ -1,0 +1,422 @@
+{
+  "id": "b1-unit-36",
+  "title": "Unit 36: The environment",
+  "grammar": [],
+  "vocabulary": [
+    {
+      "word": "amazing",
+      "type": "adj",
+      "meaning": "causing great surprise or wonder; very good",
+      "example": "The view from the top of the mountain was absolutely amazing."
+    },
+    {
+      "word": "climate",
+      "type": "n",
+      "meaning": "the general weather conditions of a place over a long period",
+      "example": "The country is known for its warm and sunny climate."
+    },
+    {
+      "word": "countryside",
+      "type": "n",
+      "meaning": "land outside towns and cities, with fields, woods, and farms",
+      "example": "We decided to take a peaceful walk in the countryside."
+    },
+    {
+      "word": "environment",
+      "type": "n",
+      "meaning": "the natural world in which people, animals, and plants live",
+      "example": "We must do more to protect the environment from pollution."
+    },
+    {
+      "word": "extinct",
+      "type": "adj",
+      "meaning": "no longer existing or living",
+      "example": "Dinosaurs became extinct millions of years ago."
+    },
+    {
+      "word": "forecast",
+      "type": "v, n",
+      "meaning": "a description of what is likely to happen in the future, especially regarding the weather",
+      "example": "What is the weather forecast for tomorrow?"
+    },
+    {
+      "word": "freezing",
+      "type": "adj",
+      "meaning": "extremely cold; at or below the temperature at which water freezes",
+      "example": "It is freezing outside, so make sure you wear a warm coat."
+    },
+    {
+      "word": "global",
+      "type": "adj",
+      "meaning": "relating to the whole world; worldwide",
+      "example": "Global warming is a major threat to our planet's future."
+    },
+    {
+      "word": "heatwave",
+      "type": "n",
+      "meaning": "a period of unusually hot weather that lasts for several days or weeks",
+      "example": "The government warned elderly people to stay indoors during the heatwave."
+    },
+    {
+      "word": "insect",
+      "type": "n",
+      "meaning": "a small animal with six legs and three body parts, and usually one or two pairs of wings",
+      "example": "Bees and ants are common types of insects."
+    },
+    {
+      "word": "lightning",
+      "type": "n",
+      "meaning": "a sudden bright flash of light in the sky during a storm",
+      "example": "The tall tree was struck by lightning during the thunderstorm."
+    },
+    {
+      "word": "litter",
+      "type": "v, n",
+      "meaning": "small pieces of rubbish left lying in a public place, or to drop rubbish in a public place",
+      "example": "Please don't litter; throw your rubbish in the bin."
+    },
+    {
+      "word": "local",
+      "type": "adj",
+      "meaning": "relating to the particular area or neighborhood where you live",
+      "example": "We buy fresh vegetables from the local market."
+    },
+    {
+      "word": "locate",
+      "type": "v",
+      "meaning": "to find the exact position of something, or to put something in a particular place",
+      "example": "Engineers are trying to locate the source of the water leak."
+    },
+    {
+      "word": "mammal",
+      "type": "n",
+      "meaning": "an animal that feeds its babies on milk from its body",
+      "example": "Whales, dolphins, and humans are all mammals."
+    },
+    {
+      "word": "mild",
+      "type": "adj",
+      "meaning": "not severe, strong, or cold; moderate and pleasant",
+      "example": "We had a mild winter this year with very little snow."
+    },
+    {
+      "word": "name",
+      "type": "v, n",
+      "meaning": "the word or words that a person, thing, or place is known by, or to give a name to",
+      "example": "They decided to name their new puppy Max."
+    },
+    {
+      "word": "origin",
+      "type": "n",
+      "meaning": "the point or place where something begins or comes from",
+      "example": "Scientists are studying the origin of the universe."
+    },
+    {
+      "word": "planet",
+      "type": "n",
+      "meaning": "a large round object in space that moves around the sun or another star",
+      "example": "Earth is the third planet from the sun."
+    },
+    {
+      "word": "preserve",
+      "type": "v",
+      "meaning": "to keep something safe from harm, damage, or destruction",
+      "example": "The historical society works to preserve old buildings in the city."
+    },
+    {
+      "word": "recycle",
+      "type": "v",
+      "meaning": "to treat things that have already been used so that they can be used again",
+      "example": "You should recycle paper, glass, and plastic bottles."
+    },
+    {
+      "word": "reptile",
+      "type": "n",
+      "meaning": "a cold-blooded animal with skin covered in scales, such as a snake or lizard",
+      "example": "Snakes, turtles, and crocodiles are all reptiles."
+    },
+    {
+      "word": "rescue",
+      "type": "v, n",
+      "meaning": "to save someone or something from a dangerous or unpleasant situation",
+      "example": "The firefighters managed to rescue the cat from the burning house."
+    },
+    {
+      "word": "satellite",
+      "type": "n",
+      "meaning": "an electronic device sent into space to move around the Earth or another planet for communication or research",
+      "example": "The weather forecast is based on images sent by a satellite."
+    },
+    {
+      "word": "shower",
+      "type": "n",
+      "meaning": "a short period of rain",
+      "example": "We got caught in a sudden shower of rain on our way home."
+    },
+    {
+      "word": "solar system",
+      "type": "n phr",
+      "meaning": "the sun and all the planets that move around it",
+      "example": "There are eight known planets in our solar system."
+    },
+    {
+      "word": "species",
+      "type": "n",
+      "meaning": "a group of animals or plants that are similar and can breed with each other",
+      "example": "There are thousands of different species of butterflies in the world."
+    },
+    {
+      "word": "thunder",
+      "type": "n",
+      "meaning": "the loud noise that you hear in the sky during a storm",
+      "example": "We heard the sound of distant thunder rolling across the hills."
+    },
+    {
+      "word": "wild",
+      "type": "adj",
+      "meaning": "living or growing in its natural state; not domestic or civilized",
+      "example": "It is exciting to see wild animals in their natural habitats."
+    },
+    {
+      "word": "wildlife",
+      "type": "n",
+      "meaning": "animals, birds, and insects that live in their natural environment",
+      "example": "The new national park aims to protect the local wildlife."
+    },
+    {
+      "word": "eagle",
+      "type": "n",
+      "meaning": "a large, strong bird of prey with excellent eyesight",
+      "example": "An eagle was soaring high in the sky above the mountains."
+    },
+    {
+      "word": "dynamite",
+      "type": "n",
+      "meaning": "a type of strong explosive",
+      "example": "The workers used dynamite to blast a tunnel through the rock."
+    },
+    {
+      "word": "rainforest",
+      "type": "n",
+      "meaning": "a thick forest in a tropical area where it rains a lot",
+      "example": "The Amazon is the largest tropical rainforest in the world."
+    },
+    {
+      "word": "lizard",
+      "type": "n",
+      "meaning": "a reptile with a long body, four legs, and a tail",
+      "example": "A small lizard was sunbathing on the stone wall."
+    }
+  ],
+  "phrasalVerbs": [
+    {
+      "phrasalVerb": "blow up",
+      "meaning": "to explode, or to cause to explode",
+      "example": "EX: The bridge blew up under the pressure of the flood. / The terrorists tried to blow up the building."
+    },
+    {
+      "phrasalVerb": "build up",
+      "meaning": "to increase, or to strengthen gradually",
+      "example": "EX: These exercises will help build up your strength."
+    },
+    {
+      "phrasalVerb": "clear up",
+      "meaning": "to make clean or tidy; or to become clear and sunny (of weather)",
+      "example": "EX: I need to clear up my bedroom before guests arrive. / The sky cleared up after the heavy rain."
+    },
+    {
+      "phrasalVerb": "go out",
+      "meaning": "to stop burning or shining (of a fire or light)",
+      "example": "EX: The campfire went out because we ran out of wood."
+    },
+    {
+      "phrasalVerb": "keep out",
+      "meaning": "to prevent someone or something from entering a place",
+      "example": "EX: The sign on the gate said 'Keep Out'."
+    },
+    {
+      "phrasalVerb": "put down",
+      "meaning": "to place something on a surface; or to stop carrying",
+      "example": "EX: Please put the heavy box down on the floor."
+    },
+    {
+      "phrasalVerb": "put out",
+      "meaning": "to extinguish a fire or light",
+      "example": "EX: It took the firefighters three hours to put out the forest fire."
+    },
+    {
+      "phrasalVerb": "put up",
+      "meaning": "to attach or display something on a wall or structure",
+      "example": "EX: We put up some colorful paintings in the living room."
+    }
+  ],
+  "prepositionalPhrases": [
+    {
+      "phrase": "at most",
+      "meaning": "not more than; at the maximum",
+      "example": "EX: The trip to the nearest village will take thirty minutes at most."
+    },
+    {
+      "phrase": "at the top/bottom (of)",
+      "meaning": "at the highest or lowest part of something",
+      "example": "EX: There was a small cabin at the top of the hill. / The keys were lying at the bottom of the lake."
+    },
+    {
+      "phrase": "in the beginning",
+      "meaning": "at the start of something",
+      "example": "EX: In the beginning, the project seemed very difficult, but it got easier over time."
+    },
+    {
+      "phrase": "in the distance",
+      "meaning": "far away but still able to be seen or heard",
+      "example": "EX: We could see the lights of a ship in the distance."
+    },
+    {
+      "phrase": "in total",
+      "meaning": "with everything added together; altogether",
+      "example": "EX: There were twenty people in total at the meeting."
+    },
+    {
+      "phrase": "on top (of)",
+      "meaning": "on the highest part of or covering something",
+      "example": "EX: She placed the textbook on top of the pile."
+    }
+  ],
+  "wordFormation": [
+    {
+      "word": "centre",
+      "type": "noun",
+      "meaning": "centre: the middle point / central: located in the center or chief",
+      "example": "EX: We met in the centre of town. / The hotel has a very central location."
+    },
+    {
+      "word": "circle",
+      "type": "noun/verb",
+      "meaning": "circle: to move around in a circle / circular: having the shape of a circle",
+      "example": "EX: The eagle circled in the sky above the forest. / The table has a circular top."
+    },
+    {
+      "word": "danger",
+      "type": "noun",
+      "meaning": "danger: possibility of suffering harm / dangerous: likely to cause problems or injury",
+      "example": "EX: Firefighters often face extreme danger. / Walking alone in this forest at night is dangerous."
+    },
+    {
+      "word": "deep",
+      "type": "adjective",
+      "meaning": "deeply: very much or intensely / depth: the distance from top to bottom",
+      "example": "EX: She was deeply touched by their kind gesture. / What is the depth of the swimming pool?"
+    },
+    {
+      "word": "destroy",
+      "type": "verb",
+      "meaning": "destruction: the act of destroying / destructive: causing severe damage",
+      "example": "EX: The earthquake destroyed several buildings. / The destruction of the rainforest is a major environmental problem. / Storms can be very destructive to coastal towns."
+    },
+    {
+      "word": "fog",
+      "type": "noun",
+      "meaning": "foggy: full of or accompanied by fog",
+      "example": "EX: We couldn't see the road clearly because of the heavy fog. / It was a cold, foggy morning in London."
+    },
+    {
+      "word": "garden",
+      "type": "noun",
+      "meaning": "gardener: a person who works in a garden / gardening: the activity of tending a garden",
+      "example": "EX: The gardener watered the roses. / Gardening is a popular leisure activity."
+    },
+    {
+      "word": "invade",
+      "type": "verb",
+      "meaning": "invasion: an instance of invading / invader: a person or group that invades",
+      "example": "EX: The army was preparing to invade the neighboring territory. / The museum has an exhibition about the foreign invasion. / The defenders successfully fought off the invaders."
+    },
+    {
+      "word": "nature",
+      "type": "noun",
+      "meaning": "natural: existing in or caused by nature / naturally: of course; in a natural manner",
+      "example": "EX: It is natural to feel nervous before an exam. / Naturally, she was happy to win the competition."
+    },
+    {
+      "word": "pollute",
+      "type": "verb",
+      "meaning": "pollution: the presence of harmful substances / polluted: dirty and contaminated",
+      "example": "EX: Air pollution is a serious problem in big cities. / The river is highly polluted by chemical waste from the local factory."
+    }
+  ],
+  "wordPatterns": [
+    {
+      "verb": "afraid of",
+      "pattern": "adjective",
+      "meaning": "feeling fear or anxiety about something",
+      "example": "EX: Many children are afraid of the dark."
+    },
+    {
+      "verb": "aware of",
+      "pattern": "adjective",
+      "meaning": "knowing or realizing something; conscious of",
+      "example": "EX: She was not aware of the danger."
+    },
+    {
+      "verb": "enthusiastic about",
+      "pattern": "adjective",
+      "meaning": "feeling or showing intense enjoyment, interest, or approval",
+      "example": "EX: The children are very enthusiastic about going to the zoo."
+    },
+    {
+      "verb": "serious about",
+      "pattern": "adjective",
+      "meaning": "thinking or acting sincerely about something; not joking or casual",
+      "example": "EX: Are you serious about starting your own business?"
+    },
+    {
+      "verb": "short of",
+      "pattern": "adjective",
+      "meaning": "not having enough of something",
+      "example": "EX: We are short of milk, so I need to go to the grocery store."
+    },
+    {
+      "verb": "escape from",
+      "pattern": "verb",
+      "meaning": "to succeed in getting away from a place where you are kept or a dangerous situation",
+      "example": "EX: The prisoners managed to escape from the prison."
+    },
+    {
+      "verb": "prevent sb from",
+      "pattern": "verb",
+      "meaning": "to stop someone from doing something",
+      "example": "EX: Bad weather prevented us from going on a picnic."
+    },
+    {
+      "verb": "save sth from",
+      "pattern": "verb",
+      "meaning": "to rescue or protect something from danger or destruction",
+      "example": "EX: We must work together to save the forest from destruction."
+    },
+    {
+      "verb": "think about",
+      "pattern": "verb",
+      "meaning": "to consider or reflect on something",
+      "example": "EX: I need some time to think about your proposal."
+    },
+    {
+      "verb": "worry about",
+      "pattern": "verb",
+      "meaning": "to feel anxious or concerned about something",
+      "example": "EX: Parents always worry about their children's future."
+    },
+    {
+      "verb": "damage to",
+      "pattern": "noun",
+      "meaning": "harm or injury caused to something",
+      "example": "EX: The storm caused serious damage to the roof of the house."
+    },
+    {
+      "verb": "an increase in",
+      "pattern": "noun",
+      "meaning": "a rise in the amount, number, or level of something",
+      "example": "EX: There has been a significant increase in global temperatures over the last decade."
+    }
+  ],
+  "collocations": []
+}

@@ -1,0 +1,148 @@
+{
+  "id": "b1-unit-34",
+  "title": "Unit 34: Direct and indirect objects",
+  "grammar": [
+    {
+      "structure": "Direct and Indirect Objects",
+      "usage": "Understand how verbs are used with direct and indirect objects, including intransitive, transitive, and double-object verbs, and how to change sentence patterns using 'to' and 'for'.",
+      "example": "I'd like to teach English to your teenagers. / I'd like to teach your teenagers English."
+    }
+  ],
+  "richGrammar": [
+    {
+      "title": "A) DIRECT AND INDIRECT OBJECTS",
+      "blocks": [
+        {
+          "type": "title",
+          "content": "1. VERB PATTERNS & OBJECT STRUCTURES"
+        },
+        {
+          "type": "generic-table",
+          "headers": [
+            "Intransitive: S + V",
+            "Transitive: S + V + O",
+            "Double-Object Verbs: S + V + IO + DO / S + V + DO + prep + IO"
+          ],
+          "rows": [
+            [
+              "**The flowers grew.**\n\n- Intransitive verbs do not take any direct object.",
+              "**We picked up the rubbish.**\n\n- Transitive verbs require a direct object to complete their meaning.",
+              "**I'd like to teach your teenagers English.**\n**I'd like to teach English to your teenagers.**\n\n- Double-object verbs can take two objects: an indirect object (usually a person) and a direct object (usually a thing).\n- When the direct object comes first, we use a preposition (usually **to** or **for**) before the indirect object."
+            ]
+          ]
+        },
+        {
+          "type": "title",
+          "content": "2. VERB CLASSIFICATION"
+        },
+        {
+          "type": "generic-table",
+          "headers": [
+            "S + V (Intransitive Verbs)",
+            "S + V + O (Transitive Verbs)",
+            "Double-Object Verbs (with 'to' / 'for')"
+          ],
+          "rows": [
+            [
+              "- **fall down** (to drop to the ground)\n- **get up** (to rise from bed)\n- **grow** (to increase in size)\n- **happen** (to occur/take place)\n- **laugh** (to make sounds showing amusement)\n- **run away** (to escape)\n- **sleep** (to rest in sleep)\n- **speak** (to talk/say words)\n- **walk** (to move on foot)\n- **work** (to perform tasks)\n- **sit down** (to sit)\n- **stand up** (to stand)",
+              "- **borrow** (to take temporarily)\n- **close** (to shut)\n- **draw** (to make a picture)\n- **drink** (to swallow liquid)\n- **drive** (to operate a vehicle)\n- **eat** (to consume food)\n- **have** (to possess)\n- **invite** (to request presence)\n- **open** (to make accessible)\n- **paint** (to cover with paint)\n- **pick up** (to lift/gather)\n- **plant** (to put in ground)",
+              "- **bring** (to carry to a place)\n- **buy** (to purchase)\n- **cost** (to require payment)\n- **get** (to obtain/receive)\n- **give** (to hand over/present)\n- **lend** (to let someone borrow)\n- **make** (to create/construct)\n- **offer** (to propose/present)\n- **owe** (to have to pay back)\n- **pass** (to hand over)\n- **pay** (to give money for work/goods)\n- **read** (to comprehend text)\n- **teach** (to impart knowledge)\n- **tell** (to say to someone)\n- **throw** (to propel through air)\n- **write** (to compose text)"
+            ]
+          ]
+        },
+        {
+          "type": "title",
+          "content": "B) SENTENCE TRANSFORMATION"
+        },
+        {
+          "type": "list",
+          "bullets": [
+            "We can change the position of direct and indirect objects using two main patterns:",
+            "1. **S + V + indirect O + direct O** (No preposition)",
+            "   - EX: *My mum is going to write the editor a letter.* (✓)",
+            "2. **S + V + direct O + preposition + indirect O** (Uses **to** or **for**)",
+            "   - EX: *My mum is going to write a letter TO the editor.* (✓)",
+            "**Word Order and Sentence Length Note**:",
+            "- If the indirect object is a long phrase (e.g. *the old lady who lives next door*), we usually place the direct object first followed by the prepositional phrase.",
+            "  - EX: *My mum often makes some soup FOR the old lady who lives next door.* (✓)",
+            "  - EX: *My mum often makes the old lady who lives next door some soup.* (Avoid this word order as it is awkward to have a very long indirect object before a short direct object.)",
+            "  - EX: *My mum often makes for the old lady who lives next door some soup.* (✗ - Incorrect syntax)"
+          ]
+        }
+      ]
+    }
+  ],
+  "vocabulary": [
+    {
+      "word": "crisp",
+      "type": "adj",
+      "meaning": "firm, dry, and brittle in a pleasant way",
+      "example": "I love eating fresh, crisp apples in the morning."
+    },
+    {
+      "word": "autograph",
+      "type": "n",
+      "meaning": "a signature, especially of a famous person, written for a collector or fan",
+      "example": "We waited after the concert to get the lead singer's autograph."
+    },
+    {
+      "word": "astronomy",
+      "type": "n",
+      "meaning": "the scientific study of the stars, planets, and other natural objects in space",
+      "example": "He has been interested in astronomy since he got his first telescope."
+    },
+    {
+      "word": "hobby",
+      "type": "n",
+      "meaning": "an activity that you do for pleasure in your spare time",
+      "example": "Her hobbies include painting, gardening, and playing the piano."
+    },
+    {
+      "word": "telescope",
+      "type": "n",
+      "meaning": "a tube-like device that you look through to make distant objects appear larger and closer",
+      "example": "Through the telescope, we could clearly see the rings of Saturn."
+    },
+    {
+      "word": "basic",
+      "type": "adj",
+      "meaning": "forming the most important or necessary part of something; simple",
+      "example": "Every child should learn basic computer skills."
+    },
+    {
+      "word": "planet",
+      "type": "n",
+      "meaning": "a large round object in space that moves around the sun or another star",
+      "example": "Mars is often called the Red Planet because of its reddish color."
+    },
+    {
+      "word": "architect",
+      "type": "n",
+      "meaning": "a person whose job is to design buildings",
+      "example": "The architect showed us the plans for our new house."
+    },
+    {
+      "word": "old-fashioned",
+      "type": "adj",
+      "meaning": "not modern; belonging to a style or fashion from the past",
+      "example": "She loves wearing old-fashioned dresses from the 1950s."
+    },
+    {
+      "word": "breath",
+      "type": "n",
+      "meaning": "the air that you take into your lungs and send out again",
+      "example": "Take a deep breath and try to relax."
+    },
+    {
+      "word": "breathe",
+      "type": "v",
+      "meaning": "to take air into your lungs and send it out again",
+      "example": "It is difficult to breathe at high altitudes."
+    }
+  ],
+  "wordFormation": [],
+  "wordPatterns": [],
+  "phrasalVerbs": [],
+  "prepositionalPhrases": [],
+  "collocations": []
+}

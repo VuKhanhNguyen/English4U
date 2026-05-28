@@ -1,0 +1,76 @@
+{
+  "id": "b1-unit-35",
+  "title": "Unit 35: Wish",
+  "grammar": [
+    {
+      "structure": "Wish / If only",
+      "usage": "Used to express regrets, complaints, and desires about the past, present, or future using 'wish' and 'if only' with appropriate tense shifts.",
+      "example": "Carl wishes he had a telescope. / I wish I could travel through time."
+    }
+  ],
+  "richGrammar": [
+    {
+      "title": "A) WISH STRUCTURES",
+      "blocks": [
+        {
+          "type": "generic-table",
+          "headers": [
+            "Use / Meaning",
+            "Structures",
+            "Examples"
+          ],
+          "rows": [
+            [
+              "**Wishes about the past**\n\n- Expresses regret about something that did not happen in the past (contrary to past facts).",
+              "- **Wish + S + had + V3/ed**\n- **Wish + S + had + not + V3/ed**",
+              "- EX: *Tracy wishes she'd seen that programme.*\n- EX: *I wish she hadn't been disappointed.*"
+            ],
+            [
+              "**Wishes about the present**\n\n- Expresses regret about a current situation (contrary to present facts).",
+              "- **Wish + S + V2/ed**\n- **Wish + S + were + ...**\n- **Wish + S + didn't + V**\n- **Wish + S + were + not + ...**",
+              "- EX: *Carl wishes he had a telescope.*\n- EX: *I wish the weather weren't hot now.*"
+            ],
+            [
+              "**Criticism / Complaints**\n\n- Expresses annoyance, criticism, or complaints about a situation or someone's behavior in the present.",
+              "- **Wish + S + would + V** (bare infinitive)",
+              "- EX: *I wish people would throw their litter in the bin and not on the ground!*"
+            ],
+            [
+              "**Wishes about ability / permission**\n\n- Expresses a desire for ability or permission to do something.",
+              "- **Wish + S + could + V** (bare infinitive)",
+              "- EX: *I wish I could travel through time.*"
+            ]
+          ]
+        },
+        {
+          "type": "title",
+          "content": "IMPORTANT NOTES"
+        },
+        {
+          "type": "list",
+          "bullets": [
+            "**1. Using 'If only'**:",
+            "- We can use **If only** in place of **wish** to express stronger feelings or greater emphasis.",
+            "  - EX: *If only I had seen that programme!*",
+            "  - EX: *If only the weather weren't hot now!*",
+            "**2. No 'would' for self-wishes**:",
+            "- Do not use **would** for wishes about yourself. Use **past simple** or **could** instead.",
+            "  - EX: *I wish I lived on Mars.* (✓)",
+            "  - EX: *I wish I would live on Mars.* (✗)",
+            "**3. Wish vs. Hope**:",
+            "- Use **wish** for events that are impossible or highly unlikely to happen.",
+            "- Use **hope** when there is a real possibility of the event happening in the present or future.",
+            "  - EX: *We are planning to go camping for many months, so we hope it doesn't rain tomorrow.* (✓ - It is possible it won't rain.)",
+            "  - EX: *We are planning to go camping for many months, so we wish it doesn't rain tomorrow.* (✗ - Incorrect usage of wish for a possible future event.)"
+          ]
+        }
+      ]
+    }
+  ],
+  "vocabulary": [],
+  "wordFormation": [],
+  "wordPatterns": [],
+  "phrasalVerbs": [],
+  "prepositionalPhrases": [],
+  "collocations": []
+}
