@@ -1,0 +1,74 @@
+{
+  "id": "b1-unit-38",
+  "title": "Unit 38: Both, either, neither, so, nor",
+  "grammar": [
+    {
+      "structure": "Both, Either, Neither, So, Nor",
+      "usage": "Understand how to use linkers to connect two elements (both... and, either... or, neither... nor) and how to agree with positive or negative statements using 'so' and 'nor/neither'.",
+      "example": "Simon is both rude and unkind. / You're good at listening to people, and so am I."
+    }
+  ],
+  "richGrammar": [
+    {
+      "title": "A) BOTH, EITHER, NEITHER",
+      "blocks": [
+        {
+          "type": "generic-table",
+          "headers": [
+            "Linker",
+            "Structures & Rules",
+            "Usages & Examples"
+          ],
+          "rows": [
+            [
+              "**BOTH**\n(Both)",
+              "- **Both + N1 + and + N2**\n- **Both + Adj1 + and + Adj2**\n- **Both of + pronoun** (object form: *us, you, them*)",
+              "**1. Emphasizes that both options/qualities are true:**\n- EX: *Simon is both rude and unkind.*\n\n**2. Expresses similarity/connection between two entities:**\n- EX: *Jack and Jill both know lots of jokes.*\n\n**3. Used with 'of' before a pronoun:**\n- EX: *I've had an argument with both of them.*"
+            ],
+            [
+              "**EITHER**\n(Either)",
+              "- **Either + N1 + or + N2**\n- **Either + Adj1 + or + Adj2**\n- **Either + V1 + or + V2**\n- **Either of + pronoun** (object form: *us, you, them*)",
+              "**1. Expresses a choice between two possibilities:**\n- EX: *I think I'll buy a Valentine's card with either a puppy or a kitten on it.*\n\n**2. Used with 'of' before a pronoun:**\n- EX: *I really like Robert and Martin. I'll go out with either of them.*"
+            ],
+            [
+              "**NEITHER**\n(Neither)",
+              "- **Neither + N1 + nor + N2**\n- **Neither + Adj1 + nor + Adj2**\n- **Neither + V1 + nor + V2**\n- **Neither of + pronoun** (object form: *us, you, them*)",
+              "**1. Emphasizes that both options/qualities are not true (negative choice):**\n- EX: *What you said to Lucy was neither true nor fair.*\n\n**2. Used with 'of' before a pronoun:**\n- EX: *Neither of us found Jason's joke funny.*"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "title": "B) SO & NOR",
+      "blocks": [
+        {
+          "type": "generic-table",
+          "headers": [
+            "Linker",
+            "Structure",
+            "Usage & Examples"
+          ],
+          "rows": [
+            [
+              "**SO**",
+              "**So + do / have / be / modal + S**",
+              "**Used to agree with a positive (affirmative) statement:**\n- EX: *You're good at listening to people, and so am I.* (agreeing that I am also good at listening)"
+            ],
+            [
+              "**NOR / NEITHER**",
+              "**Nor / Neither + do / have / be / modal + S**",
+              "**Used to agree with a negative statement:**\n- EX: *Tom wouldn't forgive Jenny, and nor would I.* (agreeing that I also wouldn't forgive her)\n- EX: *He doesn't like spinach, and neither do I.*"
+            ]
+          ]
+        }
+      ]
+    }
+  ],
+  "vocabulary": [],
+  "wordFormation": [],
+  "wordPatterns": [],
+  "phrasalVerbs": [],
+  "prepositionalPhrases": [],
+  "collocations": []
+}

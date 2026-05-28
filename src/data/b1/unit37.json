@@ -1,0 +1,163 @@
+{
+  "id": "b1-unit-37",
+  "title": "Unit 37: -ing and infinitive",
+  "grammar": [
+    {
+      "structure": "-ing and Infinitive",
+      "usage": "Understand how and when to use gerunds (-ing) and infinitives (to V) after various verbs, prepositions, or as subjects, including verbs that can take both forms with or without a change in meaning.",
+      "example": "Do you remember seeing that film? / Did you remember to invite James to come?"
+    }
+  ],
+  "richGrammar": [
+    {
+      "title": "A) -ING & TO INFINITIVE",
+      "blocks": [
+        {
+          "type": "generic-table",
+          "headers": [
+            "Verbs followed by V-ing (Gerund)",
+            "Verbs followed by Infinitive (to V)"
+          ],
+          "rows": [
+            [
+              "- **admit** (to confess to something)\n- **avoid** (to keep away from)\n- **deny** (to declare untrue)\n- **discuss** (to talk about)\n- **dislike** (to find unpleasant)\n- **enjoy** (to take pleasure in)\n- **feel like** (to want/desire)\n- **finish** (to bring to an end)\n- **give up** (to stop doing something)\n- **mention** (to refer to briefly)\n- **mind** (to object to / feel annoyed by)\n- **practice** (to do repeatedly to improve)\n- **suggest** (to propose an idea)\n- **take up** (to begin a hobby)",
+              "- **advise** (to offer recommendations)\n- **afford** (to have enough money/time)\n- **agree** (to consent/have same opinion)\n- **choose** (to select from options)\n- **decide** (to make a choice)\n- **expect** (to anticipate/regard as likely)\n- **help** (to assist/make easier)\n- **hope** (to wish/desire)\n- **invite** (to ask someone to do/go)\n- **learn** (to gain knowledge/skill)\n- **manage** (to succeed in doing something difficult)\n- **offer** (to present for acceptance)\n- **plan** (to arrange in advance)\n- **pretend** (to act as if something is true)\n- **promise** (to assure someone you will do)\n- **refuse** (to decline/say no)\n- **seem** (to appear to be)\n- **teach** (to impart knowledge/skills)\n- **tell** (to instruct/inform)\n- **want** (to desire/wish for)\n- **would like** (to wish/prefer to do)"
+            ]
+          ]
+        },
+        {
+          "type": "title",
+          "content": "GRAMMAR NOTES"
+        },
+        {
+          "type": "list",
+          "bullets": [
+            "**1. Gerunds after Prepositions**:",
+            "- We use **V-ing** after a preposition (e.g. *of, at, in, about, for*).",
+            "  - EX: *I am afraid of lying.*",
+            "**2. Prepositional 'TO' followed by V-ing**:",
+            "- Some verbs or phrases end in the preposition **to**. In this case, they must be followed by **V-ing**, NOT the infinitive.",
+            "  - EX: *I am looking forward TO hearing from you soon.*",
+            "**3. Gerunds as Subjects**:",
+            "- We can use **V-ing** as the subject of a sentence.",
+            "  - EX: *Cooking is great fun!*",
+            "**4. Passive 'be made to'**:",
+            "- While the active verb *make* is followed by a bare infinitive (e.g. *They made him apologize*), the passive structure **be made** is followed by a **to-infinitive**.",
+            "  - EX: *Michael was made to apologize to his mother.*"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "B) VERBS THAT CAN TAKE BOTH -ING & TO INFINITIVE",
+      "blocks": [
+        {
+          "type": "title",
+          "content": "1. NO CHANGE IN MEANING (OR VERY SIMILAR MEANING)"
+        },
+        {
+          "type": "list",
+          "bullets": [
+            "The following verbs can be followed by either **V-ing** or the **to-infinitive** with little or no difference in meaning:",
+            "- **begin**: *I begin to learn guitar.* / *I begin learning guitar.*",
+            "- **continue**: *If you continue to make noise, I'm going to get annoyed.* / *If you continue making noise...*",
+            "- **hate**: *I hate dancing with Henry.* / *I hate to dance with Henry.*",
+            "- **love**: *I love watching sport with my dad.* / *I love to watch sport with my dad.*",
+            "- **like**: *Do you like watching TV?* / *Do you like to watch TV?*",
+            "- **prefer**: *Do you prefer to play football?* / *Do you prefer playing football?*",
+            "- **start**: *I start to drive as soon as I'm 18 years old.* / *I start driving as soon as I'm 18 years old.*"
+          ]
+        },
+        {
+          "type": "title",
+          "content": "2. SIGNIFICANT CHANGE IN MEANING"
+        },
+        {
+          "type": "generic-table",
+          "headers": [
+            "Verb",
+            "Followed by V-ing (Gerund)",
+            "Followed by Infinitive (to V)"
+          ],
+          "rows": [
+            [
+              "**Remember**",
+              "Have a memory of a past action in your mind.\n\n- EX: *Do you remember seeing that film?*",
+              "Do something you planned or were supposed to do.\n\n- EX: *Did you remember to invite James to come?*"
+            ],
+            [
+              "**Forget**",
+              "Not be able to remember a past action or event.\n\n- EX: *I'd forgotten hearing that joke.*",
+              "Fail to do something you planned or were supposed to do.\n\n- EX: *Oh no! I forgot to invite Sally!*"
+            ],
+            [
+              "**Stop**",
+              "End or halt a continuous or ongoing action.\n\n- EX: *Stop laughing! It's not a joke.*",
+              "Interrupt an ongoing action in order to do something else.\n\n- EX: *I was on my way to Maria's birthday and stopped to get her some presents.*"
+            ],
+            [
+              "**Try**",
+              "Do something as an experiment to see if it solves a problem.\n\n- EX: *Have you tried talking to her?*",
+              "Make a physical or mental effort to do something difficult.\n\n- EX: *I'm trying to say I'm sorry, but you won't listen.*"
+            ]
+          ]
+        }
+      ]
+    }
+  ],
+  "vocabulary": [
+    {
+      "word": "poisonous",
+      "type": "adj",
+      "meaning": "containing poison; toxic or harmful if swallowed or absorbed",
+      "example": "Some wild mushrooms are highly poisonous and should not be eaten."
+    },
+    {
+      "word": "submarine",
+      "type": "n",
+      "meaning": "a ship that can travel and operate deep under the water",
+      "example": "The military submarine patrolled beneath the ocean surface."
+    },
+    {
+      "word": "explode",
+      "type": "v",
+      "meaning": "to burst or shatter violently and noisily, often due to pressure or fire",
+      "example": "The firework exploded high in the evening sky."
+    },
+    {
+      "word": "extinguish",
+      "type": "v",
+      "meaning": "to stop a fire from burning; to put out a flame or light",
+      "example": "Please extinguish your campfire before leaving the forest."
+    },
+    {
+      "word": "cigarette",
+      "type": "n",
+      "meaning": "a thin cylinder of finely cut tobacco rolled in paper for smoking",
+      "example": "Smoking cigarettes is very harmful to your lungs and overall health."
+    },
+    {
+      "word": "astrophysics",
+      "type": "n",
+      "meaning": "the branch of astronomy that deals with the physical and chemical nature of stars and planets",
+      "example": "She decided to study astrophysics at university to learn more about black holes."
+    },
+    {
+      "word": "breath",
+      "type": "n",
+      "meaning": "the air that you take into your lungs and send out again",
+      "example": "He took a deep breath before jumping into the swimming pool."
+    },
+    {
+      "word": "illegal",
+      "type": "adj",
+      "meaning": "not allowed by the law; against the law",
+      "example": "It is illegal to drive a car without a valid license."
+    }
+  ],
+  "wordFormation": [],
+  "wordPatterns": [],
+  "phrasalVerbs": [],
+  "prepositionalPhrases": [],
+  "collocations": []
+}

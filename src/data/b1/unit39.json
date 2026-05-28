@@ -1,0 +1,398 @@
+{
+  "id": "b1-unit-39",
+  "title": "Unit 39: Feelings",
+  "grammar": [],
+  "vocabulary": [
+    {
+      "word": "amusing",
+      "type": "adj",
+      "meaning": "causing laughter or providing entertainment; funny",
+      "example": "He told a very amusing story about his dog's behavior."
+    },
+    {
+      "word": "annoy",
+      "type": "v",
+      "meaning": "to make someone slightly angry or irritated",
+      "example": "The constant noise from the street began to annoy her."
+    },
+    {
+      "word": "attitude",
+      "type": "n",
+      "meaning": "a settled way of thinking or feeling about someone or something",
+      "example": "He has a positive attitude towards his studies."
+    },
+    {
+      "word": "bad-tempered",
+      "type": "adj",
+      "meaning": "easily annoyed or made angry; having a bad temper",
+      "example": "He is often bad-tempered in the mornings before he has his coffee."
+    },
+    {
+      "word": "behave",
+      "type": "v",
+      "meaning": "to act or conduct oneself in a specified way, especially in a polite manner",
+      "example": "The children behaved very well during the dinner party."
+    },
+    {
+      "word": "bully",
+      "type": "v, n",
+      "meaning": "to hurt or frighten someone who is smaller or weaker, or a person who does this",
+      "example": "The school has a strict policy against anyone who tries to bully others."
+    },
+    {
+      "word": "calm",
+      "type": "adj",
+      "meaning": "not showing or feeling nervousness, anger, or other strong emotions",
+      "example": "It is important to stay calm during an emergency."
+    },
+    {
+      "word": "celebrate",
+      "type": "v",
+      "meaning": "to acknowledge a significant or happy event with a social gathering or enjoyable activity",
+      "example": "They gathered to celebrate their grandmother's 80th birthday."
+    },
+    {
+      "word": "character",
+      "type": "n",
+      "meaning": "the mental and moral qualities distinctive to an individual",
+      "example": "The main character in the novel is very brave."
+    },
+    {
+      "word": "depressed",
+      "type": "adj",
+      "meaning": "feeling very sad, without hope or enthusiasm",
+      "example": "She felt depressed after receiving the bad news."
+    },
+    {
+      "word": "embarrassing",
+      "type": "adj",
+      "meaning": "causing someone to feel confused, self-conscious, or ashamed",
+      "example": "It was an embarrassing moment when he spilled soup on his shirt."
+    },
+    {
+      "word": "emotion",
+      "type": "n",
+      "meaning": "a strong feeling deriving from one's circumstances, mood, or relationships",
+      "example": "Love, anger, and fear are all basic human emotions."
+    },
+    {
+      "word": "enthusiastic",
+      "type": "adj",
+      "meaning": "having or showing intense and eager enjoyment, interest, or approval",
+      "example": "The children are very enthusiastic about going to the zoo."
+    },
+    {
+      "word": "feeling",
+      "type": "n",
+      "meaning": "an emotional state or reaction; a physical sensation",
+      "example": "She had a warm feeling of satisfaction after finishing the work."
+    },
+    {
+      "word": "glad",
+      "type": "adj",
+      "meaning": "pleased, happy, or grateful about something",
+      "example": "I'm so glad that you could come to the party."
+    },
+    {
+      "word": "hurt",
+      "type": "v, adj",
+      "meaning": "to cause pain or injury to, or feeling physical or emotional pain",
+      "example": "Be careful not to hurt yourself on the sharp glass. / She felt hurt by his unkind words."
+    },
+    {
+      "word": "miserable",
+      "type": "adj",
+      "meaning": "very unhappy, sad, or uncomfortable",
+      "example": "The cold and rainy weather made them feel miserable."
+    },
+    {
+      "word": "naughty",
+      "type": "adj",
+      "meaning": "badly behaved or disobedient (especially used for children)",
+      "example": "The naughty boy drew pictures on the living room wall."
+    },
+    {
+      "word": "noisy",
+      "type": "adj",
+      "meaning": "making a lot of noise; full of noise",
+      "example": "The noisy classroom made it difficult for the teacher to speak."
+    },
+    {
+      "word": "polite",
+      "type": "adj",
+      "meaning": "having or showing behavior that is respectful and considerate of others",
+      "example": "He is always polite and says 'thank you' and 'please'."
+    },
+    {
+      "word": "react",
+      "type": "v",
+      "meaning": "to act in response to something; respond",
+      "example": "How did he react when you told him the news?"
+    },
+    {
+      "word": "regret",
+      "type": "v, n",
+      "meaning": "to feel sad, repentant, or disappointed over something done, or a feeling of sadness about it",
+      "example": "I regret not studying harder for the final exam."
+    },
+    {
+      "word": "ridiculous",
+      "type": "adj",
+      "meaning": "deserving or inviting derision or mockery; absurd",
+      "example": "It is ridiculous to wear a heavy winter coat in the summer."
+    },
+    {
+      "word": "romantic",
+      "type": "adj",
+      "meaning": "conducive to or characterized by the expression of love; passionate",
+      "example": "They had a romantic dinner by candlelight."
+    },
+    {
+      "word": "rude",
+      "type": "adj",
+      "meaning": "offensively impolite or bad-mannered",
+      "example": "It is rude to interrupt someone when they are speaking."
+    },
+    {
+      "word": "sense of humour",
+      "type": "n phr",
+      "meaning": "the ability to perceive, enjoy, or express what is amusing or comical",
+      "example": "She has a great sense of humour and always makes us laugh."
+    },
+    {
+      "word": "shy",
+      "type": "adj",
+      "meaning": "nervous or timid in the company of other people",
+      "example": "The shy girl hid behind her mother when visitors arrived."
+    },
+    {
+      "word": "stress",
+      "type": "n",
+      "meaning": "a state of mental or emotional strain or tension resulting from demanding circumstances",
+      "example": "Work stress can affect your physical health if you don't take breaks."
+    },
+    {
+      "word": "tell a joke",
+      "type": "v phr",
+      "meaning": "to say something funny to make people laugh",
+      "example": "He loves to tell a joke to cheer up his friends."
+    },
+    {
+      "word": "upset",
+      "type": "v, adj",
+      "meaning": "to make someone unhappy, disappointed, or worried; or feeling unhappy, disappointed, or worried",
+      "example": "She was very upset when she lost her favorite necklace."
+    }
+  ],
+  "phrasalVerbs": [
+    {
+      "phrasalVerb": "calm down",
+      "meaning": "to become calm or make someone calm after being angry or excited",
+      "example": "EX: Please calm down and tell me what happened."
+    },
+    {
+      "phrasalVerb": "cheer up",
+      "meaning": "to become happier or make someone feel happier",
+      "example": "EX: I bought you some flowers to cheer you up."
+    },
+    {
+      "phrasalVerb": "come on",
+      "meaning": "used to encourage someone to do something or to hurry up",
+      "example": "EX: Come on, we're going to be late!"
+    },
+    {
+      "phrasalVerb": "go on",
+      "meaning": "to continue doing something or to happen",
+      "example": "EX: Please go on reading the story."
+    },
+    {
+      "phrasalVerb": "hang on",
+      "meaning": "to wait for a short time",
+      "example": "EX: Hang on a minute, I'm almost ready."
+    },
+    {
+      "phrasalVerb": "run away (from)",
+      "meaning": "to escape from a person, place, or situation",
+      "example": "EX: The boy ran away from home when he was fifteen."
+    },
+    {
+      "phrasalVerb": "shut up",
+      "meaning": "to stop talking (often used rudely to tell someone to be quiet)",
+      "example": "EX: She told him to shut up because he was making too much noise."
+    },
+    {
+      "phrasalVerb": "speak up",
+      "meaning": "to speak louder so that you can be heard",
+      "example": "EX: Can you speak up a bit? I can't hear you."
+    }
+  ],
+  "prepositionalPhrases": [
+    {
+      "phrase": "at first",
+      "meaning": "at the beginning; initially",
+      "example": "EX: At first, she was very shy, but she soon made friends."
+    },
+    {
+      "phrase": "at least",
+      "meaning": "not less than; at the minimum",
+      "example": "EX: You should eat at least three meals a day."
+    },
+    {
+      "phrase": "at times",
+      "meaning": "sometimes; occasionally",
+      "example": "EX: She can be a bit bad-tempered at times."
+    },
+    {
+      "phrase": "in secret",
+      "meaning": "secretly; without other people knowing",
+      "example": "EX: They planned the surprise party in secret."
+    },
+    {
+      "phrase": "in spite of",
+      "meaning": "without being affected by; regardless of",
+      "example": "EX: In spite of the heavy rain, they went for a walk in the park."
+    },
+    {
+      "phrase": "in tears",
+      "meaning": "crying",
+      "example": "EX: She was in tears after hearing the sad news."
+    }
+  ],
+  "wordFormation": [
+    {
+      "word": "bore",
+      "type": "verb",
+      "meaning": "boring: not interesting / bored: feeling weary and restless due to lack of interest",
+      "example": "EX: The movie was very boring. / I was bored during the long lecture."
+    },
+    {
+      "word": "comedy",
+      "type": "noun",
+      "meaning": "comedy: a funny film/play / comedian: an entertainer who tells jokes",
+      "example": "EX: We watched a funny comedy on TV. / He is a very famous stand-up comedian."
+    },
+    {
+      "word": "emotion",
+      "type": "noun",
+      "meaning": "emotion: a strong feeling / emotional: having or showing strong feelings",
+      "example": "EX: She struggled to control her emotions. / It was a very emotional reunion."
+    },
+    {
+      "word": "energy",
+      "type": "noun",
+      "meaning": "energetic: showing or having a lot of energy",
+      "example": "EX: The children are very active and energetic."
+    },
+    {
+      "word": "excite",
+      "type": "verb",
+      "meaning": "excitement: feeling of great enthusiasm / exciting: causing great interest / excited: feeling very happy and enthusiastic",
+      "example": "EX: The children could hardly contain their excitement. / We had an exciting adventure. / She is excited about her upcoming trip."
+    },
+    {
+      "word": "feel",
+      "type": "verb",
+      "meaning": "felt: past tense/participle of feel / feeling(s): an emotional state or reaction",
+      "example": "EX: He felt tired after the walk. / I didn't want to hurt her feelings."
+    },
+    {
+      "word": "happy",
+      "type": "adjective",
+      "meaning": "unhappy: sad or dissatisfied / (un)happiness: the state of being happy or unhappy",
+      "example": "EX: She was unhappy with her test results. / Money cannot buy true happiness."
+    },
+    {
+      "word": "hate",
+      "type": "verb",
+      "meaning": "hatred: an extremely strong feeling of dislike or anger",
+      "example": "EX: He looked at his enemy with pure hatred."
+    },
+    {
+      "word": "noise",
+      "type": "noun",
+      "meaning": "noisy: making a lot of noise / noisily: in a noisy manner",
+      "example": "EX: The classroom was very noisy. / The children played noisily in the garden."
+    },
+    {
+      "word": "sympathy",
+      "type": "noun",
+      "meaning": "sympathise: to feel or express sympathy / sympathetic: feeling or showing sympathy",
+      "example": "EX: I sympathise with your situation. / He was very sympathetic when I told him about my problem."
+    }
+  ],
+  "wordPatterns": [
+    {
+      "verb": "ashamed of",
+      "pattern": "adjective",
+      "meaning": "feeling shame or embarrassment about something",
+      "example": "EX: He felt ashamed of his rude behavior."
+    },
+    {
+      "verb": "embarrassed about",
+      "pattern": "adjective",
+      "meaning": "feeling ashamed, self-conscious, or uncomfortable about something",
+      "example": "EX: She was embarrassed about making a mistake in front of everyone."
+    },
+    {
+      "verb": "frightened of",
+      "pattern": "adjective",
+      "meaning": "afraid of someone or something",
+      "example": "EX: Many children are frightened of spiders."
+    },
+    {
+      "verb": "happy about/with",
+      "pattern": "adjective",
+      "meaning": "satisfied or pleased with something",
+      "example": "EX: Are you happy with your new computer?"
+    },
+    {
+      "verb": "nervous about",
+      "pattern": "adjective",
+      "meaning": "worried or anxious about something",
+      "example": "EX: He is nervous about the job interview tomorrow."
+    },
+    {
+      "verb": "scared of",
+      "pattern": "adjective",
+      "meaning": "frightened of someone or something",
+      "example": "EX: She is scared of heights."
+    },
+    {
+      "verb": "sorry about/for",
+      "pattern": "adjective",
+      "meaning": "feeling regret or sadness about a situation or action",
+      "example": "EX: I'm sorry for being late."
+    },
+    {
+      "verb": "surprised at/by",
+      "pattern": "adjective",
+      "meaning": "feeling surprise because of something unexpected",
+      "example": "EX: We were surprised by the sudden change in plans."
+    },
+    {
+      "verb": "tired of",
+      "pattern": "adjective",
+      "meaning": "bored or annoyed with something done repeatedly",
+      "example": "EX: I am tired of eating the same food every day."
+    },
+    {
+      "verb": "congratulate sb on",
+      "pattern": "verb",
+      "meaning": "to praise someone for an achievement or happy event",
+      "example": "EX: I want to congratulate you on passing your driving test."
+    },
+    {
+      "verb": "laugh at",
+      "pattern": "verb",
+      "meaning": "to make fun of someone or something, or to find amusement in oneself",
+      "example": "EX: It's good to be able to laugh at yourself sometimes. / Don't laugh at other people's mistakes."
+    },
+    {
+      "verb": "a joke about",
+      "pattern": "noun",
+      "meaning": "a funny story or trick about something",
+      "example": "EX: He told a funny joke about a dog."
+    }
+  ],
+  "collocations": []
+}
