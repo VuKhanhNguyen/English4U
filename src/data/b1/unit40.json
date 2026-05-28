@@ -1,0 +1,152 @@
+{
+  "id": "b1-unit-40",
+  "title": "Unit 40: Connectives",
+  "grammar": [
+    {
+      "structure": "Connectives",
+      "usage": "Understand how to use time connectives (then, finally, initially) and other linkers of contrast and condition (although, in spite of, however, unless), including conditional clause reviews.",
+      "example": "As soon as they come, we will let you know. / Although it was expensive, it wasn't very good quality."
+    }
+  ],
+  "richGrammar": [
+    {
+      "title": "A) TIME CONNECTIVES",
+      "blocks": [
+        {
+          "type": "title",
+          "content": "1. TIME CLAUSES & FUTURE TENSE RULE"
+        },
+        {
+          "type": "list",
+          "bullets": [
+            "When using connectives of time (e.g. *after, as soon as, before, until/till, when, while*), we use the **present simple** (or other present tenses) to refer to future events.",
+            "Do NOT use future forms like **will** or **be going to** in these time clauses.",
+            "  - EX: *Will you visit the Eiffel Tower while you are in France?* (✓)",
+            "  - EX: *Will you visit Eiffel tower while you will be in France?* (✗)",
+            "  - EX: *I won't contact the tourism agent until Lan asks me to.* (✓)",
+            "  - EX: *I won't contact Tourism agent until Lan are going to ask me to.* (✗)",
+            "We can place the time clause at the beginning of the sentence (use a comma to separate it from the main clause).",
+            "  - EX: *As soon as they come, we will let you know.*"
+          ]
+        },
+        {
+          "type": "title",
+          "content": "2. LIST OF TIME CONNECTIVES"
+        },
+        {
+          "type": "generic-table",
+          "headers": [
+            "Category",
+            "Connectives",
+            "Example / Explanation"
+          ],
+          "rows": [
+            [
+              "**To begin with**",
+              "- *firstly*\n- *this morning*\n- *it all began*\n- *to begin*\n- *first of all*\n- *initially*",
+              "Used to introduce the first event in a sequence.\n\n- EX: *First of all, we need to book our flight tickets.*"
+            ],
+            [
+              "**To move time on**",
+              "- *next*\n- *secondly*\n- *after that*\n- *then*\n- *later on*\n- *as time passed*\n- *afterwards*\n- *a few minutes/moment later*\n- *before long*\n- *at that point*\n- *after a while*",
+              "Used to show the progression of events.\n\n- EX: *We visited the museum. After that, we had lunch near the park.*"
+            ],
+            [
+              "**To end with**",
+              "- *at last*\n- *finally*\n- *in the end*\n- *eventually*\n- *at the end of the day*\n- *to end the day*",
+              "Used to introduce the final event or conclusion.\n\n- EX: *Eventually, we arrived back at our hotel, exhausted but happy.*"
+            ],
+            [
+              "**For surprise**",
+              "- *suddenly*\n- *without warning*\n- *all of a sudden*\n- *in the blink of an eye*\n- *within seconds*\n- *out of nowhere*",
+              "Used to describe unexpected or rapid events.\n\n- EX: *Suddenly, out of nowhere, a large dog ran onto the road.*"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "title": "B) OTHER CONNECTIVES",
+      "blocks": [
+        {
+          "type": "generic-table",
+          "headers": [
+            "Connective",
+            "Structure & Rules",
+            "Examples"
+          ],
+          "rows": [
+            [
+              "**Though / Although / Even though**",
+              "- **Though / Although / Even though + clause 1, clause 2**\n- **Clause 2, though / although / even though + clause 1**\n\n*Note: 'Though' is informal and common in speech. 'Even though' is more emphatic than 'although'.*",
+              "- EX: *Although it was expensive, it wasn't very good quality.*\n- EX: *She went to work even though she was feeling ill.*"
+            ],
+            [
+              "**In spite of / Despite**",
+              "- **In spite of / Despite + Noun / V-ing, + clause 2**\n- **In spite of / Despite + the fact that + clause 1, clause 2**",
+              "- EX: *Despite the cost, this CD wasn't very good quality.*\n- EX: *In spite of the fact that it was expensive, this CD wasn't very good quality.*"
+            ],
+            [
+              "**However**",
+              "- **Clause 1. However, clause 2.** (Used to connect two contrasting sentences; must be preceded by a period or semicolon and followed by a comma.)",
+              "- EX: *This CD was too expensive. However, it wasn't good quality.*"
+            ],
+            [
+              "**Unless**",
+              "- **Unless + clause** (means **if not** or **except if**; used to introduce a negative condition.)",
+              "- EX: *If it doesn't rain, we will go to the beach.* \n-> *Unless it rains, we will go to the beach.*"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "title": "C) IF & UNLESS IN CONDITIONALS",
+      "blocks": [
+        {
+          "type": "list",
+          "bullets": [
+            "**Rule 1**: Do not use **unless** to explain a hypothetical positive condition (use **if** instead).",
+            "**Rule 2**: Do not use **will** or **would** in the clause that begins with **unless**."
+          ]
+        },
+        {
+          "type": "generic-table",
+          "headers": [
+            "Conditional Type",
+            "Structure with IF",
+            "Structure with UNLESS"
+          ],
+          "rows": [
+            [
+              "**First Conditional**\n(Real Future/Present)",
+              "**If + S + V(s/es), S + will + V (bare)**\n\n- EX: *If you don't study, you will fail.*",
+              "**Unless + S + V(s/es), S + will + V (bare)**\n\n- EX: *Unless you study, you will fail.*"
+            ],
+            [
+              "**Second Conditional**\n(Unreal Present/Future)",
+              "**If + S + V2/ed, S + would/could + V (bare)**\n\n- EX: *If I didn't have to work, I would go.*",
+              "**Unless + S + V2/ed, S + would/could + V (bare)**\n\n- EX: *Unless I had to work, I would go.*"
+            ],
+            [
+              "**Third Conditional**\n(Unreal Past)",
+              "**If + S + Had + V3/ed, S + would have + V3/ed**\n\n- EX: *If you hadn't helped me, I would have failed.*",
+              "**Unless + S + had + V3/ed, S + would have + V3/ed**\n\n- EX: *Unless you had helped me, I would have failed.*"
+            ],
+            [
+              "**Mixed/Other Conditional**\n(Past Condition -> Present Result)",
+              "**If + S + had + V3/ed, S + would + V (bare)**\n\n- EX: *If I had won the lottery, I would be rich now.*",
+              "**Unless + S + had + V3/ed, S + would + V (bare)**\n\n- EX: *Unless he had missed the train, he would be here by now.*"
+            ]
+          ]
+        }
+      ]
+    }
+  ],
+  "vocabulary": [],
+  "wordFormation": [],
+  "wordPatterns": [],
+  "phrasalVerbs": [],
+  "prepositionalPhrases": [],
+  "collocations": []
+}

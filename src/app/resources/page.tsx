@@ -59,6 +59,9 @@ import unit36 from "@/data/b1/unit36.json";
 import unit37 from "@/data/b1/unit37.json";
 import unit38 from "@/data/b1/unit38.json";
 import unit39 from "@/data/b1/unit39.json";
+import unit40 from "@/data/b1/unit40.json";
+import unit41 from "@/data/b1/unit41.json";
+import unit42 from "@/data/b1/unit42.json";
 
 // Collect all units in one array
 const allUnits = [
@@ -99,6 +102,9 @@ const allUnits = [
   { unit: 37, data: unit37 },
   { unit: 38, data: unit38 },
   { unit: 39, data: unit39 },
+  { unit: 40, data: unit40 },
+  { unit: 41, data: unit41 },
+  { unit: 42, data: unit42 },
 ];
 
 // Helper to extract base word from prepositional phrases

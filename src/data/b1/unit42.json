@@ -1,0 +1,428 @@
+{
+  "id": "b1-unit-42",
+  "title": "Unit 42: Communication and problems",
+  "grammar": [],
+  "vocabulary": [
+    {
+      "word": "accident",
+      "type": "n",
+      "meaning": "an unfortunate incident that happens unexpectedly and unintentionally, typically resulting in damage or injury",
+      "example": "He had a minor car accident on his way to work."
+    },
+    {
+      "word": "assume",
+      "type": "v",
+      "meaning": "to suppose to be the case, without proof",
+      "example": "It is not safe to assume that the train will be on time."
+    },
+    {
+      "word": "cause",
+      "type": "v, n",
+      "meaning": "to make something happen, or a person or thing that gives rise to an action or condition",
+      "example": "Heavy rain can cause flooding in low areas. / The police are investigating the cause of the fire."
+    },
+    {
+      "word": "claim",
+      "type": "v",
+      "meaning": "to state or assert that something is true, typically without having proof",
+      "example": "He claims that he saw a UFO last night."
+    },
+    {
+      "word": "complain",
+      "type": "v",
+      "meaning": "to express dissatisfaction or annoyance about something",
+      "example": "The customers began to complain about the slow service."
+    },
+    {
+      "word": "convince",
+      "type": "v",
+      "meaning": "to persuade someone to do or believe something",
+      "example": "She tried hard to convince her parents to let her travel alone."
+    },
+    {
+      "word": "criticise",
+      "type": "v",
+      "meaning": "to express disapproval of someone or something based on faults",
+      "example": "It is easy to criticise other people's mistakes."
+    },
+    {
+      "word": "deny",
+      "type": "v",
+      "meaning": "to state that something is not true or to refuse to admit something",
+      "example": "He denied taking the money from the drawer."
+    },
+    {
+      "word": "discussion",
+      "type": "n",
+      "meaning": "the action or process of talking about something to reach a decision or exchange ideas",
+      "example": "We had an interesting discussion about global warming in class."
+    },
+    {
+      "word": "doubt",
+      "type": "v, n",
+      "meaning": "to feel uncertain about something, or a feeling of uncertainty",
+      "example": "I doubt if they will finish the work on time. / There is no doubt that she is the best player."
+    },
+    {
+      "word": "encourage",
+      "type": "v",
+      "meaning": "to give support, confidence, or hope to someone",
+      "example": "The teacher always encourages the students to ask questions."
+    },
+    {
+      "word": "get rid of",
+      "type": "v phr",
+      "meaning": "to take action so as to be free of something unwanted; to throw away",
+      "example": "I need to get rid of these old clothes that don't fit me anymore."
+    },
+    {
+      "word": "gossip",
+      "type": "v, n",
+      "meaning": "casual conversation or reports about other people, typically not confirmed as true",
+      "example": "They sat in the cafe to gossip about their neighbors. / Don't believe everything you hear; it's just gossip."
+    },
+    {
+      "word": "ideal",
+      "type": "adj",
+      "meaning": "satisfying one's conception of what is perfect; most suitable",
+      "example": "The warm autumn weather was ideal for a picnic in the park."
+    },
+    {
+      "word": "insult",
+      "type": "v, n",
+      "meaning": "to speak to or treat with disrespect or abuse, or a disrespectful remark or action",
+      "example": "He insulted his boss and was fired. / His rude comments were a direct insult to her."
+    },
+    {
+      "word": "investigate",
+      "type": "v",
+      "meaning": "to carry out a systematic or formal inquiry to discover the facts of something",
+      "example": "Detectives were sent to investigate the crime scene."
+    },
+    {
+      "word": "negative",
+      "type": "adj",
+      "meaning": "expressing or showing refusal, disagreement, or pessimism; not positive",
+      "example": "A negative attitude can prevent you from succeeding."
+    },
+    {
+      "word": "positive",
+      "type": "adj",
+      "meaning": "full of hope, confidence, or optimism; constructive",
+      "example": "Try to stay positive even when things are difficult."
+    },
+    {
+      "word": "praise",
+      "type": "v, n",
+      "meaning": "to express warm approval or admiration of, or the expression of approval",
+      "example": "The headmaster praised the students for their excellent behaviour. / She received high praise for her performance."
+    },
+    {
+      "word": "pretend",
+      "type": "v",
+      "meaning": "to behave so as to make it appear that something is the case when it is not",
+      "example": "She closed her eyes and pretended to be asleep."
+    },
+    {
+      "word": "purpose",
+      "type": "n",
+      "meaning": "the reason for which something is done or created or for which something exists",
+      "example": "The purpose of this meeting is to discuss the new project."
+    },
+    {
+      "word": "refuse",
+      "type": "v",
+      "meaning": "to indicate that one is not willing to do, accept, or grant something",
+      "example": "They refused to help him because of his rude behavior."
+    },
+    {
+      "word": "result",
+      "type": "v, n",
+      "meaning": "to occur or follow as a consequence of something, or a consequence, outcome, or effect",
+      "example": "The accident resulted in severe damage to the car. / She was happy with her exam results."
+    },
+    {
+      "word": "rumour",
+      "type": "n",
+      "meaning": "a currently circulating story or report of uncertain or doubtful truth",
+      "example": "There is a rumour that the school will be closed tomorrow."
+    },
+    {
+      "word": "sensible",
+      "type": "adj",
+      "meaning": "showing or having good sense or judgment; practical and wise",
+      "example": "It is sensible to save some money for emergencies."
+    },
+    {
+      "word": "serious",
+      "type": "adj",
+      "meaning": "demanding careful consideration; bad or dangerous; solemn",
+      "example": "Global warming is a serious problem. / He has a very serious expression on his face."
+    },
+    {
+      "word": "spare",
+      "type": "adj",
+      "meaning": "additional to what is required for ordinary use; extra",
+      "example": "We have a spare bedroom for guests who stay overnight."
+    },
+    {
+      "word": "theory",
+      "type": "n",
+      "meaning": "a supposition or a system of ideas intended to explain something",
+      "example": "Darwin's theory of evolution explains how species develop."
+    },
+    {
+      "word": "thought",
+      "type": "n",
+      "meaning": "an idea, opinion, or product of thinking occurring in the mind",
+      "example": "The thought of going on holiday filled her with excitement."
+    },
+    {
+      "word": "warn",
+      "type": "v",
+      "meaning": "to inform someone in advance of an impending danger or problem",
+      "example": "The signs warn drivers about the sharp curves ahead."
+    },
+    {
+      "word": "idiot",
+      "type": "n",
+      "meaning": "a stupid person",
+      "example": "Don't be an idiot; put your seatbelt on."
+    },
+    {
+      "word": "petrol",
+      "type": "n",
+      "meaning": "a light fuel used in motor vehicles; gasoline",
+      "example": "We stopped at the petrol station to fill up the car."
+    },
+    {
+      "word": "stream",
+      "type": "n",
+      "meaning": "a small, narrow river",
+      "example": "They crossed a cold mountain stream during their hike."
+    },
+    {
+      "word": "pump",
+      "type": "n",
+      "meaning": "a mechanical device used to move liquids or force air into things",
+      "example": "He used a bicycle pump to inflate the flat tire."
+    },
+    {
+      "word": "garage",
+      "type": "n",
+      "meaning": "a building or shed for housing motor vehicles",
+      "example": "He parked his car in the garage to protect it from the rain."
+    }
+  ],
+  "phrasalVerbs": [
+    {
+      "phrasalVerb": "hang up",
+      "meaning": "to hang clothing on a hook or hanger; or to end a telephone conversation",
+      "example": "EX: She hung up her coat in the wardrobe. / Don't hang up on me!"
+    },
+    {
+      "phrasalVerb": "pick up",
+      "meaning": "to lift something up from a surface; or to collect someone in a vehicle",
+      "example": "EX: Can you help me pick up these books from the floor?"
+    },
+    {
+      "phrasalVerb": "put back",
+      "meaning": "to return something to its original place",
+      "example": "EX: Please put the dictionary back on the shelf when you're done."
+    },
+    {
+      "phrasalVerb": "run out (of)",
+      "meaning": "to use up the supply of something so that none is left",
+      "example": "EX: We have run out of milk, so I need to go to the shop."
+    },
+    {
+      "phrasalVerb": "share out",
+      "meaning": "to divide and distribute something among a group of people",
+      "example": "EX: The teacher shared out the cupcakes among the students."
+    },
+    {
+      "phrasalVerb": "sort out",
+      "meaning": "to resolve a problem or organize something successfully",
+      "example": "EX: We need to sort out this misunderstanding as soon as possible."
+    },
+    {
+      "phrasalVerb": "watch out",
+      "meaning": "to be careful or pay attention to danger",
+      "example": "EX: Watch out! There is a car coming."
+    },
+    {
+      "phrasalVerb": "work out",
+      "meaning": "to solve a problem, find an answer, or calculate an amount",
+      "example": "EX: I'm trying to work out how much money we spent."
+    }
+  ],
+  "prepositionalPhrases": [
+    {
+      "phrase": "by accident/mistake",
+      "meaning": "without intending to; unintentionally",
+      "example": "EX: I broke the vase by accident."
+    },
+    {
+      "phrase": "in a mess",
+      "meaning": "dirty, untidy, or in a state of confusion/difficulty",
+      "example": "EX: His room was in a complete mess."
+    },
+    {
+      "phrase": "in danger (of)",
+      "meaning": "at risk of being harmed, damaged, or lost",
+      "example": "EX: The species is in danger of becoming extinct."
+    },
+    {
+      "phrase": "in my view",
+      "meaning": "in my opinion; from my perspective",
+      "example": "EX: In my view, the plan is too risky."
+    },
+    {
+      "phrase": "in trouble",
+      "meaning": "experiencing difficulties, problems, or facing punishment",
+      "example": "EX: He got in trouble for talking in class."
+    },
+    {
+      "phrase": "under pressure",
+      "meaning": "feeling stressed or forced to do something quickly",
+      "example": "EX: She is under a lot of pressure at work."
+    }
+  ],
+  "wordFormation": [
+    {
+      "word": "advice",
+      "type": "noun",
+      "meaning": "advise: to offer suggestions / adviser: a person who gives advice",
+      "example": "EX: The doctor advised him to rest. / He works as a financial adviser."
+    },
+    {
+      "word": "confuse",
+      "type": "verb",
+      "meaning": "confused: unable to think clearly / confusion: lack of clarity or bewilderment",
+      "example": "EX: I was completely confused by the map. / There was some confusion about the meeting time."
+    },
+    {
+      "word": "except",
+      "type": "preposition",
+      "meaning": "exception: a person or thing excluded from a rule or statement",
+      "example": "EX: Most students passed, with the exception of Tom."
+    },
+    {
+      "word": "help",
+      "type": "noun/verb",
+      "meaning": "(un)helpful: giving help (or not) / helpless: unable to act without help",
+      "example": "EX: The staff were very helpful. / A newborn baby is completely helpless."
+    },
+    {
+      "word": "luck",
+      "type": "noun",
+      "meaning": "(un)lucky: having good luck (or bad) / (un)luckily: by good fortune (or bad)",
+      "example": "EX: He was lucky to win the prize. / Luckily, we made it to the station just in time."
+    },
+    {
+      "word": "prefer",
+      "type": "verb",
+      "meaning": "preference: greater liking for an alternative / preferable: more desirable or suitable",
+      "example": "EX: Do you have a preference for red or white wine? / A warm day is preferable to a cold one."
+    },
+    {
+      "word": "recommend",
+      "type": "verb",
+      "meaning": "recommendation: a suggestion as to the best course of action",
+      "example": "EX: We followed the doctor's recommendation."
+    },
+    {
+      "word": "refuse",
+      "type": "verb",
+      "meaning": "refusal: an act of refusing to do or accept something",
+      "example": "EX: We were surprised by her sudden refusal."
+    },
+    {
+      "word": "solve",
+      "type": "verb",
+      "meaning": "solution: a means of solving a problem",
+      "example": "EX: We need to find a solution to this problem."
+    },
+    {
+      "word": "suggest",
+      "type": "verb",
+      "meaning": "suggestion: an idea or plan put forward for consideration",
+      "example": "EX: Do you have any suggestions for dinner?"
+    }
+  ],
+  "wordPatterns": [
+    {
+      "verb": "sure about/of",
+      "pattern": "adjective",
+      "meaning": "certain; having no doubt about something",
+      "example": "EX: Are you sure about your answers?"
+    },
+    {
+      "verb": "advise against sth",
+      "pattern": "verb",
+      "meaning": "to recommend that someone should NOT do something",
+      "example": "EX: I would advise against studying all day without breaks."
+    },
+    {
+      "verb": "agree (with sb) about",
+      "pattern": "verb",
+      "meaning": "to have the same opinion as someone about something",
+      "example": "EX: We agree about where to go on holiday."
+    },
+    {
+      "verb": "approve of",
+      "pattern": "verb",
+      "meaning": "to think that someone or something is good, right, or suitable",
+      "example": "EX: My parents approve of my choice of career."
+    },
+    {
+      "verb": "believe in",
+      "pattern": "verb",
+      "meaning": "to trust in the truth or existence of something",
+      "example": "EX: Do you believe in ghosts?"
+    },
+    {
+      "verb": "deal with",
+      "pattern": "verb",
+      "meaning": "to take action on something; handle or resolve",
+      "example": "EX: She knows how to deal with difficult customers."
+    },
+    {
+      "verb": "happen to",
+      "pattern": "verb",
+      "meaning": "to occur to someone or something",
+      "example": "EX: What happened to your car?"
+    },
+    {
+      "verb": "hide sth from sb",
+      "pattern": "verb",
+      "meaning": "to keep something secret from someone",
+      "example": "EX: You shouldn't hide the truth from your parents."
+    },
+    {
+      "verb": "insist on",
+      "pattern": "verb",
+      "meaning": "to demand that something happen or that someone do something",
+      "example": "EX: He insisted on paying for the meal."
+    },
+    {
+      "verb": "rely on",
+      "pattern": "verb",
+      "meaning": "to depend on or trust someone or something",
+      "example": "EX: You can always rely on her to help you."
+    },
+    {
+      "verb": "an advantage of",
+      "pattern": "noun",
+      "meaning": "a condition or circumstance that puts one in a favorable position",
+      "example": "EX: What are the advantages of living in a big city?"
+    },
+    {
+      "verb": "a solution to",
+      "pattern": "noun",
+      "meaning": "a means of solving a problem or dealing with a difficult situation",
+      "example": "EX: There is no easy solution to this problem."
+    }
+  ],
+  "collocations": []
+}

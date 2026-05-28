@@ -42,12 +42,15 @@ import unit36 from "@/data/b1/unit36.json";
 import unit37 from "@/data/b1/unit37.json";
 import unit38 from "@/data/b1/unit38.json";
 import unit39 from "@/data/b1/unit39.json";
+import unit40 from "@/data/b1/unit40.json";
+import unit41 from "@/data/b1/unit41.json";
+import unit42 from "@/data/b1/unit42.json";
 import b2Data from "@/data/destination-b2.json";
 import c1c2Data from "@/data/destination-c1-c2.json";
 
 const b1Data = {
   book: "Destination B1",
-  units: [unit1, unit2, unit3, unit4, unit5, unit6, unit7, unit8, unit9, unit10_11, unit12, unit13, unit14, unit15, unit16, unit17, unit18, unit19, unit20, unit21, unit22, unit23, unit24, unit25, unit26, unit27, unit28_29, unit30, unit31, unit32, unit33, unit34, unit35, unit36, unit37, unit38, unit39],
+  units: [unit1, unit2, unit3, unit4, unit5, unit6, unit7, unit8, unit9, unit10_11, unit12, unit13, unit14, unit15, unit16, unit17, unit18, unit19, unit20, unit21, unit22, unit23, unit24, unit25, unit26, unit27, unit28_29, unit30, unit31, unit32, unit33, unit34, unit35, unit36, unit37, unit38, unit39, unit40, unit41, unit42],
 };
 
 import { Card } from "@/components/ui/card";

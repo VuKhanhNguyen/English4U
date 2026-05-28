@@ -1,0 +1,138 @@
+{
+  "id": "b1-unit-41",
+  "title": "Unit 41: The causative",
+  "grammar": [
+    {
+      "structure": "The Causative",
+      "usage": "Used to express that we arrange for someone else to do something for us using the 'have/get something done' structure.",
+      "example": "Mrs Taylor has her car cleaned once a month. / I'm going to get my hair cut tomorrow."
+    }
+  ],
+  "richGrammar": [
+    {
+      "title": "A) THE CAUSATIVE PATTERNS",
+      "blocks": [
+        {
+          "type": "list",
+          "bullets": [
+            "**Purpose**: We use the causative to show that we arrange for someone else (often a professional) to do something for us, rather than doing it ourselves.",
+            "**Core Structure**: **S + have (in the correct tense/form) + object + past participle (V3/ed)**"
+          ]
+        },
+        {
+          "type": "generic-table",
+          "headers": [
+            "Tense",
+            "Causative Structure",
+            "Example Sentence"
+          ],
+          "rows": [
+            [
+              "**Present Simple**",
+              "S + have/has + O + V3/ed",
+              "EX: *Mrs Taylor has her car cleaned once a month.*"
+            ],
+            [
+              "**Past Simple**",
+              "S + had + O + V3/ed",
+              "EX: *She had the car filled up with petrol yesterday.*"
+            ],
+            [
+              "**Present Continuous**",
+              "S + am/is/are + having + O + V3/ed",
+              "EX: *I am having the tyres checked at this moment.*"
+            ],
+            [
+              "**Past Continuous**",
+              "S + was/were + having + O + V3/ed",
+              "EX: *She was having the car repaired when I last saw her.*"
+            ],
+            [
+              "**Present Perfect Simple**",
+              "S + have/has + had + O + V3/ed",
+              "EX: *She has had the windscreen replaced.*"
+            ],
+            [
+              "**Past Perfect Simple**",
+              "S + had + had + O + V3/ed",
+              "EX: *She had had the engine checked.*"
+            ]
+          ]
+        },
+        {
+          "type": "title",
+          "content": "IMPORTANT TENSE RESTRICTIONS"
+        },
+        {
+          "type": "list",
+          "bullets": [
+            "- **Present Perfect Continuous** and **Past Perfect Continuous** are **not** typically used in causative clauses."
+          ]
+        }
+      ]
+    },
+    {
+      "title": "B) OTHER CAUSATIVE STRUCTURES",
+      "blocks": [
+        {
+          "type": "generic-table",
+          "headers": [
+            "Form / Category",
+            "Structure",
+            "Example Sentence"
+          ],
+          "rows": [
+            [
+              "**With Modals**",
+              "S + modal + have + O + V3/ed",
+              "- EX: *She will have a car alarm fitted when she can afford it.*\n- EX: *She would have air bags put in, but it's too expensive.*"
+            ],
+            [
+              "**With 'be going to'**",
+              "S + am/is/are + going to + have + O + V3/ed",
+              "- EX: *She is going to have a new car radio installed.*"
+            ],
+            [
+              "**In '-ing' form**",
+              "S + V + having + O + V3/ed",
+              "- EX: *She might stop having the car cleaned so often.*\n*(Note: Here, 'having' follows verbs that require an -ing form, such as 'stop'.)*"
+            ],
+            [
+              "**Get instead of Have**",
+              "S + get (in correct form) + O + V3/ed",
+              "- We can replace **have** with **get** in causative sentences. However, using **get** is more informal.\n- EX: *I'm going to get my hair cut tomorrow.* (Informal)\n- EX: *I'm going to have my hair cut tomorrow.* (Formal/Neutral)"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "title": "C) CONVERTING ACTIVE TO CAUSATIVE",
+      "blocks": [
+        {
+          "type": "list",
+          "bullets": [
+            "To convert an active sentence where someone does a service for someone else into a causative sentence:",
+            "1. Identify the person who benefits or arranges the action (this becomes the new **Subject**).",
+            "2. Identify the action's target (this becomes the **Object**).",
+            "3. Identify the main verb tense and use the corresponding form of **have** or **get**.",
+            "4. Put the main verb into its **past participle (V3/ed)** form.",
+            "**Example Walkthrough**:",
+            "- Active: *Someone cleans Mrs Taylor's car every week.*",
+            "  - **Subject (beneficiary)**: Mrs Taylor",
+            "  - **Verb tense**: present simple (cleans -> has/gets)",
+            "  - **Object**: her car",
+            "  - **Past participle**: cleaned",
+            "- Causative: **Mrs Taylor has her car cleaned every week.** (✓)"
+          ]
+        }
+      ]
+    }
+  ],
+  "vocabulary": [],
+  "wordFormation": [],
+  "wordPatterns": [],
+  "phrasalVerbs": [],
+  "prepositionalPhrases": [],
+  "collocations": []
+}
