@@ -4,6 +4,7 @@ import * as React from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Search } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { useLanguage } from "@/components/providers/language-provider";
 
 import unit1 from "@/data/b1/unit1.json";
 import unit2 from "@/data/b1/unit2.json";
@@ -513,6 +514,7 @@ export function LearningExplorerSection({
   hideHeader = false,
   className,
 }: LearningExplorerSectionProps = {}) {
+  const { translate } = useLanguage();
   const levelMap = {
     b1: 0,
     b2: 1,
@@ -764,7 +766,7 @@ export function LearningExplorerSection({
                                   {row.type}
                                 </span>
                               </TableCell>
-                              <TableCell className="font-mono text-off-black">{row.meaning}</TableCell>
+                              <TableCell className="font-mono text-off-black">{translate(row.meaning)}</TableCell>
                               <TableCell className="font-mono italic text-pale-stone">
                                 {row.example}
                               </TableCell>
@@ -828,7 +830,7 @@ export function LearningExplorerSection({
                                             </span>
                                           </div>
                                           <div className="flex-1 space-y-1">
-                                            <p className="text-off-black text-sm leading-relaxed">{fam.meaning}</p>
+                                            <p className="text-off-black text-sm leading-relaxed">{translate(fam.meaning)}</p>
                                             {row.example && (
                                               <div className="text-xs text-pale-stone italic mt-1 font-mono">
                                                 {row.example.split("\n").map((exLine: string, exIdx: number) => {
@@ -883,6 +885,7 @@ export function LearningExplorerSection({
                               Word
                             </TableHead>
                             <TableHead className="w-[100px] font-mono text-ink">Type</TableHead>
+                            <TableHead className="font-mono text-ink">Meaning</TableHead>
                             <TableHead className="font-mono text-ink">Pattern & Example</TableHead>
                           </TableRow>
                         </TableHeader>
@@ -890,6 +893,7 @@ export function LearningExplorerSection({
                           {filterData(unit.wordPatterns, [
                             "verb",
                             "pattern",
+                            "meaning",
                             "example",
                           ]).map((row, idx) => (
                             <TableRow key={idx}>
@@ -900,6 +904,9 @@ export function LearningExplorerSection({
                                 <span className="inline-block text-caption font-mono text-off-black bg-transparent border border-off-black px-2.5 py-0.5 rounded-full">
                                   {abbreviateType(row.pattern)}
                                 </span>
+                              </TableCell>
+                              <TableCell className="font-mono text-off-black whitespace-pre-line">
+                                {translate(row.meaning)}
                               </TableCell>
                               <TableCell className="font-mono text-pale-stone whitespace-pre-line">
                                 {row.example}
@@ -946,7 +953,7 @@ export function LearningExplorerSection({
                               <TableCell className="font-mono font-medium text-ink font-semibold">
                                 {row.phrasalVerb}
                               </TableCell>
-                              <TableCell className="font-mono text-off-black whitespace-pre-line">{row.meaning}</TableCell>
+                              <TableCell className="font-mono text-off-black whitespace-pre-line">{translate(row.meaning)}</TableCell>
                               <TableCell className="font-mono italic text-pale-stone whitespace-pre-line">
                                 {row.example}
                               </TableCell>
@@ -990,7 +997,7 @@ export function LearningExplorerSection({
                               <TableCell className="font-mono font-medium text-ink font-semibold">
                                 {row.phrase}
                               </TableCell>
-                              <TableCell className="font-mono text-off-black whitespace-pre-line">{row.meaning}</TableCell>
+                              <TableCell className="font-mono text-off-black whitespace-pre-line">{translate(row.meaning)}</TableCell>
                             </TableRow>
                           ))}
                           {filterData(unit.prepositionalPhrases, ["phrase"]).length === 0 && (
@@ -1033,7 +1040,7 @@ export function LearningExplorerSection({
                                 {row.word}
                               </TableCell>
                               <TableCell className="font-mono text-off-black font-medium">{row.collocation}</TableCell>
-                              <TableCell className="font-mono text-pale-stone">{row.meaning}</TableCell>
+                              <TableCell className="font-mono text-pale-stone">{translate(row.meaning)}</TableCell>
                             </TableRow>
                           ))}
                           {filterData(unit.collocations, ["word"]).length ===

@@ -7,6 +7,7 @@ import SplashCursor from "@/components/ui/splash-cursor";
 import DotField from "@/components/DotField";
 import PageTransitionLoader from "@/components/ui/page-transition-loader";
 import SmoothScrollProvider from "@/components/providers/smooth-scroll-provider";
+import { LanguageProvider } from "@/components/providers/language-provider";
 import { cn } from "@/lib/utils";
 
 const ibmPlexMono = IBM_Plex_Mono({
@@ -45,14 +46,16 @@ export default function RootLayout({
     <html lang="en" className={cn(ibmPlexMono.variable, notoSerif.variable, inter.variable)}>
       <body className="antialiased min-h-screen bg-paper-canvas text-ink flex flex-col font-abc-diatype-mono">
         <SmoothScrollProvider>
-          <PageTransitionLoader />
-          <SplashCursor />
-          {/* <TargetCursor /> */}
-          <GradualBlur preset="page-header" zIndex={40} />
-          <div className="fixed inset-0 pointer-events-none -z-10 overflow-hidden">
-            <DotField />
-          </div>
-          {children}
+          <LanguageProvider>
+            <PageTransitionLoader />
+            <SplashCursor />
+            {/* <TargetCursor /> */}
+            <GradualBlur preset="page-header" zIndex={40} />
+            <div className="fixed inset-0 pointer-events-none -z-10 overflow-hidden">
+              <DotField />
+            </div>
+            {children}
+          </LanguageProvider>
         </SmoothScrollProvider>
       </body>
     </html>

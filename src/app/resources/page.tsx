@@ -8,6 +8,7 @@ import { cn } from "@/lib/utils";
 import { Navbar } from "@/components/layout/navbar";
 import { Footer } from "@/components/layout/footer";
 import FloatingLines from "@/components/FloatingLines";
+import { useLanguage } from "@/components/providers/language-provider";
 
 import { Card } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -198,6 +199,7 @@ function parseWordFormationMeaning(meaning: string): WordFamilyItem[] {
 }
 
 export default function ResourcesPage() {
+  const { translate } = useLanguage();
   const [searchQuery, setSearchQuery] = React.useState("");
   const [activeTab, setActiveTab] = React.useState("vocabulary");
 
@@ -468,7 +470,7 @@ export default function ResourcesPage() {
                               {row.type}
                             </span>
                           </TableCell>
-                          <TableCell className="font-mono text-off-black text-sm max-w-[280px] break-words">{row.meaning}</TableCell>
+                          <TableCell className="font-mono text-off-black text-sm max-w-[280px] break-words">{translate(row.meaning)}</TableCell>
                           <TableCell className="font-mono italic text-pale-stone text-xs max-w-[320px] whitespace-pre-line">{row.example}</TableCell>
                           <TableCell className="font-mono text-xs text-pale-stone">
                             <span className="bg-atmosphere-wash/20 border border-off-black/10 rounded-full px-2.5 py-1">
@@ -510,7 +512,7 @@ export default function ResourcesPage() {
                         <TableRow key={idx} className="hover:bg-atmosphere-wash/10 transition-colors">
                           <TableCell className="font-mono text-ink text-center text-xs font-semibold">{(currentPage - 1) * itemsPerPage + idx + 1}</TableCell>
                           <TableCell className="font-mono font-bold text-ink text-sm text-[#ea580c]">{row.phrasalVerb}</TableCell>
-                          <TableCell className="font-mono text-off-black text-sm max-w-[280px] break-words">{row.meaning}</TableCell>
+                          <TableCell className="font-mono text-off-black text-sm max-w-[280px] break-words">{translate(row.meaning)}</TableCell>
                           <TableCell className="font-mono italic text-pale-stone text-xs max-w-[350px] whitespace-pre-line">{row.example}</TableCell>
                           <TableCell className="font-mono text-xs text-pale-stone">
                             <span className="bg-atmosphere-wash/20 border border-off-black/10 rounded-full px-2.5 py-1">
@@ -554,7 +556,7 @@ export default function ResourcesPage() {
                           <TableCell className="font-mono text-ink text-center text-xs font-semibold">{(currentPage - 1) * itemsPerPage + idx + 1}</TableCell>
                           <TableCell className="font-mono font-medium text-ink text-sm bg-atmosphere-wash/5 font-semibold text-center">{extractBaseWord(row.phrase)}</TableCell>
                           <TableCell className="font-mono font-bold text-indigo-600 text-sm">{row.phrase}</TableCell>
-                          <TableCell className="font-mono text-off-black text-sm max-w-[250px] break-words">{row.meaning}</TableCell>
+                          <TableCell className="font-mono text-off-black text-sm max-w-[250px] break-words">{translate(row.meaning)}</TableCell>
                           <TableCell className="font-mono italic text-pale-stone text-xs max-w-[300px] whitespace-pre-line">{row.example}</TableCell>
                           <TableCell className="font-mono text-xs text-pale-stone">
                             <span className="bg-atmosphere-wash/20 border border-off-black/10 rounded-full px-2.5 py-1">
@@ -616,7 +618,7 @@ export default function ResourcesPage() {
                                         </span>
                                       </div>
                                       <div className="flex-1 space-y-1">
-                                        <p className="text-off-black text-sm leading-relaxed">{fam.meaning}</p>
+                                        <p className="text-off-black text-sm leading-relaxed">{translate(fam.meaning)}</p>
                                         {row.example && (
                                           <div className="text-xs text-pale-stone italic mt-1 font-mono">
                                             {row.example.split("\n").map((exLine: string, exIdx: number) => {
@@ -684,7 +686,7 @@ export default function ResourcesPage() {
                           <TableCell className="font-mono text-ink text-center text-xs font-semibold">{(currentPage - 1) * itemsPerPage + idx + 1}</TableCell>
                           <TableCell className="font-mono font-medium text-ink text-sm bg-atmosphere-wash/5 font-semibold text-center">{extractPatternBaseWord(row.verb)}</TableCell>
                           <TableCell className="font-mono font-bold text-[#b91c1c] text-sm">{row.verb} <span className="text-[10px] text-pale-stone font-normal italic">({abbreviateType(row.pattern)})</span></TableCell>
-                          <TableCell className="font-mono text-off-black text-sm max-w-[250px] break-words">{row.meaning}</TableCell>
+                          <TableCell className="font-mono text-off-black text-sm max-w-[250px] break-words">{translate(row.meaning)}</TableCell>
                           <TableCell className="font-mono italic text-pale-stone text-xs max-w-[320px] whitespace-pre-line">{row.example}</TableCell>
                           <TableCell className="font-mono text-xs text-pale-stone">
                             <span className="bg-atmosphere-wash/20 border border-off-black/10 rounded-full px-2.5 py-1">

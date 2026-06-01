@@ -6,6 +6,7 @@ import { Search, Sparkles, BookOpen, Layers, ArrowRight } from "lucide-react";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Input } from "@/components/ui/input";
+import { useLanguage } from "@/components/providers/language-provider";
 
 const tabs = [
   { id: "grammar", label: "Grammar Rules", icon: BookOpen },
@@ -59,6 +60,7 @@ const formationData = [
 ];
 
 export function InteractivePlaypen() {
+  const { translate } = useLanguage();
   const [activeTab, setActiveTab] = React.useState("grammar");
   const [simulatedSearch, setSimulatedSearch] = React.useState("");
 
@@ -229,7 +231,7 @@ export function InteractivePlaypen() {
                                   </Badge>
                                 </div>
                                 <p className="text-[11px] text-off-black/70 line-clamp-2 leading-relaxed">
-                                  {row.meaning}
+                                  {translate(row.meaning)}
                                 </p>
                               </div>
                               <p className="text-[10px] italic font-normal text-off-black/40 truncate">

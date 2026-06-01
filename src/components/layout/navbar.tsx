@@ -6,13 +6,14 @@ import { motion, AnimatePresence } from "framer-motion";
 import { ChevronDown, Menu, Settings, Sun, Moon } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
+import { useLanguage } from "@/components/providers/language-provider";
 
 export function Navbar() {
   const [isScrolled, setIsScrolled] = React.useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = React.useState(false);
   const [isSettingsOpen, setIsSettingsOpen] = React.useState(false);
   const [theme, setTheme] = React.useState<"light" | "dark">("light");
-  const [lang, setLang] = React.useState<"en" | "vi">("en");
+  const { lang, setLang } = useLanguage();
 
   React.useEffect(() => {
     const handleScroll = () => {
