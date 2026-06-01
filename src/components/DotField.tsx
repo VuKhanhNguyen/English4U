@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, memo, useId } from 'react';
+import { useTheme } from "@/components/providers/theme-provider";
 
 const TWO_PI = Math.PI * 2;
 
@@ -41,11 +42,17 @@ const DotField = memo(({
   glowRadius = 160,
   sparkle = false,
   waveAmplitude = 0,
-  gradientFrom = 'rgba(168, 85, 247, 0.35)',
-  gradientTo = 'rgba(180, 151, 207, 0.25)',
-  glowColor = '#120F17',
+  gradientFrom,
+  gradientTo,
+  glowColor,
   ...rest
 }: DotFieldProps) => {
+  const { theme } = useTheme();
+
+  const activeGradientFrom = gradientFrom ?? (theme === "dark" ? "rgba(168, 85, 247, 0.12)" : "rgba(168, 85, 247, 0.35)");
+  const activeGradientTo = gradientTo ?? (theme === "dark" ? "rgba(180, 151, 207, 0.05)" : "rgba(180, 151, 207, 0.25)");
+  const activeGlowColor = glowColor ?? (theme === "dark" ? "rgba(246, 243, 241, 0.08)" : "#120F17");
+
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const svgRef = useRef<SVGSVGElement>(null);
   const glowRef = useRef<SVGCircleElement>(null);
@@ -56,7 +63,18 @@ const DotField = memo(({
   const glowOpacity = useRef(0);
   const engagement = useRef(0);
   const propsRef = useRef<Record<string, unknown>>({});
-  propsRef.current = { dotRadius, dotSpacing, cursorRadius, cursorForce, bulgeOnly, bulgeStrength, sparkle, waveAmplitude, gradientFrom, gradientTo };
+  propsRef.current = {
+    dotRadius,
+    dotSpacing,
+    cursorRadius,
+    cursorForce,
+    bulgeOnly,
+    bulgeStrength,
+    sparkle,
+    waveAmplitude,
+    gradientFrom: activeGradientFrom,
+    gradientTo: activeGradientTo
+  };
   const rebuildRef = useRef<(() => void) | null>(null);
   const glowId = useId();
   const glowIdRef = useRef(`dot-field-glow-${glowId.replace(/:/g, '')}`);
@@ -281,7 +299,7 @@ const DotField = memo(({
       >
         <defs>
           <radialGradient id={glowIdRef.current}>
-            <stop offset="0%" stopColor={glowColor} />
+            <stop offset="0%" stopColor={activeGlowColor} />
             <stop offset="100%" stopColor="transparent" />
           </radialGradient>
         </defs>

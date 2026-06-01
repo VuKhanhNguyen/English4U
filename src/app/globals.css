@@ -6,29 +6,29 @@
 
 @theme {
   /* Colors */
-  --color-ink: #000000;
-  --color-paper-canvas: #f6f3f1;
-  --color-off-black: #242424;
-  --color-pale-stone: #4e4d4d;
-  --color-whisper-gray: #3d3d3d;
-  --color-atmosphere-wash: #cfdaf5;
-  --color-subtle-link: #333333;
-  --color-faint-text: #797776;
-  --color-sunset-violet-gradient: #ffa773;
-  --color-sky-mint-gradient: #a0b5eb;
-  --color-amber-glow-gradient: #e2c161;
+  --color-ink: var(--ink);
+  --color-paper-canvas: var(--paper-canvas);
+  --color-off-black: var(--off-black);
+  --color-pale-stone: var(--pale-stone);
+  --color-whisper-gray: var(--whisper-gray);
+  --color-atmosphere-wash: var(--atmosphere-wash);
+  --color-subtle-link: var(--subtle-link);
+  --color-faint-text: var(--faint-text);
+  --color-sunset-violet-gradient: var(--sunset-violet-gradient-color);
+  --color-sky-mint-gradient: var(--sky-mint-gradient-color);
+  --color-amber-glow-gradient: var(--amber-glow-gradient-color);
 
   /* Legacy color names map for backward compatibility */
-  --color-midnight-ink: #000000;
-  --color-canvas-white: #f6f3f1;
-  --color-charcoal-border: #242424;
-  --color-pale-ash: #f6f3f1;
-  --color-accent-green: #cfdaf5;
-  --color-card-saffron: #cfdaf5;
-  --color-card-lavender: #cfdaf5;
-  --color-card-mint: #cfdaf5;
-  --color-card-pink: #cfdaf5;
-  --color-highlight-yellow: #cfdaf5;
+  --color-midnight-ink: var(--ink);
+  --color-canvas-white: var(--paper-canvas);
+  --color-charcoal-border: var(--off-black);
+  --color-pale-ash: var(--paper-canvas);
+  --color-accent-green: var(--atmosphere-wash);
+  --color-card-saffron: var(--atmosphere-wash);
+  --color-card-lavender: var(--atmosphere-wash);
+  --color-card-mint: var(--atmosphere-wash);
+  --color-card-pink: var(--atmosphere-wash);
+  --color-highlight-yellow: var(--atmosphere-wash);
 
   /* Typography */
   --font-abc-diatype-mono: var(--font-abc-diatype-mono);
@@ -97,29 +97,28 @@
   }
 }
 
-/* Compliant Monad Gradients mapped from old styles */
 @utility bg-sky-breeze-gradient {
-  background: linear-gradient(rgb(160, 181, 235), rgb(167, 252, 205));
+  background: var(--sky-breeze-gradient);
 }
 
 @utility bg-honey-dew-gradient {
-  background: linear-gradient(270deg, rgba(226, 193, 97, 0.7) 23.5%, rgba(243, 122, 10, 0.7) 76%);
+  background: var(--honey-dew-gradient);
 }
 
 @utility bg-lime-spritz-gradient {
-  background: linear-gradient(rgba(255, 148, 115, 0.8) 7%, rgba(160, 181, 235, 0.8) 83.82%);
+  background: var(--lime-spritz-gradient);
 }
 
 @utility bg-sunset-violet-gradient {
-  background: linear-gradient(rgba(255, 148, 115, 0.8) 7%, rgba(160, 181, 235, 0.8) 83.82%);
+  background: var(--sunset-violet-gradient);
 }
 
 @utility bg-sky-mint-gradient {
-  background: linear-gradient(rgb(160, 181, 235), rgb(167, 252, 205));
+  background: var(--sky-mint-gradient);
 }
 
 @utility bg-amber-glow-gradient {
-  background: linear-gradient(270deg, rgba(226, 193, 97, 0.7) 23.5%, rgba(243, 122, 10, 0.7) 76%);
+  background: var(--amber-glow-gradient);
 }
 
 html, body {
@@ -193,62 +192,100 @@ html.lenis body {
 }
 
 :root {
-  --background: #f6f3f1;
-  --foreground: #000000;
-  --card: #cfdaf5;
-  --card-foreground: #000000;
-  --popover: #f6f3f1;
-  --popover-foreground: #000000;
-  --primary: #242424;
-  --primary-foreground: #f6f3f1;
-  --secondary: #cfdaf5;
-  --secondary-foreground: #242424;
-  --muted: #f6f3f1;
-  --muted-foreground: #4e4d4d;
-  --accent: #cfdaf5;
-  --accent-foreground: #242424;
+  --ink: #000000;
+  --paper-canvas: #f6f3f1;
+  --off-black: #242424;
+  --pale-stone: #4e4d4d;
+  --whisper-gray: #3d3d3d;
+  --atmosphere-wash: #cfdaf5;
+  --subtle-link: #333333;
+  --faint-text: #797776;
+  --sunset-violet-gradient-color: #ffa773;
+  --sky-mint-gradient-color: #a0b5eb;
+  --amber-glow-gradient-color: #e2c161;
+
+  --sky-breeze-gradient: linear-gradient(rgb(160, 181, 235), rgb(167, 252, 205));
+  --honey-dew-gradient: linear-gradient(270deg, rgba(226, 193, 97, 0.7) 23.5%, rgba(243, 122, 10, 0.7) 76%);
+  --lime-spritz-gradient: linear-gradient(rgba(255, 148, 115, 0.8) 7%, rgba(160, 181, 235, 0.8) 83.82%);
+  --sunset-violet-gradient: linear-gradient(rgba(255, 148, 115, 0.8) 7%, rgba(160, 181, 235, 0.8) 83.82%);
+  --sky-mint-gradient: linear-gradient(rgb(160, 181, 235), rgb(167, 252, 205));
+  --amber-glow-gradient: linear-gradient(270deg, rgba(226, 193, 97, 0.7) 23.5%, rgba(243, 122, 10, 0.7) 76%);
+
+  --background: var(--paper-canvas);
+  --foreground: var(--ink);
+  --card: var(--atmosphere-wash);
+  --card-foreground: var(--ink);
+  --popover: var(--paper-canvas);
+  --popover-foreground: var(--ink);
+  --primary: var(--off-black);
+  --primary-foreground: var(--paper-canvas);
+  --secondary: var(--atmosphere-wash);
+  --secondary-foreground: var(--off-black);
+  --muted: var(--paper-canvas);
+  --muted-foreground: var(--pale-stone);
+  --accent: var(--atmosphere-wash);
+  --accent-foreground: var(--off-black);
   --destructive: #ef4444;
-  --border: #4e4d4d;
-  --input: #4e4d4d;
-  --ring: #242424;
+  --border: var(--pale-stone);
+  --input: var(--pale-stone);
+  --ring: var(--off-black);
   --radius: 40px;
-  --sidebar: #f6f3f1;
-  --sidebar-foreground: #000000;
-  --sidebar-primary: #242424;
-  --sidebar-primary-foreground: #f6f3f1;
-  --sidebar-accent: #cfdaf5;
-  --sidebar-accent-foreground: #242424;
-  --sidebar-border: #4e4d4d;
-  --sidebar-ring: #242424;
+  --sidebar: var(--paper-canvas);
+  --sidebar-foreground: var(--ink);
+  --sidebar-primary: var(--off-black);
+  --sidebar-primary-foreground: var(--paper-canvas);
+  --sidebar-accent: var(--atmosphere-wash);
+  --sidebar-accent-foreground: var(--off-black);
+  --sidebar-border: var(--pale-stone);
+  --sidebar-ring: var(--off-black);
 }
 
 .dark {
-  --background: #242424;
-  --foreground: #f6f3f1;
-  --card: #3d3d3d;
-  --card-foreground: #f6f3f1;
-  --popover: #242424;
-  --popover-foreground: #f6f3f1;
-  --primary: #f6f3f1;
-  --primary-foreground: #242424;
-  --secondary: #3d3d3d;
-  --secondary-foreground: #f6f3f1;
-  --muted: #3d3d3d;
-  --muted-foreground: #797776;
-  --accent: #3d3d3d;
-  --accent-foreground: #f6f3f1;
+  --ink: #f6f3f1;
+  --paper-canvas: #0f0f10;
+  --off-black: #ffffff;
+  --pale-stone: #9ca3af;
+  --whisper-gray: #1f2937;
+  --atmosphere-wash: #1e293b;
+  --subtle-link: #d1d5db;
+  --faint-text: #6b7280;
+  --sunset-violet-gradient-color: #311042;
+  --sky-mint-gradient-color: #0f172a;
+  --amber-glow-gradient-color: #1e1b4b;
+
+  --sky-breeze-gradient: linear-gradient(to bottom, #1e1b4b, #0f172a);
+  --honey-dew-gradient: linear-gradient(270deg, #1e1b4b 23.5%, #111827 76%);
+  --lime-spritz-gradient: linear-gradient(135deg, #1e1b4b, #111827);
+  --sunset-violet-gradient: linear-gradient(135deg, #311042, #1e1b4b);
+  --sky-mint-gradient: linear-gradient(to bottom, #111827, #0f172a);
+  --amber-glow-gradient: linear-gradient(270deg, #1e1b4b 23.5%, #4c1d95 76%);
+
+  --background: var(--paper-canvas);
+  --foreground: var(--ink);
+  --card: var(--atmosphere-wash);
+  --card-foreground: var(--ink);
+  --popover: var(--paper-canvas);
+  --popover-foreground: var(--ink);
+  --primary: var(--off-black);
+  --primary-foreground: var(--paper-canvas);
+  --secondary: var(--atmosphere-wash);
+  --secondary-foreground: var(--off-black);
+  --muted: var(--whisper-gray);
+  --muted-foreground: var(--pale-stone);
+  --accent: var(--atmosphere-wash);
+  --accent-foreground: var(--off-black);
   --destructive: #ef4444;
-  --border: #797776;
-  --input: #797776;
-  --ring: #f6f3f1;
-  --sidebar: #242424;
-  --sidebar-foreground: #f6f3f1;
-  --sidebar-primary: #f6f3f1;
-  --sidebar-primary-foreground: #242424;
-  --sidebar-accent: #3d3d3d;
-  --sidebar-accent-foreground: #f6f3f1;
-  --sidebar-border: #797776;
-  --sidebar-ring: #f6f3f1;
+  --border: var(--pale-stone);
+  --input: var(--pale-stone);
+  --ring: var(--off-black);
+  --sidebar: var(--paper-canvas);
+  --sidebar-foreground: var(--ink);
+  --sidebar-primary: var(--off-black);
+  --sidebar-primary-foreground: var(--paper-canvas);
+  --sidebar-accent: var(--atmosphere-wash);
+  --sidebar-accent-foreground: var(--off-black);
+  --sidebar-border: var(--pale-stone);
+  --sidebar-ring: var(--off-black);
 }
 
 @layer base {

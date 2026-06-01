@@ -8,6 +8,7 @@ import DotField from "@/components/DotField";
 import PageTransitionLoader from "@/components/ui/page-transition-loader";
 import SmoothScrollProvider from "@/components/providers/smooth-scroll-provider";
 import { LanguageProvider } from "@/components/providers/language-provider";
+import { ThemeProvider } from "@/components/providers/theme-provider";
 import { cn } from "@/lib/utils";
 
 const ibmPlexMono = IBM_Plex_Mono({
@@ -43,21 +44,44 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={cn(ibmPlexMono.variable, notoSerif.variable, inter.variable)}>
+    <html lang="en" className={cn(ibmPlexMono.variable, notoSerif.variable, inter.variable)} suppressHydrationWarning>
+      <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function() {
+                try {
+                  var saved = localStorage.getItem('english4u-theme');
+                  var system = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+                  var theme = saved || system;
+                  if (theme === 'dark') {
+                    document.documentElement.classList.add('dark');
+                  } else {
+                    document.documentElement.classList.remove('dark');
+                  }
+                } catch (e) {}
+              })();
+            `,
+          }}
+        />
+      </head>
       <body className="antialiased min-h-screen bg-paper-canvas text-ink flex flex-col font-abc-diatype-mono">
         <SmoothScrollProvider>
-          <LanguageProvider>
-            <PageTransitionLoader />
-            <SplashCursor />
-            {/* <TargetCursor /> */}
-            <GradualBlur preset="page-header" zIndex={40} />
-            <div className="fixed inset-0 pointer-events-none -z-10 overflow-hidden">
-              <DotField />
-            </div>
-            {children}
-          </LanguageProvider>
+          <ThemeProvider>
+            <LanguageProvider>
+              <PageTransitionLoader />
+              <SplashCursor />
+              {/* <TargetCursor /> */}
+              <GradualBlur preset="page-header" zIndex={40} />
+              <div className="fixed inset-0 pointer-events-none -z-10 overflow-hidden">
+                <DotField />
+              </div>
+              {children}
+            </LanguageProvider>
+          </ThemeProvider>
         </SmoothScrollProvider>
       </body>
     </html>
   );
 }
+

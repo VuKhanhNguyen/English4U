@@ -7,12 +7,13 @@ import { ChevronDown, Menu, Settings, Sun, Moon } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/components/providers/language-provider";
+import { useTheme } from "@/components/providers/theme-provider";
 
 export function Navbar() {
   const [isScrolled, setIsScrolled] = React.useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = React.useState(false);
   const [isSettingsOpen, setIsSettingsOpen] = React.useState(false);
-  const [theme, setTheme] = React.useState<"light" | "dark">("light");
+  const { theme, setTheme } = useTheme();
   const { lang, setLang } = useLanguage();
 
   React.useEffect(() => {
