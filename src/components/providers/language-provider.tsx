@@ -1,6 +1,7 @@
 "use client";
 
 import React, { createContext, useContext, useState, useEffect, useRef } from "react";
+import customTranslations from "@/data/vocab-translation-vi.json";
 
 type Language = "en" | "vi";
 
@@ -138,7 +139,13 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
     // During hydration or if locale is EN, return the original text
     if (!isMounted || lang === "en") return text;
 
-    // Check if we have it in cache
+    // 1. Check custom overrides first
+    const customDict = customTranslations as Record<string, string>;
+    if (customDict[text]) {
+      return customDict[text];
+    }
+
+    // 2. Check if we have it in cache
     if (cache[text]) {
       return cache[text];
     }

@@ -340,6 +340,59 @@ export default function ResourcesPage() {
     return pages;
   };
 
+  const stats = React.useMemo(() => [
+    {
+      key: "vocabulary",
+      label: "Vocabulary",
+      count: vocabulary.length,
+      unit: "words",
+      textColor: "text-ink",
+      borderColor: "border-l-ink/40 hover:border-l-ink hover:bg-ink/5",
+      activeStyle: "bg-ink/5 border-l-ink border-off-black/20",
+      gridClasses: "col-span-1 lg:col-span-4",
+    },
+    {
+      key: "phrasalVerbs",
+      label: "Phrasal Verbs",
+      count: phrasalVerbs.length,
+      unit: "items",
+      textColor: "text-orange-600 dark:text-orange-500",
+      borderColor: "border-l-orange-500/40 hover:border-l-orange-500 hover:bg-orange-500/5",
+      activeStyle: "bg-orange-500/5 border-l-orange-500 border-orange-500/20",
+      gridClasses: "col-span-1 lg:col-span-4",
+    },
+    {
+      key: "prepositionalPhrases",
+      label: "Prepositional Phrases",
+      count: prepositionalPhrases.length,
+      unit: "phrases",
+      textColor: "text-indigo-600 dark:text-indigo-400",
+      borderColor: "border-l-indigo-600/40 hover:border-l-indigo-600 hover:bg-indigo-600/5",
+      activeStyle: "bg-indigo-600/5 border-l-indigo-600 border-indigo-600/20",
+      gridClasses: "col-span-2 sm:col-span-1 lg:col-span-4",
+    },
+    {
+      key: "wordFormation",
+      label: "Word Formation",
+      count: wordFormation.length,
+      unit: "forms",
+      textColor: "text-teal-600 dark:text-teal-400",
+      borderColor: "border-l-teal-600/40 hover:border-l-teal-600 hover:bg-teal-600/5",
+      activeStyle: "bg-teal-600/5 border-l-teal-600 border-teal-600/20",
+      gridClasses: "col-span-1 sm:col-start-1 lg:col-start-3 lg:col-span-4",
+    },
+    {
+      key: "wordPatterns",
+      label: "Word Patterns",
+      count: wordPatterns.length,
+      unit: "patterns",
+      textColor: "text-red-600 dark:text-red-400",
+      borderColor: "border-l-red-600/40 hover:border-l-red-600 hover:bg-red-600/5",
+      activeStyle: "bg-red-600/5 border-l-red-600 border-red-600/20",
+      gridClasses: "col-span-1 lg:col-start-7 lg:col-span-4",
+    },
+  ], [vocabulary.length, phrasalVerbs.length, prepositionalPhrases.length, wordFormation.length, wordPatterns.length]);
+
   return (
     <div className="flex flex-col min-h-screen relative overflow-hidden">
       {/* Base background color */}
@@ -358,10 +411,10 @@ export default function ResourcesPage() {
 
         <div className="container mx-auto px-6 max-w-[1432px]">
           {/* Header Title Card */}
-          <Card variant="content" className="mb-12 flex flex-col md:flex-row items-start md:items-center justify-between !p-8 md:!p-12 relative overflow-hidden bg-paper-canvas/80 backdrop-blur-md">
+          <Card variant="content" className="mb-12 flex flex-col lg:flex-row items-start lg:items-center justify-between !p-8 md:!p-12 relative overflow-hidden bg-paper-canvas/80 backdrop-blur-md">
             <div className="absolute top-0 right-0 w-32 h-32 bg-atmosphere-wash/20 rounded-full blur-2xl pointer-events-none" />
             
-            <div className="space-y-4 max-w-2xl">
+            <div className="space-y-4 max-w-2xl mb-8 lg:mb-0">
               <span className="inline-block text-caption font-mono uppercase tracking-wider text-ink bg-atmosphere-wash px-3.5 py-1.5 rounded-full border border-off-black font-semibold">
                 B1 Resources Hub
               </span>
@@ -373,23 +426,29 @@ export default function ResourcesPage() {
               </p>
             </div>
 
-            <div className="mt-6 md:mt-0 flex gap-6 md:gap-8 font-mono border-t md:border-t-0 md:border-l border-off-black/10 pt-6 md:pt-0 md:pl-8 w-full md:w-auto shrink-0">
-              <div className="flex-1 md:flex-none">
-                <p className="text-caption text-pale-stone uppercase tracking-wider mb-1">
-                  Vocabulary
-                </p>
-                <p className="text-heading font-bold text-ink leading-none">
-                  {vocabulary.length} words
-                </p>
-              </div>
-              <div className="flex-1 md:flex-none">
-                <p className="text-caption text-pale-stone uppercase tracking-wider mb-1">
-                  Phrasal Verbs
-                </p>
-                <p className="text-heading font-bold text-ink leading-none">
-                  {phrasalVerbs.length} items
-                </p>
-              </div>
+            <div className="mt-8 lg:mt-0 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-12 gap-y-5 gap-x-4 lg:gap-x-2 w-full lg:w-[650px] shrink-0 font-mono border-t lg:border-t-0 lg:border-l border-off-black/10 pt-6 lg:pt-0 lg:pl-8">
+              {stats.map((stat) => {
+                const isActive = activeTab === stat.key;
+                return (
+                  <div
+                    key={stat.key}
+                    onClick={() => setActiveTab(stat.key)}
+                    className={cn(
+                      "flex flex-col justify-between p-3.5 rounded-xl border border-off-black/10 dark:border-white/10 transition-all duration-300 cursor-pointer select-none border-l-4 hover:scale-[1.02] active:scale-[0.98]",
+                      stat.borderColor,
+                      stat.gridClasses,
+                      isActive ? stat.activeStyle : "bg-transparent"
+                    )}
+                  >
+                    <p className="text-[10px] sm:text-caption text-pale-stone uppercase tracking-wider mb-1">
+                      {stat.label}
+                    </p>
+                    <p className={cn("text-body sm:text-subheading font-bold leading-none mt-1 whitespace-nowrap", stat.textColor)}>
+                      {stat.count} <span className="text-xs sm:text-caption font-normal text-pale-stone">{stat.unit}</span>
+                    </p>
+                  </div>
+                );
+              })}
             </div>
           </Card>
 
