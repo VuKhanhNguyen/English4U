@@ -1,7 +1,13 @@
 "use client";
 
 import React, { createContext, useContext, useState, useEffect, useRef } from "react";
-import customTranslations from "@/data/vocab-translation-vi.json";
+import vocabTranslations from "@/data/vocab-translation-vi.json";
+import grammarTranslations from "@/data/grammar-translation-vi.json";
+
+const customTranslations = {
+  ...vocabTranslations,
+  ...grammarTranslations,
+};
 
 type Language = "en" | "vi";
 

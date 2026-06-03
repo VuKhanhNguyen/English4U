@@ -13,6 +13,7 @@ export function Navbar() {
   const [isScrolled, setIsScrolled] = React.useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = React.useState(false);
   const [isSettingsOpen, setIsSettingsOpen] = React.useState(false);
+  const [settingsRotation, setSettingsRotation] = React.useState(0);
   const { theme, setTheme } = useTheme();
   const { lang, setLang } = useLanguage();
 
@@ -33,7 +34,19 @@ export function Navbar() {
           href="/"
           className="flex items-center"
         >
-          <img src="/imgs/logo2.png" alt="English4U Logo" className="h-[50px] w-auto" />
+          <motion.img
+            src="/imgs/logo2.png"
+            alt="English4U Logo"
+            className="h-[50px] w-auto"
+            whileHover={{
+              y: [0, -4, 0],
+              transition: {
+                duration: 1.2,
+                repeat: Infinity,
+                ease: "easeInOut",
+              },
+            }}
+          />
         </Link>
 
         {/* Desktop Nav */}
@@ -110,9 +123,16 @@ export function Navbar() {
           <Button
             variant="ghost"
             className="h-[36px] px-4 rounded-full border border-off-black text-off-black bg-transparent hover:bg-off-black/5 active:bg-off-black/10 flex items-center gap-2 cursor-pointer font-normal"
-            onClick={() => setIsSettingsOpen(!isSettingsOpen)}
+            onClick={() => {
+              setIsSettingsOpen(!isSettingsOpen);
+              setSettingsRotation((prev) => prev + 180);
+            }}
           >
-            Settings <Settings className="w-[16px] h-[16px]" />
+            Settings{" "}
+            <Settings
+              className="w-[16px] h-[16px] transition-transform duration-500 ease-in-out"
+              style={{ transform: `rotate(${settingsRotation}deg)` }}
+            />
           </Button>
 
           <AnimatePresence>
@@ -136,7 +156,7 @@ export function Navbar() {
                           : "text-ink/50 hover:text-ink"
                       }`}
                     >
-                      <Sun className="w-[14px] h-[14px]" />
+                      <Sun className={`w-[14px] h-[14px] transition-all duration-200 ${theme === "light" ? "text-amber-500 fill-amber-500" : ""}`} />
                     </button>
                     <button
                       onClick={() => setTheme("dark")}
@@ -146,7 +166,7 @@ export function Navbar() {
                           : "text-ink/50 hover:text-ink"
                       }`}
                     >
-                      <Moon className="w-[14px] h-[14px]" />
+                      <Moon className={`w-[14px] h-[14px] transition-all duration-200 ${theme === "dark" ? "text-yellow-400 fill-yellow-400" : ""}`} />
                     </button>
                   </div>
                 </div>
@@ -159,23 +179,41 @@ export function Navbar() {
                   <div className="flex bg-atmosphere-wash border border-off-black p-1 rounded-full">
                     <button
                       onClick={() => setLang("en")}
-                      className={`px-3 py-1 text-xs rounded-full font-normal cursor-pointer transition-all duration-200 ${
+                      className={`relative overflow-hidden px-3 py-1 text-xs rounded-full font-normal cursor-pointer transition-all duration-200 ${
                         lang === "en"
-                          ? "bg-paper-canvas border border-off-black text-ink shadow-sm"
+                          ? "border border-off-black shadow-sm"
                           : "text-ink/50 hover:text-ink"
                       }`}
                     >
-                      EN
+                      {lang === "en" && (
+                        <img
+                          src="/english.png"
+                          alt="US Flag"
+                          className="absolute inset-0 w-full h-full object-cover pointer-events-none"
+                        />
+                      )}
+                      <span className={lang === "en" ? "opacity-0" : "relative z-10"}>
+                        EN
+                      </span>
                     </button>
                     <button
                       onClick={() => setLang("vi")}
-                      className={`px-3 py-1 text-xs rounded-full font-normal cursor-pointer transition-all duration-200 ${
+                      className={`relative overflow-hidden px-3 py-1 text-xs rounded-full font-normal cursor-pointer transition-all duration-200 ${
                         lang === "vi"
-                          ? "bg-paper-canvas border border-off-black text-ink shadow-sm"
+                          ? "border border-off-black shadow-sm"
                           : "text-ink/50 hover:text-ink"
                       }`}
                     >
-                      VI
+                      {lang === "vi" && (
+                        <img
+                          src="/vietnam.png"
+                          alt="Vietnam Flag"
+                          className="absolute inset-0 w-full h-full object-cover pointer-events-none"
+                        />
+                      )}
+                      <span className={lang === "vi" ? "opacity-0" : "relative z-10"}>
+                        VI
+                      </span>
                     </button>
                   </div>
                 </div>

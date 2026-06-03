@@ -1,6 +1,10 @@
+"use client";
+
 import * as React from "react"
 import Link from "next/link"
 import { SocialIcon } from "react-social-icons"
+import { motion } from "framer-motion"
+
 
 export function Footer() {
   return (
@@ -12,10 +16,18 @@ export function Footer() {
           <div className="flex flex-col gap-4">
             <div className="flex items-center gap-3">
               <Link href="/" className="flex items-center gap-3">
-                <img 
+                <motion.img 
                   src="/imgs/logo2.png" 
                   alt="English4U Logo" 
                   className="h-[45px] w-auto object-contain"
+                  whileHover={{
+                    y: [0, -4, 0],
+                    transition: {
+                      duration: 1.2,
+                      repeat: Infinity,
+                      ease: "easeInOut",
+                    },
+                  }}
                 />
                 <span className="text-white font-bold tracking-wider text-lg uppercase font-sans">
                   English4U

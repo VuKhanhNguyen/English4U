@@ -235,6 +235,8 @@ function abbreviateType(typeStr: string): string {
 }
 
 function RichGrammarRenderer({ richGrammar }: { richGrammar: any[] }) {
+  const { translate } = useLanguage();
+  
   return (
     <div className="space-y-10">
       {(richGrammar || []).map((section: any, sIdx: number) => (
@@ -246,7 +248,7 @@ function RichGrammarRenderer({ richGrammar }: { richGrammar: any[] }) {
           <div className="absolute top-0 right-0 w-24 h-24 bg-atmosphere-wash/10 rounded-full blur-xl pointer-events-none" />
           
           <h3 className="text-subheading font-heading font-bold text-ink mb-6 pb-2 border-b border-off-black/10 flex items-center justify-between">
-            {section.title}
+            {translate(section.title)}
           </h3>
           <div className="space-y-8">
             {(section.blocks || []).map((block: any, bIdx: number) => {
@@ -256,7 +258,7 @@ function RichGrammarRenderer({ richGrammar }: { richGrammar: any[] }) {
                     key={bIdx}
                     className="text-body font-bold text-ink font-mono mt-6 mb-3 border-l-4 border-off-black pl-3"
                   >
-                    {block.content}
+                    {translate(block.content)}
                   </h4>
                 );
               }
@@ -265,7 +267,7 @@ function RichGrammarRenderer({ richGrammar }: { richGrammar: any[] }) {
                   <div key={bIdx} className="space-y-2">
                     {block.tableName && (
                       <h5 className="text-body-sm font-bold text-whisper-gray font-mono">
-                        {block.tableName}
+                        {translate(block.tableName)}
                       </h5>
                     )}
                     <div className="overflow-x-auto border border-off-black rounded-lg bg-paper-canvas">
@@ -277,7 +279,7 @@ function RichGrammarRenderer({ richGrammar }: { richGrammar: any[] }) {
                                 key={hIdx}
                                 className="p-3 border-r border-off-black last:border-r-0 font-bold whitespace-nowrap"
                               >
-                                {h}
+                                {translate(h)}
                               </th>
                             ))}
                           </tr>
@@ -293,7 +295,7 @@ function RichGrammarRenderer({ richGrammar }: { richGrammar: any[] }) {
                                   className="p-3 border-r border-off-black font-bold bg-atmosphere-wash/20 align-middle text-ink"
                                   rowSpan={row.rowspan}
                                 >
-                                  {row.type}
+                                  {translate(row.type)}
                                 </td>
                               )}
                               {row.subject && (
@@ -324,7 +326,7 @@ function RichGrammarRenderer({ richGrammar }: { richGrammar: any[] }) {
                   <div key={bIdx} className="space-y-2">
                     {block.tableName && (
                       <h5 className="text-body-sm font-bold text-whisper-gray font-mono">
-                        {block.tableName}
+                        {translate(block.tableName)}
                       </h5>
                     )}
                     <div className="overflow-x-auto border border-off-black rounded-lg bg-paper-canvas">
@@ -336,7 +338,7 @@ function RichGrammarRenderer({ richGrammar }: { richGrammar: any[] }) {
                                 key={hIdx}
                                 className="p-3 border-r border-off-black last:border-r-0 font-bold whitespace-nowrap"
                               >
-                                {h}
+                                {translate(h)}
                               </th>
                             ))}
                           </tr>
@@ -352,7 +354,7 @@ function RichGrammarRenderer({ richGrammar }: { richGrammar: any[] }) {
                                   key={cIdx}
                                   className="p-3 border-r border-off-black last:border-r-0 text-ink whitespace-pre-line align-top"
                                 >
-                                  {renderTextWithLinks(cell)}
+                                  {renderTextWithLinks(translate(cell))}
                                 </td>
                               ))}
                             </tr>
@@ -368,7 +370,7 @@ function RichGrammarRenderer({ richGrammar }: { richGrammar: any[] }) {
                   <div key={bIdx} className="font-mono text-sm text-ink space-y-4">
                     {block.intro && (
                       <p className="text-body-sm leading-relaxed whitespace-pre-line text-off-black">
-                        {renderTextWithLinks(block.intro)}
+                        {renderTextWithLinks(translate(block.intro))}
                       </p>
                     )}
                     {block.items ? (
@@ -377,13 +379,13 @@ function RichGrammarRenderer({ richGrammar }: { richGrammar: any[] }) {
                           <div key={iIdx} className="space-y-2 border border-off-black/10 rounded-lg p-4 bg-paper-canvas/50">
                             <p className="font-bold text-ink flex items-center gap-2">
                               <span className="w-2 h-2 rounded-full bg-[#ffa773]" />
-                              {item.label}
+                              {translate(item.label)}
                             </p>
                             <ul className="list-none pl-4 space-y-2 text-off-black">
                               {(item.bullets || []).map((b: string, bulIdx: number) => (
                                 <li key={bulIdx} className="flex gap-2 items-start whitespace-pre-line text-body-sm">
                                   <span className="text-off-black font-bold">✓</span>
-                                  <span>{renderTextWithLinks(b)}</span>
+                                  <span>{renderTextWithLinks(translate(b))}</span>
                                 </li>
                               ))}
                             </ul>
@@ -395,7 +397,7 @@ function RichGrammarRenderer({ richGrammar }: { richGrammar: any[] }) {
                         {(block.bullets || []).map((b: string, bulIdx: number) => (
                           <li key={bulIdx} className="flex gap-2 items-start whitespace-pre-line text-body-sm text-off-black leading-relaxed">
                             <span className="text-indigo-600 font-bold">•</span>
-                            <span>{renderTextWithLinks(b)}</span>
+                            <span>{renderTextWithLinks(translate(b))}</span>
                           </li>
                         ))}
                       </ul>
@@ -411,28 +413,34 @@ function RichGrammarRenderer({ richGrammar }: { richGrammar: any[] }) {
                         <table className="w-full text-sm border-collapse text-left">
                           <thead>
                             <tr className="bg-atmosphere-wash border-b border-off-black font-mono text-ink">
-                              <th className="p-3 border-r border-off-black font-bold w-[100px]">Pronunciation</th>
-                              <th className="p-3 font-bold">Pronunciation rules</th>
+                              <th className="p-3 border-r border-off-black font-bold w-[100px]">
+                                {translate("Pronunciation")}
+                              </th>
+                              <th className="p-3 font-bold">
+                                {translate("Pronunciation rules")}
+                              </th>
                             </tr>
                           </thead>
                           <tbody>
                             {(block.table || []).map((row: any, rIdx: number) => (
                               <tr key={rIdx} className="border-b border-off-black last:border-b-0 hover:bg-atmosphere-wash/10 transition-colors">
                                 <td className="p-3 border-r border-off-black font-bold text-indigo-600 bg-atmosphere-wash/10 align-middle text-center">{row[0]}</td>
-                                <td className="p-3 whitespace-pre-line text-off-black align-middle">{row[1]}</td>
+                                <td className="p-3 whitespace-pre-line text-off-black align-middle">
+                                  {renderTextWithLinks(translate(row[1]))}
+                                </td>
                               </tr>
                             ))}
                           </tbody>
                         </table>
                       </div>
                     )}
-
+ 
                     {block.blackboard && (
                       <div className="bg-[#1b261a] text-[#f4eedb] border-[6px] border-[#3e2e1d] rounded-lg p-6 shadow-md relative overflow-hidden font-sans">
                         {/* Chalk dust effect */}
                         <div className="absolute inset-0 bg-[radial-gradient(rgba(255,255,255,0.06)_1px,transparent_1px)] bg-size-[12px_12px] pointer-events-none" />
                         <h5 className="font-heading font-bold text-center text-[#fffbdf] text-base mb-4 underline decoration-sunset-violet-gradient decoration-wavy underline-offset-4">
-                          {block.blackboard.title}
+                          {translate(block.blackboard.title)}
                         </h5>
                         <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 text-center font-mono">
                           {(block.blackboard.items || []).map((item: string, itIdx: number) => {
@@ -447,11 +455,11 @@ function RichGrammarRenderer({ richGrammar }: { richGrammar: any[] }) {
                         </div>
                       </div>
                     )}
-
+ 
                     {block.note && (
                       <div className="p-4 bg-honey-dew-gradient/10 border border-off-black/20 rounded-lg text-ink italic text-body-sm flex gap-3 items-center">
                         <span className="text-xl">💡</span>
-                        <span>{renderTextWithLinks(block.note)}</span>
+                        <span>{renderTextWithLinks(translate(block.note))}</span>
                       </div>
                     )}
                   </div>
@@ -461,25 +469,33 @@ function RichGrammarRenderer({ richGrammar }: { richGrammar: any[] }) {
                 return (
                   <div key={bIdx} className="font-mono text-sm text-ink space-y-4">
                     <p className="whitespace-pre-line leading-relaxed text-off-black text-body-sm">
-                      {block.description}
+                      {renderTextWithLinks(translate(block.description))}
                     </p>
                     <div className="overflow-x-auto border border-off-black rounded-lg bg-paper-canvas">
                       <table className="w-full text-sm border-collapse text-left">
                         <thead>
                           <tr className="bg-atmosphere-wash border-b border-off-black font-mono text-ink">
-                            <th className="p-3 border-r border-off-black font-bold">Stative Verb</th>
-                            <th className="p-3 border-r border-off-black font-bold">Meaning</th>
-                            <th className="p-3 border-r border-off-black font-bold">Stative Verb</th>
-                            <th className="p-3 font-bold">Meaning</th>
+                            <th className="p-3 border-r border-off-black font-bold">
+                              {translate("Stative Verb")}
+                            </th>
+                            <th className="p-3 border-r border-off-black font-bold">
+                              {translate("Meaning")}
+                            </th>
+                            <th className="p-3 border-r border-off-black font-bold">
+                              {translate("Stative Verb")}
+                            </th>
+                            <th className="p-3 font-bold">
+                              {translate("Meaning")}
+                            </th>
                           </tr>
                         </thead>
                         <tbody>
                           {(block.table || []).map((row: any, rIdx: number) => (
                             <tr key={rIdx} className="border-b border-off-black last:border-b-0 hover:bg-atmosphere-wash/10 transition-colors">
-                              <td className="p-3 border-r border-off-black font-bold text-ink align-middle">{row[0]}</td>
-                              <td className="p-3 border-r border-off-black text-pale-stone align-middle">{row[1]}</td>
-                              <td className="p-3 border-r border-off-black font-bold text-ink align-middle">{row[2]}</td>
-                              <td className="p-3 text-pale-stone align-middle">{row[3]}</td>
+                              <td className="p-3 border-r border-off-black font-bold text-ink align-middle">{translate(row[0])}</td>
+                              <td className="p-3 border-r border-off-black text-pale-stone align-middle">{translate(row[1])}</td>
+                              <td className="p-3 border-r border-off-black font-bold text-ink align-middle">{translate(row[2])}</td>
+                              <td className="p-3 text-pale-stone align-middle">{translate(row[3])}</td>
                             </tr>
                           ))}
                         </tbody>
@@ -488,7 +504,7 @@ function RichGrammarRenderer({ richGrammar }: { richGrammar: any[] }) {
                     {block.note && (
                       <div className="p-4 bg-atmosphere-wash/30 border border-off-black/20 rounded-lg text-ink font-semibold text-body-sm flex gap-3 items-center">
                         <span className="text-xl">⚠️</span>
-                        <span>{renderTextWithLinks(block.note)}</span>
+                        <span>{renderTextWithLinks(translate(block.note))}</span>
                       </div>
                     )}
                   </div>
