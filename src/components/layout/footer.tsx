@@ -4,9 +4,11 @@ import * as React from "react"
 import Link from "next/link"
 import { SocialIcon } from "react-social-icons"
 import { motion } from "framer-motion"
+import { useLanguage } from "@/components/providers/language-provider"
 
 
 export function Footer() {
+  const { translate } = useLanguage();
   return (
     <footer className="bg-gradient-to-b from-[#1c2431] to-[#111721] text-neutral-300 pt-16 pb-12 mt-auto font-abc-diatype-mono border-t border-[#2d3748]/30">
       <div className="container mx-auto px-6 max-w-6xl">
@@ -46,48 +48,68 @@ export function Footer() {
           {/* Column 2: Quick Links */}
           <div className="flex flex-col gap-4 md:pl-12">
             <h3 className="text-white font-bold tracking-wide text-base font-sans">
-              Quick Links
+              {translate("Quick Links")}
             </h3>
-            <ul className="flex flex-col gap-3">
-              <li>
-                <Link 
-                  href="/" 
-                  className="text-[#8ea0b5] hover:text-white transition-colors text-sm underline decoration-[#8ea0b5]/50 hover:decoration-white"
-                >
-                  Home
-                </Link>
-              </li>
-              <li>
-                <Link 
-                  href="/#about" 
-                  className="text-[#8ea0b5] hover:text-white transition-colors text-sm underline decoration-[#8ea0b5]/50 hover:decoration-white"
-                >
-                  About
-                </Link>
-              </li>
-              <li>
-                <Link 
-                  href="/resources" 
-                  className="text-[#8ea0b5] hover:text-white transition-colors text-sm underline decoration-[#8ea0b5]/50 hover:decoration-white"
-                >
-                  Resources
-                </Link>
-              </li>
-              <li>
-                <Link 
-                  href="/#contact" 
-                  className="text-[#8ea0b5] hover:text-white transition-colors text-sm underline decoration-[#8ea0b5]/50 hover:decoration-white"
-                >
-                  Contact
-                </Link>
-              </li>
-            </ul>
+            <div className="grid grid-cols-2 gap-4">
+              <ul className="flex flex-col gap-3">
+                <li>
+                  <Link 
+                    href="/#about" 
+                    className="text-[#8ea0b5] hover:text-white transition-colors text-sm underline decoration-[#8ea0b5]/50 hover:decoration-white"
+                  >
+                    {translate("About")}
+                  </Link>
+                </li>
+                <li>
+                  <Link 
+                    href="/resources" 
+                    className="text-[#8ea0b5] hover:text-white transition-colors text-sm underline decoration-[#8ea0b5]/50 hover:decoration-white"
+                  >
+                    {translate("Resources")}
+                  </Link>
+                </li>
+                <li>
+                  <Link 
+                    href="/#contact" 
+                    className="text-[#8ea0b5] hover:text-white transition-colors text-sm underline decoration-[#8ea0b5]/50 hover:decoration-white"
+                  >
+                    {translate("Contact")}
+                  </Link>
+                </li>
+              </ul>
+              <ul className="flex flex-col gap-3">
+                <li>
+                  <Link 
+                    href="/destination/b1" 
+                    className="text-[#8ea0b5] hover:text-white transition-colors text-sm underline decoration-[#8ea0b5]/50 hover:decoration-white"
+                  >
+                    Destination B1
+                  </Link>
+                </li>
+                <li>
+                  <Link 
+                    href="/destination/b2" 
+                    className="text-[#8ea0b5] hover:text-white transition-colors text-sm underline decoration-[#8ea0b5]/50 hover:decoration-white"
+                  >
+                    Destination B2
+                  </Link>
+                </li>
+                <li>
+                  <Link 
+                    href="/destination/c1-c2" 
+                    className="text-[#8ea0b5] hover:text-white transition-colors text-sm underline decoration-[#8ea0b5]/50 hover:decoration-white"
+                  >
+                    Destination C1-C2
+                  </Link>
+                </li>
+              </ul>
+            </div>
           </div>
 
           {/* Column 3: Connect */}
-          <div className="flex flex-col gap-4">
+          <div className="flex flex-col gap-4 md:pl-12">
             <h3 className="text-white font-bold tracking-wide text-base font-sans">
-              Connect
+              {translate("Connect")}
             </h3>
             
             {/* Social Icons */}

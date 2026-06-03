@@ -15,7 +15,7 @@ export function Navbar() {
   const [isSettingsOpen, setIsSettingsOpen] = React.useState(false);
   const [settingsRotation, setSettingsRotation] = React.useState(0);
   const { theme, setTheme } = useTheme();
-  const { lang, setLang } = useLanguage();
+  const { lang, setLang, translate } = useLanguage();
 
   React.useEffect(() => {
     const handleScroll = () => {
@@ -55,7 +55,7 @@ export function Navbar() {
             href="/#about"
             className="text-sm font-normal text-off-black px-[10px] py-[8px] hover:underline hover:decoration-off-black transition-all"
           >
-            About
+            {translate("About")}
           </Link>
 
           {/* Hover-activated dropdown */}
@@ -109,13 +109,13 @@ export function Navbar() {
             href="/resources"
             className="text-sm font-normal text-off-black px-[10px] py-[8px] hover:underline hover:decoration-off-black transition-all"
           >
-            Resources
+            {translate("Resources")}
           </Link>
           <Link
             href="/#contact"
             className="text-sm font-normal text-off-black px-[10px] py-[8px] hover:underline hover:decoration-off-black transition-all"
           >
-            Contact
+            {translate("Contact")}
           </Link>
         </nav>
 
@@ -128,7 +128,7 @@ export function Navbar() {
               setSettingsRotation((prev) => prev + 180);
             }}
           >
-            Settings{" "}
+            {translate("Settings")}{" "}
             <Settings
               className="w-[16px] h-[16px] transition-transform duration-500 ease-in-out"
               style={{ transform: `rotate(${settingsRotation}deg)` }}
@@ -146,7 +146,7 @@ export function Navbar() {
               >
                 {/* Dark/Light mode toggle */}
                 <div className="flex items-center justify-between">
-                  <span className="text-xs font-bold text-ink">Theme</span>
+                  <span className="text-xs font-bold text-ink">{translate("Theme")}</span>
                   <div className="flex bg-atmosphere-wash border border-off-black p-1 rounded-full">
                     <button
                       onClick={() => setTheme("light")}
@@ -175,7 +175,7 @@ export function Navbar() {
 
                 {/* Language selection */}
                 <div className="flex items-center justify-between">
-                  <span className="text-xs font-bold text-ink">Language</span>
+                  <span className="text-xs font-bold text-ink">{translate("Language")}</span>
                   <div className="flex bg-atmosphere-wash border border-off-black p-1 rounded-full">
                     <button
                       onClick={() => setLang("en")}
