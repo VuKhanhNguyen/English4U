@@ -1,12 +1,26 @@
 "use client";
 
-import { useEffect, useState, Suspense } from "react";
+import { useEffect, useState, useRef, Suspense } from "react";
 import { usePathname, useSearchParams } from "next/navigation";
 
 function LoaderContent() {
   const pathname = usePathname();
   const searchParams = useSearchParams();
   const [isLoading, setIsLoading] = useState(false);
+  const [isImageLoaded, setIsImageLoaded] = useState(false);
+  const imgRef = useRef<HTMLImageElement>(null);
+
+  useEffect(() => {
+    if (!isLoading) {
+      setIsImageLoaded(false);
+    }
+  }, [isLoading]);
+
+  useEffect(() => {
+    if (isLoading && imgRef.current?.complete) {
+      setIsImageLoaded(true);
+    }
+  }, [isLoading]);
 
   useEffect(() => {
     // Hide loader when route changes
@@ -72,8 +86,17 @@ function LoaderContent() {
   if (!isLoading) return null;
 
   return (
-    <div className="fixed inset-0 z-[9999] flex items-center justify-center bg-white/90 backdrop-blur-sm transition-all duration-300">
-      <div className="loader" />
+    <div className={`fixed inset-0 z-[9999] flex items-center justify-center bg-white/90 backdrop-blur-sm transition-all duration-300 ${isImageLoaded ? "opacity-100" : "opacity-0"}`}>
+      <div className="flex flex-col items-center gap-4">
+        <img
+          ref={imgRef}
+          src="/imgs/dogStudy.gif"
+          alt="Loading..."
+          className="w-[120px] h-auto object-contain"
+          onLoad={() => setIsImageLoaded(true)}
+        />
+        <div className="loader" />
+      </div>
     </div>
   );
 }
