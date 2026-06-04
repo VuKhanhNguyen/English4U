@@ -13,8 +13,10 @@ import {
   Layers,
   Check,
 } from "lucide-react";
+import { useLanguage } from "@/components/providers/language-provider";
 
 export function BentoFeatures() {
+  const { translate } = useLanguage();
   const [bentoTheme, setBentoTheme] = React.useState<"light" | "dark">("light");
   const [searchHighlight, setSearchHighlight] = React.useState("grammar");
 
@@ -27,14 +29,13 @@ export function BentoFeatures() {
         {/* Header */}
         <div className="text-center mb-16 font-abc-diatype-mono">
           <span className="text-xs font-normal uppercase tracking-wider text-paper-canvas bg-off-black px-3 py-1 rounded-full border border-off-black">
-            Interactive Bento Showcase
+            {translate("Interactive Bento Showcase")}
           </span>
           <h2 className="text-heading-lg font-heading font-normal tracking-[-0.02em] text-ink mt-4 mb-4">
-            Engineered For Absolute Visual Clarity
+            {translate("Engineered For Absolute Visual Clarity")}
           </h2>
           <p className="text-body text-pale-stone max-w-2xl mx-auto">
-            Traditional learning materials are dense and text-heavy. English4U
-            is a custom-architected study hub built strictly for self-learners.
+            {translate("Traditional learning materials are dense and text-heavy. English4U is a custom-architected study hub built strictly for self-learners.")}
           </p>
         </div>
 
@@ -49,23 +50,22 @@ export function BentoFeatures() {
             <div>
               <div className="flex items-center justify-between mb-4">
                 <Badge className="border-off-black font-normal rounded-full px-3 py-0.5 text-xs bg-paper-canvas text-off-black">
-                  Fast Search
+                  {translate("Fast Search")}
                 </Badge>
                 <Search className="w-[16px] h-[16px] text-off-black/40" />
               </div>
               <h3 className="text-heading font-normal text-ink mb-2 tracking-tight">
-                Zero-Latency Client Search
+                {translate("Zero-Latency Client Search")}
               </h3>
               <p className="text-body-sm text-pale-stone leading-relaxed max-w-md">
-                Instantly filter vocabulary, grammatical structures, or
-                collocations without waiting for a server request.
+                {translate("Instantly filter vocabulary, grammatical structures, or collocations without waiting for a server request.")}
               </p>
             </div>
 
             {/* Interactive Search Mock */}
             <div className="bg-atmosphere-wash border border-off-black rounded-full p-2 px-4 flex gap-2 items-center overflow-x-auto">
               <span className="text-xs font-normal text-off-black/60 shrink-0">
-                Try typing:
+                {translate("Try typing:")}
               </span>
               <button
                 onClick={() => setSearchHighlight("grammar")}
@@ -111,7 +111,7 @@ export function BentoFeatures() {
             <div>
               <div className="flex items-center justify-between mb-4">
                 <Badge className={`font-normal rounded-full px-3 py-0.5 text-xs ${bentoTheme === "dark" ? "border-paper-canvas/20 text-paper-canvas bg-paper-canvas/10" : "border-off-black text-off-black bg-atmosphere-wash"}`}>
-                  UX Customization
+                  {translate("UX Customization")}
                 </Badge>
                 {bentoTheme === "light" ? (
                   <Sun className="w-[16px] h-[16px] text-ink" />
@@ -119,12 +119,11 @@ export function BentoFeatures() {
                   <Moon className="w-[16px] h-[16px] text-paper-canvas" />
                 )}
               </div>
-              <h3 className="text-heading font-normal mb-2 tracking-tight">Theme Switcher</h3>
+              <h3 className="text-heading font-normal mb-2 tracking-tight">{translate("Theme Switcher")}</h3>
               <p
                 className={`text-body-sm leading-relaxed ${bentoTheme === "dark" ? "text-paper-canvas/80" : "text-pale-stone"}`}
               >
-                Click anywhere on this card to preview the gorgeous dark-mode
-                palette toggle.
+                {translate("Click anywhere on this card to preview the gorgeous dark-mode palette toggle.")}
               </p>
             </div>
 
@@ -136,7 +135,7 @@ export function BentoFeatures() {
                   : "bg-atmosphere-wash border-off-black"
               }`}
             >
-              <span className={`text-xs font-normal ml-2 ${bentoTheme === "dark" ? "text-paper-canvas/80" : "text-off-black"}`}>Selected Mode:</span>
+              <span className={`text-xs font-normal ml-2 ${bentoTheme === "dark" ? "text-paper-canvas/80" : "text-off-black"}`}>{translate("Selected Mode:")}</span>
               <div
                 className={`text-xs px-3 py-1 rounded-full border font-normal flex items-center gap-1 ${
                   bentoTheme === "dark"
@@ -144,7 +143,7 @@ export function BentoFeatures() {
                     : "bg-off-black text-paper-canvas border-off-black"
                 }`}
               >
-                {bentoTheme === "dark" ? "Dark Mode" : "Light Mode"}
+                {bentoTheme === "dark" ? translate("Dark Mode") : translate("Light Mode")}
                 <Check className="w-[12px] h-[12px]" />
               </div>
             </div>
@@ -159,16 +158,15 @@ export function BentoFeatures() {
             <div>
               <div className="flex items-center justify-between mb-4">
                 <Badge className="border-off-black font-normal rounded-full px-3 py-0.5 text-xs bg-paper-canvas text-off-black">
-                  Linguistics
+                  {translate("Linguistics")}
                 </Badge>
                 <Sparkles className="w-[16px] h-[16px] text-off-black/40" />
               </div>
               <h3 className="text-heading font-normal text-ink mb-2 tracking-tight">
-                Word Families
+                {translate("Word Families")}
               </h3>
               <p className="text-body-sm text-pale-stone leading-relaxed">
-                Unlock root suffixes and prefixes visually, multiplying your
-                recall capability.
+                {translate("Unlock root suffixes and prefixes visually, multiplying your recall capability.")}
               </p>
             </div>
 
@@ -200,16 +198,15 @@ export function BentoFeatures() {
             <div>
               <div className="flex items-center justify-between mb-4">
                 <Badge className="border-off-black font-normal rounded-full px-3 py-0.5 text-xs bg-paper-canvas text-off-black">
-                  Fluency Map
+                  {translate("Fluency Map")}
                 </Badge>
                 <Layers className="w-[16px] h-[16px] text-off-black/40" />
               </div>
               <h3 className="text-heading font-normal text-ink mb-2 tracking-tight">
-                Connected Collocations Bubble
+                {translate("Connected Collocations Bubble")}
               </h3>
               <p className="text-body-sm text-pale-stone leading-relaxed max-w-md">
-                Learn natural word partners instead of isolated vocabulary.
-                Connect verbs with nouns dynamically.
+                {translate("Learn natural word partners instead of isolated vocabulary. Connect verbs with nouns dynamically.")}
               </p>
             </div>
 
@@ -237,18 +234,15 @@ export function BentoFeatures() {
             <div>
               <div className="flex items-center justify-between mb-4">
                 <Badge className="border-off-black font-normal rounded-full px-3 py-0.5 text-xs bg-paper-canvas text-off-black">
-                  Coverage
+                  {translate("Coverage")}
                 </Badge>
                 <BookOpen className="w-[16px] h-[16px] text-off-black/60" />
               </div>
               <h3 className="text-heading font-normal text-ink mb-2 tracking-tight">
-                100% Comprehensive Syllabus Coverage
+                {translate("100% Comprehensive Syllabus Coverage")}
               </h3>
               <p className="text-body-sm text-pale-stone leading-relaxed max-w-2xl">
-                Every unit in Destination B1, B2, and C1/C2 is thoroughly
-                detailed. Over 90 detailed units covering thousands of custom
-                tables, specific exceptions, word groups, and natural
-                prepositional partnerships.
+                {translate("Every unit in Destination B1, B2, and C1/C2 is thoroughly detailed. Over 90 detailed units covering thousands of custom tables, specific exceptions, word groups, and natural prepositional partnerships.")}
               </p>
             </div>
 
@@ -256,26 +250,26 @@ export function BentoFeatures() {
             <div className="grid grid-cols-3 gap-4 text-center mt-4">
               <div className="p-4 bg-atmosphere-wash border border-off-black rounded-[40px] shadow-sm">
                 <p className="text-[10px] font-normal text-off-black/60 uppercase tracking-wider">
-                  Intermediate
+                  {translate("Intermediate")}
                 </p>
                 <p className="text-sm font-normal text-ink mt-1">
-                  B1 Syllabus
+                  {translate("B1 Syllabus")}
                 </p>
               </div>
               <div className="p-4 bg-atmosphere-wash border border-off-black rounded-[40px] shadow-sm">
                 <p className="text-[10px] font-normal text-off-black/60 uppercase tracking-wider">
-                  Upper-Inter
+                  {translate("Upper-Inter")}
                 </p>
                 <p className="text-sm font-normal text-ink mt-1">
-                  B2 Syllabus
+                  {translate("B2 Syllabus")}
                 </p>
               </div>
               <div className="p-4 bg-atmosphere-wash border border-off-black rounded-[40px] shadow-sm">
                 <p className="text-[10px] font-normal text-off-black/60 uppercase tracking-wider">
-                  Proficient
+                  {translate("Proficient")}
                 </p>
                 <p className="text-sm font-normal text-ink mt-1">
-                  C1 & C2 Syllabus
+                  {translate("C1 & C2 Syllabus")}
                 </p>
               </div>
             </div>
@@ -294,7 +288,7 @@ export function BentoFeatures() {
                 className="text-sm md:text-base font-normal font-mono tracking-tight uppercase italic"
                 style={itemGradients[idx % itemGradients.length]}
               >
-                {item}
+                {translate(item)}
               </span>
               <span className="text-paper-canvas/30 text-lg select-none">·</span>
             </div>
@@ -306,7 +300,7 @@ export function BentoFeatures() {
                 className="text-sm md:text-base font-normal font-mono tracking-tight uppercase italic"
                 style={itemGradients[idx % itemGradients.length]}
               >
-                {item}
+                {translate(item)}
               </span>
               <span className="text-paper-canvas/30 text-lg select-none">·</span>
             </div>
@@ -318,7 +312,7 @@ export function BentoFeatures() {
                 className="text-sm md:text-base font-normal font-mono tracking-tight uppercase italic"
                 style={itemGradients[idx % itemGradients.length]}
               >
-                {item}
+                {translate(item)}
               </span>
               <span className="text-paper-canvas/30 text-lg select-none">·</span>
             </div>

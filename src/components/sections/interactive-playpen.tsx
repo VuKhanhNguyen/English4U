@@ -71,15 +71,13 @@ export function InteractivePlaypen() {
           {/* Column 1: Info and Action */}
           <div className="lg:col-span-5">
             <span className="text-xs font-normal uppercase tracking-wider text-paper-canvas bg-off-black px-3 py-1 rounded-full border border-off-black">
-              Interactive Preview
+              {translate("Interactive Preview")}
             </span>
             <h2 className="text-display-sm font-heading font-normal tracking-[-0.02em] text-ink mt-4 mb-6 leading-tight">
-              Experience the Power of Clean Structures
+              {translate("Experience the Power of Clean Structures")}
             </h2>
             <p className="text-body text-pale-stone mb-8 leading-relaxed">
-              Don't just take our word for it. Click the tabs and search inside
-              this interactive playpen to see how English4U transforms complex
-              lessons into instant cognitive clarity.
+              {translate("Don't just take our word for it. Click the tabs and search inside this interactive playpen to see how English4U transforms complex lessons into instant cognitive clarity.")}
             </p>
 
             <div className="flex flex-col gap-3">
@@ -104,7 +102,7 @@ export function InteractivePlaypen() {
                       >
                         <Icon className={`w-[16px] h-[16px] ${activeTab === tab.id ? "text-paper-canvas" : "text-ink"}`} />
                       </div>
-                      <span className="font-normal text-sm">{tab.label}</span>
+                      <span className="font-normal text-sm">{translate(tab.label)}</span>
                     </div>
                     <ArrowRight
                       className={`w-[14px] h-[14px] transition-transform duration-200 ${activeTab === tab.id ? "translate-x-1 opacity-100" : "opacity-0"}`}
@@ -125,10 +123,10 @@ export function InteractivePlaypen() {
               <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center pb-6 border-b border-off-black gap-4 mb-6">
                 <div>
                   <span className="text-[10px] font-normal uppercase tracking-wider text-ink bg-atmosphere-wash px-3 py-1 rounded-full border border-off-black">
-                    Live Playground
+                    {translate("Live Playground")}
                   </span>
                   <h3 className="text-heading font-normal text-ink mt-2.5">
-                    Destination Unit Preview
+                    {translate("Destination Unit Preview")}
                   </h3>
                 </div>
 
@@ -136,7 +134,7 @@ export function InteractivePlaypen() {
                 <div className="relative w-full sm:w-[220px]">
                   <Search className="absolute left-3 top-1/2 -translate-y-1/2 text-off-black/40 w-[14px] h-[14px]" />
                   <Input
-                    placeholder="Type to filter..."
+                    placeholder={translate("Type to filter...")}
                     value={simulatedSearch}
                     onChange={(e) => setSimulatedSearch(e.target.value)}
                     className="pl-9 bg-paper-canvas border border-off-black text-xs rounded-full h-[36px] w-full"
@@ -163,7 +161,7 @@ export function InteractivePlaypen() {
                               item.structure
                                 .toLowerCase()
                                 .includes(simulatedSearch.toLowerCase()) ||
-                                item.usage
+                              item.usage
                                 .toLowerCase()
                                 .includes(simulatedSearch.toLowerCase()),
                           )
@@ -176,13 +174,13 @@ export function InteractivePlaypen() {
                                 {row.structure}
                               </p>
                               <p className="text-xs font-normal text-off-black/60 mb-2">
-                                Usage:{" "}
+                                {translate("Usage")}:{" "}
                                 <span className="text-ink font-normal">
-                                  {row.usage}
+                                  {translate(row.usage)}
                                 </span>
                               </p>
                               <p className="text-xs italic font-normal text-off-black/50">
-                                Example:{" "}
+                                {translate("Example")}:{" "}
                                 <span className="text-ink not-italic font-normal">
                                   "{row.example}"
                                 </span>
@@ -197,7 +195,7 @@ export function InteractivePlaypen() {
                               .includes(simulatedSearch.toLowerCase()),
                         ).length === 0 && (
                           <div className="text-center py-12 text-xs text-off-black/50">
-                            No matching structures found.
+                            {translate("No matching structures found.")}
                           </div>
                         )}
                       </div>
@@ -227,7 +225,7 @@ export function InteractivePlaypen() {
                                     {row.word}
                                   </h4>
                                   <Badge className="border-off-black text-[9px] font-normal rounded-full px-2 py-0.5 bg-paper-canvas text-off-black">
-                                    {row.type}
+                                    {translate(row.type)}
                                   </Badge>
                                 </div>
                                 <p className="text-[11px] text-off-black/70 line-clamp-2 leading-relaxed">
@@ -247,7 +245,7 @@ export function InteractivePlaypen() {
                               .includes(simulatedSearch.toLowerCase()),
                         ).length === 0 && (
                           <div className="col-span-2 text-center py-12 text-xs text-off-black/50">
-                            No matching vocabulary found.
+                            {translate("No matching vocabulary found.")}
                           </div>
                         )}
                       </div>
@@ -269,12 +267,12 @@ export function InteractivePlaypen() {
                               className="p-6 bg-atmosphere-wash rounded-[40px] border border-off-black shadow-sm overflow-x-auto"
                             >
                               <h4 className="text-xs font-normal uppercase tracking-wider text-paper-canvas bg-off-black px-3 py-1 rounded-full border border-off-black inline-block mb-4">
-                                Root: {row.root}
+                                {translate("Root")}: {row.root}
                               </h4>
                               <div className="grid grid-cols-4 gap-2 text-center min-w-[400px]">
                                 <div className="p-3 bg-paper-canvas border border-off-black rounded-[40px]">
                                   <p className="text-[9px] font-normal text-off-black/40 uppercase">
-                                    Noun
+                                    {translate("Noun")}
                                   </p>
                                   <p className="text-xs font-normal text-ink mt-1">
                                     {row.noun}
@@ -282,7 +280,7 @@ export function InteractivePlaypen() {
                                 </div>
                                 <div className="p-3 bg-paper-canvas border border-off-black rounded-[40px]">
                                   <p className="text-[9px] font-normal text-off-black/40 uppercase">
-                                    Verb
+                                    {translate("Verb")}
                                   </p>
                                   <p className="text-xs font-normal text-ink mt-1">
                                     {row.verb}
@@ -290,7 +288,7 @@ export function InteractivePlaypen() {
                                 </div>
                                 <div className="p-3 bg-paper-canvas border border-off-black rounded-[40px]">
                                   <p className="text-[9px] font-normal text-off-black/40 uppercase">
-                                    Adj
+                                    {translate("Adj")}
                                   </p>
                                   <p className="text-xs font-normal text-ink mt-1">
                                     {row.adj}
@@ -298,7 +296,7 @@ export function InteractivePlaypen() {
                                 </div>
                                 <div className="p-3 bg-paper-canvas border border-off-black rounded-[40px]">
                                   <p className="text-[9px] font-normal text-off-black/40 uppercase">
-                                    Adv
+                                    {translate("Adv")}
                                   </p>
                                   <p className="text-xs font-normal text-ink mt-1">
                                     {row.adv}
@@ -315,7 +313,7 @@ export function InteractivePlaypen() {
                               .includes(simulatedSearch.toLowerCase()),
                         ).length === 0 && (
                           <div className="text-center py-12 text-xs text-off-black/50">
-                            No matching root words found.
+                            {translate("No matching root words found.")}
                           </div>
                         )}
                       </div>

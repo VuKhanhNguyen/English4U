@@ -3,6 +3,7 @@
 import * as React from "react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
+import { useLanguage } from "@/components/providers/language-provider";
 
 export interface HeroSectionProps {
   hideButtons?: boolean;
@@ -17,9 +18,10 @@ export function HeroSection({
   title2 = "Grammar & Vocabulary",
   subtitle = "Learn Destination B1, B2, C1 & C2 with structured grammar tables, vocabulary systems, word formation, collocations, and phrasal verbs.",
 }: HeroSectionProps = {}) {
-  const text1 = title1;
-  const text2 = title2;
-  const text3 = subtitle;
+  const { translate } = useLanguage();
+  const text1 = translate(title1);
+  const text2 = translate(title2);
+  const text3 = translate(subtitle);
 
   const [t1, setT1] = React.useState("");
   const [t2, setT2] = React.useState("");
@@ -35,6 +37,13 @@ export function HeroSection({
     | "deleting-1"
     | "paused-empty"
   >("typing-1");
+
+  React.useEffect(() => {
+    setT1("");
+    setT2("");
+    setT3("");
+    setPhase("typing-1");
+  }, [text1, text2, text3]);
 
   React.useEffect(() => {
     // Initial delay on page mount
@@ -167,13 +176,13 @@ export function HeroSection({
           transition={{ duration: 0.6, delay: 3.5, ease: "easeOut" }}
         >
           <Button variant="primary" className="h-[48px] px-8 text-base">
-            Explore Destination B1
+            {translate("Explore Destination B1")}
           </Button>
           <Button
             variant="ghost"
             className="h-[48px] px-8 text-base"
           >
-            Start Learning
+            {translate("Start Learning")}
           </Button>
         </motion.div>
       )}

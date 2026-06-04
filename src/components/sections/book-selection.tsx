@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { BookOpen, ChevronRight } from "lucide-react";
+import { useLanguage } from "@/components/providers/language-provider";
 
 const books = [
   {
@@ -34,16 +35,16 @@ const books = [
 ];
 
 export function BookSelectionSection() {
+  const { translate } = useLanguage();
   return (
     <section id="explore" className="py-24 bg-paper-canvas relative">
       <div className="container mx-auto px-6 max-w-[1432px]">
         <div className="text-center mb-16">
           <h2 className="text-heading-lg font-heading text-ink mb-4">
-            Choose Your Destination
+            {translate("Choose Your Destination")}
           </h2>
           <p className="text-body font-mono text-pale-stone max-w-2xl mx-auto">
-            Select a book to explore structured lessons, interactive tables,
-            comprehensive vocabulary lists.
+            {translate("Select a book to explore structured lessons, interactive tables, comprehensive vocabulary lists.")}
           </p>
         </div>
 
@@ -64,16 +65,16 @@ export function BookSelectionSection() {
                 >
                   <div className="mb-4 flex items-center justify-between">
                     <Badge className="border-off-black bg-transparent text-ink text-caption font-mono rounded-full">
-                      {book.units} Units
+                      {book.units} {translate("Units")}
                     </Badge>
                     <BookOpen className="w-[20px] h-[20px] text-ink/50" />
                   </div>
                   <h3 className="text-heading font-heading text-ink mb-2">{book.title}</h3>
                   <p className="text-body-sm font-mono text-pale-stone mb-8 flex-grow">
-                    {book.description}
+                    {translate(book.description)}
                   </p>
                   <div className="flex items-center text-body-sm font-mono text-ink mt-auto group-hover:text-off-black transition-colors px-1">
-                    Start Exploring{" "}
+                    {translate("Start Exploring")}{" "}
                     <ChevronRight className="w-[16px] h-[16px] ml-1 transition-transform group-hover:translate-x-1" />
                   </div>
                 </Card>

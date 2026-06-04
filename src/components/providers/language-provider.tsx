@@ -4,11 +4,13 @@ import React, { createContext, useContext, useState, useEffect, useRef } from "r
 import vocabTranslations from "@/data/vocab-translation-vi.json";
 import grammarTranslations from "@/data/grammar-translation-vi.json";
 import headerFooterTranslations from "@/data/header_footer-translation-vi.json";
+import aboutTranslations from "@/data/about-translation-vi.json";
 
 const customTranslations = {
   ...vocabTranslations,
   ...grammarTranslations,
   ...headerFooterTranslations,
+  ...aboutTranslations,
 };
 
 type Language = "en" | "vi";

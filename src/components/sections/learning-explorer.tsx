@@ -585,12 +585,10 @@ export function LearningExplorerSection({
           {!hideHeader && (
             <div>
               <h2 className="text-heading-lg font-heading text-ink mb-4">
-                Learning Explorer
+                {translate("Learning Explorer")}
               </h2>
               <p className="text-body font-mono text-pale-stone max-w-xl">
-                Dive deep into the structured content. Expand a unit, select a
-                category, use the search to quickly find specific rules or
-                vocabulary.
+                {translate("Dive deep into the structured content. Expand a unit, select a category, use the search to quickly find specific rules or vocabulary.")}
               </p>
             </div>
           )}
@@ -598,7 +596,7 @@ export function LearningExplorerSection({
           <div className="w-full md:w-[280px] relative ml-auto z-10">
             <Search className="absolute left-3 top-1/2 -translate-y-1/2 text-pale-stone w-[16px] h-[16px]" />
             <Input
-              placeholder="Search grammar, vocabulary..."
+              placeholder={translate("Search grammar, vocabulary...")}
               className="pl-9 bg-paper-canvas/70 backdrop-blur-md border-off-black rounded-full text-ink placeholder:text-pale-stone"
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
@@ -629,15 +627,15 @@ export function LearningExplorerSection({
                 {activeBook.book}
               </span>
               <h1 className="text-heading font-heading text-ink mt-3 mb-0">
-                Structured Syllabus Explorer
+                {translate("Structured Syllabus Explorer")}
               </h1>
             </div>
             <div className="text-right hidden sm:block font-mono shrink-0 ml-6">
               <p className="text-caption text-pale-stone uppercase tracking-wider mb-1">
-                Total Syllabus
+                {translate("Total Syllabus")}
               </p>
               <p className="text-heading-lg font-bold text-ink leading-none">
-                {totalUnitsCount} Units
+                {totalUnitsCount} {translate("Units")}
               </p>
             </div>
           </Card>
@@ -667,34 +665,34 @@ export function LearningExplorerSection({
                   >
                     <TabsList className="mb-6 flex-wrap h-auto p-1 rounded-[24px]">
                       {(unit.richGrammar || (unit.grammar && unit.grammar.length > 0)) && (
-                        <TabsTrigger value="grammar" className="rounded-full">Grammar</TabsTrigger>
+                        <TabsTrigger value="grammar" className="rounded-full">{translate("Grammar")}</TabsTrigger>
                       )}
                       {unit.vocabulary && unit.vocabulary.length > 0 && (
-                        <TabsTrigger value="vocabulary" className="rounded-full">Vocabulary</TabsTrigger>
+                        <TabsTrigger value="vocabulary" className="rounded-full">{translate("Vocabulary")}</TabsTrigger>
                       )}
                       {unit.wordFormation && unit.wordFormation.length > 0 && (
                         <TabsTrigger value="wordFormation" className="rounded-full">
-                          Word Formation
+                          {translate("Word Formation")}
                         </TabsTrigger>
                       )}
                       {unit.wordPatterns && unit.wordPatterns.length > 0 && (
                         <TabsTrigger value="wordPatterns" className="rounded-full">
-                          Word Patterns
+                          {translate("Word Patterns")}
                         </TabsTrigger>
                       )}
                       {unit.phrasalVerbs && unit.phrasalVerbs.length > 0 && (
                         <TabsTrigger value="phrasalVerbs" className="rounded-full">
-                          Phrasal Verbs
+                          {translate("Phrasal Verbs")}
                         </TabsTrigger>
                       )}
                       {unit.prepositionalPhrases && unit.prepositionalPhrases.length > 0 && (
                         <TabsTrigger value="prepositionalPhrases" className="rounded-full">
-                          Prepositional Phrases
+                          {translate("Prepositional Phrases")}
                         </TabsTrigger>
                       )}
                       {unit.collocations && unit.collocations.length > 0 && (
                         <TabsTrigger value="collocations" className="rounded-full">
-                          Collocations
+                          {translate("Collocations")}
                         </TabsTrigger>
                       )}
                     </TabsList>
@@ -711,10 +709,10 @@ export function LearningExplorerSection({
                           <TableHeader>
                             <TableRow>
                               <TableHead className="w-[200px] font-mono text-ink">
-                                Structure
+                                {translate("Structure")}
                               </TableHead>
-                              <TableHead className="font-mono text-ink">Usage</TableHead>
-                              <TableHead className="font-mono text-ink">Example</TableHead>
+                              <TableHead className="font-mono text-ink">{translate("Usage")}</TableHead>
+                              <TableHead className="font-mono text-ink">{translate("Example")}</TableHead>
                             </TableRow>
                           </TableHeader>
                           <TableBody>
@@ -743,7 +741,7 @@ export function LearningExplorerSection({
                                   colSpan={3}
                                   className="text-center py-8 font-mono text-pale-stone"
                                 >
-                                  No data found.
+                                  {translate("No data found.")}
                                 </TableCell>
                               </TableRow>
                             )}
@@ -760,10 +758,10 @@ export function LearningExplorerSection({
                       <Table>
                         <TableHeader className="bg-atmosphere-wash">
                           <TableRow className="hover:bg-transparent">
-                            <TableHead className="w-[150px] font-mono text-ink">Word</TableHead>
-                            <TableHead className="w-[100px] font-mono text-ink">Type</TableHead>
-                            <TableHead className="font-mono text-ink">Meaning</TableHead>
-                            <TableHead className="font-mono text-ink">Example</TableHead>
+                            <TableHead className="w-[150px] font-mono text-ink">{translate("Word")}</TableHead>
+                            <TableHead className="w-[100px] font-mono text-ink">{translate("Type")}</TableHead>
+                            <TableHead className="font-mono text-ink">{translate("Meaning")}</TableHead>
+                            <TableHead className="font-mono text-ink">{translate("Example")}</TableHead>
                           </TableRow>
                         </TableHeader>
                         <TableBody>
@@ -795,7 +793,7 @@ export function LearningExplorerSection({
                                 colSpan={4}
                                 className="text-center py-8 font-mono text-pale-stone"
                               >
-                                No data found.
+                                {translate("No data found.")}
                               </TableCell>
                             </TableRow>
                           )}
@@ -811,9 +809,9 @@ export function LearningExplorerSection({
                       <Table>
                         <TableHeader className="bg-atmosphere-wash">
                           <TableRow className="hover:bg-transparent">
-                            <TableHead className="w-[150px] font-mono text-ink">Word</TableHead>
-                            <TableHead className="w-[100px] font-mono text-ink">Type</TableHead>
-                            <TableHead className="font-mono text-ink">Word Family & Meanings</TableHead>
+                            <TableHead className="w-[150px] font-mono text-ink">{translate("Word")}</TableHead>
+                            <TableHead className="w-[100px] font-mono text-ink">{translate("Type")}</TableHead>
+                            <TableHead className="font-mono text-ink">{translate("Word Family & Meanings")}</TableHead>
                           </TableRow>
                         </TableHeader>
                         <TableBody>
@@ -881,7 +879,7 @@ export function LearningExplorerSection({
                                 colSpan={3}
                                 className="text-center py-8 font-mono text-pale-stone"
                               >
-                                No data found.
+                                {translate("No data found.")}
                               </TableCell>
                             </TableRow>
                           )}
@@ -898,11 +896,11 @@ export function LearningExplorerSection({
                         <TableHeader className="bg-atmosphere-wash">
                           <TableRow className="hover:bg-transparent">
                             <TableHead className="w-[200px] font-mono text-ink">
-                              Word
+                              {translate("Word")}
                             </TableHead>
-                            <TableHead className="w-[100px] font-mono text-ink">Type</TableHead>
-                            <TableHead className="font-mono text-ink">Meaning</TableHead>
-                            <TableHead className="font-mono text-ink">Pattern & Example</TableHead>
+                            <TableHead className="w-[100px] font-mono text-ink">{translate("Type")}</TableHead>
+                            <TableHead className="font-mono text-ink">{translate("Meaning")}</TableHead>
+                            <TableHead className="font-mono text-ink">{translate("Pattern & Example")}</TableHead>
                           </TableRow>
                         </TableHeader>
                         <TableBody>
@@ -936,7 +934,7 @@ export function LearningExplorerSection({
                                 colSpan={3}
                                 className="text-center py-8 font-mono text-pale-stone"
                               >
-                                No data found.
+                                {translate("No data found.")}
                               </TableCell>
                             </TableRow>
                           )}
@@ -953,10 +951,10 @@ export function LearningExplorerSection({
                         <TableHeader className="bg-atmosphere-wash">
                           <TableRow className="hover:bg-transparent">
                             <TableHead className="w-[200px] font-mono text-ink">
-                              Phrasal Verb
+                              {translate("Phrasal Verbs")}
                             </TableHead>
-                            <TableHead className="font-mono text-ink">Meaning</TableHead>
-                            <TableHead className="font-mono text-ink">Example</TableHead>
+                            <TableHead className="font-mono text-ink">{translate("Meaning")}</TableHead>
+                            <TableHead className="font-mono text-ink">{translate("Example")}</TableHead>
                           </TableRow>
                         </TableHeader>
                         <TableBody>
@@ -982,7 +980,7 @@ export function LearningExplorerSection({
                                 colSpan={3}
                                 className="text-center py-8 font-mono text-pale-stone"
                               >
-                                No data found.
+                                {translate("No data found.")}
                               </TableCell>
                             </TableRow>
                           )}
@@ -999,9 +997,9 @@ export function LearningExplorerSection({
                         <TableHeader className="bg-atmosphere-wash">
                           <TableRow className="hover:bg-transparent">
                             <TableHead className="w-[250px] font-mono text-ink">
-                              Prepositional Phrase
+                              {translate("Prepositional Phrase")}
                             </TableHead>
-                            <TableHead className="font-mono text-ink">Meaning</TableHead>
+                            <TableHead className="font-mono text-ink">{translate("Meaning")}</TableHead>
                           </TableRow>
                         </TableHeader>
                         <TableBody>
@@ -1022,7 +1020,7 @@ export function LearningExplorerSection({
                                 colSpan={2}
                                 className="text-center py-8 font-mono text-pale-stone"
                               >
-                                No data found.
+                                {translate("No data found.")}
                               </TableCell>
                             </TableRow>
                           )}
@@ -1039,10 +1037,10 @@ export function LearningExplorerSection({
                         <TableHeader className="bg-atmosphere-wash">
                           <TableRow className="hover:bg-transparent">
                             <TableHead className="w-[150px] font-mono text-ink">
-                              Base Word
+                              {translate("Base Word")}
                             </TableHead>
-                            <TableHead className="font-mono text-ink">Collocation</TableHead>
-                            <TableHead className="font-mono text-ink">Meaning</TableHead>
+                            <TableHead className="font-mono text-ink">{translate("Collocation")}</TableHead>
+                            <TableHead className="font-mono text-ink">{translate("Meaning")}</TableHead>
                           </TableRow>
                         </TableHeader>
                         <TableBody>
@@ -1066,7 +1064,7 @@ export function LearningExplorerSection({
                                 colSpan={3}
                                 className="text-center py-8 font-mono text-pale-stone"
                               >
-                                No data found.
+                                {translate("No data found.")}
                               </TableCell>
                             </TableRow>
                           )}

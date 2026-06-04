@@ -3,6 +3,7 @@
 import * as React from "react"
 import { motion } from "framer-motion"
 import { Card } from "@/components/ui/card"
+import { useLanguage } from "@/components/providers/language-provider"
 import { Sparkles, Zap, BookOpen, Heart } from "lucide-react"
 
 const missions = [
@@ -33,18 +34,19 @@ const missions = [
 ]
 
 export function MissionSection() {
+  const { translate } = useLanguage()
   return (
     <section id="about" className="py-24 bg-paper-canvas border-t border-off-black">
       <div className="container mx-auto px-6 max-w-[1432px]">
         <div className="text-center mb-16">
           <span className="text-caption font-mono uppercase tracking-wider text-ink bg-atmosphere-wash px-3 py-1 rounded-full border border-off-black">
-            Our Mission
+            {translate("Our Mission")}
           </span>
           <h2 className="text-heading-lg font-heading text-ink mt-4 mb-4">
-            Simplifying The Mastery of English
+            {translate("Simplifying The Mastery of English")}
           </h2>
           <p className="text-body font-mono text-pale-stone max-w-2xl mx-auto">
-            We are dedicated to building a beautifully structured platform that makes English grammar and vocabulary study clear, efficient, and visual.
+            {translate("We are dedicated to building a beautifully structured platform that makes English grammar and vocabulary study clear, efficient, and visual.")}
           </p>
         </div>
 
@@ -65,10 +67,10 @@ export function MissionSection() {
                     <Icon className="w-[18px] h-[18px] text-ink" />
                   </div>
                   <h3 className="text-subheading font-heading text-ink mb-3">
-                    {mission.title}
+                    {translate(mission.title)}
                   </h3>
                   <p className="text-body-sm font-mono text-pale-stone leading-relaxed">
-                    {mission.description}
+                    {translate(mission.description)}
                   </p>
                 </Card>
               </motion.div>

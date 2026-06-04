@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Check, Calendar, Activity, GraduationCap } from "lucide-react";
+import { useLanguage } from "@/components/providers/language-provider";
 
 const studyLogs = [
   {
@@ -34,6 +35,8 @@ const studyLogs = [
 ];
 
 export function AudienceShowcase() {
+  const { translate } = useLanguage();
+
   return (
     <section className="py-24 bg-paper-canvas border-t border-off-black">
       <div className="container mx-auto px-6 max-w-[1432px]">
@@ -41,16 +44,13 @@ export function AudienceShowcase() {
           {/* Column 1: Info and Badges */}
           <div className="lg:col-span-5">
             <span className="text-caption font-mono uppercase tracking-wider text-ink bg-atmosphere-wash px-3 py-1 rounded-full border border-off-black">
-              Ideal Learners
+              {translate("Ideal Learners")}
             </span>
             <h2 className="text-heading-lg font-heading text-ink mt-4 mb-6 leading-tight">
-              Engineered For High-Goal Achievers
+              {translate("Engineered For High-Goal Achievers")}
             </h2>
             <p className="text-body text-pale-stone mb-8 leading-relaxed font-mono">
-              Whether you are preparing for international certifications (IELTS,
-              Cambridge, TOEFL), self-studying English at home, or revising
-              school lessons, English4U provides a beautifully structured,
-              structured repository that respects your time.
+              {translate("Whether you are preparing for international certifications (IELTS, Cambridge, TOEFL), self-studying English at home, or revising school lessons, English4U provides a beautifully structured, structured repository that respects your time.")}
             </p>
 
             <div className="flex flex-col gap-4 font-mono">
@@ -59,7 +59,7 @@ export function AudienceShowcase() {
                   <Check className="w-[12px] h-[12px] text-ink" />
                 </div>
                 <span className="text-body-sm font-medium text-ink">
-                  Self-Guided Exam Revision
+                  {translate("Self-Guided Exam Revision")}
                 </span>
               </div>
               <div className="flex items-center gap-3">
@@ -67,7 +67,7 @@ export function AudienceShowcase() {
                   <Check className="w-[12px] h-[12px] text-ink" />
                 </div>
                 <span className="text-body-sm font-medium text-ink">
-                  Commute & Mobile Friendly Tables
+                  {translate("Commute & Mobile Friendly Tables")}
                 </span>
               </div>
               <div className="flex items-center gap-3">
@@ -75,7 +75,7 @@ export function AudienceShowcase() {
                   <Check className="w-[12px] h-[12px] text-ink" />
                 </div>
                 <span className="text-body-sm font-medium text-ink">
-                  100% Client-Side Search Efficiency
+                  {translate("100% Client-Side Search Efficiency")}
                 </span>
               </div>
             </div>
@@ -94,16 +94,16 @@ export function AudienceShowcase() {
                   </div>
                   <div>
                     <h3 className="text-xs font-mono font-medium text-ink">
-                      Self-Study Dashboard
+                      {translate("Self-Study Dashboard")}
                     </h3>
                     <p className="text-caption text-pale-stone font-mono">
-                      Live progress log visualization
+                      {translate("Live progress log visualization")}
                     </p>
                   </div>
                 </div>
 
                 <Badge className="border-off-black bg-transparent text-ink text-caption font-mono rounded-full flex items-center gap-1">
-                  <Calendar className="w-[10px] h-[10px]" /> Today
+                  <Calendar className="w-[10px] h-[10px]" /> {translate("Today")}
                 </Badge>
               </div>
 
@@ -134,7 +134,7 @@ export function AudienceShowcase() {
                     <div className="p-3 bg-paper-canvas border border-off-black rounded-[40px] flex-grow">
                       <div className="flex justify-between items-center mb-1 gap-2 flex-wrap">
                         <p className="text-body-sm font-medium text-ink leading-relaxed">
-                          {log.action}
+                          {translate(log.action)}
                         </p>
                         <Badge className="text-[10px] px-2 py-0.5 rounded-full border border-off-black font-mono text-ink bg-atmosphere-wash shrink-0">
                           {log.level}
