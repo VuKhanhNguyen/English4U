@@ -1,0 +1,219 @@
+{
+  "id": "b2-unit-9",
+  "title": "Unit 9: Conditionals & inversions",
+  "grammar": [
+    {
+      "structure": "Zero Conditional",
+      "usage": "Express a general truth or definition",
+      "example": "If you have faith in something, you believe in something you cannot prove."
+    },
+    {
+      "structure": "First Conditional",
+      "usage": "Express a condition possible in the present or future",
+      "example": "If you have a birthday party, you'll get loads of cool presents."
+    },
+    {
+      "structure": "Second Conditional",
+      "usage": "Express an imaginary or impossible condition in the present or future, or give advice",
+      "example": "If we were older, we could go on holiday on our own."
+    },
+    {
+      "structure": "Third Conditional",
+      "usage": "Express an imaginary or impossible condition in the past and its result in the past",
+      "example": "If it hadn't been for your help, I wouldn't have succeeded."
+    },
+    {
+      "structure": "Mixed Conditional",
+      "usage": "Express an imaginary or impossible condition in the past and its result in the present, or vice-versa",
+      "example": "If I had listened to my parents, I wouldn't be in so much trouble now."
+    }
+  ],
+  "richGrammar": [
+    {
+      "title": "A) CONDITIONALS & INVERSIONS",
+      "blocks": [
+        {
+          "type": "title",
+          "content": "1. ZERO & FIRST CONDITIONALS"
+        },
+        {
+          "type": "generic-table",
+          "headers": ["Type", "Structure", "Usage & Example", "Inversion"],
+          "rows": [
+            [
+              "Zero Conditional",
+              "If + present simple, present simple",
+              "Used to express a general truth or definition\nEX: If you have faith in something, you believe in something you cannot prove.",
+              "N/A"
+            ],
+            [
+              "First Conditional",
+              "If + a present tense, WILL + Vbare",
+              "Used to express a condition possible in the present or future\nEX: If you have a birthday party, you'll get loads of cool presents.\nEX: If you're working till 7p.m., we'll have dinner at about 8 p.m.\nEX: If you have revised properly, you won't have any problems in the test next week.",
+              "If + S1 + Vs/es, (S2) + WILL + Vbare\n→ Should + S1 + Vbare, WILL + Vbare\n\nEX: If he should ring, I will tell him the news.\n→ Should he ring, I will tell him the news.\n\nEX: If he has free time, he'll play tennis.\n→ Should he have free time, he'll play tennis."
+            ]
+          ]
+        },
+        {
+          "type": "title",
+          "content": "Notes on First Conditional"
+        },
+        {
+          "type": "list",
+          "bullets": [
+            "Depending on the meaning, 'will' can be replaced by: may, might, could, shall, should, ought to, have to\nEX: If you have a birthday party, you might get loads of cool presents.",
+            "Can use 'should + Vbare' instead of present simple to express a condition that is possible but has a lower probability.\nEX: If you should bump into Alex at the concert, you'll be able to get a lift home.",
+            "To give instructions or commands about a possible situation, we can use the structure: If + a present tense, [imperative]\nEX: If you decide to have a birthday party, tell me!"
+          ]
+        },
+        {
+          "type": "title",
+          "content": "2. SECOND & THIRD CONDITIONALS"
+        },
+        {
+          "type": "generic-table",
+          "headers": ["Type", "Structure", "Usage & Example", "Inversion"],
+          "rows": [
+            [
+              "Second Conditional",
+              "If + past simple / past continuous, WOULD + Vbare",
+              "Used to express an imaginary or impossible condition in the present or future, or to give advice.\nEX: If we were older, we could go on holiday on our own.\nEX: If I could drive, I'd buy a new car.",
+              "If + S1 + V2/ed / (+ was/were Ving), (S2) + WOULD + Vbare\n→ Were + S1 + TO + Vbare (/ TO BE + Ving), WOULD + Vbare\n\nEX: If I were a bird, I would fly.\n→ Were I a bird, I would fly.\n\nEX: If I learnt Russian, I would read a Russian book.\n→ Were I to learn Russian, I would read a Russian book."
+            ],
+            [
+              "Third Conditional",
+              "If + past perfect (simple or continuous), WOULD + have + V3/ed",
+              "Used to express an imaginary or impossible condition in the past and its result in the past.\nEX: If it hadn't been for your help, I wouldn't have succeeded.",
+              "If + S1 + had + V3/ed / (+ been Ving), (S2) WOULD + have + V3/ed\n→ HAD + S1 + V3/ed / (+ been Ving), (S2) would + have + V3/ed\n\nEX: If it hadn't been for your help, I wouldn't have succeeded.\n→ Had it not been for your help, I wouldn't have succeeded.\n\nEX: If the situation had worsened, they would have been prepared to send in a peacekeeping force.\n→ Had the situation worsened, they would have been prepared to send in a peacekeeping force."
+            ]
+          ]
+        },
+        {
+          "type": "title",
+          "content": "Notes on Second & Third Conditionals"
+        },
+        {
+          "type": "list",
+          "bullets": [
+            "Besides 'would', other modals can be used: might, could, should"
+          ]
+        },
+        {
+          "type": "title",
+          "content": "3. MIXED CONDITIONALS"
+        },
+        {
+          "type": "generic-table",
+          "headers": ["Type", "Structure", "Usage & Example", "Inversion"],
+          "rows": [
+            [
+              "Mixed Conditional 1 (Past -> Present)",
+              "If + past perfect (simple / continuous), would + Vbare",
+              "Used to express an imaginary or impossible condition in the past and its result in the present.\nEX: If I had listened to my parents, I wouldn't be in so much trouble now. (meaning: We are in trouble now because we didn't listen to our parents in the past)",
+              "If + S1 + had + V3/ed / (+ been Ving), (S2) + would + Vbare\n→ Had + S1 + V3/ed / (+ been Ving), (S2) + would + Vbare\n\nEX: If I hadn't told her about this, she wouldn't be sad now.\n→ Had I not told her about this, she wouldn't be sad now."
+            ],
+            [
+              "Mixed Conditional 2 (Present -> Past)",
+              "If + past (simple / continuous), would + have + V3/ed",
+              "Used to express an imaginary or impossible condition in the present and its result in the past.\nEX: If I had a mobile, I would have called you last night. (meaning: We didn't call last night because we don't have a mobile now)",
+              "If + S1 + past (simple / continuous), (S2) + would + have + V3/ed\n→ Were + S1 + TO + Vbare / (+ to be Ving), (S2) + would + have + V3/ed\n\nEX: If I had a mobile, I would have called you last night.\n→ Were I to have a mobile, I would have called you last night."
+            ]
+          ]
+        },
+        {
+          "type": "title",
+          "content": "WATCH OUT"
+        },
+        {
+          "type": "list",
+          "bullets": [
+            "Conditional clause before the result clause → comma is required",
+            "Conditional clause after the result clause → comma is not required"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "B) IF CLAUSE EQUIVALENTS",
+      "blocks": [
+        {
+          "type": "generic-table",
+          "headers": ["Word/ phrases", "Meaning", "Word/ phrases", "Meaning"],
+          "rows": [
+            ["unless", "except if", "in case", "in preparation for something"],
+            ["as long as", "on condition that", "assuming (that)", "accepting as true"],
+            ["even if", "whether or not", "if only", "used to express a wish"],
+            ["on the condition (that)", "provided that", "provided/providing (that)", "on the condition that"],
+            ["suppose (that) / supposing (that)", "what if", "", ""]
+          ]
+        }
+      ]
+    }
+  ],
+  "vocabulary": [
+    {
+      "word": "prime minister",
+      "type": "n",
+      "meaning": "the head of an elected government",
+      "example": "The prime minister announced the new economic policies yesterday."
+    },
+    {
+      "word": "minister",
+      "type": "n",
+      "meaning": "a member of the government who is in charge of a department",
+      "example": "The minister of education visited our school to discuss the new curriculum."
+    },
+    {
+      "word": "thoroughly",
+      "type": "adv",
+      "meaning": "completely and with great attention to detail",
+      "example": "The police thoroughly investigated the crime scene."
+    },
+    {
+      "word": "consequence",
+      "type": "n",
+      "meaning": "a result or effect of an action or condition, typically one that is unwelcome",
+      "example": "You must accept the consequences of your decisions."
+    },
+    {
+      "word": "meteor",
+      "type": "n",
+      "meaning": "a small body of matter from outer space that enters the earth's atmosphere, appearing as a streak of light",
+      "example": "We saw a bright meteor streak across the night sky."
+    },
+    {
+      "word": "parallel",
+      "type": "adj",
+      "meaning": "side by side and having the same distance continuously between them",
+      "example": "The road runs parallel to the railway line."
+    },
+    {
+      "word": "lottery",
+      "type": "n",
+      "meaning": "a game of chance in which tickets are sold and a drawing determines the prize winners",
+      "example": "She won a million dollars in the national lottery."
+    },
+    {
+      "word": "spare tyre",
+      "type": "n",
+      "meaning": "an extra wheel with a tyre on it kept in a vehicle in case of a puncture",
+      "example": "Always make sure you have a spare tyre in the boot of your car."
+    },
+    {
+      "word": "peacekeeping force",
+      "type": "n",
+      "meaning": "a group of soldiers sent to a conflict area to maintain peace",
+      "example": "The United Nations sent a peacekeeping force to the region."
+    },
+    {
+      "word": "worsen",
+      "type": "v",
+      "meaning": "to make or become worse",
+      "example": "The weather began to worsen as the storm approached."
+    }
+  ],
+  "wordFormation": [],
+  "wordPatterns": [],
+  "phrasalVerbs": [],
+  "collocations": []
+}

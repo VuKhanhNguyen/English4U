@@ -1,0 +1,232 @@
+{
+  "id": "b2-unit-11",
+  "title": "Unit 11: Comparatives, superlatives, so, such, enough, too",
+  "grammar": [
+    {
+      "structure": "Comparatives",
+      "usage": "Used to compare two different people, things, or actions.",
+      "example": "He is taller than his brother."
+    },
+    {
+      "structure": "Superlatives",
+      "usage": "Used to compare one person, thing, or action in a group with all others in that group.",
+      "example": "She is the most intelligent student in our class."
+    },
+    {
+      "structure": "So & Such",
+      "usage": "Used to express the result or consequence of an action or situation.",
+      "example": "The movie was so interesting that I watched it twice."
+    },
+    {
+      "structure": "Enough & Too",
+      "usage": "Enough is used to show sufficiency. Too is used to express excess, often with a negative meaning.",
+      "example": "He is not old enough to drive a car / The tea is too hot to drink."
+    }
+  ],
+  "richGrammar": [
+    {
+      "title": "A) COMPARATIVES & SUPERLATIVES",
+      "blocks": [
+        {
+          "type": "title",
+          "content": "1. COMPARATIVE & SUPERLATIVE ADJECTIVES"
+        },
+        {
+          "type": "generic-table",
+          "tableName": "Adjective Comparison Rules",
+          "headers": ["Rule/Type", "Usage/Form", "Comparative Form", "Superlative Form"],
+          "rows": [
+            [
+              "Usage",
+              "General purpose of comparison",
+              "Comparing 2 different entities",
+              "Comparing 1 entity within a group"
+            ],
+            [
+              "Note",
+              "Key grammar requirement",
+              "\"than\" always follows the comparative\nEX: She is older than me.",
+              "Always has \"the\" in front of the superlative\nEX: She is the oldest."
+            ],
+            [
+              "1-syllable adjectives",
+              "General rule (+ er / + est)",
+              "+ er (darker)",
+              "+ est (darkest)"
+            ],
+            [
+              "1-syllable ending in vowel + consonant",
+              "Double final consonant (+ er / + est)",
+              "Double final consonant + er\n→ thinner",
+              "Double final consonant + est\n→ thinnest"
+            ],
+            [
+              "2 or more syllables",
+              "Use more/less or most/least",
+              "More / less + adj\n→ more expensive",
+              "Most / least + adj\n→ most expensive"
+            ],
+            [
+              "2-syllable ending in -y",
+              "Change -y to -ier / -iest",
+              "Change \"y\" to \"ier\"\n→ happier",
+              "Change \"y\" to \"iest\"\n→ happiest"
+            ],
+            [
+              "Irregular adjectives",
+              "Exceptions with unique forms",
+              "good → better\nbad → worse\nfar → farther / further\nlittle → less\nmuch / many → more",
+              "good → best\nbad → worst\nfar → farthest / furthest\nlittle → least\nmuch / many → most"
+            ]
+          ]
+        },
+        {
+          "type": "title",
+          "content": "2. COMPARATIVE & SUPERLATIVE ADVERBS"
+        },
+        {
+          "type": "generic-table",
+          "tableName": "Adverb Comparison Rules",
+          "headers": ["Rule/Type", "Comparative Form", "Superlative Form"],
+          "rows": [
+            [
+              "Standard adverbs",
+              "More / less + adv\nEX: She runs more quickly than me.",
+              "Most / least + adv\nEX: He speaks most eloquently of all."
+            ],
+            [
+              "Irregular adverbs",
+              "badly → worse\nearly → earlier\nfar → farther / further\nfast → faster\nhard → harder\nlate → later\noften → more often\nnear → nearer\nsoon → sooner\nwell → better",
+              "badly → worst\nearly → earliest\nfar → farthest / furthest\nfast → fastest\nhard → hardest\nlate → latest\noften → most often\nnear → nearest\nsoon → soonest\nwell → best"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "title": "B) SO, SUCH, ENOUGH, TOO",
+      "blocks": [
+        {
+          "type": "title",
+          "content": "1. SO & SUCH"
+        },
+        {
+          "type": "generic-table",
+          "tableName": "So & Such Comparison Table",
+          "headers": ["Aspect", "SO", "SUCH"],
+          "rows": [
+            [
+              "Usage",
+              "Expresses result/consequence of an action or situation",
+              "Expresses result/consequence of an action or situation"
+            ],
+            [
+              "Structures",
+              "so + adj / adv (that)\nso + adv + that\nso + many / much + N + that",
+              "such + a/an + adj + N (singular countable) + that\nsuch + adj + N (plural/uncountable) + that\nsuch + a lot of + N + that"
+            ]
+          ]
+        },
+        {
+          "type": "title",
+          "content": "2. ENOUGH & TOO"
+        },
+        {
+          "type": "generic-table",
+          "tableName": "Enough & Too Comparison Table",
+          "headers": ["Aspect", "ENOUGH", "TOO"],
+          "rows": [
+            [
+              "Usage",
+              "Expresses the result when there is a sufficient quantity of something",
+              "Expresses that something has more than the normal/reasonable amount"
+            ],
+            [
+              "Structures",
+              "enough + N (+ for and/or + Vbare)\nadj + enough (+ for and/or + Vbare)\nadv + enough (+ for and/or + Vbare)",
+              "too + adj (+ for and/or + Vbare)\ntoo + adv (+ for and/or + Vbare)\ntoo + many / much + N (+ for and/or + Vbare)"
+            ]
+          ]
+        },
+        {
+          "type": "title",
+          "content": "3. NOTES & COMMON PITFALLS"
+        },
+        {
+          "type": "list",
+          "bullets": [
+            "In the structure 'so / such + adj / adv (+ that)', 'that' can be omitted.",
+            "If the main verb in the sentence is a linking verb (like 'to be', 'look', 'seem', etc.), we use an adjective (adj).\nEX: The weather is so nice today.",
+            "If the main verb is an action verb, we use an adverb (adv).\nEX: He drives so quickly that I get scared."
+          ]
+        },
+        {
+          "type": "generic-table",
+          "tableName": "Warning Notes",
+          "headers": ["Common Error / Warning", "Incorrect (✗)", "Correct (✓) / Natural Alternative"],
+          "rows": [
+            [
+              "Word order of 'enough' with adjectives/adverbs",
+              "It's enough dangerous around here so don't go out alone.",
+              "It's dangerous enough around here so don't go out alone.\nOR: It's quite / fairly dangerous around here so don't go out alone."
+            ],
+            [
+              "Negative nuance of 'too' vs positive adjectives",
+              "You were too lucky not to get caught.",
+              "You were very / really / extremely lucky not to get caught. ('too' usually implies a negative consequence, so 'too lucky' is unnatural here)"
+            ]
+          ]
+        }
+      ]
+    }
+  ],
+  "vocabulary": [
+    {
+      "word": "precede",
+      "type": "v",
+      "meaning": "to go or come before something else in time, order, or position",
+      "example": "The performance will be preceded by a short introductory speech."
+    },
+    {
+      "word": "burgle",
+      "type": "v",
+      "meaning": "to enter a building illegally, usually using force, and steal things",
+      "example": "The house was burgled while the family was away on holiday."
+    },
+    {
+      "word": "a gang of burglars",
+      "type": "n phr",
+      "meaning": "a group of criminals who break into buildings to steal things",
+      "example": "The police caught a gang of burglars operating in the neighborhood."
+    },
+    {
+      "word": "the plot",
+      "type": "n",
+      "meaning": "the main story of a book, film, or play, or a secret plan to do something illegal",
+      "example": "The movie has a very complex plot with many unexpected twists."
+    },
+    {
+      "word": "come out",
+      "type": "v",
+      "meaning": "to become available to the public (like a book or movie), or to appear",
+      "example": "When does the new album of the band come out?"
+    },
+    {
+      "word": "the pram",
+      "type": "n",
+      "meaning": "a four-wheeled carriage for a baby, pushed by a person on foot",
+      "example": "She pushed the sleeping baby in the pram through the park."
+    },
+    {
+      "word": "grab",
+      "type": "v",
+      "meaning": "to take hold of something or someone suddenly and roughly",
+      "example": "He grabbed his coat and keys and ran out of the door."
+    }
+  ],
+  "phrasalVerbs": [],
+  "prepositionalPhrases": [],
+  "collocations": [],
+  "wordPatterns": [],
+  "wordFormation": []
+}

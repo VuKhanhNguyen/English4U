@@ -1,0 +1,217 @@
+{
+  "id": "b2-unit-6",
+  "title": "Unit 6: Science and technology",
+  "grammar": [],
+  "vocabulary": [
+    { "word": "artificial", "type": "adj", "meaning": "made by humans, not by nature", "example": "The artificial flowers looked very realistic." },
+    { "word": "false", "type": "adj", "meaning": "made to look like something real, but not real", "example": "He was wearing a false beard." },
+    { "word": "natural", "type": "adj", "meaning": "existing in or caused by nature; not made by humans", "example": "This natural path has been here for centuries." },
+    { "word": "physical", "type": "adj", "meaning": "relating to things that can be seen or touched, or relating to the body", "example": "The book is in physical format, not digital." },
+    { "word": "true", "type": "adj", "meaning": "based on facts and not imagined or invented", "example": "The story is true, even though it sounds incredible." },
+    { "word": "accurate", "type": "adj", "meaning": "correct, exact, and without any mistakes", "example": "We need accurate measurements for the construction." },
+    { "word": "method", "type": "n", "meaning": "a planned way of doing something", "example": "This is a new method of teaching languages." },
+    { "word": "way", "type": "n", "meaning": "a route, direction, or a manner of doing something", "example": "There is no way to open this door without a key." },
+    { "word": "engine", "type": "n", "meaning": "the part of a vehicle that produces power to make it move", "example": "My car's engine is making a strange noise." },
+    { "word": "machine", "type": "n", "meaning": "a piece of equipment with moving parts that does a specific job", "example": "This washing machine is very quiet." },
+    { "word": "motor", "type": "n", "meaning": "a device that changes electricity or fuel into movement", "example": "The electric motor is very efficient." },
+    { "word": "aim", "type": "n", "meaning": "a purpose or intention; a goal", "example": "Our main aim is to improve customer service." },
+    { "word": "cause", "type": "n", "meaning": "a person or thing that makes something happen", "example": "What was the cause of the fire?" },
+    { "word": "reason", "type": "n", "meaning": "an explanation for why something happened or why someone did something", "example": "The reason for the delay is unknown." },
+    { "word": "estimate", "type": "v", "meaning": "to guess or calculate the cost, size, value, etc. of something roughly", "example": "They estimate that the repairs will cost $1000." },
+    { "word": "calculate", "type": "v", "meaning": "to find an answer using mathematics", "example": "We need to calculate the total cost of the project." },
+    { "word": "electric", "type": "adj", "meaning": "using, carrying, or producing electricity", "example": "I want to buy an electric car." },
+    { "word": "electronic", "type": "adj", "meaning": "using very small electrical parts (like microchips) to control information", "example": "This shop sells electronic goods." },
+    { "word": "invent", "type": "v", "meaning": "to design or create something that did not exist before", "example": "Who invented the telephone?" },
+    { "word": "discover", "type": "v", "meaning": "to find information, a place, or an object, especially for the first time", "example": "They discovered gold in the river." },
+    { "word": "research", "type": "n", "meaning": "detailed study of a subject to discover new facts or information", "example": "She is doing research into cancer treatment." },
+    { "word": "experiment", "type": "n", "meaning": "a scientific test done to find out what happens or to prove something", "example": "We did an experiment in the school lab." },
+    { "word": "progress", "type": "n", "meaning": "movement forward or improvement", "example": "The patient is making good progress." },
+    { "word": "development", "type": "n", "meaning": "growth, improvement, or a new stage in a process", "example": "The development of technology has changed our lives." },
+    { "word": "modern", "type": "adj", "meaning": "relating to the present time or recent times", "example": "Modern technology makes communication much easier." },
+    { "word": "new", "type": "adj", "meaning": "recently made, built, or bought", "example": "I bought a new phone yesterday." },
+    { "word": "industry", "type": "n", "meaning": "the production of goods, especially in factories", "example": "The automobile industry is growing rapidly." },
+    { "word": "factory", "type": "n", "meaning": "a building where goods are made in large quantities by machines", "example": "He works in a shoe factory." },
+    { "word": "award", "type": "n", "meaning": "a prize given to someone for something they have achieved", "example": "She won an award for her research." },
+    { "word": "reward", "type": "n", "meaning": "something given in exchange for good behavior or good work", "example": "The reward for hard work is success." },
+    { "word": "take place", "type": "v phr", "meaning": "to happen, especially after being planned", "example": "The meeting will take place tomorrow morning." },
+    { "word": "occur", "type": "v", "meaning": "to happen, especially unexpectedly", "example": "The accident occurred at 3 p.m." },
+    { "word": "ball-point pen", "type": "n", "meaning": "a pen with a tiny ball at the tip that rolls ink onto paper", "example": "I prefer writing with a blue ball-point pen." },
+    { "word": "lorry", "type": "n", "meaning": "a large, heavy motor vehicle for transporting goods", "example": "The lorry carried tons of bricks to the building site." },
+    { "word": "institution", "type": "n", "meaning": "a large organization, such as a university or bank", "example": "He works for a financial institution." },
+    { "word": "complicated", "type": "adj", "meaning": "difficult to understand or deal with", "example": "This math problem is too complicated for me." },
+    { "word": "alchemist", "type": "n", "meaning": "a person who practiced chemistry in the Middle Ages, trying to turn metals into gold", "example": "Ancient alchemists tried to find the elixir of life." },
+    { "word": "antibiotic", "type": "n", "meaning": "a medicine that destroys bacteria", "example": "The doctor prescribed antibiotics for her infection." },
+    { "word": "secret formula", "type": "n", "meaning": "a list of ingredients and instructions kept private by its creators", "example": "The company keeps its soft drink recipe a secret formula." },
+    { "word": "astronomer", "type": "n", "meaning": "a scientist who studies stars, planets, and space", "example": "The astronomer pointed the telescope at the night sky." },
+    { "word": "breakthrough", "type": "n", "meaning": "an important discovery or development", "example": "Scientists have made a major breakthrough in cancer research." },
+    { "word": "alien", "type": "n", "meaning": "a creature from another planet", "example": "Do you believe in aliens from outer space?" },
+    { "word": "an explosion in / the outbreak of", "type": "phr", "meaning": "a sudden and rapid increase in something, or the sudden start of something", "example": "There has been an explosion in the number of mobile phone users." },
+    { "word": "handheld", "type": "adj", "meaning": "small and light enough to be held and used in one's hand", "example": "He bought a new handheld gaming console." },
+    { "word": "coincidence", "type": "n", "meaning": "a situation in which events happen at the same time in a way that is not planned", "example": "It was a coincidence that we met at the airport." },
+    { "word": "exaggerate", "type": "v", "meaning": "to make something seem larger, better, or worse than it really is", "example": "He tends to exaggerate his achievements." }
+  ],
+  "phrasalVerbs": [
+    { "phrasalVerb": "break down", "meaning": "stop working (for a machine, engine, etc.)", "example": "EX: Our car broke down on the motorway." },
+    { "phrasalVerb": "carry out", "meaning": "perform an experiment, test, or task", "example": "EX: The scientists carried out a series of experiments." },
+    { "phrasalVerb": "come off", "meaning": "succeed or happen as planned", "example": "EX: I was nervous about the plan, but it came off in the end." },
+    { "phrasalVerb": "come on", "meaning": "develop, make progress, or improve", "example": "EX: Your English is coming on really well." },
+    { "phrasalVerb": "come up with", "meaning": "think of an idea, plan, or solution", "example": "EX: She came up with a brilliant idea for the project." },
+    { "phrasalVerb": "cut off", "meaning": "stop the supply of something, like water or electricity", "example": "EX: The water company cut off our supply because we hadn't paid the bill." },
+    { "phrasalVerb": "find out", "meaning": "discover information", "example": "EX: I need to find out what time the train leaves." },
+    { "phrasalVerb": "give off", "meaning": "produce something, such as heat, light, or a smell", "example": "EX: The flowers gave off a lovely sweet scent." },
+    { "phrasalVerb": "narrow down", "meaning": "reduce the number of possibilities or choices", "example": "EX: We have narrowed the candidates down to three." },
+    { "phrasalVerb": "plug in", "meaning": "connect to an electricity supply", "example": "EX: You can plug the charger in here." },
+    { "phrasalVerb": "put through", "meaning": "connect someone by phone", "example": "EX: Could you put me through to the manager, please?" },
+    { "phrasalVerb": "turn into", "meaning": "change or develop into something else", "example": "EX: The caterpillar turned into a beautiful butterfly." },
+    { "phrasalVerb": "turn off", "meaning": "stop a machine or light from working", "example": "EX: Don't forget to turn off the lights before you leave." },
+    { "phrasalVerb": "work out", "meaning": "find the solution to a problem", "example": "EX: I can't work out how to solve this puzzle." },
+    { "phrasalVerb": "bring out", "meaning": "produce and start to sell a new product", "example": "EX: The company is bringing out a new model of smartphone next month." }
+  ],
+  "prepositionalPhrases": [],
+  "collocations": [
+    { "word": "attempt", "collocation": "make an attempt (at/doing/to do)", "meaning": "try to do something, especially something difficult" },
+    { "word": "attempt", "collocation": "attempt to do", "meaning": "try to perform an action" },
+    { "word": "attempt", "collocation": "in an attempt to do", "meaning": "trying to achieve something" },
+    { "word": "average", "collocation": "on average", "meaning": "typically, or as a general rule" },
+    { "word": "beginning", "collocation": "in the beginning", "meaning": "at the start of a period, especially when contrast with later" },
+    { "word": "beginning", "collocation": "at the beginning (of sth)", "meaning": "at the start point of something" },
+    { "word": "beginning", "collocation": "beginning with", "meaning": "starting with a particular thing or letter" },
+    { "word": "bottom", "collocation": "at/on/in the bottom (of sth)", "meaning": "at the lowest part of something" },
+    { "word": "cause", "collocation": "be/find/look for/etc. the cause of", "meaning": "discover or seek the reason why something happened" },
+    { "word": "conclusion", "collocation": "come to/reach a conclusion (that)", "meaning": "decide something after considering all the facts" },
+    { "word": "conclusion", "collocation": "in conclusion", "meaning": "finally, as a last point or statement" },
+    { "word": "experiment", "collocation": "do/perform/carry out an experiment (on sth)", "meaning": "conduct a scientific test" },
+    { "word": "experiment", "collocation": "experiment with sth/doing", "meaning": "try new things to see what the results are" },
+    { "word": "introduction", "collocation": "with the introduction of sth", "meaning": "when something is first brought in or used" },
+    { "word": "introduction", "collocation": "an introduction to sth/sb", "meaning": "a book, speech, etc. that explains something basic for the first time" },
+    { "word": "fact", "collocation": "in fact", "meaning": "actually or in truth" },
+    { "word": "fact", "collocation": "as a matter of fact", "meaning": "used to add something interesting or related to what you just said" },
+    { "word": "fact", "collocation": "the fact (of the matter) is (that)", "meaning": "the truth is" },
+    { "word": "fact", "collocation": "face the facts", "meaning": "accept the truth about a situation" },
+    { "word": "phone call", "collocation": "make/receive/get a phone call", "meaning": "contact someone or be contacted by phone" },
+    { "word": "photo", "collocation": "take a photo of sth/sb", "meaning": "use a camera to capture an image" },
+    { "word": "research", "collocation": "carry out / do research (on/into sth)", "meaning": "study a subject in detail to discover new information" }
+  ],
+  "wordPatterns": [
+    { "verb": "cause sth to do", "pattern": "verb", "meaning": "make something perform an action", "example": "EX: The storm caused the power to go out." },
+    { "verb": "consider sth/doing", "pattern": "verb", "meaning": "think carefully about something or an action", "example": "EX: We are considering moving to another city." },
+    { "verb": "consider if/whether", "pattern": "verb", "meaning": "think about options or choices", "example": "EX: You should consider whether you really need a new car." },
+    { "verb": "consider sb for sth", "pattern": "verb", "meaning": "think of someone as suitable for a role or job", "example": "EX: They are considering her for the manager position." },
+    { "verb": "consider it strange (for sb to do)", "pattern": "verb", "meaning": "find it unusual or odd that someone does something", "example": "EX: I consider it strange that he didn't call us." },
+    { "verb": "discuss sth/doing with sb", "pattern": "verb", "meaning": "talk about a topic or action with someone", "example": "EX: I discussed the problem with my doctor." },
+    { "verb": "explain that", "pattern": "verb", "meaning": "make something clear by giving reasons or facts", "example": "EX: He explained that he was late because of traffic." },
+    { "verb": "explain sth to sb", "pattern": "verb", "meaning": "make a concept clear to someone", "example": "EX: The teacher explained the rule to the students." },
+    { "verb": "intend to do/doing", "pattern": "verb", "meaning": "plan or have the purpose of doing something", "example": "EX: I intend to buy a new computer next week." },
+    { "verb": "know about sth/doing", "pattern": "verb", "meaning": "have information or understanding about something", "example": "EX: Do you know about the changes to the schedule?" },
+    { "verb": "know of sb", "pattern": "verb", "meaning": "have heard of someone but not know them personally", "example": "EX: I know of him, but I have never met him." },
+    { "verb": "be known as sth", "pattern": "verb", "meaning": "be called or recognized by a certain name or title", "example": "EX: He is known as the father of modern science." },
+    { "verb": "look at sth/sb", "pattern": "verb", "meaning": "direct your eyes towards something or someone", "example": "EX: Look at the whiteboard, please." },
+    { "verb": "look for sth/sb", "pattern": "verb", "meaning": "search for something or someone", "example": "EX: I am looking for my keys." },
+    { "verb": "look forward to sth/doing", "pattern": "verb", "meaning": "feel excited about something that is going to happen", "example": "EX: We look forward to meeting you soon." },
+    { "verb": "manage to do", "pattern": "verb", "meaning": "succeed in doing something difficult", "example": "EX: Did you manage to finish the project on time?" },
+    { "verb": "plan sth", "pattern": "verb", "meaning": "arrange the details of a future event", "example": "EX: We need to plan our next meeting." },
+    { "verb": "plan to do", "pattern": "verb", "meaning": "intend to perform a future action", "example": "EX: He plans to study biology at university." },
+    { "verb": "possible for sb to do", "pattern": "adjective", "meaning": "able to be done by someone", "example": "EX: Is it possible for you to help me?" },
+    { "verb": "find sth possible", "pattern": "verb", "meaning": "believe that something can be done", "example": "EX: I find it possible to learn a language in a year." },
+    { "verb": "find it impossible to do", "pattern": "verb", "meaning": "believe that something cannot be done", "example": "EX: I find it impossible to work in this noise." },
+    { "verb": "result of sth/doing", "pattern": "noun", "meaning": "the outcome of an action or event", "example": "EX: The high sales were the result of hard work." },
+    { "verb": "result in sth", "pattern": "verb", "meaning": "cause a particular situation or outcome", "example": "EX: The accident resulted in a traffic jam." },
+    { "verb": "result in your doing", "pattern": "verb", "meaning": "cause you to perform an action", "example": "EX: His help resulted in our finishing early." },
+    { "verb": "result from", "pattern": "verb", "meaning": "be caused by something else", "example": "EX: The disease results from a lack of vitamins." },
+    { "verb": "as a result of", "pattern": "phrase", "meaning": "because of something", "example": "EX: He was late as a result of the rain." },
+    { "verb": "wonder about sth/doing", "pattern": "verb", "meaning": "think about something with curiosity or doubt", "example": "EX: I wonder about the future of AI." },
+    { "verb": "wonder if/whether/why", "pattern": "verb", "meaning": "ask oneself about choices or reasons", "example": "EX: I wonder why she didn't come." }
+  ],
+  "wordFormation": [
+    {
+      "word": "appear",
+      "type": "verb",
+      "meaning": "appearance: the way that someone or something looks / appear: start to be seen or exist / disappear: become impossible to see or find / apparently: according to what seems to be true",
+      "example": "EX: She made her first appearance on stage last year.\nEX: A strange light appeared in the sky.\nEX: The ship disappeared from view.\nEX: Apparently, they have decided to cancel the project."
+    },
+    {
+      "word": "build",
+      "type": "verb",
+      "meaning": "build: make something by putting parts together / builder: a person whose job is to build houses / building: a structure with a roof and walls",
+      "example": "EX: They plan to build a new hospital here.\nEX: The builder said the roof needs repairing.\nEX: That tall building is a hotel."
+    },
+    {
+      "word": "discover",
+      "type": "verb",
+      "meaning": "discover: find something especially for the first time / discovery: the process of finding something for the first time",
+      "example": "EX: Columbus discovered America.\nEX: The discovery of penicillin was a major breakthrough."
+    },
+    {
+      "word": "explain",
+      "type": "verb",
+      "meaning": "explain: make something clear or easy to understand / explanation: details or reasons that make something clear / explanatory: giving details or reasons in order to explain",
+      "example": "EX: Can you explain this math rule to me?\nEX: The teacher gave a clear explanation of the grammar.\nEX: The book contains explanatory notes at the end."
+    },
+    {
+      "word": "important",
+      "type": "adjective",
+      "meaning": "important: having high value or influence / importance: the quality of being important / unimportant: not important",
+      "example": "EX: It is important to eat healthy food.\nEX: We must understand the importance of education.\nEX: Don't worry about unimportant details."
+    },
+    {
+      "word": "introduce",
+      "type": "verb",
+      "meaning": "introduce: present someone or something for the first time / introduction: the act of introducing or a preliminary part / introductory: written or said at the beginning of something",
+      "example": "EX: Let me introduce you to my sister.\nEX: He wrote an introduction to the book.\nEX: We attended an introductory lecture on physics."
+    },
+    {
+      "word": "invent",
+      "type": "verb",
+      "meaning": "invent: design or create something new / inventor: a person who designs new things / invention: something designed or created for the first time",
+      "example": "EX: Who invented the light bulb?\nEX: Alexander Graham Bell was the inventor of the telephone.\nEX: The wheel is a great invention."
+    },
+    {
+      "word": "observe",
+      "type": "verb",
+      "meaning": "observe: watch carefully the way something happens / observer: a person who watches something / observation: the act of watching carefully",
+      "example": "EX: The doctor observed the patient's symptoms.\nEX: An independent observer watched the elections.\nEX: She has excellent powers of observation."
+    },
+    {
+      "word": "possible",
+      "type": "adjective",
+      "meaning": "possible: able to be done or achieved / impossible: not able to be done or achieved / impossibility: the state of being impossible / possibility: a chance that something may happen or be true",
+      "example": "EX: It is possible to travel to Mars one day.\nEX: It is impossible to solve this problem.\nEX: We have to accept the impossibility of the plan.\nEX: There is a possibility of rain tomorrow."
+    },
+    {
+      "word": "psychology",
+      "type": "noun",
+      "meaning": "psychology: study of the human mind and behavior / psychologist: scientist who studies the human mind / psychological: relating to the human mind",
+      "example": "EX: She is studying psychology at college.\nEX: The psychologist helped the patient overcome his fear.\nEX: The research has shown psychological effects of stress."
+    },
+    {
+      "word": "revolution",
+      "type": "noun",
+      "meaning": "revolution: a sudden and complete change / revolutionize: completely change the way people do something / revolutionary: involving or causing a complete change",
+      "example": "EX: The industrial revolution changed society.\nEX: The internet revolutionized the way we work.\nEX: They proposed a revolutionary new idea."
+    },
+    {
+      "word": "science",
+      "type": "noun",
+      "meaning": "science: study of the physical world / scientist: a person who studies science / scientific: relating to science / scientifically: in a scientific way",
+      "example": "EX: He is interested in space science.\nEX: The scientist won an award for her discovery.\nEX: She conducted a scientific investigation.\nEX: The theory is scientifically proven."
+    },
+    {
+      "word": "technology",
+      "type": "noun",
+      "meaning": "technology: practical application of scientific knowledge / technician: person with practical skills in science / technique: a particular way of doing something / technological: relating to technology",
+      "example": "EX: Modern technology has changed our lives.\nEX: The technician repaired the computer.\nEX: She improved her technique of playing the piano.\nEX: The country is undergoing rapid technological change."
+    },
+    {
+      "word": "research",
+      "type": "verb",
+      "meaning": "research: study a subject in detail / researcher: a person who studies a subject in detail",
+      "example": "EX: They are researching the cause of the disease.\nEX: The researcher published a paper on the study."
+    },
+    {
+      "word": "wood",
+      "type": "noun",
+      "meaning": "wood: hard substance that forms the main part of a tree / wooden: made of wood",
+      "example": "EX: The table is made of solid wood.\nEX: He sat on a wooden chair."
+    }
+  ]
+}

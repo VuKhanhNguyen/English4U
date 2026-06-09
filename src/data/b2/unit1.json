@@ -1,0 +1,234 @@
+{
+  "id": "b2-unit-1",
+  "title": "Unit 1: Present time",
+  "grammar": [
+    {
+      "structure": "Present simple",
+      "usage": "Habits, routines, permanent situations, general truths, state verbs",
+      "example": "My mum calls me every weekend without fail."
+    },
+    {
+      "structure": "Present continuous",
+      "usage": "Actions happening now, temporary situations, changing situations, annoying habits",
+      "example": "Dan is talking on the phone right now."
+    },
+    {
+      "structure": "Present perfect simple",
+      "usage": "Past action with present result, situations starting in the past continuing to present, completed actions at unspecified time",
+      "example": "I've got a splitting headache thanks to you."
+    },
+    {
+      "structure": "Present perfect continuous",
+      "usage": "Actions continuing up to now, temporary situations, actions that just stopped and have a present result",
+      "example": "I've been travelling round France all summer."
+    }
+  ],
+  "richGrammar": [
+    {
+      "title": "A) PRESENT SIMPLE & PRESENT CONTINUOUS",
+      "blocks": [
+        {
+          "type": "title",
+          "content": "1. STRUCTURE OF PRESENT SIMPLE & PRESENT CONTINUOUS"
+        },
+        {
+          "type": "generic-table",
+          "tableName": "Comparison Table",
+          "headers": ["Type", "Present simple", "Present continuous"],
+          "rows": [
+            [
+              "Statement",
+              "S + V1/es (+ O)\nEX: My mum calls me every weekend without fail.",
+              "S + am/is/are + Ving (+ O)\nEX: Dan is talking on the phone right now."
+            ],
+            [
+              "Negative",
+              "S + do / does + NOT + Vbare (+ O)\nEX: Minh doesn't talk over the phone very often.",
+              "S + am / is / are + NOT + Ving (+ O)\nEX: We aren't eating any meal at the moment as we are on diet."
+            ],
+            [
+              "Question",
+              "Do / does + S + Vbare (+ O)\nEX: Does train stop at Manchester on Sundays?",
+              "Am/Is/Are + S + Ving (+ O)\nEX: Is air travel getting increasingly safe?"
+            ]
+          ]
+        },
+        {
+          "type": "title",
+          "content": "2. NOTES"
+        },
+        {
+          "type": "generic-table",
+          "headers": ["Present simple", "Present continuous"],
+          "rows": [
+            [
+              "* Can use \"do/does\" in affirmative sentences for emphasis\nEX: You don't like going by bus, do you?\n→ Actually, I do like going by bus for short distance!",
+              "* Do not use stative verbs (e.g. be, have, imagine, look, see, smell, taste, think) when they express states.\n* Note: Some of these verbs can be used in the continuous form when they have an active meaning (e.g. have dinner, look at, etc.)"
+            ]
+          ]
+        },
+        {
+          "type": "title",
+          "content": "3. USAGE OF PRESENT SIMPLE & PRESENT CONTINUOUS"
+        },
+        {
+          "type": "generic-table",
+          "headers": ["Present simple", "Present continuous"],
+          "rows": [
+            [
+              "- Habits\n- Repeated actions\n- Permanent situations\n- Present states\n- General truths",
+              "- Actions happening now\n- Temporary series of actions\n- Temporary situations\n- Changing and developing situations\n- Annoying habits (usually with 'always')\n\nEX: You're always coming up with excuse for not having done homework."
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "title": "B) PRESENT PERFECT SIMPLE & PRESENT PERFECT CONTINUOUS",
+      "blocks": [
+        {
+          "type": "title",
+          "content": "1. STRUCTURE OF PRESENT PERFECT SIMPLE & PRESENT PERFECT CONTINUOUS"
+        },
+        {
+          "type": "generic-table",
+          "tableName": "Comparison Table",
+          "headers": ["Type", "Present perfect simple", "Present perfect continuous"],
+          "rows": [
+            [
+              "Statement",
+              "S + have/has + V3/ed (+ O)\nEX: I've got a splitting headache thanks to you.",
+              "S + have/has + been + Ving (+ O)\nEX: I've been travelling round France all summer."
+            ],
+            [
+              "Negative",
+              "S + have/has + NOT + V3/ed (+ O)\nEX: He hasn't finished the book yet so I can't tell you what happens.",
+              "S + have / has + NOT + been + Ving (+ O)\nEX: He hasn't been playing games with me in a year."
+            ],
+            [
+              "Question",
+              "Have / Has + S + V3/ed (+ O)\nEX: Have you ever heard this funny story?",
+              "Have / Has + S + been + Ving (+ O)\nEX: Has Jenny been living here for the last six years?"
+            ]
+          ]
+        },
+        {
+          "type": "title",
+          "content": "2. NOTES"
+        },
+        {
+          "type": "generic-table",
+          "headers": ["Present perfect simple", "Present perfect continuous"],
+          "rows": [
+            [
+              "* Use with \"It's the first/second/etc time\"\nEX: It's the first time I've ever flown in a helicopter.\n\n* US vs. UK Usage differences:\n- US: Often use Past Simple (e.g. We already saw the Sphinx.) and \"gotten\" as past participle (e.g. We've already gotten Dan a new backpack.)\n- UK: Often use Present Perfect (e.g. We've already seen the Sphinx.) and \"got\" as past participle (e.g. We've already got Dan a new backpack.)",
+              "* Often used with time expressions like: all day/week/year, for, since, just, etc.\n* Do not use with \"ever\" and \"never\" in this tense.\n- ✓ Have you ever flown in a helicopter before?\n- ✗ Have you ever been flying in a helicopter before?\n* Sometimes there is very little difference in meaning between the simple and continuous forms."
+            ]
+          ]
+        },
+        {
+          "type": "title",
+          "content": "3. USAGE OF PRESENT PERFECT SIMPLE & PRESENT PERFECT CONTINUOUS"
+        },
+        {
+          "type": "generic-table",
+          "headers": ["Present perfect simple", "Present perfect continuous"],
+          "rows": [
+            [
+              "- Past situations with present results\n- Situations continuing from the past to the present\n- Completed actions at an unspecified time\n- Actions completed and still affecting the present",
+              "- Actions continuing up to the present\n- Actions that have just finished and have a result now\n- Temporary situations or series of actions\n\nEX: I'm out of breath because I've been running to get here in time."
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "title": "C) STATIVE VERBS",
+      "blocks": [
+        {
+          "type": "title",
+          "content": "1. DEFINITION OF STATIVE VERBS"
+        },
+        {
+          "type": "list",
+          "bullets": [
+            "Stative verbs are verbs that express a state rather than an action. They are often related to: thoughts/opinions, emotions, appearance, possession & relationship, existence, or senses.",
+            "Stative verbs are generally not used in continuous tenses.\n- ✓ I see what you mean.\n- ✗ I am seeing what you mean."
+          ]
+        },
+        {
+          "type": "title",
+          "content": "2. CATEGORIES OF STATIVE VERBS"
+        },
+        {
+          "type": "generic-table",
+          "tableName": "Stative Verbs List",
+          "headers": ["Category", "Stative Verb", "Meaning", "Category", "Stative Verb", "Meaning"],
+          "rows": [
+            ["Thinking", "believe", "trust / think true", "Emotions", "hate", "dislike strongly"],
+            ["Thinking", "imagine", "form a mental image", "Emotions", "like", "enjoy"],
+            ["Thinking", "know", "have information", "Emotions", "love", "like very much"],
+            ["Thinking", "mean", "signify / intend", "Emotions", "need", "require"],
+            ["Thinking", "think", "have an opinion", "Emotions", "prefer", "like better"],
+            ["Thinking", "understand", "know the meaning", "Emotions", "satisfy", "please / fulfill"],
+            ["Appearance", "appear", "seem", "Emotions", "want", "desire"],
+            ["Appearance", "look", "seem / appear", "Existence", "be", "exist"],
+            ["Appearance", "resemble", "look like", "Existence", "exist", "live / be real"],
+            ["Appearance", "seem", "appear to be", "The Senses", "hear", "perceive sound"],
+            ["Possession", "belong to", "be owned by", "The Senses", "see", "perceive with eyes"],
+            ["Possession", "have", "own / possess", "The Senses", "smell", "have / perceive odor"],
+            ["Possession", "involve", "include / affect", "The Senses", "sound", "seem when heard"],
+            ["Possession", "consist of", "be composed of", "The Senses", "taste", "have / perceive flavor"],
+            ["Possession", "include", "contain", "", "", ""],
+            ["Possession", "own", "possess", "", "", ""]
+          ]
+        },
+        {
+          "type": "title",
+          "content": "3. SPECIAL NOTES ON DYNAMIC USE"
+        },
+        {
+          "type": "list",
+          "bullets": [
+            "Some stative verbs (be, have, imagine, look, see, smell, taste, think) can be used in continuous tenses when they describe an action rather than a state.",
+            "EX1: Do you have your plane ticket with you? (meaning: possession - state)\nEX2: Are you having lunch at the moment? (meaning: eating - action)"
+          ]
+        }
+      ]
+    }
+  ],
+  "vocabulary": [
+    { "word": "without fail", "type": "phr", "meaning": "definitely; without exception or failure", "example": "He promised to call me at noon without fail." },
+    { "word": "apart from/except for", "type": "phr", "meaning": "with the exclusion of; besides", "example": "Apart from the weather, the holiday was perfect." },
+    { "word": "get in touch", "type": "phr", "meaning": "to establish communication with someone", "example": "Please get in touch with me as soon as you arrive." },
+    { "word": "stay in touch / keep in touch / be in touch", "type": "phr", "meaning": "to maintain contact with someone", "example": "We promised to keep in touch after graduation." },
+    { "word": "knock someone out of", "type": "v phr", "meaning": "to defeat someone or make them unconscious in a competition", "example": "The champion knocked his opponent out of the tournament." },
+    { "word": "hockey", "type": "n", "meaning": "a game played on an ice rink or field where two teams use curved sticks to hit a puck or ball into a goal", "example": "He plays ice hockey every winter." },
+    { "word": "rarely", "type": "adv", "meaning": "not often; seldom", "example": "She rarely eats fast food." },
+    { "word": "ancient aviator", "type": "n", "meaning": "a pilot or flying machine from ancient times", "example": "Legends tell of ancient aviators flying over the mountains." },
+    { "word": "civilization", "type": "n", "meaning": "a highly developed human society with its own social, political, and cultural organization", "example": "The Nile Valley was the home of an ancient civilization." },
+    { "word": "in the dust", "type": "phr", "meaning": "left behind or far outperformed; covered in dust", "example": "The runner left all his competitors in the dust." },
+    { "word": "bizarre theory", "type": "phr", "meaning": "a strange, unusual, or unconventional explanation or idea", "example": "He proposed a bizarre theory about time travel." },
+    { "word": "splitting headache", "type": "phr", "meaning": "a very severe pain in the head", "example": "I've got a splitting headache and need to lie down." },
+    { "word": "mainstream scientist", "type": "n", "meaning": "a scientist whose views are accepted by the majority of the scientific community", "example": "His ideas were rejected by mainstream scientists." },
+    { "word": "there is no point/use (in) doing", "type": "phr", "meaning": "it is not worth doing because it won't achieve anything", "example": "There is no point in arguing with him." },
+    { "word": "due to", "type": "prep, adj", "meaning": "because of; expected or scheduled to arrive", "example": "The flight was delayed due to bad weather." },
+    { "word": "mumble", "type": "v", "meaning": "to speak quietly and unclearly", "example": "She mumbled something I couldn't hear." },
+    { "word": "blame... for", "type": "v", "meaning": "to say or think that someone or something is responsible for something bad", "example": "Don't blame me for your mistakes." },
+    { "word": "much/by far", "type": "adv", "meaning": "used to emphasize a comparison", "example": "This is by far the best book I've read." },
+    { "word": "surprise", "type": "n", "meaning": "an unexpected event or fact", "example": "His sudden visit was a pleasant surprise." },
+    { "word": "resemble", "type": "v", "meaning": "to look like or be similar to another person or thing", "example": "The baby strongly resembles her father." },
+    { "word": "incredible", "type": "adj", "meaning": "impossible or very difficult to believe; extremely good", "example": "The view from the top was incredible." },
+    { "word": "definitely", "type": "adv", "meaning": "without doubt; clearly or surely", "example": "I will definitely come to your party." },
+    { "word": "in doubt", "type": "phr", "meaning": "being uncertain or undecided", "example": "The future of the project is in doubt." },
+    { "word": "a load of / loads of", "type": "phr", "meaning": "a large amount or number of something", "example": "I have loads of work to do today." },
+    { "word": "come up with", "type": "phr", "meaning": "to suggest or think of an idea or plan", "example": "She came up with a brilliant idea for the project." },
+    { "word": "circle of friends", "type": "n", "meaning": "a group of people who are friendly with each other", "example": "She has a wide circle of friends at school." },
+    { "word": "adventure", "type": "n, v", "meaning": "an exciting or unusual experience; to go on an adventure", "example": "They went on a wild adventure in the jungle." },
+    { "word": "adventurous", "type": "adj", "meaning": "willing to try new and often difficult or dangerous things", "example": "She is an adventurous traveler who loves exploring." }
+  ],
+  "wordFormation": [],
+  "wordPatterns": [],
+  "phrasalVerbs": [],
+  "collocations": []
+}

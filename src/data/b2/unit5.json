@@ -1,0 +1,286 @@
+{
+  "id": "b2-unit-5",
+  "title": "Unit 5: Future time",
+  "grammar": [
+    {
+      "structure": "Will / won't & Be going to",
+      "usage": "Predictions, decisions, intentions, offers, suggestions, requests",
+      "example": "Shall I help you with your homework? / I'm going to be a famous astronaut someday!"
+    },
+    {
+      "structure": "Present continuous (as future)",
+      "usage": "Future arrangements confirmed before speaking",
+      "example": "Are they installing the new computers next week?"
+    },
+    {
+      "structure": "Present simple (as future)",
+      "usage": "Timetables, fixed arrangements, after if in conditionals, after time conjunctions",
+      "example": "The bus to Ben Thanh market leaves at 8 a.m."
+    },
+    {
+      "structure": "Future continuous",
+      "usage": "Actions in progress at a specific time in the future, future habits or repeated events",
+      "example": "This time next week, I'll be taking my Maths exam."
+    },
+    {
+      "structure": "Future perfect simple",
+      "usage": "Actions completed before a specific time in the future",
+      "example": "I will have finished my homework by the time my mum comes home."
+    },
+    {
+      "structure": "Future perfect continuous",
+      "usage": "Actions in progress up to a specific time in the future showing duration",
+      "example": "At 7 p.m., I will have been doing my Math exercise for three hours!"
+    }
+  ],
+  "richGrammar": [
+    {
+      "title": "A) WILL / WON'T & BE GOING TO, PRESENT CONTINUOUS & PRESENT SIMPLE",
+      "blocks": [
+        {
+          "type": "title",
+          "content": "1. COMPARISON OF WILL / WON'T & BE GOING TO"
+        },
+        {
+          "type": "generic-table",
+          "headers": ["Feature", "Will / won't", "Be going to"],
+          "rows": [
+            [
+              "Structure",
+              "S + will / won't + Vbare (+ O)",
+              "S + (be) going to + Vbare (+ O)"
+            ],
+            [
+              "Formality",
+              "More formal situations\nEX: The website will come online next week.",
+              "Less formal situations\nEX: The website is going to come online next week."
+            ],
+            [
+              "Decisions & Intentions",
+              "Decision made at the moment of speaking\nEX: I decided! I won't get new DVD player just yet.",
+              "Intention already decided\nEX: I decided! I'm not going to get new DVD player just yet."
+            ],
+            [
+              "Offers & Suggestions",
+              "Offers and suggestions (use shall with I / we)\n✓ Shall I help you with your homework?\n✗ Will I help you with your homework?\n(Do not use will in questions with I / we)",
+              "Plans and intentions (already decided)\nEX: I'm going to be a famous astronaut someday!"
+            ],
+            [
+              "Requests",
+              "Requests\nEX: Will you do washing - up tonight?",
+              "N/A"
+            ],
+            [
+              "Conditionals",
+              "First Conditional\nEX: If we get a computer, we'll be able to learn this course online.",
+              "N/A"
+            ],
+            [
+              "Predictions",
+              "Predictions based on present evidence (both are okay)\nEX: It sounds like the plane's going to take off / will take off in a few minutes.",
+              "Predictions based on present evidence (more common for immediate future)\n✓ It sounds like the plane's going to take off in a few mins.\n✗ It sounds like the plane will take off in a few minutes. (Less natural when immediate)"
+            ]
+          ]
+        },
+        {
+          "type": "title",
+          "content": "2. PRESENT CONTINUOUS & PRESENT SIMPLE AS FUTURE"
+        },
+        {
+          "type": "generic-table",
+          "headers": ["Present continuous", "Present simple"],
+          "rows": [
+            [
+              "Future arrangements confirmed before the moment of speaking\nEX: Are they installing the new computers next week?",
+              "Timetables, fixed schedules, and arrangements\nEX: The bus to Ben Thanh market leaves at 8 a.m.\n✗ The bus to Ben Thanh market will leaves at 8 a.m.\n\nAlso used after 'if' in zero and first conditionals, and after time conjunctions (when, as soon as, before, etc.)\nEX: If technology continues to advance so quickly...\nEX: We'll find out as soon as we get to the lab."
+            ]
+          ]
+        },
+        {
+          "type": "title",
+          "content": "3. WARNING: DEGREE OF CERTAINTY"
+        },
+        {
+          "type": "list",
+          "bullets": [
+            "I will come. (no plan, might not arrive)",
+            "I'm going to come. (plan exists, but still might not arrive)",
+            "I'm coming. (definite, almost certain to arrive)"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "B) FUTURE CONTINUOUS, FUTURE PERFECT SIMPLE & FUTURE PERFECT CONTINUOUS",
+      "blocks": [
+        {
+          "type": "title",
+          "content": "1. STRUCTURE OF FUTURE CONTINUOUS, FUTURE PERFECT SIMPLE & FUTURE PERFECT CONTINUOUS"
+        },
+        {
+          "type": "generic-table",
+          "headers": ["Tense", "Structure", "Example"],
+          "rows": [
+            [
+              "Future continuous",
+              "will / won't + be + Ving",
+              "This time next week, I'll be taking my Maths exam."
+            ],
+            [
+              "Future perfect simple",
+              "will / won't + have + V3/ed",
+              "I will have finished my homework by the time my mum comes home."
+            ],
+            [
+              "Future perfect continuous",
+              "will / won't + have + been + Ving",
+              "At 7 p.m., I will have been doing my Math exercise for three hours!"
+            ]
+          ]
+        },
+        {
+          "type": "title",
+          "content": "2. USAGE & NOTES"
+        },
+        {
+          "type": "generic-table",
+          "headers": ["Future continuous", "Future perfect simple & continuous"],
+          "rows": [
+            [
+              "- Actions in progress at a specific time in the future (two future points: this time of next week & next week)\nNote: Next week, I will take my Math exam. (only one future point)\n\n- Future habits or repeated events\nEX: In the future, we'll all be flying around using jet - packs.",
+              "- Future perfect simple: Actions starting in the present/past and completed before a specific future time.\n\n- Future perfect continuous: Actions starting in the present/past and continuing up to a specific future time showing duration."
+            ]
+          ]
+        },
+        {
+          "type": "title",
+          "content": "3. WARNING: TIME CLAUSES"
+        },
+        {
+          "type": "list",
+          "bullets": [
+            "When a time clause begins with: when, as soon as, before, after, until, till, while, once...",
+            "Do NOT use WILL in the time clause. Instead, use present simple, present continuous, or present perfect.",
+            "EX: We'll find out as soon as we get to the lab. (Not: as soon as we will get...)"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "C) PREPOSITIONS OF TIME & PLACE",
+      "blocks": [
+        {
+          "type": "title",
+          "content": "1. COMMON PREPOSITIONS OF TIME & PLACE"
+        },
+        {
+          "type": "generic-table",
+          "headers": ["Prepositions of TIME", "Prepositions of PLACE"],
+          "rows": [
+            ["(from) Monday to Friday", "turn right at a place"],
+            ["on Monday, on my birthday / Easter Day...", "sit on sth"],
+            ["in July, in 2008", "go in(to) a building"],
+            ["on September 20th", "wait in(side) a building"],
+            ["in (the) summer", "arrive in London / Greece..."],
+            ["at three o'clock", "arrive at stadium"],
+            ["in/for an hour", "in / on / at the corner (of)"],
+            ["at the moment", "come / go / walk to place"],
+            ["in the morning", "next to / beside / by the building"],
+            ["at night", "at/on the front / back of"],
+            ["in / on time", "in front of / behind the station"],
+            ["just in time for", "go out of a building"],
+            ["in the beginning / end", "go towards the station"],
+            ["at the beginning / end of", "between the two buildings"],
+            ["at the age of", "opposite the station"],
+            ["at the weekend", ""],
+            ["next / last week", ""]
+          ]
+        }
+      ]
+    }
+  ],
+  "vocabulary": [
+    {
+      "word": "formal",
+      "type": "adj",
+      "meaning": "suitable for official, important, or public occasions; dignified and serious",
+      "example": "You should wear a formal suit for the job interview."
+    },
+    {
+      "word": "informal",
+      "type": "adj",
+      "meaning": "having a relaxed, friendly, or unofficial style, manner, or nature",
+      "example": "We had an informal meeting over coffee to discuss the project."
+    },
+    {
+      "word": "formality",
+      "type": "n",
+      "meaning": "the rigid observance of rules of convention or etiquette",
+      "example": "There was a sense of formality at the royal dinner."
+    },
+    {
+      "word": "isle",
+      "type": "n",
+      "meaning": "a small island, especially in a literary or poetic context",
+      "example": "The castle is located on a beautiful green isle in the middle of the lake."
+    },
+    {
+      "word": "coach",
+      "type": "n, v",
+      "meaning": "a large bus used for long-distance travel, or a person who trains athletes",
+      "example": "We travelled to London by coach, and our coach gave us advice during the trip."
+    },
+    {
+      "word": "overlooking harbour",
+      "type": "v phr",
+      "meaning": "having a view of the harbor from above",
+      "example": "Our hotel room was overlooking the harbour, offering a beautiful view of the ships."
+    },
+    {
+      "word": "define",
+      "type": "v",
+      "meaning": "state or describe exactly the nature, scope, or meaning of something",
+      "example": "It is difficult to define the exact meaning of this abstract word."
+    },
+    {
+      "word": "broom",
+      "type": "n",
+      "meaning": "a brush with a long handle on it for sweeping floors",
+      "example": "She used a broom to sweep the dust off the kitchen floor."
+    },
+    {
+      "word": "era",
+      "type": "n",
+      "meaning": "a long and distinct period of history with a particular feature or characteristic",
+      "example": "The invention of the internet marked the beginning of a new technological era."
+    },
+    {
+      "word": "industrial revolution",
+      "type": "n",
+      "meaning": "the rapid development of industry that occurred in Britain in the late 18th and 19th centuries",
+      "example": "The industrial revolution changed the way people lived and worked."
+    },
+    {
+      "word": "technological advance",
+      "type": "n",
+      "meaning": "an improvement or development in technology",
+      "example": "Recent technological advances have made smartphones incredibly powerful."
+    },
+    {
+      "word": "implant",
+      "type": "v",
+      "meaning": "insert or fix something in a person's body, especially by surgery",
+      "example": "The surgeon managed to implant a new pacemaker in the patient's heart."
+    },
+    {
+      "word": "electronic circuit board",
+      "type": "n",
+      "meaning": "a thin plate on which chips and other electronic components are placed",
+      "example": "The technician replaced the damaged electronic circuit board in the computer."
+    }
+  ],
+  "wordFormation": [],
+  "wordPatterns": [],
+  "phrasalVerbs": [],
+  "collocations": []
+}

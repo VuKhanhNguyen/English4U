@@ -1,0 +1,303 @@
+{
+  "id": "b2-unit-7",
+  "title": "Unit 7: Articles, nouns and quantifiers",
+  "grammar": [
+    {
+      "structure": "Indefinite article (a & an)",
+      "usage": "Used with singular countable nouns when referring to something non-specific or mentioned for the first time.",
+      "example": "She works as a waiter."
+    },
+    {
+      "structure": "Definite article (the)",
+      "usage": "Used with singular/plural countable nouns and uncountable nouns when referring to something specific or unique.",
+      "example": "The Alps are a beautiful mountain range."
+    },
+    {
+      "structure": "Countable and uncountable nouns",
+      "usage": "Countable nouns can be singular or plural. Uncountable nouns only have a singular form.",
+      "example": "Some important news has just come in."
+    },
+    {
+      "structure": "Quantifiers",
+      "usage": "Used to express quantity (e.g. many, much, a lot of, a few, a little).",
+      "example": "How many channels do you get?"
+    }
+  ],
+  "richGrammar": [
+    {
+      "title": "A) DEFINITE & INDEFINITE ARTICLES",
+      "blocks": [
+        {
+          "type": "title",
+          "content": "1. DEFINITE & INDEFINITE ARTICLES COMPARISON"
+        },
+        {
+          "type": "generic-table",
+          "headers": ["Indefinite Article (A & AN)", "Definite Article (THE)"],
+          "rows": [
+            [
+              "* Used with singular countable nouns:\n  - Non-specific things\n  - Mentioned for the first time\n\n* Use 'an' with words starting with vowels (u, e, o, a, i)\n* Note: Use 'a' or 'an' based on pronunciation, not spelling\n  - EX: a university /juːnɪˈvɜːsəti/\n  - EX: an hour /aʊər/",
+              "* Used with singular countable nouns:\n  - Specific things\n  - Generalizations about a class of things\n\n* Used with plural countable nouns\n* Used with uncountable nouns (e.g., rice, hair, oil, gasoline...)\n* Used with unique things:\n  - EX: the Earth, the Moon, the World Cup, the Miss World...\n* Note: Definite article pronunciation changes depending on the following word"
+            ]
+          ]
+        },
+        {
+          "type": "title",
+          "content": "2. WARNING NOTES"
+        },
+        {
+          "type": "list",
+          "bullets": [
+            "Do not use articles with plural countable nouns or uncountable nouns when speaking generally.",
+            "EX1: Journalists often face dangerous situations. (countable & general)",
+            "EX2: News travels fast these days. (uncountable & general)"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "B) ARTICLE USAGE IN SPECIAL CASES",
+      "blocks": [
+        {
+          "type": "title",
+          "content": "1. ARTICLE USAGE BY TOPIC"
+        },
+        {
+          "type": "generic-table",
+          "headers": ["Topic / Situation", "Indefinite (A/AN)", "Definite (THE)", "Zero Article (Ø)"],
+          "rows": [
+            [
+              "Time",
+              "✗",
+              "in the 1990s, in (the) summer, in the morning",
+              "in 2007"
+            ],
+            [
+              "People & Work",
+              "have a job, work as a waiter...",
+              "the Queen, the Principal, the French...",
+              "become president, go to work, be at work, have work to do, he's French"
+            ],
+            [
+              "Places",
+              "✗",
+              "The Alps, the River Thames, the Arctic...",
+              "Mount Everest, Paris, Mars, Venus..."
+            ],
+            [
+              "Entertainment & Sport",
+              "✗",
+              "the media, on the radio, play the guitar...",
+              "listen to music, on television, play tennis..."
+            ],
+            [
+              "Organizations",
+              "✗",
+              "The army, the police, the fire brigade",
+              "✗"
+            ],
+            [
+              "Education",
+              "✗",
+              "go to the school (as a visitor), be in the first year",
+              "go to school (as a student), be in Class 8B"
+            ],
+            [
+              "Travel",
+              "take a taxi, catch a bus...",
+              "catch the bus, on the bus...",
+              "on foot, go home, go by bus..."
+            ],
+            [
+              "Health",
+              "have a cold / headache / cough",
+              "have (the) flu / measles...",
+              "have toothache"
+            ],
+            [
+              "Public Buildings",
+              "✗",
+              "the bank, the tax office, go to the hospital (as a visitor)",
+              "go to hospital (as a nurse, doctor...)"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "title": "C) COUNTABLE & UNCOUNTABLE NOUNS",
+      "blocks": [
+        {
+          "type": "title",
+          "content": "1. COUNTABLE & UNCOUNTABLE NOUNS DIFFERENCES"
+        },
+        {
+          "type": "generic-table",
+          "headers": ["Feature", "Countable Nouns", "Uncountable Nouns"],
+          "rows": [
+            [
+              "Examples",
+              "Journalist, newspaper, programme, scandal, channel...",
+              "advice, information, knowledge, news, coffee, water, glass, hair, rice, oil, gas, paper, furniture, luggage, money, homework, work...\n\nPlural-only nouns (take plural verbs):\nclothes, scissors, jeans, spectacles, trousers, groceries..."
+            ],
+            [
+              "Articles / Determiners",
+              "a/an, some, many",
+              "the, some, much"
+            ],
+            [
+              "Verbs",
+              "Singular or plural\nEX: How many channels do you get?",
+              "Singular (except plural-only nouns)\nEX1: Some important news has just come in.\nEX2: Your advice was very useful."
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "title": "D) QUANTIFIERS",
+      "blocks": [
+        {
+          "type": "title",
+          "content": "1. QUANTIFIERS USAGE"
+        },
+        {
+          "type": "generic-table",
+          "headers": ["Quantifier", "Usage / Meaning"],
+          "rows": [
+            [
+              "many",
+              "Used with countable nouns (mainly in negative sentences & questions)"
+            ],
+            [
+              "much",
+              "Used with uncountable nouns (mainly in negative sentences & questions)"
+            ],
+            [
+              "a lot of / lots of",
+              "Used with both countable and uncountable nouns (mainly in affirmative sentences)"
+            ],
+            [
+              "a few",
+              "Used with countable nouns (means 'some')"
+            ],
+            [
+              "a little",
+              "Used with uncountable nouns (means 'some')"
+            ],
+            [
+              "few / only a few",
+              "Used with countable nouns (means 'not many' - almost none)"
+            ],
+            [
+              "little / only a little",
+              "Used with uncountable nouns (means 'not much' - almost none)"
+            ]
+          ]
+        }
+      ]
+    }
+  ],
+  "vocabulary": [
+    {
+      "word": "unique opportunity",
+      "type": "n",
+      "meaning": "a rare and exceptionally good chance to do something",
+      "example": "This scholarship is a unique opportunity to study abroad."
+    },
+    {
+      "word": "the Mediterranean",
+      "type": "n",
+      "meaning": "the sea surrounded by Europe, Asia, and Africa",
+      "example": "They went on a cruise around the Mediterranean."
+    },
+    {
+      "word": "manned mission",
+      "type": "n",
+      "meaning": "a spaceflight or expedition that has a human crew on board",
+      "example": "NASA is planning a manned mission to Mars."
+    },
+    {
+      "word": "tragedy",
+      "type": "n",
+      "meaning": "an event causing great suffering, destruction, and distress",
+      "example": "The car crash was a terrible tragedy."
+    },
+    {
+      "word": "strategy",
+      "type": "n",
+      "meaning": "a plan of action designed to achieve a long-term or overall aim",
+      "example": "The company developed a new marketing strategy."
+    },
+    {
+      "word": "innocent",
+      "type": "adj",
+      "meaning": "not guilty of a crime or offense",
+      "example": "The jury found him innocent of all charges."
+    },
+    {
+      "word": "eye-witness",
+      "type": "n",
+      "meaning": "a person who has personally seen something happen",
+      "example": "The police are interviewing eye-witnesses of the accident."
+    },
+    {
+      "word": "mugger",
+      "type": "n",
+      "meaning": "a person who attacks someone in order to steal their money",
+      "example": "The mugger ran away with her handbag."
+    },
+    {
+      "word": "sprinkle",
+      "type": "v, n",
+      "meaning": "to scatter small drops or particles, or a light shower of rain",
+      "example": "He sprinkled some sugar on the strawberries."
+    },
+    {
+      "word": "general election",
+      "type": "n",
+      "meaning": "a regular election of candidates for office, e.g., for parliament",
+      "example": "The prime minister called a general election for next month."
+    },
+    {
+      "word": "politics",
+      "type": "n",
+      "meaning": "activities associated with the governance of a country or area",
+      "example": "She decided to enter politics after university."
+    },
+    {
+      "word": "prime minister",
+      "type": "n",
+      "meaning": "the head of an elected government",
+      "example": "The Prime Minister gave a speech outside Downing Street."
+    },
+    {
+      "word": "pass a law",
+      "type": "v",
+      "meaning": "to approve and enact a new piece of legislation",
+      "example": "The parliament passed a law to ban plastic bags."
+    },
+    {
+      "word": "revolutionize",
+      "type": "v",
+      "meaning": "to completely change the way something is done",
+      "example": "Smartphones have revolutionized communication."
+    },
+    {
+      "word": "vital",
+      "type": "adj",
+      "meaning": "absolutely necessary or important; essential",
+      "example": "Water is vital for all living things."
+    },
+    {
+      "word": "jury's verdict",
+      "type": "n",
+      "meaning": "the formal decision made by a jury in a court trial",
+      "example": "We are waiting for the jury's verdict."
+    }
+  ],
+  "wordFormation": [],
+  "wordPatterns": [],
+  "phrasalVerbs": [],
+  "collocations": []
+}

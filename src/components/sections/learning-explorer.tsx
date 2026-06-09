@@ -46,12 +46,28 @@ import unit39 from "@/data/b1/unit39.json";
 import unit40 from "@/data/b1/unit40.json";
 import unit41 from "@/data/b1/unit41.json";
 import unit42 from "@/data/b1/unit42.json";
-import b2Data from "@/data/destination-b2.json";
+import b2Unit1 from "@/data/b2/unit1.json";
+import b2Unit2 from "@/data/b2/unit2.json";
+import b2Unit3 from "@/data/b2/unit3.json";
+import b2Unit4 from "@/data/b2/unit4.json";
+import b2Unit5 from "@/data/b2/unit5.json";
+import b2Unit6 from "@/data/b2/unit6.json";
+import b2Unit7 from "@/data/b2/unit7.json";
+import b2Unit8 from "@/data/b2/unit8.json";
+import b2Unit9 from "@/data/b2/unit9.json";
+import b2Unit10 from "@/data/b2/unit10.json";
+import b2Unit11 from "@/data/b2/unit11.json";
+import b2Unit12 from "@/data/b2/unit12.json";
 import c1c2Data from "@/data/destination-c1-c2.json";
 
 const b1Data = {
   book: "Destination B1",
   units: [unit1, unit2, unit3, unit4, unit5, unit6, unit7, unit8, unit9, unit10_11, unit12, unit13, unit14, unit15, unit16, unit17, unit18, unit19, unit20, unit21, unit22, unit23, unit24, unit25, unit26, unit27, unit28_29, unit30, unit31, unit32, unit33, unit34, unit35, unit36, unit37, unit38, unit39, unit40, unit41, unit42],
+};
+
+const b2Data = {
+  book: "Destination B2",
+  units: [b2Unit1, b2Unit2, b2Unit3, b2Unit4, b2Unit5, b2Unit6, b2Unit7, b2Unit8, b2Unit9, b2Unit10, b2Unit11, b2Unit12],
 };
 
 import { Card } from "@/components/ui/card";
@@ -74,6 +90,55 @@ import {
 
 const books = [b1Data, b2Data, c1c2Data];
 
+function injectFlags(text: string): React.ReactNode[] {
+  if (!text) return [];
+  const flagRegex = /\b(US|UK)\b/g;
+  const parts: React.ReactNode[] = [];
+  let lastIndex = 0;
+  let match;
+
+  while ((match = flagRegex.exec(text)) !== null) {
+    const [fullMatch, country] = match;
+    const matchIndex = match.index;
+
+    if (matchIndex > lastIndex) {
+      parts.push(text.substring(lastIndex, matchIndex));
+    }
+
+    if (country === "US") {
+      parts.push(
+        <span key={`flag-us-${matchIndex}`} className="inline-flex items-center gap-1 font-semibold text-amber-500">
+          <img
+            src="/us.svg"
+            alt="US"
+            className="inline-block h-3.5 w-5 object-cover rounded-sm align-middle border border-off-black/10"
+          />
+          <span>US</span>
+        </span>
+      );
+    } else if (country === "UK") {
+      parts.push(
+        <span key={`flag-uk-${matchIndex}`} className="inline-flex items-center gap-1 font-semibold text-indigo-500">
+          <img
+            src="/english.png"
+            alt="UK"
+            className="inline-block h-3.5 w-5 object-cover rounded-sm align-middle border border-off-black/10"
+          />
+          <span>UK</span>
+        </span>
+      );
+    }
+
+    lastIndex = matchIndex + fullMatch.length;
+  }
+
+  if (lastIndex < text.length) {
+    parts.push(text.substring(lastIndex));
+  }
+
+  return parts.length > 0 ? parts : [text];
+}
+
 function parseBoldAndItalic(text: string, baseKey: string): React.ReactNode[] {
   if (!text) return [];
   const regex = /\*\*([^*]+)\*\*/g;
@@ -86,7 +151,7 @@ function parseBoldAndItalic(text: string, baseKey: string): React.ReactNode[] {
     const matchIndex = match.index;
 
     if (matchIndex > lastIndex) {
-      parts.push(text.substring(lastIndex, matchIndex));
+      parts.push(...injectFlags(text.substring(lastIndex, matchIndex)));
     }
 
     parts.push(
@@ -99,13 +164,13 @@ function parseBoldAndItalic(text: string, baseKey: string): React.ReactNode[] {
   }
 
   if (lastIndex < text.length) {
-    parts.push(text.substring(lastIndex));
+    parts.push(...injectFlags(text.substring(lastIndex)));
   }
 
   return parts.length > 0 ? parts : [text];
 }
 
-function renderTextWithLinks(text: string) {
+function renderSingleLineText(text: string, lineKey: string) {
   if (!text) return null;
   // Regex to match markdown links: [link text](url)
   const regex = /\[([^\]]+)\]\(([^)]+)\)/g;
@@ -120,13 +185,13 @@ function renderTextWithLinks(text: string) {
     // Add text before the match
     if (matchIndex > lastIndex) {
       const textBefore = text.substring(lastIndex, matchIndex);
-      parts.push(...parseBoldAndItalic(textBefore, `before-${matchIndex}`));
+      parts.push(...parseBoldAndItalic(textBefore, `${lineKey}-before-${matchIndex}`));
     }
 
     // Add the link element
     parts.push(
       <a
-        key={`${url}-${matchIndex}`}
+        key={`${lineKey}-${url}-${matchIndex}`}
         href={url}
         target="_blank"
         rel="noopener noreferrer"
@@ -142,17 +207,17 @@ function renderTextWithLinks(text: string) {
   // Add remaining text
   if (lastIndex < text.length) {
     const textRemaining = text.substring(lastIndex);
-    parts.push(...parseBoldAndItalic(textRemaining, `after-${lastIndex}`));
+    parts.push(...parseBoldAndItalic(textRemaining, `${lineKey}-after-${lastIndex}`));
   }
 
   if (parts.length === 0) {
-    const boldParsed = parseBoldAndItalic(text, "only");
+    const boldParsed = parseBoldAndItalic(text, `${lineKey}-only`);
     if (boldParsed.length === 1 && typeof boldParsed[0] === "string") {
       return boldParsed[0];
     }
     return boldParsed.map((part, idx) => {
       if (typeof part === "string") {
-        return <span key={`text-${idx}`}>{part}</span>;
+        return <span key={`${lineKey}-text-${idx}`}>{part}</span>;
       }
       return part;
     });
@@ -160,10 +225,44 @@ function renderTextWithLinks(text: string) {
 
   return parts.map((part, idx) => {
     if (typeof part === "string") {
-      return <span key={`text-${idx}`}>{part}</span>;
+      return <span key={`${lineKey}-text-${idx}`}>{part}</span>;
     }
     return part;
   });
+}
+
+function renderTextWithLinks(text: string) {
+  if (!text) return null;
+
+  const lines = text.split("\n");
+  const renderedLines = lines.map((line, lineIdx) => {
+    const hasTick = line.includes("✓");
+    const hasCross = line.includes("✗");
+    const hasEx = /^\s*(EX\d*|EX)\s*:/i.test(line) || line.includes("→") || line.trim().startsWith("→");
+    const hasNote = line.includes("*");
+
+    let lineClass = "";
+    if (hasTick && !hasCross && !hasEx) {
+      lineClass = "text-teal-600 dark:text-teal-400 font-medium";
+    } else if (hasCross && !hasTick && !hasEx) {
+      lineClass = "text-red-600 dark:text-red-400 font-medium";
+    } else if (hasEx) {
+      lineClass = "text-pale-stone italic";
+    } else if (hasNote) {
+      lineClass = "text-amber-400 font-medium";
+    }
+
+    const parsedLine = renderSingleLineText(line, `line-${lineIdx}`);
+
+    return (
+      <span key={lineIdx} className={lineClass || undefined}>
+        {parsedLine}
+        {lineIdx < lines.length - 1 && <br />}
+      </span>
+    );
+  });
+
+  return <>{renderedLines}</>;
 }
 
 // Interface for word family items in Word Formation
@@ -349,14 +448,18 @@ function RichGrammarRenderer({ richGrammar }: { richGrammar: any[] }) {
                               key={rIdx}
                               className="border-b border-off-black last:border-b-0 font-mono hover:bg-atmosphere-wash/10 transition-colors"
                             >
-                              {(row || []).map((cell: string, cIdx: number) => (
-                                <td
-                                  key={cIdx}
-                                  className="p-3 border-r border-off-black last:border-r-0 text-ink whitespace-pre-line align-top"
-                                >
-                                  {renderTextWithLinks(translate(cell))}
-                                </td>
-                              ))}
+                              {(row || []).map((cell: string, cIdx: number) => {
+                                 const header = block.headers?.[cIdx];
+                                 const isStativeVerbCol = header === "Stative Verb";
+                                 return (
+                                   <td
+                                     key={cIdx}
+                                     className="p-3 border-r border-off-black last:border-r-0 text-ink whitespace-pre-line align-top"
+                                   >
+                                     {renderTextWithLinks(isStativeVerbCol ? cell : translate(cell))}
+                                   </td>
+                                 );
+                               })}
                             </tr>
                           ))}
                         </tbody>
@@ -492,9 +595,9 @@ function RichGrammarRenderer({ richGrammar }: { richGrammar: any[] }) {
                         <tbody>
                           {(block.table || []).map((row: any, rIdx: number) => (
                             <tr key={rIdx} className="border-b border-off-black last:border-b-0 hover:bg-atmosphere-wash/10 transition-colors">
-                              <td className="p-3 border-r border-off-black font-bold text-ink align-middle">{translate(row[0])}</td>
+                              <td className="p-3 border-r border-off-black font-bold text-ink align-middle">{row[0]}</td>
                               <td className="p-3 border-r border-off-black text-pale-stone align-middle">{translate(row[1])}</td>
-                              <td className="p-3 border-r border-off-black font-bold text-ink align-middle">{translate(row[2])}</td>
+                              <td className="p-3 border-r border-off-black font-bold text-ink align-middle">{row[2]}</td>
                               <td className="p-3 text-pale-stone align-middle">{translate(row[3])}</td>
                             </tr>
                           ))}

@@ -5,12 +5,16 @@ import vocabTranslations from "@/data/vocab-translation-vi.json";
 import grammarTranslations from "@/data/grammar-translation-vi.json";
 import headerFooterTranslations from "@/data/header_footer-translation-vi.json";
 import aboutTranslations from "@/data/about-translation-vi.json";
+import vocabTranslationsB2 from "@/data/vocab-translation-vi-b2.json";
+import grammarTranslationsB2 from "@/data/grammar-translation-vi-b2.json";
 
 const customTranslations = {
   ...vocabTranslations,
   ...grammarTranslations,
   ...headerFooterTranslations,
   ...aboutTranslations,
+  ...vocabTranslationsB2,
+  ...grammarTranslationsB2,
 };
 
 type Language = "en" | "vi";

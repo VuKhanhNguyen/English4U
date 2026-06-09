@@ -1,0 +1,293 @@
+{
+  "id": "b2-unit-3",
+  "title": "Unit 3: Past time",
+  "grammar": [
+    {
+      "structure": "Past simple",
+      "usage": "Completed past actions, past habits/routines, permanent past situations, general past truths, main events in a story",
+      "example": "I saw Maria for the first time at Henry's party."
+    },
+    {
+      "structure": "Past continuous",
+      "usage": "Actions in progress at a specific past time, temporary past situations, annoying past habits, background information in a story",
+      "example": "When my dad met my mum, he was working as a bus driver."
+    },
+    {
+      "structure": "Past perfect simple",
+      "usage": "Actions before a specific past time, completed actions before another past action, situations continuing up to a past moment",
+      "example": "When we got to the airport, I realized I had left my passport at home."
+    },
+    {
+      "structure": "Past perfect continuous",
+      "usage": "Actions continuing up to a past moment, actions in progress before another past action showing cause/effect",
+      "example": "We had been running for six miles - and we still had a mile to go!"
+    }
+  ],
+  "richGrammar": [
+    {
+      "title": "A) PAST SIMPLE & PAST CONTINUOUS",
+      "blocks": [
+        {
+          "type": "title",
+          "content": "1. STRUCTURE OF PAST SIMPLE & PAST CONTINUOUS"
+        },
+        {
+          "type": "generic-table",
+          "tableName": "Comparison Table",
+          "headers": ["Type", "Past simple", "Past continuous"],
+          "rows": [
+            [
+              "Statement",
+              "S + V2/ed + O\nEX: I saw Maria for the first time at Henry's party.",
+              "S + was / were + Ving + O\nEX: When my dad met my mum, he was working as a bus driver."
+            ],
+            [
+              "Negative",
+              "S + didn't + Vbare + O\nEX: When I went to get the tickets, I realized I didn't have any money.",
+              "S + was / were + NOT + Ving + O\nEX: Richard wasn't watching TV when the phone rang."
+            ],
+            [
+              "Question",
+              "Did + S + Vbare + O\nEX: Did you enjoy the film?",
+              "Was / Were + S + Ving + O\nEX: Was Zoe always taking your things when you shared a room?"
+            ]
+          ]
+        },
+        {
+          "type": "title",
+          "content": "2. NOTES"
+        },
+        {
+          "type": "generic-table",
+          "headers": ["Past simple", "Past continuous"],
+          "rows": [
+            [
+              "* Can use \"did\" in affirmative sentences for emphasis\nEX: Why didn't you pass the test?\n→ I did pass the test, I got a B. Who told you I didn't?",
+              "* When a past action interrupts another ongoing action:\n→ Past simple + Past continuous\n* Do not use past continuous for past habits.\n* Do not use stative verbs."
+            ]
+          ]
+        },
+        {
+          "type": "title",
+          "content": "3. USAGE OF PAST SIMPLE & PAST CONTINUOUS"
+        },
+        {
+          "type": "generic-table",
+          "headers": ["Past simple", "Past continuous"],
+          "rows": [
+            [
+              "- Completed past actions\n- Past habits\n- Permanent past situations\n- General past truths\n- Main events in a story",
+              "- Actions happening at a specific moment in the past\n- Temporary situations in the past\n- Annoying habits (usually with 'always')\n- Continuous actions over a period of time\n- Background information in a story"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "title": "B) PAST PERFECT SIMPLE & PAST PERFECT CONTINUOUS",
+      "blocks": [
+        {
+          "type": "title",
+          "content": "1. STRUCTURE OF PAST PERFECT SIMPLE & PAST PERFECT CONTINUOUS"
+        },
+        {
+          "type": "generic-table",
+          "tableName": "Comparison Table",
+          "headers": ["Type", "Past perfect simple", "Past perfect continuous"],
+          "rows": [
+            [
+              "Statement",
+              "S + had + V3/ed (+ O)\nEX: When we got to the airport, I realized I had left my passport at home.",
+              "S + had + been + Ving (+ O)\nEX: I had been listening to a new playlist when my sister started making a funny noise."
+            ],
+            [
+              "Negative",
+              "S + hadn't + V3/ed (+ O)\nEX: Jack hadn't played chess before so I showed him what to do.",
+              "S + hadn't + been + Ving (+ O)\nEX: Ian hadn't been working at the factory when he was made a manager."
+            ],
+            [
+              "Question",
+              "Had + S + V3/ed (+ O)\nEX: Had you ever been to America when you were at 18?",
+              "Had + S + been + Ving (+ O)\nEX: Had John been getting ready for the final competition?"
+            ]
+          ]
+        },
+        {
+          "type": "title",
+          "content": "2. NOTES"
+        },
+        {
+          "type": "generic-table",
+          "headers": ["Past perfect simple", "Past perfect continuous"],
+          "rows": [
+            [
+              "* Sometimes there is no difference in meaning between Past Simple & Past Perfect Simple\n→ We lived / had lived next to the gym for a couple of months before I decided to join.\n\n* When listing past actions, use Past Perfect Simple for the first action and Past Simple for subsequent ones\n→ I had already had one flying lesson, which was great fun, and I knew that I wanted to be a pilot.\n\n* Use with \"It was the first/second/etc time\"\n→ It was the first time I'd made a speech in public.",
+              "* Actions continuing up to and in the past\n→ When you saw us, we had been running for six miles - and we still had a mile to go!\n\n* Actions that happened immediately before a past moment\n→ Sarah looked tired because she had been exercising all morning."
+            ]
+          ]
+        },
+        {
+          "type": "title",
+          "content": "3. USAGE OF PAST PERFECT SIMPLE & PAST PERFECT CONTINUOUS"
+        },
+        {
+          "type": "generic-table",
+          "headers": ["Past perfect simple", "Past perfect continuous"],
+          "rows": [
+            [
+              "- Actions happening before another action in the past\n- Actions completed before a specific past time\n- Past actions with results in the past",
+              "- Actions continuing up to a past moment\n- Temporary situations or series of actions in the past\n- Past action in progress showing a cause/effect relationship"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "title": "C) WOULD, USED TO, BE/GET USED TO",
+      "blocks": [
+        {
+          "type": "title",
+          "content": "1. WOULD, USED TO, BE/GET USED TO COMPARISON"
+        },
+        {
+          "type": "generic-table",
+          "headers": ["Feature", "WOULD", "USED TO", "BE / GET USED TO"],
+          "rows": [
+            [
+              "Structure",
+              "would + Vbare",
+              "used to + Vbare",
+              "be / get used to + Ving\nbe / get used to + N"
+            ],
+            [
+              "Usage",
+              "Past habits\nEX: When I was young, my grandfather would take me to the park to play.",
+              "Past habits / states\nEX: I used to smoke before.",
+              "Actions or states that are no longer strange\nEX: I didn't like being the goalkeeper at first but now I'm used to it."
+            ],
+            [
+              "Notes",
+              "Do not use in negative or question sentences; use \"would never\" instead.\nEX: We would never play games together as a family when I was growing up.",
+              "Can be used in question and negative sentences, or replace with \"never used to\".\nEX: He didn't use to play hockey here.\nEX: He never used to play hockey here.\n\nFor past states, only use \"used to\", not \"would\".\n✓ I used to have a car.\n✗ I would have a car.",
+              "be used to + Ving → accustomed to (spoken English)\nEX: I am used to getting up early.\n\nget used to + Ving → process of becoming accustomed\nEX: You might find it strange at first but you will soon get used to it.\n\nbe accustomed to + Ving → accustomed to (written English)\nEX: I am accustomed to getting up early.\n\nbe familiar with + N/Ving → understanding a field/topic\nEX: The committee chose Sharon because she is familiar with this field."
+            ]
+          ]
+        }
+      ]
+    }
+  ],
+  "vocabulary": [
+    {
+      "word": "checkers / draughts",
+      "type": "n",
+      "meaning": "a game for two players, played on a chessboard with 24 round pieces",
+      "example": "In the evening, they would often play checkers or draughts together."
+    },
+    {
+      "word": "Monopoly",
+      "type": "n",
+      "meaning": "a popular board game in which players buy, sell, and trade properties",
+      "example": "We didn't feel like playing Scrabble because we had just finished a long game of Monopoly."
+    },
+    {
+      "word": "Scrabble",
+      "type": "n",
+      "meaning": "a board game in which players try to make words from letters",
+      "example": "My grandmother is extremely good at Scrabble and always wins."
+    },
+    {
+      "word": "distant past",
+      "type": "phr",
+      "meaning": "a time long ago in history",
+      "example": "In the distant past, people used to travel by horse-drawn carriages."
+    },
+    {
+      "word": "engaged",
+      "type": "adj",
+      "meaning": "busy; having formally agreed to marry; involved in conflict",
+      "example": "The phone line was engaged when I tried to call him, but I later found out they had just got engaged."
+    },
+    {
+      "word": "have / give / throw a surprise party",
+      "type": "v",
+      "meaning": "to organize an unexpected party for someone",
+      "example": "We decided to throw a surprise party for our teacher's birthday."
+    },
+    {
+      "word": "symphony",
+      "type": "n",
+      "meaning": "a long piece of music written for a large orchestra",
+      "example": "Beethoven's Fifth Symphony is one of the most famous pieces of classical music."
+    },
+    {
+      "word": "out of breath",
+      "type": "phr",
+      "meaning": "gasping for air, especially after physical exertion",
+      "example": "I was completely out of breath after running up five flights of stairs."
+    },
+    {
+      "word": "oysters",
+      "type": "n",
+      "meaning": "large flat shellfish that can be eaten raw or cooked, and sometimes produce pearls",
+      "example": "We ordered a platter of fresh oysters at the seaside restaurant."
+    },
+    {
+      "word": "long",
+      "type": "adv",
+      "meaning": "for a large amount of time",
+      "example": "We had to wait long before the train finally arrived."
+    },
+    {
+      "word": "knock sth down",
+      "type": "phr",
+      "meaning": "to demolish a building or structure",
+      "example": "They are planning to knock down the old library and build a modern center."
+    },
+    {
+      "word": "play the bagpipes",
+      "type": "phr",
+      "meaning": "to perform music using a traditional Scottish wind instrument",
+      "example": "A man in a kilt was playing the bagpipes in the middle of Edinburgh."
+    },
+    {
+      "word": "turn over",
+      "type": "phr",
+      "meaning": "to change position so that the other side is facing up; roll over in bed",
+      "example": "I couldn't sleep last night; I kept turning over and over."
+    },
+    {
+      "word": "lay awake",
+      "type": "phr",
+      "meaning": "to lie in bed unable to sleep",
+      "example": "She lay awake for hours, worrying about her exam the next day."
+    },
+    {
+      "word": "lie - lay - lain",
+      "type": "v",
+      "meaning": "to be in or move into a horizontal position on a surface",
+      "example": "The cat decided to lie on the sofa all afternoon."
+    },
+    {
+      "word": "lay - laid - laid",
+      "type": "v",
+      "meaning": "to put something down carefully in a flat position",
+      "example": "She laid the tablecloth on the table before serving dinner."
+    },
+    {
+      "word": "lie - lied - lied",
+      "type": "v",
+      "meaning": "to say something that is not true in order to deceive someone",
+      "example": "He lied about his age to get into the club."
+    },
+    {
+      "word": "water polo",
+      "type": "n",
+      "meaning": "a team game played in a swimming pool, where players try to throw a ball into the opponent's goal",
+      "example": "Water polo is a physically demanding sport that requires excellent swimming skills."
+    }
+  ],
+  "wordFormation": [],
+  "wordPatterns": [],
+  "phrasalVerbs": [],
+  "collocations": []
+}

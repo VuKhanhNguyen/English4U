@@ -1,0 +1,696 @@
+{
+  "id": "b2-unit-10",
+  "title": "Unit 10: People & Society",
+  "grammar": [],
+  "richGrammar": [],
+  "vocabulary": [
+    {
+      "word": "relationship",
+      "type": "n",
+      "meaning": "the way in which two or more people or things are connected",
+      "example": "They have a very close working relationship."
+    },
+    {
+      "word": "connection",
+      "type": "n",
+      "meaning": "a relationship in which a person or thing is linked with something else",
+      "example": "The police are investigating his connection with the suspect."
+    },
+    {
+      "word": "blame",
+      "type": "n",
+      "meaning": "responsibility for a mistake or misfortune",
+      "example": "He took the blame for the team's failure."
+    },
+    {
+      "word": "fault",
+      "type": "n",
+      "meaning": "responsibility for an accident or misfortune",
+      "example": "It was my fault that we missed the train."
+    },
+    {
+      "word": "old",
+      "type": "adj",
+      "meaning": "having lived or existed for a long time",
+      "example": "He is an old friend of mine."
+    },
+    {
+      "word": "ancient",
+      "type": "adj",
+      "meaning": "belonging to the very distant past and no longer in existence",
+      "example": "They visited the ancient ruins of Rome."
+    },
+    {
+      "word": "crowd",
+      "type": "n",
+      "meaning": "a large number of people gathered together in a disorganized way",
+      "example": "A large crowd gathered in the main square."
+    },
+    {
+      "word": "audience",
+      "type": "n",
+      "meaning": "the assembled spectators or listeners at a public event",
+      "example": "The audience applauded at the end of the show."
+    },
+    {
+      "word": "enjoy",
+      "type": "v",
+      "meaning": "take delight or pleasure in an activity or occasion",
+      "example": "I hope you enjoy your stay at the hotel."
+    },
+    {
+      "word": "please",
+      "type": "v",
+      "meaning": "make someone feel happy or satisfied",
+      "example": "He did his best to please his parents."
+    },
+    {
+      "word": "support",
+      "type": "v",
+      "meaning": "give assistance to, especially financially or emotionally",
+      "example": "My family always supports me in my decisions."
+    },
+    {
+      "word": "assist",
+      "type": "v",
+      "meaning": "help someone, typically by doing a share of the work",
+      "example": "The nurse assisted the doctor during the surgery."
+    },
+    {
+      "word": "kind",
+      "type": "adj",
+      "meaning": "having or showing a friendly, generous, and considerate nature",
+      "example": "Thank you for your kind words."
+    },
+    {
+      "word": "polite",
+      "type": "adj",
+      "meaning": "having or showing behavior that is respectful and considerate of other people",
+      "example": "It is polite to say thank you when someone helps you."
+    },
+    {
+      "word": "sympathetic",
+      "type": "adj",
+      "meaning": "feeling, showing, or expressing sympathy",
+      "example": "She was very sympathetic when I told her about my problems."
+    },
+    {
+      "word": "likeable",
+      "type": "adj",
+      "meaning": "easy to like; pleasant and friendly",
+      "example": "He is a very likeable young man."
+    },
+    {
+      "word": "nervous",
+      "type": "adj",
+      "meaning": "easily agitated or alarmed; anxious or apprehensive",
+      "example": "She felt nervous before her driving test."
+    },
+    {
+      "word": "bad-tempered",
+      "type": "adj",
+      "meaning": "easily annoyed or angered",
+      "example": "He is always bad-tempered in the morning."
+    },
+    {
+      "word": "sensitive",
+      "type": "adj",
+      "meaning": "quick to detect or respond to slight changes, signals, or influences; easily hurt",
+      "example": "She is very sensitive to criticism."
+    },
+    {
+      "word": "sensible",
+      "type": "adj",
+      "meaning": "chosen in accordance with wisdom or prudence; practical and reasonable",
+      "example": "It was very sensible of you to save your money."
+    },
+    {
+      "word": "company",
+      "type": "n",
+      "meaning": "the state of being with other people; association with another",
+      "example": "I enjoy the company of my friends."
+    },
+    {
+      "word": "group",
+      "type": "n",
+      "meaning": "a number of people or things that are located, gathered, or classed together",
+      "example": "A group of students stood outside the classroom."
+    },
+    {
+      "word": "popular",
+      "type": "adj",
+      "meaning": "liked, admired, or enjoyed by many people",
+      "example": "Tennis is a very popular sport worldwide."
+    },
+    {
+      "word": "famous",
+      "type": "adj",
+      "meaning": "known about by many people",
+      "example": "She became famous after winning the competition."
+    },
+    {
+      "word": "close",
+      "type": "adj",
+      "meaning": "connected by shared feelings, interests, or loyalties",
+      "example": "They are very close friends."
+    },
+    {
+      "word": "near",
+      "type": "adj",
+      "meaning": "at or to a short distance away; close",
+      "example": "The hotel is near the airport."
+    },
+    {
+      "word": "typical",
+      "type": "adj",
+      "meaning": "showing all the characteristics that you would usually expect from a person, thing, or group",
+      "example": "It was a typical summer day, warm and sunny."
+    },
+    {
+      "word": "usual",
+      "type": "adj",
+      "meaning": "habitually or typically occurring or done; customary",
+      "example": "We met at our usual place."
+    },
+    {
+      "word": "ordinary",
+      "type": "adj",
+      "meaning": "with no special or distinctive features; normal",
+      "example": "It was just an ordinary weekend; we didn't do anything special."
+    },
+    {
+      "word": "unknown",
+      "type": "adj",
+      "meaning": "not known or familiar",
+      "example": "The author of the poem is unknown."
+    },
+    {
+      "word": "infamous",
+      "type": "adj",
+      "meaning": "well known for some bad quality or deed",
+      "example": "He is infamous for his dishonesty."
+    },
+    {
+      "word": "notorious",
+      "type": "adj",
+      "meaning": "famous or well known, typically for some bad quality or deed",
+      "example": "The area is notorious for its high crime rate."
+    },
+    {
+      "word": "level-headed",
+      "type": "adj",
+      "meaning": "calm and sensible; able to judge things well",
+      "example": "She is very level-headed and handles stress well."
+    },
+    {
+      "word": "herd",
+      "type": "n",
+      "meaning": "a large group of animals, or a disorganized crowd of people",
+      "example": "We saw a large herd of elephants in the national park."
+    },
+    {
+      "word": "bully",
+      "type": "n",
+      "meaning": "a person who uses strength or influence to harm or intimidate those who are weaker",
+      "example": "The school has a strict policy against bullies."
+    }
+  ],
+  "phrasalVerbs": [
+    {
+      "phrasalVerb": "ask after",
+      "meaning": "ask for news about someone",
+      "example": "EX: She asked after my father and how he was doing."
+    },
+    {
+      "phrasalVerb": "bring up",
+      "meaning": "look after a child until they become an adult",
+      "example": "EX: She was brought up by her grandparents."
+    },
+    {
+      "phrasalVerb": "fall for",
+      "meaning": "fall in love with someone, or be tricked by a trick or joke",
+      "example": "EX: He fell for her immediately / I can't believe you fell for that silly joke!"
+    },
+    {
+      "phrasalVerb": "fall out with",
+      "meaning": "have an argument with someone and stop being friends",
+      "example": "EX: She fell out with her best friend over a minor issue."
+    },
+    {
+      "phrasalVerb": "get on with",
+      "meaning": "have a good relationship with someone",
+      "example": "EX: I get on very well with my colleagues."
+    },
+    {
+      "phrasalVerb": "grow up",
+      "meaning": "develop from being a child to being an adult",
+      "example": "EX: He grew up in a small town in the countryside."
+    },
+    {
+      "phrasalVerb": "look down on",
+      "meaning": "think that you are better than someone else",
+      "example": "EX: He looks down on anyone who doesn't have a university degree."
+    },
+    {
+      "phrasalVerb": "look up to",
+      "meaning": "admire and respect someone",
+      "example": "EX: Many young players look up to the team captain."
+    },
+    {
+      "phrasalVerb": "make up",
+      "meaning": "become friends again after an argument",
+      "example": "EX: They argue a lot, but they always make up quickly."
+    },
+    {
+      "phrasalVerb": "pass away",
+      "meaning": "die (used to avoid saying 'die' directly)",
+      "example": "EX: Her grandfather passed away last week."
+    },
+    {
+      "phrasalVerb": "pick on",
+      "meaning": "keep treating someone badly or unfairly",
+      "example": "EX: The older boys used to pick on him at school."
+    },
+    {
+      "phrasalVerb": "put down",
+      "meaning": "criticize someone in a way that makes them feel stupid or embarrassed",
+      "example": "EX: He is always putting his wife down in front of other people."
+    },
+    {
+      "phrasalVerb": "settle down",
+      "meaning": "start living a quiet life in one place, especially when you get married",
+      "example": "EX: They decided to settle down and start a family."
+    },
+    {
+      "phrasalVerb": "stand up for",
+      "meaning": "defend someone or something that is being criticized or attacked",
+      "example": "EX: You must stand up for your rights."
+    },
+    {
+      "phrasalVerb": "take aback",
+      "meaning": "surprise or shock someone very much",
+      "example": "EX: We were taken aback by his sudden announcement."
+    }
+  ],
+  "prepositionalPhrases": [],
+  "collocations": [
+    {
+      "word": "approval",
+      "collocation": "show/give (your) approval of/for",
+      "meaning": "express support or agreement"
+    },
+    {
+      "word": "approval",
+      "collocation": "meet with sb's approval",
+      "meaning": "be accepted or approved by someone"
+    },
+    {
+      "word": "argument",
+      "collocation": "have an argument with sb about sth/doing",
+      "meaning": "quarrel or disagree angrily with someone"
+    },
+    {
+      "word": "argument",
+      "collocation": "win/lose an argument",
+      "meaning": "succeed or fail in a verbal dispute"
+    },
+    {
+      "word": "care",
+      "collocation": "take care of",
+      "meaning": "look after or be responsible for someone or something"
+    },
+    {
+      "word": "care",
+      "collocation": "care for / about sth/sb",
+      "meaning": "look after someone, or feel concern about something"
+    },
+    {
+      "word": "courage",
+      "collocation": "have the courage to do",
+      "meaning": "be brave enough to perform an action"
+    },
+    {
+      "word": "courage",
+      "collocation": "it takes courage to do",
+      "meaning": "require bravery to perform an action"
+    },
+    {
+      "word": "disguise",
+      "collocation": "in disguise",
+      "meaning": "wearing clothes that hide your true identity"
+    },
+    {
+      "word": "disguise",
+      "collocation": "wear a disguise",
+      "meaning": "put on clothes or a mask to hide identity"
+    },
+    {
+      "word": "disguise",
+      "collocation": "disguise yourself",
+      "meaning": "change your appearance so people do not recognize you"
+    },
+    {
+      "word": "disguise",
+      "collocation": "disguised as sth/sb",
+      "meaning": "appearing as something or someone else"
+    },
+    {
+      "word": "dream",
+      "collocation": "have a dream about (sth/sb/doing)",
+      "meaning": "experience a series of thoughts or images during sleep or have an ambition"
+    },
+    {
+      "word": "dream",
+      "collocation": "daydream",
+      "meaning": "have pleasant thoughts that make you forget about the present"
+    },
+    {
+      "word": "dream",
+      "collocation": "dream of/about",
+      "meaning": "think of something you would like to happen"
+    },
+    {
+      "word": "family",
+      "collocation": "have/start a family",
+      "meaning": "have children"
+    },
+    {
+      "word": "family",
+      "collocation": "nuclear family",
+      "meaning": "a family consisting of two parents and their children"
+    },
+    {
+      "word": "family",
+      "collocation": "extended family",
+      "meaning": "a family that extends beyond the nuclear family, including grandparents, aunts, uncles, etc."
+    },
+    {
+      "word": "favour",
+      "collocation": "do/owe sb a favour",
+      "meaning": "perform a helpful service for someone or owe them one"
+    },
+    {
+      "word": "favour",
+      "collocation": "be in favour of",
+      "meaning": "support or agree with a proposal or idea"
+    },
+    {
+      "word": "friend",
+      "collocation": "make / become / stay / be friends with",
+      "meaning": "establish or maintain a friendship with someone"
+    },
+    {
+      "word": "love",
+      "collocation": "be / fall in love with",
+      "meaning": "feel deep affection or romantic attraction for someone"
+    },
+    {
+      "word": "mood",
+      "collocation": "in a good/bad mood",
+      "meaning": "feeling cheerful or angry/irritable"
+    },
+    {
+      "word": "mood",
+      "collocation": "in the right/wrong mood",
+      "meaning": "feeling suitable or unsuitable for an activity"
+    },
+    {
+      "word": "mood",
+      "collocation": "in the mood for sth",
+      "meaning": "wanting to do or have something"
+    },
+    {
+      "word": "pity",
+      "collocation": "pity sb",
+      "meaning": "feel sorrow or sympathy for someone"
+    },
+    {
+      "word": "pity",
+      "collocation": "take pity on sb",
+      "meaning": "show compassion or help someone who is in a bad situation"
+    },
+    {
+      "word": "pity",
+      "collocation": "feel pity for sb",
+      "meaning": "experience sympathy for someone's misfortune"
+    },
+    {
+      "word": "pity",
+      "collocation": "it's a pity (that)",
+      "meaning": "it is regrettable or disappointing that"
+    },
+    {
+      "word": "promise",
+      "collocation": "promise to do",
+      "meaning": "make a commitment to perform an action"
+    },
+    {
+      "word": "promise",
+      "collocation": "give/make sb a promise",
+      "meaning": "commit yourself to do something for someone"
+    },
+    {
+      "word": "promise",
+      "collocation": "break a/your promise",
+      "meaning": "fail to do what you committed to do"
+    }
+  ],
+  "wordPatterns": [
+    {
+      "verb": "agree with/on/to sth",
+      "pattern": "verb",
+      "meaning": "have the same opinion or consent to something",
+      "example": "EX: I agree with your plan."
+    },
+    {
+      "verb": "agree with sb",
+      "pattern": "verb",
+      "meaning": "have the same opinion as someone else",
+      "example": "EX: I agree with you on this matter."
+    },
+    {
+      "verb": "agree to do",
+      "pattern": "verb",
+      "meaning": "consent to perform an action",
+      "example": "EX: He agreed to help us."
+    },
+    {
+      "verb": "agree that",
+      "pattern": "verb",
+      "meaning": "consent or concur that a statement is true",
+      "example": "EX: We all agreed that the price was too high."
+    },
+    {
+      "verb": "allow sb to do",
+      "pattern": "verb",
+      "meaning": "permit someone to perform an action",
+      "example": "EX: My parents allowed me to go to the party."
+    },
+    {
+      "verb": "allow sth",
+      "pattern": "verb",
+      "meaning": "permit something to happen",
+      "example": "EX: We do not allow smoking here."
+    },
+    {
+      "verb": "approve of sth/doing",
+      "pattern": "verb",
+      "meaning": "agree with or think well of someone or something",
+      "example": "EX: My parents don't approve of my new friends."
+    },
+    {
+      "verb": "approve sth",
+      "pattern": "verb",
+      "meaning": "give official agreement or permission to something",
+      "example": "EX: The headteacher approved the new school project."
+    },
+    {
+      "verb": "attack sth",
+      "pattern": "verb",
+      "meaning": "try to hurt or damage something using violence",
+      "example": "EX: The enemy attacked the city."
+    },
+    {
+      "verb": "attack sb for sth",
+      "pattern": "verb",
+      "meaning": "criticize someone strongly for something",
+      "example": "EX: The minister was attacked for his controversial remarks."
+    },
+    {
+      "verb": "an attack on sth/sb",
+      "pattern": "verb",
+      "meaning": "an act of violence or strong criticism against someone or something",
+      "example": "EX: The article was a personal attack on the prime minister."
+    },
+    {
+      "verb": "ban sb from sth/doing",
+      "pattern": "verb",
+      "meaning": "officially forbid someone from doing or entering something",
+      "example": "EX: He was banned from driving for a year."
+    },
+    {
+      "verb": "convince sb of sth",
+      "pattern": "verb",
+      "meaning": "make someone believe that something is true",
+      "example": "EX: I managed to convince him of my innocence."
+    },
+    {
+      "verb": "convince sb to do",
+      "pattern": "verb",
+      "meaning": "persuade someone to perform an action",
+      "example": "EX: I convinced her to come with us."
+    },
+    {
+      "verb": "convince sb that",
+      "pattern": "verb",
+      "meaning": "make someone believe that a statement is true",
+      "example": "EX: I convinced him that we were safe."
+    },
+    {
+      "verb": "force sb to do sth",
+      "pattern": "verb",
+      "meaning": "make someone perform an action against their will",
+      "example": "EX: The robber forced him to hand over the money."
+    },
+    {
+      "verb": "force sb into doing / sth",
+      "pattern": "verb",
+      "meaning": "compel someone to participate in an action or situation",
+      "example": "EX: She was forced into resigning from her job."
+    },
+    {
+      "verb": "independent of/from",
+      "pattern": "verb",
+      "meaning": "not controlled or influenced by someone or something else",
+      "example": "EX: The country became independent of colonial rule."
+    },
+    {
+      "verb": "object to doing / sth",
+      "pattern": "verb",
+      "meaning": "express opposition to or disapproval of something",
+      "example": "EX: I object to being treated like a child."
+    },
+    {
+      "verb": "pretend to be",
+      "pattern": "verb",
+      "meaning": "behave as if you are someone or something else",
+      "example": "EX: He pretended to be asleep when I entered."
+    },
+    {
+      "verb": "pretend to do",
+      "pattern": "verb",
+      "meaning": "behave as if you are performing an action when you are not",
+      "example": "EX: She pretended to read, but she was looking at him."
+    },
+    {
+      "verb": "pretend that",
+      "pattern": "verb",
+      "meaning": "behave as if a statement is true when it is not",
+      "example": "EX: Let's pretend that we are on a desert island."
+    },
+    {
+      "verb": "rely on",
+      "pattern": "verb",
+      "meaning": "depend on someone or something with full trust",
+      "example": "EX: You can always rely on me for help."
+    }
+  ],
+  "wordFormation": [
+    {
+      "word": "able",
+      "type": "verb",
+      "meaning": "able: having the power or skill to do something / unable: not having the power or skill to do something / inability: state of being unable to do something / disability: a physical or mental condition that limits a person's movements, senses, or activities / enable: make something possible / disabled: having a physical or mental condition that limits movements or activities",
+      "example": "EX: He is able to speak French.\nEX: She was unable to attend the meeting.\nEX: His inability to make decisions is a problem.\nEX: He overcomes his disability with courage.\nEX: This software enables you to edit photos.\nEX: There are special parking spaces for disabled people."
+    },
+    {
+      "word": "achieve",
+      "type": "verb",
+      "meaning": "achieve: successfully bring about or reach by effort / achievement: a thing done successfully, typically by effort, courage, or skill",
+      "example": "EX: She achieved her goals.\nEX: Winning the award was a great achievement."
+    },
+    {
+      "word": "argue",
+      "type": "verb",
+      "meaning": "argue: exchange or express diverging or opposite views / argument: an exchange of diverging or opposite views / argumentative: given to expressing diverging or opposite views",
+      "example": "EX: They argue about money.\nEX: They had a heated argument.\nEX: He is very argumentative."
+    },
+    {
+      "word": "care",
+      "type": "noun",
+      "meaning": "care: feel concern or interest / careful: making sure of avoiding danger or mistake / careless: not giving sufficient attention or thought / caring: displaying kindness and concern / uncaring: not displaying kindness or concern",
+      "example": "EX: He cares for his elderly parents.\nEX: Be careful when you cross the street.\nEX: It was a careless mistake.\nEX: She is a very caring nurse.\nEX: He was criticized for his uncaring attitude."
+    },
+    {
+      "word": "correspond",
+      "type": "verb",
+      "meaning": "correspond: write letters to one another, or be analogous or equivalent / correspondence: communication by exchanging letters, or agreement",
+      "example": "EX: They corresponded for years.\nEX: The police read their correspondence."
+    },
+    {
+      "word": "friend",
+      "type": "noun",
+      "meaning": "friend: a person whom one knows and with whom one has a bond of mutual affection / friendship: a relationship between friends / friendly: kind and pleasant / unfriendly: not friendly",
+      "example": "EX: She is a close friend of mine.\nEX: Their friendship lasted a lifetime.\nEX: The villagers were very friendly.\nEX: Why are you being so unfriendly?"
+    },
+    {
+      "word": "happy",
+      "type": "adjective",
+      "meaning": "happy: feeling or showing pleasure or contentment / unhappy: not happy / happiness: the state of being happy / unhappiness: the state of not being happy",
+      "example": "EX: She is happy with her job.\nEX: He was unhappy about the decision.\nEX: Money cannot buy happiness.\nEX: Her eyes showed her unhappiness."
+    },
+    {
+      "word": "jealous",
+      "type": "adjective",
+      "meaning": "jealous: feeling or showing envy of someone or their achievements / jealousy: the state or feeling of being jealous",
+      "example": "EX: She is jealous of her sister's success.\nEX: His outburst was triggered by jealousy."
+    },
+    {
+      "word": "kind",
+      "type": "adjective",
+      "meaning": "kind: having a friendly or generous nature / unkind: not kind / kindness: the quality of being friendly, generous, and considerate / unkindness: the quality of being unkind",
+      "example": "EX: Thank you for your kind offer.\nEX: It was unkind of you to say that.\nEX: She treated everyone with kindness.\nEX: I was shocked by his unkindness."
+    },
+    {
+      "word": "marry",
+      "type": "verb",
+      "meaning": "marry: join in marriage / marriage: the legally recognized union of two people / married: having a husband or wife / unmarried: not married",
+      "example": "EX: They decided to marry next month.\nEX: Their marriage lasted for fifty years.\nEX: She is married to a doctor.\nEX: He remained unmarried all his life."
+    },
+    {
+      "word": "nerve",
+      "type": "noun",
+      "meaning": "nerve: a fiber that transmits impulses of sensation / nervousness: the state of being anxious / nervous: easily agitated or anxious / nervously: in an anxious or apprehensive manner",
+      "example": "EX: He has got a lot of nerve to speak to me like that!\nEX: She tried to hide her nervousness.\nEX: I feel nervous about the exam.\nEX: She waited nervously for the results."
+    },
+    {
+      "word": "obey",
+      "type": "verb",
+      "meaning": "obey: submit to the authority of or comply with / disobey: fail to obey / disobedience: failure or refusal to obey / obedient: complying or willing to comply with orders / disobedient: refusing to obey rules or authority",
+      "example": "EX: You must obey the school rules.\nEX: He was punished for disobeying his teacher.\nEX: Her disobedience caused a lot of trouble.\nEX: She is an obedient child.\nEX: The disobedient dog refused to sit."
+    },
+    {
+      "word": "person",
+      "type": "noun",
+      "meaning": "person: a human being regarded as an individual / personality: the combination of characteristics that form an individual's character / personal: belonging to or affecting a particular person / impersonal: not influenced by showing personal feelings",
+      "example": "EX: She is a very nice person.\nEX: He has a strong personality.\nEX: That is my personal opinion.\nEX: The bank felt cold and impersonal."
+    },
+    {
+      "word": "polite",
+      "type": "adjective",
+      "meaning": "polite: showing behavior that is respectful / impolite: not polite / politeness: the quality of being polite / impolitely: in an impolite manner",
+      "example": "EX: He was polite to his guests.\nEX: It is impolite to point at people.\nEX: We appreciate your politeness.\nEX: He behaved impolitely towards the waiter."
+    },
+    {
+      "word": "relate",
+      "type": "verb",
+      "meaning": "relate: make or show a connection between / relation: the way in which two or more concepts or people are connected / relative: considered in relation or in proportion to something else / relationship: the way in which two or more concepts or people are connected",
+      "example": "EX: The film relates a story of adventure.\nEX: The relations between the two countries have improved.\nEX: Everything is relative.\nEX: They are in a stable relationship."
+    },
+    {
+      "word": "willing",
+      "type": "adjective",
+      "meaning": "willing: ready, eager, or prepared to do something / unwilling: not ready or eager to do something / willingness: the quality of being prepared to do something / unwillingness: the quality of being unwilling / willingly: of one's own free will / unwillingly: against one's wishes",
+      "example": "EX: I am willing to help you.\nEX: He was unwilling to change his mind.\nEX: She showed a willingness to learn.\nEX: I was surprised by his unwillingness to help.\nEX: He willingly accepted the offer.\nEX: She went to the party unwillingly."
+    }
+  ]
+}

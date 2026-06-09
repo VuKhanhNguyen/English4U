@@ -47,7 +47,7 @@ export default async function DestinationPage({
           hideButtons={true}
           title1="Learning Explorer"
           title2=""
-          subtitle="Dive deep into the structured content. Expand a unit, select a category, and use the search to quickly find specific rules or vocabulary."
+          subtitle="Dive deep into the structured content. Expand a unit, select a category, use the search to quickly find specific rules or vocabulary."
         />
         <LearningExplorerSection
           bookLevel={level as "b1" | "b2" | "c1-c2"}
