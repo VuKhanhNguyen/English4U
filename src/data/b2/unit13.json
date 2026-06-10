@@ -1,0 +1,328 @@
+{
+  "id": "b2-unit-13",
+  "title": "Unit 13: Modals",
+  "grammar": [
+    {
+      "structure": "Ability",
+      "usage": "Express general ability, ability in the present, past, or future, and past hypothetical ability.",
+      "example": "Can you speak Chinese? / We could have gone up the Eiffel Tower."
+    },
+    {
+      "structure": "Permission",
+      "usage": "Request, give, or describe permission in the present, future, or past.",
+      "example": "You can open the window if you're too hot."
+    },
+    {
+      "structure": "Advice & Criticism",
+      "usage": "Give advice, make recommendations, or criticize past actions/behavior.",
+      "example": "You shouldn't talk to people like that! / You should have written two essays."
+    },
+    {
+      "structure": "Obligation & Necessity",
+      "usage": "Express obligation, lack of obligation, necessity, lack of necessity, or prohibition in the present, past, or future.",
+      "example": "I must remember to get some bread. / We needn't have joined this party."
+    },
+    {
+      "structure": "Degrees of Certainty",
+      "usage": "Express certainty, probability, or possibility about present, past, or future situations.",
+      "example": "It must be raining outside. / Susan could have got stuck in traffic."
+    }
+  ],
+  "richGrammar": [
+    {
+      "title": "A) ABILITY, PERMISSION, ADVICE & CRITICISM",
+      "blocks": [
+        {
+          "type": "title",
+          "content": "1. OVERVIEW OF MODALS & SEMI-MODALS"
+        },
+        {
+          "type": "generic-table",
+          "tableName": "Modals & Semi-modals Rules",
+          "headers": ["Type", "Verbs", "Key Rules / Usage"],
+          "rows": [
+            [
+              "Modals",
+              "will, would, shall, should, can, could, may, might, must",
+              "* Only one form\n* Modals + Vbare / be Ving / have V3/ed"
+            ],
+            [
+              "Semi-modals",
+              "ought to, have to, need to",
+              "* Semi-modals: change form depending on subject & tense used"
+            ]
+          ]
+        },
+        {
+          "type": "title",
+          "content": "2. MODALS OF ABILITY"
+        },
+        {
+          "type": "generic-table",
+          "headers": ["Use / Meaning", "Modals / Form & Examples"],
+          "rows": [
+            [
+              "- General ability\n- Present ability",
+              "**can / be able to**\nEX: Can you speak Chinese?\nEX: Are you able to speak Chinese?"
+            ],
+            [
+              "- Decision made at the moment of speaking for the future",
+              "**can**\nEX: We can meet at cafeteria tomorrow if you like."
+            ],
+            [
+              "- Past ability",
+              "**could / was able to**\nEX: I could drive when I was thirteen years old.\nEX: He was able to play guitar at the age of teenager."
+            ],
+            [
+              "- Present/future ability\n- General hypothesis in the future",
+              "**could / will be able to**\nEX: In a few months, she'll be able to buy a new car.\nEX: If only I could afford to buy that mobile phone."
+            ],
+            [
+              "- Ability based on a past hypothesis",
+              "**could + have + V3/ed**\nEX: We could have gone up the Eiffel Tower while we were at Paris, but we decided to go to the Louvre instead."
+            ]
+          ]
+        },
+        {
+          "type": "title",
+          "content": "3. MODALS OF PERMISSION"
+        },
+        {
+          "type": "generic-table",
+          "headers": ["Use / Meaning", "Modals / Form & Examples"],
+          "rows": [
+            [
+              "- Request / permission in the present / future",
+              "**may / could / can**\nEX: You can open the window if you're too hot."
+            ],
+            [
+              "- Request / permission in the past\n→ Modals not used",
+              "**could**\n* I could wear a knee support during the match.\n→ Can use \"could\" in reported speech.\nEX: The coach said that I could wear a knee support during the match."
+            ]
+          ]
+        },
+        {
+          "type": "title",
+          "content": "4. MODALS OF ADVICE"
+        },
+        {
+          "type": "generic-table",
+          "headers": ["Use / Meaning", "Modals / Form & Examples"],
+          "rows": [
+            [
+              "- Request / giving advice in the present / future",
+              "**should / ought to**\nEX: You shouldn't talk to people like that! It's rude.\nEX: You ought to / should enter that competition!"
+            ]
+          ]
+        },
+        {
+          "type": "title",
+          "content": "5. MODALS OF CRITICISM"
+        },
+        {
+          "type": "generic-table",
+          "headers": ["Use / Meaning", "Modals / Form & Examples"],
+          "rows": [
+            [
+              "- Criticism for attitude / behavior in the past",
+              "**should / ought to + have + V3/ed**\nEX: You should / ought to have written two essays in the test yesterday, not one."
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "title": "B) OBLIGATION & NECESSITY",
+      "blocks": [
+        {
+          "type": "title",
+          "content": "1. STRUCTURES OF OBLIGATION & NECESSITY"
+        },
+        {
+          "type": "generic-table",
+          "headers": ["Use / Meaning", "Modals / Form & Examples"],
+          "rows": [
+            [
+              "- Obligation / necessity",
+              "**Must / have to / need to**\n→ \"Must\" is used when the obligation is self-imposed.\nEX: I must / have to / need to remember to get some bread on the way home tonight.\nEX: Henry has to / needs to see the headmaster during the next break.\n→ Do not use \"must\" in this case."
+            ],
+            [
+              "- No need to perform a certain obligation / necessity",
+              "**Mustn't** → \"Mustn't\" indicates prohibition.\nEX: Carl, you mustn't run into the street like this, It's dangerous.\n\n**Needn't / don't have to / don't need to**\nEX: People with solar-powered cars needn't / don't have to / don't need to worry about the price of petrol."
+            ],
+            [
+              "- Obligation / responsibility in the past",
+              "**Had to / needed to**\nEX: We had to / needed to light lots of candles during the power cut two days ago."
+            ],
+            [
+              "- No need to perform an obligation in the past",
+              "**Needn't + have + V3/ed**\nEX: We needn't have joined this party yesterday.\n→ Joined but not necessary!\n\n**Didn't have to / didn't need to + Vbare**\nEX: We didn't have to do / didn't need to do washing-up after picnic as we'd used disposable plates.\n→ Didn't do the washing-up (because it was not necessary)"
+            ],
+            [
+              "- Obligation / necessity in the future",
+              "**Will have / need to**\nEX: You'll have to / need to be more careful about what you eat in future."
+            ]
+          ]
+        },
+        {
+          "type": "title",
+          "content": "2. IMPORTANT NOTES & WARNINGS"
+        },
+        {
+          "type": "list",
+          "bullets": [
+            "**\"Must\" is not used in interrogative sentences:**\n✗ Must I take this medicine before every meal?\n✓ Do I have to take this medicine before every meal?",
+            "**\"Must\" is not used in the to-infinitive form:**\n✗ I'd hate to must have injection.\n✓ I'd hate to have to have an injection.",
+            "**Difference between \"mustn't\" & \"don't/doesn't have/need to\":**\n* **mustn't**: indicates prohibition.\n→ EX: You mustn't do that! (You cannot do that by any means.)\n* **don't have to**: indicates lack of obligation (you can do it if you want, but it's not necessary).\n→ EX: You don't have to do that. (You can do it but it's not necessary.)",
+            "**Difference between \"needn't + have + V3/ed\" & \"didn't have to / didn't need to + Vbare\":**\n* **needn't have + V3/ed**: action occurred in the past although it was not necessary.\n→ EX: I needn't have gone to the doctor. (I went but it was not necessary.)\n* **didn't have to / didn't need to**: action did not occur because it was known to be unnecessary.\n→ EX: I didn't have / need to go to the doctor because I suddenly felt better. (I didn't go.)",
+            "**Following \"need\", we can use V-ing (passive meaning):**\n→ EX: I need to sterilize this syringe.\n→ EX: This syringe needs sterilizing."
+          ]
+        }
+      ]
+    },
+    {
+      "title": "C) DEGREES OF CERTAINTY",
+      "blocks": [
+        {
+          "type": "title",
+          "content": "1. OVERVIEW OF CERTAINTY LEVEL"
+        },
+        {
+          "type": "list",
+          "bullets": [
+            "**Certainty -> probability -> possibility:** decreasing probability of occurrence."
+          ]
+        },
+        {
+          "type": "title",
+          "content": "2. MODALS OF CERTAINTY, PROBABILITY & POSSIBILITY"
+        },
+        {
+          "type": "generic-table",
+          "headers": ["Type / Degree", "Use / Meaning", "Modals / Form & Examples"],
+          "rows": [
+            [
+              "Certainty",
+              "Certainty (almost certain) about the present\n(Very high probability of occurrence, certain, cannot be...)",
+              "**Must** → for affirmative sentences\nEX: It must be raining outside.\n\n**Can't / couldn't** → for negative sentences\nEX: It can't / couldn't be the pills; they're the wrong color."
+            ],
+            [
+              "Certainty",
+              "Certainty (almost certain) about the past\n(Very high probability of occurrence, certain, cannot be...)",
+              "**Must + have + V3/ed**\nEX: I must have left my bag on the bus.\n\n**Can't / couldn't + have + V3/ed**\nEX: His leg can't / couldn't have been in plaster for 2 years!"
+            ],
+            [
+              "Probability",
+              "Probability (likely to happen) in the present / future\n(High probability of occurrence, should have...)",
+              "**Should / ought to**\nEX: When I broke my arm yesterday, I guess it ought to / should have hurt."
+            ],
+            [
+              "Probability",
+              "Probability (likely to happen) in the past\n(High probability of occurrence, should have...)",
+              "**Should / ought to + have + V3/ed**\nEX: The cargos should / ought to have delivered to us yesterday. I wonder why it didn't.\n→ The package should have been delivered yesterday. I wonder why it wasn't."
+            ],
+            [
+              "Possibility",
+              "Possibility (possible) in the present / future\n(Low probability of occurrence, maybe...)",
+              "**Could / may / might**\nEX: The plaster could / may / might come off in about three weeks.\n→ The plaster cast might be removed in 3 weeks. (It's possible that after 3 weeks it still won't be removed)"
+            ],
+            [
+              "Possibility",
+              "Possibility (possible) in the past\n(Low probability of occurrence, maybe...)",
+              "**Could / may / might + have + V3/ed**\nEX: Susan could / may / might have got stuck in traffic.\n→ Susan is late -> she might have been stuck in traffic."
+            ],
+            [
+              "Possibility",
+              "Possibility based on a past hypothesis\n(Low probability of occurrence...)",
+              "**Could / might + have + V3/ed**\nEX: It's a good thing you went to the doctor or you could / might have become quite ill."
+            ]
+          ]
+        }
+      ]
+    }
+  ],
+  "vocabulary": [
+    {
+      "word": "spot",
+      "type": "n",
+      "meaning": "a small round mark or pimple on the skin or a surface",
+      "example": "She noticed a small red spot on her arm."
+    },
+    {
+      "word": "grounded",
+      "type": "adj",
+      "meaning": "(of an aircraft or pilot) prevented from flying or taking off",
+      "example": "The plane was grounded due to severe weather conditions."
+    },
+    {
+      "word": "cutlery",
+      "type": "n",
+      "meaning": "knives, forks, and spoons used for eating or serving food",
+      "example": "He placed the silver cutlery neatly on the dinner table."
+    },
+    {
+      "word": "mountain out of a molehill",
+      "type": "phr",
+      "meaning": "to make a major issue out of a minor problem",
+      "example": "Don't make a mountain out of a molehill; it's just a tiny scratch."
+    },
+    {
+      "word": "landed on my arm",
+      "type": "phr",
+      "meaning": "fell in a way that the impact was absorbed by one's arm",
+      "example": "When I tripped on the stairs, I landed on my arm and fractured it."
+    },
+    {
+      "word": "numb",
+      "type": "adj",
+      "meaning": "deprived of physical sensation or the power of movement",
+      "example": "My fingers were numb with cold after being outside for hours."
+    },
+    {
+      "word": "in agony",
+      "type": "phr",
+      "meaning": "experiencing extreme physical or mental pain",
+      "example": "He was in agony after twisting his ankle during the match."
+    },
+    {
+      "word": "forehead",
+      "type": "n",
+      "meaning": "the part of the face above the eyebrows and below the hairline",
+      "example": "She touched his forehead to check if he had a fever."
+    },
+    {
+      "word": "headmaster",
+      "type": "n",
+      "meaning": "a man who is the head teacher in a school",
+      "example": "The headmaster gave a speech to the new students."
+    },
+    {
+      "word": "candle",
+      "type": "n",
+      "meaning": "a cylinder of wax with a central wick which is lit to produce light",
+      "example": "We lit a candle when the electricity went out."
+    },
+    {
+      "word": "disposable plate",
+      "type": "n",
+      "meaning": "a plate designed to be used once and then thrown away",
+      "example": "We used disposable plates for the picnic to avoid washing up."
+    },
+    {
+      "word": "exhausted",
+      "type": "adj",
+      "meaning": "extremely tired physically or mentally",
+      "example": "She was exhausted after running a full marathon."
+    },
+    {
+      "word": "get two left feet",
+      "type": "phr",
+      "meaning": "to be very clumsy or awkward when dancing or playing sports",
+      "example": "I have two left feet, so don't expect me to dance well at the wedding."
+    }
+  ],
+  "wordFormation": [],
+  "wordPatterns": [],
+  "phrasalVerbs": [],
+  "collocations": []
+}

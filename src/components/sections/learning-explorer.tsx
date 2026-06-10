@@ -67,6 +67,9 @@ import b2Unit8 from "@/data/b2/unit8.json";
 import b2Unit9 from "@/data/b2/unit9.json";
 import b2Unit10 from "@/data/b2/unit10.json";
 import b2Unit11 from "@/data/b2/unit11.json";
+import b2Unit12 from "@/data/b2/unit12.json";
+import b2Unit13 from "@/data/b2/unit13.json";
+import b2Unit14 from "@/data/b2/unit14.json";
 import c1c2Data from "@/data/destination-c1-c2.json";
 
 const b1Data = {
@@ -76,7 +79,7 @@ const b1Data = {
 
 const b2Data = {
   book: "Destination B2",
-  units: [b2Unit1, b2Unit2, b2Unit3, b2Unit4, b2Unit5, b2Unit6, b2Unit7, b2Unit8, b2Unit9, b2Unit10, b2Unit11],
+  units: [b2Unit1, b2Unit2, b2Unit3, b2Unit4, b2Unit5, b2Unit6, b2Unit7, b2Unit8, b2Unit9, b2Unit10, b2Unit11, b2Unit12, b2Unit13, b2Unit14],
 };
 
 import { Card } from "@/components/ui/card";

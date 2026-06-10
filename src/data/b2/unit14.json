@@ -1,0 +1,223 @@
+{
+  "id": "b2-unit-14",
+  "title": "Unit 14: Health and fitness",
+  "grammar": [],
+  "vocabulary": [
+    { "word": "prescription", "type": "n", "meaning": "a piece of paper on which a doctor writes the details of the medicine you need", "example": "The doctor wrote me a prescription for some antibiotics." },
+    { "word": "recipe", "type": "n", "meaning": "a set of instructions telling you how to prepare and cook food", "example": "Do you have a good recipe for chocolate cake?" },
+    { "word": "operation", "type": "n", "meaning": "the process of cutting into someone's body for medical reasons", "example": "She underwent a major heart operation yesterday." },
+    { "word": "surgery", "type": "n", "meaning": "medical treatment in which a doctor cuts open someone's body to repair or remove something", "example": "The doctor recommended surgery to remove the tumor." },
+    { "word": "sore", "type": "adj", "meaning": "painful and uncomfortable, usually because of injury, infection, or exercise", "example": "My muscles are sore after the workout." },
+    { "word": "hurt", "type": "v", "meaning": "to feel pain in a part of your body, or to cause someone pain", "example": "My back hurts when I bend down." },
+    { "word": "pain", "type": "n", "meaning": "an unpleasant physical feeling caused by illness or injury", "example": "He felt a sudden sharp pain in his chest." },
+    { "word": "illness", "type": "n", "meaning": "a disease of the body or mind, or the state of being ill (often without knowing the cause)", "example": "She missed a week of school due to illness." },
+    { "word": "disease", "type": "n", "meaning": "an illness affecting humans, animals, or plants, often with a known cause", "example": "The doctors are studying how this disease spreads." },
+    { "word": "injured", "type": "adj", "meaning": "hurt in an accident or attack", "example": "Several injured passengers were taken to hospital." },
+    { "word": "damaged", "type": "adj", "meaning": "harmed, broken, or spoiled physically", "example": "The storm left many houses damaged." },
+    { "word": "thin", "type": "adj", "meaning": "having only a small distance between two opposite sides; not fat", "example": "He has become very thin since his illness." },
+    { "word": "slim", "type": "adj", "meaning": "attractively thin and well-proportioned", "example": "She has a slim and athletic figure." },
+    { "word": "remedy", "type": "n", "meaning": "a medicine or treatment for a disease or minor illness", "example": "Hot tea with honey is a good remedy for a cold." },
+    { "word": "cure", "type": "n", "meaning": "something that makes a sick person healthy again, or a treatment that cures", "example": "Scientists are searching for a cure for cancer." },
+    { "word": "therapy", "type": "n", "meaning": "treatment that helps someone feel better or grow stronger, especially after an illness", "example": "Physical therapy helped him walk again." },
+    { "word": "effect", "type": "n", "meaning": "a change that is a result or consequence of an action or other cause", "example": "The medicine had a positive effect on her health." },
+    { "word": "result", "type": "n", "meaning": "something that happens or exists because of something else", "example": "Her fitness is the result of daily exercise." },
+    { "word": "healthy", "type": "adj", "meaning": "strong and well, or good for your health", "example": "Eating vegetables keeps you healthy." },
+    { "word": "fit", "type": "adj", "meaning": "healthy and strong, especially as a result of exercise", "example": "He runs every day to keep fit." },
+    { "word": "examine", "type": "v", "meaning": "to look at someone or something carefully in order to find out about them", "example": "The doctor examined the patient's throat." },
+    { "word": "investigate", "type": "v", "meaning": "to try to find out all the facts about something, especially a crime or event", "example": "The police are investigating the cause of the fire." },
+    { "word": "infection", "type": "n", "meaning": "a disease in a part of your body that is caused by bacteria or a virus", "example": "Wash the wound to prevent infection." },
+    { "word": "pollution", "type": "n", "meaning": "damage caused to water, air, etc. by harmful substances or waste", "example": "Air pollution is a major problem in big cities." },
+    { "word": "plaster", "type": "n", "meaning": "a small sticky piece of material used to cover a cut on your skin", "example": "She put a plaster on her cut finger." },
+    { "word": "bandage", "type": "n", "meaning": "a long strip of cloth wound around a body part to protect or support it", "example": "The nurse wrapped a bandage around his sprained ankle." },
+    { "word": "ward", "type": "n", "meaning": "a room in a hospital that has several beds for patients", "example": "He was admitted to the children's ward." },
+    { "word": "clinic", "type": "n", "meaning": "a place where people go to receive medical treatment or advice", "example": "She works at a dental clinic." },
+    { "word": "dose", "type": "n", "meaning": "a measured amount of a medicine to be taken at one time", "example": "Take one dose of this medicine three times a day." },
+    { "word": "fix", "type": "n", "meaning": "an amount of a drug that someone feels they need to take regularly", "example": "The drug addict was desperate for a fix." },
+    { "word": "fever", "type": "n", "meaning": "a high body temperature that shows you are ill", "example": "She has a high fever and a sore throat." },
+    { "word": "rash", "type": "n", "meaning": "an area of red spots on your skin, caused by an illness or reaction", "example": "He got a red rash on his arms after touching the plant." },
+    { "word": "vain", "type": "adj", "meaning": "too proud of your own appearance, abilities, or achievements", "example": "She is very vain about her looks." },
+    { "word": "plaster cast", "type": "n", "meaning": "a hard case made of plaster of Paris, used to protect a broken bone", "example": "He had his leg in a plaster cast for six weeks." },
+    { "word": "arthritis", "type": "n", "meaning": "a medical condition that causes pain and swelling in the joints", "example": "My grandmother suffers from arthritis in her hands." },
+    { "word": "vein", "type": "n", "meaning": "a tube that carries blood to the heart", "example": "You can see the blue veins on the back of his hand." },
+    { "word": "procedure", "type": "n", "meaning": "a medical operation or a set of actions done in a particular way", "example": "The bypass surgery is a common medical procedure." },
+    { "word": "tread", "type": "v", "meaning": "to put your foot down on something", "example": "Be careful not to tread on the broken glass." },
+    { "word": "spike", "type": "n", "meaning": "a thin, pointed piece of metal, wood, or plastic", "example": "The fence was topped with sharp metal spikes." },
+    { "word": "Ammonia-based solution", "type": "n", "meaning": "a chemical liquid mixture containing ammonia", "example": "They used an ammonia-based solution to clean the lab equipment." },
+    { "word": "Labrador", "type": "n", "meaning": "a breed of large, friendly dog with a short coat", "example": "They have a black Labrador as a pet." },
+    { "word": "stuffy", "type": "adj", "meaning": "lacking fresh air or ventilation", "example": "The room was very warm and stuffy." },
+    { "word": "Anesthetic", "type": "n", "meaning": "a drug that makes you unable to feel pain during an operation", "example": "The dentist gave him a local anesthetic." }
+  ],
+  "phrasalVerbs": [
+    { "phrasalVerb": "break out", "meaning": "suddenly become covered in something (like a rash or sweat) on your skin", "example": "EX: She broke out in a rash after eating shellfish." },
+    { "phrasalVerb": "bring on", "meaning": "cause an illness or other medical condition to start", "example": "EX: Stress can bring on a severe headache." },
+    { "phrasalVerb": "come down with", "meaning": "start to suffer from a minor illness", "example": "EX: I think I'm coming down with a cold." },
+    { "phrasalVerb": "come round/to", "meaning": "become conscious again after being unconscious", "example": "EX: It took him several minutes to come round after the hit." },
+    { "phrasalVerb": "cut down (on)", "meaning": "consume or use less of something", "example": "EX: You need to cut down on sugar to lose weight." },
+    { "phrasalVerb": "feel up to", "meaning": "feel well enough or strong enough to do something", "example": "EX: I don't feel up to going to the gym today." },
+    { "phrasalVerb": "get over", "meaning": "recover from an illness or difficult situation", "example": "EX: It took her a week to get over the flu." },
+    { "phrasalVerb": "give up", "meaning": "stop doing or using something, especially a habit", "example": "EX: He decided to give up smoking for his health." },
+    { "phrasalVerb": "look after", "meaning": "take care of someone or something", "example": "EX: The nurse will look after you during your recovery." },
+    { "phrasalVerb": "pass out", "meaning": "lose consciousness suddenly, especially for a short time", "example": "EX: He passed out from the intense heat." },
+    { "phrasalVerb": "pull through", "meaning": "survive a dangerous illness or operation", "example": "EX: The doctors are confident that he will pull through." },
+    { "phrasalVerb": "put down", "meaning": "kill an animal because it is old, ill, or dangerous", "example": "EX: We had to have our sick dog put down." },
+    { "phrasalVerb": "put on", "meaning": "gain weight or flesh", "example": "EX: He put on a few kilograms over the holidays." },
+    { "phrasalVerb": "wear off", "meaning": "gradually disappear or stop having an effect (like a drug)", "example": "EX: The painkiller began to wear off after four hours." }
+  ],
+  "prepositionalPhrases": [],
+  "collocations": [
+    { "word": "alternative", "collocation": "find an alternative to sth", "meaning": "find another possibility or choice to replace something" },
+    { "word": "appointment", "collocation": "make an appointment", "meaning": "arrange a formal meeting with someone" },
+    { "word": "appointment", "collocation": "have an appointment", "meaning": "have a scheduled formal meeting with someone" },
+    { "word": "appointment", "collocation": "break an appointment", "meaning": "fail to keep or cancel a scheduled meeting" },
+    { "word": "bath", "collocation": "have/take a bath", "meaning": "wash yourself in a bath" },
+    { "word": "bath", "collocation": "run a bath for sb", "meaning": "fill a bath with water for someone" },
+    { "word": "danger", "collocation": "in danger", "meaning": "at risk of being harmed or destroyed" },
+    { "word": "danger", "collocation": "out of danger", "meaning": "no longer in a harmful or risky situation" },
+    { "word": "exercise", "collocation": "do an exercise", "meaning": "perform a physical or mental activity to improve skill" },
+    { "word": "exercise", "collocation": "do exercise", "meaning": "engage in physical activity to stay healthy" },
+    { "word": "exercise", "collocation": "take/get some exercise", "meaning": "perform some physical activity to stay healthy" },
+    { "word": "fit", "collocation": "get/stay/keep/be fit", "meaning": "remain healthy and strong through regular exercise" },
+    { "word": "fit", "collocation": "fit and healthy", "meaning": "in very good physical condition" },
+    { "word": "good", "collocation": "do sb good", "meaning": "have a helpful or healthy effect on someone" },
+    { "word": "good", "collocation": "sth does you good", "meaning": "something improves your health or well-being" },
+    { "word": "good", "collocation": "good for sb to do", "meaning": "beneficial or suitable for someone to perform" },
+    { "word": "health", "collocation": "in good/bad/poor health", "meaning": "having a state of physical well-being that is good, bad, or poor" },
+    { "word": "health", "collocation": "health centre", "meaning": "a building where several doctors work and medical care is available" },
+    { "word": "health", "collocation": "health care", "meaning": "the services provided for the treatment of illness or maintenance of health" },
+    { "word": "injection", "collocation": "have an injection for/against", "meaning": "receive medicine into the body through a needle" },
+    { "word": "injection", "collocation": "give sb an injection", "meaning": "administer medicine into someone's body using a needle" },
+    { "word": "medicine", "collocation": "take medicine", "meaning": "consume a drug or substance to treat an illness" },
+    { "word": "medicine", "collocation": "prescribe medicine", "meaning": "officially authorize a patient to take a medicine" },
+    { "word": "medicine", "collocation": "practise medicine", "meaning": "work as a medical doctor" },
+    { "word": "medicine", "collocation": "study medicine", "meaning": "learn to be a doctor at a university" },
+    { "word": "medicine", "collocation": "the best medicine", "meaning": "the most effective remedy for a situation or feeling" },
+    { "word": "medicine", "collocation": "alternative medicine", "meaning": "medical treatments that are not part of traditional Western medicine" },
+    { "word": "shape", "collocation": "get in/into shape", "meaning": "become fit and healthy through exercise and diet" },
+    { "word": "shape", "collocation": "stay in shape / keep in shape", "meaning": "maintain good physical condition" },
+    { "word": "shape", "collocation": "the shape of sth", "meaning": "the outer form or outline of something" },
+    { "word": "shape", "collocation": "in the shape of", "meaning": "having the same form or outline as something else" },
+    { "word": "spread", "collocation": "spread sth", "meaning": "distribute or affect a wider area or more people" },
+    { "word": "spread", "collocation": "spread sth over/on sth", "meaning": "cover a surface with a thin layer of something" },
+    { "word": "spread", "collocation": "spread to a place", "meaning": "reach a new location or area" }
+  ],
+  "wordPatterns": [
+    { "verb": "addicted to sth", "pattern": "adjective", "meaning": "physically or mentally dependent on a habit or substance", "example": "EX: He became addicted to painkillers after his operation." },
+    { "verb": "attempt to do", "pattern": "verb", "meaning": "try to perform a difficult action", "example": "EX: She attempted to walk but her leg was too weak." },
+    { "verb": "benefit from sth", "pattern": "verb", "meaning": "receive an advantage or profit from something", "example": "EX: You will benefit from regular exercise." },
+    { "verb": "a benefit of sth", "pattern": "noun", "meaning": "an advantage or good effect that something gives", "example": "EX: One benefit of a healthy diet is having more energy." },
+    { "verb": "complain to sb about sth/sb doing", "pattern": "verb", "meaning": "express dissatisfaction to someone about something", "example": "EX: I complained to the doctor about the long waiting time." },
+    { "verb": "complain of sth", "pattern": "verb", "meaning": "say that you are suffering from a symptom or illness", "example": "EX: She complained of a sharp pain in her head." },
+    { "verb": "cope with sth/doing", "pattern": "verb", "meaning": "deal successfully with a difficult situation", "example": "EX: It's hard to cope with the stress of a demanding job." },
+    { "verb": "inject sth into sth/sb", "pattern": "verb", "meaning": "force a drug or liquid into someone's body or something", "example": "EX: The nurse injected the medicine into my arm." },
+    { "verb": "lead to sth/(your) doing", "pattern": "verb", "meaning": "cause something to happen or result in an action", "example": "EX: A poor diet can lead to health problems." },
+    { "verb": "likely to do", "pattern": "adjective", "meaning": "probable or expected to perform an action", "example": "EX: He is likely to recover fully in a few weeks." },
+    { "verb": "it is (un)likely that", "pattern": "phrase", "meaning": "it is probable (or improbable) that something is true", "example": "EX: It is unlikely that he will be discharged today." },
+    { "verb": "need to do", "pattern": "verb", "meaning": "be required or necessary to perform an action", "example": "EX: You need to rest after your operation." },
+    { "verb": "need doing", "pattern": "verb", "meaning": "require a certain action to be performed (passive meaning)", "example": "EX: This wound needs dressing immediately." },
+    { "verb": "in need of", "pattern": "phrase", "meaning": "requiring or needing something", "example": "EX: The hospital is in need of new equipment." },
+    { "verb": "no need for", "pattern": "phrase", "meaning": "there is no requirement or reason for something", "example": "EX: There is no need for panic." },
+    { "verb": "operate on sb/sth", "pattern": "verb", "meaning": "perform a medical surgery on someone or a body part", "example": "EX: The surgeon operated on his knee." },
+    { "verb": "suffer from sth", "pattern": "verb", "meaning": "experience pain, illness, or a bad condition", "example": "EX: Many people suffer from asthma in winter." },
+    { "verb": "suffer sth", "pattern": "verb", "meaning": "experience something bad, like an injury or defeat", "example": "EX: He suffered a broken leg in the accident." },
+    { "verb": "tired of sth/doing", "pattern": "adjective", "meaning": "bored or annoyed with something or an action", "example": "EX: I am tired of feeling sick all the time." },
+    { "verb": "try to do", "pattern": "verb", "meaning": "make an effort to perform an action", "example": "EX: Try to sleep if you can." },
+    { "verb": "try sth/sb/doing", "pattern": "verb", "meaning": "test or use something to see if it works or is suitable", "example": "EX: Have you tried taking these tablets for the pain?" },
+    { "verb": "try and do", "pattern": "verb", "meaning": "attempt to perform an action (informal speech)", "example": "EX: I will try and call you from the clinic." },
+    { "verb": "worry about sth/sb doing", "pattern": "verb", "meaning": "feel anxious or uneasy about something or someone", "example": "EX: Don't worry about the results of the tests." },
+    { "verb": "worried that", "pattern": "adjective", "meaning": "anxious that something bad is true or will happen", "example": "EX: She was worried that the operation would fail." },
+    { "verb": "worried about/by", "pattern": "adjective", "meaning": "feeling anxious because of something or someone", "example": "EX: The doctor is worried about his high blood pressure." },
+    { "verb": "worth sth/doing", "pattern": "adjective", "meaning": "having a value that justifies the cost or effort", "example": "EX: It is worth seeing a specialist about your back." }
+  ],
+  "wordFormation": [
+    {
+      "word": "allergy",
+      "type": "noun",
+      "meaning": "allergy: a damaging immune response to a substance / allergic: having or caused by an allergy",
+      "example": "EX: He has a severe peanut allergy.\nEX: She is allergic to cat fur."
+    },
+    {
+      "word": "aware",
+      "type": "adjective",
+      "meaning": "aware: having knowledge or perception of a situation / unaware: not having knowledge of a situation / awareness: knowledge or perception of a situation",
+      "example": "EX: Be aware of the potential side effects.\nEX: She was unaware that she was ill.\nEX: The campaign raised public awareness of the disease."
+    },
+    {
+      "word": "benefit",
+      "type": "noun/verb",
+      "meaning": "benefit: an advantage or profit gained from something / beneficial: resulting in good; favorable or advantageous",
+      "example": "EX: The treatment has many benefits.\nEX: Fresh air is beneficial to health."
+    },
+    {
+      "word": "comfort",
+      "type": "noun/verb",
+      "meaning": "comfort: a state of physical ease and freedom from pain / discomfort: slight pain or worry / comfortable: providing physical ease / uncomfortable: causing physical discomfort",
+      "example": "EX: The patient is resting in comfort.\nEX: The surgery caused some mild discomfort.\nEX: Make yourself comfortable on the bed.\nEX: This hospital chair is very uncomfortable."
+    },
+    {
+      "word": "emphasis",
+      "type": "noun",
+      "meaning": "emphasis: special importance, value, or prominence given to something / emphasize: give special importance or prominence to something / emphatic: expressing something forcibly and clearly",
+      "example": "EX: The doctor placed great emphasis on diet.\nEX: He emphasized the need for rest.\nEX: She was emphatic that she wanted to go home."
+    },
+    {
+      "word": "fit",
+      "type": "verb/noun/adjective",
+      "meaning": "fit: in good health, or suitable / unfit: not in good health, or unsuitable / fitness: the condition of being physically fit and healthy",
+      "example": "EX: She is very fit and healthy.\nEX: He was declared unfit for work.\nEX: Regular exercise improves your fitness."
+    },
+    {
+      "word": "ill",
+      "type": "adjective/adverb",
+      "meaning": "ill: suffering from an illness / illness: a disease or period of sickness",
+      "example": "EX: My grandmother is seriously ill.\nEX: He recovered from a long illness."
+    },
+    {
+      "word": "inject",
+      "type": "verb",
+      "meaning": "inject: introduce a liquid into the body using a syringe / injection: an act of injecting a drug or medicine",
+      "example": "EX: The doctor injected the medicine.\nEX: She needs daily insulin injections."
+    },
+    {
+      "word": "injure",
+      "type": "verb",
+      "meaning": "injure: do physical harm to someone / injury: an instance of being injured / injuries: plural form of injury",
+      "example": "EX: He injured his knee during the football match.\nEX: The player suffered a serious head injury.\nEX: Many minor injuries were treated at the scene."
+    },
+    {
+      "word": "operate",
+      "type": "verb",
+      "meaning": "operate: perform a surgical operation / operation: an act of surgery / operator: a person who operates equipment or telephone / cooperation: working together for a common purpose / uncooperative: unwilling to help or work with others / operating: relating to surgical operations",
+      "example": "EX: The surgeon decided to operate immediately.\nEX: The bypass operation was successful.\nEX: He works as a switchboard operator.\nEX: The research required close cooperation between hospitals.\nEX: The patient was uncooperative with the nurses.\nEX: The operating theatre was prepared."
+    },
+    {
+      "word": "recover",
+      "type": "verb",
+      "meaning": "recover: return to a normal state of health / recovery: the process of returning to a normal state of health",
+      "example": "EX: He is recovering from a heart attack.\nEX: She made a full recovery after the operation."
+    },
+    {
+      "word": "poison",
+      "type": "noun/verb",
+      "meaning": "poison: a substance that causes death or illness if taken into the body / poisonous: containing poison or causing death or illness / poisoning: an illness caused by eating or drinking poison",
+      "example": "EX: The police found poison in the cup.\nEX: Some wild mushrooms are highly poisonous.\nEX: Food poisoning is very common in summer."
+    },
+    {
+      "word": "strong",
+      "type": "adjective",
+      "meaning": "strong: physically powerful / strength: the quality or state of being physically strong / strengthen: make or become stronger / strongly: in a powerful or firm manner",
+      "example": "EX: He has a strong heart.\nEX: She recovered her strength slowly.\nEX: Exercise helps to strengthen your muscles.\nEX: The doctor strongly advised against smoking."
+    },
+    {
+      "word": "surgery",
+      "type": "noun",
+      "meaning": "surgery: medical treatment of injuries or diseases by cutting open the body / surgeon: a medical practitioner qualified to practice surgery / surgical: relating to or used in surgery",
+      "example": "EX: She has to undergo knee surgery.\nEX: The surgeon performed a complex procedure.\nEX: The hospital bought new surgical instruments."
+    },
+    {
+      "word": "treat",
+      "type": "verb/noun",
+      "meaning": "treat: behave towards or deal with, or give medical care / treatment: medical care given to a patient for an illness or injury",
+      "example": "EX: Doctors treated the patients with care.\nEX: She is responding well to treatment."
+    }
+  ]
+}
