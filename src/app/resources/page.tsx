@@ -2,7 +2,7 @@
 
 import * as React from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Search, BookOpen, Layers, Bookmark, ArrowRight, Zap, RefreshCw, ChevronLeft, ChevronRight, ChevronsLeft, ChevronsRight } from "lucide-react";
+import { Search, BookOpen, Layers, Bookmark, ArrowRight, Zap, RefreshCw, ChevronLeft, ChevronRight, ChevronsLeft, ChevronsRight, Link } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 import { Navbar } from "@/components/layout/navbar";
@@ -64,8 +64,22 @@ import unit40 from "@/data/b1/unit40.json";
 import unit41 from "@/data/b1/unit41.json";
 import unit42 from "@/data/b1/unit42.json";
 
-// Collect all units in one array
-const allUnits = [
+// Import all B2 units
+import b2unit1 from "@/data/b2/unit1.json";
+import b2unit2 from "@/data/b2/unit2.json";
+import b2unit3 from "@/data/b2/unit3.json";
+import b2unit4 from "@/data/b2/unit4.json";
+import b2unit5 from "@/data/b2/unit5.json";
+import b2unit6 from "@/data/b2/unit6.json";
+import b2unit7 from "@/data/b2/unit7.json";
+import b2unit8 from "@/data/b2/unit8.json";
+import b2unit9 from "@/data/b2/unit9.json";
+import b2unit10 from "@/data/b2/unit10.json";
+import b2unit11 from "@/data/b2/unit11.json";
+import b2unit12 from "@/data/b2/unit12.json";
+
+// Collect all B1 units
+const b1Units = [
   { unit: 1, data: unit1 },
   { unit: 2, data: unit2 },
   { unit: 3, data: unit3 },
@@ -107,6 +121,25 @@ const allUnits = [
   { unit: 41, data: unit41 },
   { unit: 42, data: unit42 },
 ];
+
+// Collect all B2 units
+const b2Units = [
+  { unit: 1, data: b2unit1 },
+  { unit: 2, data: b2unit2 },
+  { unit: 3, data: b2unit3 },
+  { unit: 4, data: b2unit4 },
+  { unit: 5, data: b2unit5 },
+  { unit: 6, data: b2unit6 },
+  { unit: 7, data: b2unit7 },
+  { unit: 8, data: b2unit8 },
+  { unit: 9, data: b2unit9 },
+  { unit: 10, data: b2unit10 },
+  { unit: 11, data: b2unit11 },
+  { unit: 12, data: b2unit12 },
+];
+
+// Combine all units from all levels
+const allUnits = [...b1Units, ...b2Units];
 
 // Helper to extract base word from prepositional phrases
 // e.g. "by heart" -> "heart", "in the beginning" -> "beginning"
@@ -161,6 +194,21 @@ function abbreviateType(typeStr: string): string {
 }
 
 
+// Helper to format source label, e.g. "Unit 11" + "b1-unit-11" -> "unit 11 - B1"
+function formatSource(unitTitle: string, unitId: string): string {
+  if (!unitTitle) return "";
+  const unitName = unitTitle.split(":")[0].trim().toLowerCase(); // e.g. "unit 1" or "unit 10 & 11"
+  if (!unitId) return unitName;
+  
+  const levelPart = unitId.split("-")[0].toUpperCase(); // e.g. "B1", "B2", "C1"
+  let level = levelPart;
+  if (levelPart === "C1" || levelPart === "C2") {
+    level = "C1-C2";
+  }
+  return `${unitName} - ${level}`;
+}
+
+
 // Interface for word family items in Word Formation
 interface WordFamilyItem {
   forms: string[];
@@ -209,10 +257,11 @@ export default function ResourcesPage() {
       const data = u.data as any;
       return (data.vocabulary || []).map((item: any) => ({
         ...item,
+        word: item.word || "",
         unitTitle: data.title,
         unitId: data.id,
       }));
-    }).sort((a, b) => a.word.localeCompare(b.word));
+    }).sort((a, b) => (a.word || '').localeCompare(b.word || ''));
   }, []);
 
   const phrasalVerbs = React.useMemo(() => {
@@ -220,10 +269,11 @@ export default function ResourcesPage() {
       const data = u.data as any;
       return (data.phrasalVerbs || []).map((item: any) => ({
         ...item,
+        phrasalVerb: item.phrasalVerb || item.word || "",
         unitTitle: data.title,
         unitId: data.id,
       }));
-    }).sort((a, b) => a.phrasalVerb.localeCompare(b.phrasalVerb));
+    }).sort((a, b) => (a.phrasalVerb || '').localeCompare(b.phrasalVerb || ''));
   }, []);
 
   const prepositionalPhrases = React.useMemo(() => {
@@ -231,10 +281,11 @@ export default function ResourcesPage() {
       const data = u.data as any;
       return (data.prepositionalPhrases || []).map((item: any) => ({
         ...item,
+        phrase: item.phrase || item.word || "",
         unitTitle: data.title,
         unitId: data.id,
       }));
-    }).sort((a, b) => a.phrase.localeCompare(b.phrase));
+    }).sort((a, b) => (a.phrase || '').localeCompare(b.phrase || ''));
   }, []);
 
   const wordFormation = React.useMemo(() => {
@@ -242,10 +293,11 @@ export default function ResourcesPage() {
       const data = u.data as any;
       return (data.wordFormation || []).map((item: any) => ({
         ...item,
+        word: item.word || "",
         unitTitle: data.title,
         unitId: data.id,
       }));
-    }).sort((a, b) => a.word.localeCompare(b.word));
+    }).sort((a, b) => (a.word || '').localeCompare(b.word || ''));
   }, []);
 
   const wordPatterns = React.useMemo(() => {
@@ -253,10 +305,24 @@ export default function ResourcesPage() {
       const data = u.data as any;
       return (data.wordPatterns || []).map((item: any) => ({
         ...item,
+        verb: item.verb || item.word || "",
         unitTitle: data.title,
         unitId: data.id,
       }));
-    }).sort((a, b) => a.verb.localeCompare(b.verb));
+    }).sort((a, b) => (a.verb || '').localeCompare(b.verb || ''));
+  }, []);
+
+  const collocations = React.useMemo(() => {
+    return allUnits.flatMap(u => {
+      const data = u.data as any;
+      return (data.collocations || []).map((item: any) => ({
+        ...item,
+        word: item.word || "",
+        collocation: item.collocation || "",
+        unitTitle: data.title,
+        unitId: data.id,
+      }));
+    }).sort((a, b) => (a.word || '').localeCompare(b.word || ''));
   }, []);
 
   // Filter based on search query
@@ -264,26 +330,26 @@ export default function ResourcesPage() {
 
   const filteredVocabulary = React.useMemo(() => {
     if (!query) return vocabulary;
-    return vocabulary.filter(item => item.word.toLowerCase().includes(query));
+    return vocabulary.filter(item => (item.word || "").toLowerCase().includes(query));
   }, [vocabulary, query]);
 
   const filteredPhrasal = React.useMemo(() => {
     if (!query) return phrasalVerbs;
-    return phrasalVerbs.filter(item => item.phrasalVerb.toLowerCase().includes(query));
+    return phrasalVerbs.filter(item => (item.phrasalVerb || "").toLowerCase().includes(query));
   }, [phrasalVerbs, query]);
 
   const filteredPrep = React.useMemo(() => {
     if (!query) return prepositionalPhrases;
-    return prepositionalPhrases.filter(item => item.phrase.toLowerCase().includes(query));
+    return prepositionalPhrases.filter(item => (item.phrase || "").toLowerCase().includes(query));
   }, [prepositionalPhrases, query]);
 
   const filteredForm = React.useMemo(() => {
     if (!query) return wordFormation;
     return wordFormation.filter(item => {
-      const inWord = item.word.toLowerCase().includes(query);
-      const parsed = parseWordFormationMeaning(item.meaning);
+      const inWord = (item.word || "").toLowerCase().includes(query);
+      const parsed = parseWordFormationMeaning(item.meaning || "");
       const inFamily = parsed.some(fam => 
-        fam.forms.some(f => f.toLowerCase().includes(query))
+        (fam.forms || []).some(f => (f || "").toLowerCase().includes(query))
       );
       return inWord || inFamily;
     });
@@ -291,8 +357,16 @@ export default function ResourcesPage() {
 
   const filteredPattern = React.useMemo(() => {
     if (!query) return wordPatterns;
-    return wordPatterns.filter(item => item.verb.toLowerCase().includes(query));
+    return wordPatterns.filter(item => (item.verb || "").toLowerCase().includes(query));
   }, [wordPatterns, query]);
+
+  const filteredCollocation = React.useMemo(() => {
+    if (!query) return collocations;
+    return collocations.filter(item =>
+      (item.word || "").toLowerCase().includes(query) ||
+      (item.collocation || "").toLowerCase().includes(query)
+    );
+  }, [collocations, query]);
 
   const [currentPage, setCurrentPage] = React.useState(1);
   const itemsPerPage = 20;
@@ -309,9 +383,10 @@ export default function ResourcesPage() {
       case "prepositionalPhrases": return filteredPrep;
       case "wordFormation": return filteredForm;
       case "wordPatterns": return filteredPattern;
+      case "collocations": return filteredCollocation;
       default: return [];
     }
-  }, [activeTab, filteredVocabulary, filteredPhrasal, filteredPrep, filteredForm, filteredPattern]);
+  }, [activeTab, filteredVocabulary, filteredPhrasal, filteredPrep, filteredForm, filteredPattern, filteredCollocation]);
 
   const totalPages = Math.ceil(currentItems.length / itemsPerPage) || 1;
 
@@ -369,7 +444,7 @@ export default function ResourcesPage() {
       textColor: "text-indigo-600 dark:text-indigo-400",
       borderColor: "border-l-indigo-600/40 hover:border-l-indigo-600 hover:bg-indigo-600/5",
       activeStyle: "bg-indigo-600/5 border-l-indigo-600 border-indigo-600/20",
-      gridClasses: "col-span-2 sm:col-span-1 lg:col-span-4",
+      gridClasses: "col-span-1 lg:col-span-4",
     },
     {
       key: "wordFormation",
@@ -379,7 +454,7 @@ export default function ResourcesPage() {
       textColor: "text-teal-600 dark:text-teal-400",
       borderColor: "border-l-teal-600/40 hover:border-l-teal-600 hover:bg-teal-600/5",
       activeStyle: "bg-teal-600/5 border-l-teal-600 border-teal-600/20",
-      gridClasses: "col-span-1 sm:col-start-1 lg:col-start-3 lg:col-span-4",
+      gridClasses: "col-span-1 lg:col-span-4",
     },
     {
       key: "wordPatterns",
@@ -389,9 +464,19 @@ export default function ResourcesPage() {
       textColor: "text-red-600 dark:text-red-400",
       borderColor: "border-l-red-600/40 hover:border-l-red-600 hover:bg-red-600/5",
       activeStyle: "bg-red-600/5 border-l-red-600 border-red-600/20",
-      gridClasses: "col-span-1 lg:col-start-7 lg:col-span-4",
+      gridClasses: "col-span-1 lg:col-span-4",
     },
-  ], [vocabulary.length, phrasalVerbs.length, prepositionalPhrases.length, wordFormation.length, wordPatterns.length]);
+    {
+      key: "collocations",
+      label: "Collocations",
+      count: collocations.length,
+      unit: "items",
+      textColor: "text-violet-600 dark:text-violet-400",
+      borderColor: "border-l-violet-600/40 hover:border-l-violet-600 hover:bg-violet-600/5",
+      activeStyle: "bg-violet-600/5 border-l-violet-600 border-violet-600/20",
+      gridClasses: "col-span-1 lg:col-span-4",
+    },
+  ], [vocabulary.length, phrasalVerbs.length, prepositionalPhrases.length, wordFormation.length, wordPatterns.length, collocations.length]);
 
   return (
     <div className="flex flex-col min-h-screen relative overflow-hidden">
@@ -415,14 +500,22 @@ export default function ResourcesPage() {
             <div className="absolute top-0 right-0 w-32 h-32 bg-atmosphere-wash/20 rounded-full blur-2xl pointer-events-none" />
             
             <div className="space-y-4 max-w-2xl mb-8 lg:mb-0">
-              <span className="inline-block text-caption font-mono uppercase tracking-wider text-ink bg-atmosphere-wash px-3.5 py-1.5 rounded-full border border-off-black font-semibold">
-                B1 Resources Hub
-              </span>
+              <div className="flex flex-wrap gap-2">
+                <span className="inline-block text-caption font-mono uppercase tracking-wider text-ink bg-atmosphere-wash px-3.5 py-1.5 rounded-full border border-off-black font-semibold">
+                  B1
+                </span>
+                <span className="inline-block text-caption font-mono uppercase tracking-wider text-ink bg-orange-100 dark:bg-orange-900/30 px-3.5 py-1.5 rounded-full border border-orange-400/50 font-semibold">
+                  B2
+                </span>
+                <span className="inline-block text-caption font-mono uppercase tracking-wider text-pale-stone bg-transparent px-3.5 py-1.5 rounded-full border border-off-black/20 font-semibold">
+                  C1 · C2
+                </span>
+              </div>
               <h1 className="text-heading-lg font-heading font-bold text-ink leading-tight">
-                All-in-One Destination B1 Synthesis
+                All-in-One Destination Synthesis
               </h1>
               <p className="text-body font-mono text-pale-stone">
-                An aggregated compilation of all vocabulary, phrasal verbs, prepositional phrases, word formations, and patterns from Units 1 to 12. Search across the entire B1 database instantly.
+                A unified compilation of all vocabulary, phrasal verbs, prepositional phrases, word formations, word patterns, and collocations across Destination B1, B2, C1 & C2. Search the entire database instantly.
               </p>
             </div>
 
@@ -475,18 +568,25 @@ export default function ResourcesPage() {
                     <TabsTrigger value="wordPatterns" className="rounded-full px-5 py-2.5">
                       Word Patterns
                     </TabsTrigger>
+                    <TabsTrigger value="collocations" className="rounded-full px-5 py-2.5">
+                      Collocations
+                    </TabsTrigger>
                   </TabsList>
                 </Tabs>
               </div>
 
               {/* Advanced Search Input Bar */}
-              <div className="w-full lg:w-[350px] relative z-10">
-                <Search className="absolute left-4 top-1/2 -translate-y-1/2 text-pale-stone w-[18px] h-[18px]" />
+              <div className="w-full lg:w-[300px] relative z-10">
                 <Input
                   placeholder="Type keyword to filter data..."
                   className="pl-11 pr-4 py-3 bg-paper-canvas/90 backdrop-blur-md border border-off-black rounded-full text-ink placeholder:text-pale-stone text-sm shadow-sm hover:border-off-black/70 focus:border-off-black transition-all"
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
+                />
+                <img 
+                  src="/imgs/magnifyingGlass.png" 
+                  alt="Search" 
+                  className="absolute left-4 top-1/2 -translate-y-1/2 w-[18px] h-[18px] object-contain pointer-events-none z-20" 
                 />
                 {searchQuery && (
                   <button 
@@ -532,8 +632,8 @@ export default function ResourcesPage() {
                           <TableCell className="font-mono text-off-black text-sm max-w-[280px] break-words">{translate(row.meaning)}</TableCell>
                           <TableCell className="font-mono italic text-pale-stone text-xs max-w-[320px] whitespace-pre-line">{row.example}</TableCell>
                           <TableCell className="font-mono text-xs text-pale-stone">
-                            <span className="bg-atmosphere-wash/20 border border-off-black/10 rounded-full px-2.5 py-1">
-                              {row.unitTitle.split(":")[0]}
+                            <span className="bg-atmosphere-wash/20 border border-off-black/10 rounded-full px-2 py-0.5 text-[10px] whitespace-nowrap inline-block">
+                              {formatSource(row.unitTitle, row.unitId)}
                             </span>
                           </TableCell>
                         </TableRow>
@@ -541,7 +641,7 @@ export default function ResourcesPage() {
                       {filteredVocabulary.length === 0 && (
                         <TableRow>
                           <TableCell colSpan={6} className="text-center py-16 font-mono text-pale-stone">
-                            Không tìm thấy kết quả phù hợp cho từ khóa tìm kiếm.
+                            No results found for the search keyword.
                           </TableCell>
                         </TableRow>
                       )}
@@ -570,12 +670,12 @@ export default function ResourcesPage() {
                       {paginatedItems.map((row: any, idx) => (
                         <TableRow key={idx} className="hover:bg-atmosphere-wash/10 transition-colors">
                           <TableCell className="font-mono text-ink text-center text-xs font-semibold">{(currentPage - 1) * itemsPerPage + idx + 1}</TableCell>
-                          <TableCell className="font-mono font-bold text-ink text-sm text-[#ea580c]">{row.phrasalVerb}</TableCell>
+                          <TableCell className="font-mono font-bold text-orange-600 dark:text-orange-400 text-sm">{row.phrasalVerb}</TableCell>
                           <TableCell className="font-mono text-off-black text-sm max-w-[280px] break-words">{translate(row.meaning)}</TableCell>
                           <TableCell className="font-mono italic text-pale-stone text-xs max-w-[350px] whitespace-pre-line">{row.example}</TableCell>
                           <TableCell className="font-mono text-xs text-pale-stone">
-                            <span className="bg-atmosphere-wash/20 border border-off-black/10 rounded-full px-2.5 py-1">
-                              {row.unitTitle.split(":")[0]}
+                            <span className="bg-atmosphere-wash/20 border border-off-black/10 rounded-full px-2 py-0.5 text-[10px] whitespace-nowrap inline-block">
+                              {formatSource(row.unitTitle, row.unitId)}
                             </span>
                           </TableCell>
                         </TableRow>
@@ -583,7 +683,7 @@ export default function ResourcesPage() {
                       {filteredPhrasal.length === 0 && (
                         <TableRow>
                           <TableCell colSpan={5} className="text-center py-16 font-mono text-pale-stone">
-                            Không tìm thấy kết quả phù hợp cho từ khóa tìm kiếm.
+                            No results found for the search keyword.
                           </TableCell>
                         </TableRow>
                       )}
@@ -602,8 +702,8 @@ export default function ResourcesPage() {
                     <TableHeader className="bg-atmosphere-wash/30 border-b border-off-black">
                       <TableRow className="hover:bg-transparent">
                         <TableHead className="w-[80px] font-mono text-ink text-center">STT</TableHead>
-                        <TableHead className="w-[150px] font-mono text-ink">Từ (Base Word)</TableHead>
-                        <TableHead className="w-[220px] font-mono text-ink font-semibold">Cụm giới từ</TableHead>
+                        <TableHead className="w-[150px] font-mono text-ink">Base Word</TableHead>
+                        <TableHead className="w-[220px] font-mono text-ink font-semibold">Prepositional Phrase</TableHead>
                         <TableHead className="font-mono text-ink">Meaning</TableHead>
                         <TableHead className="font-mono text-ink">Example</TableHead>
                         <TableHead className="w-[150px] font-mono text-ink">Source</TableHead>
@@ -614,12 +714,12 @@ export default function ResourcesPage() {
                         <TableRow key={idx} className="hover:bg-atmosphere-wash/10 transition-colors">
                           <TableCell className="font-mono text-ink text-center text-xs font-semibold">{(currentPage - 1) * itemsPerPage + idx + 1}</TableCell>
                           <TableCell className="font-mono font-medium text-ink text-sm bg-atmosphere-wash/5 font-semibold text-center">{extractBaseWord(row.phrase)}</TableCell>
-                          <TableCell className="font-mono font-bold text-indigo-600 text-sm">{row.phrase}</TableCell>
+                          <TableCell className="font-mono font-bold text-indigo-600 dark:text-indigo-400 text-sm">{row.phrase}</TableCell>
                           <TableCell className="font-mono text-off-black text-sm max-w-[250px] break-words">{translate(row.meaning)}</TableCell>
                           <TableCell className="font-mono italic text-pale-stone text-xs max-w-[300px] whitespace-pre-line">{row.example}</TableCell>
                           <TableCell className="font-mono text-xs text-pale-stone">
-                            <span className="bg-atmosphere-wash/20 border border-off-black/10 rounded-full px-2.5 py-1">
-                              {row.unitTitle.split(":")[0]}
+                            <span className="bg-atmosphere-wash/20 border border-off-black/10 rounded-full px-2 py-0.5 text-[10px] whitespace-nowrap inline-block">
+                              {formatSource(row.unitTitle, row.unitId)}
                             </span>
                           </TableCell>
                         </TableRow>
@@ -627,7 +727,7 @@ export default function ResourcesPage() {
                       {filteredPrep.length === 0 && (
                         <TableRow>
                           <TableCell colSpan={6} className="text-center py-16 font-mono text-pale-stone">
-                            Không tìm thấy kết quả phù hợp cho từ khóa tìm kiếm.
+                            No results found for the search keyword.
                           </TableCell>
                         </TableRow>
                       )}
@@ -646,8 +746,10 @@ export default function ResourcesPage() {
                     <TableHeader className="bg-atmosphere-wash/30 border-b border-off-black">
                       <TableRow className="hover:bg-transparent">
                         <TableHead className="w-[80px] font-mono text-ink text-center">STT</TableHead>
-                        <TableHead className="w-[180px] font-mono text-ink">Từ gốc (Base Word)</TableHead>
-                        <TableHead className="font-mono text-ink">Gia đình từ & Ý nghĩa (Word Family & Meanings)</TableHead>
+                        <TableHead className="w-[150px] font-mono text-ink">Base Word</TableHead>
+                        <TableHead className="w-[200px] font-mono text-ink">Word Family</TableHead>
+                        <TableHead className="font-mono text-ink">Meaning</TableHead>
+                        <TableHead className="font-mono text-ink">Example</TableHead>
                         <TableHead className="w-[150px] font-mono text-ink">Source</TableHead>
                       </TableRow>
                     </TableHeader>
@@ -655,65 +757,72 @@ export default function ResourcesPage() {
                       {paginatedItems.map((row: any, idx) => {
                         const parsedFamily = parseWordFormationMeaning(row.meaning);
                         return (
-                          <TableRow key={idx} className="hover:bg-atmosphere-wash/10 transition-colors align-top">
-                            <TableCell className="font-mono text-ink text-center text-xs font-semibold pt-5">{(currentPage - 1) * itemsPerPage + idx + 1}</TableCell>
-                            <TableCell className="font-mono font-bold text-ink text-sm pt-5">
-                              {row.word}
-                              <span className="block text-[10px] text-pale-stone font-normal mt-0.5">({abbreviateType(row.type)})</span>
-                            </TableCell>
-                            <TableCell className="p-2">
-                              <div className="divide-y divide-off-black/5 font-mono">
-                                {parsedFamily.map((fam, fIdx) => {
-                                  const formsStr = fam.forms.join(" / ");
-                                  const isMatched = query && (
-                                    row.word.toLowerCase().includes(query) || 
-                                    fam.forms.some(f => f.toLowerCase().includes(query))
-                                  );
-                                  return (
-                                    <div key={fIdx} className={cn("py-3 px-2 flex flex-col md:flex-row gap-2 md:gap-6 justify-between items-start", isMatched ? "bg-amber-glow-gradient/5 rounded-md border-l-4 border-amber-glow-gradient/50 pl-2.5" : "")}>
-                                      <div className="md:w-[250px] shrink-0">
-                                        <span className="font-bold text-ink text-sm text-[#0f766e]">
-                                          {formsStr}
-                                        </span>
-                                      </div>
-                                      <div className="flex-1 space-y-1">
-                                        <p className="text-off-black text-sm leading-relaxed">{translate(fam.meaning)}</p>
-                                        {row.example && (
-                                          <div className="text-xs text-pale-stone italic mt-1 font-mono">
-                                            {row.example.split("\n").map((exLine: string, exIdx: number) => {
-                                              const containsForm = fam.forms.some(f => {
-                                                const stem = f.replace(/\(([^)]+)\)/g, '$1').toLowerCase();
-                                                return exLine.toLowerCase().includes(stem);
-                                              });
-                                              if (containsForm || parsedFamily.length === 1) {
-                                                return (
-                                                  <div key={exIdx} className="opacity-80">
-                                                    {exLine}
-                                                  </div>
-                                                );
-                                              }
-                                              return null;
-                                            })}
-                                          </div>
-                                        )}
-                                      </div>
-                                    </div>
-                                  );
-                                })}
-                              </div>
-                            </TableCell>
-                            <TableCell className="font-mono text-xs text-pale-stone pt-5">
-                              <span className="bg-atmosphere-wash/20 border border-off-black/10 rounded-full px-2.5 py-1">
-                                {row.unitTitle.split(":")[0]}
-                              </span>
-                            </TableCell>
-                          </TableRow>
+                          <React.Fragment key={idx}>
+                            {parsedFamily.map((fam, fIdx) => {
+                              const formsStr = fam.forms.join(" / ");
+                              const isMatched = query && (
+                                row.word.toLowerCase().includes(query) || 
+                                fam.forms.some(f => f.toLowerCase().includes(query))
+                              );
+                              
+                              // Extract examples for this specific form
+                              const filteredExamples = row.example ? row.example.split("\n").filter((exLine: string) => {
+                                const containsForm = fam.forms.some(f => {
+                                  const stem = f.replace(/\(([^)]+)\)/g, '$1').toLowerCase();
+                                  return exLine.toLowerCase().includes(stem);
+                                });
+                                return containsForm || parsedFamily.length === 1;
+                              }).join("\n") : "";
+
+                              return (
+                                <TableRow 
+                                  key={fIdx} 
+                                  className={cn(
+                                    "hover:bg-atmosphere-wash/10 transition-colors align-top",
+                                    isMatched ? "bg-amber-glow-gradient/5" : ""
+                                  )}
+                                >
+                                  {fIdx === 0 && (
+                                    <>
+                                      <TableCell rowSpan={parsedFamily.length} className="font-mono text-ink text-center text-xs font-semibold pt-5 border-r border-off-black/5">
+                                        {(currentPage - 1) * itemsPerPage + idx + 1}
+                                      </TableCell>
+                                      <TableCell rowSpan={parsedFamily.length} className="font-mono font-bold text-ink text-sm pt-5 border-r border-off-black/5">
+                                        {row.word}
+                                        <span className="block text-[10px] text-pale-stone font-normal mt-0.5">({abbreviateType(row.type)})</span>
+                                      </TableCell>
+                                    </>
+                                  )}
+                                  
+                                  <TableCell className="font-mono font-bold text-teal-600 dark:text-teal-400 text-sm pt-5">
+                                    {formsStr}
+                                  </TableCell>
+                                  
+                                  <TableCell className="font-mono text-off-black text-sm max-w-[280px] break-words pt-5">
+                                    {translate(fam.meaning)}
+                                  </TableCell>
+                                  
+                                  <TableCell className="font-mono italic text-pale-stone text-xs max-w-[350px] whitespace-pre-line pt-5">
+                                    {filteredExamples}
+                                  </TableCell>
+                                  
+                                  {fIdx === 0 && (
+                                    <TableCell rowSpan={parsedFamily.length} className="font-mono text-xs text-pale-stone pt-5 border-l border-off-black/5">
+                                      <span className="bg-atmosphere-wash/20 border border-off-black/10 rounded-full px-2 py-0.5 text-[10px] whitespace-nowrap inline-block">
+                                        {formatSource(row.unitTitle, row.unitId)}
+                                      </span>
+                                    </TableCell>
+                                  )}
+                                </TableRow>
+                              );
+                            })}
+                          </React.Fragment>
                         );
                       })}
                       {filteredForm.length === 0 && (
                         <TableRow>
-                          <TableCell colSpan={4} className="text-center py-16 font-mono text-pale-stone">
-                            Không tìm thấy kết quả phù hợp cho từ khóa tìm kiếm.
+                          <TableCell colSpan={6} className="text-center py-16 font-mono text-pale-stone">
+                            No results found for the search keyword.
                           </TableCell>
                         </TableRow>
                       )}
@@ -732,7 +841,7 @@ export default function ResourcesPage() {
                     <TableHeader className="bg-atmosphere-wash/30 border-b border-off-black">
                       <TableRow className="hover:bg-transparent">
                         <TableHead className="w-[80px] font-mono text-ink text-center">STT</TableHead>
-                        <TableHead className="w-[160px] font-mono text-ink">Từ (Base Word)</TableHead>
+                        <TableHead className="w-[160px] font-mono text-ink">Base Word</TableHead>
                         <TableHead className="w-[240px] font-mono text-ink font-semibold">Word Pattern</TableHead>
                         <TableHead className="font-mono text-ink">Meaning</TableHead>
                         <TableHead className="font-mono text-ink">Example</TableHead>
@@ -744,12 +853,12 @@ export default function ResourcesPage() {
                         <TableRow key={idx} className="hover:bg-atmosphere-wash/10 transition-colors">
                           <TableCell className="font-mono text-ink text-center text-xs font-semibold">{(currentPage - 1) * itemsPerPage + idx + 1}</TableCell>
                           <TableCell className="font-mono font-medium text-ink text-sm bg-atmosphere-wash/5 font-semibold text-center">{extractPatternBaseWord(row.verb)}</TableCell>
-                          <TableCell className="font-mono font-bold text-[#b91c1c] text-sm">{row.verb} <span className="text-[10px] text-pale-stone font-normal italic">({abbreviateType(row.pattern)})</span></TableCell>
+                          <TableCell className="font-mono font-bold text-red-600 dark:text-red-400 text-sm">{row.verb} <span className="text-[10px] text-pale-stone font-normal italic">({abbreviateType(row.pattern)})</span></TableCell>
                           <TableCell className="font-mono text-off-black text-sm max-w-[250px] break-words">{translate(row.meaning)}</TableCell>
                           <TableCell className="font-mono italic text-pale-stone text-xs max-w-[320px] whitespace-pre-line">{row.example}</TableCell>
                           <TableCell className="font-mono text-xs text-pale-stone">
-                            <span className="bg-atmosphere-wash/20 border border-off-black/10 rounded-full px-2.5 py-1">
-                              {row.unitTitle.split(":")[0]}
+                            <span className="bg-atmosphere-wash/20 border border-off-black/10 rounded-full px-2 py-0.5 text-[10px] whitespace-nowrap inline-block">
+                              {formatSource(row.unitTitle, row.unitId)}
                             </span>
                           </TableCell>
                         </TableRow>
@@ -757,7 +866,54 @@ export default function ResourcesPage() {
                       {filteredPattern.length === 0 && (
                         <TableRow>
                           <TableCell colSpan={6} className="text-center py-16 font-mono text-pale-stone">
-                            Không tìm thấy kết quả phù hợp cho từ khóa tìm kiếm.
+                            No results found for the search keyword.
+                          </TableCell>
+                        </TableRow>
+                      )}
+                    </TableBody>
+                  </Table>
+                </div>
+              )}
+
+              {/* Tab Content: Collocations */}
+              {activeTab === "collocations" && (
+                <div className="animate-in fade-in duration-200">
+                  <div className="mb-4 text-xs font-mono text-pale-stone flex items-center justify-between">
+                    <span>Displaying {Math.min(currentPage * itemsPerPage, filteredCollocation.length)} out of {filteredCollocation.length} collocations {searchQuery && `(matched for "${searchQuery}")`}</span>
+                  </div>
+                  <Table>
+                    <TableHeader className="bg-atmosphere-wash/30 border-b border-off-black">
+                      <TableRow className="hover:bg-transparent">
+                        <TableHead className="w-[80px] font-mono text-ink text-center">STT</TableHead>
+                        <TableHead className="w-[160px] font-mono text-ink">Base Word</TableHead>
+                        <TableHead className="w-[280px] font-mono text-ink font-semibold">Collocation</TableHead>
+                        <TableHead className="font-mono text-ink">Meaning</TableHead>
+                        <TableHead className="w-[150px] font-mono text-ink">Source</TableHead>
+                      </TableRow>
+                    </TableHeader>
+                    <TableBody>
+                      {paginatedItems.map((row: any, idx) => (
+                        <TableRow key={idx} className="hover:bg-atmosphere-wash/10 transition-colors">
+                          <TableCell className="font-mono text-ink text-center text-xs font-semibold">{(currentPage - 1) * itemsPerPage + idx + 1}</TableCell>
+                          <TableCell className="font-mono font-medium text-ink text-sm bg-atmosphere-wash/5 font-semibold text-center">{row.word}</TableCell>
+                          <TableCell className="font-mono font-bold text-violet-600 dark:text-violet-400 text-sm">
+                            <span className="inline-flex items-center gap-1.5">
+                              <Link className="w-3 h-3 text-violet-400 shrink-0" />
+                              {row.collocation}
+                            </span>
+                          </TableCell>
+                          <TableCell className="font-mono text-off-black text-sm max-w-[300px] break-words">{translate(row.meaning)}</TableCell>
+                          <TableCell className="font-mono text-xs text-pale-stone">
+                            <span className="bg-atmosphere-wash/20 border border-off-black/10 rounded-full px-2 py-0.5 text-[10px] whitespace-nowrap inline-block">
+                              {formatSource(row.unitTitle, row.unitId)}
+                            </span>
+                          </TableCell>
+                        </TableRow>
+                      ))}
+                      {filteredCollocation.length === 0 && (
+                        <TableRow>
+                          <TableCell colSpan={5} className="text-center py-16 font-mono text-pale-stone">
+                            No results found for the search keyword.
                           </TableCell>
                         </TableRow>
                       )}

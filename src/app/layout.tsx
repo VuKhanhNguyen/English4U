@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { IBM_Plex_Mono, Noto_Serif, Inter } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
 import TargetCursor from "@/components/ui/target-cursor";
 import GradualBlur from "@/components/ui/gradual-blur";
@@ -45,8 +46,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={cn(ibmPlexMono.variable, notoSerif.variable, inter.variable)} suppressHydrationWarning>
-      <head>
-        <script
+      <body className="antialiased min-h-screen bg-paper-canvas text-ink flex flex-col font-abc-diatype-mono">
+        <Script
+          id="theme-init"
+          strategy="beforeInteractive"
           dangerouslySetInnerHTML={{
             __html: `
               (function() {
@@ -64,8 +67,6 @@ export default function RootLayout({
             `,
           }}
         />
-      </head>
-      <body className="antialiased min-h-screen bg-paper-canvas text-ink flex flex-col font-abc-diatype-mono">
         <SmoothScrollProvider>
           <ThemeProvider>
             <LanguageProvider>
