@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Search } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useLanguage } from "@/components/providers/language-provider";
+import { showToast } from "@/components/ui/toast";
 
 import unit1 from "@/data/b1/unit1.json";
 import unit2 from "@/data/b1/unit2.json";
@@ -647,6 +648,14 @@ export function LearningExplorerSection({
   React.useEffect(() => {
     if (bookLevel) {
       setSelectedBookIndex(levelMap[bookLevel]);
+      if (bookLevel === "c1-c2") {
+        showToast({
+          title: "Under Development",
+          message: "Destination C1 & C2 is currently under development. Stay tuned!",
+          variant: "warning",
+          position: "top-right",
+        });
+      }
     }
   }, [bookLevel]);
 

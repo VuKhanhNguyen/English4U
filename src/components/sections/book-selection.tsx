@@ -7,6 +7,7 @@ import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { BookOpen, ChevronRight } from "lucide-react";
 import { useLanguage } from "@/components/providers/language-provider";
+import { showToast } from "@/components/ui/toast";
 
 const books = [
   {
@@ -58,27 +59,62 @@ export function BookSelectionSection() {
               transition={{ duration: 0.5, delay: index * 0.1 }}
               whileHover={{ y: -5 }}
             >
-              <Link href={`/destination/${book.id}`} className="block h-full">
-                <Card
-                  variant={book.color}
-                  className="h-full flex flex-col cursor-pointer group transition-all"
+              {book.id === "c1-c2" ? (
+                <div
+                  onClick={(e) => {
+                    e.preventDefault();
+                    showToast({
+                      title: "Under Development",
+                      message: "Destination C1 & C2 is currently under development. Stay tuned!",
+                      variant: "warning",
+                      position: "top-right",
+                    });
+                  }}
+                  className="block h-full cursor-pointer"
                 >
-                  <div className="mb-4 flex items-center justify-between">
-                    <Badge className="border-off-black bg-transparent text-ink text-caption font-mono rounded-full">
-                      {book.units} {translate("Units")}
-                    </Badge>
-                    <BookOpen className="w-[20px] h-[20px] text-ink/50" />
-                  </div>
-                  <h3 className="text-heading font-heading text-ink mb-2">{book.title}</h3>
-                  <p className="text-body-sm font-mono text-pale-stone mb-8 flex-grow">
-                    {translate(book.description)}
-                  </p>
-                  <div className="flex items-center text-body-sm font-mono text-ink mt-auto group-hover:text-off-black transition-colors px-1">
-                    {translate("Start Exploring")}{" "}
-                    <ChevronRight className="w-[16px] h-[16px] ml-1 transition-transform group-hover:translate-x-1" />
-                  </div>
-                </Card>
-              </Link>
+                  <Card
+                    variant={book.color}
+                    className="h-full flex flex-col group transition-all"
+                  >
+                    <div className="mb-4 flex items-center justify-between">
+                      <Badge className="border-off-black bg-transparent text-ink text-caption font-mono rounded-full">
+                        {book.units} {translate("Units")}
+                      </Badge>
+                      <BookOpen className="w-[20px] h-[20px] text-ink/50" />
+                    </div>
+                    <h3 className="text-heading font-heading text-ink mb-2">{book.title}</h3>
+                    <p className="text-body-sm font-mono text-pale-stone mb-8 flex-grow">
+                      {translate(book.description)}
+                    </p>
+                    <div className="flex items-center text-body-sm font-mono text-ink mt-auto group-hover:text-off-black transition-colors px-1">
+                      {translate("Start Exploring")}{" "}
+                      <ChevronRight className="w-[16px] h-[16px] ml-1 transition-transform group-hover:translate-x-1" />
+                    </div>
+                  </Card>
+                </div>
+              ) : (
+                <Link href={`/destination/${book.id}`} className="block h-full">
+                  <Card
+                    variant={book.color}
+                    className="h-full flex flex-col cursor-pointer group transition-all"
+                  >
+                    <div className="mb-4 flex items-center justify-between">
+                      <Badge className="border-off-black bg-transparent text-ink text-caption font-mono rounded-full">
+                        {book.units} {translate("Units")}
+                      </Badge>
+                      <BookOpen className="w-[20px] h-[20px] text-ink/50" />
+                    </div>
+                    <h3 className="text-heading font-heading text-ink mb-2">{book.title}</h3>
+                    <p className="text-body-sm font-mono text-pale-stone mb-8 flex-grow">
+                      {translate(book.description)}
+                    </p>
+                    <div className="flex items-center text-body-sm font-mono text-ink mt-auto group-hover:text-off-black transition-colors px-1">
+                      {translate("Start Exploring")}{" "}
+                      <ChevronRight className="w-[16px] h-[16px] ml-1 transition-transform group-hover:translate-x-1" />
+                    </div>
+                  </Card>
+                </Link>
+              )}
             </motion.div>
           ))}
         </div>

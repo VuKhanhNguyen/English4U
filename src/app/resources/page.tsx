@@ -512,10 +512,10 @@ export default function ResourcesPage() {
                 </span>
               </div>
               <h1 className="text-heading-lg font-heading font-bold text-ink leading-tight">
-                All-in-One Destination Synthesis
+                {translate("All-in-One Destination Synthesis")}
               </h1>
               <p className="text-body font-mono text-pale-stone">
-                A unified compilation of all vocabulary, phrasal verbs, prepositional phrases, word formations, word patterns, and collocations across Destination B1, B2, C1 & C2. Search the entire database instantly.
+                {translate("A unified compilation of all vocabulary, phrasal verbs, prepositional phrases, word formations, word patterns, and collocations across Destination B1, B2, C1 & C2. Search the entire database instantly.")}
               </p>
             </div>
 
@@ -534,10 +534,10 @@ export default function ResourcesPage() {
                     )}
                   >
                     <p className="text-[10px] sm:text-caption text-pale-stone uppercase tracking-wider mb-1">
-                      {stat.label}
+                      {translate(stat.label)}
                     </p>
                     <p className={cn("text-body sm:text-subheading font-bold leading-none mt-1 whitespace-nowrap", stat.textColor)}>
-                      {stat.count} <span className="text-xs sm:text-caption font-normal text-pale-stone">{stat.unit}</span>
+                      {stat.count} <span className="text-xs sm:text-caption font-normal text-pale-stone">{translate(stat.unit)}</span>
                     </p>
                   </div>
                 );
@@ -554,22 +554,22 @@ export default function ResourcesPage() {
                 <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
                   <TabsList className="flex flex-row p-1 rounded-full w-max h-auto">
                     <TabsTrigger value="vocabulary" className="rounded-full px-5 py-2.5">
-                      Vocabulary
+                      {translate("Vocabulary")}
                     </TabsTrigger>
                     <TabsTrigger value="phrasalVerbs" className="rounded-full px-5 py-2.5">
-                      Phrasal Verbs
+                      {translate("Phrasal Verbs")}
                     </TabsTrigger>
                     <TabsTrigger value="prepositionalPhrases" className="rounded-full px-5 py-2.5">
-                      Prepositional Phrases
+                      {translate("Prepositional Phrases")}
                     </TabsTrigger>
                     <TabsTrigger value="wordFormation" className="rounded-full px-5 py-2.5">
-                      Word Formation
+                      {translate("Word Formation")}
                     </TabsTrigger>
                     <TabsTrigger value="wordPatterns" className="rounded-full px-5 py-2.5">
-                      Word Patterns
+                      {translate("Word Patterns")}
                     </TabsTrigger>
                     <TabsTrigger value="collocations" className="rounded-full px-5 py-2.5">
-                      Collocations
+                      {translate("Collocations")}
                     </TabsTrigger>
                   </TabsList>
                 </Tabs>
@@ -578,14 +578,14 @@ export default function ResourcesPage() {
               {/* Advanced Search Input Bar */}
               <div className="w-full lg:w-[300px] relative z-10">
                 <Input
-                  placeholder="Type keyword to filter data..."
+                  placeholder={translate("Type keyword to filter data...")}
                   className="pl-11 pr-4 py-3 bg-paper-canvas/90 backdrop-blur-md border border-off-black rounded-full text-ink placeholder:text-pale-stone text-sm shadow-sm hover:border-off-black/70 focus:border-off-black transition-all"
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
                 />
                 <img 
                   src="/imgs/magnifyingGlass.png" 
-                  alt="Search" 
+                  alt={translate("Search")} 
                   className="absolute left-4 top-1/2 -translate-y-1/2 w-[18px] h-[18px] object-contain pointer-events-none z-20" 
                 />
                 {searchQuery && (
@@ -593,7 +593,7 @@ export default function ResourcesPage() {
                     onClick={() => setSearchQuery("")}
                     className="absolute right-4 top-1/2 -translate-y-1/2 text-caption text-pale-stone hover:text-ink font-mono font-bold"
                   >
-                    Clear
+                    {translate("Clear")}
                   </button>
                 )}
               </div>
@@ -606,17 +606,17 @@ export default function ResourcesPage() {
               {activeTab === "vocabulary" && (
                 <div className="animate-in fade-in duration-200">
                   <div className="mb-4 text-xs font-mono text-pale-stone flex items-center justify-between">
-                    <span>Displaying {Math.min(currentPage * itemsPerPage, filteredVocabulary.length)} out of {filteredVocabulary.length} vocabulary {searchQuery && `(matched for "${searchQuery}")`}</span>
+                    <span>{translate("Displaying")} {Math.min(currentPage * itemsPerPage, filteredVocabulary.length)} {translate("out of")} {filteredVocabulary.length} {translate("vocabulary")}{searchQuery && ` (${translate("matched for")} "${searchQuery}")`}</span>
                   </div>
                   <Table>
                     <TableHeader className="bg-atmosphere-wash/30 border-b border-off-black">
                       <TableRow className="hover:bg-transparent">
-                        <TableHead className="w-[80px] font-mono text-ink text-center">STT</TableHead>
-                        <TableHead className="w-[180px] font-mono text-ink">Word</TableHead>
-                        <TableHead className="w-[100px] font-mono text-ink">Type</TableHead>
-                        <TableHead className="font-mono text-ink">Meaning</TableHead>
-                        <TableHead className="font-mono text-ink">Example</TableHead>
-                        <TableHead className="w-[150px] font-mono text-ink">Source</TableHead>
+                        <TableHead className="w-[80px] font-mono text-ink text-center">{translate("No.")}</TableHead>
+                        <TableHead className="w-[180px] font-mono text-ink">{translate("Word")}</TableHead>
+                        <TableHead className="w-[100px] font-mono text-ink">{translate("Type")}</TableHead>
+                        <TableHead className="font-mono text-ink">{translate("Meaning")}</TableHead>
+                        <TableHead className="font-mono text-ink">{translate("Example")}</TableHead>
+                        <TableHead className="w-[150px] font-mono text-ink">{translate("Source")}</TableHead>
                       </TableRow>
                     </TableHeader>
                     <TableBody>
@@ -629,7 +629,7 @@ export default function ResourcesPage() {
                               {row.type}
                             </span>
                           </TableCell>
-                          <TableCell className="font-mono text-off-black text-sm max-w-[280px] break-words">{translate(row.meaning)}</TableCell>
+                          <TableCell className="font-mono text-off-black text-sm max-w-[280px] break-words">{translate(row.meaning, { lookupOnly: true })}</TableCell>
                           <TableCell className="font-mono italic text-pale-stone text-xs max-w-[320px] whitespace-pre-line">{row.example}</TableCell>
                           <TableCell className="font-mono text-xs text-pale-stone">
                             <span className="bg-atmosphere-wash/20 border border-off-black/10 rounded-full px-2 py-0.5 text-[10px] whitespace-nowrap inline-block">
@@ -641,7 +641,7 @@ export default function ResourcesPage() {
                       {filteredVocabulary.length === 0 && (
                         <TableRow>
                           <TableCell colSpan={6} className="text-center py-16 font-mono text-pale-stone">
-                            No results found for the search keyword.
+                            {translate("No results found for the search keyword.")}
                           </TableCell>
                         </TableRow>
                       )}
@@ -654,16 +654,16 @@ export default function ResourcesPage() {
               {activeTab === "phrasalVerbs" && (
                 <div className="animate-in fade-in duration-200">
                   <div className="mb-4 text-xs font-mono text-pale-stone flex items-center justify-between">
-                    <span>Displaying {Math.min(currentPage * itemsPerPage, filteredPhrasal.length)} out of {filteredPhrasal.length} phrasal verbs {searchQuery && `(matched for "${searchQuery}")`}</span>
+                    <span>{translate("Displaying")} {Math.min(currentPage * itemsPerPage, filteredPhrasal.length)} {translate("out of")} {filteredPhrasal.length} {translate("phrasal verbs")}{searchQuery && ` (${translate("matched for")} "${searchQuery}")`}</span>
                   </div>
                   <Table>
                     <TableHeader className="bg-atmosphere-wash/30 border-b border-off-black">
                       <TableRow className="hover:bg-transparent">
-                        <TableHead className="w-[80px] font-mono text-ink text-center">STT</TableHead>
-                        <TableHead className="w-[200px] font-mono text-ink">Phrasal Verb</TableHead>
-                        <TableHead className="font-mono text-ink">Meaning</TableHead>
-                        <TableHead className="font-mono text-ink">Example</TableHead>
-                        <TableHead className="w-[150px] font-mono text-ink">Source</TableHead>
+                        <TableHead className="w-[80px] font-mono text-ink text-center">{translate("STT")}</TableHead>
+                        <TableHead className="w-[200px] font-mono text-ink">{translate("Phrasal Verb")}</TableHead>
+                        <TableHead className="font-mono text-ink">{translate("Meaning")}</TableHead>
+                        <TableHead className="font-mono text-ink">{translate("Example")}</TableHead>
+                        <TableHead className="w-[150px] font-mono text-ink">{translate("Source")}</TableHead>
                       </TableRow>
                     </TableHeader>
                     <TableBody>
@@ -671,7 +671,7 @@ export default function ResourcesPage() {
                         <TableRow key={idx} className="hover:bg-atmosphere-wash/10 transition-colors">
                           <TableCell className="font-mono text-ink text-center text-xs font-semibold">{(currentPage - 1) * itemsPerPage + idx + 1}</TableCell>
                           <TableCell className="font-mono font-bold text-orange-600 dark:text-orange-400 text-sm">{row.phrasalVerb}</TableCell>
-                          <TableCell className="font-mono text-off-black text-sm max-w-[280px] break-words">{translate(row.meaning)}</TableCell>
+                          <TableCell className="font-mono text-off-black text-sm max-w-[280px] break-words">{translate(row.meaning, { lookupOnly: true })}</TableCell>
                           <TableCell className="font-mono italic text-pale-stone text-xs max-w-[350px] whitespace-pre-line">{row.example}</TableCell>
                           <TableCell className="font-mono text-xs text-pale-stone">
                             <span className="bg-atmosphere-wash/20 border border-off-black/10 rounded-full px-2 py-0.5 text-[10px] whitespace-nowrap inline-block">
@@ -683,7 +683,7 @@ export default function ResourcesPage() {
                       {filteredPhrasal.length === 0 && (
                         <TableRow>
                           <TableCell colSpan={5} className="text-center py-16 font-mono text-pale-stone">
-                            No results found for the search keyword.
+                            {translate("No results found for the search keyword.")}
                           </TableCell>
                         </TableRow>
                       )}
@@ -696,17 +696,17 @@ export default function ResourcesPage() {
               {activeTab === "prepositionalPhrases" && (
                 <div className="animate-in fade-in duration-200">
                   <div className="mb-4 text-xs font-mono text-pale-stone flex items-center justify-between">
-                    <span>Displaying {Math.min(currentPage * itemsPerPage, filteredPrep.length)} out of {filteredPrep.length} prepositional phrases {searchQuery && `(matched for "${searchQuery}")`}</span>
+                    <span>{translate("Displaying")} {Math.min(currentPage * itemsPerPage, filteredPrep.length)} {translate("out of")} {filteredPrep.length} {translate("prepositional phrases")}{searchQuery && ` (${translate("matched for")} "${searchQuery}")`}</span>
                   </div>
                   <Table>
                     <TableHeader className="bg-atmosphere-wash/30 border-b border-off-black">
                       <TableRow className="hover:bg-transparent">
-                        <TableHead className="w-[80px] font-mono text-ink text-center">STT</TableHead>
-                        <TableHead className="w-[150px] font-mono text-ink">Base Word</TableHead>
-                        <TableHead className="w-[220px] font-mono text-ink font-semibold">Prepositional Phrase</TableHead>
-                        <TableHead className="font-mono text-ink">Meaning</TableHead>
-                        <TableHead className="font-mono text-ink">Example</TableHead>
-                        <TableHead className="w-[150px] font-mono text-ink">Source</TableHead>
+                        <TableHead className="w-[80px] font-mono text-ink text-center">{translate("STT")}</TableHead>
+                        <TableHead className="w-[150px] font-mono text-ink">{translate("Base Word")}</TableHead>
+                        <TableHead className="w-[220px] font-mono text-ink font-semibold">{translate("Prepositional Phrase")}</TableHead>
+                        <TableHead className="font-mono text-ink">{translate("Meaning")}</TableHead>
+                        <TableHead className="font-mono text-ink">{translate("Example")}</TableHead>
+                        <TableHead className="w-[150px] font-mono text-ink">{translate("Source")}</TableHead>
                       </TableRow>
                     </TableHeader>
                     <TableBody>
@@ -715,7 +715,7 @@ export default function ResourcesPage() {
                           <TableCell className="font-mono text-ink text-center text-xs font-semibold">{(currentPage - 1) * itemsPerPage + idx + 1}</TableCell>
                           <TableCell className="font-mono font-medium text-ink text-sm bg-atmosphere-wash/5 font-semibold text-center">{extractBaseWord(row.phrase)}</TableCell>
                           <TableCell className="font-mono font-bold text-indigo-600 dark:text-indigo-400 text-sm">{row.phrase}</TableCell>
-                          <TableCell className="font-mono text-off-black text-sm max-w-[250px] break-words">{translate(row.meaning)}</TableCell>
+                          <TableCell className="font-mono text-off-black text-sm max-w-[250px] break-words">{translate(row.meaning, { lookupOnly: true })}</TableCell>
                           <TableCell className="font-mono italic text-pale-stone text-xs max-w-[300px] whitespace-pre-line">{row.example}</TableCell>
                           <TableCell className="font-mono text-xs text-pale-stone">
                             <span className="bg-atmosphere-wash/20 border border-off-black/10 rounded-full px-2 py-0.5 text-[10px] whitespace-nowrap inline-block">
@@ -727,7 +727,7 @@ export default function ResourcesPage() {
                       {filteredPrep.length === 0 && (
                         <TableRow>
                           <TableCell colSpan={6} className="text-center py-16 font-mono text-pale-stone">
-                            No results found for the search keyword.
+                            {translate("No results found for the search keyword.")}
                           </TableCell>
                         </TableRow>
                       )}
@@ -740,17 +740,17 @@ export default function ResourcesPage() {
               {activeTab === "wordFormation" && (
                 <div className="animate-in fade-in duration-200">
                   <div className="mb-4 text-xs font-mono text-pale-stone flex items-center justify-between">
-                    <span>Displaying {Math.min(currentPage * itemsPerPage, filteredForm.length)} out of {filteredForm.length} word formations {searchQuery && `(matched for "${searchQuery}")`}</span>
+                    <span>{translate("Displaying")} {Math.min(currentPage * itemsPerPage, filteredForm.length)} {translate("out of")} {filteredForm.length} {translate("word formations")}{searchQuery && ` (${translate("matched for")} "${searchQuery}")`}</span>
                   </div>
                   <Table>
                     <TableHeader className="bg-atmosphere-wash/30 border-b border-off-black">
                       <TableRow className="hover:bg-transparent">
-                        <TableHead className="w-[80px] font-mono text-ink text-center">STT</TableHead>
-                        <TableHead className="w-[150px] font-mono text-ink">Base Word</TableHead>
-                        <TableHead className="w-[200px] font-mono text-ink">Word Family</TableHead>
-                        <TableHead className="font-mono text-ink">Meaning</TableHead>
-                        <TableHead className="font-mono text-ink">Example</TableHead>
-                        <TableHead className="w-[150px] font-mono text-ink">Source</TableHead>
+                        <TableHead className="w-[80px] font-mono text-ink text-center">{translate("STT")}</TableHead>
+                        <TableHead className="w-[150px] font-mono text-ink">{translate("Base Word")}</TableHead>
+                        <TableHead className="w-[200px] font-mono text-ink">{translate("Word Family")}</TableHead>
+                        <TableHead className="font-mono text-ink">{translate("Meaning")}</TableHead>
+                        <TableHead className="font-mono text-ink">{translate("Example")}</TableHead>
+                        <TableHead className="w-[150px] font-mono text-ink">{translate("Source")}</TableHead>
                       </TableRow>
                     </TableHeader>
                     <TableBody>
@@ -799,7 +799,7 @@ export default function ResourcesPage() {
                                   </TableCell>
                                   
                                   <TableCell className="font-mono text-off-black text-sm max-w-[280px] break-words pt-5">
-                                    {translate(fam.meaning)}
+                                    {translate(fam.meaning, { lookupOnly: true })}
                                   </TableCell>
                                   
                                   <TableCell className="font-mono italic text-pale-stone text-xs max-w-[350px] whitespace-pre-line pt-5">
@@ -822,7 +822,7 @@ export default function ResourcesPage() {
                       {filteredForm.length === 0 && (
                         <TableRow>
                           <TableCell colSpan={6} className="text-center py-16 font-mono text-pale-stone">
-                            No results found for the search keyword.
+                            {translate("No results found for the search keyword.")}
                           </TableCell>
                         </TableRow>
                       )}
@@ -835,17 +835,17 @@ export default function ResourcesPage() {
               {activeTab === "wordPatterns" && (
                 <div className="animate-in fade-in duration-200">
                   <div className="mb-4 text-xs font-mono text-pale-stone flex items-center justify-between">
-                    <span>Displaying {Math.min(currentPage * itemsPerPage, filteredPattern.length)} out of {filteredPattern.length} word patterns {searchQuery && `(matched for "${searchQuery}")`}</span>
+                    <span>{translate("Displaying")} {Math.min(currentPage * itemsPerPage, filteredPattern.length)} {translate("out of")} {filteredPattern.length} {translate("word patterns")}{searchQuery && ` (${translate("matched for")} "${searchQuery}")`}</span>
                   </div>
                   <Table>
                     <TableHeader className="bg-atmosphere-wash/30 border-b border-off-black">
                       <TableRow className="hover:bg-transparent">
-                        <TableHead className="w-[80px] font-mono text-ink text-center">STT</TableHead>
-                        <TableHead className="w-[160px] font-mono text-ink">Base Word</TableHead>
-                        <TableHead className="w-[240px] font-mono text-ink font-semibold">Word Pattern</TableHead>
-                        <TableHead className="font-mono text-ink">Meaning</TableHead>
-                        <TableHead className="font-mono text-ink">Example</TableHead>
-                        <TableHead className="w-[150px] font-mono text-ink">Source</TableHead>
+                        <TableHead className="w-[80px] font-mono text-ink text-center">{translate("STT")}</TableHead>
+                        <TableHead className="w-[160px] font-mono text-ink">{translate("Base Word")}</TableHead>
+                        <TableHead className="w-[240px] font-mono text-ink font-semibold">{translate("Word Pattern")}</TableHead>
+                        <TableHead className="font-mono text-ink">{translate("Meaning")}</TableHead>
+                        <TableHead className="font-mono text-ink">{translate("Example")}</TableHead>
+                        <TableHead className="w-[150px] font-mono text-ink">{translate("Source")}</TableHead>
                       </TableRow>
                     </TableHeader>
                     <TableBody>
@@ -854,7 +854,7 @@ export default function ResourcesPage() {
                           <TableCell className="font-mono text-ink text-center text-xs font-semibold">{(currentPage - 1) * itemsPerPage + idx + 1}</TableCell>
                           <TableCell className="font-mono font-medium text-ink text-sm bg-atmosphere-wash/5 font-semibold text-center">{extractPatternBaseWord(row.verb)}</TableCell>
                           <TableCell className="font-mono font-bold text-red-600 dark:text-red-400 text-sm">{row.verb} <span className="text-[10px] text-pale-stone font-normal italic">({abbreviateType(row.pattern)})</span></TableCell>
-                          <TableCell className="font-mono text-off-black text-sm max-w-[250px] break-words">{translate(row.meaning)}</TableCell>
+                          <TableCell className="font-mono text-off-black text-sm max-w-[250px] break-words">{translate(row.meaning, { lookupOnly: true })}</TableCell>
                           <TableCell className="font-mono italic text-pale-stone text-xs max-w-[320px] whitespace-pre-line">{row.example}</TableCell>
                           <TableCell className="font-mono text-xs text-pale-stone">
                             <span className="bg-atmosphere-wash/20 border border-off-black/10 rounded-full px-2 py-0.5 text-[10px] whitespace-nowrap inline-block">
@@ -866,7 +866,7 @@ export default function ResourcesPage() {
                       {filteredPattern.length === 0 && (
                         <TableRow>
                           <TableCell colSpan={6} className="text-center py-16 font-mono text-pale-stone">
-                            No results found for the search keyword.
+                            {translate("No results found for the search keyword.")}
                           </TableCell>
                         </TableRow>
                       )}
@@ -879,16 +879,16 @@ export default function ResourcesPage() {
               {activeTab === "collocations" && (
                 <div className="animate-in fade-in duration-200">
                   <div className="mb-4 text-xs font-mono text-pale-stone flex items-center justify-between">
-                    <span>Displaying {Math.min(currentPage * itemsPerPage, filteredCollocation.length)} out of {filteredCollocation.length} collocations {searchQuery && `(matched for "${searchQuery}")`}</span>
+                    <span>{translate("Displaying")} {Math.min(currentPage * itemsPerPage, filteredCollocation.length)} {translate("out of")} {filteredCollocation.length} {translate("collocations")}{searchQuery && ` (${translate("matched for")} "${searchQuery}")`}</span>
                   </div>
                   <Table>
                     <TableHeader className="bg-atmosphere-wash/30 border-b border-off-black">
                       <TableRow className="hover:bg-transparent">
-                        <TableHead className="w-[80px] font-mono text-ink text-center">STT</TableHead>
-                        <TableHead className="w-[160px] font-mono text-ink">Base Word</TableHead>
-                        <TableHead className="w-[280px] font-mono text-ink font-semibold">Collocation</TableHead>
-                        <TableHead className="font-mono text-ink">Meaning</TableHead>
-                        <TableHead className="w-[150px] font-mono text-ink">Source</TableHead>
+                        <TableHead className="w-[80px] font-mono text-ink text-center">{translate("STT")}</TableHead>
+                        <TableHead className="w-[160px] font-mono text-ink">{translate("Base Word")}</TableHead>
+                        <TableHead className="w-[280px] font-mono text-ink font-semibold">{translate("Collocation")}</TableHead>
+                        <TableHead className="font-mono text-ink">{translate("Meaning")}</TableHead>
+                        <TableHead className="w-[150px] font-mono text-ink">{translate("Source")}</TableHead>
                       </TableRow>
                     </TableHeader>
                     <TableBody>
@@ -902,7 +902,7 @@ export default function ResourcesPage() {
                               {row.collocation}
                             </span>
                           </TableCell>
-                          <TableCell className="font-mono text-off-black text-sm max-w-[300px] break-words">{translate(row.meaning)}</TableCell>
+                          <TableCell className="font-mono text-off-black text-sm max-w-[300px] break-words">{translate(row.meaning, { lookupOnly: true })}</TableCell>
                           <TableCell className="font-mono text-xs text-pale-stone">
                             <span className="bg-atmosphere-wash/20 border border-off-black/10 rounded-full px-2 py-0.5 text-[10px] whitespace-nowrap inline-block">
                               {formatSource(row.unitTitle, row.unitId)}
@@ -913,7 +913,7 @@ export default function ResourcesPage() {
                       {filteredCollocation.length === 0 && (
                         <TableRow>
                           <TableCell colSpan={5} className="text-center py-16 font-mono text-pale-stone">
-                            No results found for the search keyword.
+                            {translate("No results found for the search keyword.")}
                           </TableCell>
                         </TableRow>
                       )}
@@ -928,11 +928,11 @@ export default function ResourcesPage() {
             {totalPages > 1 && (
               <div className="flex flex-col sm:flex-row items-center justify-between gap-4 mt-8 pt-6 border-t border-off-black/15 font-mono text-sm text-ink">
                 <div className="text-xs text-pale-stone">
-                  Showing <span className="font-bold text-ink">{(currentPage - 1) * itemsPerPage + 1}</span> to{" "}
+                  {translate("Showing")} <span className="font-bold text-ink">{(currentPage - 1) * itemsPerPage + 1}</span> {translate("to")}{" "}
                   <span className="font-bold text-ink">
                     {Math.min(currentPage * itemsPerPage, currentItems.length)}
                   </span>{" "}
-                  of <span className="font-bold text-ink">{currentItems.length}</span> entries
+                  {translate("of")} <span className="font-bold text-ink">{currentItems.length}</span> {translate("entries")}
                 </div>
                 
                 <div className="flex items-center gap-1.5">
@@ -951,7 +951,7 @@ export default function ResourcesPage() {
                     disabled={currentPage === 1}
                     className="h-[36px] px-3 rounded-full border border-off-black hover:bg-atmosphere-wash/20 disabled:opacity-30 disabled:hover:bg-transparent transition-all cursor-pointer select-none font-bold text-xs flex items-center justify-center gap-1 text-ink"
                   >
-                    <ChevronLeft className="w-[14px] h-[14px]" /> Prev
+                    <ChevronLeft className="w-[14px] h-[14px]" /> {translate("Prev")}
                   </button>
 
                   {/* Page Numbers */}
@@ -985,7 +985,7 @@ export default function ResourcesPage() {
                     disabled={currentPage === totalPages}
                     className="h-[36px] px-3 rounded-full border border-off-black hover:bg-atmosphere-wash/20 disabled:opacity-30 disabled:hover:bg-transparent transition-all cursor-pointer select-none font-bold text-xs flex items-center justify-center gap-1 text-ink"
                   >
-                    Next <ChevronRight className="w-[14px] h-[14px]" />
+                    {translate("Next")} <ChevronRight className="w-[14px] h-[14px]" />
                   </button>
 
                   {/* Last Page */}

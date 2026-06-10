@@ -5,6 +5,7 @@ import Link from "next/link"
 import { SocialIcon } from "react-social-icons"
 import { motion } from "framer-motion"
 import { useLanguage } from "@/components/providers/language-provider"
+import { showToast } from "@/components/ui/toast"
 
 
 export function Footer() {
@@ -95,12 +96,20 @@ export function Footer() {
                   </Link>
                 </li>
                 <li>
-                  <Link 
-                    href="/destination/c1-c2" 
-                    className="text-[#8ea0b5] hover:text-white transition-colors text-sm underline decoration-[#8ea0b5]/50 hover:decoration-white"
+                  <button 
+                    onClick={(e) => {
+                      e.preventDefault();
+                      showToast({
+                        title: "Under Development",
+                        message: "Destination C1 & C2 is currently under development. Stay tuned!",
+                        variant: "warning",
+                        position: "top-right",
+                      });
+                    }}
+                    className="text-[#8ea0b5] hover:text-white transition-colors text-sm underline decoration-[#8ea0b5]/50 hover:decoration-white cursor-pointer"
                   >
                     Destination C1-C2
-                  </Link>
+                  </button>
                 </li>
               </ul>
             </div>

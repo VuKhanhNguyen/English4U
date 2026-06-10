@@ -8,6 +8,7 @@ import { ChevronDown, Menu, Settings, Sun, Moon } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/components/providers/language-provider";
 import { useTheme } from "@/components/providers/theme-provider";
+import { showToast } from "@/components/ui/toast";
 
 export function Navbar() {
   const [isScrolled, setIsScrolled] = React.useState(false);
@@ -94,13 +95,21 @@ export function Navbar() {
                   >
                     Destination B2
                   </Link>
-                  <Link
-                    href="/destination/c1-c2"
-                    onClick={() => setIsDropdownOpen(false)}
-                    className="block text-sm px-4 py-2 outline-none hover:bg-atmosphere-wash rounded-full cursor-pointer text-off-black transition-colors font-normal"
+                  <button
+                    onClick={(e) => {
+                      e.preventDefault();
+                      setIsDropdownOpen(false);
+                      showToast({
+                        title: "Under Development",
+                        message: "Destination C1 & C2 is currently under development. Stay tuned!",
+                        variant: "warning",
+                        position: "top-right",
+                      });
+                    }}
+                    className="w-full text-left block text-sm px-4 py-2 outline-none hover:bg-atmosphere-wash rounded-full cursor-pointer text-off-black transition-colors font-normal"
                   >
                     Destination C1 & C2
-                  </Link>
+                  </button>
                 </motion.div>
               )}
             </AnimatePresence>

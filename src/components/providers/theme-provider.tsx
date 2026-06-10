@@ -1,6 +1,7 @@
 "use client";
 
 import React, { createContext, useContext, useState, useEffect } from "react";
+import { showToast } from "@/components/ui/toast";
 
 export type Theme = "light" | "dark";
 
@@ -39,6 +40,13 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
     } else {
       root.classList.remove("dark");
     }
+
+    showToast({
+      title: "Theme Changed",
+      message: `Switched to ${newTheme} mode successfully.`,
+      variant: "success",
+      position: "top-right",
+    });
   };
 
   return (

@@ -7,6 +7,8 @@ import headerFooterTranslations from "@/data/header_footer-translation-vi.json";
 import aboutTranslations from "@/data/about-translation-vi.json";
 import vocabTranslationsB2 from "@/data/vocab-translation-vi-b2.json";
 import grammarTranslationsB2 from "@/data/grammar-translation-vi-b2.json";
+import resourcesTranslations from "@/data/resources-translation-vi.json";
+import { showToast } from "@/components/ui/toast";
 
 const customTranslations = {
   ...vocabTranslations,
@@ -15,6 +17,7 @@ const customTranslations = {
   ...aboutTranslations,
   ...vocabTranslationsB2,
   ...grammarTranslationsB2,
+  ...resourcesTranslations,
 };
 
 type Language = "en" | "vi";
@@ -22,7 +25,7 @@ type Language = "en" | "vi";
 interface LanguageContextType {
   lang: Language;
   setLang: (lang: Language) => void;
-  translate: (text: string) => string;
+  translate: (text: string, options?: { lookupOnly?: boolean }) => string;
   isTranslating: boolean;
 }
 
@@ -59,6 +62,13 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
   const setLang = (newLang: Language) => {
     setLangState(newLang);
     localStorage.setItem("english4u-lang", newLang);
+
+    showToast({
+      title: "Language Changed",
+      message: `Switched to ${newLang === "en" ? "English" : "Vietnamese"} successfully.`,
+      variant: "success",
+      position: "top-right",
+    });
   };
 
   // Helper to store translations to localStorage
@@ -147,7 +157,7 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
     }
   };
 
-  const translate = (text: string): string => {
+  const translate = (text: string, options?: { lookupOnly?: boolean }): string => {
     if (!text) return "";
     
     // During hydration or if locale is EN, return the original text
@@ -157,6 +167,10 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
     const customDict = customTranslations as Record<string, string>;
     if (customDict[text]) {
       return customDict[text];
+    }
+
+    if (options?.lookupOnly) {
+      return text;
     }
 
     // 2. Check if we have it in cache

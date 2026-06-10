@@ -11,6 +11,7 @@ import SmoothScrollProvider from "@/components/providers/smooth-scroll-provider"
 import { LanguageProvider } from "@/components/providers/language-provider";
 import { ThemeProvider } from "@/components/providers/theme-provider";
 import { cn } from "@/lib/utils";
+import Toaster from "@/components/ui/toast";
 
 const ibmPlexMono = IBM_Plex_Mono({
   subsets: ["latin"],
@@ -77,6 +78,7 @@ export default function RootLayout({
               <div className="fixed inset-0 pointer-events-none -z-10 overflow-hidden">
                 <DotField />
               </div>
+              <Toaster defaultPosition="top-right"/>
               {children}
             </LanguageProvider>
           </ThemeProvider>
