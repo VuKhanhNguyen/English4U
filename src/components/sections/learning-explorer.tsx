@@ -6,6 +6,15 @@ import { Search } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useLanguage } from "@/components/providers/language-provider";
 import { showToast } from "@/components/ui/toast";
+import Link from "next/link";
+import {
+  Breadcrumb,
+  BreadcrumbItem,
+  BreadcrumbLink,
+  BreadcrumbList,
+  BreadcrumbPage,
+  BreadcrumbSeparator,
+} from "@/components/ui/breadcrumb";
 
 import unit1 from "@/data/b1/unit1.json";
 import unit2 from "@/data/b1/unit2.json";
@@ -687,6 +696,7 @@ export function LearningExplorerSection({
 
   return (
     <section className={cn("py-16 md:py-24 bg-paper-canvas border-t border-off-black relative overflow-hidden", className)}>
+      
       {/* Subtle background gradient wash */}
       <div className="absolute top-0 right-0 w-[500px] h-[500px] rounded-full bg-sky-mint-gradient opacity-20 blur-[120px] pointer-events-none z-0" />
       <div className="absolute bottom-0 left-0 w-[500px] h-[500px] rounded-full bg-sunset-violet-gradient opacity-15 blur-[120px] pointer-events-none z-0" />
@@ -703,6 +713,20 @@ export function LearningExplorerSection({
               </p>
             </div>
           )}
+
+ <Breadcrumb className="ml-5 mt-5 text-xs">
+                <BreadcrumbList>
+                  <BreadcrumbItem>
+                    <BreadcrumbLink href="/" asChild>
+                      <Link href="/">{translate("Home")}</Link>
+                    </BreadcrumbLink>
+                  </BreadcrumbItem>
+                  <BreadcrumbSeparator />
+                  <BreadcrumbItem>
+                    <BreadcrumbPage className="text-pale-stone font-medium">{activeBook.book}</BreadcrumbPage>
+                  </BreadcrumbItem>
+                </BreadcrumbList>
+              </Breadcrumb>
 
           <div className="w-full md:w-[280px] relative ml-auto z-10">
             <Search className="absolute left-3 top-1/2 -translate-y-1/2 text-pale-stone w-[16px] h-[16px]" />
@@ -740,6 +764,7 @@ export function LearningExplorerSection({
               <h1 className="text-heading font-heading text-ink mt-3 mb-0">
                 {translate("Structured Syllabus Explorer")}
               </h1>
+             
             </div>
             <div className="text-right hidden sm:block font-mono shrink-0 ml-6">
               <p className="text-caption text-pale-stone uppercase tracking-wider mb-1">

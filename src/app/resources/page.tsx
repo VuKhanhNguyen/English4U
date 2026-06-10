@@ -9,6 +9,15 @@ import { Navbar } from "@/components/layout/navbar";
 import { Footer } from "@/components/layout/footer";
 import FloatingLines from "@/components/FloatingLines";
 import { useLanguage } from "@/components/providers/language-provider";
+import NextLink from "next/link";
+import {
+  Breadcrumb,
+  BreadcrumbItem,
+  BreadcrumbLink,
+  BreadcrumbList,
+  BreadcrumbPage,
+  BreadcrumbSeparator,
+} from "@/components/ui/breadcrumb";
 
 import { Card } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -489,10 +498,26 @@ export default function ResourcesPage() {
 
       <Navbar />
 
+
       <main className="flex-grow relative z-10 pt-[140px] pb-24">
+        <Breadcrumb className="ml-20 mt-2.5 mb-5 text-xs">
+                <BreadcrumbList>
+                  <BreadcrumbItem>
+                    <BreadcrumbLink href="/" asChild>
+                      <NextLink href="/">{translate("Home")}</NextLink>
+                    </BreadcrumbLink>
+                  </BreadcrumbItem>
+                  <BreadcrumbSeparator />
+                  <BreadcrumbItem>
+                    <BreadcrumbPage className="text-pale-stone font-medium">{translate("Resources")}</BreadcrumbPage>
+                  </BreadcrumbItem>
+                </BreadcrumbList>
+              </Breadcrumb>
         {/* Soft background washes */}
         <div className="absolute top-20 left-10 w-[500px] h-[500px] rounded-full bg-sky-mint-gradient opacity-15 blur-[120px] pointer-events-none -z-10" />
         <div className="absolute bottom-20 right-10 w-[600px] h-[600px] rounded-full bg-sunset-violet-gradient opacity-15 blur-[120px] pointer-events-none -z-10" />
+
+
 
         <div className="container mx-auto px-6 max-w-[1432px]">
           {/* Header Title Card */}
@@ -514,6 +539,7 @@ export default function ResourcesPage() {
               <h1 className="text-heading-lg font-heading font-bold text-ink leading-tight">
                 {translate("All-in-One Destination Synthesis")}
               </h1>
+              
               <p className="text-body font-mono text-pale-stone">
                 {translate("A unified compilation of all vocabulary, phrasal verbs, prepositional phrases, word formations, word patterns, and collocations across Destination B1, B2, C1 & C2. Search the entire database instantly.")}
               </p>
