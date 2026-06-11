@@ -70,6 +70,8 @@ import b2Unit11 from "@/data/b2/unit11.json";
 import b2Unit12 from "@/data/b2/unit12.json";
 import b2Unit13 from "@/data/b2/unit13.json";
 import b2Unit14 from "@/data/b2/unit14.json";
+import b2Unit15 from "@/data/b2/unit15.json";
+import b2Unit16 from "@/data/b2/unit16.json";
 import c1c2Data from "@/data/destination-c1-c2.json";
 
 const b1Data = {
@@ -79,7 +81,7 @@ const b1Data = {
 
 const b2Data = {
   book: "Destination B2",
-  units: [b2Unit1, b2Unit2, b2Unit3, b2Unit4, b2Unit5, b2Unit6, b2Unit7, b2Unit8, b2Unit9, b2Unit10, b2Unit11, b2Unit12, b2Unit13, b2Unit14],
+  units: [b2Unit1, b2Unit2, b2Unit3, b2Unit4, b2Unit5, b2Unit6, b2Unit7, b2Unit8, b2Unit9, b2Unit10, b2Unit11, b2Unit12, b2Unit13, b2Unit14, b2Unit15, b2Unit16],
 };
 
 import { Card } from "@/components/ui/card";
@@ -462,13 +464,18 @@ function RichGrammarRenderer({ richGrammar }: { richGrammar: any[] }) {
                             >
                               {(row || []).map((cell: string, cIdx: number) => {
                                  const header = block.headers?.[cIdx];
-                                 const isStativeVerbCol = header === "Stative Verb";
+                                 const skipTranslation = 
+                                   header === "Stative Verb" || 
+                                   header === "Active Example" || 
+                                   header === "Passive Form & Example" || 
+                                   header === "Active Verb" || 
+                                   header === "Passive Participle";
                                  return (
                                    <td
                                      key={cIdx}
                                      className="p-3 border-r border-off-black last:border-r-0 text-ink whitespace-pre-line align-top"
                                    >
-                                     {renderTextWithLinks(isStativeVerbCol ? cell : translate(cell))}
+                                     {renderTextWithLinks(skipTranslation ? cell : translate(cell))}
                                    </td>
                                  );
                                })}

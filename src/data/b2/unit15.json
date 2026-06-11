@@ -1,0 +1,359 @@
+{
+  "id": "b2-unit-15",
+  "title": "Unit 15: The passive, the causative, direct/indirect objects",
+  "grammar": [
+    {
+      "structure": "The passive",
+      "usage": "Used when the focus is on the action or the object, rather than who performed it. Formed with be + past participle.",
+      "example": "Grapefruits are mainly grown in Ninh Thuan province."
+    },
+    {
+      "structure": "The impersonal passive",
+      "usage": "Used to express people's opinions or beliefs, especially in formal or news contexts. Formed with 'It is said that...' or 'N + is said to + infinitive'.",
+      "example": "Two people are reported to have been seriously injured."
+    },
+    {
+      "structure": "The causative",
+      "usage": "Used to show that someone arranges for someone else to do something for them, or that something happens to them. Formed with have/get + object + past participle or get sb to do / have sb do.",
+      "example": "We had our herb garden vandalized. / We will have a new cooker put in."
+    },
+    {
+      "structure": "Direct & indirect objects",
+      "usage": "Verbs with two objects can form two different passive sentences, focusing on either the direct or the indirect object.",
+      "example": "My sister was given this cookery book. / This cookery book was given to my sister."
+    }
+  ],
+  "richGrammar": [
+    {
+      "title": "A) THE PASSIVE",
+      "blocks": [
+        {
+          "type": "title",
+          "content": "1. THE PASSIVE FORMULA & USAGE"
+        },
+        {
+          "type": "list",
+          "bullets": [
+            "**Formula:** S + be (in the correct form) + V3/ed (+ by/with + O)",
+            "**Usage / When to use:**\n* When we do not know who did something\n* When it is obvious who did something\n* When it is not necessary to know who did something\n* When we want to emphasize some new information or use it in formal sentences."
+          ]
+        },
+        {
+          "type": "title",
+          "content": "2. ACTIVE AND PASSIVE FORMS BY TENSE"
+        },
+        {
+          "type": "generic-table",
+          "tableName": "Passive Tenses Table",
+          "headers": ["Tense / Form", "Active Example", "Passive Form & Example"],
+          "rows": [
+            [
+              "Present simple",
+              "They mainly grow grapefruits in Ninh Thuan province.",
+              "**am/is/are + V3/ed**\nGrapefruits are mainly grown in Ninh Thuan province."
+            ],
+            [
+              "Present continuous",
+              "Henry is redecorating his bedroom at this moment.",
+              "**am/is/are + being + V3/ed**\nHenry's bedroom is being redecorated at this moment."
+            ],
+            [
+              "Present perfect simple",
+              "Has anyone sliced the potatoes?",
+              "**has/have + been + V3/ed**\nHave the potatoes been sliced?"
+            ],
+            [
+              "Past simple",
+              "The Chinese invented Gunpowder.",
+              "**was / were + V3/ed**\nGunpowder was invented by the Chinese."
+            ],
+            [
+              "Past continuous",
+              "We asked for coffee while they were preparing the bill.",
+              "**was / were + being + V3/ed**\nWe asked for coffee while the bill was being prepared."
+            ],
+            [
+              "Past perfect simple",
+              "Someone had broken the flower vase by the time I got there.",
+              "**had + been + V3/ed**\nThe flower vase had been broken by the time I got there."
+            ],
+            [
+              "Will",
+              "We will deliver your orders within 50 minutes.",
+              "**will + be + V3/ed**\nYour orders will be delivered within 50 minutes."
+            ],
+            [
+              "Be going to",
+              "They are going to present the award for best video later tonight.",
+              "**is/ are / going to + be + V3/ed**\nThe award for best video is going to be presented later tonight."
+            ],
+            [
+              "Future perfect simple",
+              "They will have harvested all the bananas by the end of August.",
+              "**will + have + been + V3/ed**\nAll the bananas will have been harvested by the end of August."
+            ],
+            [
+              "Modals",
+              "You should brush the chicken breast with oil and then fry it.",
+              "**modal + be + V3/ed**\nThe chicken breast should be brushed with oil and then fried."
+            ],
+            [
+              "Modals + have + V3/ed",
+              "They should have delivered the groceries by now.",
+              "**modal + have + been + V3/ed**\nThe groceries should have been delivered by now."
+            ],
+            [
+              "Gerund",
+              "Did you hear about them robbing the bank?",
+              "**being + V3/ed**\nDid you hear about the bank being robbed?"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "title": "B) THE IMPERSONAL PASSIVE",
+      "blocks": [
+        {
+          "type": "title",
+          "content": "1. PURPOSE & FEATURES"
+        },
+        {
+          "type": "generic-table",
+          "headers": ["Key Aspect", "Explanation"],
+          "rows": [
+            [
+              "Purpose",
+              "Used when we want to express other people's opinions in news or formal situations."
+            ],
+            [
+              "Feature",
+              "When a that-clause is used as the object of verbs such as: believe, think, say, report..."
+            ]
+          ]
+        },
+        {
+          "type": "title",
+          "content": "2. STRUCTURES & VERB CONVERSION"
+        },
+        {
+          "type": "list",
+          "bullets": [
+            "**Structure 1:** It is [said] that + clause",
+            "**Structure 2:** N + is/are [said] to + Vbare / (to have V3/ed)"
+          ]
+        },
+        {
+          "type": "generic-table",
+          "tableName": "Verbs commonly used in Impersonal Passive",
+          "headers": ["Active Verb", "Passive Participle", "Active Verb", "Passive Participle"],
+          "rows": [
+            ["say", "said", "feel", "felt"],
+            ["believe", "believed", "report", "reported"],
+            ["think", "thought", "argue", "argued"],
+            ["claim", "claimed", "suggest", "suggested"],
+            ["estimate", "estimated", "calculate", "calculated"],
+            ["announce", "announced", "rumor", "rumored"],
+            ["understand", "understood", "", ""]
+          ]
+        },
+        {
+          "type": "title",
+          "content": "3. IMPORTANT NOTES"
+        },
+        {
+          "type": "list",
+          "bullets": [
+            "With verbs like: **argue, suggest, calculate**... → only used in the structure: **\"It is [argued/...] that, clause\"**\nEX: People have suggested that the school should start to produce a magazine.\n✗ The school are suggested to should start to produce a magazine.\n✓ It has been suggested that the school should start to produce a magazine.",
+            "When the action in the that-clause happens **at the same time as / after** the action in the main clause → **to + Vbare**\nEX: People think that heart disease is caused by eating the wrong things.\n→ Heart disease is thought to be caused by eating the wrong things.\n→ It is thought that heart disease is caused by eating the wrong things.",
+            "When the action in the that-clause happens **before** the action in the main clause → **to + have + V3/ed**"
+          ]
+        },
+        {
+          "type": "title",
+          "content": "4. EXAMPLES OF IMPERSONAL PASSIVE"
+        },
+        {
+          "type": "list",
+          "bullets": [
+            "People have reported that they are involved in human trafficking.\n→ It has been reported that they are involved in human trafficking.",
+            "People generally think that life won't be found on Mars.\n→ It is generally thought that life won't be found on Mars.",
+            "They report that two people were seriously injured in the accident. (were injured happens before report)\n→ Two people are reported to have been seriously injured in the accident.",
+            "People estimated that his restaurant was worth over $10 million. (estimated happens at the same time as was)\n→ His restaurant was estimated to be worth over $10 million.\n*(Note: textbook uses: His restaurant is estimated to be worth over $10 million.)*",
+            "People estimated that his restaurant was worth over $10 million. (estimated happens after was)\n→ His restaurant is estimated to have been worth over $10 million.",
+            "People say that crocodile tastes like squid. (tastes happens at the same time as say)\n→ Crocodile is said to taste like squid.",
+            "It is said that the Vikings discovered America before Columbus. (discovered happens before said)\n→ The Vikings are said to have discovered America before Columbus."
+          ]
+        }
+      ]
+    },
+    {
+      "title": "C) THE CAUSATIVE",
+      "blocks": [
+        {
+          "type": "title",
+          "content": "1. THE CAUSATIVE FORMULA"
+        },
+        {
+          "type": "list",
+          "bullets": [
+            "**Formula:** S1 + have / get (in the correct form) + S2 + V3/ed (+ by/with + O)"
+          ]
+        },
+        {
+          "type": "title",
+          "content": "2. USAGE & RULES"
+        },
+        {
+          "type": "list",
+          "bullets": [
+            "**1. Used when we want to express someone's arrangement for S1 related to S2.**\nEX: They will put in a new cooker for us next week.\n→ We will have a new cooker put in next week.",
+            "**2. Expresses an unpleasant situation when something unexpected happens to us.**\nEX: We had our herb garden vandalized while we were away.",
+            "**3. When we want to express that we arrange for someone to do something for us, we use \"get sb to do\" or \"have sb do\".**\nEX: Why don't you get the chef to prepare you a vegetarian meal?\nOR\nEX: Why don't you have the chef prepare you a vegetarian meal?"
+          ]
+        },
+        {
+          "type": "title",
+          "content": "3. WATCH OUT"
+        },
+        {
+          "type": "list",
+          "bullets": [
+            "* **get** is more formal than **have**",
+            "* **get sb to do** OR **have sb do** (NOT have sb TO do!)"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "D) DIRECT & INDIRECT OBJECTS",
+      "blocks": [
+        {
+          "type": "title",
+          "content": "1. ACTIVE AND PASSIVE STRUCTURES"
+        },
+        {
+          "type": "list",
+          "bullets": [
+            "The subject of a passive sentence can be either the direct or indirect object of the active sentence.",
+            "**Active structures:**\n* S + V + indirect O + direct O\n* S + V + direct O + prep + indirect O",
+            "**Key Notes:**\n* Indirect Object: usually a person.\n* Preposition: usually **to** or **for**.\n*(For more details, see Unit 34 in Destination B1)*"
+          ]
+        },
+        {
+          "type": "title",
+          "content": "2. EXAMPLES"
+        },
+        {
+          "type": "list",
+          "bullets": [
+            "EX: A friend gave my sister this cookery book.\n→ My sister was given this cookery book by a friend.",
+            "EX: A friend gave this cookery book to my sister.\n→ This cookery book was given to my sister by a friend."
+          ]
+        }
+      ]
+    }
+  ],
+  "vocabulary": [
+    {
+      "word": "hand in",
+      "type": "v",
+      "meaning": "give something to a person in authority",
+      "example": "You must hand in your homework by Friday."
+    },
+    {
+      "word": "gravity",
+      "type": "n",
+      "meaning": "the force that attracts a body towards the centre of the earth",
+      "example": "Newton discovered gravity when an apple fell on his head."
+    },
+    {
+      "word": "orbit",
+      "type": "v",
+      "meaning": "move in a curved path around a star, planet, or moon",
+      "example": "The Earth orbits the Sun once every year."
+    },
+    {
+      "word": "hammer",
+      "type": "n",
+      "meaning": "a tool with a heavy metal head used for hitting nails",
+      "example": "He used a hammer to drive the nail into the wood."
+    },
+    {
+      "word": "injection",
+      "type": "n",
+      "meaning": "an act of putting medicine into the body using a syringe",
+      "example": "The doctor gave the patient an injection of penicillin."
+    },
+    {
+      "word": "syringe",
+      "type": "n",
+      "meaning": "a medical instrument used to inject or withdraw fluids",
+      "example": "The nurse carefully loaded the syringe with medicine."
+    },
+    {
+      "word": "Parliament",
+      "type": "n",
+      "meaning": "the law-making assembly of a country",
+      "example": "The new law was debated in Parliament."
+    },
+    {
+      "word": "commercialize",
+      "type": "v",
+      "meaning": "manage or exploit in a way designed to make a profit",
+      "example": "They decided to commercialize their new software product."
+    },
+    {
+      "word": "squid",
+      "type": "n",
+      "meaning": "a sea animal with a long body and ten tentacles",
+      "example": "We had grilled squid for dinner at the seaside restaurant."
+    },
+    {
+      "word": "octopus",
+      "type": "n",
+      "meaning": "a sea animal with a soft body and eight tentacles",
+      "example": "The octopus hid under a rock when it saw the diver."
+    },
+    {
+      "word": "shave",
+      "type": "v",
+      "meaning": "cut hair off the face or another part of the body with a razor",
+      "example": "He shaves every morning before going to work."
+    },
+    {
+      "word": "pierce",
+      "type": "v",
+      "meaning": "make a hole in or through something with a sharp point",
+      "example": "She had her ears pierced when she was twelve."
+    },
+    {
+      "word": "scratch",
+      "type": "v",
+      "meaning": "cut or damage the surface of something with something sharp",
+      "example": "The cat scratched the wooden table."
+    },
+    {
+      "word": "furious",
+      "type": "adj",
+      "meaning": "extremely angry",
+      "example": "She was furious when she found out they had lied to her."
+    },
+    {
+      "word": "maize",
+      "type": "n",
+      "meaning": "corn, a cereal plant that produces large grains on cobs",
+      "example": "Maize is widely grown in many parts of the world."
+    },
+    {
+      "word": "medieval Europeans",
+      "type": "n",
+      "meaning": "people living in Europe during the Middle Ages",
+      "example": "Medieval Europeans built many grand cathedrals."
+    }
+  ],
+  "wordFormation": [],
+  "wordPatterns": [],
+  "phrasalVerbs": [],
+  "collocations": []
+}
