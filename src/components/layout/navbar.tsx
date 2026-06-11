@@ -29,7 +29,12 @@ export function Navbar() {
   return (
     <header className="fixed top-4 left-0 right-0 z-50 px-4 md:px-8 pointer-events-none font-abc-diatype-mono">
       <div
-        className={`mx-auto max-w-6xl w-full h-[64px] flex items-center justify-between px-6 rounded-full border border-off-black bg-paper-canvas/70 backdrop-blur-xl shadow-md transition-all duration-300 pointer-events-auto`}
+        className={`mx-auto max-w-6xl w-full h-[64px] flex items-center justify-between px-6 rounded-full border border-white/20 dark:border-white/10 bg-white/20 dark:bg-black/30 backdrop-blur-xl transition-all duration-300 pointer-events-auto`}
+        style={{
+          boxShadow: theme === "dark" 
+            ? "0 8px 32px 0 rgba(0, 0, 0, 0.37), inset 0 1px 0 0 rgba(255, 255, 255, 0.15)"
+            : "0 8px 32px 0 rgba(31, 38, 135, 0.08), inset 0 1px 0 0 rgba(255, 255, 255, 0.6)"
+        }}
       >
         <Link
           href="/"
@@ -75,41 +80,102 @@ export function Navbar() {
             <AnimatePresence>
               {isDropdownOpen && (
                 <motion.div
-                  initial={{ opacity: 0, y: 10, scale: 0.95 }}
-                  animate={{ opacity: 1, y: 0, scale: 1 }}
-                  exit={{ opacity: 0, y: 10, scale: 0.95 }}
-                  transition={{ duration: 0.15, ease: "easeOut" }}
-                  className="absolute left-0 top-full min-w-[180px] bg-paper-canvas border border-off-black rounded-[40px] shadow-md p-4 z-50 mt-2"
+                  initial={{ opacity: 0, y: -8, scale: 0.92, filter: "blur(4px)" }}
+                  animate={{ opacity: 1, y: 0, scale: 1, filter: "blur(0px)" }}
+                  exit={{ opacity: 0, y: -8, scale: 0.92, filter: "blur(4px)" }}
+                  transition={{
+                    type: "spring",
+                    stiffness: 300,
+                    damping: 18,
+                    mass: 0.8
+                  }}
+                  className="absolute left-0 top-full min-w-[180px] z-50 mt-2 rounded-[30px] overflow-hidden p-4 border border-white/20 dark:border-white/10 pointer-events-auto"
+                  style={{
+                    boxShadow: theme === "dark"
+                      ? "0 20px 40px -15px rgba(0, 0, 0, 0.7), 0 10px 20px -10px rgba(0, 0, 0, 0.5)"
+                      : "0 20px 40px -15px rgba(0, 0, 0, 0.15), 0 10px 20px -10px rgba(0, 0, 0, 0.1)"
+                  }}
                 >
-                  <Link
-                    href="/destination/b1"
-                    onClick={() => setIsDropdownOpen(false)}
-                    className="block text-sm px-4 py-2 outline-none hover:bg-atmosphere-wash rounded-full cursor-pointer text-off-black transition-colors font-normal"
-                  >
-                    Destination B1
-                  </Link>
-                  <Link
-                    href="/destination/b2"
-                    onClick={() => setIsDropdownOpen(false)}
-                    className="block text-sm px-4 py-2 outline-none hover:bg-atmosphere-wash rounded-full cursor-pointer text-off-black transition-colors font-normal"
-                  >
-                    Destination B2
-                  </Link>
-                  <button
-                    onClick={(e) => {
-                      e.preventDefault();
-                      setIsDropdownOpen(false);
-                      showToast({
-                        title: "Under Development",
-                        message: "Destination C1 & C2 is currently under development. Stay tuned!",
-                        variant: "warning",
-                        position: "top-right",
-                      });
+                  {/* Glass Backdrop Layer */}
+                  <div
+                    className="absolute inset-0 z-0 overflow-hidden rounded-[30px]"
+                    style={{
+                      backdropFilter: "blur(10px)",
+                      filter: "url(#glass-distortion)",
+                      isolation: "isolate",
                     }}
-                    className="w-full text-left block text-sm px-4 py-2 outline-none hover:bg-atmosphere-wash rounded-full cursor-pointer text-off-black transition-colors font-normal"
-                  >
-                    Destination C1 & C2
-                  </button>
+                  />
+                  {/* Tint Overlay Layer */}
+                  <div
+                    className="absolute inset-0 z-10 transition-colors duration-300"
+                    style={{
+                      background: theme === "dark" ? "rgba(15, 15, 16, 0.55)" : "rgba(255, 255, 255, 0.45)",
+                    }}
+                  />
+                  {/* Outer & Inner Specular Border Highlight */}
+                  <div
+                    className="absolute inset-0 z-20 rounded-[30px] overflow-hidden pointer-events-none"
+                    style={{
+                      boxShadow:
+                        theme === "dark"
+                          ? "inset 1px 1px 1px 0 rgba(255, 255, 255, 0.15), inset -1px -1px 1px 1px rgba(0, 0, 0, 0.3)"
+                          : "inset 2px 2px 1px 0 rgba(255, 255, 255, 0.5), inset -1px -1px 1px 1px rgba(255, 255, 255, 0.3)",
+                    }}
+                  />
+
+                  {/* Content */}
+                  <div className="relative z-30 flex flex-col gap-1 w-full text-ink">
+                    <motion.div
+                      whileHover={{ scale: 1.03, x: 4 }}
+                      whileTap={{ scale: 0.97 }}
+                      transition={{ type: "spring", stiffness: 400, damping: 15 }}
+                      className="w-full"
+                    >
+                      <Link
+                        href="/destination/b1"
+                        onClick={() => setIsDropdownOpen(false)}
+                        className="block text-sm px-4 py-2 outline-none hover:bg-off-black/5 dark:hover:bg-white/10 rounded-full cursor-pointer text-ink transition-colors duration-200 font-normal"
+                      >
+                        Destination B1
+                      </Link>
+                    </motion.div>
+                    <motion.div
+                      whileHover={{ scale: 1.03, x: 4 }}
+                      whileTap={{ scale: 0.97 }}
+                      transition={{ type: "spring", stiffness: 400, damping: 15 }}
+                      className="w-full"
+                    >
+                      <Link
+                        href="/destination/b2"
+                        onClick={() => setIsDropdownOpen(false)}
+                        className="block text-sm px-4 py-2 outline-none hover:bg-off-black/5 dark:hover:bg-white/10 rounded-full cursor-pointer text-ink transition-colors duration-200 font-normal"
+                      >
+                        Destination B2
+                      </Link>
+                    </motion.div>
+                    <motion.div
+                      whileHover={{ scale: 1.03, x: 4 }}
+                      whileTap={{ scale: 0.97 }}
+                      transition={{ type: "spring", stiffness: 400, damping: 15 }}
+                      className="w-full"
+                    >
+                      <button
+                        onClick={(e) => {
+                          e.preventDefault();
+                          setIsDropdownOpen(false);
+                          showToast({
+                            title: "Under Development",
+                            message: "Destination C1 & C2 is currently under development. Stay tuned!",
+                            variant: "warning",
+                            position: "top-right",
+                          });
+                        }}
+                        className="w-full text-left block text-sm px-4 py-2 outline-none hover:bg-off-black/5 dark:hover:bg-white/10 rounded-full cursor-pointer text-ink transition-colors duration-200 font-normal"
+                      >
+                        Destination C1 & C2
+                      </button>
+                    </motion.div>
+                  </div>
                 </motion.div>
               )}
             </AnimatePresence>
@@ -147,83 +213,135 @@ export function Navbar() {
           <AnimatePresence>
             {isSettingsOpen && (
               <motion.div
-                initial={{ opacity: 0, y: 10, scale: 0.95 }}
-                animate={{ opacity: 1, y: 0, scale: 1 }}
-                exit={{ opacity: 0, y: 10, scale: 0.95 }}
-                transition={{ duration: 0.15, ease: "easeOut" }}
-                className="absolute right-0 top-full min-w-[240px] bg-paper-canvas border border-off-black rounded-[40px] shadow-md p-6 z-50 mt-2 flex flex-col gap-4 pointer-events-auto"
+                initial={{ opacity: 0, y: -8, scale: 0.92, filter: "blur(4px)" }}
+                animate={{ opacity: 1, y: 0, scale: 1, filter: "blur(0px)" }}
+                exit={{ opacity: 0, y: -8, scale: 0.92, filter: "blur(4px)" }}
+                transition={{
+                  type: "spring",
+                  stiffness: 300,
+                  damping: 18,
+                  mass: 0.8
+                }}
+                className="absolute right-0 top-full min-w-[240px] z-50 mt-2 rounded-[30px] overflow-hidden p-6 border border-white/20 dark:border-white/10 flex flex-col gap-4 pointer-events-auto"
+                style={{
+                  boxShadow: theme === "dark"
+                    ? "0 20px 40px -15px rgba(0, 0, 0, 0.7), 0 10px 20px -10px rgba(0, 0, 0, 0.5)"
+                    : "0 20px 40px -15px rgba(0, 0, 0, 0.15), 0 10px 20px -10px rgba(0, 0, 0, 0.1)"
+                }}
               >
-                {/* Dark/Light mode toggle */}
-                <div className="flex items-center justify-between">
-                  <span className="text-xs font-bold text-ink">{translate("Theme")}</span>
-                  <div className="flex bg-atmosphere-wash border border-off-black p-1 rounded-full">
-                    <button
-                      onClick={() => setTheme("light")}
-                      className={`p-1.5 rounded-full cursor-pointer transition-all duration-200 ${
-                        theme === "light"
-                          ? "bg-paper-canvas border border-off-black text-ink shadow-sm"
-                          : "text-ink/50 hover:text-ink"
-                      }`}
-                    >
-                      <Sun className={`w-[14px] h-[14px] transition-all duration-200 ${theme === "light" ? "text-amber-500 fill-amber-500" : ""}`} />
-                    </button>
-                    <button
-                      onClick={() => setTheme("dark")}
-                      className={`p-1.5 rounded-full cursor-pointer transition-all duration-200 ${
-                        theme === "dark"
-                          ? "bg-paper-canvas border border-off-black text-ink shadow-sm"
-                          : "text-ink/50 hover:text-ink"
-                      }`}
-                    >
-                      <Moon className={`w-[14px] h-[14px] transition-all duration-200 ${theme === "dark" ? "text-yellow-400 fill-yellow-400" : ""}`} />
-                    </button>
+                {/* Glass Backdrop Layer */}
+                <div
+                  className="absolute inset-0 z-0 overflow-hidden rounded-[30px]"
+                  style={{
+                    backdropFilter: "blur(10px)",
+                    filter: "url(#glass-distortion)",
+                    isolation: "isolate",
+                  }}
+                />
+                {/* Tint Overlay Layer */}
+                <div
+                  className="absolute inset-0 z-10 transition-colors duration-300"
+                  style={{
+                    background: theme === "dark" ? "rgba(15, 15, 16, 0.55)" : "rgba(255, 255, 255, 0.45)",
+                  }}
+                />
+                {/* Outer & Inner Specular Border Highlight */}
+                <div
+                  className="absolute inset-0 z-20 rounded-[30px] overflow-hidden pointer-events-none"
+                  style={{
+                    boxShadow:
+                      theme === "dark"
+                        ? "inset 1px 1px 1px 0 rgba(255, 255, 255, 0.15), inset -1px -1px 1px 1px rgba(0, 0, 0, 0.3)"
+                        : "inset 2px 2px 1px 0 rgba(255, 255, 255, 0.5), inset -1px -1px 1px 1px rgba(255, 255, 255, 0.3)",
+                  }}
+                />
+
+                {/* Content */}
+                <div className="relative z-30 flex flex-col gap-4 w-full text-ink">
+                  {/* Dark/Light mode toggle */}
+                  <div className="flex items-center justify-between">
+                    <span className="text-xs font-bold text-ink">{translate("Theme")}</span>
+                    <div className="flex bg-off-black/5 dark:bg-white/10 border border-off-black/10 dark:border-white/10 p-1 rounded-full">
+                      <motion.button
+                        whileHover={{ scale: 1.1 }}
+                        whileTap={{ scale: 0.9 }}
+                        transition={{ type: "spring", stiffness: 450, damping: 14 }}
+                        onClick={() => setTheme("light")}
+                        className={`p-1.5 rounded-full cursor-pointer transition-all duration-200 ${
+                          theme === "light"
+                            ? "bg-white/80 dark:bg-white/20 border border-off-black/15 dark:border-white/15 text-ink shadow-sm"
+                            : "text-ink/50 hover:text-ink"
+                        }`}
+                      >
+                        <Sun className={`w-[14px] h-[14px] transition-all duration-200 ${theme === "light" ? "text-amber-500 fill-amber-500" : ""}`} />
+                      </motion.button>
+                      <motion.button
+                        whileHover={{ scale: 1.1 }}
+                        whileTap={{ scale: 0.9 }}
+                        transition={{ type: "spring", stiffness: 450, damping: 14 }}
+                        onClick={() => setTheme("dark")}
+                        className={`p-1.5 rounded-full cursor-pointer transition-all duration-200 ${
+                          theme === "dark"
+                            ? "bg-white/80 dark:bg-white/20 border border-off-black/15 dark:border-white/15 text-ink shadow-sm"
+                            : "text-ink/50 hover:text-ink"
+                        }`}
+                      >
+                        <Moon className={`w-[14px] h-[14px] transition-all duration-200 ${theme === "dark" ? "text-yellow-400 fill-yellow-400" : ""}`} />
+                      </motion.button>
+                    </div>
                   </div>
-                </div>
 
-                <hr className="border-t border-off-black" />
+                  <hr className="border-t border-off-black/10 dark:border-white/10" />
 
-                {/* Language selection */}
-                <div className="flex items-center justify-between">
-                  <span className="text-xs font-bold text-ink">{translate("Language")}</span>
-                  <div className="flex bg-atmosphere-wash border border-off-black p-1 rounded-full">
-                    <button
-                      onClick={() => setLang("en")}
-                      className={`relative overflow-hidden px-3 py-1 text-xs rounded-full font-normal cursor-pointer transition-all duration-200 ${
-                        lang === "en"
-                          ? "border border-off-black shadow-sm"
-                          : "text-ink/50 hover:text-ink"
-                      }`}
-                    >
-                      {lang === "en" && (
-                        <img
-                          src="/english.png"
-                          alt="US Flag"
-                          className="absolute inset-0 w-full h-full object-cover pointer-events-none"
-                        />
-                      )}
-                      <span className={lang === "en" ? "opacity-0" : "relative z-10"}>
-                        EN
-                      </span>
-                    </button>
-                    <button
-                      onClick={() => setLang("vi")}
-                      className={`relative overflow-hidden px-3 py-1 text-xs rounded-full font-normal cursor-pointer transition-all duration-200 ${
-                        lang === "vi"
-                          ? "border border-off-black shadow-sm"
-                          : "text-ink/50 hover:text-ink"
-                      }`}
-                    >
-                      {lang === "vi" && (
-                        <img
-                          src="/vietnam.png"
-                          alt="Vietnam Flag"
-                          className="absolute inset-0 w-full h-full object-cover pointer-events-none"
-                        />
-                      )}
-                      <span className={lang === "vi" ? "opacity-0" : "relative z-10"}>
-                        VI
-                      </span>
-                    </button>
+                  {/* Language selection */}
+                  <div className="flex items-center justify-between">
+                    <span className="text-xs font-bold text-ink">{translate("Language")}</span>
+                    <div className="flex bg-off-black/5 dark:bg-white/10 border border-off-black/10 dark:border-white/10 p-1 rounded-full">
+                      <motion.button
+                        whileHover={{ scale: 1.08 }}
+                        whileTap={{ scale: 0.92 }}
+                        transition={{ type: "spring", stiffness: 450, damping: 14 }}
+                        onClick={() => setLang("en")}
+                        className={`relative overflow-hidden px-3 py-1 text-xs rounded-full font-normal cursor-pointer transition-all duration-200 ${
+                          lang === "en"
+                            ? "border border-off-black/15 dark:border-white/15 shadow-sm bg-white/80 dark:bg-white/20"
+                            : "text-ink/50 hover:text-ink"
+                        }`}
+                      >
+                        {lang === "en" && (
+                          <img
+                            src="/english.png"
+                            alt="US Flag"
+                            className="absolute inset-0 w-full h-full object-cover pointer-events-none"
+                          />
+                        )}
+                        <span className={lang === "en" ? "opacity-0" : "relative z-10"}>
+                          EN
+                        </span>
+                      </motion.button>
+                      <motion.button
+                        whileHover={{ scale: 1.08 }}
+                        whileTap={{ scale: 0.92 }}
+                        transition={{ type: "spring", stiffness: 450, damping: 14 }}
+                        onClick={() => setLang("vi")}
+                        className={`relative overflow-hidden px-3 py-1 text-xs rounded-full font-normal cursor-pointer transition-all duration-200 ${
+                          lang === "vi"
+                            ? "border border-off-black/15 dark:border-white/15 shadow-sm bg-white/80 dark:bg-white/20"
+                            : "text-ink/50 hover:text-ink"
+                        }`}
+                      >
+                        {lang === "vi" && (
+                          <img
+                            src="/vietnam.png"
+                            alt="Vietnam Flag"
+                            className="absolute inset-0 w-full h-full object-cover pointer-events-none"
+                          />
+                        )}
+                        <span className={lang === "vi" ? "opacity-0" : "relative z-10"}>
+                          VI
+                        </span>
+                      </motion.button>
+                    </div>
                   </div>
                 </div>
               </motion.div>
@@ -236,6 +354,63 @@ export function Navbar() {
           <Menu className="w-[24px] h-[24px]" />
         </button>
       </div>
+      <GlassFilter />
     </header>
   );
 }
+
+// SVG Filter Component for Liquid Glass distortion
+const GlassFilter: React.FC = () => (
+  <svg style={{ display: "none" }}>
+    <defs>
+      <filter
+        id="glass-distortion"
+        x="-20%"
+        y="-20%"
+        width="140%"
+        height="140%"
+        filterUnits="objectBoundingBox"
+      >
+        <feTurbulence
+          type="fractalNoise"
+          baseFrequency="0.001 0.005"
+          numOctaves="1"
+          seed="17"
+          result="turbulence"
+        />
+        <feComponentTransfer in="turbulence" result="mapped">
+          <feFuncR type="gamma" amplitude="1" exponent="10" offset="0.5" />
+          <feFuncG type="gamma" amplitude="0" exponent="1" offset="0" />
+          <feFuncB type="gamma" amplitude="0" exponent="1" offset="0.5" />
+        </feComponentTransfer>
+        <feGaussianBlur in="turbulence" stdDeviation="3" result="softMap" />
+        <feSpecularLighting
+          in="softMap"
+          surfaceScale="5"
+          specularConstant="1"
+          specularExponent="100"
+          lightingColor="white"
+          result="specLight"
+        >
+          <fePointLight x="-200" y="-200" z="300" />
+        </feSpecularLighting>
+        <feComposite
+          in="specLight"
+          operator="arithmetic"
+          k1="0"
+          k2="1"
+          k3="1"
+          k4="0"
+          result="litImage"
+        />
+        <feDisplacementMap
+          in="SourceGraphic"
+          in2="softMap"
+          scale="30"
+          xChannelSelector="R"
+          yChannelSelector="G"
+        />
+      </filter>
+    </defs>
+  </svg>
+);
