@@ -72,6 +72,10 @@ import b2Unit13 from "@/data/b2/unit13.json";
 import b2Unit14 from "@/data/b2/unit14.json";
 import b2Unit15 from "@/data/b2/unit15.json";
 import b2Unit16 from "@/data/b2/unit16.json";
+import b2Unit17 from "@/data/b2/unit17.json";
+import b2Unit18 from "@/data/b2/unit18.json";
+import b2Unit19 from "@/data/b2/unit19.json";
+import b2Unit20 from "@/data/b2/unit20.json";
 import c1c2Data from "@/data/destination-c1-c2.json";
 
 const b1Data = {
@@ -81,7 +85,7 @@ const b1Data = {
 
 const b2Data = {
   book: "Destination B2",
-  units: [b2Unit1, b2Unit2, b2Unit3, b2Unit4, b2Unit5, b2Unit6, b2Unit7, b2Unit8, b2Unit9, b2Unit10, b2Unit11, b2Unit12, b2Unit13, b2Unit14, b2Unit15, b2Unit16],
+  units: [b2Unit1, b2Unit2, b2Unit3, b2Unit4, b2Unit5, b2Unit6, b2Unit7, b2Unit8, b2Unit9, b2Unit10, b2Unit11, b2Unit12, b2Unit13, b2Unit14, b2Unit15, b2Unit16, b2Unit17, b2Unit18, b2Unit19, b2Unit20],
 };
 
 import { Card } from "@/components/ui/card";
@@ -186,6 +190,29 @@ function parseBoldAndItalic(text: string, baseKey: string): React.ReactNode[] {
 
 function renderSingleLineText(text: string, lineKey: string) {
   if (!text) return null;
+
+  // Custom parser for Ex: prefixes with examples and notes
+  const exMatch = text.match(/^((?:(?:US|UK):\s*)?Ex\d*:\s*)(.*?)(?:\s*(\((?:Note|note):.*?\)))?$/i);
+  if (exMatch) {
+    const prefix = exMatch[1];
+    const exampleText = exMatch[2];
+    const noteText = exMatch[3];
+
+    return (
+      <span key={lineKey} className="inline-flex flex-wrap items-center gap-1.5 py-0.5">
+        <span className="text-pale-stone font-mono text-xs not-italic">{injectFlags(prefix)}</span>
+        <span className="font-semibold text-indigo-600 dark:text-indigo-400 bg-indigo-50 dark:bg-indigo-950/30 px-1.5 py-0.5 rounded border border-indigo-100 dark:border-indigo-900/30 not-italic">
+          {parseBoldAndItalic(exampleText, `${lineKey}-ex`)}
+        </span>
+        {noteText && (
+          <span className="text-xs font-semibold text-amber-600 dark:text-amber-400 bg-amber-50 dark:bg-amber-950/30 px-2 py-0.5 rounded-full border border-amber-200 dark:border-amber-900/30 not-italic">
+            {noteText}
+          </span>
+        )}
+      </span>
+    );
+  }
+
   // Regex to match markdown links: [link text](url)
   const regex = /\[([^\]]+)\]\(([^)]+)\)/g;
   const parts: React.ReactNode[] = [];
@@ -469,7 +496,13 @@ function RichGrammarRenderer({ richGrammar }: { richGrammar: any[] }) {
                                    header === "Active Example" || 
                                    header === "Passive Form & Example" || 
                                    header === "Active Verb" || 
-                                   header === "Passive Participle";
+                                   header === "Passive Participle" ||
+                                   header === "Verb" ||
+                                   header === "Sentence & Question tag" ||
+                                   header === "Formula & Example" ||
+                                   header === "Example" ||
+                                   header === "Example Indirect Question" ||
+                                   header === "Introductory Polite Phrase";
                                  return (
                                    <td
                                      key={cIdx}

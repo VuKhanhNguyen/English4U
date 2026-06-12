@@ -1,0 +1,1031 @@
+{
+  "id": "b2-unit-20",
+  "title": "Unit 20: Weather and the environment",
+  "grammar": [],
+  "vocabulary": [
+    {
+      "word": "urban",
+      "type": "adj",
+      "meaning": "relating to, or characteristic of a town or city",
+      "example": "The government is trying to improve public transport in urban areas."
+    },
+    {
+      "word": "suburban",
+      "type": "adj",
+      "meaning": "relating to, or characteristic of a suburb",
+      "example": "We live in a quiet suburban neighborhood."
+    },
+    {
+      "word": "rural",
+      "type": "adj",
+      "meaning": "relating to, or characteristic of the countryside",
+      "example": "Life in rural areas is usually slower and more peaceful."
+    },
+    {
+      "word": "smog",
+      "type": "n",
+      "meaning": "fog or haze combined with smoke and other atmospheric pollutants",
+      "example": "The city has been covered in a thick blanket of smog all week."
+    },
+    {
+      "word": "fog",
+      "type": "n",
+      "meaning": "a thick cloud of tiny water droplets suspended in the atmosphere at or near the earth's surface that limits visibility",
+      "example": "The flight was delayed because of dense fog."
+    },
+    {
+      "word": "smoke",
+      "type": "n",
+      "meaning": "the cloud of black, gray, or white gases and dust that rises after something burns",
+      "example": "A column of black smoke rose from the burning building."
+    },
+    {
+      "word": "mist",
+      "type": "n",
+      "meaning": "a cloud of tiny water droplets suspended in the atmosphere, limit visibility to a lesser extent than fog",
+      "example": "The hills were covered in a gentle morning mist."
+    },
+    {
+      "word": "weather",
+      "type": "n",
+      "meaning": "the state of the atmosphere at a particular time and place in terms of heat, cloudiness, dryness, sunshine, wind, rain, etc.",
+      "example": "The weather is expected to be warm and sunny tomorrow."
+    },
+    {
+      "word": "climate",
+      "type": "n",
+      "meaning": "the general weather conditions prevailing in an area over a long period",
+      "example": "Many scientists are concerned about global climate change."
+    },
+    {
+      "word": "forecast",
+      "type": "n",
+      "meaning": "a calculation or estimate of future events, especially weather or financial trends",
+      "example": "What is the weather forecast for this weekend?"
+    },
+    {
+      "word": "prediction",
+      "type": "n",
+      "meaning": "a statement about what you think will happen in the future",
+      "example": "Her prediction about the election turned out to be correct."
+    },
+    {
+      "word": "waste",
+      "type": "n",
+      "meaning": "unwanted or unusable materials that are discarded",
+      "example": "The company was fined for dumping industrial waste into the river."
+    },
+    {
+      "word": "litter",
+      "type": "n",
+      "meaning": "rubbish such as paper, cans, and bottles, left lying in an open public place",
+      "example": "Please pick up your litter before leaving the park."
+    },
+    {
+      "word": "rubbish",
+      "type": "n",
+      "meaning": "waste material; refuse or litter",
+      "example": "Don't forget to put the rubbish out for collection."
+    },
+    {
+      "word": "clean",
+      "type": "adj",
+      "meaning": "free from dirt, marks, or pollution",
+      "example": "The beach was very clean and well-maintained."
+    },
+    {
+      "word": "clear",
+      "type": "adj",
+      "meaning": "transparent; unclouded; easy to see through or understand",
+      "example": "The water in the lake was crystal clear."
+    },
+    {
+      "word": "pour",
+      "type": "v",
+      "meaning": "rain heavily",
+      "example": "It started to pour just as we got off the bus."
+    },
+    {
+      "word": "drizzle",
+      "type": "v",
+      "meaning": "rain lightly in very small drops",
+      "example": "It was drizzling when we arrived at the station."
+    },
+    {
+      "word": "flood",
+      "type": "v",
+      "meaning": "cover a place with water, or become covered with water",
+      "example": "Heavy rain flooded several streets in the city center."
+    },
+    {
+      "word": "shower",
+      "type": "v",
+      "meaning": "rain briefly",
+      "example": "It showered heavily for ten minutes and then cleared up."
+    },
+    {
+      "word": "environment",
+      "type": "n",
+      "meaning": "the natural world, as a whole or in a particular geographical area, especially as affected by human activity",
+      "example": "We must do more to protect the environment."
+    },
+    {
+      "word": "surroundings",
+      "type": "n",
+      "meaning": "the things and conditions around a person or thing",
+      "example": "She soon adapted to her new surroundings."
+    },
+    {
+      "word": "wind",
+      "type": "n",
+      "meaning": "a natural movement of the air, especially in the form of a current of air blowing from a particular direction",
+      "example": "The strong wind blew down several trees."
+    },
+    {
+      "word": "air",
+      "type": "n",
+      "meaning": "the invisible gaseous substance surrounding the earth",
+      "example": "Let's go outside for some fresh air."
+    },
+    {
+      "word": "thunder",
+      "type": "n",
+      "meaning": "a loud rumbling or crashing noise heard after a lightning flash due to the expansion of rapidly heated air",
+      "example": "We heard thunder in the distance."
+    },
+    {
+      "word": "lightning",
+      "type": "n",
+      "meaning": "the occurrence of a natural electrical discharge of very short duration and high voltage between a cloud and the ground",
+      "example": "The tree was struck by lightning."
+    },
+    {
+      "word": "reservoir",
+      "type": "n",
+      "meaning": "a large natural or artificial lake used as a source of water supply",
+      "example": "The reservoir supplies drinking water to the entire region."
+    },
+    {
+      "word": "lake",
+      "type": "n",
+      "meaning": "a large body of water surrounded by land",
+      "example": "We went boating on the lake."
+    },
+    {
+      "word": "puddle",
+      "type": "n",
+      "meaning": "a small pool of liquid, especially of rainwater on the ground",
+      "example": "The kids enjoyed jumping in the puddles."
+    },
+    {
+      "word": "pond",
+      "type": "n",
+      "meaning": "a small body of still water formed naturally or by artificial means",
+      "example": "There are many frogs in the garden pond."
+    },
+    {
+      "word": "global",
+      "type": "adj",
+      "meaning": "relating to the whole world; worldwide",
+      "example": "Global warming is causing polar ice caps to melt."
+    },
+    {
+      "word": "worldwide",
+      "type": "adj",
+      "meaning": "extending or reaching throughout the world",
+      "example": "The company has a worldwide reputation for quality."
+    },
+    {
+      "word": "plain",
+      "type": "n",
+      "meaning": "a large area of flat land with few trees",
+      "example": "The plains of North America stretch for hundreds of miles."
+    },
+    {
+      "word": "land",
+      "type": "n",
+      "meaning": "the part of the earth's surface that is not covered by water",
+      "example": "They bought a piece of land to build a house."
+    },
+    {
+      "word": "field",
+      "type": "n",
+      "meaning": "an area of open land, especially one planted with crops or used for pasture",
+      "example": "The cows were grazing in the field."
+    },
+    {
+      "word": "desert",
+      "type": "n",
+      "meaning": "a barren area of landscape where little precipitation occurs and living conditions are hostile for plant and animal life",
+      "example": "They got lost in the Sahara Desert."
+    },
+    {
+      "word": "extinct",
+      "type": "adj",
+      "meaning": "no longer in existence",
+      "example": "Dinosaurs became extinct millions of years ago."
+    },
+    {
+      "word": "endangered",
+      "type": "adj",
+      "meaning": "seriously at risk of extinction",
+      "example": "The giant panda is an endangered species."
+    },
+    {
+      "word": "recycle",
+      "type": "v",
+      "meaning": "convert waste into reusable material",
+      "example": "We should recycle paper, glass, and plastic."
+    },
+    {
+      "word": "reuse",
+      "type": "v",
+      "meaning": "use something again, either for its original purpose or a new one",
+      "example": "She always reuses plastic bags for shopping."
+    },
+    {
+      "word": "reduce",
+      "type": "v",
+      "meaning": "make smaller or less in amount, degree, or size",
+      "example": "We must reduce our carbon footprint."
+    },
+    {
+      "word": "mixed reaction",
+      "type": "n",
+      "meaning": "a variety of different responses, both positive and negative",
+      "example": "The new environmental policy received a mixed reaction from the public."
+    },
+    {
+      "word": "councilor",
+      "type": "n",
+      "meaning": "a member of a council",
+      "example": "The local councilor promised to address the garbage issue."
+    },
+    {
+      "word": "scheme",
+      "type": "n",
+      "meaning": "a large-scale systematic plan or arrangement for attaining some particular object",
+      "example": "The government launched a new recycling scheme."
+    },
+    {
+      "word": "outweigh",
+      "type": "v",
+      "meaning": "be heavier, greater, or more significant than",
+      "example": "The benefits of wind energy far outweigh the costs."
+    },
+    {
+      "word": "hamlet",
+      "type": "n",
+      "meaning": "a small settlement, generally smaller than a village",
+      "example": "He grew up in a tiny hamlet in the mountains."
+    },
+    {
+      "word": "incident",
+      "type": "n",
+      "meaning": "an event or occurrence, especially one that is unusual, important, or violent",
+      "example": "The police are investigating the pollution incident."
+    },
+    {
+      "word": "wellington boots",
+      "type": "n",
+      "meaning": "waterproof rubber boots, usually reaching almost to the knee",
+      "example": "You should wear wellington boots if you walk in the mud."
+    },
+    {
+      "word": "financial incentive",
+      "type": "n",
+      "meaning": "a monetary reward offered to encourage a specific behavior",
+      "example": "The government offers financial incentives for installing solar panels."
+    },
+    {
+      "word": "stir",
+      "type": "n",
+      "meaning": "a state of excitement, anger, or interest",
+      "example": "The news about the new dump site caused a great stir in the town."
+    },
+    {
+      "word": "academic",
+      "type": "n",
+      "meaning": "a teacher or scholar in a university or other institution of higher education",
+      "example": "She is a leading academic in the field of climatology."
+    },
+    {
+      "word": "controversy",
+      "type": "n",
+      "meaning": "disagreement, typically when prolonged, public, and heated",
+      "example": "There is a lot of controversy surrounding the building of the new dam."
+    },
+    {
+      "word": "disregard for",
+      "type": "n",
+      "meaning": "wilful lack of attention or care",
+      "example": "He showed a complete disregard for the environmental laws."
+    },
+    {
+      "word": "entitle",
+      "type": "v",
+      "meaning": "give a title to a book, play, etc.; or give a right",
+      "example": "She decided to entitle her new documentary 'The Rising Oceans'."
+    },
+    {
+      "word": "presumptuous",
+      "type": "adj",
+      "meaning": "failing to observe the limits of what is permitted or appropriate; too bold",
+      "example": "It would be presumptuous to assume that the problem is already solved."
+    },
+    {
+      "word": "chimney",
+      "type": "n",
+      "meaning": "a vertical pipe which conducts smoke and combustion gases up from a fire",
+      "example": "Thick smoke was pouring out of the factory chimney."
+    },
+    {
+      "word": "leaded petrol",
+      "type": "n",
+      "meaning": "petrol containing tetraethyl lead to reduce engine knocking",
+      "example": "Most countries have banned leaded petrol to reduce air pollution."
+    },
+    {
+      "word": "demonstration",
+      "type": "n",
+      "meaning": "a public meeting or march protesting against something",
+      "example": "They held a peaceful demonstration against the new airport."
+    },
+    {
+      "word": "biodegradable",
+      "type": "adj",
+      "meaning": "capable of being decomposed by bacteria or other living organisms",
+      "example": "These plates are made of biodegradable material."
+    },
+    {
+      "word": "barometer",
+      "type": "n",
+      "meaning": "an instrument measuring atmospheric pressure, used especially in forecasting the weather",
+      "example": "The barometer is falling, which means bad weather is on the way."
+    },
+    {
+      "word": "steer the boat",
+      "type": "phr",
+      "meaning": "guide the direction of a vessel",
+      "example": "It is difficult to steer the boat in a strong current."
+    },
+    {
+      "word": "so-called",
+      "type": "adj",
+      "meaning": "commonly named or falsely styled",
+      "example": "The so-called environmental cleanup was a complete failure."
+    },
+    {
+      "word": "notorious",
+      "type": "adj",
+      "meaning": "famous or well known, typically for some bad quality or deed",
+      "example": "The area is notorious for heavy flooding."
+    },
+    {
+      "word": "perished",
+      "type": "adj",
+      "meaning": "died, especially in a violent or sudden way; or suffered from cold",
+      "example": "Hundreds of birds perished in the oil spill."
+    },
+    {
+      "word": "faultline",
+      "type": "n",
+      "meaning": "a line on a rock surface or the ground that traces a geological fault",
+      "example": "The town is built near a major faultline."
+    },
+    {
+      "word": "skyscrapers",
+      "type": "n",
+      "meaning": "very tall buildings of many stories",
+      "example": "The skyscrapers of the city were hidden in the smog."
+    },
+    {
+      "word": "seismologist",
+      "type": "n",
+      "meaning": "a scientist who studies earthquakes and seismic waves",
+      "example": "Seismologists warned that another tremor could occur."
+    },
+    {
+      "word": "quake",
+      "type": "n",
+      "meaning": "an earthquake",
+      "example": "The quake measured 6.2 on the Richter scale."
+    },
+    {
+      "word": "disrupt",
+      "type": "v",
+      "meaning": "interrupt an event, activity, or process by causing a disturbance or problem",
+      "example": "Heavy snow disrupted traffic across the country."
+    },
+    {
+      "word": "meteorologist",
+      "type": "n",
+      "meaning": "an expert in or student of meteorology; a weather forecaster",
+      "example": "Meteorologists predict that the storm will hit tomorrow."
+    },
+    {
+      "word": "eclipse",
+      "type": "n",
+      "meaning": "an obscuring of the light from one celestial body by the passage of another between it and the observer",
+      "example": "We wore special glasses to watch the solar eclipse."
+    },
+    {
+      "word": "pose threat",
+      "type": "phr",
+      "meaning": "present a danger or risk to someone or something",
+      "example": "Climate change poses a threat to biodiversity."
+    },
+    {
+      "word": "drought",
+      "type": "n",
+      "meaning": "a prolonged period of abnormally low rainfall, leading to a shortage of water",
+      "example": "The drought caused crop failures across the region."
+    },
+    {
+      "word": "crisis",
+      "type": "n",
+      "meaning": "a time of intense difficulty, trouble, or danger",
+      "example": "The water crisis is affecting millions of households."
+    },
+    {
+      "word": "badger",
+      "type": "n",
+      "meaning": "a heavily built carnivorous mammal of the weasel family, with grey striped coat",
+      "example": "The badger is a nocturnal animal."
+    },
+    {
+      "word": "demolish",
+      "type": "v",
+      "meaning": "pull down or destroy a building or structure",
+      "example": "They plan to demolish the old warehouse next week."
+    },
+    {
+      "word": "fault",
+      "type": "n",
+      "meaning": "a crack in the earth's crust resulting from the displacement of rock",
+      "example": "The earthquake occurred along a major fault."
+    }
+  ],
+  "phrasalVerbs": [
+    {
+      "phrasalVerb": "call for",
+      "meaning": "need or demand",
+      "example": "EX: The environmental crisis calls for immediate action from all governments."
+    },
+    {
+      "phrasalVerb": "call off",
+      "meaning": "cancel",
+      "example": "EX: The outdoor concert was called off due to heavy rain."
+    },
+    {
+      "phrasalVerb": "clear up",
+      "meaning": "improve (for weather)",
+      "example": "EX: It was raining this morning, but it has cleared up now."
+    },
+    {
+      "phrasalVerb": "cut off",
+      "meaning": "block, disconnect, or isolate",
+      "example": "EX: The mountain village was cut off by the heavy snowstorm."
+    },
+    {
+      "phrasalVerb": "die down",
+      "meaning": "become less strong or noisy",
+      "example": "EX: We waited until the wind died down before going outside."
+    },
+    {
+      "phrasalVerb": "do up",
+      "meaning": "repair or improve a building",
+      "example": "EX: They plan to do up the old cottage by the lake."
+    },
+    {
+      "phrasalVerb": "face up to",
+      "meaning": "accept and deal with a difficult situation",
+      "example": "EX: We must face up to the fact that global warming is a reality."
+    },
+    {
+      "phrasalVerb": "get (sb) down",
+      "meaning": "make someone feel sad or depressed",
+      "example": "EX: The constant grey skies and rain really got her down."
+    },
+    {
+      "phrasalVerb": "put down to",
+      "meaning": "attribute something to a cause",
+      "example": "EX: The increase in temperatures was put down to the greenhouse effect."
+    },
+    {
+      "phrasalVerb": "put out",
+      "meaning": "extinguish a fire",
+      "example": "EX: Firefighters worked hard to put out the forest fire."
+    },
+    {
+      "phrasalVerb": "set in",
+      "meaning": "start and seem likely to continue (for bad weather)",
+      "example": "EX: The winter rain has set in, so we won't go out today."
+    },
+    {
+      "phrasalVerb": "stand for",
+      "meaning": "represent, write as shorthand, or tolerate",
+      "example": "EX: CO2 stands for carbon dioxide."
+    },
+    {
+      "phrasalVerb": "tear down",
+      "meaning": "destroy or demolish a building",
+      "example": "EX: They tore down the old factory to build a park."
+    },
+    {
+      "phrasalVerb": "throw away",
+      "meaning": "discard or get rid of",
+      "example": "EX: You shouldn't just throw away plastic bottles."
+    }
+  ],
+  "prepositionalPhrases": [],
+  "collocations": [
+    {
+      "word": "control",
+      "collocation": "lose control (of sth)",
+      "meaning": "fail to keep something under limit or influence"
+    },
+    {
+      "word": "control",
+      "collocation": "take control (of sth)",
+      "meaning": "assume power or authority over something"
+    },
+    {
+      "word": "control",
+      "collocation": "have control (of sth)",
+      "meaning": "possess power or influence over something"
+    },
+    {
+      "word": "control",
+      "collocation": "in control",
+      "meaning": "having the ability to direct or manage something"
+    },
+    {
+      "word": "control",
+      "collocation": "out of control",
+      "meaning": "no longer managed or under influence"
+    },
+    {
+      "word": "control",
+      "collocation": "under control",
+      "meaning": "being managed successfully"
+    },
+    {
+      "word": "control",
+      "collocation": "under the control of sb",
+      "meaning": "being managed or directed by someone"
+    },
+    {
+      "word": "effect",
+      "collocation": "have an effect on sth/sb",
+      "meaning": "produce a result or change in someone or something"
+    },
+    {
+      "word": "effect",
+      "collocation": "take effect",
+      "meaning": "start to produce a result or become active"
+    },
+    {
+      "word": "end",
+      "collocation": "in the end",
+      "meaning": "finally, after a long period of time"
+    },
+    {
+      "word": "end",
+      "collocation": "at the end of",
+      "meaning": "at the final part of something"
+    },
+    {
+      "word": "end",
+      "collocation": "come to an end",
+      "meaning": "finish or stop happening"
+    },
+    {
+      "word": "end",
+      "collocation": "come to the end of",
+      "meaning": "reach the final part of something"
+    },
+    {
+      "word": "end",
+      "collocation": "reach the end of",
+      "meaning": "arrive at the limit of something"
+    },
+    {
+      "word": "end",
+      "collocation": "happy ending",
+      "meaning": "a satisfying or pleasant conclusion to a story"
+    },
+    {
+      "word": "floor",
+      "collocation": "on the floor",
+      "meaning": "on the surface of a room where people walk"
+    },
+    {
+      "word": "floor",
+      "collocation": "on the ground/first/second floor",
+      "meaning": "on a specific level of a building"
+    },
+    {
+      "word": "fuss",
+      "collocation": "make a fuss about sth/doing",
+      "meaning": "show unnecessary excitement or worry about something"
+    },
+    {
+      "word": "fuss",
+      "collocation": "cause a fuss about sth/doing",
+      "meaning": "make a disturbance or worry about something"
+    },
+    {
+      "word": "long",
+      "collocation": "(for) as long as",
+      "meaning": "on condition that, or for the duration of"
+    },
+    {
+      "word": "long",
+      "collocation": "for a long time",
+      "meaning": "during a prolonged period"
+    },
+    {
+      "word": "long",
+      "collocation": "take a long time (to do)",
+      "meaning": "require a large amount of time to complete"
+    },
+    {
+      "word": "long",
+      "collocation": "long to do",
+      "meaning": "want to do something very much"
+    },
+    {
+      "word": "long",
+      "collocation": "long for sth (to do)",
+      "meaning": "desire something very strongly"
+    },
+    {
+      "word": "look",
+      "collocation": "have/take a look at sb/sth",
+      "meaning": "direct one's gaze to inspect someone or something"
+    },
+    {
+      "word": "look",
+      "collocation": "look like sth/sb",
+      "meaning": "resemble someone or something in appearance"
+    },
+    {
+      "word": "look",
+      "collocation": "look at sth/sb",
+      "meaning": "direct one's eyes towards someone or something"
+    },
+    {
+      "word": "look",
+      "collocation": "look for sth/sb",
+      "meaning": "search for someone or something"
+    },
+    {
+      "word": "mess",
+      "collocation": "make a mess of sth",
+      "meaning": "do something badly or make it dirty/untidy"
+    },
+    {
+      "word": "mess",
+      "collocation": "in a mess",
+      "meaning": "dirty, untidy, or in a state of confusion"
+    },
+    {
+      "word": "responsibility",
+      "collocation": "have responsibility for sth/doing",
+      "meaning": "be in charge of or accountable for something"
+    },
+    {
+      "word": "responsibility",
+      "collocation": "take responsibility for sth/doing",
+      "meaning": "accept the duty to deal with something"
+    },
+    {
+      "word": "shower",
+      "collocation": "take/have a shower",
+      "meaning": "wash oneself under a spray of water"
+    },
+    {
+      "word": "shower",
+      "collocation": "a rain shower",
+      "meaning": "a brief period of rain"
+    },
+    {
+      "word": "shower",
+      "collocation": "a light shower of rain",
+      "meaning": "a gentle, short fall of rain"
+    },
+    {
+      "word": "shower",
+      "collocation": "a heavy shower of rain",
+      "meaning": "a strong, intense fall of rain"
+    },
+    {
+      "word": "sight",
+      "collocation": "caught sight of",
+      "meaning": "see something or someone suddenly for a moment"
+    },
+    {
+      "word": "sight",
+      "collocation": "lose sight of",
+      "meaning": "fail to see someone or something anymore, or forget a goal"
+    },
+    {
+      "word": "sight",
+      "collocation": "in sight of sth",
+      "meaning": "visible, or close to seeing something"
+    },
+    {
+      "word": "sight",
+      "collocation": "at first sight",
+      "meaning": "when first seen"
+    },
+    {
+      "word": "waste",
+      "collocation": "a waste of time",
+      "meaning": "a bad use of time that produces no results"
+    },
+    {
+      "word": "waste",
+      "collocation": "waste your time",
+      "meaning": "spend time on something useless"
+    },
+    {
+      "word": "waste",
+      "collocation": "industrial waste",
+      "meaning": "unwanted material produced by factories"
+    },
+    {
+      "word": "waste",
+      "collocation": "household waste",
+      "meaning": "rubbish produced by people in their homes"
+    },
+    {
+      "word": "weather",
+      "collocation": "under the weather",
+      "meaning": "feeling slightly sick or unwell"
+    },
+    {
+      "word": "world",
+      "collocation": "all over the world",
+      "meaning": "in every part of the earth"
+    },
+    {
+      "word": "world",
+      "collocation": "around the world",
+      "meaning": "surrounding or visiting many parts of the earth"
+    },
+    {
+      "word": "world",
+      "collocation": "throughout the world",
+      "meaning": "in all parts of the earth"
+    },
+    {
+      "word": "world",
+      "collocation": "the whole world",
+      "meaning": "everyone or everything on earth"
+    },
+    {
+      "word": "world",
+      "collocation": "in the world",
+      "meaning": "on earth (often used for emphasis)"
+    },
+    {
+      "word": "world",
+      "collocation": "world record",
+      "meaning": "the best achievement in the world in a particular activity"
+    }
+  ],
+  "wordPatterns": [
+    {
+      "verb": "aware of sth",
+      "pattern": "adjective",
+      "meaning": "having knowledge or perception of something",
+      "example": "EX: Most people are aware of the dangers of climate change."
+    },
+    {
+      "verb": "aware that",
+      "pattern": "adjective",
+      "meaning": "having knowledge that something is true",
+      "example": "EX: Are you aware that a new waste site is opening near here?"
+    },
+    {
+      "verb": "covered in/with sth",
+      "pattern": "adjective",
+      "meaning": "having a layer of something on the surface",
+      "example": "EX: After the volcanic eruption, the town was covered in ash."
+    },
+    {
+      "verb": "disappointed with/by sth; disappointed in sb",
+      "pattern": "adjective",
+      "meaning": "unhappy because something or someone is not as good as expected",
+      "example": "EX: We were disappointed by the lack of environmental measures.\nEX: She was disappointed in her team for not recycling."
+    },
+    {
+      "verb": "except for sth/doing",
+      "pattern": "preposition",
+      "meaning": "not including something or an action",
+      "example": "EX: The park is clean, except for some plastic bottles near the gate."
+    },
+    {
+      "verb": "expect sth/sb to do",
+      "pattern": "verb",
+      "meaning": "regard something or someone as likely to perform an action",
+      "example": "EX: Scientists expect temperatures to rise over the next decade."
+    },
+    {
+      "verb": "expect that",
+      "pattern": "verb",
+      "meaning": "regard it as likely that something is true",
+      "example": "EX: We expect that the weather will improve by tomorrow."
+    },
+    {
+      "verb": "familiar with sth",
+      "pattern": "adjective",
+      "meaning": "knowing something well",
+      "example": "EX: Are you familiar with the government's new green policy?"
+    },
+    {
+      "verb": "familiar to sb",
+      "pattern": "adjective",
+      "meaning": "well known to someone",
+      "example": "EX: The quiet countryside streets were very familiar to him."
+    },
+    {
+      "verb": "famous for sth/doing",
+      "pattern": "adjective",
+      "meaning": "known by many people for something or an action",
+      "example": "EX: The region is famous for its beautiful lakes."
+    },
+    {
+      "verb": "glance at sth/sb",
+      "pattern": "verb",
+      "meaning": "take a quick look at something or someone",
+      "example": "EX: She glanced at the thermometer on the wall."
+    },
+    {
+      "verb": "hard to do",
+      "pattern": "adjective",
+      "meaning": "difficult to perform",
+      "example": "EX: It is hard to predict earthquakes accurately."
+    },
+    {
+      "verb": "hard doing",
+      "pattern": "adjective",
+      "meaning": "difficult to perform",
+      "example": "EX: She had a hard time finding the remote weather station."
+    },
+    {
+      "verb": "prevent sth",
+      "pattern": "verb",
+      "meaning": "stop something from happening",
+      "example": "EX: We must take action to prevent further pollution."
+    },
+    {
+      "verb": "prevent sb from doing",
+      "pattern": "verb",
+      "meaning": "stop someone from performing an action",
+      "example": "EX: The bad weather prevented us from going on the hike."
+    },
+    {
+      "verb": "prevent sth from happening",
+      "pattern": "verb",
+      "meaning": "stop an event from taking place",
+      "example": "EX: Nothing could prevent the flood from damaging the village."
+    },
+    {
+      "verb": "short of sth",
+      "pattern": "adjective",
+      "meaning": "not having enough of something",
+      "example": "EX: The drought has left the reservoir short of water."
+    },
+    {
+      "verb": "short on sth",
+      "pattern": "adjective",
+      "meaning": "lacking a supply of something",
+      "example": "EX: We are short on volunteers to help clean the beach."
+    },
+    {
+      "verb": "warn sb about/against sth/doing",
+      "pattern": "verb",
+      "meaning": "advise someone to be careful of something or an action",
+      "example": "EX: The signs warn visitors against feeding the wild animals."
+    },
+    {
+      "verb": "warn sb of sth",
+      "pattern": "verb",
+      "meaning": "alert someone to a danger or problem",
+      "example": "EX: Forecasters warned residents of the approaching storm."
+    },
+    {
+      "verb": "warn sb not to do sth",
+      "pattern": "verb",
+      "meaning": "advise someone not to perform a certain action",
+      "example": "EX: We were warned not to touch the chemical waste."
+    },
+    {
+      "verb": "warn (sb) that",
+      "pattern": "verb",
+      "meaning": "alert someone that something bad is likely to happen",
+      "example": "EX: Scientists warn that sea levels will continue to rise."
+    }
+  ],
+  "wordFormation": [
+    {
+      "word": "accurate",
+      "type": "adjective",
+      "meaning": "(in)accurate: (not) correct or exact / (in)accuracy: the quality of (not) being correct or exact",
+      "example": "EX: Weather forecasts are not always accurate.\nEX: The inaccuracy of the thermometer caused some confusion."
+    },
+    {
+      "word": "danger",
+      "type": "noun",
+      "meaning": "danger: the possibility of harm or death / endanger: put someone or something at risk of harm or destruction / dangerous: likely to cause harm or death / endangered: at risk of extinction",
+      "example": "EX: Glaciers melting poses a danger to coastal cities.\nEX: Plastic pollution endangers marine life.\nEX: Heavy smog makes driving highly dangerous.\nEX: The black rhino is a critically endangered species."
+    },
+    {
+      "word": "environment",
+      "type": "noun",
+      "meaning": "environment: the surroundings or conditions in which a person, animal, or plant lives / environmentalist: a person who is concerned with or advocates the protection of the environment / environmental: relating to the natural world and the impact of human activity on it / environmentally: in a way that relates to the environment",
+      "example": "EX: We must protect our natural environment.\nEX: The environmentalist spoke about global warming.\nEX: Pollution is a major environmental concern.\nEX: The product is environmentally friendly."
+    },
+    {
+      "word": "develop",
+      "type": "verb",
+      "meaning": "develop: grow or cause to grow and become more mature or advanced / development: the process of developing or being developed / developer: a person or company that builds houses or develops land/software / developing: growing or becoming more advanced (like a developing country) / developed: advanced or mature (like a developed nation)",
+      "example": "EX: Cities develop quickly in this region.\nEX: Solar power technology has seen great development.\nEX: The developer built a new residential district.\nEX: We need to support developing countries.\nEX: Industrial waste is a problem in developed nations."
+    },
+    {
+      "word": "extreme",
+      "type": "adjective",
+      "meaning": "extreme: reaching a high or the highest degree, or very severe / extremity: the furthest point or limit of something / extremist: a person who holds extreme views / extremely: to a very great degree; very",
+      "example": "EX: Extreme weather conditions are becoming more frequent.\nEX: The storm hit the northern extremity of the country.\nEX: Environmental extremists protested outside the factory.\nEX: It was extremely cold during the winter."
+    },
+    {
+      "word": "freeze",
+      "type": "verb",
+      "meaning": "freezer: a large container in which food can be frozen and stored / freeze: turn into ice or become hard because of extreme cold / freezing: extremely cold / frozen: turned into ice or preserved by freezing",
+      "example": "EX: Keep the frozen food in the freezer.\nEX: The lake freezes over in the winter.\nEX: The freezing wind made us shiver.\nEX: We bought some frozen peas."
+    },
+    {
+      "word": "globe",
+      "type": "noun",
+      "meaning": "globe: a spherical representation of the earth, or the earth itself / global: relating to the whole world; worldwide / globally: in a global way",
+      "example": "EX: He travelled all around the globe.\nEX: Global temperatures are rising rapidly.\nEX: The company is globally recognized."
+    },
+    {
+      "word": "great",
+      "type": "adjective",
+      "meaning": "great: considerably above average / greatness: the quality of being great or distinguished / greatly: very much / extremely",
+      "example": "EX: Climate change is a great threat to our planet.\nEX: The leader was remembered for his greatness.\nEX: Air quality has greatly improved since the ban."
+    },
+    {
+      "word": "harm",
+      "type": "noun",
+      "meaning": "harm: physical injury or damage / harmful: causing or likely to cause harm / harmless: not able or likely to cause harm / unharmed: not injured or damaged / harmlessly: in a harmless way",
+      "example": "EX: Acid rain does great harm to forests.\nEX: Greenhouse gases are harmful to the atmosphere.\nEX: The water snake is completely harmless.\nEX: Fortunately, the animals escaped the fire unharmed."
+    },
+    {
+      "word": "likely",
+      "type": "adjective",
+      "meaning": "(un)likely: (not) probable or expected to happen / likelihood: probability / like: similar to",
+      "example": "EX: Rain is unlikely this afternoon.\nEX: There is a high likelihood of flooding in low-lying areas."
+    },
+    {
+      "word": "low",
+      "type": "adjective",
+      "meaning": "low: of less than average height or position / lowness: the quality or state of being low / lower: move something or someone down / lowly: low in status",
+      "example": "EX: The water level in the pond is low.\nEX: The lowness of the clouds reduced visibility.\nEX: We need to lower carbon emissions."
+    },
+    {
+      "word": "neighbour",
+      "type": "noun",
+      "meaning": "neighbour: a person living next door or very near / neighbourhood: a district or community / neighbouring: next to or very near / neighbourly: friendly and helpful",
+      "example": "EX: Our neighbours help us recycle.\nEX: This is a very clean neighbourhood.\nEX: The forest extends into neighbouring countries.\nEX: It was very neighbourly of them to clear our path."
+    },
+    {
+      "word": "nature",
+      "type": "noun",
+      "meaning": "nature: the physical world / (un)natural: (not) existing in or caused by nature / (un)naturally: in a (not) natural way",
+      "example": "EX: It is important to preserve nature.\nEX: The flood was a natural disaster.\nEX: The chemical green colour looked unnatural."
+    },
+    {
+      "word": "pollute",
+      "type": "verb",
+      "meaning": "pollute: contaminate water, air, or soil / pollution: the presence of harmful substances in the environment / pollutant: a substance that pollutes / (un)polluted: (not) contaminated",
+      "example": "EX: Exhaust fumes pollute the air.\nEX: We must reduce plastic pollution.\nEX: Sulphur dioxide is a common air pollutant.\nEX: The lake is clear and unpolluted."
+    },
+    {
+      "word": "reside",
+      "type": "verb",
+      "meaning": "reside: live in a particular place / resident: a person who lives in a place / residence: a person's home / residential: designed for people to live in",
+      "example": "EX: Many wild animals reside in the forest.\nEX: Local residents complained about the litter.\nEX: The old mansion is now a private residence.\nEX: They live in a quiet residential area."
+    },
+    {
+      "word": "sun",
+      "type": "noun",
+      "meaning": "sun: the star round which the earth orbits / sunshine: direct sunlight / sunny: bright with sunlight / sunless: without sun",
+      "example": "EX: The sun provides heat and light.\nEX: We sat outside in the warm sunshine.\nEX: We had a sunny afternoon on the beach.\nEX: It was a sunless and grey winter day."
+    }
+  ]
+}

@@ -1,0 +1,238 @@
+{
+  "id": "b2-unit-18",
+  "title": "Unit 18: Education and learning",
+  "grammar": [],
+  "vocabulary": [
+    { "word": "take", "type": "v", "meaning": "to perform an exam, test, or course", "example": "I have to take a biology exam tomorrow morning." },
+    { "word": "pass", "type": "v", "meaning": "to be successful in an exam, test, or course", "example": "She was delighted to pass her driving test." },
+    { "word": "read", "type": "v", "meaning": "to look at and understand the meaning of written or printed words", "example": "I like to read the newspaper over breakfast." },
+    { "word": "study", "type": "v", "meaning": "to learn about a subject, especially in an educational course or by reading books", "example": "He wants to study medicine at university." },
+    { "word": "test", "type": "n", "meaning": "a short exam to see how much you know or how well you can do something", "example": "We have a quick spelling test every Friday." },
+    { "word": "exam", "type": "n", "meaning": "an official test of knowledge or ability in a particular subject", "example": "He is studying hard for his final school exams." },
+    { "word": "primary", "type": "adj", "meaning": "relating to the education of children between the ages of about five and eleven", "example": "In the UK, primary school begins at age four or five." },
+    { "word": "secondary", "type": "adj", "meaning": "relating to the education of children between the ages of eleven and sixteen or eighteen", "example": "After primary school, students move on to secondary school." },
+    { "word": "high school", "type": "n", "meaning": "a school for students between the ages of eleven and eighteen", "example": "She goes to a high school in Chicago." },
+    { "word": "colleague", "type": "n", "meaning": "a person that you work with", "example": "He discussed the proposal with his colleagues." },
+    { "word": "classmate", "type": "n", "meaning": "a person who is in the same class as you at school or college", "example": "She invited all her classmates to her birthday party." },
+    { "word": "prefect", "type": "n", "meaning": "an older student in a school who is given some authority and helps to control the younger students", "example": "He was chosen to be a school prefect." },
+    { "word": "pupil", "type": "n", "meaning": "a child at school who is being taught", "example": "The school has over five hundred pupils." },
+    { "word": "student", "type": "n", "meaning": "a person who is studying at a university, college, or school", "example": "He is a student at the local college." },
+    { "word": "qualification", "type": "n", "meaning": "an official record showing that you have finished a training course or have the necessary skills", "example": "You will need professional qualifications for this job." },
+    { "word": "quality", "type": "n", "meaning": "a characteristic or feature of someone or something", "example": "Honesty is one of her best qualities." },
+    { "word": "count", "type": "v", "meaning": "to say numbers one after another in order, or calculate the total number", "example": "She can count from one to ten in French." },
+    { "word": "measure", "type": "v", "meaning": "to find the size, quantity, or degree of something", "example": "He measured the width of the table." },
+    { "word": "degree", "type": "n", "meaning": "a course of study at a college or university, or the qualification given to a student who completes this", "example": "She has a physics degree from Oxford." },
+    { "word": "certificate", "type": "n", "meaning": "an official document that states that information on it is true or that you have completed a course", "example": "He received a certificate for completing the first aid course." },
+    { "word": "result", "type": "n", "meaning": "the mark or grade that you get in an exam or test", "example": "The exam results will be posted next week." },
+    { "word": "speak", "type": "v", "meaning": "to use your voice to say words in a language", "example": "Can you speak Spanish?" },
+    { "word": "talk", "type": "v", "meaning": "to say things to someone as part of a conversation", "example": "They talked about their school days for hours." },
+    { "word": "lesson", "type": "n", "meaning": "a period of time in which students are taught a subject or activity", "example": "We have an English lesson on Monday mornings." },
+    { "word": "subject", "type": "n", "meaning": "an area of knowledge that you study in a school or university", "example": "Math is my favorite subject." },
+    { "word": "achieve", "type": "v", "meaning": "to succeed in doing or getting something as a result of your actions", "example": "She worked hard to achieve her goals." },
+    { "word": "reach", "type": "v", "meaning": "to arrive at a particular point, stage, or level", "example": "The temperature reached thirty degrees yesterday." },
+    { "word": "task", "type": "n", "meaning": "a piece of work that has to be done, especially one that is difficult or unpleasant", "example": "He was given the task of cleaning the classroom." },
+    { "word": "effort", "type": "n", "meaning": "physical or mental activity needed to achieve something", "example": "Writing a book takes a lot of time and effort." },
+    { "word": "know", "type": "v", "meaning": "to have information in your mind", "example": "I know the answer to this question." },
+    { "word": "recognize", "type": "v", "meaning": "to know someone or something because you have seen, heard, or experienced them before", "example": "I didn't recognize him with his new haircut." },
+    { "word": "teach", "type": "v", "meaning": "to show someone how to do something or give lessons in a school", "example": "She teaches biology at the high school." },
+    { "word": "learn", "type": "v", "meaning": "to gain knowledge or skill in a new subject or activity", "example": "He is learning to play the piano." },
+    { "word": "grammar school", "type": "n", "meaning": "a selective secondary school in the UK for academic students", "example": "He passed the entrance exam to get into the grammar school." },
+    { "word": "comprehensive school", "type": "n", "meaning": "a secondary school in the UK for children of all abilities", "example": "Most children in the area attend the local comprehensive school." },
+    { "word": "astronomy", "type": "n", "meaning": "the scientific study of stars, planets, and space", "example": "She has been interested in astronomy since she was a child." },
+    { "word": "MA", "type": "n", "meaning": "Master of Arts, a postgraduate degree in an arts or social science subject", "example": "He is studying for an MA in history." },
+    { "word": "compulsory", "type": "adj", "meaning": "required by law or a rule; obligatory", "example": "Wearing a school uniform is compulsory." },
+    { "word": "boast", "type": "v", "meaning": "to talk with excessive pride and self-satisfaction about one's achievements", "example": "He boasted about his high marks to everyone." },
+    { "word": "decent", "type": "adj", "meaning": "conforming with generally accepted standards of respectable behavior, or of a satisfactory quality", "example": "He got a decent job after graduating." }
+  ],
+  "phrasalVerbs": [
+    { "phrasalVerb": "catch on", "meaning": "understand", "example": "EX: It took me a while to catch on to what they were doing." },
+    { "phrasalVerb": "come (a)round (to)", "meaning": "be persuaded to change your mind or opinion", "example": "EX: I'm sure he'll come round to our way of thinking in the end." },
+    { "phrasalVerb": "cross out", "meaning": "draw a line through something written", "example": "EX: If you make a mistake, just cross it out." },
+    { "phrasalVerb": "dawn on", "meaning": "suddenly realize something for the first time", "example": "EX: It suddenly dawned on me that I had left my keys inside." },
+    { "phrasalVerb": "deal with", "meaning": "handle, cope with, or take action about", "example": "EX: We need to deal with this problem before it gets worse." },
+    { "phrasalVerb": "drop out (of)", "meaning": "leave school, college, etc. without finishing your studies", "example": "EX: He dropped out of university after the first term." },
+    { "phrasalVerb": "get at", "meaning": "try to express or suggest something", "example": "EX: I don't understand what you are getting at." },
+    { "phrasalVerb": "get on with", "meaning": "continue doing something", "example": "EX: Stop talking and get on with your work." },
+    { "phrasalVerb": "give in", "meaning": "stop competing or arguing and accept you cannot win", "example": "EX: I resisted for a long time but finally gave in." },
+    { "phrasalVerb": "give up", "meaning": "stop doing something you do regularly", "example": "EX: He decided to give up smoking." },
+    { "phrasalVerb": "keep up with", "meaning": "move or make progress at the same rate as someone or something else", "example": "EX: It's hard to keep up with the latest technological developments." },
+    { "phrasalVerb": "catch up with", "meaning": "reach the same point or level as someone else", "example": "EX: Run ahead and I will catch up with you later." },
+    { "phrasalVerb": "sail through", "meaning": "do or deal with something very easily", "example": "EX: She sailed through her exams without any difficulty." },
+    { "phrasalVerb": "set out", "meaning": "explain, describe, or arrange something in a clear, detailed way", "example": "EX: He set out his ideas in a clear presentation." },
+    { "phrasalVerb": "think over", "meaning": "consider a problem or decision carefully", "example": "EX: Let me think it over before I give you an answer." }
+  ],
+  "prepositionalPhrases": [],
+  "collocations": [
+    { "word": "homework", "collocation": "do your homework", "meaning": "perform school work at home" },
+    { "word": "homework", "collocation": "have homework to do", "meaning": "possess school work that needs to be completed at home" },
+    { "word": "attention", "collocation": "pay attention to sth/sb", "meaning": "listen to, watch, or consider something or someone carefully" },
+    { "word": "attention", "collocation": "attract sb's attention", "meaning": "make someone notice you or look at you" },
+    { "word": "attention", "collocation": "draw sb's attention to", "meaning": "make someone notice a particular fact or situation" },
+    { "word": "break", "collocation": "take / have a break from sth/doing", "meaning": "stop doing an activity for a short period of time to rest" },
+    { "word": "break", "collocation": "lunch break", "meaning": "a period of time in the middle of the day for eating lunch" },
+    { "word": "break", "collocation": "tea break", "meaning": "a short period of time when you stop working to have a drink" },
+    { "word": "break", "collocation": "commercial break", "meaning": "a short interruption in a television programme to show advertisements" },
+    { "word": "break", "collocation": "give sb a break", "meaning": "allow someone to rest, or stop criticizing them" },
+    { "word": "discussion", "collocation": "have a discussion (with sb) about/on sth/doing", "meaning": "talk about a topic in detail with someone" },
+    { "word": "exam", "collocation": "take/do/have an exam", "meaning": "sit for an official test of knowledge" },
+    { "word": "exam", "collocation": "pass an exam", "meaning": "succeed in an official test of knowledge" },
+    { "word": "exam", "collocation": "fail an exam", "meaning": "be unsuccessful in an official test of knowledge" },
+    { "word": "exam", "collocation": "sit (for) an exam", "meaning": "take an exam as a student" },
+    { "word": "idea", "collocation": "question an idea", "meaning": "express doubt about an opinion or suggestion" },
+    { "word": "idea", "collocation": "have an idea", "meaning": "possess a thought, plan, or suggestion" },
+    { "word": "idea", "collocation": "bright idea", "meaning": "a very clever or useful thought or suggestion" },
+    { "word": "idea", "collocation": "have no idea (about)", "meaning": "not know anything about something" },
+    { "word": "learn", "collocation": "have a lot to learn about sth/doing", "meaning": "need to acquire much more knowledge or skill about something" },
+    { "word": "learn", "collocation": "learn (how) to do", "meaning": "acquire the skill or knowledge needed to perform an action" },
+    { "word": "lesson", "collocation": "go to a lesson", "meaning": "attend a class to be taught a subject" },
+    { "word": "lesson", "collocation": "have a lesson", "meaning": "participate in a class session" },
+    { "word": "lesson", "collocation": "double lesson", "meaning": "a school session that lasts for two class periods consecutively" },
+    { "word": "lesson", "collocation": "learn a/your lesson", "meaning": "understand what not to do in future as a result of a bad experience" },
+    { "word": "lesson", "collocation": "teach sb a lesson", "meaning": "show someone that their bad behavior has unpleasant consequences" },
+    { "word": "sense", "collocation": "make sense of sth", "meaning": "succeed in understanding something complicated or unclear" },
+    { "word": "sense", "collocation": "it makes sense (to do)", "meaning": "it is reasonable or sensible to perform an action" },
+    { "word": "sense", "collocation": "sense of humour/taste/sight", "meaning": "the ability to appreciate humour, taste, or sight" },
+    { "word": "mind", "collocation": "make up your mind about sth/doing", "meaning": "make a final decision about something" },
+    { "word": "mind", "collocation": "bear / keep (sth) in mind", "meaning": "remember and consider something" },
+    { "word": "mind", "collocation": "in two minds abt sth / doing", "meaning": "unable to decide between two choices" },
+    { "word": "mind", "collocation": "change your mind (abt sth / doing)", "meaning": "change your opinion or decision about something" },
+    { "word": "mind", "collocation": "cross your mind", "meaning": "come into your thoughts briefly or unexpectedly" },
+    { "word": "mind", "collocation": "to my mind", "meaning": "in my opinion" },
+    { "word": "mind", "collocation": "(not) mind if", "meaning": "not object if something happens" },
+    { "word": "mind", "collocation": "be out of sb's mind", "meaning": "be crazy, or be extremely worried about something" },
+    { "word": "opinion", "collocation": "in my opinion", "meaning": "according to my own thoughts or beliefs" },
+    { "word": "opinion", "collocation": "give/express your/an opinion (of/about sth/doing)", "meaning": "state what you think about a topic" },
+    { "word": "opinion", "collocation": "hold/have an opinion of/about", "meaning": "possess a particular belief or attitude about something" },
+    { "word": "pass", "collocation": "pass sth (over) to sb", "meaning": "hand something to another person" },
+    { "word": "pass", "collocation": "pass an exam/test", "meaning": "succeed in a test or exam" },
+    { "word": "pass", "collocation": "pass a building", "meaning": "go past a structure" },
+    { "word": "point", "collocation": "see/take sb's point about (sth/doing)", "meaning": "understand someone's argument or opinion" },
+    { "word": "point", "collocation": "(see) the point in/of sth/doing", "meaning": "understand the purpose or usefulness of something" },
+    { "word": "point", "collocation": "there's no point in sth/doing", "meaning": "it is not worth doing because it won't achieve anything" },
+    { "word": "point", "collocation": "make a point of sth/doing", "meaning": "always do something or take particular care to do it" },
+    { "word": "suggestion", "collocation": "make/accept a suggestion", "meaning": "offer or agree to a plan or idea" }
+  ],
+  "wordPatterns": [
+    { "verb": "able to do", "pattern": "adjective", "meaning": "having the power, skill, or opportunity to do something", "example": "EX: She is able to speak three languages fluently." },
+    { "verb": "admire sb for sth/doing", "pattern": "verb", "meaning": "respect and approve of someone for their actions", "example": "EX: I admire her for her dedication to teaching." },
+    { "verb": "boast of/about sth/doing to sb", "pattern": "verb", "meaning": "talk proudly and proudly about achievements to someone", "example": "EX: He boasted about winning the science prize to all his friends." },
+    { "verb": "capable of doing", "pattern": "adjective", "meaning": "having the ability or qualities necessary for doing something", "example": "EX: She is capable of handling the work under pressure." },
+    { "verb": "congratulate sb on sth/doing", "pattern": "verb", "meaning": "express praise or good wishes to someone for their success", "example": "EX: They congratulated him on passing his exams." },
+    { "verb": "fail to do", "pattern": "verb", "meaning": "be unsuccessful in trying to do something", "example": "EX: He failed to complete the task within the time limit." },
+    { "verb": "hope to do", "pattern": "verb", "meaning": "want something to happen and plan for it", "example": "EX: I hope to study astronomy at college." },
+    { "verb": "hope that", "pattern": "verb", "meaning": "wish or expect that a situation is true", "example": "EX: I hope that you can join us for the trip." },
+    { "verb": "learn about sth/doing", "pattern": "verb", "meaning": "acquire knowledge or understanding of a topic", "example": "EX: We are learning about ancient history this term." },
+    { "verb": "learn to do", "pattern": "verb", "meaning": "acquire the skill or ability to perform an action", "example": "EX: Children learn to read at primary school." },
+    { "verb": "learn by doing", "pattern": "verb", "meaning": "acquire skills through practice rather than theory", "example": "EX: The best way to learn computer programming is by doing." },
+    { "verb": "settle for/on sth", "pattern": "verb", "meaning": "accept or decide on something, especially if not ideal", "example": "EX: They finally settled on a date for the exam." },
+    { "verb": "similar to sth/sb/doing", "pattern": "adjective", "meaning": "having a resemblance in appearance, character, or quantity", "example": "EX: My school uniform is similar to yours." },
+    { "verb": "study sth/ for sth", "pattern": "verb", "meaning": "devote time to learning about a subject or preparing for an exam", "example": "EX: She is studying hard for her final exams." },
+    { "verb": "succeed in sth/doing", "pattern": "verb", "meaning": "achieve the desired aim or result in an activity", "example": "EX: He succeeded in passing the entrance test." },
+    { "verb": "suitable for sth/doing", "pattern": "adjective", "meaning": "appropriate or right for a particular purpose or situation", "example": "EX: This course is suitable for beginners." },
+    { "verb": "suitable to do", "pattern": "adjective", "meaning": "appropriate to perform a certain action", "example": "EX: It is not suitable to wear casual clothes to school." }
+  ],
+  "wordFormation": [
+    {
+      "word": "academy",
+      "type": "noun",
+      "meaning": "academy: a school or college for special training / academic: relating to schools, colleges, and study (adj) or a teacher at a college (n)",
+      "example": "EX: She trained at the royal music academy.\nEX: He had a very successful academic career."
+    },
+    {
+      "word": "attend",
+      "type": "verb",
+      "meaning": "attend: be present at an event or school / attention: listening or looking carefully / attendant: someone whose job is to help customers (n) or present/accompanying (adj) / attendance: the number of people present / attentive: listening or watching carefully / inattentive: not paying attention",
+      "example": "EX: He attends the local secondary school.\nEX: Pay close attention to what the teacher says.\nEX: The flight attendant served us drinks.\nEX: School attendance has improved this term.\nEX: The students were very attentive during the lesson.\nEX: He was reprimanded for being inattentive in class."
+    },
+    {
+      "word": "behave",
+      "type": "verb",
+      "meaning": "behave: act in a particular way / behaviour: the way that someone behaves",
+      "example": "EX: The pupils behaved very well during the visit.\nEX: His aggressive behaviour shocked everyone."
+    },
+    {
+      "word": "certify",
+      "type": "verb",
+      "meaning": "certify: state officially that something is true / certificate: an official document stating a fact / certified: having met the official requirements",
+      "example": "EX: The doctor certified that he was fit to work.\nEX: She received a certificate for public speaking.\nEX: He is a certified accountant."
+    },
+    {
+      "word": "educate",
+      "type": "verb",
+      "meaning": "educate: teach or train someone / education: the process of teaching and learning / educator: a person who teaches / educational: relating to education or providing information",
+      "example": "EX: He was educated at a public school.\nEX: She believes that education is the key to success.\nEX: He is a well-known educator and author.\nEX: They went on an educational trip to the museum."
+    },
+    {
+      "word": "fail",
+      "type": "verb",
+      "meaning": "fail: not succeed in doing something or an exam / failure: lack of success / failing: a weakness in someone's character (n) or in the absence of (prep)",
+      "example": "EX: He failed his history test.\nEX: The project ended in complete failure.\nEX: Pride is his greatest failing.\nEX: Failing payment, the service will be suspended."
+    },
+    {
+      "word": "improve",
+      "type": "verb",
+      "meaning": "improve: make or become better / improvement: an occasion when something gets better / improved: having become better",
+      "example": "EX: Her English has improved a lot this year.\nEX: We need to see an improvement in your work.\nEX: The company released an improved version of the software."
+    },
+    {
+      "word": "intense",
+      "type": "adjective",
+      "meaning": "intense: extreme or very strong / intensity: the quality of being intense / intensify: become or make more intense / intensely: in a very strong or extreme way",
+      "example": "EX: The heat from the fire was intense.\nEX: The intensity of the light hurt my eyes.\nEX: The police intensified their search for the missing child.\nEX: She disliked him intensely."
+    },
+    {
+      "word": "literate",
+      "type": "adjective",
+      "meaning": "literate: able to read and write / literacy: the ability to read and write / literature: written works such as novels or plays / illiterate: unable to read and write",
+      "example": "EX: Most children are fully literate by the age of seven.\nEX: The government is trying to improve adult literacy rates.\nEX: She is studying English literature at university.\nEX: A large percentage of the population was illiterate."
+    },
+    {
+      "word": "reason",
+      "type": "noun",
+      "meaning": "reason: a cause or explanation / reasonable: sensible and fair / unreasonable: not fair or sensible / reasoning: the process of thinking about something in a logical way",
+      "example": "EX: Give me one good reason why you did this.\nEX: It was a perfectly reasonable request.\nEX: Her demands were completely unreasonable.\nEX: I don't understand the reasoning behind this decision."
+    },
+    {
+      "word": "revise",
+      "type": "verb",
+      "meaning": "revise: study again to prepare for an exam / revision: the process of revising study material / revised: changed or corrected",
+      "example": "EX: You need to revise for your spelling test.\nEX: She has done a lot of revision this week.\nEX: The publisher released a revised edition of the textbook."
+    },
+    {
+      "word": "solve",
+      "type": "verb",
+      "meaning": "solve: find an answer to a problem / solution: a way of solving a problem / unsolvable: impossible to solve",
+      "example": "EX: He managed to solve the math puzzle.\nEX: We need to find a solution to this problem.\nEX: Some mathematical problems are unsolvable."
+    },
+    {
+      "word": "scholar",
+      "type": "noun",
+      "meaning": "scholar: a person who studies a subject in detail / scholarship: an agreement to pay for someone's studies / scholastic: relating to schools or education / scholarly: containing serious detailed study",
+      "example": "EX: He is a respected scholar of ancient history.\nEX: She won a scholarship to study at Oxford.\nEX: The school has high scholastic standards.\nEX: He wrote a scholarly article on the subject."
+    },
+    {
+      "word": "study",
+      "type": "verb",
+      "meaning": "study: learn about a subject / student: a person studying / studies: research or work done to learn (n) / studious: spending a lot of time studying",
+      "example": "EX: He is studying for his exams.\nEX: The students gathered in the classroom.\nEX: She continued her studies at university.\nEX: He is a very studious young man."
+    },
+    {
+      "word": "teach",
+      "type": "verb",
+      "meaning": "teach: show someone how to do something or give lessons / teacher: a person who teaches",
+      "example": "EX: She teaches chemistry at the secondary school.\nEX: Our teacher explained the new topic clearly."
+    },
+    {
+      "word": "think",
+      "type": "verb",
+      "meaning": "think: use your brain to consider something / unthinkable: impossible to imagine or accept / thoughtful: showing consideration or quiet reflection / thoughtfully: in a considerate or reflective way / thoughtless: not thinking about others",
+      "example": "EX: Let me think about this for a minute.\nEX: A war between the two countries is unthinkable.\nEX: It was very thoughtful of you to send flowers.\nEX: She stared thoughtfully out of the window.\nEX: It was a very thoughtless remark."
+    },
+    {
+      "word": "understand",
+      "type": "verb",
+      "meaning": "understand: know the meaning of something / misunderstand: fail to understand correctly / misunderstanding: a failure to understand correctly / misunderstood: past form of misunderstand (v) or not appreciated (adj) / understandable: easy to understand or accept",
+      "example": "EX: Do you understand the grammar rule?\nEX: I'm sorry, I must have misunderstood you.\nEX: The argument was due to a simple misunderstanding.\nEX: He felt misunderstood by his family.\nEX: Her anger was completely understandable under the circumstances."
+    }
+  ]
+}

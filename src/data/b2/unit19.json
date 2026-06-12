@@ -1,0 +1,278 @@
+{
+  "id": "b2-unit-19",
+  "title": "Unit 19: Questions, question tags, indirect questions",
+  "grammar": [
+    {
+      "structure": "Questions",
+      "usage": "Used to ask for information. Formed by inverting the subject and auxiliary verb, or using do/does/did for main verbs.",
+      "example": "Was I on time? / Did Julie give you her email address yesterday?"
+    },
+    {
+      "structure": "Question tags",
+      "usage": "Used to ask for agreement or check information. Formed with an auxiliary verb/modal and a personal pronoun.",
+      "example": "She is beautiful, isn't she? / Nobody knows about this, do they?"
+    },
+    {
+      "structure": "Indirect questions",
+      "usage": "Used to ask for information in a polite way. Formed with a polite phrase followed by a clause in statement word order.",
+      "example": "Could you tell me what time it is? / I wonder if you have read this book."
+    }
+  ],
+  "richGrammar": [
+    {
+      "title": "A) QUESTIONS",
+      "blocks": [
+        {
+          "type": "title",
+          "content": "1. QUESTION FORMULAS BY VERB TYPE"
+        },
+        {
+          "type": "generic-table",
+          "tableName": "Questions Table",
+          "headers": ["Verb Type", "Formula & Example"],
+          "rows": [
+            [
+              "Be as main verb",
+              "Am / Is / Are / Was / Were + S (+ O)?\nEX: Was I on time?"
+            ],
+            [
+              "Be as auxiliary verb",
+              "Am / Is / Are / Was / Were + S + Ving (+ O)?\nEX: Are Jack and Tom coming to the party tonight?"
+            ],
+            [
+              "Have as auxiliary verb",
+              "Have / Has / Had + S + V3/ed (+ O)?\nEX: Had Tom finished homework before Maths class yesterday?"
+            ],
+            [
+              "have / mean / other main verbs",
+              "Do / Does / Did + S + Vbare (+ O)?\nEX: Did Julie give you her email address yesterday?"
+            ],
+            [
+              "Modals (Can, could, should, might...)",
+              "Modal + S + Vbare (+ O)?\nEX: Can you give me a hand letter?\nEX: Should I tell Jenny about this story?"
+            ]
+          ]
+        },
+        {
+          "type": "title",
+          "content": "2. WH- QUESTIONS"
+        },
+        {
+          "type": "generic-table",
+          "tableName": "Wh- Words",
+          "headers": ["Question Word", "Example"],
+          "rows": [
+            ["Who", "Ex1: Who is going to help you?\nEx2: Who did you see?"],
+            ["What", "Ex1: What's the first step?\nEx2: What did you lend to Tom yesterday?"],
+            ["Whose", "Ex: Whose responsibility is it to look after the environment?"],
+            ["Whom", "Ex: To whom did speak?"],
+            ["Which", "Ex: Which flavour of ice-cream is your favourite?"],
+            ["Where", "Ex: Where did you go for your honeymoon last month?"],
+            ["When", "Ex: When should we start?"],
+            ["Why", "Ex: Why can't the government do something about the situation?"],
+            ["How", "Ex: How do you spell your name?"]
+          ]
+        },
+        {
+          "type": "title",
+          "content": "3. WH- SUBJECT & OBJECT QUESTIONS NOTE"
+        },
+        {
+          "type": "list",
+          "bullets": [
+            "With \"who\" and \"what\", we do not use an auxiliary verb (do/does/did) if the question word is the subject of the sentence. We use an auxiliary verb if the question word is the object of the sentence."
+          ]
+        }
+      ]
+    },
+    {
+      "title": "B) QUESTION TAGS",
+      "blocks": [
+        {
+          "type": "title",
+          "content": "1. GENERAL RULES"
+        },
+        {
+          "type": "list",
+          "bullets": [
+            "Used to ask someone to agree with us (falling intonation) or to check if something is true (rising intonation).",
+            "**Positive sentence → negative question tag**",
+            "**Negative sentence → positive question tag**"
+          ]
+        },
+        {
+          "type": "title",
+          "content": "2. FORMULAS & SPECIAL CASES BY VERB TYPE"
+        },
+        {
+          "type": "generic-table",
+          "tableName": "Question Tags Reference",
+          "headers": ["Verb Type", "Sentence & Question tag"],
+          "rows": [
+            [
+              "Be as main verb",
+              "Ex1: I am 1st member, aren't I? (Note: do not use 'am not I')\nEx2: I am not making much sense now, am I?\nEx3: She is beautiful, isn't she?"
+            ],
+            [
+              "Auxiliary verbs",
+              "Ex1: You haven't lost my CD, have you?\nEx2: We are having the lesson early tomorrow, aren't we?"
+            ],
+            [
+              "Modals",
+              "Ex1: People should recycle things, shouldn't they?\nEx2: There will be lots of people there, won't there?"
+            ],
+            [
+              "Have as main verb",
+              "Ex1: Tom has a lovely voice, hasn't / doesn't he?"
+            ],
+            [
+              "Other main verbs",
+              "Ex1: Frank lives in Germany now, doesn't he?\nEx2: Your friends enjoyed themselves at the party, didn't they?"
+            ],
+            [
+              "Let's",
+              "Ex1: Let's get a DVD tonight, shall we?\nEx2: Let's go because it's getting late, isn't it?"
+            ],
+            [
+              "Imperatives / Commands",
+              "Ex1: Pass me that book, will / would / could you?\nEx2: If you borrow my book, don't get it dirty, will you?"
+            ],
+            [
+              "There is/are",
+              "Ex1: There's no point calling Tom now, is there?\nEx2: There's not really much point waiting, is there?"
+            ],
+            [
+              "Everyone / no one / someone",
+              "→ Use a plural question tag (pronoun 'they')\nEx1: Everyone's going to be there, aren't they?\nEx2: No one wants to come, do they?\nEx3: Someone's been in here, haven't they?"
+            ],
+            [
+              "Negative words (no, little, no one, never, nobody, hardly, seldom, scarcely, barely, none, neither)",
+              "→ The sentence is considered negative, so the question tag is positive.\nEx1: Nobody knows about this, do they?"
+            ],
+            [
+              "have got",
+              "US: Ex: They've got a lot of money, don't they?\nUK: Ex: They've got a lot of money, haven't they?"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "title": "C) INDIRECT QUESTIONS",
+      "blocks": [
+        {
+          "type": "title",
+          "content": "1. PURPOSE & FORMULA"
+        },
+        {
+          "type": "list",
+          "bullets": [
+            "Used to ask for information or make requests in a polite way.",
+            "**Formula:** [polite phrase] + clause (subject + verb word order)"
+          ]
+        },
+        {
+          "type": "title",
+          "content": "2. COMPARISON OF POLITE INTRODUCTIONS"
+        },
+        {
+          "type": "generic-table",
+          "tableName": "Indirect Questions Table",
+          "headers": ["Introductory Polite Phrase", "Example Indirect Question"],
+          "rows": [
+            ["Can / Could you tell me...?", "Ex: Could you tell me what time it is?"],
+            ["Could you let me know...?", "Ex: Could you let me know when it starts?"],
+            ["Do you know...?", "Ex: Do you know who that woman is?"],
+            ["I wonder if you could tell me...", "Ex: I wonder if you could tell me how much this costs."],
+            ["I wonder if you know...", "Ex: I wonder if you know what the starting salary is."],
+            ["I would like to know...", "Ex: I would like to know what your company is going to do about it."]
+          ]
+        },
+        {
+          "type": "title",
+          "content": "3. IMPORTANT NOTES"
+        },
+        {
+          "type": "list",
+          "bullets": [
+            "Do not use question word order (verb before subject) after the polite phrase.",
+            "If the indirect question starts with a question word (who, what, where, etc.) and the polite introduction is a question, we still put a question mark at the end.",
+            "For Yes/No questions, we use 'if' or 'whether' to connect the polite phrase with the clause.\nEX: I wonder if / whether you have read this book."
+          ]
+        }
+      ]
+    }
+  ],
+  "vocabulary": [
+    {
+      "word": "controversy",
+      "type": "n",
+      "meaning": "disagreement, typically when prolonged, public, and heated",
+      "example": "The design of the new building has caused a lot of controversy."
+    },
+    {
+      "word": "protest",
+      "type": "v",
+      "meaning": "express an objection to what someone has said or done",
+      "example": "Students protested against the increase in tuition fees."
+    },
+    {
+      "word": "factsheet",
+      "type": "n",
+      "meaning": "a presentation of data or information on a particular topic in a format emphasizing brevity",
+      "example": "The company issued a factsheet about its new environmental policies."
+    },
+    {
+      "word": "demonstration",
+      "type": "n",
+      "meaning": "a public meeting or march protesting against something or expressing views, or the action of showing how something works",
+      "example": "They took part in a peaceful demonstration outside the city hall."
+    },
+    {
+      "word": "headquarter",
+      "type": "n",
+      "meaning": "the main office or center of operations of an organization",
+      "example": "The company's headquarter is located in London."
+    },
+    {
+      "word": "depressed",
+      "type": "adj",
+      "meaning": "feeling miserable, dejected, or suffering from clinical depression",
+      "example": "She felt depressed after receiving the disappointing exam results."
+    },
+    {
+      "word": "constant",
+      "type": "adj",
+      "meaning": "occurring continuously over a period of time",
+      "example": "The patient needs constant supervision."
+    },
+    {
+      "word": "ancestor",
+      "type": "n",
+      "meaning": "a person from whom one is descended, typically more remote than a grandparent",
+      "example": "Her ancestors came from Ireland in the nineteenth century."
+    },
+    {
+      "word": "hem",
+      "type": "n",
+      "meaning": "the edge of a piece of cloth or clothing which has been turned under and sewn",
+      "example": "She needs to shorten the hem of her dress."
+    },
+    {
+      "word": "rainbow",
+      "type": "n",
+      "meaning": "an arch of colors visible in the sky, caused by the refraction and dispersion of the sun's light in water droplets",
+      "example": "A beautiful rainbow appeared after the rain stopped."
+    },
+    {
+      "word": "creature",
+      "type": "n",
+      "meaning": "an animal, as distinct from a human being, or a fictional being",
+      "example": "The deep ocean is home to many strange creatures."
+    }
+  ],
+  "wordFormation": [],
+  "wordPatterns": [],
+  "phrasalVerbs": [],
+  "collocations": []
+}
