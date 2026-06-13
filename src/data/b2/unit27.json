@@ -1,0 +1,300 @@
+{
+  "id": "b2-unit-27",
+  "title": "Unit 27: Inversions, possessives",
+  "grammar": [
+    {
+      "structure": "Inversion",
+      "usage": "Used with negative adverbials at the beginning of a sentence for emphasis. Verb order follows question word order.",
+      "example": "Never have I worked so hard in all my life. / Hardly had Matt started work when he resigned."
+    },
+    {
+      "structure": "Inversion with so...that / such...that",
+      "usage": "Used to emphasize descriptions of quality or intensity followed by a result.",
+      "example": "So tough was the sea that the children could not go swimming. / Such a good book is it that I have read twice."
+    },
+    {
+      "structure": "Possessives",
+      "usage": "Use 's for singular nouns/plural not ending in s, s' for plural ending in s, and 'of' for things/places.",
+      "example": "That's the manager's car, over there. / The workers' pay was increased by 10%."
+    },
+    {
+      "structure": "Possessive Adjectives and Pronouns",
+      "usage": "Possessive adjectives are used before nouns. Possessive pronouns replace a noun or follow 'of'.",
+      "example": "I'm really excited about my new job. / My new job is great. How about yours?"
+    }
+  ],
+  "richGrammar": [
+    {
+      "title": "A) INVERSIONS",
+      "blocks": [
+        {
+          "type": "title",
+          "content": "1. OVERVIEW & USAGE"
+        },
+        {
+          "type": "list",
+          "bullets": [
+            "Inversion is used when negative adverbial words or phrases (cụm trạng từ phủ định) are placed at the beginning of a sentence for emphasis.",
+            "The word order of the subject and the verb changes to question word order (auxiliary verb before subject).",
+            "Inversion is only used in formal contexts and is rarely used in spoken language."
+          ]
+        },
+        {
+          "type": "title",
+          "content": "2. COMMON NEGATIVE ADVERBIAL WORDS/PHRASES"
+        },
+        {
+          "type": "title",
+          "content": "2.1. Inversion in the first clause"
+        },
+        {
+          "type": "generic-table",
+          "tableName": "Inversion in the First Clause Reference",
+          "headers": ["Adverbial Phrase", "Formula & Example"],
+          "rows": [
+            [
+              "Never / Rarely / Seldom...",
+              "Never / Rarely / Seldom + auxiliary verb + S + V...\nEX: I have never worked so hard in all my life.\n→ Never have I worked so hard in all my life.\n→ Rarely have I worked so hard in all my life.\n→ Seldom have I worked so hard in all my life."
+            ],
+            [
+              "No sooner (... than)",
+              "No sooner + auxiliary verb (often had) + S + V + than + S + V\nEX: No sooner had I eaten shrimp than I started feeling sick.\nEX: No sooner will Linda arrive than she will want to leave."
+            ],
+            [
+              "Hardly / Scarcely / Barely (... when)",
+              "Hardly / Scarcely / Barely + auxiliary verb + S + V + when + S + V\nEX: Hardly had Matt started work when he resigned.\nEX: Scarcely had Bill left the library when the phone rang."
+            ],
+            [
+              "Not only (... but also / too)",
+              "Not only + auxiliary verb + S + V + but (also) + S + V\nEX: Not only can increasing cost of fuel save fuel, it also / too protects environment.\nEX: Not only are video games costly, they are also harmful to your health.\nEX: Not only does smoking harm your own health, it also threatens others."
+            ],
+            [
+              "In / Under no circumstances",
+              "In / Under no circumstances + auxiliary verb + S + V...\nEX: In/Under no circumstances will I betray my own country.\nEX: Under no circumstances are employees allowed to leave the building without permission."
+            ],
+            [
+              "At no time / point",
+              "At no time / point + auxiliary verb + S + V...\nEX: At no time / point was I told what job involved."
+            ],
+            [
+              "Little + realise / know / suspect...",
+              "Little + auxiliary verb + S + realize / know / suspect...\nEX: Little did I realize that I would become managing director just two years later."
+            ]
+          ]
+        },
+        {
+          "type": "title",
+          "content": "2.2. Inversion in the second clause"
+        },
+        {
+          "type": "generic-table",
+          "tableName": "Inversion in the Second Clause Reference",
+          "headers": ["Adverbial", "Formula & Example"],
+          "rows": [
+            [
+              "Not until...",
+              "Not until + time / clause + auxiliary verb + S + V...\nEX: Not until the next day did I hear that I had got the job."
+            ],
+            [
+              "Only...",
+              "Only + prepositional phrase / clause + auxiliary verb + S + V...\nEX: Only at the end of interview did I think I had a chance of getting the job."
+            ]
+          ]
+        },
+        {
+          "type": "title",
+          "content": "3. INVERSION WITH OTHER ADVERBS"
+        },
+        {
+          "type": "title",
+          "content": "3.1. So, neither, nor..."
+        },
+        {
+          "type": "list",
+          "bullets": [
+            "Used in short answers to agree with a previous statement.",
+            "**So** is used to agree with an affirmative statement.",
+            "**Neither / nor** is used to agree with a negative statement."
+          ]
+        },
+        {
+          "type": "generic-table",
+          "tableName": "Short Answers Agreement Reference",
+          "headers": ["Adverb", "Example"],
+          "rows": [
+            [
+              "So",
+              "EX: \"I'm a plumber.\" \"Really, so am I.\""
+            ],
+            [
+              "Neither / Nor",
+              "EX: My sister doesn't like getting ready for work, and neither do I / nor do I."
+            ]
+          ]
+        },
+        {
+          "type": "title",
+          "content": "3.2. As, so, such, and conditionals"
+        },
+        {
+          "type": "generic-table",
+          "tableName": "As, So, Such, and Conditionals Reference",
+          "headers": ["Adverb / Context", "Example"],
+          "rows": [
+            [
+              "As, so, such...",
+              "EX1: The manager was nervous about the director's visit, as were the rest of the staffs.\nEX2: So late was it that there was no one in the office.\nEX3: Such a hot day was it that no one wanted to work."
+            ],
+            [
+              "In conditional sentences",
+              "EX1: Were our staff better trained, we might make a larger profit.\nEX2: Had I known about the vacancy, I would have applied."
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "title": "B) INVERSION WITH SO...THAT // SUCH...THAT",
+      "blocks": [
+        {
+          "type": "title",
+          "content": "1. STRUCTURE WITH SO...THAT"
+        },
+        {
+          "type": "generic-table",
+          "tableName": "Structure with So...That Reference",
+          "headers": ["Sentence Pattern", "Inversion Formula & Example"],
+          "rows": [
+            [
+              "With Be & Adjective",
+              "S + BE + SO + ADJ + THAT + S + V\n→ SO + ADJ + BE + S + THAT + S + V + O\nEX: The sea was so tough that the children could not go swimming.\n→ So tough was the sea that the children could not go swimming."
+            ],
+            [
+              "With Verbs & Adverbs",
+              "S + VERB + SO + ADV + THAT + S + V\n→ SO + ADV + Auxiliary Verb + S + V + THAT + S + V + O\nEX: The children ran so quickly that no one can catch them.\n→ So quickly did the children run that no one can catch them."
+            ]
+          ]
+        },
+        {
+          "type": "title",
+          "content": "2. STRUCTURE WITH SUCH...THAT"
+        },
+        {
+          "type": "generic-table",
+          "tableName": "Structure with Such...That Reference",
+          "headers": ["Sentence Pattern", "Inversion Formula & Example"],
+          "rows": [
+            [
+              "Pattern 1",
+              "S + BE + SUCH + (A/AN) + ADJ + N + THAT + CLAUSE\n→ SUCH + BE (+ A/AN) + N + THAT + CLAUSE\nEX: It is such a good book that I have read twice.\n→ Such is a good book that I have read twice."
+            ],
+            [
+              "Pattern 2",
+              "S + BE + SUCH + (A/AN) + ADJ + N + THAT + CLAUSE\n→ SUCH (+ A/AN) + N + BE + S + THAT + CLAUSE\nEX: It is such a good book that I have read twice.\n→ Such a good book is it that I have read twice."
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "title": "C) POSSESSIVES",
+      "blocks": [
+        {
+          "type": "title",
+          "content": "1. POSSESSIVE RULES"
+        },
+        {
+          "type": "generic-table",
+          "tableName": "Possessives Rules Reference",
+          "headers": ["Noun Category", "Rule & Examples"],
+          "rows": [
+            [
+              "Singular nouns & proper names, plural nouns not ending in s",
+              "Add 's\nEX1: That's the manager's car, over there.\nEX2: We're waiting for Sarah's decision about who to take on.\nEX3: I think that women's rights should be protected by law."
+            ],
+            [
+              "Plural nouns ending in s, plural proper names",
+              "Add s' (just add apostrophe)\nEX1: The workers' pay was increased by 10%\nEX2: The Smiths' business eventually closed down."
+            ],
+            [
+              "Singular nouns ending in s",
+              "Add 's or s'\nEX: The report is on Charles'(s) computer in the office."
+            ],
+            [
+              "Time expressions",
+              "Add 's or s' depending on singular/plural\nEX1: After an hour's wait, I finally got to see manager.\nEX2: I'll be at the factory in about ten minutes' time."
+            ],
+            [
+              "Nouns referring to people/groups, animals",
+              "Add 's\nEX1: We held a meeting to discuss the department's finances.\nEX2: The vet had a close look at the cat's paw."
+            ],
+            [
+              "Nouns not referring to people or animals (things)",
+              "Use 'of'\nEX: The technician had a close look at the back of my laptop.\n* Less preferred/incorrect: The technician had a close look at my laptop's back."
+            ],
+            [
+              "Compound nouns / joint possessives / phrases",
+              "Possessive 's goes at the end of the phrase\nEX1: Tom, Dick and Harry's office is around here somewhere.\nEX2: The president of France's visit to England will be good for business."
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "title": "D) POSSESSIVE ADJECTIVES & PRONOUNS",
+      "blocks": [
+        {
+          "type": "title",
+          "content": "1. COMPARISON"
+        },
+        {
+          "type": "generic-table",
+          "tableName": "Possessive Adjectives & Pronouns Comparison Reference",
+          "headers": ["Category", "Forms", "Usage & Examples"],
+          "rows": [
+            [
+              "Possessive Adjectives",
+              "my, your, his, her, its, our, their",
+              "Indicates possession, always used before a noun.\nEX: I'm really excited about my new job."
+            ],
+            [
+              "Possessive Pronouns",
+              "mine, yours, his, hers, ours, yours, theirs",
+              "Replaces a noun, or follows 'of' to indicate possession.\nEX1: My new job is great. How about yours?\nEX2: Are they customers of yours?\nNote: Do not use an apostrophe in possessive pronouns (yours, hers, theirs, its)."
+            ]
+          ]
+        }
+      ]
+    }
+  ],
+  "vocabulary": [
+    {
+      "word": "trace",
+      "type": "v",
+      "meaning": "to find or discover by searching or following information or evidence",
+      "example": "We can trace the history of mankind back thousands of years."
+    },
+    {
+      "word": "mankind",
+      "type": "n",
+      "meaning": "the whole of the human race",
+      "example": "The history of mankind is full of conflicts and achievements."
+    },
+    {
+      "word": "prejudice",
+      "type": "n",
+      "meaning": "an unfair and unreasonable opinion or feeling, especially when formed without enough thought or knowledge",
+      "example": "Laws exist to protect people from racial prejudice."
+    },
+    {
+      "word": "don't get me wrong",
+      "type": "phr",
+      "meaning": "used when you want to make sure that someone does not misunderstand what you are saying",
+      "example": "Don't get me wrong, I like the job, but the pay is too low."
+    }
+  ],
+  "wordFormation": [],
+  "wordPatterns": [],
+  "phrasalVerbs": [],
+  "collocations": []
+}

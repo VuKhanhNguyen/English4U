@@ -1,0 +1,906 @@
+{
+  "id": "b2-unit-28",
+  "title": "Unit 28: Work and business",
+  "grammar": [],
+  "richGrammar": [],
+  "vocabulary": [
+    {
+      "word": "employer",
+      "type": "n",
+      "meaning": "a person or organization that employs people",
+      "example": "The factory is the largest employer in the area."
+    },
+    {
+      "word": "employee",
+      "type": "n",
+      "meaning": "a person employed for wages or salary, especially at non-executive level",
+      "example": "The company has over five hundred employees."
+    },
+    {
+      "word": "staff",
+      "type": "n",
+      "meaning": "all the people employed by a particular organization",
+      "example": "The school has a very friendly and dedicated teaching staff."
+    },
+    {
+      "word": "job",
+      "type": "n",
+      "meaning": "a paid position of regular employment",
+      "example": "She applied for a job at the local bank."
+    },
+    {
+      "word": "work",
+      "type": "n",
+      "meaning": "activity involving mental or physical effort done in order to achieve a purpose or result",
+      "example": "He has a lot of work to finish before tomorrow."
+    },
+    {
+      "word": "career",
+      "type": "n",
+      "meaning": "an occupation undertaken for a significant period of a person's life and with opportunities for progress",
+      "example": "She is planning a career in journalism."
+    },
+    {
+      "word": "earn",
+      "type": "v",
+      "meaning": "obtain money in return for labor or services",
+      "example": "How much does she earn in her new job?"
+    },
+    {
+      "word": "win",
+      "type": "v",
+      "meaning": "be successful or victorious in a contest or conflict",
+      "example": "He won the employee of the month award."
+    },
+    {
+      "word": "gain",
+      "type": "v",
+      "meaning": "obtain or secure something wanted or desirable",
+      "example": "She has gained valuable experience working as an intern."
+    },
+    {
+      "word": "raise",
+      "type": "v",
+      "meaning": "increase the amount, level, or strength of",
+      "example": "The company raised the salary of all its employees by five percent."
+    },
+    {
+      "word": "rise",
+      "type": "v",
+      "meaning": "move from a lower position to a higher one; increase in amount, size, or value",
+      "example": "The cost of living has risen significantly this year."
+    },
+    {
+      "word": "wage(s)",
+      "type": "n",
+      "meaning": "a fixed regular payment, typically paid on a daily or weekly basis, to a manual or unskilled worker",
+      "example": "He earns a decent weekly wage working construction."
+    },
+    {
+      "word": "salary",
+      "type": "n",
+      "meaning": "a fixed regular payment, typically paid on a monthly basis but often expressed as an annual sum, made by an employer to an employee",
+      "example": "She receives an annual salary of forty thousand dollars."
+    },
+    {
+      "word": "pay",
+      "type": "n",
+      "meaning": "money paid to someone for regular work",
+      "example": "The workers are demanding better pay and conditions."
+    },
+    {
+      "word": "commute",
+      "type": "v",
+      "meaning": "travel some distance between one's home and place of work on a regular basis",
+      "example": "She commutes to work by train every day."
+    },
+    {
+      "word": "deliver",
+      "type": "v",
+      "meaning": "bring and hand over a letter, parcel, or goods to the proper recipient or address",
+      "example": "The courier delivered the package this morning."
+    },
+    {
+      "word": "retire",
+      "type": "v",
+      "meaning": "leave one's job and cease to work, typically upon reaching the normal age for retirement",
+      "example": "He retired from teaching at the age of sixty-five."
+    },
+    {
+      "word": "resign",
+      "type": "v",
+      "meaning": "voluntarily leave a job or other position",
+      "example": "She resigned from the committee after the disagreement."
+    },
+    {
+      "word": "fire",
+      "type": "v",
+      "meaning": "dismiss an employee from a job",
+      "example": "He was fired for consistently arriving late."
+    },
+    {
+      "word": "sack",
+      "type": "v",
+      "meaning": "dismiss from employment",
+      "example": "They sacked him because of poor performance."
+    },
+    {
+      "word": "make redundant",
+      "type": "v phr",
+      "meaning": "dismiss a person because their job is no longer needed",
+      "example": "Fifty workers were made redundant when the factory closed."
+    },
+    {
+      "word": "overtime",
+      "type": "n",
+      "meaning": "time worked in addition to one's normal working hours",
+      "example": "She worked a lot of overtime last week to finish the report."
+    },
+    {
+      "word": "promotion",
+      "type": "n",
+      "meaning": "advancement of an employee's position within the organization",
+      "example": "She got a promotion to senior manager."
+    },
+    {
+      "word": "pension",
+      "type": "n",
+      "meaning": "a regular payment made during retirement from an investment fund",
+      "example": "He is living on his state pension."
+    },
+    {
+      "word": "company",
+      "type": "n",
+      "meaning": "a commercial business",
+      "example": "She works for a software company."
+    },
+    {
+      "word": "firm",
+      "type": "n",
+      "meaning": "a business concern, especially one involving a partnership of two or more people",
+      "example": "He is a partner in a local law firm."
+    },
+    {
+      "word": "business",
+      "type": "n",
+      "meaning": "a person's regular occupation, profession, or trade; or commercial activity",
+      "example": "They are planning to start their own business."
+    },
+    {
+      "word": "union",
+      "type": "n",
+      "meaning": "an organized association of workers formed to protect and further their rights and interests",
+      "example": "The trade union called a strike over pay disputes."
+    },
+    {
+      "word": "charity",
+      "type": "n",
+      "meaning": "an organization set up to provide help and raise money for those in need",
+      "example": "All the proceeds from the concert went to charity."
+    },
+    {
+      "word": "occupation",
+      "type": "n",
+      "meaning": "a job or profession",
+      "example": "Please state your name, age, and occupation."
+    },
+    {
+      "word": "strike",
+      "type": "n",
+      "meaning": "a refusal to work organized by a body of employees as a form of protest",
+      "example": "Train drivers are on strike today."
+    },
+    {
+      "word": "Multinational Media Organisation",
+      "type": "n",
+      "meaning": "a media company that operates in several different countries",
+      "example": "He got a job at a multinational media organisation."
+    },
+    {
+      "word": "recession",
+      "type": "n",
+      "meaning": "a period of temporary economic decline during which trade and industrial activity are reduced",
+      "example": "Many small businesses closed down during the recession."
+    },
+    {
+      "word": "initially",
+      "type": "adv",
+      "meaning": "at the beginning",
+      "example": "Initially, the project was funded by a local grant."
+    },
+    {
+      "word": "dedication",
+      "type": "n",
+      "meaning": "the quality of being dedicated or committed to a task or purpose",
+      "example": "She was awarded a medal for her dedication to duty."
+    },
+    {
+      "word": "commitment",
+      "type": "n",
+      "meaning": "the state or quality of being dedicated to a cause, activity, etc.",
+      "example": "The company's commitment to quality is well known."
+    },
+    {
+      "word": "wholesalers",
+      "type": "n",
+      "meaning": "a person or company that sells goods in large quantities, typically to retailers",
+      "example": "They buy their stock directly from wholesalers."
+    },
+    {
+      "word": "veterinary medicine",
+      "type": "n",
+      "meaning": "the branch of medicine that deals with the prevention, diagnosis, and treatment of disease in animals",
+      "example": "She decided to study veterinary medicine at university."
+    },
+    {
+      "word": "trapeze artist",
+      "type": "n",
+      "meaning": "a gymnast who performs rolls and swings on a trapeze",
+      "example": "The crowd watched in awe as the trapeze artist performed a triple flip."
+    },
+    {
+      "word": "initiative",
+      "type": "n",
+      "meaning": "the ability to assess and initiate things independently, or a fresh approach",
+      "example": "She showed great initiative in solving the customer's problem."
+    },
+    {
+      "word": "supersonic plane",
+      "type": "n",
+      "meaning": "a plane that flies faster than the speed of sound",
+      "example": "The Concorde was a famous supersonic plane."
+    },
+    {
+      "word": "dispute",
+      "type": "v",
+      "meaning": "argue about something; discuss heatedly",
+      "example": "The two neighbors disputed the boundary line between their properties."
+    },
+    {
+      "word": "tennis tournament",
+      "type": "n",
+      "meaning": "a sports competition involving tennis players",
+      "example": "She won the local tennis tournament last weekend."
+    },
+    {
+      "word": "glamorous",
+      "type": "adj",
+      "meaning": "attractive in an exciting and special way",
+      "example": "Being a model sounds like a glamorous job, but it is hard work."
+    },
+    {
+      "word": "live out of a suitcase",
+      "type": "idiom",
+      "meaning": "stay in several places for only a short time, with all one's belongings in a suitcase",
+      "example": "As a traveling salesman, he has to live out of a suitcase."
+    },
+    {
+      "word": "probe",
+      "type": "n",
+      "meaning": "a device used for examining or exploring",
+      "example": "The space probe sent back detailed images of Mars."
+    },
+    {
+      "word": "slowness",
+      "type": "n",
+      "meaning": "the quality of moving or happening at a low speed",
+      "example": "The slowness of the computer is very frustrating."
+    },
+    {
+      "word": "malfunction",
+      "type": "n",
+      "meaning": "a failure to function in a normal or satisfactory manner",
+      "example": "The crash was caused by a technical malfunction."
+    },
+    {
+      "word": "malfunctioning",
+      "type": "adj",
+      "meaning": "failing to function normally or correctly",
+      "example": "She returned the malfunctioning phone to the shop."
+    },
+    {
+      "word": "awful",
+      "type": "adj",
+      "meaning": "extremely bad or unpleasant",
+      "example": "The weather was awful all weekend."
+    },
+    {
+      "word": "crispy brown",
+      "type": "phr",
+      "meaning": "cooked until dry, hard, and easily broken, with a brown color",
+      "example": "Bake the potatoes until they are crispy brown."
+    }
+  ],
+  "phrasalVerbs": [
+    {
+      "phrasalVerb": "back out",
+      "meaning": "decide not to do something that you had agreed to do",
+      "example": "EX: They agreed to buy the house but backed out at the last minute."
+    },
+    {
+      "phrasalVerb": "bring out",
+      "meaning": "produce and start to sell a new product",
+      "example": "EX: The band is bringing out a new album next month."
+    },
+    {
+      "phrasalVerb": "close down",
+      "meaning": "stop operating (for a company, shop, etc.)",
+      "example": "EX: The local shop closed down last week because of high rents."
+    },
+    {
+      "phrasalVerb": "see through (to)",
+      "meaning": "recognise that sth is not true; continue or support sb until the end of a difficult period",
+      "example": "EX: I saw through his lies immediately. / The loan should see them through to the end of the year."
+    },
+    {
+      "phrasalVerb": "see to",
+      "meaning": "deal with or take care of something",
+      "example": "EX: Don't worry about the cooking, I'll see to it."
+    },
+    {
+      "phrasalVerb": "set to",
+      "meaning": "start doing something eagerly and with determination",
+      "example": "EX: We set to and cleaned the whole house in two hours."
+    },
+    {
+      "phrasalVerb": "set out",
+      "meaning": "start working on a project with a specific goal in mind",
+      "example": "EX: They set out early in the morning to finish the garden."
+    },
+    {
+      "phrasalVerb": "set up",
+      "meaning": "start a business, organization, or system",
+      "example": "EX: She set up her own consulting firm last year."
+    },
+    {
+      "phrasalVerb": "slow down",
+      "meaning": "move or happen at a lower speed",
+      "example": "EX: You need to slow down when driving in the rain."
+    },
+    {
+      "phrasalVerb": "speed up",
+      "meaning": "move or happen at a higher speed",
+      "example": "EX: The train sped up as it left the station."
+    },
+    {
+      "phrasalVerb": "stand in for",
+      "meaning": "take someone's place or do their job for a short time",
+      "example": "EX: She stood in for the manager while he was on holiday."
+    },
+    {
+      "phrasalVerb": "take on",
+      "meaning": "employ someone, or accept a job or responsibility",
+      "example": "EX: The company is taking on new staff. / I can't take on any more work right now."
+    },
+    {
+      "phrasalVerb": "take over",
+      "meaning": "take control of something (like a business)",
+      "example": "EX: A large multinational company took over their firm."
+    },
+    {
+      "phrasalVerb": "turn down",
+      "meaning": "refuse an offer, invitation, or request",
+      "example": "EX: She turned down the job offer because the salary was too low."
+    }
+  ],
+  "prepositionalPhrases": [],
+  "collocations": [
+    {
+      "word": "agreement",
+      "collocation": "come to (an) agreement on/about",
+      "meaning": "reach a decision that everyone agrees on"
+    },
+    {
+      "word": "agreement",
+      "collocation": "reach (an) agreement on/about sth",
+      "meaning": "arrive at a mutual decision after discussion"
+    },
+    {
+      "word": "agreement",
+      "collocation": "in agreement on/about/with sth",
+      "meaning": "sharing the same opinion about something"
+    },
+    {
+      "word": "arrangement",
+      "collocation": "make an arrangement with/for sb",
+      "meaning": "organize plans with someone or for someone"
+    },
+    {
+      "word": "arrangement",
+      "collocation": "have an arrangement with sb to do",
+      "meaning": "possess a plan or deal with someone to do something"
+    },
+    {
+      "word": "business",
+      "collocation": "do business with",
+      "meaning": "engage in commercial activity with someone"
+    },
+    {
+      "word": "business",
+      "collocation": "in business",
+      "meaning": "operating as a commercial enterprise"
+    },
+    {
+      "word": "business",
+      "collocation": "go somewhere on business",
+      "meaning": "travel to a place for work purposes"
+    },
+    {
+      "word": "business",
+      "collocation": "business trip",
+      "meaning": "a journey made for business purposes"
+    },
+    {
+      "word": "business",
+      "collocation": "small / big business",
+      "meaning": "small or large scale commercial enterprises"
+    },
+    {
+      "word": "complaint",
+      "collocation": "have a complaint (about) sth to sb",
+      "meaning": "possess a grievance about something to report to someone"
+    },
+    {
+      "word": "complaint",
+      "collocation": "make a complaint (about) sth to sb",
+      "meaning": "formally report a grievance to someone"
+    },
+    {
+      "word": "complaint",
+      "collocation": "letter of complaint to sb about sth",
+      "meaning": "a formal written message reporting a grievance"
+    },
+    {
+      "word": "day",
+      "collocation": "have/take/get a day off",
+      "meaning": "take a day of holiday or rest from work"
+    },
+    {
+      "word": "day",
+      "collocation": "day job",
+      "meaning": "one's regular, main job, especially as opposed to a temporary or hobby job"
+    },
+    {
+      "word": "day",
+      "collocation": "day trip",
+      "meaning": "a journey completed within one day"
+    },
+    {
+      "word": "day",
+      "collocation": "day by day",
+      "meaning": "gradually or progressively each day"
+    },
+    {
+      "word": "day",
+      "collocation": "the other/next day",
+      "meaning": "a recently past day, or the day following"
+    },
+    {
+      "word": "decision",
+      "collocation": "make a decision (to do...)",
+      "meaning": "choose to perform a particular action"
+    },
+    {
+      "word": "decision",
+      "collocation": "take a decision (to do...)",
+      "meaning": "commit to a choice or course of action"
+    },
+    {
+      "word": "decision",
+      "collocation": "come to a decision (about...)",
+      "meaning": "reach a final choice after consideration"
+    },
+    {
+      "word": "decision",
+      "collocation": "reach a decision (about...)",
+      "meaning": "arrive at a final choice after consideration"
+    },
+    {
+      "word": "duty",
+      "collocation": "do one's duty",
+      "meaning": "perform one's required task or obligation"
+    },
+    {
+      "word": "duty",
+      "collocation": "a sense of duty",
+      "meaning": "a feeling of moral or legal obligation"
+    },
+    {
+      "word": "duty",
+      "collocation": "on duty",
+      "meaning": "actively working or performing one's role"
+    },
+    {
+      "word": "duty",
+      "collocation": "off duty",
+      "meaning": "not active at work or free from official duties"
+    },
+    {
+      "word": "duty",
+      "collocation": "have a duty to sb to do",
+      "meaning": "be morally or legally obligated to do something for someone"
+    },
+    {
+      "word": "effort",
+      "collocation": "make an effort to do",
+      "meaning": "try hard to perform an action"
+    },
+    {
+      "word": "effort",
+      "collocation": "put an effort into sth/doing",
+      "meaning": "devote time and energy to a task"
+    },
+    {
+      "word": "experience",
+      "collocation": "have an experience",
+      "meaning": "live through or encounter an event"
+    },
+    {
+      "word": "experience",
+      "collocation": "have/gain/get experience in/of...",
+      "meaning": "acquire skill or knowledge from practice"
+    },
+    {
+      "word": "experience",
+      "collocation": "experienced at/in sth/doing",
+      "meaning": "skilled or knowledgeable in a field"
+    },
+    {
+      "word": "hold",
+      "collocation": "put/keep sb on hold",
+      "meaning": "make a telephone caller wait"
+    },
+    {
+      "word": "hold",
+      "collocation": "hold on to sth",
+      "meaning": "keep holding or keep possession of something"
+    },
+    {
+      "word": "hold",
+      "collocation": "hold sth",
+      "meaning": "grasp or carry something"
+    },
+    {
+      "word": "interest",
+      "collocation": "have an interest in sth / doing",
+      "meaning": "possess a feeling of wanting to know or learn about something"
+    },
+    {
+      "word": "interest",
+      "collocation": "take an interest in sth / doing",
+      "meaning": "become concerned or curious about something"
+    },
+    {
+      "word": "interest",
+      "collocation": "express an interest in sth / doing",
+      "meaning": "state or show that one is curious about something"
+    },
+    {
+      "word": "interest",
+      "collocation": "in your interest to do",
+      "meaning": "beneficial to you to perform a task"
+    },
+    {
+      "word": "interest",
+      "collocation": "earn interest",
+      "meaning": "receive extra money from savings or investments"
+    },
+    {
+      "word": "interest",
+      "collocation": "get interest",
+      "meaning": "receive profit from money invested"
+    },
+    {
+      "word": "interest",
+      "collocation": "pay interest",
+      "meaning": "spend extra money for borrowing money"
+    },
+    {
+      "word": "interview",
+      "collocation": "have/go to/attend an interview",
+      "meaning": "participate in a formal meeting for a job or assessment"
+    },
+    {
+      "word": "interview",
+      "collocation": "job interview",
+      "meaning": "a formal meeting to evaluate an applicant for a job"
+    },
+    {
+      "word": "job",
+      "collocation": "do a job",
+      "meaning": "perform a task or piece of work"
+    },
+    {
+      "word": "job",
+      "collocation": "have a job to do",
+      "meaning": "possess a task that needs completion"
+    },
+    {
+      "word": "job",
+      "collocation": "apply for a job",
+      "meaning": "formally request to be considered for employment"
+    },
+    {
+      "word": "job",
+      "collocation": "take a job",
+      "meaning": "accept an offer of employment"
+    },
+    {
+      "word": "job",
+      "collocation": "get a job",
+      "meaning": "obtain employment"
+    },
+    {
+      "word": "job",
+      "collocation": "in a job",
+      "meaning": "employed in a position"
+    },
+    {
+      "word": "work",
+      "collocation": "do some work",
+      "meaning": "perform activities involving mental or physical effort"
+    },
+    {
+      "word": "work",
+      "collocation": "have work to do",
+      "meaning": "possess tasks that require effort"
+    },
+    {
+      "word": "work",
+      "collocation": "go to work",
+      "meaning": "travel to one's workplace"
+    },
+    {
+      "word": "work",
+      "collocation": "at work",
+      "meaning": "engaged in one's job at the workplace"
+    },
+    {
+      "word": "work",
+      "collocation": "work hard",
+      "meaning": "make a lot of effort in one's job"
+    },
+    {
+      "word": "work",
+      "collocation": "out of work",
+      "meaning": "unemployed"
+    },
+    {
+      "word": "work",
+      "collocation": "place of work",
+      "meaning": "the location where one does their job"
+    }
+  ],
+  "wordPatterns": [
+    {
+      "verb": "absent from sth",
+      "pattern": "adjective",
+      "meaning": "not present in a place or event where you are expected to be",
+      "example": "EX: He was absent from work yesterday due to illness."
+    },
+    {
+      "verb": "apply for sth",
+      "pattern": "verb",
+      "meaning": "formally request something, such as a job or permission",
+      "example": "EX: She decided to apply for the position of marketing assistant."
+    },
+    {
+      "verb": "apply in writing",
+      "pattern": "verb",
+      "meaning": "make a formal request by sending a letter or email",
+      "example": "EX: Candidates must apply in writing before the deadline."
+    },
+    {
+      "verb": "attach sth to sth",
+      "pattern": "verb",
+      "meaning": "join or fasten something to another thing",
+      "example": "EX: Please attach your resume to the application email."
+    },
+    {
+      "verb": "attached to sth",
+      "pattern": "adjective",
+      "meaning": "joined to something, or feeling a strong connection to something",
+      "example": "EX: The document is attached to the email. / She is very attached to her old laptop."
+    },
+    {
+      "verb": "begin doing",
+      "pattern": "verb",
+      "meaning": "start performing an action",
+      "example": "EX: We will begin working on the project tomorrow."
+    },
+    {
+      "verb": "begin to do",
+      "pattern": "verb",
+      "meaning": "start performing an action",
+      "example": "EX: I began to realize that the job was harder than I thought."
+    },
+    {
+      "verb": "begin sth",
+      "pattern": "verb",
+      "meaning": "start something",
+      "example": "EX: She began her career as a junior clerk."
+    },
+    {
+      "verb": "begin by doing",
+      "pattern": "verb",
+      "meaning": "start an activity with a particular action",
+      "example": "EX: He began by thanking everyone for their support."
+    },
+    {
+      "verb": "depend on sth/sb",
+      "pattern": "verb",
+      "meaning": "rely on or be controlled by something or someone",
+      "example": "EX: Our success depends on how hard we work."
+    },
+    {
+      "verb": "experienced in/at sth/doing",
+      "pattern": "adjective",
+      "meaning": "having skill or knowledge because you have done something for a long time",
+      "example": "EX: She is highly experienced in managing large teams."
+    },
+    {
+      "verb": "good for sb to do sth",
+      "pattern": "phrase",
+      "meaning": "beneficial or helpful for someone to perform a task",
+      "example": "EX: It is good for you to gain some work experience during summer."
+    },
+    {
+      "verb": "good at sth/doing",
+      "pattern": "adjective",
+      "meaning": "able to do something well",
+      "example": "EX: He is very good at coding in Javascript."
+    },
+    {
+      "verb": "good to sb",
+      "pattern": "adjective",
+      "meaning": "kind or helpful to someone",
+      "example": "EX: The manager has been very good to me since I joined."
+    },
+    {
+      "verb": "qualify as/in",
+      "pattern": "verb",
+      "meaning": "pass exams or gain skills to do a particular job",
+      "example": "EX: She qualified as a teacher last year. / He qualified in veterinary medicine."
+    },
+    {
+      "verb": "responsible for sth/doing",
+      "pattern": "adjective",
+      "meaning": "having control over or care for someone or something, as part of one's job or role",
+      "example": "EX: You will be responsible for coordinating the marketing campaign."
+    },
+    {
+      "verb": "specialise in sth/doing",
+      "pattern": "verb",
+      "meaning": "limit one's activities or study to a particular subject or area",
+      "example": "EX: The firm specialises in corporate law."
+    },
+    {
+      "verb": "train to do",
+      "pattern": "verb",
+      "meaning": "prepare oneself or be prepared through instruction for a job or activity",
+      "example": "EX: She is training to become a professional pilot."
+    },
+    {
+      "verb": "work as",
+      "pattern": "verb",
+      "meaning": "perform the duties of a particular job",
+      "example": "EX: He works as a software developer."
+    },
+    {
+      "verb": "work at",
+      "pattern": "verb",
+      "meaning": "do a job at a specific location or organization",
+      "example": "EX: She works at the bank on High Street."
+    },
+    {
+      "verb": "work in",
+      "pattern": "verb",
+      "meaning": "do a job in a specific industry or department",
+      "example": "EX: He works in the retail sector."
+    },
+    {
+      "verb": "work for sb",
+      "pattern": "verb",
+      "meaning": "be employed by a person or company",
+      "example": "EX: She works for a multinational media organisation."
+    }
+  ],
+  "wordFormation": [
+    {
+      "word": "add",
+      "type": "verb",
+      "meaning": "add: join or put together to increase the size or number / addition: the action of adding / added: extra, or thặng dư / additional: extra or supplementary / additionally: in addition",
+      "example": "EX: Add the numbers together.\nEX: The new building is a great addition to the school.\nEX: Value added tax is applied here.\nEX: There will be an additional charge for delivery.\nEX: Additionally, we offer free support."
+    },
+    {
+      "word": "apply",
+      "type": "verb",
+      "meaning": "apply: request or make use of / applicant: a person who applies / application: a formal request / (in)applicable: (not) suitable or relevant / applied: put to practical use",
+      "example": "EX: You should apply for the job.\nEX: There were over fifty applicants for the role.\nEX: Submit your application online.\nEX: The rule is not applicable in this case.\nEX: He is studying applied mathematics."
+    },
+    {
+      "word": "commerce",
+      "type": "noun",
+      "meaning": "commerce: the activity of buying and selling / commercial: relating to buying and selling / commercially: in a commercial way",
+      "example": "EX: Online commerce has grown rapidly.\nEX: The commercial break lasted for five minutes.\nEX: The product is not yet commercially available."
+    },
+    {
+      "word": "dedicate",
+      "type": "verb",
+      "meaning": "dedicate: devote time or effort to / dedication: the quality of being committed / dedicated: devoted or loyal",
+      "example": "EX: He dedicated his book to his wife.\nEX: She is known for her dedication to her work.\nEX: We have a dedicated team of customer support representatives."
+    },
+    {
+      "word": "effect",
+      "type": "noun",
+      "meaning": "effect: a change which is a result of an action / (in)effective: (not) producing the desired result",
+      "example": "EX: The new law had a major effect on businesses.\nEX: The new regulations were highly effective."
+    },
+    {
+      "word": "employ",
+      "type": "verb",
+      "meaning": "employ: give work to and pay for it / employer: a person or company that employs people / employee: a person employed / (un)employment: state of having or not having a job / (un)employable: (not) fit or suitable to be employed / (un)employed: (not) having a paid job",
+      "example": "EX: The company employs two hundred workers.\nEX: Her employer offered her a raise.\nEX: Employees are required to wear uniforms.\nEX: The government is trying to reduce unemployment.\nEX: Without qualifications, he is virtually unemployable.\nEX: He has been unemployed for three months."
+    },
+    {
+      "word": "help",
+      "type": "verb",
+      "meaning": "help: make it easier for someone to do something / helper: a person who helps / helping: a portion of food / (un)helpful: (not) providing assistance / helpless: unable to defend oneself or act without help",
+      "example": "EX: Can you help me move this desk?\nEX: The helpers set up the chairs for the event.\nEX: He had a second helping of pie.\nEX: The staff were very helpful.\nEX: The lost puppy looked small and helpless."
+    },
+    {
+      "word": "industry",
+      "type": "noun",
+      "meaning": "industry: economic activity concerned with processing raw materials and manufacture / industrial: relating to industry / industrious: hard-working",
+      "example": "EX: The manufacturing industry is recovering.\nEX: They live in an industrial area.\nEX: She is an industrious student who always finishes her homework."
+    },
+    {
+      "word": "machine",
+      "type": "noun",
+      "meaning": "machine: an apparatus using mechanical power / machinery: machines collectively",
+      "example": "EX: The washing machine is broken.\nEX: The factory has imported new machinery."
+    },
+    {
+      "word": "manage",
+      "type": "verb",
+      "meaning": "manage: be in charge of / management: the process of dealing with or controlling things / manager: a person in charge / managing: having executive control",
+      "example": "EX: She manages a team of programmers.\nEX: The company has excellent management.\nEX: He reported the issue to the branch manager.\nEX: She is the managing director of the firm."
+    },
+    {
+      "word": "profession",
+      "type": "noun",
+      "meaning": "profession: a paid occupation, especially one that involves prolonged training / professor: a university teacher of the highest rank / professionalism: the competence or skill expected of a professional / (un)professional: (not) worthy of or conforming to the standards of a profession",
+      "example": "EX: He is a lawyer by profession.\nEX: The professor gave a lecture on economics.\nEX: The client was impressed by her professionalism.\nEX: It is unprofessional to arrive late for meetings."
+    },
+    {
+      "word": "meet",
+      "type": "verb",
+      "meaning": "meet: come together with someone / meeting: an assembly of people for discussion",
+      "example": "EX: Let's meet in the lobby at 9 a.m.\nEX: The weekly meeting was postponed."
+    },
+    {
+      "word": "qualify",
+      "type": "verb",
+      "meaning": "(un)qualified: (not) officially recognized as practitioner of a profession / qualifying: serving to qualify / qualification: official certificate of completion or requirement",
+      "example": "EX: She is a fully qualified accountant.\nEX: The qualifying round of the tournament begins tomorrow.\nEX: You need the right qualifications for this job."
+    },
+    {
+      "word": "responsible",
+      "type": "verb",
+      "meaning": "responsible: having an obligation to do something / (ir)responsibility: (lack of) responsibility / irresponsible: not showing proper care",
+      "example": "EX: She is responsible for the project's budget.\nEX: It is your responsibility to lock the office.\nEX: It was irresponsible of him to leave the door unlocked."
+    },
+    {
+      "word": "supervise",
+      "type": "verb",
+      "meaning": "supervise: observe and direct the execution of a task / supervisor: a person who supervises / supervision: the action of supervising",
+      "example": "EX: The manager supervises the training of new staff.\nEX: Talk to your supervisor if you have any questions.\nEX: The children played under the supervision of their teacher."
+    },
+    {
+      "word": "work",
+      "type": "verb",
+      "meaning": "work: activity involving mental or physical effort / worker: a person who works / working: functioning or relating to work / (un)workable: (not) practical or feasible",
+      "example": "EX: He works long hours.\nEX: The construction workers did a great job.\nEX: She has a good working relationship with her boss.\nEX: The proposed schedule is unworkable."
+    }
+  ]
+}

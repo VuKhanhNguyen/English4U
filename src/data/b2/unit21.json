@@ -1,0 +1,187 @@
+{
+  "id": "b2-unit-21",
+  "title": "Unit 21: Reported speech",
+  "grammar": [
+    {
+      "structure": "Reported statements",
+      "usage": "Used to report what someone else has said. Tenses, pronouns, and time/place expressions usually change (backshift).",
+      "example": "Tim said he needed a credit card."
+    },
+    {
+      "structure": "Reported questions",
+      "usage": "Used to report questions. Use statement word order. Yes/No questions use if/whether. Wh-questions use the question word.",
+      "example": "Tim asked Tom if he could get him an ice cream."
+    }
+  ],
+  "richGrammar": [
+    {
+      "title": "A) REPORTED STATEMENTS",
+      "blocks": [
+        {
+          "type": "title",
+          "content": "1. HOW TO CHANGE DIRECT SPEECH TO REPORTED SPEECH"
+        },
+        {
+          "type": "list",
+          "bullets": [
+            "Before changing direct speech to reported speech, we should ask ourselves four questions:\na) What tense is the sentence in, and what will it change to?\nb) Is it a yes/no question, a Wh-question, or an imperative?\nc) Are there any pronouns or time/place expressions that need changing?\nd) Can we use a different reporting verb (like advise, invite, deny, apologize...)?"
+          ]
+        },
+        {
+          "type": "title",
+          "content": "2. TENSE CHANGES IN REPORTED SPEECH"
+        },
+        {
+          "type": "generic-table",
+          "tableName": "Tense Changes Reference",
+          "headers": ["Direct Speech", "Reported Speech"],
+          "rows": [
+            ["Present simple", "Past simple\nEx: 'I need a credit card', said Tim. → Tim said he needed a credit card."],
+            ["Present continuous", "Past continuous\nEx: 'I'm taking Joe shopping', said her mum. → Joe's mum said she was taking her shopping."],
+            ["Present perfect simple", "Past perfect simple\nEx: 'I've bought Tom a present,' said Tim → Tim said he had bought Tom a present."],
+            ["Present perfect continuous", "Past perfect continuous\nEx: 'I've been thinking about buying a new car.' said Tim → Tim said he had been thinking about buying a new car."],
+            ["Past simple", "Past perfect simple\nEx: 'I spent six hours to edit this article', said Henry. → Henry said he had spent six hours to edit that article."],
+            ["Past continuous", "Past perfect continuous\nEx: 'I was hoping to find a new laptop,' said Tim. → Tim said he had been hoping to find a new laptop."],
+            ["Past perfect simple", "Past perfect simple (no change)\nEx: 'I'd looked everywhere for my credit card before I found it.' said Tim → Tim said he had looked everywhere for his credit card before he found it."],
+            ["Past perfect continuous", "Past perfect continuous (no change)\nEx: 'I'd been looking for that book for weeks before I found it', said Tim → Tim said he'd been looking for that book for weeks before he found it."]
+          ]
+        },
+        {
+          "type": "title",
+          "content": "3. MODAL CHANGES IN REPORTED SPEECH"
+        },
+        {
+          "type": "generic-table",
+          "tableName": "Modal Changes Reference",
+          "headers": ["Direct Speech", "Reported Speech"],
+          "rows": [
+            ["Am/is/are going to", "Was / were going to\nEx: 'I'm going to go shopping,' said Tim. → Tim said he was going to go shopping."],
+            ["Will", "Would\nEx: 'I'll need a credit card,' said Tim. → Tim said he would need a credit card."],
+            ["Can", "Could\nEx: 'I can take Lizze shopping,' said Tim. → Tim said he could take Lizzie shopping."],
+            ["Must / have to", "Had to\nEx: 'I must go to the supermarket,' said Tim. → Tim said he must go to the supermarket."],
+            ["May", "Might\nEx: 'I may go shopping later,' said Tim. → Tim said he might go shopping later."]
+          ]
+        },
+        {
+          "type": "title",
+          "content": "4. PRONOUN & DETERMINER CHANGES IN REPORTED SPEECH"
+        },
+        {
+          "type": "generic-table",
+          "tableName": "Pronoun and Determiner Changes Reference",
+          "headers": ["Direct Speech", "Reported Speech"],
+          "rows": [
+            ["my", "his / her"],
+            ["this / that + N", "the / that"],
+            ["this / that + V", "it"],
+            ["these / those + N", "the / those"],
+            ["these / those + V", "they"],
+            ["v + these / those", "them"]
+          ]
+        },
+        {
+          "type": "title",
+          "content": "5. TIME & PLACE CHANGES IN REPORTED SPEECH"
+        },
+        {
+          "type": "generic-table",
+          "tableName": "Time and Place Changes Reference",
+          "headers": ["Direct Speech", "Reported Speech"],
+          "rows": [
+            ["here", "there"],
+            ["now / at the moment", "then / at that moment"],
+            ["ago", "before / previously"],
+            ["tonight", "that night"],
+            ["tomorrow", "the next day / the following day"],
+            ["yesterday", "the day before / the previous day"],
+            ["next week / next month / next year", "the following week / the following month / the following year"],
+            ["last week / last month / last year", "the week / month / year before or the previous week / month / year"]
+          ]
+        },
+        {
+          "type": "title",
+          "content": "6. EXCEPTION NOTE"
+        },
+        {
+          "type": "list",
+          "bullets": [
+            "We do not change the time expressions or tenses if the reporting takes place before the events described happen or if the statement is still true in the present.\nEx: 'I am going shopping tomorrow' said Tim to Ben. → Tim said he is going shopping tomorrow. (The time is still in the present, tomorrow hasn't arrived yet, and he hasn't gone shopping yet.)"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "B) REPORTED QUESTIONS",
+      "blocks": [
+        {
+          "type": "title",
+          "content": "1. HOW TO FORM REPORTED QUESTIONS"
+        },
+        {
+          "type": "list",
+          "bullets": [
+            "Reported questions are used to report a request or a question from someone else.",
+            "Pronouns and time/place expressions change in the same way as in reported statements.",
+            "Do not use a question mark (?) in reported questions.",
+            "We change the word order to statement word order (subject + verb, no inversion, no auxiliary do/does/did)."
+          ]
+        },
+        {
+          "type": "generic-table",
+          "tableName": "Reported Questions Reference",
+          "headers": ["Direct Speech", "Reported Questions"],
+          "rows": [
+            ["Have, do, be, modal (Yes/No Questions)", "If / whether\nEx: 'Can you get me an ice cream, Tom?' asked Tim. → Tim asked Tom if / whether he could get him an ice cream."],
+            ["What, who, which, when, where, why and how (Wh- Questions)", "What, who, which, when, where, why and how\nEx: 'Why did you buy these shoes?' asked Tim. → Tim asked me why I had bought those shoes."]
+          ]
+        },
+        {
+          "type": "title",
+          "content": "2. REPORTED VERBS WITH MULTIPLE STRUCTURES"
+        },
+        {
+          "type": "list",
+          "bullets": [
+            "Some reporting verbs can be used in more than one way (e.g. deny, suggest, admit...):\n• **Deny + N**\nEx: Katie denied the accusation.\n• **Deny + that clause**\nEx: Katie denied (that) she was a shoplifter.\n• **Deny + V-ing**\nEx: Katie denied stealing that chocolate biscuits."
+          ]
+        }
+      ]
+    }
+  ],
+  "vocabulary": [
+    {
+      "word": "slam the door",
+      "type": "phr",
+      "meaning": "shut a door forcefully and loudly, typically when angry",
+      "example": "He slammed the door and walked away in anger."
+    },
+    {
+      "word": "excuse",
+      "type": "n",
+      "meaning": "a reason or explanation given to justify a fault or offense",
+      "example": "She made up an excuse for being late to the meeting."
+    },
+    {
+      "word": "donate/donation",
+      "type": "n",
+      "meaning": "give money or goods for a good cause / the action of donating something",
+      "example": "They made a generous donation to the local hospital."
+    },
+    {
+      "word": "apologetic",
+      "type": "adj",
+      "meaning": "showing or expressing regretful acknowledgment of an offense or failure",
+      "example": "The staff were very apologetic about the delay."
+    },
+    {
+      "word": "Alysum seeker",
+      "type": "n",
+      "meaning": "a person who has left their home country as a political refugee and is seeking asylum in another",
+      "example": "The government is considering the application of each Alysum seeker."
+    }
+  ],
+  "wordFormation": [],
+  "wordPatterns": [],
+  "phrasalVerbs": [],
+  "collocations": []
+}

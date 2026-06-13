@@ -1,0 +1,301 @@
+{
+  "id": "b2-unit-25",
+  "title": "Unit 25: Unreal past, wishes / Contrast",
+  "grammar": [
+    {
+      "structure": "Unreal past",
+      "usage": "Use the past simple/continuous to refer to present/future situations, and the past perfect simple/continuous to refer to hypothetical past situations.",
+      "example": "I'd buy this top if I had more cash on me."
+    },
+    {
+      "structure": "Wishes",
+      "usage": "Use wish/if only with past tense for present/future wishes, past perfect for past wishes, would to complain or criticize, could for ability/permission.",
+      "example": "If only Henry would get a haircut!"
+    },
+    {
+      "structure": "Contrast",
+      "usage": "Use although, though, even though, in spite of, despite, however, nevertheless, while, whereas to express contrasting ideas.",
+      "example": "Although I wrote myself a note, I still forgot to call George tonight."
+    }
+  ],
+  "richGrammar": [
+    {
+      "title": "A) UNREAL PAST",
+      "blocks": [
+        {
+          "type": "title",
+          "content": "1. OVERVIEW & USAGE"
+        },
+        {
+          "type": "list",
+          "bullets": [
+            "Sometimes we use the past simple and past continuous to refer to present or future situations. This is called the unreal past.",
+            "Sometimes we use the past perfect simple and past perfect continuous to refer to hypothetical past situations that did not happen."
+          ]
+        },
+        {
+          "type": "title",
+          "content": "2. UNREAL PAST STRUCTURES"
+        },
+        {
+          "type": "generic-table",
+          "tableName": "Unreal Past Structures",
+          "headers": ["Type", "Structure & Usage", "Example"],
+          "rows": [
+            [
+              "Second conditional",
+              "To describe hypothetical present/future situations",
+              "I'd buy this top if I had more cash on me."
+            ],
+            [
+              "Suppose / What if / Imagine + past tense",
+              "To describe situations that are unlikely to happen (giả sử / chuyện gì sẽ xảy ra / tưởng tượng xem...)",
+              "EX: I know it's probably not going to happen but suppose / imagine I became a famous super model.\nEX: What if you were accepted into art college?"
+            ],
+            [
+              "Suppose / What if / Imagine + present tense",
+              "To describe situations that are likely to happen",
+              "EX: What if you are accepted into art college?"
+            ],
+            [
+              "Would rather (+ not)",
+              "Would rather + Vbare (to express preference for ourselves)",
+              "EX: I'd rather not come to this class tomorrow."
+            ],
+            [
+              "Would rather + subject + past tense",
+              "To express preference for someone else's actions",
+              "EX: I'd rather you didn't come with me to the fashion show tomorrow."
+            ],
+            [
+              "It's high (/about) time",
+              "It's high (/about) time + subject + past tense (to express that something should be done now or is overdue)",
+              "EX: It's high (/about) time that hats came back in fashion."
+            ],
+            [
+              "Polite questions",
+              "Use past simple/continuous to ask questions politely",
+              "EX: Did you want me to send you our new catalogue when it comes out?"
+            ],
+            [
+              "Wish / If only + past tense",
+              "To express present or future wishes",
+              "EX: If only / I wish I had something to wear tonight."
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "title": "B) WISHES",
+      "blocks": [
+        {
+          "type": "title",
+          "content": "1. WISHES STRUCTURES"
+        },
+        {
+          "type": "generic-table",
+          "tableName": "Wishes Usage Reference",
+          "headers": ["Use", "Structure", "Example"],
+          "rows": [
+            [
+              "Wishes about the present / future",
+              "Wish / If only + V2/ed (/ was/ were + Ving)\nUsed for things we want to be different now or in the future.",
+              "EX: I wish I was studying history of fashion instead of biology."
+            ],
+            [
+              "Wishes about the past",
+              "Wish / If only + had V3/ed (/ had been + Ving)\nUsed for regrets about past events.",
+              "EX: If only I'd known Burton's was having a sale last week."
+            ],
+            [
+              "Criticizing or complaining",
+              "Wish / if only + would\nUsed to criticize someone or complain about a situation now/future.",
+              "EX: If only Henry would get a haircut!"
+            ],
+            [
+              "Ability / permission",
+              "Wish / if only + could\nUsed to express ability or permission to do something now/future.",
+              "EX: I wish I could fit into these jeans."
+            ],
+            [
+              "Desire / formal requests",
+              "Wish + to Vbare\nUsed to express a formal desire or request.",
+              "EX: I wish to try on this ball gown."
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "title": "C) NHỮNG CỤM TỪ DIỄN TẢ SỰ ĐỐI NGHỊCH",
+      "blocks": [
+        {
+          "type": "title",
+          "content": "1. ALTHOUGH / THOUGH / EVEN THOUGH"
+        },
+        {
+          "type": "generic-table",
+          "tableName": "Although / Though / Even Though Reference",
+          "headers": ["Structure", "Example"],
+          "rows": [
+            [
+              "Although / Though / Even Though + S + V, clause",
+              "EX: Although I wrote myself a note to remind me, I still forgot to call George tonight."
+            ],
+            [
+              "S + V, although / though / even though + clause.",
+              "EX: The kids failed to find the tennis ball, although they had looked everywhere."
+            ]
+          ]
+        },
+        {
+          "type": "title",
+          "content": "2. NOTES ON ALTHOUGH, THOUGH, EVEN THOUGH"
+        },
+        {
+          "type": "list",
+          "bullets": [
+            "**Even though:** implies stronger contrast than although or though.",
+            "**Though:** more informal than although or even though.",
+            "**Though at the end:** 'Though' can be placed at the end of a sentence.\nEX: I wore a hat. I got sunburn, though."
+          ]
+        },
+        {
+          "type": "title",
+          "content": "3. IN SPITE OF / DESPITE"
+        },
+        {
+          "type": "generic-table",
+          "tableName": "In Spite Of / Despite Reference",
+          "headers": ["Structure", "Example"],
+          "rows": [
+            [
+              "In spite of / Despite + Ving, clause",
+              "EX: In spite of / Despite having been sure (that) she would win the competition, Sally came third."
+            ],
+            [
+              "In spite of / despite + the fact (that) + clause, clause.",
+              "EX: In spite of / Despite the fact (that) he was exhausted, Mike kept on climbing."
+            ],
+            [
+              "In spite of / despite + N, S + V",
+              "EX: In spite of / Despite the storm, over ten thousand people took part in the marathon."
+            ]
+          ]
+        },
+        {
+          "type": "title",
+          "content": "4. NOTES ON IN SPITE OF / DESPITE"
+        },
+        {
+          "type": "list",
+          "bullets": [
+            "**Position:** 'In spite of' or 'despite' can be placed in the middle of a sentence.\nEX: Doug wasn't shortlisted for the job in spite of / despite a great CV.",
+            "**Prior Action:** Use the structure 'in spite of / despite + Ving' to describe an action that happened before the result.\nEX: I got sunburn in spite of / despite having worn a hat.",
+            "**Subject Agreement:** In the structure 'In spite of / despite + Ving', the subject of the main clause must be the person performing the V-ing action.\n✗ My sunburn was terrible in spite of / despite wearing a hat. (Incorrect because my sunburn didn't wear a hat!)\n✓ I had a terrible sunburn in spite of / despite wearing a hat."
+          ]
+        },
+        {
+          "type": "title",
+          "content": "5. HOWEVER / NEVERTHELESS"
+        },
+        {
+          "type": "generic-table",
+          "tableName": "However / Nevertheless Reference",
+          "headers": ["Structure", "Example"],
+          "rows": [
+            [
+              "Clause 1. However / Nevertheless, clause 2",
+              "EX: Most Egyptologists believe that the Sphinx is about 4000 years old. Some geologists, however/nevertheless, argue that it must be at least 14,000 years old."
+            ]
+          ]
+        },
+        {
+          "type": "title",
+          "content": "6. NOTES ON HOWEVER / NEVERTHELESS"
+        },
+        {
+          "type": "list",
+          "bullets": [
+            "**Formality:** 'However' is less formal than 'nevertheless'.",
+            "**Positioning:** 'However' or 'nevertheless' can be placed at the start, middle, or end of a sentence.\nEX1: The fashion show was expensive to put on. However / Nevertheless, it did make a profit.\nEX2: The fashion show was expensive to put on. It did make a profit, however / nevertheless.\nEX3: The fashion show was expensive to put on. It did, however / nevertheless, make a profit."
+          ]
+        },
+        {
+          "type": "title",
+          "content": "7. WHILE / WHEREAS"
+        },
+        {
+          "type": "generic-table",
+          "tableName": "While / Whereas Reference",
+          "headers": ["Structure", "Example"],
+          "rows": [
+            [
+              "While / whereas + S + V, S + V\nUsed to show differences between two facts or ideas.",
+              "EX: While / whereas jeans are worn by both men and women, blouses are worn only by women."
+            ],
+            [
+              "S + V, while / whereas + S + V",
+              "EX: Blouses are worn only by women, while / whereas jeans are worn by both men and women."
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "title": "D) MỘT SỐ CÁCH NÓI \"DÙ CHO...\" DẠNG CAO CẤP",
+      "blocks": [
+        {
+          "type": "title",
+          "content": "1. ADVANCED CONTRAST STRUCTURES"
+        },
+        {
+          "type": "generic-table",
+          "tableName": "Advanced Contrast Structures",
+          "headers": ["Structure", "Example"],
+          "rows": [
+            [
+              "Adj/adv + as/though + S + V, Clause.",
+              "EX1: Sad as/though it is, unemployment is unlikely to go down this year.\nEX2: Much as/though Chloe didn't agree with the manager's decision, she was forced to accept it."
+            ],
+            [
+              "However + adj/adv + S + V, Clause.",
+              "EX: However poor he is, he still studies well."
+            ],
+            [
+              "No matter how + adj/adv + S + V, Clause.",
+              "EX: No matter how high the salary was, the young girl stopped working."
+            ],
+            [
+              "No matter what/ when/ why/ who/ whose/ where/ if... (+ N) + S + V, Clause.",
+              "EX: No matter what their score in the competition is, all the children will receive a prize"
+            ]
+          ]
+        }
+      ]
+    }
+  ],
+  "vocabulary": [
+    { "word": "on the catwalk", "type": "phr", "meaning": "on the stage where models walk to show new clothes", "example": "The models strutted confidently on the catwalk showing the winter collection." },
+    { "word": "establishment", "type": "n", "meaning": "a business, shop, or organization, or the act of starting one", "example": "The new restaurant has already become a popular establishment in the city." },
+    { "word": "interfere", "type": "v", "meaning": "to involve yourself in a situation where you are not wanted or needed", "example": "I wish you wouldn't interfere in my personal life." },
+    { "word": "economic boom", "type": "n", "meaning": "a period of rapid economic growth and prosperity", "example": "The country experienced a major economic boom in the late 1990s." },
+    { "word": "drawback", "type": "n", "meaning": "a disadvantage or problem that makes something less attractive", "example": "The main drawback of the new job is the long commute." },
+    { "word": "reliance", "type": "n", "meaning": "the state of depending on or trusting someone or something", "example": "The company is trying to reduce its reliance on foreign suppliers." },
+    { "word": "snap", "type": "v", "meaning": "to break suddenly with a sharp noise, or to gãy, đứt, bể", "example": "The branch snapped under the weight of the snow." },
+    { "word": "upbeat", "type": "adj", "meaning": "positive, cheerful, and optimistic", "example": "She was in an upbeat mood after receiving the good news." },
+    { "word": "glory", "type": "n", "meaning": "great admiration, honor, and praise that you earn, or great beauty", "example": "The athletes competed for the glory of their country." },
+    { "word": "buckle", "type": "n", "meaning": "a metal fastener used to join the ends of a belt or strap", "example": "He fastened the buckle of his belt before leaving." },
+    { "word": "brace", "type": "n", "meaning": "a strap or support used to hold something in place, or straps over shoulders to hold trousers up (braces)", "example": "He wore braces to hold his trousers up." },
+    { "word": "bead", "type": "n", "meaning": "a small, round piece of glass, wood, or plastic with a hole through it, used for making jewelry", "example": "She wore a necklace made of colorful wooden beads." },
+    { "word": "beachwear", "type": "n", "meaning": "clothing designed to be worn on the beach", "example": "The shop sells swimsuits, sunglasses, and other beachwear." },
+    { "word": "impracticality", "type": "n", "meaning": "the state of not being sensible, realistic, or easy to do", "example": "The impracticality of the plan became obvious when we looked at the budget." },
+    { "word": "tremendous", "type": "adj", "meaning": "extremely large in size, amount, or strength, or very great", "example": "The team has made tremendous progress over the last month." },
+    { "word": "dull", "type": "adj", "meaning": "boring, not interesting or exciting", "example": "The book was so dull that I couldn't finish reading it." }
+  ],
+  "wordFormation": [],
+  "wordPatterns": [],
+  "phrasalVerbs": [],
+  "collocations": []
+}

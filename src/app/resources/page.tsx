@@ -86,6 +86,22 @@ import b2unit9 from "@/data/b2/unit9.json";
 import b2unit10 from "@/data/b2/unit10.json";
 import b2unit11 from "@/data/b2/unit11.json";
 import b2unit12 from "@/data/b2/unit12.json";
+import b2unit13 from "@/data/b2/unit13.json";
+import b2unit14 from "@/data/b2/unit14.json";
+import b2unit15 from "@/data/b2/unit15.json";
+import b2unit16 from "@/data/b2/unit16.json";
+import b2unit17 from "@/data/b2/unit17.json";
+import b2unit18 from "@/data/b2/unit18.json";
+import b2unit19 from "@/data/b2/unit19.json";
+import b2unit20 from "@/data/b2/unit20.json";
+import b2unit21 from "@/data/b2/unit21.json";
+import b2unit22 from "@/data/b2/unit22.json";
+import b2unit23 from "@/data/b2/unit23.json";
+import b2unit24 from "@/data/b2/unit24.json";
+import b2unit25 from "@/data/b2/unit25.json";
+import b2unit26 from "@/data/b2/unit26.json";
+import b2unit27 from "@/data/b2/unit27.json";
+import b2unit28 from "@/data/b2/unit28.json";
 
 // Collect all B1 units
 const b1Units = [
@@ -145,6 +161,22 @@ const b2Units = [
   { unit: 10, data: b2unit10 },
   { unit: 11, data: b2unit11 },
   { unit: 12, data: b2unit12 },
+  { unit: 13, data: b2unit13 },
+  { unit: 14, data: b2unit14 },
+  { unit: 15, data: b2unit15 },
+  { unit: 16, data: b2unit16 },
+  { unit: 17, data: b2unit17 },
+  { unit: 18, data: b2unit18 },
+  { unit: 19, data: b2unit19 },
+  { unit: 20, data: b2unit20 },
+  { unit: 21, data: b2unit21 },
+  { unit: 22, data: b2unit22 },
+  { unit: 23, data: b2unit23 },
+  { unit: 24, data: b2unit24 },
+  { unit: 25, data: b2unit25 },
+  { unit: 26, data: b2unit26 },
+  { unit: 27, data: b2unit27 },
+  { unit: 28, data: b2unit28 },
 ];
 
 // Combine all units from all levels

@@ -1,0 +1,266 @@
+{
+  "id": "b2-unit-17",
+  "title": "Unit 17: -ing form or infinitive",
+  "grammar": [
+    {
+      "structure": "-ing form",
+      "usage": "Used as nouns, after prepositions, or after certain verbs (e.g. admit, avoid, enjoy).",
+      "example": "I've finished writing my essay."
+    },
+    {
+      "structure": "Infinitive",
+      "usage": "Used after adjectives, to express purpose, or after certain verbs (e.g. decide, hope, manage).",
+      "example": "Your answer appears to be wrong."
+    },
+    {
+      "structure": "prefer, would rather, had better",
+      "usage": "Used to express preference or give advice.",
+      "example": "I prefer reading to writing. / S + would rather + than... / You'd better ask."
+    },
+    {
+      "structure": "infinitive of purpose",
+      "usage": "Used to express the purpose of an action.",
+      "example": "I went to university to avoid getting a job!"
+    }
+  ],
+  "richGrammar": [
+    {
+      "title": "A) ING - FORM OR INFINITIVE",
+      "blocks": [
+        {
+          "type": "title",
+          "content": "1. Verbs followed by -ing (normally with or without an object)"
+        },
+        {
+          "type": "generic-table",
+          "tableName": "Verbs followed by -ing",
+          "headers": ["Verb", "English Meaning", "Verb", "English Meaning"],
+          "rows": [
+            ["admit", "to agree that something is true, especially unwillingly", "mention", "to speak about something quickly, giving little detail"],
+            ["appreciate", "to recognize the full value of something", "mind", "to be annoyed or worried by something"],
+            ["avoid", "to prevent something from happening or to keep away from something", "miss", "to fail to hit, reach, catch, or meet"],
+            ["can't help", "to be unable to resist doing something", "postpone", "to delay something until a later time"],
+            ["dislike", "to not like", "practice", "to do something repeatedly to improve skill"],
+            ["enjoy", "to get pleasure from something", "put off", "to delay doing something until a later date"],
+            ["escape", "to get free from something or to avoid something", "resist", "to withstand the action or effect of"],
+            ["face", "to confront or deal with a difficult situation", "risk", "to expose to danger or loss"],
+            ["fancy", "to want to have or do something", "suggest", "to mention or imply as a possibility"],
+            ["feel like", "to have a desire to do something", "understand", "to perceive the intended meaning of"],
+            ["finish", "to bring to an end; complete", "involve", "to include or affect someone or something"],
+            ["give up", "to stop doing something", "keep (on)", "to continue doing something"]
+          ]
+        },
+        {
+          "type": "title",
+          "content": "2. Verbs followed by full infinitive (to + Vbare)"
+        },
+        {
+          "type": "generic-table",
+          "tableName": "Verbs followed by full infinitive",
+          "headers": ["Verb", "English Meaning", "Verb", "English Meaning"],
+          "rows": [
+            ["able", "having the power, skill, means, or opportunity to do something", "hope", "to want something to happen and think that it is possible"],
+            ["afford", "to have enough money or time for", "manage", "to succeed in doing or dealing with something, especially something difficult"],
+            ["agree", "to have the same opinion", "offer", "to present or proffer something for someone to accept or reject"],
+            ["appear", "to seem; give the impression of being", "plan", "to decide on and make arrangements for in advance"],
+            ["arrange", "to plan or organize", "pleased", "happy or satisfied"],
+            ["ask", "to say something in order to obtain information or request someone to do something", "prepare", "to make ready for use or consideration"],
+            ["attempt", "to try to do or achieve something", "pretend", "to behave so as to make it appear that something is the case when in fact it is not"],
+            ["beg", "to ask for something in an anxious or humble way", "promise", "to assure someone that one will definitely do something"],
+            ["choose", "to select from a number of possibilities", "refuse", "to indicate that one is not willing to do something"],
+            ["decide", "to make a choice or judgment", "seem", "to give the impression of being"],
+            ["encourage", "to give support, confidence, or hope to", "tend", "to regularly or frequently behave in a particular way"],
+            ["expect", "to regard something as likely to happen", "want", "to have a desire to possess or do something"],
+            ["fail", "to be unsuccessful in achieving one's goal", "wish", "to feel or express a strong desire or hope for something"],
+            ["happen", "to occur by chance", "would like", "used to say politely that you want something"],
+            ["help", "to make it easier for someone to do something", "", ""]
+          ]
+        },
+        {
+          "type": "title",
+          "content": "3. Verbs followed by Object + Vbare or Object + V-ing"
+        },
+        {
+          "type": "list",
+          "bullets": [
+            "**S + Verb + Object + Vbare**: to describe a completed action (from start to finish).\n* Verbs: **feel, hear, watch, notice, see, let, make**\nEX: I heard Mrs. Jenkins tell Julie not to do that. (I heard the whole conversation.)",
+            "**S + Verb + Object + V-ing**: to describe an action in progress, or only a part of the action.\n* Verbs: **feel, hear, see, notice, watch**\nEX: I heard Miss Jenkins telling Julie not to do that. (I heard only part of it; it was in progress.)",
+            "**Note on passive forms:** When **hear, make, see** are used in the passive, they are followed by a full infinitive (to + Vbare).\nEX: The coach made us train hard. → We were made to train hard."
+          ]
+        },
+        {
+          "type": "title",
+          "content": "4. Verbs followed by to-infinitive or V-ing (No change in meaning)"
+        },
+        {
+          "type": "list",
+          "bullets": [
+            "Verbs: **begin, can't bear/stand, continue, hate, intend, love, prefer, start**",
+            "EX: We continued to do experiments in the lab all afternoon.",
+            "EX: We continued doing experiments in the lab all afternoon."
+          ]
+        },
+        {
+          "type": "title",
+          "content": "5. Verbs followed by to-infinitive or V-ing (Change in meaning)"
+        },
+        {
+          "type": "list",
+          "bullets": [
+            "Verbs: **consider, forget, go on, imagine, learn, like, regret, remember, stop, teach, try, mean**",
+            "**remember + V-ing**: recall a past action / memory.\nEX: I remember teachers at my school hitting children when they were naughty!",
+            "**remember + to-infinitive**: remember to perform a future or planned action.\nEX: Did you remember to do your homework?",
+            "*(Note: For differences in meaning of other verbs, see the grammar reference at the back of the book)*"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "B) PREFER, WOULD RATHER, HAD BETTER",
+      "blocks": [
+        {
+          "type": "title",
+          "content": "1. PREFER"
+        },
+        {
+          "type": "list",
+          "bullets": [
+            "**General preference (prefer + N/V-ing + to + N/V-ing)**: used to describe general preferences.\nEX: I prefer Biology to History.\nEX: I prefer reading English texts to speaking in English.",
+            "**Specific preference (would prefer + to + Vbare + rather than + Vbare / to + Vbare)**: used to describe a preference in a specific situation.\nEX: I'd prefer to have the lesson on Thursday rather than ((to) have it) on Friday, if that's possible."
+          ]
+        },
+        {
+          "type": "title",
+          "content": "2. WOULD RATHER"
+        },
+        {
+          "type": "list",
+          "intro": "We use would rather to express preference.",
+          "items": [
+            {
+              "label": "a) With one subject (preference of the speaker):",
+              "bullets": [
+                "**Present preference (S + would rather (+ not) + Vbare + than + Vbare)**\nEX: I'd rather have the lesson on Wednesday than (have it) on Tuesday, if that's possible.\nEX: We would rather not travel to Korea.",
+                "**Past preference (S + would rather (+ not) + have + V3/ed)**\nEX: I would rather have bought a shirt than a dress.\nEX: I would rather not have bought this shirt."
+              ]
+            },
+            {
+              "label": "b) With two subjects (desire for someone else's action):",
+              "bullets": [
+                "**Present desire (S1 + would rather (that) + S2 + Vbare)**: used to express what someone wants another person to do in the present.\nEX: I would rather that you come back to me.\nEX: I would rather that you not come back to me.",
+                "**Present hypothetical desire (S1 + would rather (that) + S2 + V2/ed / weren't)**: used to express a wish that is contrary to facts in the present. Note that 'be' is always 'were/weren't' for all subjects.\nEX: Henry would rather that his girlfriend worked in the same department as he does.\nEX: Henry would rather that Jenny didn't work in the same department as he does.\nEX: Tom would rather that he weren't a teacher.",
+                "**Past hypothetical desire (S1 + would rather (that) + S2 + had + V3/ed)**: used to express a wish that is contrary to facts in the past.\nEX: Bob would rather that Jill had gone to class yesterday.\nEX: Bob would rather that Jill hadn't gone to class yesterday."
+              ]
+            }
+          ]
+        },
+        {
+          "type": "title",
+          "content": "3. HAD BETTER"
+        },
+        {
+          "type": "list",
+          "bullets": [
+            "**had better + Vbare**: used to give advice to someone in a specific situation.\nEX: You'd better ask your parents if you can come on the school trip."
+          ]
+        }
+      ]
+    },
+    {
+      "title": "C) INFINITIVE OF PURPOSE",
+      "blocks": [
+        {
+          "type": "title",
+          "content": "Ways to express the purpose of an action:"
+        },
+        {
+          "type": "list",
+          "bullets": [
+            "**1. to + Vbare**\nEX: I went to university to avoid getting a job!\n* **Warning:** Do not use 'not + to-infinitive' for negative purpose.\n✗ I went to university not to get a job!",
+            "**2. in order + to + Vbare**\nEX: I went to university in order to avoid getting a job!",
+            "**3. so as + to + Vbare**\nEX: I went to university so as to avoid getting a job!",
+            "**4. so (that) + could + Vbare**\nEX: I went to university so (that) I could avoid getting a job!"
+          ]
+        }
+      ]
+    }
+  ],
+  "vocabulary": [
+    {
+      "word": "attic",
+      "type": "n",
+      "meaning": "a space or room just below the roof of a house",
+      "example": "We store our old suitcases in the attic."
+    },
+    {
+      "word": "spare bedroom",
+      "type": "n",
+      "meaning": "an extra bedroom in a house that is not used regularly",
+      "example": "Our guests can sleep in the spare bedroom."
+    },
+    {
+      "word": "resist",
+      "type": "v",
+      "meaning": "withstand the action or effect of; or refrain from doing or having something tempting",
+      "example": "I couldn't resist eating the last slice of cake."
+    },
+    {
+      "word": "encourage",
+      "type": "v",
+      "meaning": "give support, confidence, or hope to someone",
+      "example": "My parents always encourage me to try my best."
+    },
+    {
+      "word": "second-hand watch",
+      "type": "n",
+      "meaning": "a watch that has been owned or used by someone else before",
+      "example": "He bought a second-hand watch at the flea market."
+    },
+    {
+      "word": "detest",
+      "type": "v",
+      "meaning": "dislike intensely",
+      "example": "I detest having to wake up early on weekends."
+    },
+    {
+      "word": "presumably",
+      "type": "adv",
+      "meaning": "used to convey that what is asserted is very likely though not known for certain",
+      "example": "Presumably, they will arrive before dinner."
+    },
+    {
+      "word": "be tempted to",
+      "type": "phr",
+      "meaning": "have an urge or inclination to do something, especially something wrong or unwise",
+      "example": "I was tempted to buy the expensive shoes."
+    },
+    {
+      "word": "tickled",
+      "type": "n",
+      "meaning": "lightly touched to cause a tingling sensation and laughter",
+      "example": "The baby laughed when he was tickled on his tummy."
+    },
+    {
+      "word": "practical jokes",
+      "type": "n",
+      "meaning": "tricks played on someone in order to make them look foolish and to amuse others",
+      "example": "He is always playing practical jokes on his colleagues."
+    },
+    {
+      "word": "demotivated",
+      "type": "adj",
+      "meaning": "feeling less eager to work or make an effort",
+      "example": "She felt demotivated by the lack of appreciation."
+    },
+    {
+      "word": "approach",
+      "type": "v",
+      "meaning": "come near or nearer to someone or something in distance or time",
+      "example": "The train slowed down as it approached the station."
+    }
+  ],
+  "wordFormation": [],
+  "wordPatterns": [],
+  "phrasalVerbs": [],
+  "collocations": []
+}

@@ -1,0 +1,194 @@
+{
+  "id": "b2-unit-23",
+  "title": "Unit 23: Relative clauses, participles",
+  "grammar": [
+    {
+      "structure": "Relative clauses",
+      "usage": "Used to give extra information about people or things or to define them. Formed with relative pronouns like who, whom, which, whose, that, when, where, why.",
+      "example": "Did you see the film which was on TV last night?"
+    },
+    {
+      "structure": "Participles",
+      "usage": "Used after prepositions/conjunctions, to give reasons, to describe simultaneous actions, to reduce relative clauses, or to show sequence.",
+      "example": "Having finished my homework, I decided to go to the cinema."
+    }
+  ],
+  "richGrammar": [
+    {
+      "title": "A) RELATIVE CLAUSES",
+      "blocks": [
+        {
+          "type": "title",
+          "content": "1. OVERVIEW & PURPOSE"
+        },
+        {
+          "type": "list",
+          "bullets": [
+            "Relative clauses are used to provide extra information about people/things or to define the subject being discussed.",
+            "Relative clauses usually accompany relative pronouns such as: who, whom, which, what, where, when, why, whose."
+          ]
+        },
+        {
+          "type": "title",
+          "content": "2. RELATIVE PRONOUNS REFERENCE"
+        },
+        {
+          "type": "generic-table",
+          "tableName": "Relative Pronouns Table",
+          "headers": ["Relative Pronoun", "Example"],
+          "rows": [
+            ["Which (dành cho vật / động vật)", "Did you see the film which was on TV last night?"],
+            ["Who (dành cho người / động vật khi mình nhân cách hóa chúng)", "How do you think the first man who walked on the moon felt?"],
+            ["When (dành cho thời gian)", "November 5th was the day when Guy Fawkes tried to blow up Parliament."],
+            ["Where (dành cho nơi chốn)", "This is the place where they filmed Citizen Kane."],
+            ["Why (dành cho nguyên nhân)", "That's the reason why he's so popular."],
+            ["Whom (dành cho người ở vị trí tân ngữ)", "Is that the man whom we saw at the cinema yesterday?"],
+            ["Whose (dành cho sở hữu)", "The Godfather was made by Francis Ford Copolla, whose daughter is also a film director."]
+          ]
+        },
+        {
+          "type": "title",
+          "content": "3. IMPORTANT NOTES"
+        },
+        {
+          "type": "list",
+          "bullets": [
+            "**Relative Pronoun as Subject:** When a relative pronoun acts as the subject of the relative clause, do not use another subject.\n✓ I admire Jude Law, who always works hard on his films.\n✗ I admire Jude Law, who he always works hard on his films.",
+            "**Whom vs. Who:**\n• General rule: **WHO + V** while **WHOM + S + V**.\n• In informal situations, we often use who instead of whom, even when who is the object of a relative clause.\nEx: Is that the man who we saw at the cinema yesterday?\nEx: Charlies Chapin was a comic genius to whom all comedians owe a great deal.\nEx: Charlies Chapin was a comic genius who all comedians own a great deal to.\n• After prepositions, we always use **whom**.\nEx: He is a person for whom very few people feel much sympathy.\n• Informally, we place the preposition at the end of the relative clause and use **who**.\nEx: All the people who the email was sent replied to.",
+            "**Where / When Replacement:** where/when can be replaced by 'preposition + which'. In informal situations, place the preposition at the end of the clause.\nEx1: The theatre where / in which I first acted is somewhere around here.\nEx2: [The theatre which I first acted in] [is somewhere around here.]\nEx1: Do you know the year when / in which the first Western was made?\nEx2: [Do you know the year] [which the first Western was made in?]"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "B) TYPES OF RELATIVE CLAUSES",
+      "blocks": [
+        {
+          "type": "title",
+          "content": "1. NON-DEFINING RELATIVE CLAUSES (Mệnh đề quan hệ không xác định hay không bắt buộc)"
+        },
+        {
+          "type": "list",
+          "bullets": [
+            "Ex: Ray Watson, who starred in Bandits, is considering making a film based on the life of Einstein.",
+            "Used to provide extra information about a person, thing, or event that has already been defined.",
+            "Not strictly necessary for the meaning of the sentence; without it, the sentence still makes complete sense.",
+            "Commas are used to separate it from the main clause.",
+            "**When to use a non-defining relative clause (with commas):**\n• When the noun preceding who, which, whom... is a proper noun (e.g. Ha Noi, which... / Mary, who is...)\n• When the noun has this, that, these, those before it (e.g. This book, which...)\n• When the noun has a possessive before it (e.g. My mother, who is...)\n• When the noun is unique and well-known (e.g. The Sun, which...)",
+            "**Which referring to a whole sentence/clause:** 'Which' can refer to the entire preceding sentence/clause, rather than just the noun before it.\nEx: We finally got tickets for the concerts, which was very lucky.\nEx: Microsoft has a lot of power in the world of computers, which annoys some people."
+          ]
+        },
+        {
+          "type": "title",
+          "content": "2. DEFINING RELATIVE CLAUSES (Mệnh đề quan hệ xác định hay bắt buộc)"
+        },
+        {
+          "type": "list",
+          "bullets": [
+            "Used to define the noun preceding it.",
+            "Necessary for the meaning of the sentence; without it, the sentence would not make complete sense.",
+            "Used when the noun is indefinite and no commas are used.",
+            "Defining relative clauses are not separated from the sentence.",
+            "We can use **that** instead of who/which.",
+            "**When is THAT mandatory?**\n• Following superlatives\n• Following words: only, the first, the last\n• When the preceding noun includes both people and things\n• Following indefinite, negative, or quantitative pronouns (e.g. no one, nobody, nothing, anyone, anything, anybody, someone, something, somebody, all, some, any, little, none)",
+            "**When is THAT not used?**\n• After a comma or in non-defining relative clauses\n• After prepositions",
+            "**Omission of Relative Pronouns:** The relative pronoun (who, whom, which, that) can be omitted when it acts as the object of the relative clause.",
+            "**Prepositions with Where/When:** Do not use a preposition for the relative pronouns where / when.\nEx: The theatre where I fist acted is somewhere around here.\n→ The theatre when I first acted in is somewhere around here.\nEx: Do you know the year when the first Western was made?\n→ Do you know the year when the first Western was made in?"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "C) PARTICIPLES",
+      "blocks": [
+        {
+          "type": "title",
+          "content": "1. THE THREE FORMS OF PARTICIPLES"
+        },
+        {
+          "type": "generic-table",
+          "tableName": "Participle Forms Table",
+          "headers": ["Dạng Participle", "Cấu trúc"],
+          "rows": [
+            ["Present", "Ving"],
+            ["Past", "V2/ed"],
+            ["Perfect", "having + V3/ed"]
+          ]
+        },
+        {
+          "type": "title",
+          "content": "2. USAGE OF PARTICIPLES"
+        },
+        {
+          "type": "list",
+          "bullets": [
+            "**a) Following prepositions & conjunctions:** → Ving or having + V3/ed\nEx: By appearing in that cigarette advert, he damaged his acting career.\nEx: After playing / having played video games all morning, I was really tired.",
+            "**b) Explaining the reason for something:** → Ving or having + V3/ed\nEx: Being quite good looking, Ralph decided to made a career as a model.\nEx: Having seen this film before, I knew what was going to happen.",
+            "**c) Expressing actions happening at the same time:** → Ving\nEx: Waiting for the show to begin, I felt really nervous.",
+            "**d) Reducing relative clauses:** Active → Ving / Passive → V3/ed\nEx: Imagine being the person directing a big budget film.\nEx: The person chosen for the part will be contacted by phone.",
+            "**e) Expressing past actions in sequence:** → having + V3/ed\nEx: Having finished my homework, I decided to go to the cinema.",
+            "**f) Replacing passive forms:** → V3/ed\nEx: Made to wait, the actor began to get very annoyed."
+          ]
+        },
+        {
+          "type": "title",
+          "content": "3. IMPORTANT NOTE"
+        },
+        {
+          "type": "list",
+          "bullets": [
+            "Participles and the rest of the sentence must reflect the same subject.\n✓ Watching TV, I saw a news report about Hollywood.\n✗ Watching TV, a news report came on about Hollywood."
+          ]
+        }
+      ]
+    }
+  ],
+  "vocabulary": [
+    {
+      "word": "maiden voyage",
+      "type": "n",
+      "meaning": "the first journey made by a ship or spacecraft",
+      "example": "The Titanic sank on its maiden voyage."
+    },
+    {
+      "word": "breed of dog",
+      "type": "n",
+      "meaning": "a specific type of dog bred by humans",
+      "example": "What breed of dog is your pet?"
+    },
+    {
+      "word": "shepherd",
+      "type": "n",
+      "meaning": "a person who looks after sheep, or to guide/guard someone",
+      "example": "The shepherd led the sheep to the green pasture."
+    },
+    {
+      "word": "currency",
+      "type": "n",
+      "meaning": "a system of money in general use in a particular country",
+      "example": "The euro is the official currency of many European countries."
+    },
+    {
+      "word": "revive",
+      "type": "adj",
+      "meaning": "brought back to life, consciousness, or popularity",
+      "example": "The doctor tried to keep the patient revive."
+    },
+    {
+      "word": "slip",
+      "type": "adj",
+      "meaning": "slippery, or to slide accidentally",
+      "example": "The floor was wet and slip."
+    },
+    {
+      "word": "depressed",
+      "type": "adj",
+      "meaning": "feeling miserable, dejected, or suffering from clinical depression",
+      "example": "He felt depressed after losing his job."
+    }
+  ],
+  "wordFormation": [],
+  "wordPatterns": [],
+  "phrasalVerbs": [],
+  "collocations": []
+}
