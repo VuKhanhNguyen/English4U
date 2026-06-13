@@ -260,7 +260,7 @@
             [
               "Possessive Pronouns",
               "mine, yours, his, hers, ours, yours, theirs",
-              "Replaces a noun, or follows 'of' to indicate possession.\nEX1: My new job is great. How about yours?\nEX2: Are they customers of yours?\nNote: Do not use an apostrophe in possessive pronouns (yours, hers, theirs, its)."
+              "Replaces a noun, or follows 'of' to indicate possession.\nEX1: My new job is great. How about yours?\nEX2: Are they customers of yours?\n* Note: Do not use an apostrophe in possessive pronouns (yours, hers, theirs, its)."
             ]
           ]
         }

@@ -76,6 +76,7 @@ import b2Unit17 from "@/data/b2/unit17.json";
 import b2Unit18 from "@/data/b2/unit18.json";
 import b2Unit19 from "@/data/b2/unit19.json";
 import b2Unit20 from "@/data/b2/unit20.json";
+
 import b2Unit21 from "@/data/b2/unit21.json";
 import b2Unit22 from "@/data/b2/unit22.json";
 import b2Unit23 from "@/data/b2/unit23.json";
@@ -84,6 +85,7 @@ import b2Unit25 from "@/data/b2/unit25.json";
 import b2Unit26 from "@/data/b2/unit26.json";
 import b2Unit27 from "@/data/b2/unit27.json";
 import b2Unit28 from "@/data/b2/unit28.json";
+
 import c1c2Data from "@/data/destination-c1-c2.json";
 
 const b1Data = {
