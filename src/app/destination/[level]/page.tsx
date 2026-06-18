@@ -34,7 +34,7 @@ export default async function DestinationPage({
   }
 
   return (
-    <div className="flex flex-col min-h-screen relative overflow-hidden">
+    <div className="flex flex-col min-h-screen relative overflow-x-clip">
       {/* Base background color */}
       <div className="fixed inset-0 bg-pale-ash -z-20" />
       {/* FloatingLines animation layer */}

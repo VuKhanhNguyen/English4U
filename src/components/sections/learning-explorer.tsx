@@ -2,7 +2,7 @@
 
 import * as React from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Search } from "lucide-react";
+import { Search, X, List } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useLanguage } from "@/components/providers/language-provider";
 import { showToast } from "@/components/ui/toast";
@@ -723,6 +723,128 @@ export function LearningExplorerSection({
 
   const activeBook = books[selectedBookIndex];
 
+  const [expandedUnitId, setExpandedUnitId] = React.useState<string | undefined>(undefined);
+  const [activeUnitId, setActiveUnitId] = React.useState<string | null>(null);
+  const [isMobileDrawerOpen, setIsMobileDrawerOpen] = React.useState(false);
+
+  React.useEffect(() => {
+    if (activeBook?.units?.[0]?.id) {
+      setExpandedUnitId(activeBook.units[0].id);
+      setActiveUnitId(activeBook.units[0].id);
+    } else {
+      setExpandedUnitId(undefined);
+      setActiveUnitId(null);
+    }
+  }, [selectedBookIndex, activeBook]);
+
+  // Scrollspy effect using IntersectionObserver
+  React.useEffect(() => {
+    if (typeof window === "undefined" || !("IntersectionObserver" in window)) return;
+    if (!activeBook?.units) return;
+
+    const observerOptions = {
+      root: null,
+      rootMargin: "-25% 0px -55% 0px",
+      threshold: 0,
+    };
+
+    const handleIntersection = (entries: IntersectionObserverEntry[]) => {
+      const visibleEntry = entries.find(entry => entry.isIntersecting);
+      if (visibleEntry) {
+        const unitId = visibleEntry.target.id.replace("scroll-unit-", "");
+        setActiveUnitId(unitId);
+      }
+    };
+
+    const observer = new IntersectionObserver(handleIntersection, observerOptions);
+
+    activeBook.units.forEach((unit: any) => {
+      const el = document.getElementById(`scroll-unit-${unit.id}`);
+      if (el) observer.observe(el);
+    });
+
+    return () => {
+      observer.disconnect();
+    };
+  }, [activeBook, selectedBookIndex]);
+
+  const sidebarScrollContainerRef = React.useRef<HTMLDivElement>(null);
+  const mobileScrollContainerRef = React.useRef<HTMLDivElement>(null);
+
+  // Auto-scroll desktop sidebar container to active unit item
+  React.useEffect(() => {
+    if (!activeUnitId || !sidebarScrollContainerRef.current) return;
+
+    const container = sidebarScrollContainerRef.current;
+    const activeElement = container.querySelector(
+      `[data-unit-id="${activeUnitId}"]`
+    ) as HTMLElement;
+
+    if (activeElement) {
+      const containerHeight = container.clientHeight;
+      const elemTop = activeElement.offsetTop;
+      const elemHeight = activeElement.clientHeight;
+
+      container.scrollTo({
+        top: elemTop - containerHeight / 2 + elemHeight / 2,
+        behavior: "smooth",
+      });
+    }
+  }, [activeUnitId]);
+
+  // Auto-scroll mobile drawer to active item when opened
+  React.useEffect(() => {
+    if (!isMobileDrawerOpen || !activeUnitId) return;
+
+    const timer = setTimeout(() => {
+      if (!mobileScrollContainerRef.current) return;
+      const container = mobileScrollContainerRef.current;
+      const activeElement = container.querySelector(
+        `[data-unit-id="${activeUnitId}"]`
+      ) as HTMLElement;
+
+      if (activeElement) {
+        const containerHeight = container.clientHeight;
+        const elemTop = activeElement.offsetTop;
+        const elemHeight = activeElement.clientHeight;
+
+        container.scrollTo({
+          top: elemTop - containerHeight / 2 + elemHeight / 2,
+          behavior: "instant" as ScrollBehavior,
+        });
+      }
+    }, 100);
+
+    return () => clearTimeout(timer);
+  }, [isMobileDrawerOpen, activeUnitId]);
+
+  const handleUnitClick = (unitId: string) => {
+    setExpandedUnitId(unitId);
+    setActiveUnitId(unitId);
+    setIsMobileDrawerOpen(false);
+
+    // Smooth scroll with native scrollIntoView
+    setTimeout(() => {
+      const element = document.getElementById(`scroll-unit-${unitId}`);
+      if (element) {
+        element.scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+        });
+      }
+    }, 100);
+  };
+
+  const splitTitle = (title: string) => {
+    if (!title) return { prefix: "", main: "" };
+    const colonIndex = title.indexOf(":");
+    if (colonIndex === -1) return { prefix: "", main: title };
+    return {
+      prefix: title.substring(0, colonIndex).trim(),
+      main: title.substring(colonIndex + 1).trim(),
+    };
+  };
+
   const totalUnitsCount = React.useMemo(() => {
     if (!activeBook || !activeBook.units) return 0;
     return activeBook.units.reduce((acc: number, unit: any) => {
@@ -748,7 +870,7 @@ export function LearningExplorerSection({
   };
 
   return (
-    <section className={cn("py-16 md:py-24 bg-paper-canvas border-t border-off-black relative overflow-hidden", className)}>
+    <section className={cn("py-16 md:py-24 bg-paper-canvas border-t border-off-black relative overflow-x-clip", className)}>
       
       {/* Subtle background gradient wash */}
       <div className="absolute top-0 right-0 w-[500px] h-[500px] rounded-full bg-sky-mint-gradient opacity-20 blur-[120px] pointer-events-none z-0" />
@@ -830,16 +952,74 @@ export function LearningExplorerSection({
           </Card>
         )}
 
-        {/* Units Accordion */}
-        <Card variant="content" className="p-4 md:p-8">
-          <Accordion
-            type="single"
-            collapsible
-            defaultValue={activeBook?.units?.[0]?.id}
-            className="w-full"
-          >
-            {(activeBook?.units || []).map((unit: any) => (
-              <AccordionItem key={unit.id} value={unit.id} className="border-b border-pale-stone">
+        {/* Units Accordion Layout (with Left Sidebar on Desktop) */}
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-start relative">
+          {/* Desktop Left Sidebar */}
+          <aside data-lenis-prevent className="hidden md:flex md:col-span-4 lg:col-span-3 sticky top-[110px] h-[calc(100vh-150px)] flex-col bg-paper-canvas/90 dark:bg-zinc-900/40 backdrop-blur-md rounded-lg p-5 shadow-sm select-none overflow-hidden overscroll-y-auto">
+            <div className="mb-4 shrink-0 pb-3 border-b border-off-black/5 dark:border-white/5">
+              <h3 className="font-heading font-bold text-xs uppercase tracking-wider text-pale-stone mb-1">
+                {translate("Units Index")}
+              </h3>
+              <p className="text-[11px] font-mono text-pale-stone/70">
+                {activeBook.book}
+              </p>
+            </div>
+            <div ref={sidebarScrollContainerRef} className="flex-1 overflow-y-auto relative pr-1 space-y-1.5 scrollbar-thin scrollbar-thumb-off-black/10 dark:scrollbar-thumb-white/10">
+              {activeBook?.units?.map((unit: any) => {
+                const { prefix, main } = splitTitle(unit.title);
+                const isActive = activeUnitId === unit.id || expandedUnitId === unit.id;
+                return (
+                  <button
+                    key={unit.id}
+                    data-unit-id={unit.id}
+                    onClick={() => handleUnitClick(unit.id)}
+                    className={cn(
+                      "w-full text-left px-4 py-3 rounded-lg transition-all duration-200 font-mono text-xs border flex flex-col gap-1 items-start cursor-pointer outline-none relative overflow-hidden",
+                      isActive
+                        ? "bg-atmosphere-wash/50 dark:bg-atmosphere-wash/20 border-off-black/20 dark:border-white/15 text-ink font-bold shadow-sm"
+                        : "bg-paper-canvas/20 border-off-black/5 dark:border-white/5 text-pale-stone hover:bg-atmosphere-wash/30 dark:hover:bg-atmosphere-wash/10 hover:text-ink hover:border-off-black/10 dark:hover:border-white/10"
+                    )}
+                  >
+                    {/* Active left indicator line */}
+                    {isActive && (
+                      <motion.div
+                        layoutId="active-indicator"
+                        className="absolute left-0 top-0 bottom-0 w-1 bg-ink dark:bg-white"
+                        transition={{ type: "spring", stiffness: 350, damping: 30 }}
+                      />
+                    )}
+                    {prefix && (
+                      <span className={cn(
+                        "text-[10px] uppercase font-bold tracking-wider",
+                        isActive ? "text-ink" : "text-pale-stone/70"
+                      )}>
+                        {prefix}
+                      </span>
+                    )}
+                    <span className="line-clamp-2 text-left leading-normal">{main}</span>
+                  </button>
+                );
+              })}
+            </div>
+          </aside>
+
+          {/* Main Content Accordion Card */}
+          <div className="md:col-span-8 lg:col-span-9 min-w-0 w-full">
+            <Card variant="content" className="p-4 md:p-8">
+              <Accordion
+                type="single"
+                collapsible
+                value={expandedUnitId}
+                onValueChange={setExpandedUnitId}
+                className="w-full"
+              >
+                {(activeBook?.units || []).map((unit: any) => (
+                  <AccordionItem
+                    key={unit.id}
+                    value={unit.id}
+                    id={`scroll-unit-${unit.id}`}
+                    className="border-b border-pale-stone scroll-mt-[110px]"
+                  >
                 <AccordionTrigger className="text-subheading font-mono font-medium hover:no-underline py-5 text-ink">
                   {unit.title}
                 </AccordionTrigger>
@@ -1267,6 +1447,102 @@ export function LearningExplorerSection({
           </Accordion>
         </Card>
       </div>
-    </section>
+    </div>
+
+    {/* Mobile FAB and Bottom Sheet Drawer */}
+    <div className="md:hidden">
+      {/* Floating Action Button */}
+      <motion.button
+        whileHover={{ scale: 1.05 }}
+        whileTap={{ scale: 0.95 }}
+        onClick={() => setIsMobileDrawerOpen(true)}
+        className="fixed bottom-6 right-6 z-40 bg-indigo-600 text-white rounded-full px-5 py-3 shadow-xl flex items-center gap-2 border border-indigo-500 font-mono text-xs cursor-pointer hover:bg-indigo-700 transition-colors"
+      >
+        <List className="w-4 h-4" />
+        <span>{translate("Syllabus Index")}</span>
+      </motion.button>
+
+      {/* Drawer Overlay & Bottom Sheet */}
+      <AnimatePresence>
+        {isMobileDrawerOpen && (
+          <>
+            {/* Backdrop overlay */}
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              onClick={() => setIsMobileDrawerOpen(false)}
+              className="fixed inset-0 bg-black/40 backdrop-blur-sm z-50 pointer-events-auto"
+            />
+
+            {/* Slide-up bottom sheet */}
+            <motion.div
+              initial={{ y: "100%" }}
+              animate={{ y: 0 }}
+              exit={{ y: "100%" }}
+              transition={{ type: "spring", damping: 25, stiffness: 220 }}
+              className="fixed bottom-0 left-0 right-0 max-h-[80vh] bg-paper-canvas rounded-t-[32px] border-t border-off-black/20 shadow-2xl z-50 p-6 flex flex-col pointer-events-auto overflow-hidden"
+            >
+              {/* Drag handle indicator */}
+              <div className="w-12 h-1.5 bg-off-black/10 dark:bg-white/10 rounded-full mx-auto mb-6 shrink-0" />
+
+              {/* Drawer Header */}
+              <div className="flex justify-between items-center mb-6 shrink-0">
+                <div>
+                  <h3 className="font-heading font-bold text-base text-ink">
+                    {translate("Units Index")}
+                  </h3>
+                  <p className="text-xs font-mono text-pale-stone mt-1">
+                    {activeBook.book}
+                  </p>
+                </div>
+                <button
+                  onClick={() => setIsMobileDrawerOpen(false)}
+                  className="p-2 rounded-full hover:bg-atmosphere-wash/50 text-ink cursor-pointer outline-none border-none"
+                >
+                  <X className="w-5 h-5" />
+                </button>
+              </div>
+
+              {/* Drawer list */}
+              <div ref={mobileScrollContainerRef} className="flex-1 overflow-y-auto relative space-y-2 pb-8 pr-1 scrollbar-thin">
+                {activeBook?.units?.map((unit: any) => {
+                  const { prefix, main } = splitTitle(unit.title);
+                  const isActive = activeUnitId === unit.id || expandedUnitId === unit.id;
+                  return (
+                    <button
+                      key={unit.id}
+                      data-unit-id={unit.id}
+                      onClick={() => handleUnitClick(unit.id)}
+                      className={cn(
+                        "w-full text-left px-4 py-3 rounded-lg transition-all duration-200 font-mono text-xs border flex flex-col gap-1 items-start cursor-pointer outline-none relative overflow-hidden",
+                        isActive
+                          ? "bg-atmosphere-wash/50 dark:bg-atmosphere-wash/20 border-off-black/20 dark:border-white/15 text-ink font-bold shadow-sm"
+                          : "bg-paper-canvas/20 border-off-black/5 dark:border-white/5 text-pale-stone hover:bg-atmosphere-wash/30 dark:hover:bg-atmosphere-wash/10 hover:text-ink hover:border-off-black/10 dark:hover:border-white/10"
+                      )}
+                    >
+                      {isActive && (
+                        <div className="absolute left-0 top-0 bottom-0 w-1 bg-ink dark:bg-white" />
+                      )}
+                      {prefix && (
+                        <span className={cn(
+                          "text-[10px] uppercase font-bold tracking-wider",
+                          isActive ? "text-ink" : "text-pale-stone/70"
+                        )}>
+                          {prefix}
+                        </span>
+                      )}
+                      <span className="leading-normal text-left">{main}</span>
+                    </button>
+                  );
+                })}
+              </div>
+            </motion.div>
+          </>
+        )}
+      </AnimatePresence>
+    </div>
+  </div>
+</section>
   );
 }
