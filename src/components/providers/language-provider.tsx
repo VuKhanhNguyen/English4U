@@ -8,6 +8,7 @@ import aboutTranslations from "@/data/about-translation-vi.json";
 import vocabTranslationsB2 from "@/data/vocab-translation-vi-b2.json";
 import grammarTranslationsB2 from "@/data/grammar-translation-vi-b2.json";
 import resourcesTranslations from "@/data/resources-translation-vi.json";
+import contactTranslations from "@/data/contact-translation-vi.json";
 import { showToast } from "@/components/ui/toast";
 
 const customTranslations = {
@@ -18,6 +19,7 @@ const customTranslations = {
   ...vocabTranslationsB2,
   ...grammarTranslationsB2,
   ...resourcesTranslations,
+  ...contactTranslations,
 };
 
 type Language = "en" | "vi";

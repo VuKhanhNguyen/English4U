@@ -187,7 +187,7 @@ export function Navbar() {
             {translate("Resources")}
           </Link>
           <Link
-            href="/#contact"
+            href="/contact"
             className="text-sm font-normal text-off-black px-[10px] py-[8px] hover:underline hover:decoration-off-black transition-all"
           >
             {translate("Contact")}

@@ -71,7 +71,7 @@ export function Footer() {
                 </li>
                 <li>
                   <Link 
-                    href="/#contact" 
+                    href="/contact" 
                     className="text-[#8ea0b5] hover:text-white transition-colors text-sm underline decoration-[#8ea0b5]/50 hover:decoration-white"
                   >
                     {translate("Contact")}
