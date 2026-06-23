@@ -86,15 +86,23 @@ function LoaderContent() {
   if (!isLoading) return null;
 
   return (
-    <div className={`fixed inset-0 z-[9999] flex items-center justify-center bg-white/90 backdrop-blur-sm transition-all duration-300 ${isImageLoaded ? "opacity-100" : "opacity-0"}`}>
+    <div className="fixed inset-0 z-[9999] flex items-center justify-center bg-white/90 dark:bg-black/90 backdrop-blur-sm transition-opacity duration-300">
       <div className="flex flex-col items-center gap-4">
-        <img
-          ref={imgRef}
-          src="/imgs/dogStudy.gif"
-          alt="Loading..."
-          className="w-[120px] h-auto object-contain"
-          onLoad={() => setIsImageLoaded(true)}
-        />
+        {/* Fixed aspect ratio wrapper to prevent visual shifting */}
+        <div className="relative w-[120px] h-[120px] flex items-center justify-center">
+          <img
+            ref={imgRef}
+            src="/imgs/dogStudy.gif"
+            alt="Loading..."
+            className={`w-[120px] h-auto object-contain transition-opacity duration-300 ${isImageLoaded ? "opacity-100" : "opacity-0 absolute"}`}
+            onLoad={() => setIsImageLoaded(true)}
+          />
+          {!isImageLoaded && (
+            <div className="absolute inset-0 flex items-center justify-center text-pale-stone dark:text-zinc-400 font-mono text-xs animate-pulse">
+              Loading GIF...
+            </div>
+          )}
+        </div>
         <div className="loader" />
       </div>
     </div>

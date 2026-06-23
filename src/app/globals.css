@@ -326,3 +326,14 @@ html.lenis body {
     inset: 0;
   }
 }
+
+/* React Loading Skeleton overrides for theme integration */
+.react-loading-skeleton {
+  --base-color: #e5e0dc !important;
+  --highlight-color: #f2ede9 !important;
+}
+
+.dark .react-loading-skeleton {
+  --base-color: #1d1d1f !important;
+  --highlight-color: #2c2c2e !important;
+}
