@@ -421,7 +421,7 @@ function RichGrammarRenderer({ richGrammar }: { richGrammar: any[] }) {
                       </h5>
                     )}
                     <div className="overflow-x-auto border border-off-black rounded-lg bg-paper-canvas">
-                      <table className="w-full text-sm border-collapse text-left">
+                      <table className="w-full text-sm border-collapse text-left min-w-[500px]">
                         <thead>
                           <tr className="bg-atmosphere-wash border-b border-off-black font-mono text-ink">
                             {(block.headers || []).map((h: string, hIdx: number) => (
@@ -480,7 +480,7 @@ function RichGrammarRenderer({ richGrammar }: { richGrammar: any[] }) {
                       </h5>
                     )}
                     <div className="overflow-x-auto border border-off-black rounded-lg bg-paper-canvas">
-                      <table className="w-full text-sm border-collapse text-left">
+                      <table className="w-full text-sm border-collapse text-left min-w-[600px]">
                         <thead>
                           <tr className="bg-atmosphere-wash border-b border-off-black font-mono text-ink">
                             {(block.headers || []).map((h: string, hIdx: number) => (
@@ -575,7 +575,7 @@ function RichGrammarRenderer({ richGrammar }: { richGrammar: any[] }) {
                   <div key={bIdx} className="font-mono text-sm text-ink space-y-4">
                     {block.table && (
                       <div className="overflow-x-auto border border-off-black rounded-lg">
-                        <table className="w-full text-sm border-collapse text-left">
+                        <table className="w-full text-sm border-collapse text-left min-w-[450px]">
                           <thead>
                             <tr className="bg-atmosphere-wash border-b border-off-black font-mono text-ink">
                               <th className="p-3 border-r border-off-black font-bold w-[100px]">
@@ -637,7 +637,7 @@ function RichGrammarRenderer({ richGrammar }: { richGrammar: any[] }) {
                       {renderTextWithLinks(translate(block.description))}
                     </p>
                     <div className="overflow-x-auto border border-off-black rounded-lg bg-paper-canvas">
-                      <table className="w-full text-sm border-collapse text-left">
+                      <table className="w-full text-sm border-collapse text-left min-w-[550px]">
                         <thead>
                           <tr className="bg-atmosphere-wash border-b border-off-black font-mono text-ink">
                             <th className="p-3 border-r border-off-black font-bold">
@@ -1074,37 +1074,230 @@ export function LearningExplorerSection({
                       {unit.richGrammar && !searchQuery ? (
                         <RichGrammarRenderer richGrammar={unit.richGrammar} />
                       ) : (
+                        <>
+                          {/* Desktop Table View */}
+                          <div className="hidden md:block">
+                            <Table>
+                              <TableHeader>
+                                <TableRow>
+                                  <TableHead className="w-[200px] font-mono text-ink">
+                                    {translate("Structure")}
+                                  </TableHead>
+                                  <TableHead className="font-mono text-ink">{translate("Usage")}</TableHead>
+                                  <TableHead className="font-mono text-ink">{translate("Example")}</TableHead>
+                                </TableRow>
+                              </TableHeader>
+                              <TableBody>
+                                {filterData(unit.grammar, [
+                                  "structure",
+                                  "usage",
+                                  "example",
+                                ]).map((row, idx) => (
+                                  <TableRow key={idx}>
+                                    <TableCell className="font-mono font-medium text-ink">
+                                      {row.structure}
+                                    </TableCell>
+                                    <TableCell className="font-mono text-off-black">{row.usage}</TableCell>
+                                    <TableCell className="font-mono italic text-pale-stone">
+                                      {row.example}
+                                    </TableCell>
+                                  </TableRow>
+                                ))}
+                                {filterData(unit.grammar, [
+                                  "structure",
+                                  "usage",
+                                  "example",
+                                ]).length === 0 && (
+                                  <TableRow>
+                                    <TableCell
+                                      colSpan={3}
+                                      className="text-center py-8 font-mono text-pale-stone"
+                                    >
+                                      {translate("No data found.")}
+                                    </TableCell>
+                                  </TableRow>
+                                )}
+                              </TableBody>
+                            </Table>
+                          </div>
+
+                          {/* Mobile Card View */}
+                          <div className="block md:hidden space-y-4">
+                            {filterData(unit.grammar, ["structure", "usage", "example"]).map((row, idx) => (
+                              <div key={idx} className="p-5 border border-off-black/10 dark:border-white/10 rounded-2xl bg-paper-canvas/30 space-y-3 font-mono text-xs">
+                                <div className="flex flex-wrap items-center justify-between gap-2 border-b border-off-black/5 dark:border-white/5 pb-2">
+                                  <span className="bg-atmosphere-wash border border-off-black/25 text-ink px-2.5 py-0.5 rounded-full font-bold">
+                                    {row.structure}
+                                  </span>
+                                </div>
+                                <div className="space-y-2">
+                                  <p className="text-off-black/75"><span className="font-bold text-ink">{translate("Usage")}:</span> {row.usage}</p>
+                                  <p className="italic text-pale-stone leading-relaxed"><span className="font-bold text-ink not-italic">{translate("Example")}:</span> "{row.example}"</p>
+                                </div>
+                              </div>
+                            ))}
+                            {filterData(unit.grammar, ["structure", "usage", "example"]).length === 0 && (
+                              <div className="text-center py-8 font-mono text-xs text-pale-stone border border-dashed border-off-black/20 rounded-2xl bg-paper-canvas/10">
+                                {translate("No data found.")}
+                              </div>
+                            )}
+                          </div>
+                        </>
+                      )}
+                    </TabsContent>
+
+                    {/* Vocabulary Tab */}
+                    <TabsContent
+                      value="vocabulary"
+                      className="animate-in fade-in slide-in-from-bottom-2"
+                    >
+                      {/* Desktop Table View */}
+                      <div className="hidden md:block">
                         <Table>
-                          <TableHeader>
-                            <TableRow>
-                              <TableHead className="w-[200px] font-mono text-ink">
-                                {translate("Structure")}
-                              </TableHead>
-                              <TableHead className="font-mono text-ink">{translate("Usage")}</TableHead>
+                          <TableHeader className="bg-atmosphere-wash">
+                            <TableRow className="hover:bg-transparent">
+                              <TableHead className="w-[150px] font-mono text-ink">{translate("Word")}</TableHead>
+                              <TableHead className="w-[100px] font-mono text-ink">{translate("Type")}</TableHead>
+                              <TableHead className="font-mono text-ink">{translate("Meaning")}</TableHead>
                               <TableHead className="font-mono text-ink">{translate("Example")}</TableHead>
                             </TableRow>
                           </TableHeader>
                           <TableBody>
-                            {filterData(unit.grammar, [
-                              "structure",
-                              "usage",
+                            {filterData(unit.vocabulary, [
+                              "word",
+                              "type",
+                              "meaning",
                               "example",
                             ]).map((row, idx) => (
                               <TableRow key={idx}>
                                 <TableCell className="font-mono font-medium text-ink">
-                                  {row.structure}
+                                  {row.word}
                                 </TableCell>
-                                <TableCell className="font-mono text-off-black">{row.usage}</TableCell>
+                                <TableCell>
+                                  <span className="inline-block text-caption font-mono text-off-black bg-transparent border border-off-black px-2.5 py-0.5 rounded-full">
+                                    {row.type}
+                                  </span>
+                                </TableCell>
+                                <TableCell className="font-mono text-off-black">{translate(row.meaning)}</TableCell>
                                 <TableCell className="font-mono italic text-pale-stone">
                                   {row.example}
                                 </TableCell>
                               </TableRow>
                             ))}
-                            {filterData(unit.grammar, [
-                              "structure",
-                              "usage",
+                            {filterData(unit.vocabulary, ["word"]).length ===
+                              0 && (
+                              <TableRow>
+                                <TableCell
+                                  colSpan={4}
+                                  className="text-center py-8 font-mono text-pale-stone"
+                                >
+                                  {translate("No data found.")}
+                                </TableCell>
+                              </TableRow>
+                            )}
+                          </TableBody>
+                        </Table>
+                      </div>
+
+                      {/* Mobile Card View */}
+                      <div className="block md:hidden space-y-4">
+                        {filterData(unit.vocabulary, ["word", "type", "meaning", "example"]).map((row, idx) => (
+                          <div key={idx} className="p-5 border border-off-black/10 dark:border-white/10 rounded-2xl bg-paper-canvas/30 space-y-3 font-mono text-xs">
+                            <div className="flex items-center justify-between border-b border-off-black/5 dark:border-white/5 pb-2">
+                              <span className="text-sm font-bold text-ink">{row.word}</span>
+                              <span className="inline-block text-[10px] font-mono text-off-black bg-transparent border border-off-black px-2 py-0.5 rounded-full">
+                                {row.type}
+                              </span>
+                            </div>
+                            <div className="space-y-2">
+                              <p className="text-off-black/75"><span className="font-bold text-ink">{translate("Meaning")}:</span> {translate(row.meaning)}</p>
+                              <p className="italic text-pale-stone leading-relaxed"><span className="font-bold text-ink not-italic">{translate("Example")}:</span> "{row.example}"</p>
+                            </div>
+                          </div>
+                        ))}
+                        {filterData(unit.vocabulary, ["word"]).length === 0 && (
+                          <div className="text-center py-8 font-mono text-xs text-pale-stone border border-dashed border-off-black/20 rounded-2xl bg-paper-canvas/10">
+                            {translate("No data found.")}
+                          </div>
+                        )}
+                      </div>
+                    </TabsContent>
+
+                    {/* Word Formation Tab */}
+                    <TabsContent
+                      value="wordFormation"
+                      className="animate-in fade-in slide-in-from-bottom-2"
+                    >
+                      {/* Desktop Table View */}
+                      <div className="hidden md:block">
+                        <Table>
+                          <TableHeader className="bg-atmosphere-wash">
+                            <TableRow className="hover:bg-transparent">
+                              <TableHead className="w-[150px] font-mono text-ink">{translate("Word")}</TableHead>
+                              <TableHead className="w-[100px] font-mono text-ink">{translate("Type")}</TableHead>
+                              <TableHead className="font-mono text-ink">{translate("Word Family & Meanings")}</TableHead>
+                            </TableRow>
+                          </TableHeader>
+                          <TableBody>
+                            {filterData(unit.wordFormation, [
+                              "word",
+                              "type",
+                              "meaning",
                               "example",
-                            ]).length === 0 && (
+                            ]).map((row, idx) => {
+                              const parsedFamily = parseWordFormationMeaning(row.meaning);
+                              return (
+                                <TableRow key={idx} className="align-top">
+                                  <TableCell className="font-mono font-medium text-ink font-semibold pt-4">
+                                    {row.word}
+                                  </TableCell>
+                                  <TableCell className="pt-4">
+                                    <span className="inline-block text-caption font-mono text-off-black bg-transparent border border-off-black px-2.5 py-0.5 rounded-full">
+                                      {abbreviateType(row.type)}
+                                    </span>
+                                  </TableCell>
+                                  <TableCell className="p-2">
+                                    <div className="divide-y divide-off-black/5 font-mono">
+                                      {parsedFamily.map((fam, fIdx) => {
+                                        const formsStr = fam.forms.join(" / ");
+                                        return (
+                                          <div key={fIdx} className="py-2.5 px-2 flex flex-col md:flex-row gap-2 md:gap-6 justify-between items-start">
+                                            <div className="md:w-[200px] shrink-0">
+                                              <span className="font-bold text-ink text-sm text-[#0f766e]">
+                                                {formsStr}
+                                              </span>
+                                            </div>
+                                            <div className="flex-1 space-y-1">
+                                              <p className="text-off-black text-sm leading-relaxed">{translate(fam.meaning)}</p>
+                                              {row.example && (
+                                                <div className="text-xs text-pale-stone italic mt-1 font-mono">
+                                                  {row.example.split("\n").map((exLine: string, exIdx: number) => {
+                                                    const containsForm = fam.forms.some(f => {
+                                                      const stem = f.replace(/\(([^)]+)\)/g, '$1').toLowerCase();
+                                                      return exLine.toLowerCase().includes(stem);
+                                                    });
+                                                    if (containsForm || parsedFamily.length === 1) {
+                                                      return (
+                                                        <div key={exIdx} className="opacity-80">
+                                                          {exLine}
+                                                        </div>
+                                                      );
+                                                    }
+                                                    return null;
+                                                  })}
+                                                </div>
+                                              )}
+                                            </div>
+                                          </div>
+                                        );
+                                      })}
+                                    </div>
+                                  </TableCell>
+                                </TableRow>
+                              );
+                            })}
+                            {filterData(unit.wordFormation, ["word"]).length ===
+                              0 && (
                               <TableRow>
                                 <TableCell
                                   colSpan={3}
@@ -1116,144 +1309,60 @@ export function LearningExplorerSection({
                             )}
                           </TableBody>
                         </Table>
-                      )}
-                    </TabsContent>
+                      </div>
 
-                    {/* Vocabulary Tab */}
-                    <TabsContent
-                      value="vocabulary"
-                      className="animate-in fade-in slide-in-from-bottom-2"
-                    >
-                      <Table>
-                        <TableHeader className="bg-atmosphere-wash">
-                          <TableRow className="hover:bg-transparent">
-                            <TableHead className="w-[150px] font-mono text-ink">{translate("Word")}</TableHead>
-                            <TableHead className="w-[100px] font-mono text-ink">{translate("Type")}</TableHead>
-                            <TableHead className="font-mono text-ink">{translate("Meaning")}</TableHead>
-                            <TableHead className="font-mono text-ink">{translate("Example")}</TableHead>
-                          </TableRow>
-                        </TableHeader>
-                        <TableBody>
-                          {filterData(unit.vocabulary, [
-                            "word",
-                            "type",
-                            "meaning",
-                            "example",
-                          ]).map((row, idx) => (
-                            <TableRow key={idx}>
-                              <TableCell className="font-mono font-medium text-ink">
-                                {row.word}
-                              </TableCell>
-                              <TableCell>
-                                <span className="inline-block text-caption font-mono text-off-black bg-transparent border border-off-black px-2.5 py-0.5 rounded-full">
-                                  {row.type}
+                      {/* Mobile Card View */}
+                      <div className="block md:hidden space-y-4">
+                        {filterData(unit.wordFormation, ["word", "type", "meaning", "example"]).map((row, idx) => {
+                          const parsedFamily = parseWordFormationMeaning(row.meaning);
+                          return (
+                            <div key={idx} className="p-5 border border-off-black/10 dark:border-white/10 rounded-2xl bg-paper-canvas/30 space-y-3 font-mono text-xs">
+                              <div className="flex items-center justify-between border-b border-off-black/5 dark:border-white/5 pb-2">
+                                <span className="text-sm font-bold text-ink">{row.word}</span>
+                                <span className="inline-block text-[10px] font-mono text-off-black bg-transparent border border-off-black px-2.5 py-0.5 rounded-full">
+                                  {abbreviateType(row.type)}
                                 </span>
-                              </TableCell>
-                              <TableCell className="font-mono text-off-black">{translate(row.meaning)}</TableCell>
-                              <TableCell className="font-mono italic text-pale-stone">
-                                {row.example}
-                              </TableCell>
-                            </TableRow>
-                          ))}
-                          {filterData(unit.vocabulary, ["word"]).length ===
-                            0 && (
-                            <TableRow>
-                              <TableCell
-                                colSpan={4}
-                                className="text-center py-8 font-mono text-pale-stone"
-                              >
-                                {translate("No data found.")}
-                              </TableCell>
-                            </TableRow>
-                          )}
-                        </TableBody>
-                      </Table>
-                    </TabsContent>
-
-                    {/* Word Formation Tab */}
-                    <TabsContent
-                      value="wordFormation"
-                      className="animate-in fade-in slide-in-from-bottom-2"
-                    >
-                      <Table>
-                        <TableHeader className="bg-atmosphere-wash">
-                          <TableRow className="hover:bg-transparent">
-                            <TableHead className="w-[150px] font-mono text-ink">{translate("Word")}</TableHead>
-                            <TableHead className="w-[100px] font-mono text-ink">{translate("Type")}</TableHead>
-                            <TableHead className="font-mono text-ink">{translate("Word Family & Meanings")}</TableHead>
-                          </TableRow>
-                        </TableHeader>
-                        <TableBody>
-                          {filterData(unit.wordFormation, [
-                            "word",
-                            "type",
-                            "meaning",
-                            "example",
-                          ]).map((row, idx) => {
-                            const parsedFamily = parseWordFormationMeaning(row.meaning);
-                            return (
-                              <TableRow key={idx} className="align-top">
-                                <TableCell className="font-mono font-medium text-ink font-semibold pt-4">
-                                  {row.word}
-                                </TableCell>
-                                <TableCell className="pt-4">
-                                  <span className="inline-block text-caption font-mono text-off-black bg-transparent border border-off-black px-2.5 py-0.5 rounded-full">
-                                    {abbreviateType(row.type)}
-                                  </span>
-                                </TableCell>
-                                <TableCell className="p-2">
-                                  <div className="divide-y divide-off-black/5 font-mono">
-                                    {parsedFamily.map((fam, fIdx) => {
-                                      const formsStr = fam.forms.join(" / ");
-                                      return (
-                                        <div key={fIdx} className="py-2.5 px-2 flex flex-col md:flex-row gap-2 md:gap-6 justify-between items-start">
-                                          <div className="md:w-[200px] shrink-0">
-                                            <span className="font-bold text-ink text-sm text-[#0f766e]">
-                                              {formsStr}
-                                            </span>
-                                          </div>
-                                          <div className="flex-1 space-y-1">
-                                            <p className="text-off-black text-sm leading-relaxed">{translate(fam.meaning)}</p>
-                                            {row.example && (
-                                              <div className="text-xs text-pale-stone italic mt-1 font-mono">
-                                                {row.example.split("\n").map((exLine: string, exIdx: number) => {
-                                                  const containsForm = fam.forms.some(f => {
-                                                    const stem = f.replace(/\(([^)]+)\)/g, '$1').toLowerCase();
-                                                    return exLine.toLowerCase().includes(stem);
-                                                  });
-                                                  if (containsForm || parsedFamily.length === 1) {
-                                                    return (
-                                                      <div key={exIdx} className="opacity-80">
-                                                        {exLine}
-                                                      </div>
-                                                    );
-                                                  }
-                                                  return null;
-                                                })}
-                                              </div>
-                                            )}
-                                          </div>
+                              </div>
+                              <div className="space-y-4 pt-1">
+                                {parsedFamily.map((fam, fIdx) => {
+                                  const formsStr = fam.forms.join(" / ");
+                                  return (
+                                    <div key={fIdx} className="space-y-2 border-b border-off-black/5 dark:border-white/5 last:border-b-0 pb-3 last:pb-0">
+                                      <p className="font-bold text-[#0f766e] dark:text-[#2dd4bf] text-xs bg-[#0f766e]/10 dark:bg-[#0f766e]/20 px-2.5 py-1 rounded-lg w-max">
+                                        {formsStr}
+                                      </p>
+                                      <p className="text-off-black text-xs leading-relaxed">{translate(fam.meaning)}</p>
+                                      {row.example && (
+                                        <div className="text-[11px] text-pale-stone italic font-mono space-y-1">
+                                          {row.example.split("\n").map((exLine: string, exIdx: number) => {
+                                            const containsForm = fam.forms.some(f => {
+                                              const stem = f.replace(/\(([^)]+)\)/g, '$1').toLowerCase();
+                                              return exLine.toLowerCase().includes(stem);
+                                            });
+                                            if (containsForm || parsedFamily.length === 1) {
+                                              return (
+                                                <div key={exIdx} className="opacity-85">
+                                                  {exLine}
+                                                </div>
+                                              );
+                                            }
+                                            return null;
+                                          })}
                                         </div>
-                                      );
-                                    })}
-                                  </div>
-                                </TableCell>
-                              </TableRow>
-                            );
-                          })}
-                          {filterData(unit.wordFormation, ["word"]).length ===
-                            0 && (
-                            <TableRow>
-                              <TableCell
-                                colSpan={3}
-                                className="text-center py-8 font-mono text-pale-stone"
-                              >
-                                {translate("No data found.")}
-                              </TableCell>
-                            </TableRow>
-                          )}
-                        </TableBody>
-                      </Table>
+                                      )}
+                                    </div>
+                                  );
+                                })}
+                              </div>
+                            </div>
+                          );
+                        })}
+                        {filterData(unit.wordFormation, ["word"]).length === 0 && (
+                          <div className="text-center py-8 font-mono text-xs text-pale-stone border border-dashed border-off-black/20 rounded-2xl bg-paper-canvas/10">
+                            {translate("No data found.")}
+                          </div>
+                        )}
+                      </div>
                     </TabsContent>
 
                     {/* Word Patterns Tab */}
@@ -1261,54 +1370,80 @@ export function LearningExplorerSection({
                       value="wordPatterns"
                       className="animate-in fade-in slide-in-from-bottom-2"
                     >
-                      <Table>
-                        <TableHeader className="bg-atmosphere-wash">
-                          <TableRow className="hover:bg-transparent">
-                            <TableHead className="w-[200px] font-mono text-ink">
-                              {translate("Word")}
-                            </TableHead>
-                            <TableHead className="w-[100px] font-mono text-ink">{translate("Type")}</TableHead>
-                            <TableHead className="font-mono text-ink">{translate("Meaning")}</TableHead>
-                            <TableHead className="font-mono text-ink">{translate("Pattern & Example")}</TableHead>
-                          </TableRow>
-                        </TableHeader>
-                        <TableBody>
-                          {filterData(unit.wordPatterns, [
-                            "verb",
-                            "pattern",
-                            "meaning",
-                            "example",
-                          ]).map((row, idx) => (
-                            <TableRow key={idx}>
-                              <TableCell className="font-mono font-medium text-ink font-semibold">
-                                {row.verb}
-                              </TableCell>
-                              <TableCell>
-                                <span className="inline-block text-caption font-mono text-off-black bg-transparent border border-off-black px-2.5 py-0.5 rounded-full">
-                                  {abbreviateType(row.pattern)}
-                                </span>
-                              </TableCell>
-                              <TableCell className="font-mono text-off-black whitespace-pre-line">
-                                {translate(row.meaning)}
-                              </TableCell>
-                              <TableCell className="font-mono text-pale-stone whitespace-pre-line">
-                                {row.example}
-                              </TableCell>
+                      {/* Desktop Table View */}
+                      <div className="hidden md:block">
+                        <Table>
+                          <TableHeader className="bg-atmosphere-wash">
+                            <TableRow className="hover:bg-transparent">
+                              <TableHead className="w-[200px] font-mono text-ink">
+                                {translate("Word")}
+                              </TableHead>
+                              <TableHead className="w-[100px] font-mono text-ink">{translate("Type")}</TableHead>
+                              <TableHead className="font-mono text-ink">{translate("Meaning")}</TableHead>
+                              <TableHead className="font-mono text-ink">{translate("Pattern & Example")}</TableHead>
                             </TableRow>
-                          ))}
-                          {filterData(unit.wordPatterns, ["verb"]).length ===
-                            0 && (
-                            <TableRow>
-                              <TableCell
-                                colSpan={3}
-                                className="text-center py-8 font-mono text-pale-stone"
-                              >
-                                {translate("No data found.")}
-                              </TableCell>
-                            </TableRow>
-                          )}
-                        </TableBody>
-                      </Table>
+                          </TableHeader>
+                          <TableBody>
+                            {filterData(unit.wordPatterns, [
+                              "verb",
+                              "pattern",
+                              "meaning",
+                              "example",
+                            ]).map((row, idx) => (
+                              <TableRow key={idx}>
+                                <TableCell className="font-mono font-medium text-ink font-semibold">
+                                  {row.verb}
+                                </TableCell>
+                                <TableCell>
+                                  <span className="inline-block text-caption font-mono text-off-black bg-transparent border border-off-black px-2.5 py-0.5 rounded-full">
+                                    {abbreviateType(row.pattern)}
+                                  </span>
+                                </TableCell>
+                                <TableCell className="font-mono text-off-black whitespace-pre-line">
+                                  {translate(row.meaning)}
+                                </TableCell>
+                                <TableCell className="font-mono text-pale-stone whitespace-pre-line">
+                                  {row.example}
+                                </TableCell>
+                              </TableRow>
+                            ))}
+                            {filterData(unit.wordPatterns, ["verb"]).length ===
+                              0 && (
+                              <TableRow>
+                                <TableCell
+                                  colSpan={3}
+                                  className="text-center py-8 font-mono text-pale-stone"
+                                >
+                                  {translate("No data found.")}
+                                </TableCell>
+                              </TableRow>
+                            )}
+                          </TableBody>
+                        </Table>
+                      </div>
+
+                      {/* Mobile Card View */}
+                      <div className="block md:hidden space-y-4">
+                        {filterData(unit.wordPatterns, ["verb", "pattern", "meaning", "example"]).map((row, idx) => (
+                          <div key={idx} className="p-5 border border-off-black/10 dark:border-white/10 rounded-2xl bg-paper-canvas/30 space-y-3 font-mono text-xs">
+                            <div className="flex items-center justify-between border-b border-off-black/5 dark:border-white/5 pb-2">
+                              <span className="text-sm font-bold text-ink">{row.verb}</span>
+                              <span className="inline-block text-[10px] font-mono text-off-black bg-transparent border border-off-black px-2.5 py-0.5 rounded-full">
+                                {abbreviateType(row.pattern)}
+                              </span>
+                            </div>
+                            <div className="space-y-2">
+                              <p className="text-off-black/75"><span className="font-bold text-ink">{translate("Meaning")}:</span> {translate(row.meaning)}</p>
+                              <p className="text-pale-stone italic leading-relaxed"><span className="font-bold text-ink not-italic">{translate("Pattern & Example")}:</span> {row.example}</p>
+                            </div>
+                          </div>
+                        ))}
+                        {filterData(unit.wordPatterns, ["verb"]).length === 0 && (
+                          <div className="text-center py-8 font-mono text-xs text-pale-stone border border-dashed border-off-black/20 rounded-2xl bg-paper-canvas/10">
+                            {translate("No data found.")}
+                          </div>
+                        )}
+                      </div>
                     </TabsContent>
 
                     {/* Phrasal Verbs Tab */}
@@ -1316,45 +1451,68 @@ export function LearningExplorerSection({
                       value="phrasalVerbs"
                       className="animate-in fade-in slide-in-from-bottom-2"
                     >
-                      <Table>
-                        <TableHeader className="bg-atmosphere-wash">
-                          <TableRow className="hover:bg-transparent">
-                            <TableHead className="w-[200px] font-mono text-ink">
-                              {translate("Phrasal Verbs")}
-                            </TableHead>
-                            <TableHead className="font-mono text-ink">{translate("Meaning")}</TableHead>
-                            <TableHead className="font-mono text-ink">{translate("Example")}</TableHead>
-                          </TableRow>
-                        </TableHeader>
-                        <TableBody>
-                          {filterData(unit.phrasalVerbs, [
-                            "phrasalVerb",
-                            "meaning",
-                            "example",
-                          ]).map((row, idx) => (
-                            <TableRow key={idx}>
-                              <TableCell className="font-mono font-medium text-ink font-semibold">
-                                {row.phrasalVerb}
-                              </TableCell>
-                              <TableCell className="font-mono text-off-black whitespace-pre-line">{translate(row.meaning)}</TableCell>
-                              <TableCell className="font-mono italic text-pale-stone whitespace-pre-line">
-                                {row.example}
-                              </TableCell>
+                      {/* Desktop Table View */}
+                      <div className="hidden md:block">
+                        <Table>
+                          <TableHeader className="bg-atmosphere-wash">
+                            <TableRow className="hover:bg-transparent">
+                              <TableHead className="w-[200px] font-mono text-ink">
+                                {translate("Phrasal Verbs")}
+                              </TableHead>
+                              <TableHead className="font-mono text-ink">{translate("Meaning")}</TableHead>
+                              <TableHead className="font-mono text-ink">{translate("Example")}</TableHead>
                             </TableRow>
-                          ))}
-                          {filterData(unit.phrasalVerbs, ["phrasalVerb"])
-                            .length === 0 && (
-                            <TableRow>
-                              <TableCell
-                                colSpan={3}
-                                className="text-center py-8 font-mono text-pale-stone"
-                              >
-                                {translate("No data found.")}
-                              </TableCell>
-                            </TableRow>
-                          )}
-                        </TableBody>
-                      </Table>
+                          </TableHeader>
+                          <TableBody>
+                            {filterData(unit.phrasalVerbs, [
+                              "phrasalVerb",
+                              "meaning",
+                              "example",
+                            ]).map((row, idx) => (
+                              <TableRow key={idx}>
+                                <TableCell className="font-mono font-medium text-ink font-semibold">
+                                  {row.phrasalVerb}
+                                </TableCell>
+                                <TableCell className="font-mono text-off-black whitespace-pre-line">{translate(row.meaning)}</TableCell>
+                                <TableCell className="font-mono italic text-pale-stone whitespace-pre-line">
+                                  {row.example}
+                                </TableCell>
+                              </TableRow>
+                            ))}
+                            {filterData(unit.phrasalVerbs, ["phrasalVerb"])
+                              .length === 0 && (
+                              <TableRow>
+                                <TableCell
+                                  colSpan={3}
+                                  className="text-center py-8 font-mono text-pale-stone"
+                                >
+                                  {translate("No data found.")}
+                                </TableCell>
+                              </TableRow>
+                            )}
+                          </TableBody>
+                        </Table>
+                      </div>
+
+                      {/* Mobile Card View */}
+                      <div className="block md:hidden space-y-4">
+                        {filterData(unit.phrasalVerbs, ["phrasalVerb", "meaning", "example"]).map((row, idx) => (
+                          <div key={idx} className="p-5 border border-off-black/10 dark:border-white/10 rounded-2xl bg-paper-canvas/30 space-y-3 font-mono text-xs">
+                            <div className="border-b border-off-black/5 dark:border-white/5 pb-2">
+                              <span className="text-sm font-bold text-ink">{row.phrasalVerb}</span>
+                            </div>
+                            <div className="space-y-2">
+                              <p className="text-off-black/75"><span className="font-bold text-ink">{translate("Meaning")}:</span> {translate(row.meaning)}</p>
+                              <p className="text-pale-stone italic leading-relaxed"><span className="font-bold text-ink not-italic">{translate("Example")}:</span> {row.example}</p>
+                            </div>
+                          </div>
+                        ))}
+                        {filterData(unit.phrasalVerbs, ["phrasalVerb"]).length === 0 && (
+                          <div className="text-center py-8 font-mono text-xs text-pale-stone border border-dashed border-off-black/20 rounded-2xl bg-paper-canvas/10">
+                            {translate("No data found.")}
+                          </div>
+                        )}
+                      </div>
                     </TabsContent>
 
                     {/* Prepositional Phrases Tab */}
@@ -1362,39 +1520,59 @@ export function LearningExplorerSection({
                       value="prepositionalPhrases"
                       className="animate-in fade-in slide-in-from-bottom-2"
                     >
-                      <Table>
-                        <TableHeader className="bg-atmosphere-wash">
-                          <TableRow className="hover:bg-transparent">
-                            <TableHead className="w-[250px] font-mono text-ink">
-                              {translate("Prepositional Phrase")}
-                            </TableHead>
-                            <TableHead className="font-mono text-ink">{translate("Meaning")}</TableHead>
-                          </TableRow>
-                        </TableHeader>
-                        <TableBody>
-                          {filterData(unit.prepositionalPhrases, [
-                            "phrase",
-                            "meaning",
-                          ]).map((row, idx) => (
-                            <TableRow key={idx}>
-                              <TableCell className="font-mono font-medium text-ink font-semibold">
-                                {row.phrase}
-                              </TableCell>
-                              <TableCell className="font-mono text-off-black whitespace-pre-line">{translate(row.meaning)}</TableCell>
+                      {/* Desktop Table View */}
+                      <div className="hidden md:block">
+                        <Table>
+                          <TableHeader className="bg-atmosphere-wash">
+                            <TableRow className="hover:bg-transparent">
+                              <TableHead className="w-[250px] font-mono text-ink">
+                                {translate("Prepositional Phrase")}
+                              </TableHead>
+                              <TableHead className="font-mono text-ink">{translate("Meaning")}</TableHead>
                             </TableRow>
-                          ))}
-                          {filterData(unit.prepositionalPhrases, ["phrase"]).length === 0 && (
-                            <TableRow>
-                              <TableCell
-                                colSpan={2}
-                                className="text-center py-8 font-mono text-pale-stone"
-                              >
-                                {translate("No data found.")}
-                              </TableCell>
-                            </TableRow>
-                          )}
-                        </TableBody>
-                      </Table>
+                          </TableHeader>
+                          <TableBody>
+                            {filterData(unit.prepositionalPhrases, [
+                              "phrase",
+                              "meaning",
+                            ]).map((row, idx) => (
+                              <TableRow key={idx}>
+                                <TableCell className="font-mono font-medium text-ink font-semibold">
+                                  {row.phrase}
+                                </TableCell>
+                                <TableCell className="font-mono text-off-black whitespace-pre-line">{translate(row.meaning)}</TableCell>
+                              </TableRow>
+                            ))}
+                            {filterData(unit.prepositionalPhrases, ["phrase"]).length === 0 && (
+                              <TableRow>
+                                <TableCell
+                                  colSpan={2}
+                                  className="text-center py-8 font-mono text-pale-stone"
+                                >
+                                  {translate("No data found.")}
+                                </TableCell>
+                              </TableRow>
+                            )}
+                          </TableBody>
+                        </Table>
+                      </div>
+
+                      {/* Mobile Card View */}
+                      <div className="block md:hidden space-y-4">
+                        {filterData(unit.prepositionalPhrases, ["phrase", "meaning"]).map((row, idx) => (
+                          <div key={idx} className="p-5 border border-off-black/10 dark:border-white/10 rounded-2xl bg-paper-canvas/30 space-y-3 font-mono text-xs">
+                            <div className="border-b border-off-black/5 dark:border-white/5 pb-2">
+                              <span className="text-sm font-bold text-ink">{row.phrase}</span>
+                            </div>
+                            <p className="text-off-black/75 pt-1"><span className="font-bold text-ink">{translate("Meaning")}:</span> {translate(row.meaning)}</p>
+                          </div>
+                        ))}
+                        {filterData(unit.prepositionalPhrases, ["phrase"]).length === 0 && (
+                          <div className="text-center py-8 font-mono text-xs text-pale-stone border border-dashed border-off-black/20 rounded-2xl bg-paper-canvas/10">
+                            {translate("No data found.")}
+                          </div>
+                        )}
+                      </div>
                     </TabsContent>
 
                     {/* Collocations Tab */}
@@ -1402,43 +1580,66 @@ export function LearningExplorerSection({
                       value="collocations"
                       className="animate-in fade-in slide-in-from-bottom-2"
                     >
-                      <Table>
-                        <TableHeader className="bg-atmosphere-wash">
-                          <TableRow className="hover:bg-transparent">
-                            <TableHead className="w-[150px] font-mono text-ink">
-                              {translate("Base Word")}
-                            </TableHead>
-                            <TableHead className="font-mono text-ink">{translate("Collocation")}</TableHead>
-                            <TableHead className="font-mono text-ink">{translate("Meaning")}</TableHead>
-                          </TableRow>
-                        </TableHeader>
-                        <TableBody>
-                          {filterData(unit.collocations, [
-                            "word",
-                            "collocation",
-                            "meaning",
-                          ]).map((row, idx) => (
-                            <TableRow key={idx}>
-                              <TableCell className="font-mono font-medium text-ink">
-                                {row.word}
-                              </TableCell>
-                              <TableCell className="font-mono text-off-black font-medium">{row.collocation}</TableCell>
-                              <TableCell className="font-mono text-pale-stone">{translate(row.meaning)}</TableCell>
+                      {/* Desktop Table View */}
+                      <div className="hidden md:block">
+                        <Table>
+                          <TableHeader className="bg-atmosphere-wash">
+                            <TableRow className="hover:bg-transparent">
+                              <TableHead className="w-[150px] font-mono text-ink">
+                                {translate("Base Word")}
+                              </TableHead>
+                              <TableHead className="font-mono text-ink">{translate("Collocation")}</TableHead>
+                              <TableHead className="font-mono text-ink">{translate("Meaning")}</TableHead>
                             </TableRow>
-                          ))}
-                          {filterData(unit.collocations, ["word"]).length ===
-                            0 && (
-                            <TableRow>
-                              <TableCell
-                                colSpan={3}
-                                className="text-center py-8 font-mono text-pale-stone"
-                              >
-                                {translate("No data found.")}
-                              </TableCell>
-                            </TableRow>
-                          )}
-                        </TableBody>
-                      </Table>
+                          </TableHeader>
+                          <TableBody>
+                            {filterData(unit.collocations, [
+                              "word",
+                              "collocation",
+                              "meaning",
+                            ]).map((row, idx) => (
+                              <TableRow key={idx}>
+                                <TableCell className="font-mono font-medium text-ink">
+                                  {row.word}
+                                </TableCell>
+                                <TableCell className="font-mono text-off-black font-medium">{row.collocation}</TableCell>
+                                <TableCell className="font-mono text-pale-stone">{translate(row.meaning)}</TableCell>
+                              </TableRow>
+                            ))}
+                            {filterData(unit.collocations, ["word"]).length ===
+                              0 && (
+                              <TableRow>
+                                <TableCell
+                                  colSpan={3}
+                                  className="text-center py-8 font-mono text-pale-stone"
+                                >
+                                  {translate("No data found.")}
+                                </TableCell>
+                              </TableRow>
+                            )}
+                          </TableBody>
+                        </Table>
+                      </div>
+
+                      {/* Mobile Card View */}
+                      <div className="block md:hidden space-y-4">
+                        {filterData(unit.collocations, ["word", "collocation", "meaning"]).map((row, idx) => (
+                          <div key={idx} className="p-5 border border-off-black/10 dark:border-white/10 rounded-2xl bg-paper-canvas/30 space-y-3 font-mono text-xs">
+                            <div className="flex items-center justify-between border-b border-off-black/5 dark:border-white/5 pb-2">
+                              <span className="text-[10px] font-bold text-off-black/55 uppercase">{translate("Base Word")}: {row.word}</span>
+                            </div>
+                            <div className="space-y-2">
+                              <p className="text-sm font-bold text-[#0f766e] dark:text-[#2dd4bf]">{row.collocation}</p>
+                              <p className="text-off-black/75"><span className="font-bold text-ink">{translate("Meaning")}:</span> {translate(row.meaning)}</p>
+                            </div>
+                          </div>
+                        ))}
+                        {filterData(unit.collocations, ["word"]).length === 0 && (
+                          <div className="text-center py-8 font-mono text-xs text-pale-stone border border-dashed border-off-black/20 rounded-2xl bg-paper-canvas/10">
+                            {translate("No data found.")}
+                          </div>
+                        )}
+                      </div>
                     </TabsContent>
                   </Tabs>
                 </AccordionContent>

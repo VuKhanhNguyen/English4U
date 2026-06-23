@@ -40,11 +40,11 @@ export function BentoFeatures() {
         </div>
 
         {/* Bento Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 auto-rows-[300px] font-abc-diatype-mono">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 auto-rows-auto md:auto-rows-[300px] font-abc-diatype-mono">
           {/* Card 1: Smart Search Filter (Col Span 2) */}
           <Card
             variant="content"
-            className="md:col-span-2 md:row-span-1 flex flex-col justify-between overflow-hidden relative group"
+            className="md:col-span-2 md:row-span-1 flex flex-col justify-between overflow-hidden relative group min-h-[300px] md:min-h-0"
           >
             <div className="absolute top-0 left-0 right-0 h-1.5 bg-sunset-violet-gradient border-b border-off-black" />
             <div>
@@ -98,7 +98,7 @@ export function BentoFeatures() {
           {/* Card 2: Theme Switcher Preview (Col Span 1) */}
           <Card
             variant="content"
-            className={`md:col-span-1 md:row-span-1 border border-off-black flex flex-col justify-between transition-all duration-300 relative overflow-hidden cursor-pointer select-none group ${
+            className={`md:col-span-1 md:row-span-1 border border-off-black flex flex-col justify-between transition-all duration-300 relative overflow-hidden cursor-pointer select-none group min-h-[300px] md:min-h-0 ${
               bentoTheme === "dark"
                 ? "bg-off-black text-paper-canvas border-off-black"
                 : "bg-paper-canvas text-ink border-off-black"
@@ -152,7 +152,7 @@ export function BentoFeatures() {
           {/* Card 3: Word Family Tree (Col Span 1) */}
           <Card
             variant="content"
-            className="md:col-span-1 md:row-span-1 flex flex-col justify-between overflow-hidden relative group"
+            className="md:col-span-1 md:row-span-1 flex flex-col justify-between overflow-hidden relative group min-h-[300px] md:min-h-0"
           >
             <div className="absolute top-0 left-0 right-0 h-1.5 bg-sunset-violet-gradient border-b border-off-black" />
             <div>
@@ -192,7 +192,7 @@ export function BentoFeatures() {
           {/* Card 4: Connected Collocations Map (Col Span 2) */}
           <Card
             variant="content"
-            className="md:col-span-2 md:row-span-1 flex flex-col justify-between overflow-hidden relative group"
+            className="md:col-span-2 md:row-span-1 flex flex-col justify-between overflow-hidden relative group min-h-[300px] md:min-h-0"
           >
             <div className="absolute top-0 left-0 right-0 h-1.5 bg-amber-glow-gradient border-b border-off-black" />
             <div>
@@ -228,7 +228,7 @@ export function BentoFeatures() {
           {/* Card 5: Full Syllabus Grid (Col Span 3) */}
           <Card
             variant="content"
-            className="md:col-span-3 md:row-span-1 flex flex-col justify-between overflow-hidden relative group"
+            className="md:col-span-3 md:row-span-1 flex flex-col justify-between overflow-hidden relative group min-h-[350px] md:min-h-0 h-auto md:h-full pb-6"
           >
             <div className="absolute top-0 left-0 right-0 h-1.5 bg-sunset-violet-gradient border-b border-off-black" />
             <div>
@@ -247,8 +247,8 @@ export function BentoFeatures() {
             </div>
 
             {/* Grid of level badges */}
-            <div className="grid grid-cols-3 gap-4 text-center mt-4">
-              <div className="p-4 bg-atmosphere-wash border border-off-black rounded-[40px] shadow-sm">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 md:gap-4 mt-6">
+              <div className="p-3 sm:p-4 bg-atmosphere-wash border border-off-black rounded-[40px] shadow-sm flex flex-col justify-center">
                 <p className="text-[10px] font-normal text-off-black/60 uppercase tracking-wider">
                   {translate("Intermediate")}
                 </p>
@@ -256,7 +256,7 @@ export function BentoFeatures() {
                   {translate("B1 Syllabus")}
                 </p>
               </div>
-              <div className="p-4 bg-atmosphere-wash border border-off-black rounded-[40px] shadow-sm">
+              <div className="p-3 sm:p-4 bg-atmosphere-wash border border-off-black rounded-[40px] shadow-sm flex flex-col justify-center">
                 <p className="text-[10px] font-normal text-off-black/60 uppercase tracking-wider">
                   {translate("Upper-Inter")}
                 </p>
@@ -264,7 +264,7 @@ export function BentoFeatures() {
                   {translate("B2 Syllabus")}
                 </p>
               </div>
-              <div className="p-4 bg-atmosphere-wash border border-off-black rounded-[40px] shadow-sm">
+              <div className="p-3 sm:p-4 bg-atmosphere-wash border border-off-black rounded-[40px] shadow-sm flex flex-col justify-center">
                 <p className="text-[10px] font-normal text-off-black/60 uppercase tracking-wider">
                   {translate("Proficient")}
                 </p>

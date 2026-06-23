@@ -3,7 +3,7 @@
 import * as React from "react";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
-import { ChevronDown, Menu, Settings, Sun, Moon } from "lucide-react";
+import { ChevronDown, Menu, Settings, Sun, Moon, X } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/components/providers/language-provider";
@@ -15,6 +15,8 @@ export function Navbar() {
   const [isDropdownOpen, setIsDropdownOpen] = React.useState(false);
   const [isSettingsOpen, setIsSettingsOpen] = React.useState(false);
   const [settingsRotation, setSettingsRotation] = React.useState(0);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = React.useState(false);
+  const [isMobileDestinationsOpen, setIsMobileDestinationsOpen] = React.useState(false);
   const { theme, setTheme } = useTheme();
   const { lang, setLang, translate } = useLanguage();
 
@@ -350,10 +352,239 @@ export function Navbar() {
         </div>
 
         {/* Mobile Menu Toggle */}
-        <button className="md:hidden p-2 text-ink">
-          <Menu className="w-[24px] h-[24px]" />
+        <button
+          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+          className="md:hidden p-2 text-ink z-50 cursor-pointer outline-none border-none bg-transparent"
+        >
+          {isMobileMenuOpen ? (
+            <X className="w-[24px] h-[24px]" />
+          ) : (
+            <Menu className="w-[24px] h-[24px]" />
+          )}
         </button>
       </div>
+
+      <AnimatePresence>
+        {isMobileMenuOpen && (
+          <>
+            {/* Backdrop overlay */}
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              onClick={() => setIsMobileMenuOpen(false)}
+              className="fixed inset-0 bg-black/40 backdrop-blur-sm z-40 md:hidden pointer-events-auto"
+            />
+
+            {/* Bottom Sheet Drawer */}
+            <motion.div
+              initial={{ y: "100%" }}
+              animate={{ y: 0 }}
+              exit={{ y: "100%" }}
+              transition={{ type: "spring", damping: 25, stiffness: 220 }}
+              className="fixed bottom-0 left-0 right-0 max-h-[85vh] z-50 md:hidden rounded-t-[30px] border border-white/20 dark:border-white/10 p-6 flex flex-col pointer-events-auto overflow-hidden bg-paper-canvas"
+              style={{
+                boxShadow: theme === "dark"
+                  ? "0 -20px 40px -15px rgba(0, 0, 0, 0.7)"
+                  : "0 -20px 40px -15px rgba(0, 0, 0, 0.15)"
+              }}
+            >
+              {/* Glass Backdrop Layer */}
+              <div
+                className="absolute inset-0 z-0 overflow-hidden rounded-t-[30px]"
+                style={{
+                  backdropFilter: "blur(20px)",
+                  filter: "url(#glass-distortion)",
+                  isolation: "isolate",
+                }}
+              />
+              {/* Tint Overlay Layer */}
+              <div
+                className="absolute inset-0 z-10 transition-colors duration-300"
+                style={{
+                  background: theme === "dark" ? "rgba(15, 15, 16, 0.85)" : "rgba(255, 255, 255, 0.75)",
+                }}
+              />
+              
+              {/* Inner Specular Border Highlight */}
+              <div
+                className="absolute inset-0 z-20 rounded-t-[30px] overflow-hidden pointer-events-none"
+                style={{
+                  boxShadow:
+                    theme === "dark"
+                      ? "inset 1px 1px 1px 0 rgba(255, 255, 255, 0.15)"
+                      : "inset 2px 2px 1px 0 rgba(255, 255, 255, 0.5)",
+                }}
+              />
+
+              {/* Content */}
+              <div className="relative z-30 flex flex-col gap-6 w-full text-ink max-h-full overflow-y-auto pt-2 scrollbar-none">
+                {/* Drag handle / Accent line */}
+                <div className="w-12 h-1.5 bg-off-black/10 dark:bg-white/10 rounded-full mx-auto mb-2 shrink-0" />
+
+                {/* Nav Links */}
+                <nav className="flex flex-col gap-2">
+                  <Link
+                    href="/#about"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                    className="text-lg font-normal text-off-black py-3 px-4 hover:bg-off-black/5 dark:hover:bg-white/10 rounded-2xl transition-all"
+                  >
+                    {translate("About")}
+                  </Link>
+
+                  {/* Expandable Destination link */}
+                  <div className="flex flex-col">
+                    <button
+                      onClick={() => setIsMobileDestinationsOpen(!isMobileDestinationsOpen)}
+                      className="flex items-center justify-between text-lg font-normal text-off-black py-3 px-4 hover:bg-off-black/5 dark:hover:bg-white/10 rounded-2xl transition-all outline-none cursor-pointer text-left border-none bg-transparent w-full"
+                    >
+                      <span>Destination</span>
+                      <ChevronDown
+                        className={`w-[20px] h-[20px] transition-transform duration-200 ${isMobileDestinationsOpen ? "rotate-180" : ""}`}
+                      />
+                    </button>
+                    <AnimatePresence>
+                      {isMobileDestinationsOpen && (
+                        <motion.div
+                          initial={{ opacity: 0, height: 0 }}
+                          animate={{ opacity: 1, height: "auto" }}
+                          exit={{ opacity: 0, height: 0 }}
+                          transition={{ duration: 0.2 }}
+                          className="overflow-hidden flex flex-col pl-6 mt-1 border-l border-off-black/10 dark:border-white/10 gap-1"
+                        >
+                          <Link
+                            href="/destination/b1"
+                            onClick={() => setIsMobileMenuOpen(false)}
+                            className="text-base font-normal text-off-black/85 py-2.5 px-4 hover:bg-off-black/5 dark:hover:bg-white/10 rounded-xl transition-all"
+                          >
+                            Destination B1
+                          </Link>
+                          <Link
+                            href="/destination/b2"
+                            onClick={() => setIsMobileMenuOpen(false)}
+                            className="text-base font-normal text-off-black/85 py-2.5 px-4 hover:bg-off-black/5 dark:hover:bg-white/10 rounded-xl transition-all"
+                          >
+                            Destination B2
+                          </Link>
+                          <button
+                            onClick={(e) => {
+                              e.preventDefault();
+                              setIsMobileMenuOpen(false);
+                              showToast({
+                                title: "Under Development",
+                                message: "Destination C1 & C2 is currently under development. Stay tuned!",
+                                variant: "warning",
+                                position: "top-right",
+                              });
+                            }}
+                            className="text-left text-base font-normal text-off-black/85 py-2.5 px-4 hover:bg-off-black/5 dark:hover:bg-white/10 rounded-xl transition-all cursor-pointer outline-none border-none bg-transparent w-full"
+                          >
+                            Destination C1 & C2
+                          </button>
+                        </motion.div>
+                      )}
+                    </AnimatePresence>
+                  </div>
+
+                  <Link
+                    href="/resources"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                    className="text-lg font-normal text-off-black py-3 px-4 hover:bg-off-black/5 dark:hover:bg-white/10 rounded-2xl transition-all"
+                  >
+                    {translate("Resources")}
+                  </Link>
+                  <Link
+                    href="/contact"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                    className="text-lg font-normal text-off-black py-3 px-4 hover:bg-off-black/5 dark:hover:bg-white/10 rounded-2xl transition-all"
+                  >
+                    {translate("Contact")}
+                  </Link>
+                </nav>
+
+                <hr className="border-t border-off-black/10 dark:border-white/10" />
+
+                {/* Mobile Settings panel */}
+                <div className="flex flex-col gap-4 px-4 pb-4">
+                  <h4 className="text-xs font-bold text-pale-stone uppercase tracking-wider">{translate("Settings")}</h4>
+                  
+                  {/* Theme Select */}
+                  <div className="flex items-center justify-between">
+                    <span className="text-sm font-medium text-ink">{translate("Theme")}</span>
+                    <div className="flex bg-off-black/5 dark:bg-white/10 border border-off-black/10 dark:border-white/10 p-1 rounded-full">
+                      <button
+                        onClick={() => setTheme("light")}
+                        className={`p-2 rounded-full cursor-pointer transition-all duration-200 border-none bg-transparent ${
+                          theme === "light"
+                            ? "bg-white dark:bg-white/20 border border-off-black/10 dark:border-white/10 text-ink shadow-sm"
+                            : "text-ink/50 hover:text-ink"
+                        }`}
+                      >
+                        <Sun className={`w-[16px] h-[16px] transition-all duration-200 ${theme === "light" ? "text-amber-500 fill-amber-500" : ""}`} />
+                      </button>
+                      <button
+                        onClick={() => setTheme("dark")}
+                        className={`p-2 rounded-full cursor-pointer transition-all duration-200 border-none bg-transparent ${
+                          theme === "dark"
+                            ? "bg-white dark:bg-white/20 border border-off-black/10 dark:border-white/10 text-ink shadow-sm"
+                            : "text-ink/50 hover:text-ink"
+                        }`}
+                      >
+                        <Moon className={`w-[16px] h-[16px] transition-all duration-200 ${theme === "dark" ? "text-yellow-400 fill-yellow-400" : ""}`} />
+                      </button>
+                    </div>
+                  </div>
+
+                  {/* Language Select */}
+                  <div className="flex items-center justify-between">
+                    <span className="text-sm font-medium text-ink">{translate("Language")}</span>
+                    <div className="flex bg-off-black/5 dark:bg-white/10 border border-off-black/10 dark:border-white/10 p-1 rounded-full">
+                      <button
+                        onClick={() => setLang("en")}
+                        className={`relative overflow-hidden px-4 py-1.5 text-xs rounded-full font-bold cursor-pointer transition-all duration-200 border-none bg-transparent ${
+                          lang === "en"
+                            ? "border border-off-black/15 dark:border-white/15 shadow-sm bg-white dark:bg-white/20"
+                            : "text-ink/50 hover:text-ink"
+                        }`}
+                      >
+                        {lang === "en" && (
+                          <img
+                            src="/english.png"
+                            alt="US Flag"
+                            className="absolute inset-0 w-full h-full object-cover pointer-events-none"
+                          />
+                        )}
+                        <span className={lang === "en" ? "opacity-0" : "relative z-10"}>
+                          EN
+                        </span>
+                      </button>
+                      <button
+                        onClick={() => setLang("vi")}
+                        className={`relative overflow-hidden px-4 py-1.5 text-xs rounded-full font-bold cursor-pointer transition-all duration-200 border-none bg-transparent ${
+                          lang === "vi"
+                            ? "border border-off-black/15 dark:border-white/15 shadow-sm bg-white dark:bg-white/20"
+                            : "text-ink/50 hover:text-ink"
+                        }`}
+                      >
+                        {lang === "vi" && (
+                          <img
+                            src="/vietnam.png"
+                            alt="Vietnam Flag"
+                            className="absolute inset-0 w-full h-full object-cover pointer-events-none"
+                          />
+                        )}
+                        <span className={lang === "vi" ? "opacity-0" : "relative z-10"}>
+                          VI
+                        </span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+          </>
+        )}
+      </AnimatePresence>
       <GlassFilter />
     </header>
   );
