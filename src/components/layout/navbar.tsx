@@ -418,11 +418,19 @@ export function Navbar() {
 
             {/* Bottom Sheet Drawer */}
             <motion.div
+              drag="y"
+              dragConstraints={{ top: 0, bottom: 0 }}
+              dragElastic={{ top: 0.05, bottom: 0.95 }}
+              onDragEnd={(event, info) => {
+                if (info.offset.y > 100 || info.velocity.y > 400) {
+                  setIsMobileMenuOpen(false);
+                }
+              }}
               initial={{ y: "100%" }}
               animate={{ y: 0 }}
               exit={{ y: "100%" }}
               transition={{ type: "spring", damping: 25, stiffness: 220 }}
-              className="fixed bottom-0 left-0 right-0 max-h-[85vh] z-50 md:hidden rounded-t-[30px] border border-white/20 dark:border-white/10 p-6 flex flex-col pointer-events-auto overflow-hidden bg-paper-canvas"
+              className="fixed bottom-0 left-0 right-0 max-h-[85vh] z-50 md:hidden rounded-t-[30px] border border-white/20 dark:border-white/10 p-6 flex flex-col pointer-events-auto overflow-hidden bg-transparent"
               style={{
                 boxShadow: theme === "dark"
                   ? "0 -20px 40px -15px rgba(0, 0, 0, 0.7)"
@@ -442,7 +450,7 @@ export function Navbar() {
               <div
                 className="absolute inset-0 z-10 transition-colors duration-300"
                 style={{
-                  background: theme === "dark" ? "rgba(15, 15, 16, 0.85)" : "rgba(255, 255, 255, 0.75)",
+                  background: theme === "dark" ? "rgba(15, 15, 16, 0.6)" : "rgba(255, 255, 255, 0.4)",
                 }}
               />
               
