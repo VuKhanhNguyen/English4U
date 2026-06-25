@@ -9,6 +9,7 @@ import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/components/providers/language-provider";
 import { useTheme } from "@/components/providers/theme-provider";
 import { showToast } from "@/components/ui/toast";
+import { usePwa } from "@/components/providers/pwa-provider";
 
 export function Navbar() {
   const [isScrolled, setIsScrolled] = React.useState(false);
@@ -19,6 +20,7 @@ export function Navbar() {
   const [isMobileDestinationsOpen, setIsMobileDestinationsOpen] = React.useState(false);
   const { theme, setTheme } = useTheme();
   const { lang, setLang, translate } = useLanguage();
+  const { isInstallable, isInstalled, installApp } = usePwa();
 
   React.useEffect(() => {
     const handleScroll = () => {
@@ -345,6 +347,44 @@ export function Navbar() {
                       </motion.button>
                     </div>
                   </div>
+
+                  {isInstalled && (
+                    <>
+                      <hr className="border-t border-off-black/10 dark:border-white/10" />
+                      <div className="flex items-center justify-between">
+                        <span className="text-xs font-bold text-ink">
+                          {lang === "vi" ? "Ứng dụng" : "App"}
+                        </span>
+                        <span className="px-3 py-1.5 text-xs text-green-600 dark:text-green-400 font-bold flex items-center gap-1.5">
+                          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="2.5" stroke="currentColor" className="w-3.5 h-3.5">
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                          </svg>
+                          {lang === "vi" ? "Đã cài đặt" : "Installed"}
+                        </span>
+                      </div>
+                    </>
+                  )}
+                  {isInstallable && !isInstalled && (
+                    <>
+                      <hr className="border-t border-off-black/10 dark:border-white/10" />
+                      <div className="flex items-center justify-between">
+                        <span className="text-xs font-bold text-ink">
+                          {lang === "vi" ? "Ứng dụng" : "App"}
+                        </span>
+                        <motion.button
+                          whileHover={{ scale: 1.05 }}
+                          whileTap={{ scale: 0.95 }}
+                          onClick={installApp}
+                          className="px-3 py-1.5 text-xs rounded-full border border-off-black/20 dark:border-white/20 bg-white/80 dark:bg-white/10 hover:bg-off-black/5 dark:hover:bg-white/20 text-ink cursor-pointer font-bold transition-all shadow-sm flex items-center gap-1.5"
+                        >
+                          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" className="w-3.5 h-3.5">
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3" />
+                          </svg>
+                          {lang === "vi" ? "Cài đặt" : "Install"}
+                        </motion.button>
+                      </div>
+                    </>
+                  )}
                 </div>
               </motion.div>
             )}
@@ -579,6 +619,36 @@ export function Navbar() {
                       </button>
                     </div>
                   </div>
+
+                  {isInstalled && (
+                    <div className="flex items-center justify-between mt-2">
+                      <span className="text-sm font-medium text-ink">
+                        {lang === "vi" ? "Ứng dụng" : "App"}
+                      </span>
+                      <span className="px-3 py-1.5 text-xs text-green-600 dark:text-green-400 font-bold flex items-center gap-1.5">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="2.5" stroke="currentColor" className="w-3.5 h-3.5">
+                          <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                        </svg>
+                        {lang === "vi" ? "Đã cài đặt" : "Installed"}
+                      </span>
+                    </div>
+                  )}
+                  {isInstallable && !isInstalled && (
+                    <div className="flex items-center justify-between mt-2">
+                      <span className="text-sm font-medium text-ink">
+                        {lang === "vi" ? "Ứng dụng" : "App"}
+                      </span>
+                      <button
+                        onClick={installApp}
+                        className="px-4 py-2 text-xs rounded-full border border-off-black/20 dark:border-white/20 bg-white/80 dark:bg-white/10 hover:bg-off-black/5 dark:hover:bg-white/20 text-ink cursor-pointer font-bold transition-all shadow-sm flex items-center gap-1.5 border-none"
+                      >
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" className="w-3.5 h-3.5">
+                          <path strokeLinecap="round" strokeLinejoin="round" d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3" />
+                        </svg>
+                        {lang === "vi" ? "Cài đặt ứng dụng" : "Install App"}
+                      </button>
+                    </div>
+                  )}
                 </div>
               </div>
             </motion.div>

@@ -12,6 +12,7 @@ import { LanguageProvider } from "@/components/providers/language-provider";
 import { ThemeProvider } from "@/components/providers/theme-provider";
 import { cn } from "@/lib/utils";
 import Toaster from "@/components/ui/toast";
+import { PwaProvider } from "@/components/providers/pwa-provider";
 
 const ibmPlexMono = IBM_Plex_Mono({
   subsets: ["latin"],
@@ -34,9 +35,10 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: "English4U - Master English Grammar & Vocabulary",
   description: "Learn Destination B1, B2, C1 & C2 with structured grammar tables, vocabulary systems, word formation, collocations, and phrasal verbs.",
+  manifest: "/manifest.json",
   icons: {
     icon: "/imgs/logo2.ico",
-    apple: "/imgs/logo2.ico",
+    apple: "/imgs/logo2.png",
   },
 };
 
@@ -71,15 +73,17 @@ export default function RootLayout({
         <SmoothScrollProvider>
           <ThemeProvider>
             <LanguageProvider>
-              <PageTransitionLoader />
-              <SplashCursor />
-              {/* <TargetCursor /> */}
-              <GradualBlur preset="page-header" zIndex={40} />
-              <div className="fixed inset-0 pointer-events-none -z-10 overflow-hidden">
-                <DotField />
-              </div>
-              <Toaster defaultPosition="top-right"/>
-              {children}
+              <PwaProvider>
+                <PageTransitionLoader />
+                <SplashCursor />
+                {/* <TargetCursor /> */}
+                <GradualBlur preset="page-header" zIndex={40} />
+                <div className="fixed inset-0 pointer-events-none -z-10 overflow-hidden">
+                  <DotField />
+                </div>
+                <Toaster defaultPosition="top-right"/>
+                {children}
+              </PwaProvider>
             </LanguageProvider>
           </ThemeProvider>
         </SmoothScrollProvider>
