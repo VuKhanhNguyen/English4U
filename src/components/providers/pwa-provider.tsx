@@ -114,7 +114,7 @@ export function PwaProvider({ children }: { children: React.ReactNode }) {
         message: lang === "vi" 
           ? "Ứng dụng này đã được cài đặt hoặc trình duyệt của bạn không hỗ trợ cài đặt tự động. Vui lòng kiểm tra menu trình duyệt."
           : "This app is already installed or your browser doesn't support automatic installation. Please check your browser menu.",
-        variant: "info",
+        variant: "default",
         position: "top-right",
       });
     }
@@ -127,7 +127,7 @@ export function PwaProvider({ children }: { children: React.ReactNode }) {
       {/* iOS Manual Installation Guide Sheet */}
       <AnimatePresence>
         {showIosModal && (
-          <div className="fixed inset-0 z-[9999] flex items-end md:items-center justify-center pointer-events-none">
+          <div className="fixed inset-0 z-9999 flex items-end md:items-center justify-center pointer-events-none">
             {/* Dark/Blur Backdrop */}
             <motion.div
               initial={{ opacity: 0 }}
