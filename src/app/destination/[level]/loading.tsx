@@ -43,7 +43,7 @@ export default function Loading() {
         </div>
 
         {/* Info card skeleton */}
-        <div className="mb-6 p-6 md:p-10 border border-off-black/10 dark:border-white/10 rounded-[30px] bg-atmosphere-wash/20 flex flex-row items-center justify-between">
+        <div className="mb-6 p-6 md:p-10 border border-off-black/10 dark:border-white/10 rounded-lg bg-atmosphere-wash/20 flex flex-row items-center justify-between">
           <div className="w-2/3">
             <Skeleton width={120} height={24} borderRadius={12} className="mb-3" />
             <Skeleton width={300} height={28} />
@@ -73,7 +73,7 @@ export default function Loading() {
 
           {/* Main content skeleton */}
           <div className="md:col-span-8 lg:col-span-9 w-full">
-            <div className="p-4 md:p-8 border border-off-black/10 dark:border-white/10 rounded-[30px] bg-paper-canvas/30 space-y-6">
+            <div className="p-4 md:p-8 border border-off-black/10 dark:border-white/10 rounded-lg bg-paper-canvas/30 space-y-6">
               {Array.from({ length: 4 }).map((_, i) => (
                 <div key={i} className="border-b border-off-black/10 dark:border-white/10 pb-5">
                   <div className="flex justify-between items-center py-2">

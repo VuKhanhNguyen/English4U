@@ -232,7 +232,7 @@ html.lenis body {
   --border: var(--pale-stone);
   --input: var(--pale-stone);
   --ring: var(--off-black);
-  --radius: 40px;
+  --radius: 10px;
   --sidebar: var(--paper-canvas);
   --sidebar-foreground: var(--ink);
   --sidebar-primary: var(--off-black);

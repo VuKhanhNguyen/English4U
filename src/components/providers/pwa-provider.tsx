@@ -143,12 +143,12 @@ export function PwaProvider({ children }: { children: React.ReactNode }) {
               animate={{ y: 0, scale: 1 }}
               exit={{ y: "100%", scale: 0.95 }}
               transition={{ type: "spring", damping: 25, stiffness: 220 }}
-              className="relative w-full max-w-md bg-paper-canvas border border-white/20 dark:border-white/10 rounded-t-[30px] md:rounded-[30px] p-6 shadow-2xl pointer-events-auto flex flex-col gap-6"
+              className="relative w-full max-w-md bg-paper-canvas border border-white/20 dark:border-white/10 rounded-t-lg md:rounded-lg p-6 shadow-2xl pointer-events-auto flex flex-col gap-6"
             >
               {/* Close Button */}
               <button
                 onClick={() => setShowIosModal(false)}
-                className="absolute top-4 right-4 p-2 rounded-full hover:bg-off-black/5 dark:hover:bg-white/10 text-ink/75 hover:text-ink transition-colors cursor-pointer"
+                className="absolute top-4 right-4 p-2 rounded-md hover:bg-off-black/5 dark:hover:bg-white/10 text-ink/75 hover:text-ink transition-colors cursor-pointer"
               >
                 <X className="w-5 h-5" />
               </button>
@@ -158,7 +158,7 @@ export function PwaProvider({ children }: { children: React.ReactNode }) {
                 <img
                   src="/imgs/logo2.png"
                   alt="English4U Logo"
-                  className="w-16 h-16 rounded-[16px] mb-3 shadow-md"
+                  className="w-16 h-16 rounded-md mb-3 shadow-md"
                 />
                 <h3 className="text-lg font-bold text-ink">
                   {lang === "vi" ? "Cài đặt English4U trên iOS" : "Install English4U on iOS"}
@@ -176,7 +176,7 @@ export function PwaProvider({ children }: { children: React.ReactNode }) {
               <div className="flex flex-col gap-4 text-sm text-ink">
                 {/* Step 1 */}
                 <div className="flex items-start gap-4">
-                  <div className="w-8 h-8 rounded-full bg-off-black/5 dark:bg-white/10 flex items-center justify-center font-bold text-ink shrink-0">
+                  <div className="w-8 h-8 rounded-md bg-off-black/5 dark:bg-white/10 flex items-center justify-center font-bold text-ink shrink-0">
                     1
                   </div>
                   <div className="flex flex-col gap-1 justify-center pt-0.5">
@@ -207,7 +207,7 @@ export function PwaProvider({ children }: { children: React.ReactNode }) {
 
                 {/* Step 2 */}
                 <div className="flex items-start gap-4">
-                  <div className="w-8 h-8 rounded-full bg-off-black/5 dark:bg-white/10 flex items-center justify-center font-bold text-ink shrink-0">
+                  <div className="w-8 h-8 rounded-md bg-off-black/5 dark:bg-white/10 flex items-center justify-center font-bold text-ink shrink-0">
                     2
                   </div>
                   <div className="flex flex-col gap-1 justify-center pt-0.5">
@@ -241,7 +241,7 @@ export function PwaProvider({ children }: { children: React.ReactNode }) {
               {/* Close Action Button */}
               <button
                 onClick={() => setShowIosModal(false)}
-                className="w-full h-11 rounded-full bg-ink text-paper-canvas hover:opacity-90 active:scale-[0.98] transition-all cursor-pointer font-bold text-sm flex items-center justify-center mt-2 shadow-sm"
+                className="w-full h-11 rounded-lg bg-ink text-paper-canvas hover:opacity-90 active:scale-[0.98] transition-all cursor-pointer font-bold text-sm flex items-center justify-center mt-2 shadow-sm"
               >
                 {lang === "vi" ? "Đã hiểu" : "Got it"}
               </button>

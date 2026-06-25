@@ -43,7 +43,7 @@ export function WhyDifferentSection() {
     <section id="why-different" className="py-24 bg-paper-canvas border-t border-off-black">
       <div className="container mx-auto px-6 max-w-[1432px]">
         <div className="text-center mb-16">
-          <span className="text-caption font-mono uppercase tracking-wider text-ink bg-atmosphere-wash px-3 py-1 rounded-full border border-off-black">
+          <span className="text-caption font-mono uppercase tracking-wider text-ink bg-atmosphere-wash px-3 py-1 rounded-md border border-off-black">
             Why English4U?
           </span>
           <h2 className="text-heading-lg font-heading text-ink mt-4 mb-4">
@@ -67,7 +67,7 @@ export function WhyDifferentSection() {
                 whileHover={{ y: -4 }}
               >
                 <Card variant="content" className="h-full flex flex-col group duration-200">
-                  <div className="w-[44px] h-[44px] rounded-full border border-off-black bg-atmosphere-wash flex items-center justify-center mb-6 group-hover:scale-105 transition-transform duration-200">
+                  <div className="w-[44px] h-[44px] rounded-lg border border-off-black bg-atmosphere-wash flex items-center justify-center mb-6 group-hover:scale-105 transition-transform duration-200">
                     <Icon className="w-[18px] h-[18px] text-ink" />
                   </div>
                   <h3 className="text-subheading font-heading text-ink mb-2">

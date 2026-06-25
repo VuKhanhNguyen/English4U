@@ -39,7 +39,7 @@ export function MissionSection() {
     <section id="about" className="py-24 bg-paper-canvas border-t border-off-black">
       <div className="container mx-auto px-6 max-w-[1432px]">
         <div className="text-center mb-16">
-          <span className="text-caption font-mono uppercase tracking-wider text-ink bg-atmosphere-wash px-3 py-1 rounded-full border border-off-black">
+          <span className="text-caption font-mono uppercase tracking-wider text-ink bg-atmosphere-wash px-3 py-1 rounded-md border border-off-black">
             {translate("Our Mission")}
           </span>
           <h2 className="text-heading-lg font-heading text-ink mt-4 mb-4">
@@ -63,7 +63,7 @@ export function MissionSection() {
                 whileHover={{ y: -6 }}
               >
                 <Card variant={mission.variant} className="h-full flex flex-col">
-                  <div className="w-[40px] h-[40px] rounded-full border border-off-black bg-paper-canvas flex items-center justify-center mb-6">
+                  <div className="w-[40px] h-[40px] rounded-lg border border-off-black bg-paper-canvas flex items-center justify-center mb-6">
                     <Icon className="w-[18px] h-[18px] text-ink" />
                   </div>
                   <h3 className="text-subheading font-heading text-ink mb-3">

@@ -14,7 +14,7 @@ export function VisualHierarchy() {
         
         {/* Header */}
         <div className="text-center mb-24">
-          <span className="text-caption font-mono uppercase tracking-wider text-ink bg-atmosphere-wash px-3 py-1 rounded-full border border-off-black">
+          <span className="text-caption font-mono uppercase tracking-wider text-ink bg-atmosphere-wash px-3 py-1 rounded-md border border-off-black">
             {translate("Syllabus Architecture")}
           </span>
           <h2 className="text-heading-lg font-heading text-ink mt-4 mb-4">
@@ -41,7 +41,7 @@ export function VisualHierarchy() {
               transition={{ duration: 0.6 }}
             >
               <div className="flex items-center gap-3 mb-4">
-                <span className="w-[32px] h-[32px] rounded-full border border-off-black bg-atmosphere-wash flex items-center justify-center font-mono text-xs text-ink">
+                <span className="w-[32px] h-[32px] rounded-md border border-off-black bg-atmosphere-wash flex items-center justify-center font-mono text-xs text-ink">
                   01
                 </span>
                 <span className="text-caption font-mono uppercase tracking-wider text-pale-stone">{translate("Level Core")}</span>
@@ -60,15 +60,15 @@ export function VisualHierarchy() {
               transition={{ duration: 0.6 }}
               className="flex justify-center"
             >
-              <div className="w-full max-w-[420px] bg-paper-canvas border border-off-black rounded-[40px] p-6 flex flex-col gap-3 relative">
+              <div className="w-full max-w-[420px] bg-paper-canvas border border-off-black rounded-lg p-6 flex flex-col gap-3 relative">
                 <div className="absolute top-4 right-4 w-[12px] h-[12px] rounded-full bg-atmosphere-wash border border-off-black" />
-                <div className="p-3 bg-atmosphere-wash border border-off-black rounded-full font-mono text-xs text-ink flex items-center gap-3">
+                <div className="p-3 bg-atmosphere-wash border border-off-black rounded-md font-mono text-xs text-ink flex items-center gap-3">
                   <BookOpen className="w-[14px] h-[14px]" /> Destination B1 (42 {translate("Units")})
                 </div>
-                <div className="p-3 bg-paper-canvas border border-off-black rounded-full font-mono text-xs text-ink flex items-center gap-3">
+                <div className="p-3 bg-paper-canvas border border-off-black rounded-md font-mono text-xs text-ink flex items-center gap-3">
                   <BookOpen className="w-[14px] h-[14px]" /> Destination B2 (28 {translate("Units")})
                 </div>
-                <div className="p-3 bg-paper-canvas border border-off-black rounded-full font-mono text-xs text-ink flex items-center gap-3">
+                <div className="p-3 bg-paper-canvas border border-off-black rounded-md font-mono text-xs text-ink flex items-center gap-3">
                   <BookOpen className="w-[14px] h-[14px]" /> Destination C1 & C2 (26 {translate("Units")})
                 </div>
               </div>
@@ -85,16 +85,16 @@ export function VisualHierarchy() {
               transition={{ duration: 0.6 }}
               className="lg:order-1 flex justify-center"
             >
-              <div className="w-full max-w-[420px] bg-paper-canvas border border-off-black rounded-[40px] p-6 flex flex-col gap-4 relative">
-                <div className="p-4 bg-atmosphere-wash border border-off-black rounded-full flex justify-between items-center">
+              <div className="w-full max-w-[420px] bg-paper-canvas border border-off-black rounded-lg p-6 flex flex-col gap-4 relative">
+                <div className="p-4 bg-atmosphere-wash border border-off-black rounded-md flex justify-between items-center">
                   <span className="text-xs font-mono text-ink">{translate("Unit")} 1: Present time</span>
                   <ChevronDown className="w-[14px] h-[14px] text-ink/50" />
                 </div>
-                <div className="p-4 bg-atmosphere-wash border border-off-black rounded-full flex justify-between items-center">
+                <div className="p-4 bg-atmosphere-wash border border-off-black rounded-md flex justify-between items-center">
                   <span className="text-xs font-mono text-ink">{translate("Unit")} 2: Past time</span>
                   <ChevronDown className="w-[14px] h-[14px] text-ink/50 rotate-180" />
                 </div>
-                <div className="p-3 bg-paper-canvas border border-off-black rounded-[40px] text-caption text-pale-stone font-mono -mt-2">
+                <div className="p-3 bg-paper-canvas border border-off-black rounded-lg text-caption text-pale-stone font-mono -mt-2">
                   {translate("Unit contents include detailed comparative structures and topic-based words.")}
                 </div>
               </div>
@@ -109,7 +109,7 @@ export function VisualHierarchy() {
               className="lg:order-2"
             >
               <div className="flex items-center gap-3 mb-4">
-                <span className="w-[32px] h-[32px] rounded-full border border-off-black bg-atmosphere-wash flex items-center justify-center font-mono text-xs text-ink">
+                <span className="w-[32px] h-[32px] rounded-md border border-off-black bg-atmosphere-wash flex items-center justify-center font-mono text-xs text-ink">
                   02
                 </span>
                 <span className="text-caption font-mono uppercase tracking-wider text-pale-stone">{translate("Modular Units")}</span>
@@ -131,7 +131,7 @@ export function VisualHierarchy() {
               transition={{ duration: 0.6 }}
             >
               <div className="flex items-center gap-3 mb-4">
-                <span className="w-[32px] h-[32px] rounded-full border border-off-black bg-atmosphere-wash flex items-center justify-center font-mono text-xs text-ink">
+                <span className="w-[32px] h-[32px] rounded-md border border-off-black bg-atmosphere-wash flex items-center justify-center font-mono text-xs text-ink">
                   03
                 </span>
                 <span className="text-caption font-mono uppercase tracking-wider text-pale-stone">{translate("Category Filter")}</span>
@@ -150,20 +150,20 @@ export function VisualHierarchy() {
               transition={{ duration: 0.6 }}
               className="flex justify-center"
             >
-              <div className="w-full max-w-[420px] bg-paper-canvas border border-off-black rounded-[40px] p-6 flex flex-wrap gap-2 relative">
-                <span className="text-caption font-mono bg-atmosphere-wash text-ink border border-off-black px-3 py-1 rounded-full">
+              <div className="w-full max-w-[420px] bg-paper-canvas border border-off-black rounded-lg p-6 flex flex-wrap gap-2 relative">
+                <span className="text-caption font-mono bg-atmosphere-wash text-ink border border-off-black px-3 py-1 rounded-md">
                   {translate("Grammar")}
                 </span>
-                <span className="text-caption font-mono bg-transparent text-pale-stone border border-pale-stone px-3 py-1 rounded-full">
+                <span className="text-caption font-mono bg-transparent text-pale-stone border border-pale-stone px-3 py-1 rounded-md">
                   {translate("Vocabulary")}
                 </span>
-                <span className="text-caption font-mono bg-transparent text-pale-stone border border-pale-stone px-3 py-1 rounded-full">
+                <span className="text-caption font-mono bg-transparent text-pale-stone border border-pale-stone px-3 py-1 rounded-md">
                   {translate("Phrasal Verbs")}
                 </span>
-                <span className="text-caption font-mono bg-transparent text-pale-stone border border-pale-stone px-3 py-1 rounded-full">
+                <span className="text-caption font-mono bg-transparent text-pale-stone border border-pale-stone px-3 py-1 rounded-md">
                   {translate("Word Formations")}
                 </span>
-                <span className="text-caption font-mono bg-transparent text-pale-stone border border-pale-stone px-3 py-1 rounded-full">
+                <span className="text-caption font-mono bg-transparent text-pale-stone border border-pale-stone px-3 py-1 rounded-md">
                   {translate("Collocations")}
                 </span>
               </div>
@@ -180,7 +180,7 @@ export function VisualHierarchy() {
               transition={{ duration: 0.6 }}
               className="lg:order-1 flex justify-center"
             >
-              <div className="w-full max-w-[420px] bg-paper-canvas border border-off-black rounded-[40px] p-6 relative overflow-x-auto">
+              <div className="w-full max-w-[420px] bg-paper-canvas border border-off-black rounded-lg p-6 relative overflow-x-auto">
                 <table className="w-full text-left text-caption border-collapse min-w-[300px] font-mono">
                   <thead>
                     <tr className="border-b border-off-black">
@@ -191,7 +191,7 @@ export function VisualHierarchy() {
                   <tbody>
                     <tr className="border-b border-pale-stone/30">
                       <td className="py-2.5 pr-2 font-medium text-ink">
-                        <span className="bg-atmosphere-wash border border-off-black px-2 py-0.5 rounded-full inline-block">
+                        <span className="bg-atmosphere-wash border border-off-black px-2 py-0.5 rounded-md inline-block">
                           wish + Past Simple
                         </span>
                       </td>
@@ -199,7 +199,7 @@ export function VisualHierarchy() {
                     </tr>
                     <tr>
                       <td className="py-2.5 pr-2 font-medium text-ink">
-                        <span className="bg-atmosphere-wash border border-off-black px-2 py-0.5 rounded-full inline-block">
+                        <span className="bg-atmosphere-wash border border-off-black px-2 py-0.5 rounded-md inline-block">
                           wish + Past Perfect
                         </span>
                       </td>
@@ -219,7 +219,7 @@ export function VisualHierarchy() {
               className="lg:order-2"
             >
               <div className="flex items-center gap-3 mb-4">
-                <span className="w-[32px] h-[32px] rounded-full border border-off-black bg-atmosphere-wash flex items-center justify-center font-mono text-xs text-ink">
+                <span className="w-[32px] h-[32px] rounded-md border border-off-black bg-atmosphere-wash flex items-center justify-center font-mono text-xs text-ink">
                   04
                 </span>
                 <span className="text-caption font-mono uppercase tracking-wider text-pale-stone">{translate("Direct Visuals")}</span>

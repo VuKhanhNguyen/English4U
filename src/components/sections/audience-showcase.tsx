@@ -43,7 +43,7 @@ export function AudienceShowcase() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center max-w-6xl mx-auto px-6 md:px-12 lg:px-16">
           {/* Column 1: Info and Badges */}
           <div className="lg:col-span-5">
-            <span className="text-caption font-mono uppercase tracking-wider text-ink bg-atmosphere-wash px-3 py-1 rounded-full border border-off-black">
+            <span className="text-caption font-mono uppercase tracking-wider text-ink bg-atmosphere-wash px-3 py-1 rounded-md border border-off-black">
               {translate("Ideal Learners")}
             </span>
             <h2 className="text-heading-lg font-heading text-ink mt-4 mb-6 leading-tight">
@@ -55,7 +55,7 @@ export function AudienceShowcase() {
 
             <div className="flex flex-col gap-4 font-mono">
               <div className="flex items-center gap-3">
-                <div className="w-[20px] h-[20px] rounded-full bg-atmosphere-wash border border-off-black flex items-center justify-center">
+                <div className="w-[20px] h-[20px] rounded-md bg-atmosphere-wash border border-off-black flex items-center justify-center">
                   <Check className="w-[12px] h-[12px] text-ink" />
                 </div>
                 <span className="text-body-sm font-medium text-ink">
@@ -63,7 +63,7 @@ export function AudienceShowcase() {
                 </span>
               </div>
               <div className="flex items-center gap-3">
-                <div className="w-[20px] h-[20px] rounded-full bg-atmosphere-wash border border-off-black flex items-center justify-center">
+                <div className="w-[20px] h-[20px] rounded-md bg-atmosphere-wash border border-off-black flex items-center justify-center">
                   <Check className="w-[12px] h-[12px] text-ink" />
                 </div>
                 <span className="text-body-sm font-medium text-ink">
@@ -71,7 +71,7 @@ export function AudienceShowcase() {
                 </span>
               </div>
               <div className="flex items-center gap-3">
-                <div className="w-[20px] h-[20px] rounded-full bg-atmosphere-wash border border-off-black flex items-center justify-center">
+                <div className="w-[20px] h-[20px] rounded-md bg-atmosphere-wash border border-off-black flex items-center justify-center">
                   <Check className="w-[12px] h-[12px] text-ink" />
                 </div>
                 <span className="text-body-sm font-medium text-ink">
@@ -89,7 +89,7 @@ export function AudienceShowcase() {
             >
               <div className="flex items-center justify-between pb-4 border-b border-off-black mb-6">
                 <div className="flex items-center gap-2">
-                  <div className="w-[28px] h-[28px] rounded-full bg-paper-canvas border border-off-black flex items-center justify-center">
+                  <div className="w-[28px] h-[28px] rounded-md bg-paper-canvas border border-off-black flex items-center justify-center">
                     <Activity className="w-[14px] h-[14px] text-ink" />
                   </div>
                   <div>
@@ -102,7 +102,7 @@ export function AudienceShowcase() {
                   </div>
                 </div>
 
-                <Badge className="border-off-black bg-transparent text-ink text-caption font-mono rounded-full flex items-center gap-1">
+                <Badge className="border-off-black bg-transparent text-ink text-caption font-mono rounded-md flex items-center gap-1">
                   <Calendar className="w-[10px] h-[10px]" /> {translate("Today")}
                 </Badge>
               </div>
@@ -123,7 +123,7 @@ export function AudienceShowcase() {
 
                     {/* Circle Indicator */}
                     <div
-                      className={`w-[24px] h-[24px] rounded-full border border-off-black flex items-center justify-center shrink-0 ${
+                      className={`w-[24px] h-[24px] rounded-md border border-off-black flex items-center justify-center shrink-0 ${
                         log.status === "active" ? "bg-atmosphere-wash animate-pulse" : "bg-paper-canvas"
                       }`}
                     >
@@ -131,12 +131,12 @@ export function AudienceShowcase() {
                     </div>
 
                     {/* Log Details */}
-                    <div className="p-3 bg-paper-canvas border border-off-black rounded-[40px] flex-grow">
+                    <div className="p-3 bg-paper-canvas border border-off-black rounded-lg flex-grow">
                       <div className="flex justify-between items-center mb-1 gap-2 flex-wrap">
                         <p className="text-body-sm font-medium text-ink leading-relaxed">
                           {translate(log.action)}
                         </p>
-                        <Badge className="text-[10px] px-2 py-0.5 rounded-full border border-off-black font-mono text-ink bg-atmosphere-wash shrink-0">
+                        <Badge className="text-[10px] px-2 py-0.5 rounded-md border border-off-black font-mono text-ink bg-atmosphere-wash shrink-0">
                           {log.level}
                         </Badge>
                       </div>

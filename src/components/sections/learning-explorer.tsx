@@ -392,7 +392,7 @@ function RichGrammarRenderer({ richGrammar }: { richGrammar: any[] }) {
       {(richGrammar || []).map((section: any, sIdx: number) => (
         <div
           key={sIdx}
-          className="border border-off-black/20 rounded-[16px] p-6 md:p-8 bg-paper-canvas shadow-subtle relative overflow-hidden"
+          className="border border-off-black/20 rounded-md p-6 md:p-8 bg-paper-canvas shadow-subtle relative overflow-hidden"
         >
           {/* Subtle design element */}
           <div className="absolute top-0 right-0 w-24 h-24 bg-atmosphere-wash/10 rounded-full blur-xl pointer-events-none" />
@@ -1032,15 +1032,15 @@ export function LearningExplorerSection({
                     }
                     className="w-full mt-4"
                   >
-                    <TabsList className="mb-6 flex-wrap h-auto p-1 rounded-[24px]">
+                    <TabsList className="mb-6 flex-wrap h-auto p-1 rounded-lg">
                       {(unit.richGrammar || (unit.grammar && unit.grammar.length > 0)) && (
-                        <TabsTrigger value="grammar" className="rounded-full">{translate("Grammar")}</TabsTrigger>
+                        <TabsTrigger value="grammar" className="rounded-md">{translate("Grammar")}</TabsTrigger>
                       )}
                       {unit.vocabulary && unit.vocabulary.length > 0 && (
-                        <TabsTrigger value="vocabulary" className="rounded-full">{translate("Vocabulary")}</TabsTrigger>
+                        <TabsTrigger value="vocabulary" className="rounded-md">{translate("Vocabulary")}</TabsTrigger>
                       )}
                       {unit.wordFormation && unit.wordFormation.length > 0 && (
-                        <TabsTrigger value="wordFormation" className="rounded-full">
+                        <TabsTrigger value="wordFormation" className="rounded-md">
                           {translate("Word Formation")}
                         </TabsTrigger>
                       )}

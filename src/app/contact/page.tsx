@@ -246,10 +246,10 @@ export default function ContactPage() {
               initial={{ opacity: 0, x: -30 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6, delay: 0.3, ease: "easeOut" }}
-              className="lg:col-span-5 bg-atmosphere-wash dark:bg-atmosphere-wash p-8 md:p-10 rounded-[40px] border border-ink/5 dark:border-white/5 flex flex-col gap-8"
+              className="lg:col-span-5 bg-atmosphere-wash dark:bg-atmosphere-wash p-8 md:p-10 rounded-lg border border-ink/5 dark:border-white/5 flex flex-col gap-8"
             >
               {/* Avatar / Brand Illustration */}
-              <div className="relative w-full aspect-[4/3] rounded-[24px] overflow-hidden bg-gradient-to-tr from-[#a0b5eb] to-[#ffa773] dark:from-[#1e1b4b] dark:to-[#311042] border border-ink/10 dark:border-white/10 flex items-center justify-center">
+              <div className="relative w-full aspect-[4/3] rounded-md overflow-hidden bg-gradient-to-tr from-[#a0b5eb] to-[#ffa773] dark:from-[#1e1b4b] dark:to-[#311042] border border-ink/10 dark:border-white/10 flex items-center justify-center">
                 <img
                   src="/imgs/contact-illustration.png"
                   alt="Contact Illustration"
@@ -396,7 +396,7 @@ export default function ContactPage() {
                   </label>
                   
                   {/* Editor Container */}
-                  <div className="flex flex-col border border-ink/20 dark:border-white/20 rounded-[24px] overflow-hidden focus-within:border-ink dark:focus-within:border-white transition-colors duration-250">
+                  <div className="flex flex-col border border-ink/20 dark:border-white/20 rounded-md overflow-hidden focus-within:border-ink dark:focus-within:border-white transition-colors duration-250">
                     
                     {/* Formatting Toolbar */}
                     <div className="flex items-center justify-between px-3 py-2 bg-atmosphere-wash/40 border-b border-ink/10 dark:border-white/10">
@@ -493,7 +493,7 @@ export default function ContactPage() {
                             initial={{ opacity: 0, scale: 0.9 }}
                             animate={{ opacity: 1, scale: 1 }}
                             exit={{ opacity: 0, scale: 0.9 }}
-                            className="relative border border-ink/10 dark:border-white/10 rounded-2xl overflow-hidden aspect-video bg-atmosphere-wash group flex items-center justify-center"
+                            className="relative border border-ink/10 dark:border-white/10 rounded-lg overflow-hidden aspect-video bg-atmosphere-wash group flex items-center justify-center"
                           >
                             <img
                               src={att.content}
@@ -529,7 +529,7 @@ export default function ContactPage() {
                       initial={{ opacity: 0, y: -10 }}
                       animate={{ opacity: 1, y: 0 }}
                       exit={{ opacity: 0, y: -10 }}
-                      className="flex items-center gap-3 p-4 rounded-2xl bg-green-500/10 border border-green-500/20 text-green-700 dark:text-green-400 font-mono text-xs"
+                      className="flex items-center gap-3 p-4 rounded-lg bg-green-500/10 border border-green-500/20 text-green-700 dark:text-green-400 font-mono text-xs"
                     >
                       <CheckCircle2 className="w-5 h-5 flex-shrink-0" />
                       <span>{translate("Your message has been sent successfully!")}</span>
@@ -540,7 +540,7 @@ export default function ContactPage() {
                       initial={{ opacity: 0, y: -10 }}
                       animate={{ opacity: 1, y: 0 }}
                       exit={{ opacity: 0, y: -10 }}
-                      className="flex items-center gap-3 p-4 rounded-2xl bg-red-500/10 border border-red-500/20 text-red-700 dark:text-red-400 font-mono text-xs"
+                      className="flex items-center gap-3 p-4 rounded-lg bg-red-500/10 border border-red-500/20 text-red-700 dark:text-red-400 font-mono text-xs"
                     >
                       <AlertCircle className="w-5 h-5 flex-shrink-0" />
                       <span>{errorMsg}</span>
@@ -555,7 +555,7 @@ export default function ContactPage() {
                     disabled={isPending || isOverLimit || textLength === 0 || !name || !email}
                     variant="primary"
                     size="primary"
-                    className="w-full sm:w-fit font-mono font-medium tracking-wide flex items-center justify-center gap-2 px-8 py-4 bg-off-black hover:bg-ink dark:bg-white dark:hover:bg-white/95 text-paper-canvas dark:text-black border border-transparent rounded-full shadow-md active:opacity-90 transition-all cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed"
+                    className="w-full sm:w-fit font-mono font-medium tracking-wide flex items-center justify-center gap-2 px-8 py-4 bg-off-black hover:bg-ink dark:bg-white dark:hover:bg-white/95 text-paper-canvas dark:text-black border border-transparent rounded-lg shadow-md active:opacity-90 transition-all cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed"
                   >
                     {isPending ? (
                       <>

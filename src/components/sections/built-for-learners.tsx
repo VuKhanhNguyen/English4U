@@ -35,7 +35,7 @@ export function BuiltForLearnersSection() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           {/* Text Info Column */}
           <div className="lg:col-span-5">
-            <span className="text-caption font-mono uppercase tracking-wider text-ink bg-atmosphere-wash px-3 py-1 rounded-full border border-off-black">
+            <span className="text-caption font-mono uppercase tracking-wider text-ink bg-atmosphere-wash px-3 py-1 rounded-md border border-off-black">
               Target Audience
             </span>
             <h2 className="text-heading-lg font-heading text-ink mt-4 mb-6 leading-tight">
@@ -45,7 +45,7 @@ export function BuiltForLearnersSection() {
               Whether you are preparing for international exams (IELTS, TOEFL, Cambridge), self-studying English at home, or revising school lessons, English4U provides a beautifully structured repository that respects your time.
             </p>
             
-            <div className="p-6 bg-paper-canvas border border-off-black rounded-[40px] flex items-start gap-4">
+            <div className="p-6 bg-paper-canvas border border-off-black rounded-lg flex items-start gap-4">
               <div className="w-[10px] h-[10px] rounded-full bg-atmosphere-wash mt-1.5 shrink-0 border border-off-black" />
               <div className="font-mono">
                 <h4 className="text-body-sm font-medium text-ink mb-1">Production Ready Curriculum</h4>
@@ -70,7 +70,7 @@ export function BuiltForLearnersSection() {
                 >
                   <Card variant="content" className="h-full flex flex-col group">
                     <div className="flex items-center gap-4 mb-4">
-                      <div className="w-[40px] h-[40px] rounded-full border border-off-black flex items-center justify-center bg-atmosphere-wash">
+                      <div className="w-[40px] h-[40px] rounded-lg border border-off-black flex items-center justify-center bg-atmosphere-wash">
                         <Icon className="w-[18px] h-[18px] text-ink" />
                       </div>
                       <h3 className="text-body font-mono font-medium text-ink">

@@ -28,7 +28,7 @@ export function BentoFeatures() {
       <div className="max-w-6xl mx-auto px-6 md:px-12 lg:px-16">
         {/* Header */}
         <div className="text-center mb-16 font-abc-diatype-mono">
-          <span className="text-xs font-normal uppercase tracking-wider text-paper-canvas bg-off-black px-3 py-1 rounded-full border border-off-black">
+          <span className="text-xs font-normal uppercase tracking-wider text-paper-canvas bg-off-black px-3 py-1 rounded-md border border-off-black">
             {translate("Interactive Bento Showcase")}
           </span>
           <h2 className="text-heading-lg font-heading font-normal tracking-[-0.02em] text-ink mt-4 mb-4">
@@ -49,7 +49,7 @@ export function BentoFeatures() {
             <div className="absolute top-0 left-0 right-0 h-1.5 bg-sunset-violet-gradient border-b border-off-black" />
             <div>
               <div className="flex items-center justify-between mb-4">
-                <Badge className="border-off-black font-normal rounded-full px-3 py-0.5 text-xs bg-paper-canvas text-off-black">
+                <Badge className="border-off-black font-normal rounded-md px-3 py-0.5 text-xs bg-paper-canvas text-off-black">
                   {translate("Fast Search")}
                 </Badge>
                 <Search className="w-[16px] h-[16px] text-off-black/40" />
@@ -63,29 +63,29 @@ export function BentoFeatures() {
             </div>
 
             {/* Interactive Search Mock */}
-            <div className="bg-atmosphere-wash border border-off-black rounded-full p-2 px-4 flex gap-2 items-center overflow-x-auto">
+            <div className="bg-atmosphere-wash border border-off-black rounded-lg p-2 px-4 flex gap-2 items-center overflow-x-auto">
               <span className="text-xs font-normal text-off-black/60 shrink-0">
                 {translate("Try typing:")}
               </span>
               <button
                 onClick={() => setSearchHighlight("grammar")}
-                className={`px-3 py-1 text-xs rounded-full border font-normal cursor-pointer transition-all ${searchHighlight === "grammar" ? "bg-off-black text-paper-canvas border-off-black" : "bg-paper-canvas border-off-black text-off-black"}`}
+                className={`px-3 py-1 text-xs rounded-md border font-normal cursor-pointer transition-all ${searchHighlight === "grammar" ? "bg-off-black text-paper-canvas border-off-black" : "bg-paper-canvas border-off-black text-off-black"}`}
               >
                 grammar
               </button>
               <button
                 onClick={() => setSearchHighlight("noun")}
-                className={`px-3 py-1 text-xs rounded-full border font-normal cursor-pointer transition-all ${searchHighlight === "noun" ? "bg-off-black text-paper-canvas border-off-black" : "bg-paper-canvas border-off-black text-off-black"}`}
+                className={`px-3 py-1 text-xs rounded-md border font-normal cursor-pointer transition-all ${searchHighlight === "noun" ? "bg-off-black text-paper-canvas border-off-black" : "bg-paper-canvas border-off-black text-off-black"}`}
               >
                 noun
               </button>
               <button
                 onClick={() => setSearchHighlight("phrase")}
-                className={`px-3 py-1 text-xs rounded-full border font-normal cursor-pointer transition-all ${searchHighlight === "phrase" ? "bg-off-black text-paper-canvas border-off-black" : "bg-paper-canvas border-off-black text-off-black"}`}
+                className={`px-3 py-1 text-xs rounded-md border font-normal cursor-pointer transition-all ${searchHighlight === "phrase" ? "bg-off-black text-paper-canvas border-off-black" : "bg-paper-canvas border-off-black text-off-black"}`}
               >
                 phrase
               </button>
-              <span className="text-xs font-normal bg-sky-mint-gradient text-ink px-3 py-1 rounded-full border border-off-black shrink-0 ml-auto animate-pulse">
+              <span className="text-xs font-normal bg-sky-mint-gradient text-ink px-3 py-1 rounded-md border border-off-black shrink-0 ml-auto animate-pulse">
                 {searchHighlight === "grammar"
                   ? "Present Simple..."
                   : searchHighlight === "noun"
@@ -110,7 +110,7 @@ export function BentoFeatures() {
             <div className="absolute top-0 left-0 right-0 h-1.5 bg-sky-mint-gradient border-b border-off-black" />
             <div>
               <div className="flex items-center justify-between mb-4">
-                <Badge className={`font-normal rounded-full px-3 py-0.5 text-xs ${bentoTheme === "dark" ? "border-paper-canvas/20 text-paper-canvas bg-paper-canvas/10" : "border-off-black text-off-black bg-atmosphere-wash"}`}>
+                <Badge className={`font-normal rounded-md px-3 py-0.5 text-xs ${bentoTheme === "dark" ? "border-paper-canvas/20 text-paper-canvas bg-paper-canvas/10" : "border-off-black text-off-black bg-atmosphere-wash"}`}>
                   {translate("UX Customization")}
                 </Badge>
                 {bentoTheme === "light" ? (
@@ -129,7 +129,7 @@ export function BentoFeatures() {
 
             {/* Switched Pill Box */}
             <div
-              className={`p-2 rounded-full border flex justify-between items-center transition-all ${
+              className={`p-2 rounded-lg border flex justify-between items-center transition-all ${
                 bentoTheme === "dark"
                   ? "bg-paper-canvas/10 border-paper-canvas/20"
                   : "bg-atmosphere-wash border-off-black"
@@ -137,7 +137,7 @@ export function BentoFeatures() {
             >
               <span className={`text-xs font-normal ml-2 ${bentoTheme === "dark" ? "text-paper-canvas/80" : "text-off-black"}`}>{translate("Selected Mode:")}</span>
               <div
-                className={`text-xs px-3 py-1 rounded-full border font-normal flex items-center gap-1 ${
+                className={`text-xs px-3 py-1 rounded-md border font-normal flex items-center gap-1 ${
                   bentoTheme === "dark"
                     ? "bg-paper-canvas text-off-black border-paper-canvas"
                     : "bg-off-black text-paper-canvas border-off-black"
@@ -157,7 +157,7 @@ export function BentoFeatures() {
             <div className="absolute top-0 left-0 right-0 h-1.5 bg-sunset-violet-gradient border-b border-off-black" />
             <div>
               <div className="flex items-center justify-between mb-4">
-                <Badge className="border-off-black font-normal rounded-full px-3 py-0.5 text-xs bg-paper-canvas text-off-black">
+                <Badge className="border-off-black font-normal rounded-md px-3 py-0.5 text-xs bg-paper-canvas text-off-black">
                   {translate("Linguistics")}
                 </Badge>
                 <Sparkles className="w-[16px] h-[16px] text-off-black/40" />
@@ -172,17 +172,17 @@ export function BentoFeatures() {
 
             {/* Interactive Suffix/Prefix Tree Mock */}
             <div className="flex items-center gap-2 justify-center py-1">
-              <span className="text-xs font-normal px-3 py-1 bg-paper-canvas border border-off-black rounded-full shrink-0">
+              <span className="text-xs font-normal px-3 py-1 bg-paper-canvas border border-off-black rounded-md shrink-0">
                 struct-
               </span>
               <span className="text-off-black/40 text-xs font-normal">
                 →
               </span>
               <div className="flex flex-col gap-1.5">
-                <span className="text-[10px] font-normal px-2.5 py-1 bg-atmosphere-wash border border-off-black rounded-full text-center">
+                <span className="text-[10px] font-normal px-2.5 py-1 bg-atmosphere-wash border border-off-black rounded-md text-center">
                   -ure (noun)
                 </span>
-                <span className="text-[10px] font-normal px-2.5 py-1 bg-atmosphere-wash border border-off-black rounded-full text-center">
+                <span className="text-[10px] font-normal px-2.5 py-1 bg-atmosphere-wash border border-off-black rounded-md text-center">
                   -ural (adj)
                 </span>
               </div>
@@ -197,7 +197,7 @@ export function BentoFeatures() {
             <div className="absolute top-0 left-0 right-0 h-1.5 bg-amber-glow-gradient border-b border-off-black" />
             <div>
               <div className="flex items-center justify-between mb-4">
-                <Badge className="border-off-black font-normal rounded-full px-3 py-0.5 text-xs bg-paper-canvas text-off-black">
+                <Badge className="border-off-black font-normal rounded-md px-3 py-0.5 text-xs bg-paper-canvas text-off-black">
                   {translate("Fluency Map")}
                 </Badge>
                 <Layers className="w-[16px] h-[16px] text-off-black/40" />
@@ -211,15 +211,15 @@ export function BentoFeatures() {
             </div>
 
             {/* Connected Bubbles illustration */}
-            <div className="flex justify-around items-center bg-atmosphere-wash border border-off-black rounded-[40px] p-3 h-[74px] relative">
+            <div className="flex justify-around items-center bg-atmosphere-wash border border-off-black rounded-lg p-3 h-[74px] relative">
               <div className="absolute left-[35%] right-[35%] h-0.5 border-t border-dashed border-off-black z-0" />
-              <div className="z-10 bg-off-black text-paper-canvas border border-off-black rounded-full px-4 py-1.5 text-xs font-normal shadow-sm">
+              <div className="z-10 bg-off-black text-paper-canvas border border-off-black rounded-md px-4 py-1.5 text-xs font-normal shadow-sm">
                 make
               </div>
-              <div className="z-10 bg-paper-canvas border border-off-black rounded-full px-3 py-1 text-[11px] font-normal text-ink text-center">
+              <div className="z-10 bg-paper-canvas border border-off-black rounded-md px-3 py-1 text-[11px] font-normal text-ink text-center">
                 an effort
               </div>
-              <div className="z-10 bg-paper-canvas border border-off-black rounded-full px-3 py-1 text-[11px] font-normal text-ink text-center">
+              <div className="z-10 bg-paper-canvas border border-off-black rounded-md px-3 py-1 text-[11px] font-normal text-ink text-center">
                 a phone call
               </div>
             </div>
@@ -233,7 +233,7 @@ export function BentoFeatures() {
             <div className="absolute top-0 left-0 right-0 h-1.5 bg-sunset-violet-gradient border-b border-off-black" />
             <div>
               <div className="flex items-center justify-between mb-4">
-                <Badge className="border-off-black font-normal rounded-full px-3 py-0.5 text-xs bg-paper-canvas text-off-black">
+                <Badge className="border-off-black font-normal rounded-md px-3 py-0.5 text-xs bg-paper-canvas text-off-black">
                   {translate("Coverage")}
                 </Badge>
                 <BookOpen className="w-[16px] h-[16px] text-off-black/60" />
@@ -248,7 +248,7 @@ export function BentoFeatures() {
 
             {/* Grid of level badges */}
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 md:gap-4 mt-6">
-              <div className="p-3 sm:p-4 bg-atmosphere-wash border border-off-black rounded-[40px] shadow-sm flex flex-col justify-center">
+              <div className="p-3 sm:p-4 bg-atmosphere-wash border border-off-black rounded-lg shadow-sm flex flex-col justify-center">
                 <p className="text-[10px] font-normal text-off-black/60 uppercase tracking-wider">
                   {translate("Intermediate")}
                 </p>
@@ -256,7 +256,7 @@ export function BentoFeatures() {
                   {translate("B1 Syllabus")}
                 </p>
               </div>
-              <div className="p-3 sm:p-4 bg-atmosphere-wash border border-off-black rounded-[40px] shadow-sm flex flex-col justify-center">
+              <div className="p-3 sm:p-4 bg-atmosphere-wash border border-off-black rounded-lg shadow-sm flex flex-col justify-center">
                 <p className="text-[10px] font-normal text-off-black/60 uppercase tracking-wider">
                   {translate("Upper-Inter")}
                 </p>
@@ -264,7 +264,7 @@ export function BentoFeatures() {
                   {translate("B2 Syllabus")}
                 </p>
               </div>
-              <div className="p-3 sm:p-4 bg-atmosphere-wash border border-off-black rounded-[40px] shadow-sm flex flex-col justify-center">
+              <div className="p-3 sm:p-4 bg-atmosphere-wash border border-off-black rounded-lg shadow-sm flex flex-col justify-center">
                 <p className="text-[10px] font-normal text-off-black/60 uppercase tracking-wider">
                   {translate("Proficient")}
                 </p>
