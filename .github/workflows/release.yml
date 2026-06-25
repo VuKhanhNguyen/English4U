@@ -1,0 +1,80 @@
+name: 🚀 Build & Automate GitHub Release
+
+on:
+  push:
+    tags:
+      - 'v*' # Trigger workflow on pushes to tags starting with 'v', e.g., v1.4.0
+
+jobs:
+  release:
+    name: Create GitHub Release
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write # Required to create release assets and release notes
+
+    steps:
+      - name: 📥 Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 # Fetch all history for tags and branches
+
+      - name: 🟢 Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'npm'
+
+      - name: 📦 Install dependencies
+        run: npm ci
+
+      - name: ⚙️ Build application
+        run: npm run build
+
+      - name: 📑 Extract release notes from CHANGELOG.md
+        id: extract_changelog
+        run: |
+          node -e '
+            const fs = require("fs");
+            const tag = process.env.TAG_NAME;
+            const changelog = fs.readFileSync("CHANGELOG.md", "utf8");
+            
+            const version = tag.replace(/^v/, "");
+            const lines = changelog.split(/\r?\n/);
+            let extracting = false;
+            const extracted = [];
+            
+            for (const line of lines) {
+              if (line.startsWith("## ") && line.includes(version)) {
+                extracting = true;
+                continue;
+              }
+              if (extracting) {
+                if (line.startsWith("---") || (line.startsWith("## ") && !line.includes(version))) {
+                  break;
+                }
+                extracted.push(line);
+              }
+            }
+            
+            const content = extracted.join("\n").trim();
+            if (!content) {
+              console.error(`Error: Could not find changelog section for version ${version} in CHANGELOG.md`);
+              process.exit(1);
+            }
+            fs.writeFileSync("RELEASE_NOTES.md", content);
+            console.log("=== Extracted Release Notes ===");
+            console.log(content);
+            console.log("===============================");
+          '
+        env:
+          TAG_NAME: ${{ github.ref_name }}
+
+      - name: 🚀 Create GitHub Release
+        run: |
+          gh release create "${{ github.ref_name }}" \
+            --title "English4U ${{ github.ref_name }}" \
+            --notes-file RELEASE_NOTES.md \
+            --draft=false \
+            --prerelease=false
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}

@@ -1,0 +1,163 @@
+# 📑 CHANGELOG — English4U
+
+All notable changes to the **English4U** project are documented below. This project adheres to **Semantic Versioning** (`vMAJOR.MINOR.PATCH`).
+
+---
+
+## 📊 Project Status & Quick Stats
+
+| Key Metrics | Value / Badges |
+| :--- | :--- |
+| **Current Version** | ![Version](https://img.shields.io/badge/version-v1.4.0-blue.svg?style=for-the-badge&logo=git) |
+| **Framework** | ![Next.js](https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white) |
+| **Styling** | ![CSS](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white) |
+| **Language** | ![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white) |
+| **Build Status** | ![Build Status](https://img.shields.io/github/actions/workflow/status/VuKhanhNguyen/English4U/release.yml?branch=main&style=for-the-badge) |
+
+---
+
+## 🗺️ Release Roadmap & Summary
+
+```mermaid
+gantt
+    title English4U Development Timeline (2026)
+    dateFormat  YYYY-MM-DD
+    section Core Infrastructure
+    v1.0.0 Setup & B1 Syllabus       :active, 2026-05-18, 2026-05-28
+    section Translation & Darkmode
+    v1.1.0 Localization & Theme      :active, 2026-06-01, 2026-06-04
+    section Syllabus B2
+    v1.2.0 Destination B2            :active, 2026-06-09, 2026-06-13
+    section UX & Contact
+    v1.3.0 Interactive Contact & UX  :active, 2026-06-18, 2026-06-23
+    section PWA & Drawer
+    v1.4.0 PWA & Menu Gestures       :active, 2026-06-25, 2026-06-25
+```
+
+---
+
+## 🚀 v1.4.0 — Layout Refinement & PWA Integration
+> **Release Date:** June 25, 2026 • *Focus: PWA Capabilities, Drag Gestures & Geometry Polish*
+
+```
+┌─────────────────────────────────────────────────────────────┐
+│  ✨ Highlights:                                              │
+│  • Full PWA integration with home-screen installation      │
+│  • Sharp modern design system with optimized 10px rounded   │
+│  • Framer Motion bottom sheet with velocity-drag actions    │
+└─────────────────────────────────────────────────────────────┘
+```
+
+### 📱 Progressive Web App (PWA)
+*   **Features & Offline Capabilities:**
+    *   `3160344` Added full Progressive Web App configuration to enable standalone home-screen installation, cache manifest, and offline mode.
+*   **Stability Patches:**
+    *   `51b8302` Fixed `PwaProvider` initialization states to prevent layout blockages on browsers that do not support service workers.
+
+### 🎨 Design & Layout Refinement
+*   **Visual Aesthetics & Geometry Update:**
+    *   `f0dcf5f` Polished global geometry tokens, refining the corner-rounding values of tables, cards, inputs, and tab containers. Reduced the base `--radius` variable from `40px` down to `10px` (20%–30% of original rounding) for a sleeker, more professional desktop and mobile aesthetic (excluding `Navbar`).
+*   **Mobile Experience Improvements:**
+    *   `navbar.tsx` Implemented a premium responsive bottom-sheet menu for mobile devices, using smooth Framer Motion vertical dragging (`drag="y"`) and velocity-based pull-to-dismiss drag mechanics.
+    *   `navbar.tsx` Upgraded the mobile hamburger drawer background to an elegant frosted glassmorphism effect featuring light/dark transparent overlay filters.
+
+---
+
+## 📦 v1.3.0 — Interactive Features & Performance
+> **Release Date:** June 18 – June 23, 2026 • *Focus: Content Discovery & Performance Optimizations*
+
+### ⚡ Performance & UX
+*   **Layout Shifts Mitigation:**
+    *   `353c841` Integrated page transition skeleton loaders to eliminate Layout Shifts (CLS) during route navigation.
+*   **Responsive Adjustments:**
+    *   `44fe7d7` Optimized grid layouts and CSS media queries for full compatibility with ultra-small mobile displays.
+
+### ✍️ Communication & Navigation
+*   **Interactive Features:**
+    *   `d2f34c9` Built a rich-text Contact Us form, allowing users to send formatted emails with embedded base64 image attachments.
+*   **Syllabus Indexing:**
+    *   `e90c6e3` Introduced quick-access index navigation panels for Destination B1 & B2, improving vertical page scroll navigation.
+
+---
+
+## 🗺️ v1.2.0 — Destination B2 Expansion & Polish
+> **Release Date:** June 9 – June 13, 2026 • *Focus: Advanced Syllabus Coverage & UI Consistency*
+
+### 📚 Syllabus Expansion (Destination B2)
+*   **Curriculum Coverage:**
+    *   `55bb527` Integrated Units 1 to 12 of the Destination B2 syllabus with grammar summaries and color-coded key syntax highlights.
+    *   `7e8f344` Integrated B2 Syllabus Units 13 and 14.
+    *   `b4ea9c6` Integrated B2 Syllabus Units 15 and 16.
+    *   `1f9f5ae` Added B2 Syllabus Units 17 to 20 with highlighted examples.
+    *   `dc7ac5b` Completed the Destination B2 syllabus with Units 21 to 28.
+
+### 🧭 Navigation & UI Polish
+*   **Navigation & Alerts:**
+    *   `1e6b924` Implemented dynamic breadcrumb pathways matching the current selected book level and unit context.
+    *   `ba93504` Added a custom floating Toast alert notification engine to handle system alerts, loading feedback, and network status.
+*   **Refinement & Merges:**
+    *   `18a8a84` Fine-tuned Navbar glassmorphism specular highlights to make navbar borders look more premium and responsive.
+    *   `6a9008e` Polished resource page grid cards and pagination controls for cleaner content hierarchy.
+    *   `e03e297` Resolved translation file conflicts and syntax merge mismatches.
+
+---
+
+## 🌐 v1.1.0 — Localization & Adaptive Themes
+> **Release Date:** June 1 – June 4, 2026 • *Focus: Multi-Language Adaptability & Dark Theme*
+
+### 🌍 Internationalization (i18n)
+*   **Localisation Setup:**
+    *   `1ce0d90` Configured the project's Core `i18n-localization` framework, enabling instant toggle switching between English and Vietnamese.
+*   **Content Translations:**
+    *   `af78a72` Completed Vietnamese translations for vocabularies in Units 12 through 42.
+    *   `8bb2f33` Translated grammatical guides for B1 Syllabus Units 1 to 11 and localized Resource page title card texts.
+    *   `ee0dfcb` Translated grammar concepts for Units 12 to 42 and localized the About panel sections.
+    *   `f3f8111` Localized core template blocks including the shared Navbar and Footer layouts.
+    *   `e957dae` Translated general text templates across About pages.
+
+### 🌗 Dark Mode & Micro-interactions
+*   **Theme Integration:**
+    *   `aa6425b` Added tailwind-based custom dark theme config class mapping to enable native system theme switching.
+*   **Transitions & Tweaks:**
+    *   `2b6aa26` Integrated loading transition animations (animated gif assets) to ease route navigation waiting states.
+    *   `ee0dfcb` Polished active trigger states, refactored scroll pinions, and cleaned up dev-indicator floating action button interfaces.
+
+---
+
+## 🚀 v1.0.0 — Initial Release & B1 Syllabus
+> **Release Date:** May 18 – May 28, 2026 • *Focus: Base Infrastructure & Initial B1 Core*
+
+### 📚 Syllabus Integration (Destination B1)
+*   **B1 Syllabus Units:**
+    *   `be77cd5` Added Destination B1 Syllabus Units 1, 2, and 3.
+    *   `6330e8d` Refactored unit data structures into localized JSON configurations and added Units 4, 5, and 6.
+    *   `4f13e38` Added Units 7, 8, and 9.
+    *   `114c080` Added Units 10, 11, and 12, updating index structures.
+    *   `238b76b` Added Units 13, 14, and 15.
+    *   `d893b9b` Added Units 16, 17, and 18.
+    *   `37a58ce` Added Units 19, 20, and 21.
+    *   `838f0ac` Added Units 22, 23, and 24.
+    *   `0343d0a` Added Units 25, 26, and 27.
+    *   `948f998` Added Units 28, 29, and 30.
+    *   `6c84593` Added Units 31, 32, and 33.
+    *   `8041a1b` Added Units 34, 35, and 36.
+    *   `0017b37` Added Units 37, 38, and 39.
+    *   `b4d03b3` Completed the B1 syllabus integration by adding Units 40, 41, and 42.
+
+### 🎨 Design & Infrastructure Setup
+*   **Boilerplate & Core Configurations:**
+    *   `b6e1b00` Scaffolded the initial codebase using Next.js App Router, configuring compilation targets and tsconfig parameters.
+    *   `a1f9be0` Configured webpack/turbopack CSS module support.
+*   **Branding & Smooth Scroll:**
+    *   `bdd200e` Handcrafted SVG brand vector logos and customized global footer interfaces.
+    *   `313703c` Integrated Lenis scroll library for hardware-accelerated smooth scrolling across viewports.
+*   **Visual Animations (GSAP):**
+    *   `b0a1900` Bound custom target element hover tracker cursor states using GreenSock (GSAP).
+    *   `784be64` Built fluid target cursor physics, gradual content blur transitions, and splash screen intro sequences.
+    *   `0d2d4d2` Hooked up standard entrance fade-ins and micro-interaction trigger animations.
+*   **Routing & UI Refinements:**
+    *   `6834aa6` Fixed destination level subfolder entry links and polished cursor interactions.
+    *   `67fd62d` Fixed get destination level 404 path issues and integrated information explorer headers.
+    *   `80bc3a8` Re-designed rules section layouts and modernized CSS style constants.
+    *   `6b74d74` Designed and styled the introductory About panel interfaces.
+    *   `af8adcd` Adjusted unit element displays and detail rendering templates.
