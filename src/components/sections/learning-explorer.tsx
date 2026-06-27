@@ -2,7 +2,7 @@
 
 import * as React from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Search, X, List } from "lucide-react";
+import { Search, X, List, ChevronUp, ChevronDown } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useLanguage } from "@/components/providers/language-provider";
 import { showToast } from "@/components/ui/toast";
@@ -413,14 +413,28 @@ function RichGrammarRenderer({ richGrammar }: { richGrammar: any[] }) {
                 );
               }
               if (block.type === "table") {
+                // Group rows by "type" for the mobile view
+                const mobileGroups: { type: string; items: any[] }[] = [];
+                let currentGroup: { type: string; items: any[] } | null = null;
+                (block.rows || []).forEach((row: any) => {
+                  if (row.type) {
+                    currentGroup = { type: row.type, items: [] };
+                    mobileGroups.push(currentGroup);
+                  }
+                  if (currentGroup) {
+                    currentGroup.items.push(row);
+                  }
+                });
+
                 return (
-                  <div key={bIdx} className="space-y-2">
+                  <div key={bIdx} className="space-y-4">
                     {block.tableName && (
                       <h5 className="text-body-sm font-bold text-whisper-gray font-mono">
                         {translate(block.tableName)}
                       </h5>
                     )}
-                    <div className="overflow-x-auto border border-off-black rounded-lg bg-paper-canvas">
+                    {/* Desktop View */}
+                    <div className="hidden md:block overflow-x-auto border border-off-black rounded-lg bg-paper-canvas">
                       <table className="w-full text-sm border-collapse text-left min-w-[500px]">
                         <thead>
                           <tr className="bg-atmosphere-wash border-b border-off-black font-mono text-ink">
@@ -468,18 +482,56 @@ function RichGrammarRenderer({ richGrammar }: { richGrammar: any[] }) {
                         </tbody>
                       </table>
                     </div>
+
+                    {/* Mobile Card View */}
+                    <div className="block md:hidden space-y-4">
+                      {mobileGroups.map((group, gIdx) => (
+                        <div
+                          key={gIdx}
+                          className="border border-off-black/15 dark:border-white/10 rounded-xl overflow-hidden bg-paper-canvas/30"
+                        >
+                          <div className="bg-atmosphere-wash/40 dark:bg-atmosphere-wash/10 px-4 py-2.5 border-b border-off-black/15 dark:border-white/10">
+                            <span className="font-bold text-ink text-xs font-mono">
+                              {translate(group.type)}
+                            </span>
+                          </div>
+                          <div className="p-4 space-y-3 divide-y divide-off-black/5 dark:divide-white/5 font-mono">
+                            {group.items.map((item, iIdx) => (
+                              <div key={iIdx} className={cn("space-y-1.5", iIdx > 0 && "pt-3")}>
+                                <div className="flex items-center gap-2 flex-wrap">
+                                  <span className="text-[10px] font-bold text-pale-stone/80 bg-paper-canvas dark:bg-black/30 border border-off-black/10 dark:border-white/5 px-2 py-0.5 rounded">
+                                    {item.subject}
+                                  </span>
+                                  {item.form !== undefined && (
+                                    <span className="font-bold text-indigo-600 dark:text-indigo-400 text-xs">
+                                      {item.form}
+                                    </span>
+                                  )}
+                                </div>
+                                {item.example && (
+                                  <p className="text-xs text-pale-stone italic leading-relaxed pl-1">
+                                    {item.example}
+                                  </p>
+                                )}
+                              </div>
+                            ))}
+                          </div>
+                        </div>
+                      ))}
+                    </div>
                   </div>
                 );
               }
               if (block.type === "generic-table") {
                 return (
-                  <div key={bIdx} className="space-y-2">
+                  <div key={bIdx} className="space-y-4">
                     {block.tableName && (
                       <h5 className="text-body-sm font-bold text-whisper-gray font-mono">
                         {translate(block.tableName)}
                       </h5>
                     )}
-                    <div className="overflow-x-auto border border-off-black rounded-lg bg-paper-canvas">
+                    {/* Desktop View */}
+                    <div className="hidden md:block overflow-x-auto border border-off-black rounded-lg bg-paper-canvas">
                       <table className="w-full text-sm border-collapse text-left min-w-[600px]">
                         <thead>
                           <tr className="bg-atmosphere-wash border-b border-off-black font-mono text-ink">
@@ -526,6 +578,43 @@ function RichGrammarRenderer({ richGrammar }: { richGrammar: any[] }) {
                           ))}
                         </tbody>
                       </table>
+                    </div>
+
+                    {/* Mobile Stacked Card View */}
+                    <div className="block md:hidden space-y-4">
+                      {(block.rows || []).map((row: string[], rIdx: number) => (
+                        <div
+                          key={rIdx}
+                          className="p-4 border border-off-black/10 dark:border-white/10 rounded-xl bg-paper-canvas/30 space-y-3 font-mono text-xs"
+                        >
+                          {(row || []).map((cell: string, cIdx: number) => {
+                            const header = block.headers?.[cIdx];
+                            const skipTranslation = 
+                              header === "Stative Verb" || 
+                              header === "Active Example" || 
+                              header === "Passive Form & Example" || 
+                              header === "Active Verb" || 
+                              header === "Passive Participle" ||
+                              header === "Verb" ||
+                              header === "Sentence & Question tag" ||
+                              header === "Formula & Example" ||
+                              header === "Example" ||
+                              header === "Example Indirect Question" ||
+                              header === "Introductory Polite Phrase";
+                            
+                            return (
+                              <div key={cIdx} className="flex flex-col gap-1">
+                                <span className="text-[10px] font-bold text-pale-stone/75 uppercase tracking-wider">
+                                  {translate(header)}
+                                </span>
+                                <div className="text-ink leading-relaxed">
+                                  {renderTextWithLinks(skipTranslation ? cell : translate(cell))}
+                                </div>
+                              </div>
+                            );
+                          })}
+                        </div>
+                      ))}
                     </div>
                   </div>
                 );
@@ -574,30 +663,52 @@ function RichGrammarRenderer({ richGrammar }: { richGrammar: any[] }) {
                 return (
                   <div key={bIdx} className="font-mono text-sm text-ink space-y-4">
                     {block.table && (
-                      <div className="overflow-x-auto border border-off-black rounded-lg">
-                        <table className="w-full text-sm border-collapse text-left min-w-[450px]">
-                          <thead>
-                            <tr className="bg-atmosphere-wash border-b border-off-black font-mono text-ink">
-                              <th className="p-3 border-r border-off-black font-bold w-[100px]">
-                                {translate("Pronunciation")}
-                              </th>
-                              <th className="p-3 font-bold">
-                                {translate("Pronunciation rules")}
-                              </th>
-                            </tr>
-                          </thead>
-                          <tbody>
-                            {(block.table || []).map((row: any, rIdx: number) => (
-                              <tr key={rIdx} className="border-b border-off-black last:border-b-0 hover:bg-atmosphere-wash/10 transition-colors">
-                                <td className="p-3 border-r border-off-black font-bold text-indigo-600 bg-atmosphere-wash/10 align-middle text-center">{row[0]}</td>
-                                <td className="p-3 whitespace-pre-line text-off-black align-middle">
-                                  {renderTextWithLinks(translate(row[1]))}
-                                </td>
+                      <>
+                        {/* Desktop View */}
+                        <div className="hidden md:block overflow-x-auto border border-off-black rounded-lg">
+                          <table className="w-full text-sm border-collapse text-left min-w-[450px]">
+                            <thead>
+                              <tr className="bg-atmosphere-wash border-b border-off-black font-mono text-ink">
+                                <th className="p-3 border-r border-off-black font-bold w-[100px]">
+                                  {translate("Pronunciation")}
+                                </th>
+                                <th className="p-3 font-bold">
+                                  {translate("Pronunciation rules")}
+                                </th>
                               </tr>
-                            ))}
-                          </tbody>
-                        </table>
-                      </div>
+                            </thead>
+                            <tbody>
+                              {(block.table || []).map((row: any, rIdx: number) => (
+                                <tr key={rIdx} className="border-b border-off-black last:border-b-0 hover:bg-atmosphere-wash/10 transition-colors">
+                                  <td className="p-3 border-r border-off-black font-bold text-indigo-600 bg-atmosphere-wash/10 align-middle text-center">{row[0]}</td>
+                                  <td className="p-3 whitespace-pre-line text-off-black align-middle">
+                                    {renderTextWithLinks(translate(row[1]))}
+                                  </td>
+                                </tr>
+                              ))}
+                            </tbody>
+                          </table>
+                        </div>
+
+                        {/* Mobile View */}
+                        <div className="block md:hidden space-y-3">
+                          {(block.table || []).map((row: any, rIdx: number) => (
+                            <div key={rIdx} className="p-4 border border-off-black/10 dark:border-white/10 rounded-xl bg-paper-canvas/30 space-y-2">
+                              <div className="flex items-center gap-2">
+                                <span className="text-xs font-bold text-indigo-600 dark:text-indigo-400 bg-atmosphere-wash/30 px-2.5 py-0.5 rounded font-mono">
+                                  {row[0]}
+                                </span>
+                                <span className="text-[10px] font-bold text-pale-stone/75 uppercase tracking-wider">
+                                  {translate("Pronunciation")}
+                                </span>
+                              </div>
+                              <p className="text-xs text-off-black leading-relaxed font-mono">
+                                {renderTextWithLinks(translate(row[1]))}
+                              </p>
+                            </div>
+                          ))}
+                        </div>
+                      </>
                     )}
  
                     {block.blackboard && (
@@ -636,7 +747,8 @@ function RichGrammarRenderer({ richGrammar }: { richGrammar: any[] }) {
                     <p className="whitespace-pre-line leading-relaxed text-off-black text-body-sm">
                       {renderTextWithLinks(translate(block.description))}
                     </p>
-                    <div className="overflow-x-auto border border-off-black rounded-lg bg-paper-canvas">
+                    {/* Desktop View */}
+                    <div className="hidden md:block overflow-x-auto border border-off-black rounded-lg bg-paper-canvas">
                       <table className="w-full text-sm border-collapse text-left min-w-[550px]">
                         <thead>
                           <tr className="bg-atmosphere-wash border-b border-off-black font-mono text-ink">
@@ -666,6 +778,27 @@ function RichGrammarRenderer({ richGrammar }: { richGrammar: any[] }) {
                         </tbody>
                       </table>
                     </div>
+
+                    {/* Mobile Grid/List View */}
+                    <div className="block md:hidden grid grid-cols-1 gap-2.5">
+                      {(block.table || []).map((row: any, rIdx: number) => (
+                        <React.Fragment key={rIdx}>
+                          {row[0] && (
+                            <div className="p-3 border border-off-black/10 dark:border-white/10 rounded-xl bg-paper-canvas/30 flex justify-between items-center gap-4 text-xs">
+                              <span className="font-bold text-ink">{row[0]}</span>
+                              <span className="text-pale-stone text-right">{translate(row[1])}</span>
+                            </div>
+                          )}
+                          {row[2] && (
+                            <div className="p-3 border border-off-black/10 dark:border-white/10 rounded-xl bg-paper-canvas/30 flex justify-between items-center gap-4 text-xs">
+                              <span className="font-bold text-ink">{row[2]}</span>
+                              <span className="text-pale-stone text-right">{translate(row[3])}</span>
+                            </div>
+                          )}
+                        </React.Fragment>
+                      ))}
+                    </div>
+
                     {block.note && (
                       <div className="p-4 bg-atmosphere-wash/30 border border-off-black/20 rounded-lg text-ink font-semibold text-body-sm flex gap-3 items-center">
                         <span className="text-xl">⚠️</span>
@@ -706,6 +839,47 @@ export function LearningExplorerSection({
   const [selectedBookIndex, setSelectedBookIndex] =
     React.useState(initialIndex);
   const [searchQuery, setSearchQuery] = React.useState("");
+  const [scrollActiveButton, setScrollActiveButton] = React.useState<"up" | "down" | null>(null);
+
+  React.useEffect(() => {
+    if (typeof window === "undefined") return;
+
+    let lastScrollTop = window.scrollY;
+    let lastTime = Date.now();
+    let hideTimeout: NodeJS.Timeout;
+
+    const handleScroll = () => {
+      const currentScrollTop = window.scrollY;
+      const currentTime = Date.now();
+      const timeDiff = currentTime - lastTime;
+
+      if (timeDiff > 0) {
+        const distDiff = Math.abs(currentScrollTop - lastScrollTop);
+        const speed = distDiff / timeDiff; // px per ms
+
+        // If scroll speed exceeds threshold (e.g. 0.8px/ms)
+        if (speed > 0.8) {
+          const direction = currentScrollTop < lastScrollTop ? "up" : "down";
+          setScrollActiveButton(direction);
+
+          // Clear previous timeout and set a new one to hide after 2.5 seconds
+          clearTimeout(hideTimeout);
+          hideTimeout = setTimeout(() => {
+            setScrollActiveButton(null);
+          }, 2500);
+        }
+      }
+
+      lastScrollTop = currentScrollTop;
+      lastTime = currentTime;
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      clearTimeout(hideTimeout);
+    };
+  }, []);
 
   React.useEffect(() => {
     if (bookLevel) {
@@ -903,7 +1077,7 @@ export function LearningExplorerSection({
                 </BreadcrumbList>
               </Breadcrumb>
 
-          <div className="w-full md:w-[280px] relative ml-auto z-10">
+          {/* <div className="w-full md:w-[280px] relative ml-auto z-10">
             <Search className="absolute left-3 top-1/2 -translate-y-1/2 text-pale-stone w-[16px] h-[16px]" />
             <Input
               placeholder={translate("Search grammar, vocabulary...")}
@@ -911,7 +1085,7 @@ export function LearningExplorerSection({
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
             />
-          </div>
+          </div> */}
         </div>
 
         {/* Book Tabs - Hide if a specific level is requested */}
@@ -1743,6 +1917,41 @@ export function LearningExplorerSection({
         )}
       </AnimatePresence>
     </div>
+
+    {/* Mobile speed-sensitive floating scroll-up/scroll-down buttons */}
+    <AnimatePresence>
+      {scrollActiveButton && (
+        <motion.div
+          initial={{ opacity: 0, scale: 0.8, x: 20 }}
+          animate={{ opacity: 1, scale: 1, x: 0 }}
+          exit={{ opacity: 0, scale: 0.8, x: 20 }}
+          transition={{ type: "spring", stiffness: 300, damping: 25 }}
+          className="fixed right-4 top-1/2 -translate-y-1/2 z-50 md:hidden pointer-events-auto"
+        >
+          {scrollActiveButton === "up" ? (
+            <motion.button
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+              onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+              className="w-12 h-12 rounded-full flex items-center justify-center bg-paper-canvas/90 dark:bg-zinc-950/90 backdrop-blur-md border border-off-black/15 dark:border-white/15 text-ink shadow-lg cursor-pointer hover:bg-atmosphere-wash/45 dark:hover:bg-atmosphere-wash/25 transition-colors"
+              aria-label="Scroll to top"
+            >
+              <ChevronUp className="w-6 h-6" />
+            </motion.button>
+          ) : (
+            <motion.button
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+              onClick={() => window.scrollTo({ top: document.documentElement.scrollHeight, behavior: "smooth" })}
+              className="w-12 h-12 rounded-full flex items-center justify-center bg-paper-canvas/90 dark:bg-zinc-950/90 backdrop-blur-md border border-off-black/15 dark:border-white/15 text-ink shadow-lg cursor-pointer hover:bg-atmosphere-wash/45 dark:hover:bg-atmosphere-wash/25 transition-colors"
+              aria-label="Scroll to bottom"
+            >
+              <ChevronDown className="w-6 h-6" />
+            </motion.button>
+          )}
+        </motion.div>
+      )}
+    </AnimatePresence>
   </div>
 </section>
   );

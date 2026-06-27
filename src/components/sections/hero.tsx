@@ -147,7 +147,7 @@ export function HeroSection({
       <div className="absolute bottom-20 right-10 w-80 h-80 bg-sky-mint-gradient rounded-full opacity-25 blur-3xl z-0 pointer-events-none" />
 
       <div className="container mx-auto px-6 relative z-10 flex flex-col items-center text-center w-full">
-        <h1 className={`text-display-sm md:text-display lg:text-display font-heading font-normal leading-[1.2] tracking-[-0.02em] text-ink max-w-4xl ${text2 ? 'min-h-[3.6em] sm:min-h-[2.3em] md:min-h-[2.3em]' : 'min-h-[1.8em] sm:min-h-[1.2em] md:min-h-[1.2em]'}`}>
+        <h1 className={`text-display-sm md:text-display lg:text-display font-heading font-normal leading-[1.2] tracking-[-0.02em] text-ink max-w-4xl ${title2 ? 'min-h-[3.8em] sm:min-h-[2.5em] md:min-h-[2.5em]' : 'min-h-[1.9em] sm:min-h-[1.3em] md:min-h-[1.3em]'}`}>
           <span>{t1}{hasStarted && (phase === "typing-1" || phase === "deleting-1") && (
             <span className="animate-pulse inline-block ml-0.5 font-light text-ink">|</span>
           )}</span>
@@ -161,31 +161,32 @@ export function HeroSection({
           )}
         </h1>
 
-        <p className="mt-6 text-subheading md:text-heading-sm font-mono font-normal tracking-[-0.02em] text-pale-stone max-w-2xl min-h-[6.5em] sm:min-h-[4.5em] md:min-h-[3.5em]">
+        <p className="mt-6 text-subheading md:text-heading-sm font-mono font-normal tracking-[-0.02em] text-pale-stone max-w-2xl min-h-[8.5em] sm:min-h-[5.5em] md:min-h-[4em]">
           <span>{t3}{hasStarted && (phase === "typing-3" || phase === "deleting-3" || phase === "paused") && (
             <span className="animate-pulse inline-block ml-0.5 font-light text-ink">|</span>
           )}</span>
         </p>
 
-        {!hideButtons && (
-          <motion.div
-            className="mt-12 z-20 flex flex-col sm:flex-row gap-4 w-full max-w-xs sm:max-w-none sm:w-auto"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 3.5, ease: "easeOut" }}
-          >
-            <Button variant="primary" className="h-[48px] px-8 text-base w-full sm:w-auto cursor-pointer">
-              {translate("Explore Destination B1")}
-            </Button>
-            <Button
-              variant="ghost"
-              className="h-[48px] px-8 text-base w-full sm:w-auto cursor-pointer"
-            >
-              {translate("Start Learning")}
-            </Button>
-          </motion.div>
-        )}
       </div>
+
+      {!hideButtons && (
+        <motion.div
+          className="absolute bottom-16 md:bottom-24 left-1/2 -translate-x-1/2 z-20 flex flex-col sm:flex-row gap-4 w-full max-w-xs sm:max-w-none sm:w-auto px-6 sm:px-0"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 3.5, ease: "easeOut" }}
+        >
+          <Button variant="primary" className="h-[48px] px-8 text-base w-full sm:w-auto cursor-pointer">
+            {translate("Explore Destination B1")}
+          </Button>
+          <Button
+            variant="ghost"
+            className="h-[48px] px-8 text-base w-full sm:w-auto cursor-pointer"
+          >
+            {translate("Start Learning")}
+          </Button>
+        </motion.div>
+      )}
     </section>
   );
 }

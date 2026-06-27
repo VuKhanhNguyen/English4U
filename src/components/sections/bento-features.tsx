@@ -42,238 +42,279 @@ export function BentoFeatures() {
         {/* Bento Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 auto-rows-auto md:auto-rows-[300px] font-abc-diatype-mono">
           {/* Card 1: Smart Search Filter (Col Span 2) */}
-          <Card
-            variant="content"
-            className="md:col-span-2 md:row-span-1 flex flex-col justify-between overflow-hidden relative group min-h-[300px] md:min-h-0"
+          <motion.div
+            className="md:col-span-2 md:row-span-1"
+            whileHover={{ y: -6, scale: 1.01 }}
+            whileTap={{ scale: 0.99 }}
+            transition={{ type: "spring", stiffness: 260, damping: 20 }}
           >
-            <div className="absolute top-0 left-0 right-0 h-1.5 bg-sunset-violet-gradient border-b border-off-black" />
-            <div>
-              <div className="flex items-center justify-between mb-4">
-                <Badge className="border-off-black font-normal rounded-md px-3 py-0.5 text-xs bg-paper-canvas text-off-black">
-                  {translate("Fast Search")}
-                </Badge>
-                <Search className="w-[16px] h-[16px] text-off-black/40" />
+            <Card
+              variant="content"
+              className="h-full flex flex-col justify-between overflow-hidden relative group min-h-[300px] md:min-h-0 border-off-black/15 hover:border-off-black/40 dark:border-white/10 dark:hover:border-white/20 transition-all duration-300"
+            >
+              <div className="absolute top-0 left-0 right-0 h-1.5 bg-sunset-violet-gradient border-b border-off-black/15" />
+              <div>
+                <div className="flex items-center justify-between mb-4">
+                  <Badge className="border-off-black/25 font-normal rounded-md px-3 py-0.5 text-xs bg-paper-canvas text-off-black">
+                    {translate("Fast Search")}
+                  </Badge>
+                  <Search className="w-[16px] h-[16px] text-off-black/40" />
+                </div>
+                <h3 className="text-heading font-normal text-ink mb-2 tracking-tight">
+                  {translate("Zero-Latency Client Search")}
+                </h3>
+                <p className="text-body-sm text-pale-stone leading-relaxed max-w-md">
+                  {translate("Instantly filter vocabulary, grammatical structures, or collocations without waiting for a server request.")}
+                </p>
               </div>
-              <h3 className="text-heading font-normal text-ink mb-2 tracking-tight">
-                {translate("Zero-Latency Client Search")}
-              </h3>
-              <p className="text-body-sm text-pale-stone leading-relaxed max-w-md">
-                {translate("Instantly filter vocabulary, grammatical structures, or collocations without waiting for a server request.")}
-              </p>
-            </div>
 
-            {/* Interactive Search Mock */}
-            <div className="bg-atmosphere-wash border border-off-black rounded-lg p-2 px-4 flex gap-2 items-center overflow-x-auto">
-              <span className="text-xs font-normal text-off-black/60 shrink-0">
-                {translate("Try typing:")}
-              </span>
-              <button
-                onClick={() => setSearchHighlight("grammar")}
-                className={`px-3 py-1 text-xs rounded-md border font-normal cursor-pointer transition-all ${searchHighlight === "grammar" ? "bg-off-black text-paper-canvas border-off-black" : "bg-paper-canvas border-off-black text-off-black"}`}
-              >
-                grammar
-              </button>
-              <button
-                onClick={() => setSearchHighlight("noun")}
-                className={`px-3 py-1 text-xs rounded-md border font-normal cursor-pointer transition-all ${searchHighlight === "noun" ? "bg-off-black text-paper-canvas border-off-black" : "bg-paper-canvas border-off-black text-off-black"}`}
-              >
-                noun
-              </button>
-              <button
-                onClick={() => setSearchHighlight("phrase")}
-                className={`px-3 py-1 text-xs rounded-md border font-normal cursor-pointer transition-all ${searchHighlight === "phrase" ? "bg-off-black text-paper-canvas border-off-black" : "bg-paper-canvas border-off-black text-off-black"}`}
-              >
-                phrase
-              </button>
-              <span className="text-xs font-normal bg-sky-mint-gradient text-ink px-3 py-1 rounded-md border border-off-black shrink-0 ml-auto animate-pulse">
-                {searchHighlight === "grammar"
-                  ? "Present Simple..."
-                  : searchHighlight === "noun"
-                    ? "Structuring..."
-                    : "make an effort..."}
-              </span>
-            </div>
-          </Card>
+              {/* Interactive Search Mock */}
+              <div className="bg-atmosphere-wash border border-off-black/15 rounded-lg p-2 px-4 flex gap-2 items-center overflow-x-auto">
+                <span className="text-xs font-normal text-off-black/60 shrink-0">
+                  {translate("Try typing:")}
+                </span>
+                <motion.button
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  onClick={() => setSearchHighlight("grammar")}
+                  className={`px-3 py-1 text-xs rounded-md border font-normal cursor-pointer transition-all ${searchHighlight === "grammar" ? "bg-off-black text-paper-canvas border-off-black" : "bg-paper-canvas border-off-black/40 text-off-black"}`}
+                >
+                  grammar
+                </motion.button>
+                <motion.button
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  onClick={() => setSearchHighlight("noun")}
+                  className={`px-3 py-1 text-xs rounded-md border font-normal cursor-pointer transition-all ${searchHighlight === "noun" ? "bg-off-black text-paper-canvas border-off-black" : "bg-paper-canvas border-off-black/40 text-off-black"}`}
+                >
+                  noun
+                </motion.button>
+                <motion.button
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  onClick={() => setSearchHighlight("phrase")}
+                  className={`px-3 py-1 text-xs rounded-md border font-normal cursor-pointer transition-all ${searchHighlight === "phrase" ? "bg-off-black text-paper-canvas border-off-black" : "bg-paper-canvas border-off-black/40 text-off-black"}`}
+                >
+                  phrase
+                </motion.button>
+                <span className="text-xs font-normal bg-sky-mint-gradient text-ink px-3 py-1 rounded-md border border-off-black/20 shrink-0 ml-auto animate-pulse">
+                  {searchHighlight === "grammar"
+                    ? "Present Simple..."
+                    : searchHighlight === "noun"
+                      ? "Structuring..."
+                      : "make an effort..."}
+                </span>
+              </div>
+            </Card>
+          </motion.div>
 
           {/* Card 2: Theme Switcher Preview (Col Span 1) */}
-          <Card
-            variant="content"
-            className={`md:col-span-1 md:row-span-1 border border-off-black flex flex-col justify-between transition-all duration-300 relative overflow-hidden cursor-pointer select-none group min-h-[300px] md:min-h-0 ${
-              bentoTheme === "dark"
-                ? "bg-off-black text-paper-canvas border-off-black"
-                : "bg-paper-canvas text-ink border-off-black"
-            }`}
-            onClick={() =>
-              setBentoTheme(bentoTheme === "light" ? "dark" : "light")
-            }
+          <motion.div
+            className="md:col-span-1 md:row-span-1"
+            whileHover={{ y: -6, scale: 1.01 }}
+            whileTap={{ scale: 0.99 }}
+            transition={{ type: "spring", stiffness: 260, damping: 20 }}
           >
-            <div className="absolute top-0 left-0 right-0 h-1.5 bg-sky-mint-gradient border-b border-off-black" />
-            <div>
-              <div className="flex items-center justify-between mb-4">
-                <Badge className={`font-normal rounded-md px-3 py-0.5 text-xs ${bentoTheme === "dark" ? "border-paper-canvas/20 text-paper-canvas bg-paper-canvas/10" : "border-off-black text-off-black bg-atmosphere-wash"}`}>
-                  {translate("UX Customization")}
-                </Badge>
-                {bentoTheme === "light" ? (
-                  <Sun className="w-[16px] h-[16px] text-ink" />
-                ) : (
-                  <Moon className="w-[16px] h-[16px] text-paper-canvas" />
-                )}
-              </div>
-              <h3 className="text-heading font-normal mb-2 tracking-tight">{translate("Theme Switcher")}</h3>
-              <p
-                className={`text-body-sm leading-relaxed ${bentoTheme === "dark" ? "text-paper-canvas/80" : "text-pale-stone"}`}
-              >
-                {translate("Click anywhere on this card to preview the gorgeous dark-mode palette toggle.")}
-              </p>
-            </div>
-
-            {/* Switched Pill Box */}
-            <div
-              className={`p-2 rounded-lg border flex justify-between items-center transition-all ${
+            <Card
+              variant="content"
+              className={`h-full border flex flex-col justify-between transition-all duration-300 relative overflow-hidden cursor-pointer select-none group min-h-[300px] md:min-h-0 ${
                 bentoTheme === "dark"
-                  ? "bg-paper-canvas/10 border-paper-canvas/20"
-                  : "bg-atmosphere-wash border-off-black"
+                  ? "bg-off-black text-paper-canvas border-paper-canvas/20"
+                  : "bg-paper-canvas text-ink border-off-black/15"
               }`}
+              onClick={() =>
+                setBentoTheme(bentoTheme === "light" ? "dark" : "light")
+              }
             >
-              <span className={`text-xs font-normal ml-2 ${bentoTheme === "dark" ? "text-paper-canvas/80" : "text-off-black"}`}>{translate("Selected Mode:")}</span>
+              <div className="absolute top-0 left-0 right-0 h-1.5 bg-sky-mint-gradient border-b border-off-black/15" />
+              <div>
+                <div className="flex items-center justify-between mb-4">
+                  <Badge className={`font-normal rounded-md px-3 py-0.5 text-xs ${bentoTheme === "dark" ? "border-paper-canvas/20 text-paper-canvas bg-paper-canvas/10" : "border-off-black/25 text-off-black bg-atmosphere-wash"}`}>
+                    {translate("UX Customization")}
+                  </Badge>
+                  {bentoTheme === "light" ? (
+                    <Sun className="w-[16px] h-[16px] text-ink" />
+                  ) : (
+                    <Moon className="w-[16px] h-[16px] text-paper-canvas" />
+                  )}
+                </div>
+                <h3 className="text-heading font-normal mb-2 tracking-tight">{translate("Theme Switcher")}</h3>
+                <p
+                  className={`text-body-sm leading-relaxed ${bentoTheme === "dark" ? "text-paper-canvas/80" : "text-pale-stone"}`}
+                >
+                  {translate("Click anywhere on this card to preview the gorgeous dark-mode palette toggle.")}
+                </p>
+              </div>
+
+              {/* Switched Pill Box */}
               <div
-                className={`text-xs px-3 py-1 rounded-md border font-normal flex items-center gap-1 ${
+                className={`p-2 rounded-lg border flex justify-between items-center transition-all ${
                   bentoTheme === "dark"
-                    ? "bg-paper-canvas text-off-black border-paper-canvas"
-                    : "bg-off-black text-paper-canvas border-off-black"
+                    ? "bg-paper-canvas/10 border-paper-canvas/20"
+                    : "bg-atmosphere-wash border-off-black/15"
                 }`}
               >
-                {bentoTheme === "dark" ? translate("Dark Mode") : translate("Light Mode")}
-                <Check className="w-[12px] h-[12px]" />
+                <span className={`text-xs font-normal ml-2 ${bentoTheme === "dark" ? "text-paper-canvas/80" : "text-off-black"}`}>{translate("Selected Mode:")}</span>
+                <div
+                  className={`text-xs px-3 py-1 rounded-md border font-normal flex items-center gap-1 ${
+                    bentoTheme === "dark"
+                      ? "bg-paper-canvas text-off-black border-paper-canvas"
+                      : "bg-off-black text-paper-canvas border-off-black"
+                  }`}
+                >
+                  {bentoTheme === "dark" ? translate("Dark Mode") : translate("Light Mode")}
+                  <Check className="w-[12px] h-[12px]" />
+                </div>
               </div>
-            </div>
-          </Card>
+            </Card>
+          </motion.div>
 
           {/* Card 3: Word Family Tree (Col Span 1) */}
-          <Card
-            variant="content"
-            className="md:col-span-1 md:row-span-1 flex flex-col justify-between overflow-hidden relative group min-h-[300px] md:min-h-0"
+          <motion.div
+            className="md:col-span-1 md:row-span-1"
+            whileHover={{ y: -6, scale: 1.01 }}
+            whileTap={{ scale: 0.99 }}
+            transition={{ type: "spring", stiffness: 260, damping: 20 }}
           >
-            <div className="absolute top-0 left-0 right-0 h-1.5 bg-sunset-violet-gradient border-b border-off-black" />
-            <div>
-              <div className="flex items-center justify-between mb-4">
-                <Badge className="border-off-black font-normal rounded-md px-3 py-0.5 text-xs bg-paper-canvas text-off-black">
-                  {translate("Linguistics")}
-                </Badge>
-                <Sparkles className="w-[16px] h-[16px] text-off-black/40" />
+            <Card
+              variant="content"
+              className="h-full flex flex-col justify-between overflow-hidden relative group min-h-[300px] md:min-h-0 border-off-black/15 hover:border-off-black/40 dark:border-white/10 dark:hover:border-white/20 transition-all duration-300"
+            >
+              <div className="absolute top-0 left-0 right-0 h-1.5 bg-sunset-violet-gradient border-b border-off-black/15" />
+              <div>
+                <div className="flex items-center justify-between mb-4">
+                  <Badge className="border-off-black/25 font-normal rounded-md px-3 py-0.5 text-xs bg-paper-canvas text-off-black">
+                    {translate("Linguistics")}
+                  </Badge>
+                  <Sparkles className="w-[16px] h-[16px] text-off-black/40" />
+                </div>
+                <h3 className="text-heading font-normal text-ink mb-2 tracking-tight">
+                  {translate("Word Families")}
+                </h3>
+                <p className="text-body-sm text-pale-stone leading-relaxed">
+                  {translate("Unlock root suffixes and prefixes visually, multiplying your recall capability.")}
+                </p>
               </div>
-              <h3 className="text-heading font-normal text-ink mb-2 tracking-tight">
-                {translate("Word Families")}
-              </h3>
-              <p className="text-body-sm text-pale-stone leading-relaxed">
-                {translate("Unlock root suffixes and prefixes visually, multiplying your recall capability.")}
-              </p>
-            </div>
 
-            {/* Interactive Suffix/Prefix Tree Mock */}
-            <div className="flex items-center gap-2 justify-center py-1">
-              <span className="text-xs font-normal px-3 py-1 bg-paper-canvas border border-off-black rounded-md shrink-0">
-                struct-
-              </span>
-              <span className="text-off-black/40 text-xs font-normal">
-                →
-              </span>
-              <div className="flex flex-col gap-1.5">
-                <span className="text-[10px] font-normal px-2.5 py-1 bg-atmosphere-wash border border-off-black rounded-md text-center">
-                  -ure (noun)
+              {/* Interactive Suffix/Prefix Tree Mock */}
+              <div className="flex items-center gap-2 justify-center py-1">
+                <span className="text-xs font-normal px-3 py-1 bg-paper-canvas border border-off-black/25 rounded-md shrink-0 dark:bg-black/20 dark:text-white">
+                  struct-
                 </span>
-                <span className="text-[10px] font-normal px-2.5 py-1 bg-atmosphere-wash border border-off-black rounded-md text-center">
-                  -ural (adj)
+                <span className="text-off-black/40 text-xs font-normal">
+                  →
                 </span>
+                <div className="flex flex-col gap-1.5">
+                  <span className="text-[10px] font-normal px-2.5 py-1 bg-atmosphere-wash border border-off-black/20 rounded-md text-center dark:bg-slate-800 dark:text-white">
+                    -ure (noun)
+                  </span>
+                  <span className="text-[10px] font-normal px-2.5 py-1 bg-atmosphere-wash border border-off-black/20 rounded-md text-center dark:bg-slate-800 dark:text-white">
+                    -ural (adj)
+                  </span>
+                </div>
               </div>
-            </div>
-          </Card>
+            </Card>
+          </motion.div>
 
           {/* Card 4: Connected Collocations Map (Col Span 2) */}
-          <Card
-            variant="content"
-            className="md:col-span-2 md:row-span-1 flex flex-col justify-between overflow-hidden relative group min-h-[300px] md:min-h-0"
+          <motion.div
+            className="md:col-span-2 md:row-span-1"
+            whileHover={{ y: -6, scale: 1.01 }}
+            whileTap={{ scale: 0.99 }}
+            transition={{ type: "spring", stiffness: 260, damping: 20 }}
           >
-            <div className="absolute top-0 left-0 right-0 h-1.5 bg-amber-glow-gradient border-b border-off-black" />
-            <div>
-              <div className="flex items-center justify-between mb-4">
-                <Badge className="border-off-black font-normal rounded-md px-3 py-0.5 text-xs bg-paper-canvas text-off-black">
-                  {translate("Fluency Map")}
-                </Badge>
-                <Layers className="w-[16px] h-[16px] text-off-black/40" />
+            <Card
+              variant="content"
+              className="h-full flex flex-col justify-between overflow-hidden relative group min-h-[300px] md:min-h-0 border-off-black/15 hover:border-off-black/40 dark:border-white/10 dark:hover:border-white/20 transition-all duration-300"
+            >
+              <div className="absolute top-0 left-0 right-0 h-1.5 bg-amber-glow-gradient border-b border-off-black/15" />
+              <div>
+                <div className="flex items-center justify-between mb-4">
+                  <Badge className="border-off-black/25 font-normal rounded-md px-3 py-0.5 text-xs bg-paper-canvas text-off-black">
+                    {translate("Fluency Map")}
+                  </Badge>
+                  <Layers className="w-[16px] h-[16px] text-off-black/40" />
+                </div>
+                <h3 className="text-heading font-normal text-ink mb-2 tracking-tight">
+                  {translate("Connected Collocations Bubble")}
+                </h3>
+                <p className="text-body-sm text-pale-stone leading-relaxed max-w-md">
+                  {translate("Learn natural word partners instead of isolated vocabulary. Connect verbs with nouns dynamically.")}
+                </p>
               </div>
-              <h3 className="text-heading font-normal text-ink mb-2 tracking-tight">
-                {translate("Connected Collocations Bubble")}
-              </h3>
-              <p className="text-body-sm text-pale-stone leading-relaxed max-w-md">
-                {translate("Learn natural word partners instead of isolated vocabulary. Connect verbs with nouns dynamically.")}
-              </p>
-            </div>
 
-            {/* Connected Bubbles illustration */}
-            <div className="flex justify-around items-center bg-atmosphere-wash border border-off-black rounded-lg p-3 h-[74px] relative">
-              <div className="absolute left-[35%] right-[35%] h-0.5 border-t border-dashed border-off-black z-0" />
-              <div className="z-10 bg-off-black text-paper-canvas border border-off-black rounded-md px-4 py-1.5 text-xs font-normal shadow-sm">
-                make
+              {/* Connected Bubbles illustration */}
+              <div className="flex justify-around items-center bg-atmosphere-wash border border-off-black/15 rounded-lg p-3 h-[74px] relative dark:bg-slate-800/40">
+                <div className="absolute left-[35%] right-[35%] h-0.5 border-t border-dashed border-off-black/20 dark:border-white/20 z-0" />
+                <div className="z-10 bg-off-black text-paper-canvas border border-off-black rounded-md px-4 py-1.5 text-xs font-normal shadow-sm dark:bg-white dark:text-black">
+                  make
+                </div>
+                <div className="z-10 bg-paper-canvas border border-off-black/25 rounded-md px-3 py-1 text-[11px] font-normal text-ink text-center dark:bg-black dark:text-white">
+                  an effort
+                </div>
+                <div className="z-10 bg-paper-canvas border border-off-black/25 rounded-md px-3 py-1 text-[11px] font-normal text-ink text-center dark:bg-black dark:text-white">
+                  a phone call
+                </div>
               </div>
-              <div className="z-10 bg-paper-canvas border border-off-black rounded-md px-3 py-1 text-[11px] font-normal text-ink text-center">
-                an effort
-              </div>
-              <div className="z-10 bg-paper-canvas border border-off-black rounded-md px-3 py-1 text-[11px] font-normal text-ink text-center">
-                a phone call
-              </div>
-            </div>
-          </Card>
+            </Card>
+          </motion.div>
 
           {/* Card 5: Full Syllabus Grid (Col Span 3) */}
-          <Card
-            variant="content"
-            className="md:col-span-3 md:row-span-1 flex flex-col justify-between overflow-hidden relative group min-h-[350px] md:min-h-0 h-auto md:h-full pb-6"
+          <motion.div
+            className="md:col-span-3 md:row-span-1"
+            whileHover={{ y: -6, scale: 1.01 }}
+            whileTap={{ scale: 0.99 }}
+            transition={{ type: "spring", stiffness: 260, damping: 20 }}
           >
-            <div className="absolute top-0 left-0 right-0 h-1.5 bg-sunset-violet-gradient border-b border-off-black" />
-            <div>
-              <div className="flex items-center justify-between mb-4">
-                <Badge className="border-off-black font-normal rounded-md px-3 py-0.5 text-xs bg-paper-canvas text-off-black">
-                  {translate("Coverage")}
-                </Badge>
-                <BookOpen className="w-[16px] h-[16px] text-off-black/60" />
+            <Card
+              variant="content"
+              className="h-full flex flex-col justify-between overflow-hidden relative group min-h-[350px] md:min-h-0 h-auto md:h-full pb-6 border-off-black/15 hover:border-off-black/40 dark:border-white/10 dark:hover:border-white/20 transition-all duration-300"
+            >
+              <div className="absolute top-0 left-0 right-0 h-1.5 bg-sunset-violet-gradient border-b border-off-black/15" />
+              <div>
+                <div className="flex items-center justify-between mb-4">
+                  <Badge className="border-off-black/25 font-normal rounded-md px-3 py-0.5 text-xs bg-paper-canvas text-off-black">
+                    {translate("Coverage")}
+                  </Badge>
+                  <BookOpen className="w-[16px] h-[16px] text-off-black/60" />
+                </div>
+                <h3 className="text-heading font-normal text-ink mb-2 tracking-tight">
+                  {translate("100% Comprehensive Syllabus Coverage")}
+                </h3>
+                <p className="text-body-sm text-pale-stone leading-relaxed max-w-2xl">
+                  {translate("Every unit in Destination B1, B2, and C1/C2 is thoroughly detailed. Over 90 detailed units covering thousands of custom tables, specific exceptions, word groups, and natural prepositional partnerships.")}
+                </p>
               </div>
-              <h3 className="text-heading font-normal text-ink mb-2 tracking-tight">
-                {translate("100% Comprehensive Syllabus Coverage")}
-              </h3>
-              <p className="text-body-sm text-pale-stone leading-relaxed max-w-2xl">
-                {translate("Every unit in Destination B1, B2, and C1/C2 is thoroughly detailed. Over 90 detailed units covering thousands of custom tables, specific exceptions, word groups, and natural prepositional partnerships.")}
-              </p>
-            </div>
 
-            {/* Grid of level badges */}
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 md:gap-4 mt-6">
-              <div className="p-3 sm:p-4 bg-atmosphere-wash border border-off-black rounded-lg shadow-sm flex flex-col justify-center">
-                <p className="text-[10px] font-normal text-off-black/60 uppercase tracking-wider">
-                  {translate("Intermediate")}
-                </p>
-                <p className="text-sm font-normal text-ink mt-1">
-                  {translate("B1 Syllabus")}
-                </p>
+              {/* Grid of level badges */}
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 md:gap-4 mt-6">
+                <div className="p-3 sm:p-4 bg-atmosphere-wash border border-off-black/15 rounded-lg shadow-sm flex flex-col justify-center dark:bg-slate-800/40">
+                  <p className="text-[10px] font-normal text-off-black/60 dark:text-white/60 uppercase tracking-wider">
+                    {translate("Intermediate")}
+                  </p>
+                  <p className="text-sm font-normal text-ink mt-1">
+                    {translate("B1 Syllabus")}
+                  </p>
+                </div>
+                <div className="p-3 sm:p-4 bg-atmosphere-wash border border-off-black/15 rounded-lg shadow-sm flex flex-col justify-center dark:bg-slate-800/40">
+                  <p className="text-[10px] font-normal text-off-black/60 dark:text-white/60 uppercase tracking-wider">
+                    {translate("Upper-Inter")}
+                  </p>
+                  <p className="text-sm font-normal text-ink mt-1">
+                    {translate("B2 Syllabus")}
+                  </p>
+                </div>
+                <div className="p-3 sm:p-4 bg-atmosphere-wash border border-off-black/15 rounded-lg shadow-sm flex flex-col justify-center dark:bg-slate-800/40">
+                  <p className="text-[10px] font-normal text-off-black/60 dark:text-white/60 uppercase tracking-wider">
+                    {translate("Proficient")}
+                  </p>
+                  <p className="text-sm font-normal text-ink mt-1">
+                    {translate("C1 & C2 Syllabus")}
+                  </p>
+                </div>
               </div>
-              <div className="p-3 sm:p-4 bg-atmosphere-wash border border-off-black rounded-lg shadow-sm flex flex-col justify-center">
-                <p className="text-[10px] font-normal text-off-black/60 uppercase tracking-wider">
-                  {translate("Upper-Inter")}
-                </p>
-                <p className="text-sm font-normal text-ink mt-1">
-                  {translate("B2 Syllabus")}
-                </p>
-              </div>
-              <div className="p-3 sm:p-4 bg-atmosphere-wash border border-off-black rounded-lg shadow-sm flex flex-col justify-center">
-                <p className="text-[10px] font-normal text-off-black/60 uppercase tracking-wider">
-                  {translate("Proficient")}
-                </p>
-                <p className="text-sm font-normal text-ink mt-1">
-                  {translate("C1 & C2 Syllabus")}
-                </p>
-              </div>
-            </div>
-          </Card>
+            </Card>
+          </motion.div>
         </div>
       </div>
     </section>

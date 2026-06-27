@@ -15,7 +15,7 @@ const books = [
     title: "Destination B1",
     description: "Grammar and Vocabulary for intermediate learners.",
     units: 42,
-    color: "feature" as const,
+    color: "mint" as const,
   },
   {
     id: "b2",
@@ -23,7 +23,7 @@ const books = [
     description:
       "Advanced Grammar and Vocabulary for upper-intermediate learners.",
     units: 28,
-    color: "content" as const,
+    color: "saffron" as const,
   },
   {
     id: "c1-c2",
@@ -31,7 +31,7 @@ const books = [
     description:
       "Mastery level Grammar and Vocabulary for proficient learners.",
     units: 26,
-    color: "feature" as const,
+    color: "pink" as const,
   },
 ];
 
@@ -56,8 +56,9 @@ export function BookSelectionSection() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              whileHover={{ y: -5 }}
+              transition={{ type: "spring", stiffness: 260, damping: 20, delay: index * 0.1 }}
+              whileHover={{ y: -8, scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
             >
               {book.id === "c1-c2" ? (
                 <div
@@ -68,27 +69,28 @@ export function BookSelectionSection() {
                       message: "Destination C1 & C2 is currently under development. Stay tuned!",
                       variant: "warning",
                       position: "top-right",
+                      duration: 3000,
                     });
                   }}
                   className="block h-full cursor-pointer"
                 >
                   <Card
                     variant={book.color}
-                    className="h-full flex flex-col group transition-all"
+                    className="h-full flex flex-col group transition-all duration-300 border-off-black/15 hover:border-off-black/40 dark:border-white/10 dark:hover:border-white/20"
                   >
                     <div className="mb-4 flex items-center justify-between">
-                      <Badge className="border-off-black bg-transparent text-ink text-caption font-mono rounded-full">
+                      <Badge className="border-off-black/20 bg-paper-canvas/50 dark:bg-black/35 text-ink text-caption font-mono rounded-full px-3 py-1">
                         {book.units} {translate("Units")}
                       </Badge>
-                      <BookOpen className="w-[20px] h-[20px] text-ink/50" />
+                      <BookOpen className="w-[20px] h-[20px] text-ink/50 group-hover:text-ink transition-colors" />
                     </div>
-                    <h3 className="text-heading font-heading text-ink mb-2">{book.title}</h3>
-                    <p className="text-body-sm font-mono text-pale-stone mb-8 flex-grow">
+                    <h3 className="text-heading font-heading text-ink mb-2 group-hover:translate-x-1 transition-transform duration-300">{book.title}</h3>
+                    <p className="text-body-sm font-mono text-pale-stone mb-8 flex-grow leading-relaxed">
                       {translate(book.description)}
                     </p>
-                    <div className="flex items-center text-body-sm font-mono text-ink mt-auto group-hover:text-off-black transition-colors px-1">
+                    <div className="flex items-center text-body-sm font-mono text-ink mt-auto transition-colors px-1 font-bold">
                       {translate("Start Exploring")}{" "}
-                      <ChevronRight className="w-[16px] h-[16px] ml-1 transition-transform group-hover:translate-x-1" />
+                      <ChevronRight className="w-[16px] h-[16px] ml-1 transition-transform group-hover:translate-x-2" />
                     </div>
                   </Card>
                 </div>
@@ -96,21 +98,21 @@ export function BookSelectionSection() {
                 <Link href={`/destination/${book.id}`} className="block h-full">
                   <Card
                     variant={book.color}
-                    className="h-full flex flex-col cursor-pointer group transition-all"
+                    className="h-full flex flex-col cursor-pointer group transition-all duration-300 border-off-black/15 hover:border-off-black/40 dark:border-white/10 dark:hover:border-white/20"
                   >
                     <div className="mb-4 flex items-center justify-between">
-                      <Badge className="border-off-black bg-transparent text-ink text-caption font-mono rounded-full">
+                      <Badge className="border-off-black/20 bg-paper-canvas/50 dark:bg-black/35 text-ink text-caption font-mono rounded-full px-3 py-1">
                         {book.units} {translate("Units")}
                       </Badge>
-                      <BookOpen className="w-[20px] h-[20px] text-ink/50" />
+                      <BookOpen className="w-[20px] h-[20px] text-ink/50 group-hover:text-ink transition-colors" />
                     </div>
-                    <h3 className="text-heading font-heading text-ink mb-2">{book.title}</h3>
-                    <p className="text-body-sm font-mono text-pale-stone mb-8 flex-grow">
+                    <h3 className="text-heading font-heading text-ink mb-2 group-hover:translate-x-1 transition-transform duration-300">{book.title}</h3>
+                    <p className="text-body-sm font-mono text-pale-stone mb-8 flex-grow leading-relaxed">
                       {translate(book.description)}
                     </p>
-                    <div className="flex items-center text-body-sm font-mono text-ink mt-auto group-hover:text-off-black transition-colors px-1">
+                    <div className="flex items-center text-body-sm font-mono text-ink mt-auto transition-colors px-1 font-bold">
                       {translate("Start Exploring")}{" "}
-                      <ChevronRight className="w-[16px] h-[16px] ml-1 transition-transform group-hover:translate-x-1" />
+                      <ChevronRight className="w-[16px] h-[16px] ml-1 transition-transform group-hover:translate-x-2" />
                     </div>
                   </Card>
                 </Link>

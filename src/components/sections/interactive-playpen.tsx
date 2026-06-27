@@ -84,30 +84,33 @@ export function InteractivePlaypen() {
               {tabs.map((tab) => {
                 const Icon = tab.icon;
                 return (
-                  <button
+                  <motion.button
                     key={tab.id}
+                    whileHover={{ x: 6 }}
+                    whileTap={{ scale: 0.98 }}
+                    transition={{ type: "spring", stiffness: 350, damping: 25 }}
                     onClick={() => {
                       setActiveTab(tab.id);
                       setSimulatedSearch("");
                     }}
                     className={`flex items-center justify-between p-4 rounded-lg border text-left transition-all duration-200 cursor-pointer ${
                       activeTab === tab.id
-                        ? "bg-atmosphere-wash border-off-black shadow-sm text-ink translate-x-2"
+                        ? "bg-atmosphere-wash border-off-black shadow-sm text-ink font-bold dark:bg-atmosphere-wash/20"
                         : "bg-transparent border-transparent hover:border-off-black/30 text-off-black/60 hover:text-off-black"
                     }`}
                   >
                     <div className="flex items-center gap-3">
                       <div
-                        className={`p-2 rounded-md border border-off-black ${activeTab === tab.id ? "bg-off-black" : "bg-paper-canvas"}`}
+                        className={`p-2 rounded-md border border-off-black ${activeTab === tab.id ? "bg-off-black dark:bg-white dark:border-white" : "bg-paper-canvas"}`}
                       >
-                        <Icon className={`w-[16px] h-[16px] ${activeTab === tab.id ? "text-paper-canvas" : "text-ink"}`} />
+                        <Icon className={`w-[16px] h-[16px] ${activeTab === tab.id ? "text-paper-canvas dark:text-black" : "text-ink"}`} />
                       </div>
                       <span className="font-normal text-sm">{translate(tab.label)}</span>
                     </div>
                     <ArrowRight
                       className={`w-[14px] h-[14px] transition-transform duration-200 ${activeTab === tab.id ? "translate-x-1 opacity-100" : "opacity-0"}`}
                     />
-                  </button>
+                  </motion.button>
                 );
               })}
             </div>
