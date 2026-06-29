@@ -1304,6 +1304,16 @@ export default function SplashCursor({
       window.removeEventListener('touchend', onTouchEnd);
       document.body.removeEventListener('mousemove', handleFirstMouseMove);
       document.body.removeEventListener('touchstart', handleFirstTouchStart);
+
+      // Force lose WebGL context to prevent resource leaks in Next.js development mode
+      try {
+        const loseContextExt = gl.getExtension('WEBGL_lose_context');
+        if (loseContextExt) {
+          loseContextExt.loseContext();
+        }
+      } catch (err) {
+        console.error("Failed to release WebGL context in splash-cursor:", err);
+      }
     };
   }, [
     SIM_RESOLUTION,

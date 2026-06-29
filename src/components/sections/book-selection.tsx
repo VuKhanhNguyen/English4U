@@ -38,7 +38,7 @@ const books = [
 export function BookSelectionSection() {
   const { translate } = useLanguage();
   return (
-    <section id="explore" className="py-24 bg-paper-canvas relative">
+    <section id="explore" className="py-24 bg-section-explore border-b border-off-black/10 dark:border-white/10 relative">
       <div className="container mx-auto px-6 max-w-[1432px]">
         <div className="text-center mb-16">
           <h2 className="text-heading-lg font-heading text-ink mb-4">

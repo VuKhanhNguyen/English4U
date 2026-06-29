@@ -8,7 +8,7 @@ All notable changes to the **English4U** project are documented below. This proj
 
 | Key Metrics         | Value / Badges                                                                                                                             |
 | :------------------ | :----------------------------------------------------------------------------------------------------------------------------------------- |
-| **Current Version** | ![Version](https://img.shields.io/badge/version-v1.5.0-blue.svg?style=for-the-badge&logo=git)                                              |
+| **Current Version** | ![Version](https://img.shields.io/badge/version-v1.6.0-blue.svg?style=for-the-badge&logo=git)                                              |
 | **Framework**       | ![Next.js](https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white)                                 |
 | **Styling**         | ![CSS](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)                                             |
 | **Language**        | ![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)                          |
@@ -33,7 +33,39 @@ gantt
     v1.4.0 PWA & Menu Gestures       :active, 2026-06-25, 2026-06-25
     section Premium UX & Responsive
     v1.5.0 UX & Tables               :active, 2026-06-27, 2026-06-27
+    v1.6.0 Cosmic Globe & Refraction :active, 2026-06-29, 2026-06-30
 ```
+
+---
+
+## 🚀 v1.6.0 — Cosmic 3D Globe & Dynamic Liquid Glass Refraction
+
+> **Release Date:** June 30, 2026 • _Focus: Realistic 3D Earth Globe, Scroll-Reactive Liquid Glass Filter, Vibrant Section Gradients & Layered Border Separation_
+
+```
+┌──────────────────────────────────────────────────────────────────┐
+│  ✨ Highlights:                                                  │
+│  • Realistic 3D Earth Globe with bump mapping & glow ring        │
+│  • Scroll-reactive SVG displacement refraction filter            │
+│  • Isolation of borders & text from refraction to keep them sharp│
+│  • Saturated three-color section gradient backgrounds            │
+│  • Smooth 24px bo góc (rounded) card styling upgrade             │
+└──────────────────────────────────────────────────────────────────┘
+```
+
+### 🌍 3D Earth Globe & Orbit System
+- **Realistic Earth Visualization:** Built a complete 3D Earth sphere with custom vertex/fragment shading, realistic land/sea continent outlines, atmospheric glow ring, and rotational animation.
+- **Particle Satellite Rings:** Retired the black-dot sphere and created three concentric orbiting stardust rings around the Earth representing B1, B2, and C1/C2 vocabulary streams.
+- **Context Loss Recovery:** Enhanced the WebGL renderer setup to gracefully catch `webglcontextlost` events and dynamically remount the canvas.
+
+### 🧪 Dynamic Liquid Glass Refraction
+- **Scroll-Reactive Refraction:** Created `LiquidGlassFilter` to compute real-time scroll velocity, warping the backdrop-filter in a fluid gợn sóng (ripple) motion during fast scrolling.
+- **Sharp Border Isolation:** Split the card aesthetics into an outer vector container (maintaining 100% crisp borders and readable text) and an inner `.liquid-glass-bg` layer containing the WebGL filter, avoiding jagged and broken lines.
+- **24px Rounding Upgrade:** Modernized the card variants' corner radii to `rounded-[24px]` for a sleeker visual appearance.
+
+### 🎨 Vibrant Three-Color Section Gradients
+- **Multi-tone gradients:** Formulated three-color gradient backgrounds (`bg-section-*`) for all 11 homepage sections to support colorful glass light refraction.
+- **Visual bridging:** Redesigned the color transitions for the playpen and explore sections to prevent clashing.
 
 ---
 

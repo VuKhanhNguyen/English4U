@@ -41,7 +41,7 @@ const features = [
 
 export function WhatYouCanLearnSection() {
   return (
-    <section id="features" className="py-24 bg-paper-canvas border-t border-off-black">
+    <section id="features" className="py-24 bg-section-learn border-t border-off-black/10 dark:border-white/10">
       <div className="container mx-auto px-6 max-w-[1432px]">
         <div className="text-center mb-16">
           <span className="text-caption font-mono uppercase tracking-wider text-ink bg-atmosphere-wash px-3 py-1 rounded-md border border-off-black">

@@ -287,6 +287,29 @@ function parseWordFormationMeaning(meaning: string): WordFamilyItem[] {
   return items;
 }
 
+// Helper to get translated word formation meaning from the translated whole row meaning
+function getWordFormationMeaning(
+  rowMeaning: string,
+  famMeaning: string,
+  fIdx: number,
+  translateFn: (text: string, options?: any) => string,
+  options?: any
+): string {
+  const translatedWhole = translateFn(rowMeaning, options);
+  if (translatedWhole && translatedWhole !== rowMeaning) {
+    const transParts = translatedWhole.split(/\s+\/\s+/);
+    if (transParts[fIdx]) {
+      const part = transParts[fIdx];
+      if (part.includes(":")) {
+        const colonIndex = part.indexOf(":");
+        return part.substring(colonIndex + 1).trim();
+      }
+      return part.trim();
+    }
+  }
+  return translateFn(famMeaning, options);
+}
+
 export default function ResourcesPage() {
   const { translate } = useLanguage();
   const [searchQuery, setSearchQuery] = React.useState("");
@@ -666,45 +689,79 @@ export default function ResourcesPage() {
                   <div className="mb-4 text-xs font-mono text-pale-stone flex items-center justify-between">
                     <span>{translate("Displaying")} {Math.min(currentPage * itemsPerPage, filteredVocabulary.length)} {translate("out of")} {filteredVocabulary.length} {translate("vocabulary")}{searchQuery && ` (${translate("matched for")} "${searchQuery}")`}</span>
                   </div>
-                  <Table>
-                    <TableHeader className="bg-atmosphere-wash/30 border-b border-off-black">
-                      <TableRow className="hover:bg-transparent">
-                        <TableHead className="w-[80px] font-mono text-ink text-center">{translate("No.")}</TableHead>
-                        <TableHead className="w-[180px] font-mono text-ink">{translate("Word")}</TableHead>
-                        <TableHead className="w-[100px] font-mono text-ink">{translate("Type")}</TableHead>
-                        <TableHead className="font-mono text-ink">{translate("Meaning")}</TableHead>
-                        <TableHead className="font-mono text-ink">{translate("Example")}</TableHead>
-                        <TableHead className="w-[150px] font-mono text-ink">{translate("Source")}</TableHead>
-                      </TableRow>
-                    </TableHeader>
-                    <TableBody>
-                      {paginatedItems.map((row: any, idx) => (
-                        <TableRow key={idx} className="hover:bg-atmosphere-wash/10 transition-colors">
-                          <TableCell className="font-mono text-ink text-center text-xs font-semibold">{(currentPage - 1) * itemsPerPage + idx + 1}</TableCell>
-                          <TableCell className="font-mono font-bold text-ink text-sm">{row.word}</TableCell>
-                          <TableCell>
-                            <span className="inline-block text-[11px] font-mono font-medium text-off-black bg-transparent border border-off-black px-2.5 py-0.5 rounded-full">
+                  {/* Desktop Table View */}
+                  <div className="hidden md:block">
+                    <Table>
+                      <TableHeader className="bg-atmosphere-wash/30 border-b border-off-black">
+                        <TableRow className="hover:bg-transparent">
+                          <TableHead className="w-[80px] font-mono text-ink text-center">{translate("No.")}</TableHead>
+                          <TableHead className="w-[180px] font-mono text-ink">{translate("Word")}</TableHead>
+                          <TableHead className="w-[100px] font-mono text-ink">{translate("Type")}</TableHead>
+                          <TableHead className="font-mono text-ink">{translate("Meaning")}</TableHead>
+                          <TableHead className="font-mono text-ink">{translate("Example")}</TableHead>
+                          <TableHead className="w-[150px] font-mono text-ink">{translate("Source")}</TableHead>
+                        </TableRow>
+                      </TableHeader>
+                      <TableBody>
+                        {paginatedItems.map((row: any, idx) => (
+                          <TableRow key={idx} className="hover:bg-atmosphere-wash/10 transition-colors">
+                            <TableCell className="font-mono text-ink text-center text-xs font-semibold">{(currentPage - 1) * itemsPerPage + idx + 1}</TableCell>
+                            <TableCell className="font-mono font-bold text-ink text-sm">{row.word}</TableCell>
+                            <TableCell>
+                              <span className="inline-block text-[11px] font-mono font-medium text-off-black bg-transparent border border-off-black px-2.5 py-0.5 rounded-full">
+                                {row.type}
+                              </span>
+                            </TableCell>
+                            <TableCell className="font-mono text-off-black text-sm max-w-[280px] break-words">{translate(row.meaning, { lookupOnly: true })}</TableCell>
+                            <TableCell className="font-mono italic text-pale-stone text-xs max-w-[320px] whitespace-pre-line">{row.example}</TableCell>
+                            <TableCell className="font-mono text-xs text-pale-stone">
+                              <span className="bg-atmosphere-wash/20 border border-off-black/10 rounded-full px-2 py-0.5 text-[10px] whitespace-nowrap inline-block">
+                                {formatSource(row.unitTitle, row.unitId)}
+                              </span>
+                            </TableCell>
+                          </TableRow>
+                        ))}
+                        {filteredVocabulary.length === 0 && (
+                          <TableRow>
+                            <TableCell colSpan={6} className="text-center py-16 font-mono text-pale-stone">
+                              {translate("No results found for the search keyword.")}
+                            </TableCell>
+                          </TableRow>
+                        )}
+                      </TableBody>
+                    </Table>
+                  </div>
+
+                  {/* Mobile Card View */}
+                  <div className="block md:hidden space-y-4">
+                    {paginatedItems.map((row: any, idx) => (
+                      <div key={idx} className="p-5 border border-off-black/10 dark:border-white/10 rounded-2xl bg-paper-canvas/30 space-y-3 font-mono text-xs">
+                        <div className="flex items-center justify-between border-b border-off-black/5 dark:border-white/5 pb-2">
+                          <span className="text-[10px] font-bold text-pale-stone">#{ (currentPage - 1) * itemsPerPage + idx + 1 }</span>
+                          <span className="bg-atmosphere-wash/20 border border-off-black/10 rounded-full px-2 py-0.5 text-[10px] text-pale-stone whitespace-nowrap inline-block">
+                            {formatSource(row.unitTitle, row.unitId)}
+                          </span>
+                        </div>
+                        <div className="space-y-2">
+                          <div className="flex items-baseline gap-2">
+                            <span className="text-sm font-bold text-ink">{row.word}</span>
+                            <span className="inline-block text-[10px] font-mono text-off-black bg-transparent border border-off-black px-2 py-0.5 rounded-full">
                               {row.type}
                             </span>
-                          </TableCell>
-                          <TableCell className="font-mono text-off-black text-sm max-w-[280px] break-words">{translate(row.meaning, { lookupOnly: true })}</TableCell>
-                          <TableCell className="font-mono italic text-pale-stone text-xs max-w-[320px] whitespace-pre-line">{row.example}</TableCell>
-                          <TableCell className="font-mono text-xs text-pale-stone">
-                            <span className="bg-atmosphere-wash/20 border border-off-black/10 rounded-full px-2 py-0.5 text-[10px] whitespace-nowrap inline-block">
-                              {formatSource(row.unitTitle, row.unitId)}
-                            </span>
-                          </TableCell>
-                        </TableRow>
-                      ))}
-                      {filteredVocabulary.length === 0 && (
-                        <TableRow>
-                          <TableCell colSpan={6} className="text-center py-16 font-mono text-pale-stone">
-                            {translate("No results found for the search keyword.")}
-                          </TableCell>
-                        </TableRow>
-                      )}
-                    </TableBody>
-                  </Table>
+                          </div>
+                          <p className="text-off-black/75"><span className="font-bold text-ink">{translate("Meaning")}:</span> {translate(row.meaning, { lookupOnly: true })}</p>
+                          {row.example && (
+                            <p className="italic text-pale-stone leading-relaxed"><span className="font-bold text-ink not-italic">{translate("Example")}:</span> "{row.example}"</p>
+                          )}
+                        </div>
+                      </div>
+                    ))}
+                    {filteredVocabulary.length === 0 && (
+                      <div className="text-center py-8 font-mono text-xs text-pale-stone border border-dashed border-off-black/20 rounded-2xl bg-paper-canvas/10">
+                        {translate("No results found for the search keyword.")}
+                      </div>
+                    )}
+                  </div>
                 </div>
               )}
 
@@ -714,39 +771,68 @@ export default function ResourcesPage() {
                   <div className="mb-4 text-xs font-mono text-pale-stone flex items-center justify-between">
                     <span>{translate("Displaying")} {Math.min(currentPage * itemsPerPage, filteredPhrasal.length)} {translate("out of")} {filteredPhrasal.length} {translate("phrasal verbs")}{searchQuery && ` (${translate("matched for")} "${searchQuery}")`}</span>
                   </div>
-                  <Table>
-                    <TableHeader className="bg-atmosphere-wash/30 border-b border-off-black">
-                      <TableRow className="hover:bg-transparent">
-                        <TableHead className="w-[80px] font-mono text-ink text-center">{translate("STT")}</TableHead>
-                        <TableHead className="w-[200px] font-mono text-ink">{translate("Phrasal Verb")}</TableHead>
-                        <TableHead className="font-mono text-ink">{translate("Meaning")}</TableHead>
-                        <TableHead className="font-mono text-ink">{translate("Example")}</TableHead>
-                        <TableHead className="w-[150px] font-mono text-ink">{translate("Source")}</TableHead>
-                      </TableRow>
-                    </TableHeader>
-                    <TableBody>
-                      {paginatedItems.map((row: any, idx) => (
-                        <TableRow key={idx} className="hover:bg-atmosphere-wash/10 transition-colors">
-                          <TableCell className="font-mono text-ink text-center text-xs font-semibold">{(currentPage - 1) * itemsPerPage + idx + 1}</TableCell>
-                          <TableCell className="font-mono font-bold text-orange-600 dark:text-orange-400 text-sm">{row.phrasalVerb}</TableCell>
-                          <TableCell className="font-mono text-off-black text-sm max-w-[280px] break-words">{translate(row.meaning, { lookupOnly: true })}</TableCell>
-                          <TableCell className="font-mono italic text-pale-stone text-xs max-w-[350px] whitespace-pre-line">{row.example}</TableCell>
-                          <TableCell className="font-mono text-xs text-pale-stone">
-                            <span className="bg-atmosphere-wash/20 border border-off-black/10 rounded-full px-2 py-0.5 text-[10px] whitespace-nowrap inline-block">
-                              {formatSource(row.unitTitle, row.unitId)}
-                            </span>
-                          </TableCell>
+                  {/* Desktop Table View */}
+                  <div className="hidden md:block">
+                    <Table>
+                      <TableHeader className="bg-atmosphere-wash/30 border-b border-off-black">
+                        <TableRow className="hover:bg-transparent">
+                          <TableHead className="w-[80px] font-mono text-ink text-center">{translate("STT")}</TableHead>
+                          <TableHead className="w-[200px] font-mono text-ink">{translate("Phrasal Verb")}</TableHead>
+                          <TableHead className="font-mono text-ink">{translate("Meaning")}</TableHead>
+                          <TableHead className="font-mono text-ink">{translate("Example")}</TableHead>
+                          <TableHead className="w-[150px] font-mono text-ink">{translate("Source")}</TableHead>
                         </TableRow>
-                      ))}
-                      {filteredPhrasal.length === 0 && (
-                        <TableRow>
-                          <TableCell colSpan={5} className="text-center py-16 font-mono text-pale-stone">
-                            {translate("No results found for the search keyword.")}
-                          </TableCell>
-                        </TableRow>
-                      )}
-                    </TableBody>
-                  </Table>
+                      </TableHeader>
+                      <TableBody>
+                        {paginatedItems.map((row: any, idx) => (
+                          <TableRow key={idx} className="hover:bg-atmosphere-wash/10 transition-colors">
+                            <TableCell className="font-mono text-ink text-center text-xs font-semibold">{(currentPage - 1) * itemsPerPage + idx + 1}</TableCell>
+                            <TableCell className="font-mono font-bold text-orange-600 dark:text-orange-400 text-sm">{row.phrasalVerb}</TableCell>
+                            <TableCell className="font-mono text-off-black text-sm max-w-[280px] break-words">{translate(row.meaning, { lookupOnly: true })}</TableCell>
+                            <TableCell className="font-mono italic text-pale-stone text-xs max-w-[350px] whitespace-pre-line">{row.example}</TableCell>
+                            <TableCell className="font-mono text-xs text-pale-stone">
+                              <span className="bg-atmosphere-wash/20 border border-off-black/10 rounded-full px-2 py-0.5 text-[10px] whitespace-nowrap inline-block">
+                                {formatSource(row.unitTitle, row.unitId)}
+                              </span>
+                            </TableCell>
+                          </TableRow>
+                        ))}
+                        {filteredPhrasal.length === 0 && (
+                          <TableRow>
+                            <TableCell colSpan={5} className="text-center py-16 font-mono text-pale-stone">
+                              {translate("No results found for the search keyword.")}
+                            </TableCell>
+                          </TableRow>
+                        )}
+                      </TableBody>
+                    </Table>
+                  </div>
+
+                  {/* Mobile Card View */}
+                  <div className="block md:hidden space-y-4">
+                    {paginatedItems.map((row: any, idx) => (
+                      <div key={idx} className="p-5 border border-off-black/10 dark:border-white/10 rounded-2xl bg-paper-canvas/30 space-y-3 font-mono text-xs">
+                        <div className="flex items-center justify-between border-b border-off-black/5 dark:border-white/5 pb-2">
+                          <span className="text-[10px] font-bold text-pale-stone">#{ (currentPage - 1) * itemsPerPage + idx + 1 }</span>
+                          <span className="bg-atmosphere-wash/20 border border-off-black/10 rounded-full px-2 py-0.5 text-[10px] text-pale-stone whitespace-nowrap inline-block">
+                            {formatSource(row.unitTitle, row.unitId)}
+                          </span>
+                        </div>
+                        <div className="space-y-2">
+                          <span className="text-sm font-bold text-orange-600 dark:text-orange-400">{row.phrasalVerb}</span>
+                          <p className="text-off-black/75"><span className="font-bold text-ink">{translate("Meaning")}:</span> {translate(row.meaning, { lookupOnly: true })}</p>
+                          {row.example && (
+                            <p className="italic text-pale-stone leading-relaxed"><span className="font-bold text-ink not-italic">{translate("Example")}:</span> "{row.example}"</p>
+                          )}
+                        </div>
+                      </div>
+                    ))}
+                    {filteredPhrasal.length === 0 && (
+                      <div className="text-center py-8 font-mono text-xs text-pale-stone border border-dashed border-off-black/20 rounded-2xl bg-paper-canvas/10">
+                        {translate("No results found for the search keyword.")}
+                      </div>
+                    )}
+                  </div>
                 </div>
               )}
 
@@ -756,41 +842,73 @@ export default function ResourcesPage() {
                   <div className="mb-4 text-xs font-mono text-pale-stone flex items-center justify-between">
                     <span>{translate("Displaying")} {Math.min(currentPage * itemsPerPage, filteredPrep.length)} {translate("out of")} {filteredPrep.length} {translate("prepositional phrases")}{searchQuery && ` (${translate("matched for")} "${searchQuery}")`}</span>
                   </div>
-                  <Table>
-                    <TableHeader className="bg-atmosphere-wash/30 border-b border-off-black">
-                      <TableRow className="hover:bg-transparent">
-                        <TableHead className="w-[80px] font-mono text-ink text-center">{translate("STT")}</TableHead>
-                        <TableHead className="w-[150px] font-mono text-ink">{translate("Base Word")}</TableHead>
-                        <TableHead className="w-[220px] font-mono text-ink font-semibold">{translate("Prepositional Phrase")}</TableHead>
-                        <TableHead className="font-mono text-ink">{translate("Meaning")}</TableHead>
-                        <TableHead className="font-mono text-ink">{translate("Example")}</TableHead>
-                        <TableHead className="w-[150px] font-mono text-ink">{translate("Source")}</TableHead>
-                      </TableRow>
-                    </TableHeader>
-                    <TableBody>
-                      {paginatedItems.map((row: any, idx) => (
-                        <TableRow key={idx} className="hover:bg-atmosphere-wash/10 transition-colors">
-                          <TableCell className="font-mono text-ink text-center text-xs font-semibold">{(currentPage - 1) * itemsPerPage + idx + 1}</TableCell>
-                          <TableCell className="font-mono font-medium text-ink text-sm bg-atmosphere-wash/5 font-semibold text-center">{extractBaseWord(row.phrase)}</TableCell>
-                          <TableCell className="font-mono font-bold text-indigo-600 dark:text-indigo-400 text-sm">{row.phrase}</TableCell>
-                          <TableCell className="font-mono text-off-black text-sm max-w-[250px] break-words">{translate(row.meaning, { lookupOnly: true })}</TableCell>
-                          <TableCell className="font-mono italic text-pale-stone text-xs max-w-[300px] whitespace-pre-line">{row.example}</TableCell>
-                          <TableCell className="font-mono text-xs text-pale-stone">
-                            <span className="bg-atmosphere-wash/20 border border-off-black/10 rounded-full px-2 py-0.5 text-[10px] whitespace-nowrap inline-block">
-                              {formatSource(row.unitTitle, row.unitId)}
-                            </span>
-                          </TableCell>
+                  {/* Desktop Table View */}
+                  <div className="hidden md:block">
+                    <Table>
+                      <TableHeader className="bg-atmosphere-wash/30 border-b border-off-black">
+                        <TableRow className="hover:bg-transparent">
+                          <TableHead className="w-[80px] font-mono text-ink text-center">{translate("STT")}</TableHead>
+                          <TableHead className="w-[150px] font-mono text-ink">{translate("Base Word")}</TableHead>
+                          <TableHead className="w-[220px] font-mono text-ink font-semibold">{translate("Prepositional Phrase")}</TableHead>
+                          <TableHead className="font-mono text-ink">{translate("Meaning")}</TableHead>
+                          <TableHead className="font-mono text-ink">{translate("Example")}</TableHead>
+                          <TableHead className="w-[150px] font-mono text-ink">{translate("Source")}</TableHead>
                         </TableRow>
-                      ))}
-                      {filteredPrep.length === 0 && (
-                        <TableRow>
-                          <TableCell colSpan={6} className="text-center py-16 font-mono text-pale-stone">
-                            {translate("No results found for the search keyword.")}
-                          </TableCell>
-                        </TableRow>
-                      )}
-                    </TableBody>
-                  </Table>
+                      </TableHeader>
+                      <TableBody>
+                        {paginatedItems.map((row: any, idx) => (
+                          <TableRow key={idx} className="hover:bg-atmosphere-wash/10 transition-colors">
+                            <TableCell className="font-mono text-ink text-center text-xs font-semibold">{(currentPage - 1) * itemsPerPage + idx + 1}</TableCell>
+                            <TableCell className="font-mono font-medium text-ink text-sm bg-atmosphere-wash/5 font-semibold text-center">{extractBaseWord(row.phrase)}</TableCell>
+                            <TableCell className="font-mono font-bold text-indigo-600 dark:text-indigo-400 text-sm">{row.phrase}</TableCell>
+                            <TableCell className="font-mono text-off-black text-sm max-w-[250px] break-words">{translate(row.meaning, { lookupOnly: true })}</TableCell>
+                            <TableCell className="font-mono italic text-pale-stone text-xs max-w-[300px] whitespace-pre-line">{row.example}</TableCell>
+                            <TableCell className="font-mono text-xs text-pale-stone">
+                              <span className="bg-atmosphere-wash/20 border border-off-black/10 rounded-full px-2 py-0.5 text-[10px] whitespace-nowrap inline-block">
+                                {formatSource(row.unitTitle, row.unitId)}
+                              </span>
+                            </TableCell>
+                          </TableRow>
+                        ))}
+                        {filteredPrep.length === 0 && (
+                          <TableRow>
+                            <TableCell colSpan={6} className="text-center py-16 font-mono text-pale-stone">
+                              {translate("No results found for the search keyword.")}
+                            </TableCell>
+                          </TableRow>
+                        )}
+                      </TableBody>
+                    </Table>
+                  </div>
+
+                  {/* Mobile Card View */}
+                  <div className="block md:hidden space-y-4">
+                    {paginatedItems.map((row: any, idx) => (
+                      <div key={idx} className="p-5 border border-off-black/10 dark:border-white/10 rounded-2xl bg-paper-canvas/30 space-y-3 font-mono text-xs">
+                        <div className="flex items-center justify-between border-b border-off-black/5 dark:border-white/5 pb-2">
+                          <span className="text-[10px] font-bold text-pale-stone">#{ (currentPage - 1) * itemsPerPage + idx + 1 }</span>
+                          <span className="bg-atmosphere-wash/20 border border-off-black/10 rounded-full px-2 py-0.5 text-[10px] text-pale-stone whitespace-nowrap inline-block">
+                            {formatSource(row.unitTitle, row.unitId)}
+                          </span>
+                        </div>
+                        <div className="space-y-2">
+                          <div className="flex items-baseline gap-2 flex-wrap">
+                            <span className="text-sm font-bold text-indigo-600 dark:text-indigo-400">{row.phrase}</span>
+                            <span className="text-[10px] text-pale-stone">({translate("Base Word")}: {extractBaseWord(row.phrase)})</span>
+                          </div>
+                          <p className="text-off-black/75"><span className="font-bold text-ink">{translate("Meaning")}:</span> {translate(row.meaning, { lookupOnly: true })}</p>
+                          {row.example && (
+                            <p className="italic text-pale-stone leading-relaxed"><span className="font-bold text-ink not-italic">{translate("Example")}:</span> "{row.example}"</p>
+                          )}
+                        </div>
+                      </div>
+                    ))}
+                    {filteredPrep.length === 0 && (
+                      <div className="text-center py-8 font-mono text-xs text-pale-stone border border-dashed border-off-black/20 rounded-2xl bg-paper-canvas/10">
+                        {translate("No results found for the search keyword.")}
+                      </div>
+                    )}
+                  </div>
                 </div>
               )}
 
@@ -800,30 +918,117 @@ export default function ResourcesPage() {
                   <div className="mb-4 text-xs font-mono text-pale-stone flex items-center justify-between">
                     <span>{translate("Displaying")} {Math.min(currentPage * itemsPerPage, filteredForm.length)} {translate("out of")} {filteredForm.length} {translate("word formations")}{searchQuery && ` (${translate("matched for")} "${searchQuery}")`}</span>
                   </div>
-                  <Table>
-                    <TableHeader className="bg-atmosphere-wash/30 border-b border-off-black">
-                      <TableRow className="hover:bg-transparent">
-                        <TableHead className="w-[80px] font-mono text-ink text-center">{translate("STT")}</TableHead>
-                        <TableHead className="w-[150px] font-mono text-ink">{translate("Base Word")}</TableHead>
-                        <TableHead className="w-[200px] font-mono text-ink">{translate("Word Family")}</TableHead>
-                        <TableHead className="font-mono text-ink">{translate("Meaning")}</TableHead>
-                        <TableHead className="font-mono text-ink">{translate("Example")}</TableHead>
-                        <TableHead className="w-[150px] font-mono text-ink">{translate("Source")}</TableHead>
-                      </TableRow>
-                    </TableHeader>
-                    <TableBody>
-                      {paginatedItems.map((row: any, idx) => {
-                        const parsedFamily = parseWordFormationMeaning(row.meaning);
-                        return (
-                          <React.Fragment key={idx}>
+                  {/* Desktop Table View */}
+                  <div className="hidden md:block">
+                    <Table>
+                      <TableHeader className="bg-atmosphere-wash/30 border-b border-off-black">
+                        <TableRow className="hover:bg-transparent">
+                          <TableHead className="w-[80px] font-mono text-ink text-center">{translate("STT")}</TableHead>
+                          <TableHead className="w-[150px] font-mono text-ink">{translate("Base Word")}</TableHead>
+                          <TableHead className="w-[200px] font-mono text-ink">{translate("Word Family")}</TableHead>
+                          <TableHead className="font-mono text-ink">{translate("Meaning")}</TableHead>
+                          <TableHead className="font-mono text-ink">{translate("Example")}</TableHead>
+                          <TableHead className="w-[150px] font-mono text-ink">{translate("Source")}</TableHead>
+                        </TableRow>
+                      </TableHeader>
+                      <TableBody>
+                        {paginatedItems.map((row: any, idx) => {
+                          const parsedFamily = parseWordFormationMeaning(row.meaning);
+                          return (
+                            <React.Fragment key={idx}>
+                              {parsedFamily.map((fam, fIdx) => {
+                                const formsStr = fam.forms.join(" / ");
+                                const isMatched = query && (
+                                  row.word.toLowerCase().includes(query) || 
+                                  fam.forms.some(f => f.toLowerCase().includes(query))
+                                );
+                                
+                                // Extract examples for this specific form
+                                const filteredExamples = row.example ? row.example.split("\n").filter((exLine: string) => {
+                                  const containsForm = fam.forms.some(f => {
+                                    const stem = f.replace(/\(([^)]+)\)/g, '$1').toLowerCase();
+                                    return exLine.toLowerCase().includes(stem);
+                                  });
+                                  return containsForm || parsedFamily.length === 1;
+                                }).join("\n") : "";
+
+                                return (
+                                  <TableRow 
+                                    key={fIdx} 
+                                    className={cn(
+                                      "hover:bg-atmosphere-wash/10 transition-colors align-top",
+                                      isMatched ? "bg-amber-glow-gradient/5" : ""
+                                    )}
+                                  >
+                                    {fIdx === 0 && (
+                                      <>
+                                        <TableCell rowSpan={parsedFamily.length} className="font-mono text-ink text-center text-xs font-semibold pt-5 border-r border-off-black/5">
+                                          {(currentPage - 1) * itemsPerPage + idx + 1}
+                                        </TableCell>
+                                        <TableCell rowSpan={parsedFamily.length} className="font-mono font-bold text-ink text-sm pt-5 border-r border-off-black/5">
+                                          {row.word}
+                                          <span className="block text-[10px] text-pale-stone font-normal mt-0.5">({abbreviateType(row.type)})</span>
+                                        </TableCell>
+                                      </>
+                                    )}
+                                    
+                                    <TableCell className="font-mono font-bold text-teal-600 dark:text-teal-400 text-sm pt-5">
+                                      {formsStr}
+                                    </TableCell>
+                                    
+                                    <TableCell className="font-mono text-off-black text-sm max-w-[280px] break-words pt-5">
+                                      {getWordFormationMeaning(row.meaning, fam.meaning, fIdx, translate, { lookupOnly: true })}
+                                    </TableCell>
+                                    
+                                    <TableCell className="font-mono italic text-pale-stone text-xs max-w-[350px] whitespace-pre-line pt-5">
+                                      {filteredExamples}
+                                    </TableCell>
+                                    
+                                    {fIdx === 0 && (
+                                      <TableCell rowSpan={parsedFamily.length} className="font-mono text-xs text-pale-stone pt-5 border-l border-off-black/5">
+                                        <span className="bg-atmosphere-wash/20 border border-off-black/10 rounded-full px-2 py-0.5 text-[10px] whitespace-nowrap inline-block">
+                                          {formatSource(row.unitTitle, row.unitId)}
+                                        </span>
+                                      </TableCell>
+                                    )}
+                                  </TableRow>
+                                );
+                              })}
+                            </React.Fragment>
+                          );
+                        })}
+                        {filteredForm.length === 0 && (
+                          <TableRow>
+                            <TableCell colSpan={6} className="text-center py-16 font-mono text-pale-stone">
+                              {translate("No results found for the search keyword.")}
+                            </TableCell>
+                          </TableRow>
+                        )}
+                      </TableBody>
+                    </Table>
+                  </div>
+
+                  {/* Mobile Card View */}
+                  <div className="block md:hidden space-y-4">
+                    {paginatedItems.map((row: any, idx) => {
+                      const parsedFamily = parseWordFormationMeaning(row.meaning);
+                      return (
+                        <div key={idx} className="p-5 border border-off-black/10 dark:border-white/10 rounded-2xl bg-paper-canvas/30 space-y-3 font-mono text-xs">
+                          <div className="flex items-center justify-between border-b border-off-black/5 dark:border-white/5 pb-2">
+                            <span className="text-[10px] font-bold text-pale-stone">#{ (currentPage - 1) * itemsPerPage + idx + 1 }</span>
+                            <span className="bg-atmosphere-wash/20 border border-off-black/10 rounded-full px-2 py-0.5 text-[10px] text-pale-stone whitespace-nowrap inline-block">
+                              {formatSource(row.unitTitle, row.unitId)}
+                            </span>
+                          </div>
+                          <div className="space-y-1">
+                            <div className="text-sm font-bold text-ink">
+                              {row.word}
+                              <span className="text-[10px] text-pale-stone font-normal ml-1">({abbreviateType(row.type)})</span>
+                            </div>
+                          </div>
+                          <div className="space-y-4 pt-1">
                             {parsedFamily.map((fam, fIdx) => {
                               const formsStr = fam.forms.join(" / ");
-                              const isMatched = query && (
-                                row.word.toLowerCase().includes(query) || 
-                                fam.forms.some(f => f.toLowerCase().includes(query))
-                              );
-                              
-                              // Extract examples for this specific form
                               const filteredExamples = row.example ? row.example.split("\n").filter((exLine: string) => {
                                 const containsForm = fam.forms.some(f => {
                                   const stem = f.replace(/\(([^)]+)\)/g, '$1').toLowerCase();
@@ -833,59 +1038,27 @@ export default function ResourcesPage() {
                               }).join("\n") : "";
 
                               return (
-                                <TableRow 
-                                  key={fIdx} 
-                                  className={cn(
-                                    "hover:bg-atmosphere-wash/10 transition-colors align-top",
-                                    isMatched ? "bg-amber-glow-gradient/5" : ""
-                                  )}
-                                >
-                                  {fIdx === 0 && (
-                                    <>
-                                      <TableCell rowSpan={parsedFamily.length} className="font-mono text-ink text-center text-xs font-semibold pt-5 border-r border-off-black/5">
-                                        {(currentPage - 1) * itemsPerPage + idx + 1}
-                                      </TableCell>
-                                      <TableCell rowSpan={parsedFamily.length} className="font-mono font-bold text-ink text-sm pt-5 border-r border-off-black/5">
-                                        {row.word}
-                                        <span className="block text-[10px] text-pale-stone font-normal mt-0.5">({abbreviateType(row.type)})</span>
-                                      </TableCell>
-                                    </>
-                                  )}
-                                  
-                                  <TableCell className="font-mono font-bold text-teal-600 dark:text-teal-400 text-sm pt-5">
+                                <div key={fIdx} className="space-y-2 border-b border-off-black/5 dark:border-white/5 last:border-b-0 pb-3 last:pb-0">
+                                  <p className="font-bold text-teal-600 dark:text-teal-400 text-xs bg-teal-500/10 px-2 py-0.5 rounded w-max">
                                     {formsStr}
-                                  </TableCell>
-                                  
-                                  <TableCell className="font-mono text-off-black text-sm max-w-[280px] break-words pt-5">
-                                    {translate(fam.meaning, { lookupOnly: true })}
-                                  </TableCell>
-                                  
-                                  <TableCell className="font-mono italic text-pale-stone text-xs max-w-[350px] whitespace-pre-line pt-5">
-                                    {filteredExamples}
-                                  </TableCell>
-                                  
-                                  {fIdx === 0 && (
-                                    <TableCell rowSpan={parsedFamily.length} className="font-mono text-xs text-pale-stone pt-5 border-l border-off-black/5">
-                                      <span className="bg-atmosphere-wash/20 border border-off-black/10 rounded-full px-2 py-0.5 text-[10px] whitespace-nowrap inline-block">
-                                        {formatSource(row.unitTitle, row.unitId)}
-                                      </span>
-                                    </TableCell>
+                                  </p>
+                                  <p className="text-off-black/75"><span className="font-bold text-ink">{translate("Meaning")}:</span> {getWordFormationMeaning(row.meaning, fam.meaning, fIdx, translate, { lookupOnly: true })}</p>
+                                  {filteredExamples && (
+                                    <p className="italic text-pale-stone leading-relaxed whitespace-pre-line"><span className="font-bold text-ink not-italic">{translate("Example")}:</span> {filteredExamples}</p>
                                   )}
-                                </TableRow>
+                                </div>
                               );
                             })}
-                          </React.Fragment>
-                        );
-                      })}
-                      {filteredForm.length === 0 && (
-                        <TableRow>
-                          <TableCell colSpan={6} className="text-center py-16 font-mono text-pale-stone">
-                            {translate("No results found for the search keyword.")}
-                          </TableCell>
-                        </TableRow>
-                      )}
-                    </TableBody>
-                  </Table>
+                          </div>
+                        </div>
+                      );
+                    })}
+                    {filteredForm.length === 0 && (
+                      <div className="text-center py-8 font-mono text-xs text-pale-stone border border-dashed border-off-black/20 rounded-2xl bg-paper-canvas/10">
+                        {translate("No results found for the search keyword.")}
+                      </div>
+                    )}
+                  </div>
                 </div>
               )}
 
@@ -895,41 +1068,74 @@ export default function ResourcesPage() {
                   <div className="mb-4 text-xs font-mono text-pale-stone flex items-center justify-between">
                     <span>{translate("Displaying")} {Math.min(currentPage * itemsPerPage, filteredPattern.length)} {translate("out of")} {filteredPattern.length} {translate("word patterns")}{searchQuery && ` (${translate("matched for")} "${searchQuery}")`}</span>
                   </div>
-                  <Table>
-                    <TableHeader className="bg-atmosphere-wash/30 border-b border-off-black">
-                      <TableRow className="hover:bg-transparent">
-                        <TableHead className="w-[80px] font-mono text-ink text-center">{translate("STT")}</TableHead>
-                        <TableHead className="w-[160px] font-mono text-ink">{translate("Base Word")}</TableHead>
-                        <TableHead className="w-[240px] font-mono text-ink font-semibold">{translate("Word Pattern")}</TableHead>
-                        <TableHead className="font-mono text-ink">{translate("Meaning")}</TableHead>
-                        <TableHead className="font-mono text-ink">{translate("Example")}</TableHead>
-                        <TableHead className="w-[150px] font-mono text-ink">{translate("Source")}</TableHead>
-                      </TableRow>
-                    </TableHeader>
-                    <TableBody>
-                      {paginatedItems.map((row: any, idx) => (
-                        <TableRow key={idx} className="hover:bg-atmosphere-wash/10 transition-colors">
-                          <TableCell className="font-mono text-ink text-center text-xs font-semibold">{(currentPage - 1) * itemsPerPage + idx + 1}</TableCell>
-                          <TableCell className="font-mono font-medium text-ink text-sm bg-atmosphere-wash/5 font-semibold text-center">{extractPatternBaseWord(row.verb)}</TableCell>
-                          <TableCell className="font-mono font-bold text-red-600 dark:text-red-400 text-sm">{row.verb} <span className="text-[10px] text-pale-stone font-normal italic">({abbreviateType(row.pattern)})</span></TableCell>
-                          <TableCell className="font-mono text-off-black text-sm max-w-[250px] break-words">{translate(row.meaning, { lookupOnly: true })}</TableCell>
-                          <TableCell className="font-mono italic text-pale-stone text-xs max-w-[320px] whitespace-pre-line">{row.example}</TableCell>
-                          <TableCell className="font-mono text-xs text-pale-stone">
-                            <span className="bg-atmosphere-wash/20 border border-off-black/10 rounded-full px-2 py-0.5 text-[10px] whitespace-nowrap inline-block">
-                              {formatSource(row.unitTitle, row.unitId)}
-                            </span>
-                          </TableCell>
+                  {/* Desktop Table View */}
+                  <div className="hidden md:block">
+                    <Table>
+                      <TableHeader className="bg-atmosphere-wash/30 border-b border-off-black">
+                        <TableRow className="hover:bg-transparent">
+                          <TableHead className="w-[80px] font-mono text-ink text-center">{translate("STT")}</TableHead>
+                          <TableHead className="w-[160px] font-mono text-ink">{translate("Base Word")}</TableHead>
+                          <TableHead className="w-[240px] font-mono text-ink font-semibold">{translate("Word Pattern")}</TableHead>
+                          <TableHead className="font-mono text-ink">{translate("Meaning")}</TableHead>
+                          <TableHead className="font-mono text-ink">{translate("Example")}</TableHead>
+                          <TableHead className="w-[150px] font-mono text-ink">{translate("Source")}</TableHead>
                         </TableRow>
-                      ))}
-                      {filteredPattern.length === 0 && (
-                        <TableRow>
-                          <TableCell colSpan={6} className="text-center py-16 font-mono text-pale-stone">
-                            {translate("No results found for the search keyword.")}
-                          </TableCell>
-                        </TableRow>
-                      )}
-                    </TableBody>
-                  </Table>
+                      </TableHeader>
+                      <TableBody>
+                        {paginatedItems.map((row: any, idx) => (
+                          <TableRow key={idx} className="hover:bg-atmosphere-wash/10 transition-colors">
+                            <TableCell className="font-mono text-ink text-center text-xs font-semibold">{(currentPage - 1) * itemsPerPage + idx + 1}</TableCell>
+                            <TableCell className="font-mono font-medium text-ink text-sm bg-atmosphere-wash/5 font-semibold text-center">{extractPatternBaseWord(row.verb)}</TableCell>
+                            <TableCell className="font-mono font-bold text-red-600 dark:text-red-400 text-sm">{row.verb} <span className="text-[10px] text-pale-stone font-normal italic">({abbreviateType(row.pattern)})</span></TableCell>
+                            <TableCell className="font-mono text-off-black text-sm max-w-[250px] break-words">{translate(row.meaning, { lookupOnly: true })}</TableCell>
+                            <TableCell className="font-mono italic text-pale-stone text-xs max-w-[320px] whitespace-pre-line">{row.example}</TableCell>
+                            <TableCell className="font-mono text-xs text-pale-stone">
+                              <span className="bg-atmosphere-wash/20 border border-off-black/10 rounded-full px-2 py-0.5 text-[10px] whitespace-nowrap inline-block">
+                                {formatSource(row.unitTitle, row.unitId)}
+                              </span>
+                            </TableCell>
+                          </TableRow>
+                        ))}
+                        {filteredPattern.length === 0 && (
+                          <TableRow>
+                            <TableCell colSpan={6} className="text-center py-16 font-mono text-pale-stone">
+                              {translate("No results found for the search keyword.")}
+                            </TableCell>
+                          </TableRow>
+                        )}
+                      </TableBody>
+                    </Table>
+                  </div>
+
+                  {/* Mobile Card View */}
+                  <div className="block md:hidden space-y-4">
+                    {paginatedItems.map((row: any, idx) => (
+                      <div key={idx} className="p-5 border border-off-black/10 dark:border-white/10 rounded-2xl bg-paper-canvas/30 space-y-3 font-mono text-xs">
+                        <div className="flex items-center justify-between border-b border-off-black/5 dark:border-white/5 pb-2">
+                          <span className="text-[10px] font-bold text-pale-stone">#{ (currentPage - 1) * itemsPerPage + idx + 1 }</span>
+                          <span className="bg-atmosphere-wash/20 border border-off-black/10 rounded-full px-2 py-0.5 text-[10px] text-pale-stone whitespace-nowrap inline-block">
+                            {formatSource(row.unitTitle, row.unitId)}
+                          </span>
+                        </div>
+                        <div className="space-y-2">
+                          <div className="flex items-baseline gap-2 flex-wrap">
+                            <span className="text-sm font-bold text-red-600 dark:text-red-400">{row.verb}</span>
+                            <span className="text-[10px] text-pale-stone font-normal italic">({abbreviateType(row.pattern)})</span>
+                            <span className="text-[10px] text-pale-stone">({translate("Base Word")}: {extractPatternBaseWord(row.verb)})</span>
+                          </div>
+                          <p className="text-off-black/75"><span className="font-bold text-ink">{translate("Meaning")}:</span> {translate(row.meaning, { lookupOnly: true })}</p>
+                          {row.example && (
+                            <p className="italic text-pale-stone leading-relaxed"><span className="font-bold text-ink not-italic">{translate("Example")}:</span> "{row.example}"</p>
+                          )}
+                        </div>
+                      </div>
+                    ))}
+                    {filteredPattern.length === 0 && (
+                      <div className="text-center py-8 font-mono text-xs text-pale-stone border border-dashed border-off-black/20 rounded-2xl bg-paper-canvas/10">
+                        {translate("No results found for the search keyword.")}
+                      </div>
+                    )}
+                  </div>
                 </div>
               )}
 
@@ -939,44 +1145,76 @@ export default function ResourcesPage() {
                   <div className="mb-4 text-xs font-mono text-pale-stone flex items-center justify-between">
                     <span>{translate("Displaying")} {Math.min(currentPage * itemsPerPage, filteredCollocation.length)} {translate("out of")} {filteredCollocation.length} {translate("collocations")}{searchQuery && ` (${translate("matched for")} "${searchQuery}")`}</span>
                   </div>
-                  <Table>
-                    <TableHeader className="bg-atmosphere-wash/30 border-b border-off-black">
-                      <TableRow className="hover:bg-transparent">
-                        <TableHead className="w-[80px] font-mono text-ink text-center">{translate("STT")}</TableHead>
-                        <TableHead className="w-[160px] font-mono text-ink">{translate("Base Word")}</TableHead>
-                        <TableHead className="w-[280px] font-mono text-ink font-semibold">{translate("Collocation")}</TableHead>
-                        <TableHead className="font-mono text-ink">{translate("Meaning")}</TableHead>
-                        <TableHead className="w-[150px] font-mono text-ink">{translate("Source")}</TableHead>
-                      </TableRow>
-                    </TableHeader>
-                    <TableBody>
-                      {paginatedItems.map((row: any, idx) => (
-                        <TableRow key={idx} className="hover:bg-atmosphere-wash/10 transition-colors">
-                          <TableCell className="font-mono text-ink text-center text-xs font-semibold">{(currentPage - 1) * itemsPerPage + idx + 1}</TableCell>
-                          <TableCell className="font-mono font-medium text-ink text-sm bg-atmosphere-wash/5 font-semibold text-center">{row.word}</TableCell>
-                          <TableCell className="font-mono font-bold text-violet-600 dark:text-violet-400 text-sm">
-                            <span className="inline-flex items-center gap-1.5">
-                              <Link className="w-3 h-3 text-violet-400 shrink-0" />
-                              {row.collocation}
-                            </span>
-                          </TableCell>
-                          <TableCell className="font-mono text-off-black text-sm max-w-[300px] break-words">{translate(row.meaning, { lookupOnly: true })}</TableCell>
-                          <TableCell className="font-mono text-xs text-pale-stone">
-                            <span className="bg-atmosphere-wash/20 border border-off-black/10 rounded-full px-2 py-0.5 text-[10px] whitespace-nowrap inline-block">
-                              {formatSource(row.unitTitle, row.unitId)}
-                            </span>
-                          </TableCell>
+                  {/* Desktop Table View */}
+                  <div className="hidden md:block">
+                    <Table>
+                      <TableHeader className="bg-atmosphere-wash/30 border-b border-off-black">
+                        <TableRow className="hover:bg-transparent">
+                          <TableHead className="w-[80px] font-mono text-ink text-center">{translate("STT")}</TableHead>
+                          <TableHead className="w-[160px] font-mono text-ink">{translate("Base Word")}</TableHead>
+                          <TableHead className="w-[280px] font-mono text-ink font-semibold">{translate("Collocation")}</TableHead>
+                          <TableHead className="font-mono text-ink">{translate("Meaning")}</TableHead>
+                          <TableHead className="w-[150px] font-mono text-ink">{translate("Source")}</TableHead>
                         </TableRow>
-                      ))}
-                      {filteredCollocation.length === 0 && (
-                        <TableRow>
-                          <TableCell colSpan={5} className="text-center py-16 font-mono text-pale-stone">
-                            {translate("No results found for the search keyword.")}
-                          </TableCell>
-                        </TableRow>
-                      )}
-                    </TableBody>
-                  </Table>
+                      </TableHeader>
+                      <TableBody>
+                        {paginatedItems.map((row: any, idx) => (
+                          <TableRow key={idx} className="hover:bg-atmosphere-wash/10 transition-colors">
+                            <TableCell className="font-mono text-ink text-center text-xs font-semibold">{(currentPage - 1) * itemsPerPage + idx + 1}</TableCell>
+                            <TableCell className="font-mono font-medium text-ink text-sm bg-atmosphere-wash/5 font-semibold text-center">{row.word}</TableCell>
+                            <TableCell className="font-mono font-bold text-violet-600 dark:text-violet-400 text-sm">
+                              <span className="inline-flex items-center gap-1.5">
+                                <Link className="w-3 h-3 text-violet-400 shrink-0" />
+                                {row.collocation}
+                              </span>
+                            </TableCell>
+                            <TableCell className="font-mono text-off-black text-sm max-w-[300px] break-words">{translate(row.meaning, { lookupOnly: true })}</TableCell>
+                            <TableCell className="font-mono text-xs text-pale-stone">
+                              <span className="bg-atmosphere-wash/20 border border-off-black/10 rounded-full px-2 py-0.5 text-[10px] whitespace-nowrap inline-block">
+                                {formatSource(row.unitTitle, row.unitId)}
+                              </span>
+                            </TableCell>
+                          </TableRow>
+                        ))}
+                        {filteredCollocation.length === 0 && (
+                          <TableRow>
+                            <TableCell colSpan={5} className="text-center py-16 font-mono text-pale-stone">
+                              {translate("No results found for the search keyword.")}
+                            </TableCell>
+                          </TableRow>
+                        )}
+                      </TableBody>
+                    </Table>
+                  </div>
+
+                  {/* Mobile Card View */}
+                  <div className="block md:hidden space-y-4">
+                    {paginatedItems.map((row: any, idx) => (
+                      <div key={idx} className="p-5 border border-off-black/10 dark:border-white/10 rounded-2xl bg-paper-canvas/30 space-y-3 font-mono text-xs">
+                        <div className="flex items-center justify-between border-b border-off-black/5 dark:border-white/5 pb-2">
+                          <span className="text-[10px] font-bold text-pale-stone">#{ (currentPage - 1) * itemsPerPage + idx + 1 }</span>
+                          <span className="bg-atmosphere-wash/20 border border-off-black/10 rounded-full px-2 py-0.5 text-[10px] text-pale-stone whitespace-nowrap inline-block">
+                            {formatSource(row.unitTitle, row.unitId)}
+                          </span>
+                        </div>
+                        <div className="space-y-2">
+                          <div className="flex items-baseline gap-2 flex-wrap">
+                            <span className="text-sm font-bold text-violet-600 dark:text-violet-400">{row.collocation}</span>
+                            <span className="text-[10px] text-pale-stone">({translate("Base Word")}: {row.word})</span>
+                          </div>
+                          <p className="text-off-black/75"><span className="font-bold text-ink">{translate("Meaning")}:</span> {translate(row.meaning, { lookupOnly: true })}</p>
+                          {row.example && (
+                            <p className="italic text-pale-stone leading-relaxed"><span className="font-bold text-ink not-italic">{translate("Example")}:</span> "{row.example}"</p>
+                          )}
+                        </div>
+                      </div>
+                    ))}
+                    {filteredCollocation.length === 0 && (
+                      <div className="text-center py-8 font-mono text-xs text-pale-stone border border-dashed border-off-black/20 rounded-2xl bg-paper-canvas/10">
+                        {translate("No results found for the search keyword.")}
+                      </div>
+                    )}
+                  </div>
                 </div>
               )}
 

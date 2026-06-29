@@ -65,7 +65,7 @@ export function InteractivePlaypen() {
   const [simulatedSearch, setSimulatedSearch] = React.useState("");
 
   return (
-    <section className="py-24 bg-paper-canvas border-t border-off-black font-abc-diatype-mono">
+    <section className="py-24 bg-section-playpen border-t border-off-black/10 dark:border-white/10 font-abc-diatype-mono">
       <div className="max-w-6xl mx-auto px-6 md:px-12 lg:px-16">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           {/* Column 1: Info and Action */}

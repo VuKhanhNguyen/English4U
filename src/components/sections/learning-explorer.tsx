@@ -353,6 +353,29 @@ function parseWordFormationMeaning(meaning: string): WordFamilyItem[] {
   return items;
 }
 
+// Helper to get translated word formation meaning from the translated whole row meaning
+function getWordFormationMeaning(
+  rowMeaning: string,
+  famMeaning: string,
+  fIdx: number,
+  translateFn: (text: string, options?: any) => string,
+  options?: any
+): string {
+  const translatedWhole = translateFn(rowMeaning, options);
+  if (translatedWhole && translatedWhole !== rowMeaning) {
+    const transParts = translatedWhole.split(/\s+\/\s+/);
+    if (transParts[fIdx]) {
+      const part = transParts[fIdx];
+      if (part.includes(":")) {
+        const colonIndex = part.indexOf(":");
+        return part.substring(colonIndex + 1).trim();
+      }
+      return part.trim();
+    }
+  }
+  return translateFn(famMeaning, options);
+}
+
 // Helper to abbreviate grammatical types/patterns (e.g. "verb" -> "v")
 function abbreviateType(typeStr: string): string {
   if (!typeStr) return "";
@@ -1442,7 +1465,7 @@ export function LearningExplorerSection({
                                               </span>
                                             </div>
                                             <div className="flex-1 space-y-1">
-                                              <p className="text-off-black text-sm leading-relaxed">{translate(fam.meaning)}</p>
+                                              <p className="text-off-black text-sm leading-relaxed">{getWordFormationMeaning(row.meaning, fam.meaning, fIdx, translate)}</p>
                                               {row.example && (
                                                 <div className="text-xs text-pale-stone italic mt-1 font-mono">
                                                   {row.example.split("\n").map((exLine: string, exIdx: number) => {
@@ -1505,7 +1528,7 @@ export function LearningExplorerSection({
                                       <p className="font-bold text-[#0f766e] dark:text-[#2dd4bf] text-xs bg-[#0f766e]/10 dark:bg-[#0f766e]/20 px-2.5 py-1 rounded-lg w-max">
                                         {formsStr}
                                       </p>
-                                      <p className="text-off-black text-xs leading-relaxed">{translate(fam.meaning)}</p>
+                                       <p className="text-off-black text-xs leading-relaxed">{getWordFormationMeaning(row.meaning, fam.meaning, fIdx, translate)}</p>
                                       {row.example && (
                                         <div className="text-[11px] text-pale-stone italic font-mono space-y-1">
                                           {row.example.split("\n").map((exLine: string, exIdx: number) => {

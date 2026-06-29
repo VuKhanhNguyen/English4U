@@ -34,7 +34,7 @@ const steps = [
 
 export function LearningStructureSection() {
   return (
-    <section id="structure" className="py-24 bg-paper-canvas border-t border-off-black overflow-hidden">
+    <section id="structure" className="py-24 bg-section-structure border-t border-off-black/10 dark:border-white/10 overflow-hidden">
       <div className="container mx-auto px-6 max-w-[1432px]">
         <div className="text-center mb-20">
           <span className="text-caption font-mono uppercase tracking-wider text-ink bg-atmosphere-wash px-3 py-1 rounded-full border border-off-black">

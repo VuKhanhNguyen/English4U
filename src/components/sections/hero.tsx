@@ -133,14 +133,14 @@ export function HeroSection({
   }, [hasStarted, phase, t1, t2, t3]);
 
   return (
-    <section className="relative min-h-[700px] sm:min-h-[740px] md:min-h-[800px] flex flex-col items-center justify-start pt-[140px] pb-16 md:pt-[200px] md:pb-24 overflow-hidden border-b border-off-black bg-paper-canvas">
-      {/* Background image — lightly blurred so text stays legible */}
+    <section className="relative min-h-[700px] sm:min-h-[740px] md:min-h-[800px] flex flex-col items-center justify-start pt-[140px] pb-16 md:pt-[200px] md:pb-24 overflow-hidden border-b border-off-black/10 dark:border-white/10 bg-section-hero">
+      {/* Background image — lightly blurred, low opacity so starfield is visible */}
       <div
-        className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat blur-[3px] scale-105 pointer-events-none"
+        className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat blur-[3px] scale-105 opacity-15 pointer-events-none"
         style={{ backgroundImage: "url('/imgs/bg2.png')" }}
       />
       {/* Soft overlay to keep text contrast */}
-      <div className="absolute inset-0 z-0 bg-paper-canvas/60 pointer-events-none" />
+      <div className="absolute inset-0 z-0 bg-paper-canvas/15 dark:bg-black/10 pointer-events-none" />
 
       {/* Decorative diffused gradients on top of the overlay */}
       <div className="absolute top-20 left-10 w-64 h-64 bg-sunset-violet-gradient rounded-full opacity-20 blur-3xl z-0 pointer-events-none" />

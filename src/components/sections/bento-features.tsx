@@ -23,7 +23,7 @@ export function BentoFeatures() {
   return (
     <>
     <section 
-      className="py-24 border-t border-off-black overflow-hidden bg-sky-mint-gradient"
+      className="py-24 border-t border-off-black/10 dark:border-white/10 overflow-hidden bg-section-bento"
     >
       <div className="max-w-6xl mx-auto px-6 md:px-12 lg:px-16">
         {/* Header */}
@@ -117,10 +117,10 @@ export function BentoFeatures() {
           >
             <Card
               variant="content"
-              className={`h-full border flex flex-col justify-between transition-all duration-300 relative overflow-hidden cursor-pointer select-none group min-h-[300px] md:min-h-0 ${
+              className={`h-full flex flex-col justify-between transition-all duration-300 relative overflow-hidden cursor-pointer select-none group min-h-[300px] md:min-h-0 ${
                 bentoTheme === "dark"
-                  ? "bg-off-black text-paper-canvas border-paper-canvas/20"
-                  : "bg-paper-canvas text-ink border-off-black/15"
+                  ? "text-paper-canvas bg-slate-950/40 border-white/10"
+                  : "text-ink bg-white/40 border-off-black/10"
               }`}
               onClick={() =>
                 setBentoTheme(bentoTheme === "light" ? "dark" : "light")

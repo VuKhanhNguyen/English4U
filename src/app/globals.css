@@ -17,6 +17,8 @@
   --color-sunset-violet-gradient: var(--sunset-violet-gradient-color);
   --color-sky-mint-gradient: var(--sky-mint-gradient-color);
   --color-amber-glow-gradient: var(--amber-glow-gradient-color);
+  --color-stardust-gold: var(--stardust-gold);
+  --color-nebula-orange: var(--nebula-orange);
 
   /* Legacy color names map for backward compatibility */
   --color-midnight-ink: var(--ink);
@@ -124,6 +126,14 @@
   background: var(--amber-glow-gradient);
 }
 
+@utility bg-radial-cosmic-gold {
+  background: radial-gradient(circle at center, rgba(226, 193, 97, 0.08) 0%, transparent 70%);
+}
+
+@utility bg-radial-cosmic-orange {
+  background: radial-gradient(circle at center, rgba(255, 167, 115, 0.08) 0%, transparent 70%);
+}
+
 html, body {
   @apply font-abc-diatype-mono bg-paper-canvas text-ink;
 }
@@ -206,6 +216,8 @@ html.lenis body {
   --sunset-violet-gradient-color: #ffa773;
   --sky-mint-gradient-color: #a0b5eb;
   --amber-glow-gradient-color: #e2c161;
+  --stardust-gold: #e2c161;
+  --nebula-orange: #ffa773;
 
   --sky-breeze-gradient: linear-gradient(rgb(160, 181, 235), rgb(167, 252, 205));
   --honey-dew-gradient: linear-gradient(270deg, rgba(226, 193, 97, 0.7) 23.5%, rgba(243, 122, 10, 0.7) 76%);
@@ -245,23 +257,26 @@ html.lenis body {
 
 .dark {
   --ink: #f6f3f1;
-  --paper-canvas: #0f0f10;
-  --off-black: #ffffff;
-  --pale-stone: #9ca3af;
-  --whisper-gray: #1f2937;
-  --atmosphere-wash: #1e293b;
-  --subtle-link: #d1d5db;
-  --faint-text: #6b7280;
+  --paper-canvas: #030305; /* Deep Obsidian Black */
+  --off-black: #e2c161; /* Stardust Gold */
+  --pale-stone: #a0a5b5;
+  --whisper-gray: #0d0f14;
+  --atmosphere-wash: #0a0b0e;
+  --subtle-link: #e2c161;
+  --faint-text: #5f6475;
   --sunset-violet-gradient-color: #311042;
-  --sky-mint-gradient-color: #0f172a;
-  --amber-glow-gradient-color: #1e1b4b;
+  --sky-mint-gradient-color: #0d0f14;
+  --amber-glow-gradient-color: #1b1625;
 
-  --sky-breeze-gradient: linear-gradient(to bottom, #1e1b4b, #0f172a);
-  --honey-dew-gradient: linear-gradient(270deg, #1e1b4b 23.5%, #111827 76%);
-  --lime-spritz-gradient: linear-gradient(135deg, #1e1b4b, #111827);
-  --sunset-violet-gradient: linear-gradient(135deg, #311042, #1e1b4b);
-  --sky-mint-gradient: linear-gradient(to bottom, #111827, #0f172a);
-  --amber-glow-gradient: linear-gradient(270deg, #1e1b4b 23.5%, #4c1d95 76%);
+  --sky-breeze-gradient: linear-gradient(to bottom, #0d0f14, #030305);
+  --honey-dew-gradient: linear-gradient(270deg, #1b1625 23.5%, #030305 76%);
+  --lime-spritz-gradient: linear-gradient(135deg, #1b1625, #0d0f14);
+  --sunset-violet-gradient: linear-gradient(135deg, #311042, #0d0f14);
+  --sky-mint-gradient: linear-gradient(to bottom, #0d0f14, #030305);
+  --amber-glow-gradient: linear-gradient(270deg, #1b1625 23.5%, #030305 76%);
+
+  --stardust-gold: #e2c161;
+  --nebula-orange: #ffa773;
 
   --background: var(--paper-canvas);
   --foreground: var(--ink);
@@ -336,4 +351,133 @@ html.lenis body {
 .dark .react-loading-skeleton {
   --base-color: #1d1d1f !important;
   --highlight-color: #2c2c2e !important;
+}
+
+/* Dynamic Liquid Glass Refraction Background Layer */
+.liquid-glass-bg {
+  position: absolute !important;
+  inset: 0 !important;
+  z-index: -1 !important;
+  pointer-events: none !important;
+  backdrop-filter: blur(12px) !important;
+  filter: url(#liquid-glass-refraction) !important;
+  background: rgba(255, 255, 255, 0.25) !important;
+  border-radius: inherit !important;
+}
+
+.dark .liquid-glass-bg {
+  background: rgba(13, 17, 28, 0.35) !important;
+}
+
+/* Card container: sharp and clean, no displacement filter on outline */
+.liquid-glass {
+  position: relative !important;
+  overflow: hidden !important;
+  background: transparent !important;
+  border: 1px solid rgba(255, 255, 255, 0.35) !important;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.02), inset 0 1px 0 0 rgba(255, 255, 255, 0.4) !important;
+}
+
+.dark .liquid-glass {
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.25), inset 0 1px 0 0 rgba(255, 255, 255, 0.04) !important;
+}
+
+/* Glass Transparent Gradient Utilities */
+.bg-sky-breeze-glass-gradient {
+  background: linear-gradient(135deg, rgba(160, 181, 235, 0.2), rgba(167, 252, 205, 0.2)) !important;
+}
+.bg-honey-dew-glass-gradient {
+  background: linear-gradient(270deg, rgba(226, 193, 97, 0.2) 23.5%, rgba(243, 122, 10, 0.2) 76%) !important;
+}
+.bg-sunset-violet-glass-gradient {
+  background: linear-gradient(135deg, rgba(255, 148, 115, 0.2) 7%, rgba(160, 181, 235, 0.2) 83.82%) !important;
+}
+
+.dark .bg-sky-breeze-glass-gradient {
+  background: linear-gradient(135deg, rgba(13, 17, 28, 0.4), rgba(3, 3, 5, 0.4)) !important;
+}
+.dark .bg-honey-dew-glass-gradient {
+  background: linear-gradient(270deg, rgba(27, 22, 37, 0.4) 23.5%, rgba(3, 3, 5, 0.4) 76%) !important;
+}
+.dark .bg-sunset-violet-glass-gradient {
+  background: linear-gradient(135deg, rgba(49, 16, 66, 0.4), rgba(13, 17, 28, 0.4)) !important;
+}
+
+/* Adaptive Section Background Gradients (Vibrant three-color blends for prominent refraction) */
+.bg-section-hero {
+  background: linear-gradient(135deg, #e0f2fe 0%, #f3e8ff 50%, #fbcfe8 100%) !important;
+}
+.dark .bg-section-hero {
+  background: linear-gradient(135deg, #030305 0%, #1e1b4b 40%, #4c1d95 70%, #030305 100%) !important;
+}
+
+.bg-section-explore {
+  background: linear-gradient(135deg, #a7f3d0 0%, #bae6fd 50%, #c7d2fe 100%) !important;
+}
+.dark .bg-section-explore {
+  background: linear-gradient(135deg, #030305 0%, #064e3b 40%, #0c4a6e 75%, #030305 100%) !important;
+}
+
+.bg-section-playpen {
+  background: linear-gradient(135deg, #f5f3ff 0%, #e0e7ff 50%, #c7d2fe 100%) !important;
+}
+.dark .bg-section-playpen {
+  background: linear-gradient(135deg, #030305 0%, #2e1065 40%, #1e1b4b 75%, #030305 100%) !important;
+}
+
+.bg-section-workspace {
+  background: linear-gradient(135deg, #fde68a 0%, #fed7aa 50%, #fecaca 100%) !important;
+}
+.dark .bg-section-workspace {
+  background: linear-gradient(135deg, #030305 0%, #7c2d12 35%, #78350f 70%, #030305 100%) !important;
+}
+
+.bg-section-bento {
+  background: linear-gradient(135deg, #a7f3d0 0%, #ddd6fe 50%, #fecdd3 100%) !important;
+}
+.dark .bg-section-bento {
+  background: linear-gradient(135deg, #030305 0%, #064e3b 30%, #4c1d95 65%, #311042 100%) !important;
+}
+
+.bg-section-hierarchy {
+  background: linear-gradient(135deg, #f1f5f9 0%, #cbd5e1 50%, #bae6fd 100%) !important;
+}
+.dark .bg-section-hierarchy {
+  background: linear-gradient(135deg, #030305 0%, #1e293b 40%, #0f172a 75%, #030305 100%) !important;
+}
+
+.bg-section-audience {
+  background: linear-gradient(135deg, #fecdd3 0%, #ddd6fe 50%, #bae6fd 100%) !important;
+}
+.dark .bg-section-audience {
+  background: linear-gradient(135deg, #030305 0%, #580824 35%, #3b0764 70%, #030305 100%) !important;
+}
+
+.bg-section-why {
+  background: linear-gradient(135deg, #f8fafc 0%, #cbd5e1 50%, #dbeafe 100%) !important;
+}
+.dark .bg-section-why {
+  background: linear-gradient(135deg, #030305 0%, #0f172a 50%, #030305 100%) !important;
+}
+
+.bg-section-learn {
+  background: linear-gradient(135deg, #a7f3d0 0%, #99f6e4 50%, #bae6fd 100%) !important;
+}
+.dark .bg-section-learn {
+  background: linear-gradient(135deg, #030305 0%, #064e3b 40%, #047857 80%, #030305 100%) !important;
+}
+
+.bg-section-mission {
+  background: linear-gradient(135deg, #fde68a 0%, #fed7aa 50%, #fde047 100%) !important;
+}
+.dark .bg-section-mission {
+  background: linear-gradient(135deg, #030305 0%, #7c2d12 40%, #b45309 80%, #030305 100%) !important;
+}
+
+.bg-section-structure {
+  background: linear-gradient(135deg, #bae6fd 0%, #99f6e4 50%, #ddd6fe 100%) !important;
+}
+.dark .bg-section-structure {
+  background: linear-gradient(135deg, #030305 0%, #1e1b4b 35%, #0f766e 70%, #030305 100%) !important;
 }

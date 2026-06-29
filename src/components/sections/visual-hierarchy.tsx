@@ -9,7 +9,7 @@ export function VisualHierarchy() {
   const { translate } = useLanguage()
 
   return (
-    <section className="py-24 bg-paper-canvas overflow-hidden">
+    <section className="py-24 bg-section-hierarchy border-t border-off-black/10 dark:border-white/10 overflow-hidden">
       <div className="container mx-auto px-6 max-w-[1432px]">
         
         {/* Header */}
@@ -60,15 +60,16 @@ export function VisualHierarchy() {
               transition={{ duration: 0.6 }}
               className="flex justify-center"
             >
-              <div className="w-full max-w-[420px] bg-paper-canvas border border-off-black rounded-lg p-6 flex flex-col gap-3 relative">
-                <div className="absolute top-4 right-4 w-[12px] h-[12px] rounded-full bg-atmosphere-wash border border-off-black" />
-                <div className="p-3 bg-atmosphere-wash border border-off-black rounded-md font-mono text-xs text-ink flex items-center gap-3">
+              <div className="w-full max-w-[420px] liquid-glass rounded-[24px] p-6 flex flex-col gap-3 relative">
+                <div className="liquid-glass-bg" />
+                <div className="absolute top-4 right-4 w-[12px] h-[12px] rounded-full bg-atmosphere-wash/40 border border-off-black/10" />
+                <div className="p-3 bg-atmosphere-wash/40 border border-off-black/10 rounded-md font-mono text-xs text-ink flex items-center gap-3">
                   <BookOpen className="w-[14px] h-[14px]" /> Destination B1 (42 {translate("Units")})
                 </div>
-                <div className="p-3 bg-paper-canvas border border-off-black rounded-md font-mono text-xs text-ink flex items-center gap-3">
+                <div className="p-3 bg-paper-canvas/30 border border-off-black/10 rounded-md font-mono text-xs text-ink flex items-center gap-3">
                   <BookOpen className="w-[14px] h-[14px]" /> Destination B2 (28 {translate("Units")})
                 </div>
-                <div className="p-3 bg-paper-canvas border border-off-black rounded-md font-mono text-xs text-ink flex items-center gap-3">
+                <div className="p-3 bg-paper-canvas/30 border border-off-black/10 rounded-md font-mono text-xs text-ink flex items-center gap-3">
                   <BookOpen className="w-[14px] h-[14px]" /> Destination C1 & C2 (26 {translate("Units")})
                 </div>
               </div>
@@ -85,16 +86,17 @@ export function VisualHierarchy() {
               transition={{ duration: 0.6 }}
               className="lg:order-1 flex justify-center"
             >
-              <div className="w-full max-w-[420px] bg-paper-canvas border border-off-black rounded-lg p-6 flex flex-col gap-4 relative">
-                <div className="p-4 bg-atmosphere-wash border border-off-black rounded-md flex justify-between items-center">
+              <div className="w-full max-w-[420px] liquid-glass rounded-[24px] p-6 flex flex-col gap-4 relative">
+                <div className="liquid-glass-bg" />
+                <div className="p-4 bg-atmosphere-wash/40 border border-off-black/10 rounded-md flex justify-between items-center">
                   <span className="text-xs font-mono text-ink">{translate("Unit")} 1: Present time</span>
                   <ChevronDown className="w-[14px] h-[14px] text-ink/50" />
                 </div>
-                <div className="p-4 bg-atmosphere-wash border border-off-black rounded-md flex justify-between items-center">
+                <div className="p-4 bg-atmosphere-wash/40 border border-off-black/10 rounded-md flex justify-between items-center">
                   <span className="text-xs font-mono text-ink">{translate("Unit")} 2: Past time</span>
                   <ChevronDown className="w-[14px] h-[14px] text-ink/50 rotate-180" />
                 </div>
-                <div className="p-3 bg-paper-canvas border border-off-black rounded-lg text-caption text-pale-stone font-mono -mt-2">
+                <div className="p-3 bg-paper-canvas/30 border border-off-black/10 rounded-lg text-caption text-pale-stone font-mono -mt-2">
                   {translate("Unit contents include detailed comparative structures and topic-based words.")}
                 </div>
               </div>
@@ -150,20 +152,21 @@ export function VisualHierarchy() {
               transition={{ duration: 0.6 }}
               className="flex justify-center"
             >
-              <div className="w-full max-w-[420px] bg-paper-canvas border border-off-black rounded-lg p-6 flex flex-wrap gap-2 relative">
-                <span className="text-caption font-mono bg-atmosphere-wash text-ink border border-off-black px-3 py-1 rounded-md">
+              <div className="w-full max-w-[420px] liquid-glass rounded-[24px] p-6 flex flex-wrap gap-2 relative">
+                <div className="liquid-glass-bg" />
+                <span className="text-caption font-mono bg-atmosphere-wash/40 text-ink border border-off-black/10 px-3 py-1 rounded-md">
                   {translate("Grammar")}
                 </span>
-                <span className="text-caption font-mono bg-transparent text-pale-stone border border-pale-stone px-3 py-1 rounded-md">
+                <span className="text-caption font-mono bg-transparent text-pale-stone border border-pale-stone/30 px-3 py-1 rounded-md">
                   {translate("Vocabulary")}
                 </span>
-                <span className="text-caption font-mono bg-transparent text-pale-stone border border-pale-stone px-3 py-1 rounded-md">
+                <span className="text-caption font-mono bg-transparent text-pale-stone border border-pale-stone/30 px-3 py-1 rounded-md">
                   {translate("Phrasal Verbs")}
                 </span>
-                <span className="text-caption font-mono bg-transparent text-pale-stone border border-pale-stone px-3 py-1 rounded-md">
+                <span className="text-caption font-mono bg-transparent text-pale-stone border border-pale-stone/30 px-3 py-1 rounded-md">
                   {translate("Word Formations")}
                 </span>
-                <span className="text-caption font-mono bg-transparent text-pale-stone border border-pale-stone px-3 py-1 rounded-md">
+                <span className="text-caption font-mono bg-transparent text-pale-stone border border-pale-stone/30 px-3 py-1 rounded-md">
                   {translate("Collocations")}
                 </span>
               </div>
@@ -180,18 +183,19 @@ export function VisualHierarchy() {
               transition={{ duration: 0.6 }}
               className="lg:order-1 flex justify-center"
             >
-              <div className="w-full max-w-[420px] bg-paper-canvas border border-off-black rounded-lg p-6 relative overflow-x-auto">
+              <div className="w-full max-w-[420px] liquid-glass rounded-[24px] p-6 relative overflow-x-auto">
+                <div className="liquid-glass-bg" />
                 <table className="w-full text-left text-caption border-collapse min-w-[300px] font-mono">
                   <thead>
-                    <tr className="border-b border-off-black">
+                    <tr className="border-b border-off-black/15">
                       <th className="pb-2 font-medium text-ink">{translate("Structure")}</th>
                       <th className="pb-2 font-medium text-ink">{translate("Example")}</th>
                     </tr>
                   </thead>
                   <tbody>
-                    <tr className="border-b border-pale-stone/30">
+                    <tr className="border-b border-pale-stone/20">
                       <td className="py-2.5 pr-2 font-medium text-ink">
-                        <span className="bg-atmosphere-wash border border-off-black px-2 py-0.5 rounded-md inline-block">
+                        <span className="bg-atmosphere-wash/40 border border-off-black/10 px-2 py-0.5 rounded-md inline-block">
                           wish + Past Simple
                         </span>
                       </td>
@@ -199,7 +203,7 @@ export function VisualHierarchy() {
                     </tr>
                     <tr>
                       <td className="py-2.5 pr-2 font-medium text-ink">
-                        <span className="bg-atmosphere-wash border border-off-black px-2 py-0.5 rounded-md inline-block">
+                        <span className="bg-atmosphere-wash/40 border border-off-black/10 px-2 py-0.5 rounded-md inline-block">
                           wish + Past Perfect
                         </span>
                       </td>

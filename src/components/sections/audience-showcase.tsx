@@ -38,7 +38,7 @@ export function AudienceShowcase() {
   const { translate } = useLanguage();
 
   return (
-    <section className="py-24 bg-paper-canvas border-t border-off-black">
+    <section className="py-24 bg-section-audience border-t border-off-black/10 dark:border-white/10">
       <div className="container mx-auto px-6 max-w-[1432px]">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center max-w-6xl mx-auto px-6 md:px-12 lg:px-16">
           {/* Column 1: Info and Badges */}

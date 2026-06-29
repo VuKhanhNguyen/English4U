@@ -40,7 +40,7 @@ const reasons = [
 
 export function WhyDifferentSection() {
   return (
-    <section id="why-different" className="py-24 bg-paper-canvas border-t border-off-black">
+    <section id="why-different" className="py-24 bg-section-why border-t border-off-black/10 dark:border-white/10">
       <div className="container mx-auto px-6 max-w-[1432px]">
         <div className="text-center mb-16">
           <span className="text-caption font-mono uppercase tracking-wider text-ink bg-atmosphere-wash px-3 py-1 rounded-md border border-off-black">
