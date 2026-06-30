@@ -43,10 +43,12 @@ export function AudienceShowcase() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center max-w-6xl mx-auto px-6 md:px-12 lg:px-16">
           {/* Column 1: Info and Badges */}
           <div className="lg:col-span-5">
-            <span className="text-caption font-mono uppercase tracking-wider text-ink bg-atmosphere-wash px-3 py-1 rounded-md border border-off-black">
-              {translate("Ideal Learners")}
+            <span className="section-badge">
+              <span className="text-gradient-badge">
+                {translate("Ideal Learners")}
+              </span>
             </span>
-            <h2 className="text-heading-lg font-heading text-ink mt-4 mb-6 leading-tight">
+            <h2 className="text-heading-lg font-heading text-gradient-heading mt-4 mb-6 leading-tight">
               {translate("Engineered For High-Goal Achievers")}
             </h2>
             <p className="text-body text-pale-stone mb-8 leading-relaxed font-mono">

@@ -28,10 +28,13 @@ export function BentoFeatures() {
       <div className="max-w-6xl mx-auto px-6 md:px-12 lg:px-16">
         {/* Header */}
         <div className="text-center mb-16 font-abc-diatype-mono">
-          <span className="text-xs font-normal uppercase tracking-wider text-paper-canvas bg-off-black px-3 py-1 rounded-md border border-off-black">
-            {translate("Interactive Bento Showcase")}
+          <span className="section-badge">
+            <span className="text-gradient-badge">
+              {translate("Interactive Bento Showcase")}
+            </span>
           </span>
-          <h2 className="text-heading-lg font-heading font-normal tracking-[-0.02em] text-ink mt-4 mb-4">
+          <br/>
+          <h2 className="text-heading-lg font-heading font-normal tracking-[-0.02em] text-gradient-heading mt-4 mb-4">
             {translate("Engineered For Absolute Visual Clarity")}
           </h2>
           <p className="text-body text-pale-stone max-w-2xl mx-auto">

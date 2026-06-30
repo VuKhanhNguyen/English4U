@@ -75,10 +75,10 @@ const ConstellationScene = ({ onHover }: { onHover: (word: string | null) => voi
       const v = Math.random();
       const theta = u * 2.0 * Math.PI;
       const phi = Math.acos(2.0 * v - 1.0);
-      const r = 2.4; 
-      const x = r * Math.sin(phi) * Math.cos(theta);
-      const y = r * Math.sin(phi) * Math.sin(theta);
-      const z = r * Math.cos(phi);
+      const r = 1.2 + Math.random() * 3.0; // Distribute between 1.2 and 4.2 units
+      const x = r * Math.sin(phi) * Math.cos(theta) * 2.4; // Stretched horizontally (width)
+      const y = r * Math.sin(phi) * Math.sin(theta) * 1.2; // Stretched vertically
+      const z = r * Math.cos(phi) * 0.8; // Constrained depth
       arr.push({ word: words[i], pos: [x, y, z] });
     }
     return arr;

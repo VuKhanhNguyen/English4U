@@ -94,7 +94,7 @@ export function ThreeDWorkspace() {
               {translate("Premium 3D Hub")}
             </span>
             
-            <h2 className="text-display-sm font-heading font-normal tracking-[-0.02em] text-ink mt-4 mb-6 leading-tight">
+            <h2 className="text-display-sm font-heading font-normal tracking-[-0.02em] text-gradient-heading mt-4 mb-6 leading-tight">
               {translate("Explore Through Dimensional Space")}
             </h2>
             

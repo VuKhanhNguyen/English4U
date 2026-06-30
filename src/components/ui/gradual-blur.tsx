@@ -22,6 +22,7 @@ export type GradualBlurProps = PropsWithChildren<{
   mobileWidth?: string;
   tabletWidth?: string;
   desktopWidth?: string;
+  refractive?: boolean;
 
   preset?:
     | 'top'
@@ -61,7 +62,8 @@ const DEFAULT_CONFIG: Partial<GradualBlurProps> = {
   responsive: false,
   target: 'parent',
   className: '',
-  style: {}
+  style: {},
+  refractive: true
 };
 
 const PRESETS: Record<string, Partial<GradualBlurProps>> = {
@@ -214,9 +216,10 @@ const GradualBlur: React.FC<GradualBlurProps> = props => {
         WebkitMaskImage: `linear-gradient(${direction}, ${gradient})`,
         backdropFilter: `blur(${blurValue.toFixed(3)}rem)`,
         opacity: config.opacity,
+        filter: config.refractive ? 'url(#liquid-glass-refraction)' : undefined,
         transition:
           config.animated && config.animated !== 'scroll'
-            ? `backdrop-filter ${config.duration} ${config.easing}`
+            ? `backdrop-filter ${config.duration} ${config.easing}, filter ${config.duration} ${config.easing}`
             : undefined
       };
 

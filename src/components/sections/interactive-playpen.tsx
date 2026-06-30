@@ -70,10 +70,12 @@ export function InteractivePlaypen() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           {/* Column 1: Info and Action */}
           <div className="lg:col-span-5">
-            <span className="text-xs font-normal uppercase tracking-wider text-paper-canvas bg-off-black px-3 py-1 rounded-md border border-off-black">
-              {translate("Interactive Preview")}
+            <span className="section-badge">
+              <span className="text-gradient-badge">
+                {translate("Interactive Preview")}
+              </span>
             </span>
-            <h2 className="text-display-sm font-heading font-normal tracking-[-0.02em] text-ink mt-4 mb-6 leading-tight">
+            <h2 className="text-display-sm font-heading font-normal tracking-[-0.02em] text-gradient-heading mt-4 mb-6 leading-tight">
               {translate("Experience the Power of Clean Structures")}
             </h2>
             <p className="text-body text-pale-stone mb-8 leading-relaxed">

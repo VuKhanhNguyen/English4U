@@ -39,10 +39,12 @@ export function MissionSection() {
     <section id="about" className="py-24 bg-section-mission border-t border-off-black/10 dark:border-white/10">
       <div className="container mx-auto px-6 max-w-[1432px]">
         <div className="text-center mb-16">
-          <span className="text-caption font-mono uppercase tracking-wider text-ink bg-atmosphere-wash px-3 py-1 rounded-md border border-off-black">
-            {translate("Our Mission")}
+          <span className="section-badge">
+            <span className="text-gradient-badge">
+              {translate("Our Mission")}
+            </span>
           </span>
-          <h2 className="text-heading-lg font-heading text-ink mt-4 mb-4">
+          <h2 className="text-heading-lg font-heading text-gradient-heading mt-4 mb-4">
             {translate("Simplifying The Mastery of English")}
           </h2>
           <p className="text-body font-mono text-pale-stone max-w-2xl mx-auto">

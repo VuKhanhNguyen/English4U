@@ -9,6 +9,13 @@ import { BookOpen, ChevronRight } from "lucide-react";
 import { useLanguage } from "@/components/providers/language-provider";
 import { showToast } from "@/components/ui/toast";
 
+import dynamic from "next/dynamic";
+
+const ThreeDCanvas = dynamic(() => import("../ThreeDCanvas"), {
+  ssr: false,
+  loading: () => null,
+});
+
 const books = [
   {
     id: "b1",
@@ -38,10 +45,14 @@ const books = [
 export function BookSelectionSection() {
   const { translate } = useLanguage();
   return (
-    <section id="explore" className="py-24 bg-section-explore border-b border-off-black/10 dark:border-white/10 relative">
+    <section id="explore" className="py-24 bg-section-explore border-b border-off-black/10 dark:border-white/10 relative overflow-hidden z-0">
+      {/* 3D Vocab Cloud Background */}
+      <div className="absolute inset-0 -z-10 pointer-events-none opacity-40 dark:opacity-30">
+        <ThreeDCanvas mode="constellation" onHoverWord={() => {}} />
+      </div>
       <div className="container mx-auto px-6 max-w-[1432px]">
         <div className="text-center mb-16">
-          <h2 className="text-heading-lg font-heading text-ink mb-4">
+          <h2 className="text-heading-lg font-heading text-gradient-heading mb-4">
             {translate("Choose Your Destination")}
           </h2>
           <p className="text-body font-mono text-pale-stone max-w-2xl mx-auto">

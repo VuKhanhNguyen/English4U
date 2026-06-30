@@ -14,10 +14,13 @@ export function VisualHierarchy() {
         
         {/* Header */}
         <div className="text-center mb-24">
-          <span className="text-caption font-mono uppercase tracking-wider text-ink bg-atmosphere-wash px-3 py-1 rounded-md border border-off-black">
-            {translate("Syllabus Architecture")}
+          <span className="section-badge">
+            <span className="text-gradient-badge">
+              {translate("Syllabus Architecture")}
+            </span>
           </span>
-          <h2 className="text-heading-lg font-heading text-ink mt-4 mb-4">
+          <br/>
+          <h2 className="text-heading-lg font-heading text-gradient-heading mt-4 mb-4">
             {translate("How English4U Organizes Learning")}
           </h2>
           <p className="text-body text-pale-stone max-w-2xl mx-auto font-mono">

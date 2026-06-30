@@ -14,12 +14,34 @@ export default function Home() {
       <Navbar />
       <main className="flex-grow">
         <HeroSection />
+        <div className="relative z-0 w-full overflow-hidden">
+        <div 
+            className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-80 dark:opacity-20 dark:brightness-[0.35] pointer-events-none -z-10"
+            style={{ backgroundImage: "url('/imgs/bg8.png')" }}
+          />
         <BookSelectionSection />
-        <InteractivePlaypen />
-        <ThreeDWorkspace />
-        <BentoFeatures />
-        <VisualHierarchy />
-        <AudienceShowcase />
+        </div>
+        {/* Above Slider: Shared Background Image bg6.png */}
+        <div className="relative z-0 w-full overflow-hidden">
+          <div 
+            className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-80 dark:opacity-20 dark:brightness-[0.35] pointer-events-none -z-10"
+            style={{ backgroundImage: "url('/imgs/bg4.png')" }}
+          />
+ 
+          <InteractivePlaypen />
+          {/* <ThreeDWorkspace /> */}
+          <BentoFeatures />
+        </div>
+
+        {/* Below Slider: Shared Background Image bg7.png */}
+        <div className="relative z-0 w-full overflow-hidden">
+          <div 
+            className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-80 dark:opacity-25 dark:brightness-[0.35] pointer-events-none -z-10"
+            style={{ backgroundImage: "url('/imgs/bg8.png')" }}
+          />
+          <VisualHierarchy />
+          <AudienceShowcase />
+        </div>
       </main>
       <Footer />
     </>

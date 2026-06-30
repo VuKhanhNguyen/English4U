@@ -10,6 +10,7 @@ import { useLanguage } from "@/components/providers/language-provider";
 import { useTheme } from "@/components/providers/theme-provider";
 import { showToast } from "@/components/ui/toast";
 import { usePwa } from "@/components/providers/pwa-provider";
+import GradualBlur from "@/components/ui/gradual-blur";
 
 export function Navbar() {
   const [isScrolled, setIsScrolled] = React.useState(false);
@@ -33,16 +34,27 @@ export function Navbar() {
   return (
     <header className="fixed top-4 left-0 right-0 z-50 px-4 md:px-8 pointer-events-none font-abc-diatype-mono">
       <div
-        className={`mx-auto max-w-6xl w-full h-[64px] flex items-center justify-between px-6 rounded-full border border-white/20 dark:border-white/10 bg-white/20 dark:bg-black/30 backdrop-blur-xl transition-all duration-300 pointer-events-auto`}
+        className={`relative mx-auto max-w-6xl w-full h-[64px] flex items-center justify-between px-6 rounded-full border border-white/20 dark:border-white/10 bg-white/5 dark:bg-black/10 backdrop-blur-none transition-all duration-300 pointer-events-auto`}
         style={{
           boxShadow: theme === "dark" 
             ? "0 8px 32px 0 rgba(0, 0, 0, 0.37), inset 0 1px 0 0 rgba(255, 255, 255, 0.15)"
             : "0 8px 32px 0 rgba(31, 38, 135, 0.08), inset 0 1px 0 0 rgba(255, 255, 255, 0.6)"
         }}
       >
+        {/* Gradual Blur & Refraction Background */}
+        <GradualBlur
+          preset="smooth"
+          strength={15}
+          zIndex={0}
+          height="100%"
+          width="100%"
+          className="absolute inset-0 rounded-full overflow-hidden"
+          refractive={true}
+        />
+
         <Link
           href="/"
-          className="flex items-center"
+          className="flex items-center relative z-10"
         >
           <motion.img
             src="/imgs/logo2.png"
@@ -60,9 +72,9 @@ export function Navbar() {
         </Link>
 
         {/* Desktop Nav */}
-        <nav className="hidden md:flex items-center gap-4">
+        <nav className="hidden md:flex items-center gap-4 relative z-10">
           <Link
-            href="/#about"
+            href="/"
             className="text-sm font-normal text-off-black px-[10px] py-[8px] hover:underline hover:decoration-off-black transition-all"
           >
             {translate("About")}
@@ -198,7 +210,7 @@ export function Navbar() {
           </Link>
         </nav>
 
-        <div className="hidden md:flex items-center gap-4 relative">
+        <div className="hidden md:flex items-center gap-4 relative z-10">
           <Button
             variant="ghost"
             className="h-[36px] px-4 rounded-full border border-off-black text-off-black bg-transparent hover:bg-off-black/5 active:bg-off-black/10 flex items-center gap-2 cursor-pointer font-normal"
@@ -394,7 +406,7 @@ export function Navbar() {
         {/* Mobile Menu Toggle */}
         <button
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-          className="md:hidden p-2 text-ink z-50 cursor-pointer outline-none border-none bg-transparent"
+          className="md:hidden p-2 text-ink relative z-50 cursor-pointer outline-none border-none bg-transparent"
         >
           {isMobileMenuOpen ? (
             <X className="w-[24px] h-[24px]" />

@@ -37,10 +37,12 @@ export function LearningStructureSection() {
     <section id="structure" className="py-24 bg-section-structure border-t border-off-black/10 dark:border-white/10 overflow-hidden">
       <div className="container mx-auto px-6 max-w-[1432px]">
         <div className="text-center mb-20">
-          <span className="text-caption font-mono uppercase tracking-wider text-ink bg-atmosphere-wash px-3 py-1 rounded-full border border-off-black">
-            Learning Structure
+          <span className="section-badge">
+            <span className="text-gradient-badge">
+              Learning Structure
+            </span>
           </span>
-          <h2 className="text-heading-lg font-heading text-ink mt-4 mb-4">
+          <h2 className="text-heading-lg font-heading text-gradient-heading mt-4 mb-4">
             A Clear, Visual Syllabus Hierarchy
           </h2>
           <p className="text-body font-mono text-pale-stone max-w-2xl mx-auto">
