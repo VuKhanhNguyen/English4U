@@ -8,7 +8,7 @@ All notable changes to the **English4U** project are documented below. This proj
 
 | Key Metrics         | Value / Badges                                                                                                                             |
 | :------------------ | :----------------------------------------------------------------------------------------------------------------------------------------- |
-| **Current Version** | ![Version](https://img.shields.io/badge/version-v1.6.0-blue.svg?style=for-the-badge&logo=git)                                              |
+| **Current Version** | ![Version](https://img.shields.io/badge/version-v1.6.1-blue.svg?style=for-the-badge&logo=git)                                              |
 | **Framework**       | ![Next.js](https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white)                                 |
 | **Styling**         | ![CSS](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)                                             |
 | **Language**        | ![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)                          |
@@ -34,7 +34,43 @@ gantt
     section Premium UX & Responsive
     v1.5.0 UX & Tables               :active, 2026-06-27, 2026-06-27
     v1.6.0 Cosmic Globe & Refraction :active, 2026-06-29, 2026-06-30
+    v1.6.1 Backgrounds & Typography   :active, 2026-06-30, 2026-07-01
 ```
+
+---
+
+## 🚀 v1.6.1 — Shared Backgrounds & Rainbow Typography
+
+> **Release Date:** July 1, 2026 • _Focus: Unified Shared Section Backgrounds, Calibrated Rainbow Text Gradients, 3D Background Integration & Refractive Glass Navbar_
+
+```
+┌──────────────────────────────────────────────────────────────────┐
+│  ✨ Highlights:                                                  │
+│  • Unified background wrappers using bg4.png & bg8.png images      │
+│  • Calibrated, high-end rainbow text gradients for headings/badges │
+│  • 3D Vocab Cloud Constellation integrated as a section background│
+│  • Gradual blur component converted to scroll-reactive glass      │
+│  • Gradual glassmorphism applied as the Navbar's background      │
+└──────────────────────────────────────────────────────────────────┘
+```
+
+### 🖼️ Unified Homepage Background Wrappers
+
+- **Shared Background Layouts:** Wrapped the homepage sections into two containers with inline background styles (`bg4.png` and `bg8.png`), creating a smooth visual path across sections instead of separated gradient stripes.
+- **Fixed Stacking Context:** Declared z-index stacking boundaries (`z-0` on parent, `-z-10` on absolute backgrounds) to prevent background images from slipping behind the page body canvas.
+- **404 About Redirect:** Fixed desktop and mobile navbar links to redirect "About" clicks safely back to `/` homepage, avoiding a 404 page error.
+
+### 🌈 Calibrated Rainbow Typography
+
+- **Rainbow Heading Gradients:** Replaced solid `text-ink` and simple two-color gradients with a premium, calibrated rainbow spectrum (`linear-gradient`) on all section headers. Light mode has deep, readable contrast tones while dark mode glows with vibrant neons.
+- **Synchronized Badges:** Standardized all section subtitles to a unified capsule format using `.section-badge` and `.text-gradient-badge` with synchronized rainbow text gradients.
+- **Refined Body Text Colors:** Replaced grey tones with a premium warm stone-charcoal (`#2e2a27`) in light mode and warm cream-ivory (`#eae6df`) in dark mode to maximize text legibility.
+
+### 🔮 3D Background & Refractive Glass Navbar
+
+- **3D Vocab Cloud Background:** Dynamically loaded the 3D WebGL vocab constellation in the background of the Destination level selection section (`book-selection.tsx`). Stretched coordinates horizontally ($2.4\times$) and vertically ($1.2\times$) so the cloud floats across the entire section.
+- **Refractive Gradual Blur:** Integrated scroll-velocity SVG displacement filter (`filter: url(#liquid-glass-refraction)`) into the `GradualBlur` component.
+- **Navbar Glassmorphism Background:** Replaced the static backdrop blur of the navbar with `GradualBlur`, creating a dynamic refractive fluid glass bar that warps page contents sliding underneath it during scroll without clipping dropdown controls.
 
 ---
 
@@ -54,16 +90,19 @@ gantt
 ```
 
 ### 🌍 3D Earth Globe & Orbit System
+
 - **Realistic Earth Visualization:** Built a complete 3D Earth sphere with custom vertex/fragment shading, realistic land/sea continent outlines, atmospheric glow ring, and rotational animation.
 - **Particle Satellite Rings:** Retired the black-dot sphere and created three concentric orbiting stardust rings around the Earth representing B1, B2, and C1/C2 vocabulary streams.
 - **Context Loss Recovery:** Enhanced the WebGL renderer setup to gracefully catch `webglcontextlost` events and dynamically remount the canvas.
 
 ### 🧪 Dynamic Liquid Glass Refraction
+
 - **Scroll-Reactive Refraction:** Created `LiquidGlassFilter` to compute real-time scroll velocity, warping the backdrop-filter in a fluid gợn sóng (ripple) motion during fast scrolling.
 - **Sharp Border Isolation:** Split the card aesthetics into an outer vector container (maintaining 100% crisp borders and readable text) and an inner `.liquid-glass-bg` layer containing the WebGL filter, avoiding jagged and broken lines.
 - **24px Rounding Upgrade:** Modernized the card variants' corner radii to `rounded-[24px]` for a sleeker visual appearance.
 
 ### 🎨 Vibrant Three-Color Section Gradients
+
 - **Multi-tone gradients:** Formulated three-color gradient backgrounds (`bg-section-*`) for all 11 homepage sections to support colorful glass light refraction.
 - **Visual bridging:** Redesigned the color transitions for the playpen and explore sections to prevent clashing.
 
