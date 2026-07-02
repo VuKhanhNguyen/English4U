@@ -8,7 +8,7 @@ All notable changes to the **English4U** project are documented below. This proj
 
 | Key Metrics         | Value / Badges                                                                                                                             |
 | :------------------ | :----------------------------------------------------------------------------------------------------------------------------------------- |
-| **Current Version** | ![Version](https://img.shields.io/badge/version-v1.6.1-blue.svg?style=for-the-badge&logo=git)                                              |
+| **Current Version** | ![Version](https://img.shields.io/badge/version-v1.6.2-blue.svg?style=for-the-badge&logo=git)                                              |
 | **Framework**       | ![Next.js](https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white)                                 |
 | **Styling**         | ![CSS](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)                                             |
 | **Language**        | ![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)                          |
@@ -35,7 +35,47 @@ gantt
     v1.5.0 UX & Tables               :active, 2026-06-27, 2026-06-27
     v1.6.0 Cosmic Globe & Refraction :active, 2026-06-29, 2026-06-30
     v1.6.1 Backgrounds & Typography   :active, 2026-06-30, 2026-07-01
+    v1.6.2 Tactile 3D & Soft Shadows  :active, 2026-07-01, 2026-07-02
 ```
+
+---
+
+## 🚀 v1.6.2 — Tactile 3D & Soft Shadows
+
+> **Release Date:** July 2, 2026 • _Focus: Tactile 3D Design System, Responsive Text Gradients, Full-Width Vocab Cloud, Glassmorphic Sidebar & Tab Blur, and Mobile Controls Adjustments_
+
+```
+┌──────────────────────────────────────────────────────────────────┐
+│  ✨ Highlights:                                                  │
+│  • Redesigned UI to a premium tactile 3D style using soft shadows  │
+│  • Replaced harsh solid black borders with elegant translucent ones│
+│  • Applied premium responsive text gradients in Hero & Explorer   │
+│  • Expanded interactive 3D Vocab Cloud to full viewport width     │
+│  • Applied glassmorphic backdrop-blur to Index Menu & Tabs       │
+│  • Repositioned mobile scroll buttons and built draggable index  │
+└──────────────────────────────────────────────────────────────────┘
+```
+
+### 🎨 Tactile 3D Design System & Soft Shadows
+
+- **Soft 3D Shadows:** Redefined the global `.shadow-3d-btn`, `.shadow-3d-card`, and `.shadow-3d-popup` to use a soft `--shadow-3d-color` variables (`rgba(36, 36, 36, 0.15)` in light mode, `rgba(226, 193, 97, 0.18)` in dark mode) for a smooth **gradual-blur** shadow rather than solid black blocks.
+- **Translucent Borders:** Softened `.border-3d` to use a semi-translucent gray border in light mode (`rgba(36, 36, 36, 0.12)`) and gold-tinted translucent border in dark mode, removing the solid black outlines globally.
+- **Settings & Card Overrides:** Set the navbar Settings button to use transparent borders to let the 3D soft shadow stand out, and overrode the outer Live Playground card's border to a translucent white border (`!border-white/40 dark:!border-white/10`).
+- **All Tabs 3D:** Styled all playpen tab buttons (active and inactive) to be 3D blocks. Inactive tabs now have a soft background, light borders, and soft shadows, lifting on hover.
+
+### 🌈 Premium Text Gradients & Background Layer
+
+- **Responsive Text Gradients:** Applied vibrant, responsive gradients to Hero and Learning Explorer headings (translating from charcoal/deep-purple to warm coral/fresh-mint in light mode, and stardust gold to warm peach/white in dark mode).
+- **Subtitles & Cursors:** Styled subtitles with a readable metallic fade and customized blinking typing cursors with matched gradient accents.
+- **Section Background Image:** Integrated `/imgs/bg8.png` as an absolute background image layer (`-z-10`) behind all Learning Explorer contents.
+- **Glassmorphic Index Menu & Tabs:** Applied `bg-paper-canvas/30 backdrop-blur-lg` to the desktop Left Sidebar ("Units Index") and global `TabsList` elements, rendering underlying backgrounds with premium glassmorphic frosted blur.
+
+### 📱 Mobile UI & Layout Adjustments
+
+- **Draggable Snapping Syllabus Index:** Replaced the purple syllabus button with a draggable glassmorphic bubble menu button featuring a Menu icon, including edge-snapping (16px left/right bounds) and vertical boundary clamping.
+- **WebGL Mobile Off-loading:** Disabled `<ThreeDCanvas>` rendering on screens under `768px` in `book-selection.tsx` and `ThreeDWorkspace.tsx` to optimize mobile battery life and performance.
+- **Scroll Controls Repositioning:** Moved mobile speed-sensitive scroll buttons to the bottom center of the screen (`fixed bottom-6 left-1/2 -translate-x-1/2`).
+- **Full-Width Vocab Cloud:** Restructured `book-selection.tsx` to stretch the interactive 3D Vocab cloud across the full screen viewport, letting the rounded book cards float in the center on top.
 
 ---
 

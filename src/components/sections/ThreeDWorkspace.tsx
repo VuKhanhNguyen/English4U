@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import dynamic from "next/dynamic";
 import { motion, AnimatePresence } from "framer-motion";
 import { BookOpen, Globe, Orbit, Sparkles } from "lucide-react";
@@ -50,6 +50,16 @@ export function ThreeDWorkspace() {
   const { theme } = useTheme();
   const [activeMode, setActiveMode] = useState<Mode>("constellation");
   const [hoveredWord, setHoveredWord] = useState<string | null>(null);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
 
   const tabs = [
     {
@@ -200,7 +210,21 @@ export function ThreeDWorkspace() {
           
           {/* RIGHT PANEL - WebGL Canvas */}
           <div className="lg:col-span-7 w-full h-[400px] md:h-[500px] lg:h-[550px] select-none">
-            <ThreeDCanvas mode={activeMode} onHoverWord={setHoveredWord} />
+            {isMobile ? (
+              <div className="w-full h-full flex flex-col items-center justify-center p-8 rounded-3xl border border-off-black/10 dark:border-white/10 bg-paper-canvas/30 dark:bg-black/20 backdrop-blur-md text-center">
+                <div className="w-12 h-12 rounded-full border border-off-black/15 dark:border-white/15 bg-atmosphere-wash dark:bg-white/5 flex items-center justify-center mb-4 text-pale-stone">
+                  <Sparkles className="w-6 h-6 text-stardust-gold/70 animate-pulse" />
+                </div>
+                <h4 className="text-sm font-bold text-ink mb-2">
+                  {translate("Interactive 3D Hub")}
+                </h4>
+                <p className="text-xs text-pale-stone max-w-sm leading-relaxed font-mono">
+                  {translate("Optimize your experience by viewing on a desktop device to interact with the 3D vocab constellation, grammar codex, and global networks.")}
+                </p>
+              </div>
+            ) : (
+              <ThreeDCanvas mode={activeMode} onHoverWord={setHoveredWord} />
+            )}
           </div>
 
         </div>

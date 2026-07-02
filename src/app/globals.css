@@ -249,6 +249,7 @@ html.lenis body {
   --amber-glow-gradient-color: #e2c161;
   --stardust-gold: #e2c161;
   --nebula-orange: #ffa773;
+  --shadow-3d-color: rgba(36, 36, 36, 0.15);
 
   --sky-breeze-gradient: linear-gradient(rgb(160, 181, 235), rgb(167, 252, 205));
   --honey-dew-gradient: linear-gradient(270deg, rgba(226, 193, 97, 0.7) 23.5%, rgba(243, 122, 10, 0.7) 76%);
@@ -298,6 +299,7 @@ html.lenis body {
   --sunset-violet-gradient-color: #311042;
   --sky-mint-gradient-color: #0d0f14;
   --amber-glow-gradient-color: #1b1625;
+  --shadow-3d-color: rgba(226, 193, 97, 0.18);
 
   --sky-breeze-gradient: linear-gradient(to bottom, #0d0f14, #030305);
   --honey-dew-gradient: linear-gradient(270deg, #1b1625 23.5%, #030305 76%);
@@ -390,7 +392,7 @@ html.lenis body {
   inset: 0 !important;
   z-index: -1 !important;
   pointer-events: none !important;
-  backdrop-filter: blur(12px) !important;
+  backdrop-filter: blur(5px) !important;
   filter: url(#liquid-glass-refraction) !important;
   background: rgba(255, 255, 255, 0.25) !important;
   border-radius: inherit !important;
@@ -485,4 +487,48 @@ html.lenis body {
   -webkit-text-fill-color: transparent !important;
   background-clip: text !important;
   display: inline-block;
+}
+
+/* 3D Tactile Design System */
+.border-3d {
+  border: 2px solid rgba(36, 36, 36, 0.12) !important;
+}
+.dark .border-3d {
+  border: 2px solid rgba(226, 193, 97, 0.25) !important;
+}
+
+.shadow-3d-btn {
+  box-shadow: 4px 4px 12px 0px var(--shadow-3d-color) !important;
+}
+
+.shadow-3d-card {
+  box-shadow: 8px 8px 24px 0px var(--shadow-3d-color) !important;
+}
+
+.shadow-3d-popup {
+  box-shadow: 12px 12px 36px 0px var(--shadow-3d-color) !important;
+}
+
+.press-active {
+  transition: transform 0.1s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.1s cubic-bezier(0.2, 0.8, 0.2, 1) !important;
+}
+.press-active:hover {
+  transform: translate(-1px, -1px);
+  box-shadow: 5px 5px 15px 0px var(--shadow-3d-color) !important;
+}
+.press-active:active {
+  transform: translate(2px, 2px) !important;
+  box-shadow: 2px 2px 6px 0px var(--shadow-3d-color) !important;
+}
+
+.card-press-active {
+  transition: transform 0.2s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.2s cubic-bezier(0.2, 0.8, 0.2, 1) !important;
+}
+.card-press-active:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 10px 10px 30px 0px var(--shadow-3d-color) !important;
+}
+.card-press-active:active {
+  transform: translate(4px, 4px) !important;
+  box-shadow: 4px 4px 12px 0px var(--shadow-3d-color) !important;
 }

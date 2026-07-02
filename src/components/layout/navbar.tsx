@@ -34,12 +34,7 @@ export function Navbar() {
   return (
     <header className="fixed top-4 left-0 right-0 z-50 px-4 md:px-8 pointer-events-none font-abc-diatype-mono">
       <div
-        className={`relative mx-auto max-w-6xl w-full h-[64px] flex items-center justify-between px-6 rounded-full border border-white/20 dark:border-white/10 bg-white/5 dark:bg-black/10 backdrop-blur-none transition-all duration-300 pointer-events-auto`}
-        style={{
-          boxShadow: theme === "dark" 
-            ? "0 8px 32px 0 rgba(0, 0, 0, 0.37), inset 0 1px 0 0 rgba(255, 255, 255, 0.15)"
-            : "0 8px 32px 0 rgba(31, 38, 135, 0.08), inset 0 1px 0 0 rgba(255, 255, 255, 0.6)"
-        }}
+        className={`relative mx-auto max-w-6xl w-full h-[64px] flex items-center justify-between px-6 rounded-full  border-off-black bg-white/5 dark:bg-black/10 backdrop-blur-none transition-all duration-300 pointer-events-auto shadow-[4px_4px_12px_0px_var(--shadow-3d-color)]`}
       >
         {/* Gradual Blur & Refraction Background */}
         <GradualBlur
@@ -105,12 +100,7 @@ export function Navbar() {
                     damping: 18,
                     mass: 0.8
                   }}
-                  className="absolute left-0 top-full min-w-[180px] z-50 mt-2 rounded-[30px] overflow-hidden p-4 border border-white/20 dark:border-white/10 pointer-events-auto"
-                  style={{
-                    boxShadow: theme === "dark"
-                      ? "0 20px 40px -15px rgba(0, 0, 0, 0.7), 0 10px 20px -10px rgba(0, 0, 0, 0.5)"
-                      : "0 20px 40px -15px rgba(0, 0, 0, 0.15), 0 10px 20px -10px rgba(0, 0, 0, 0.1)"
-                  }}
+                  className="absolute left-0 top-full min-w-[180px] z-50 mt-2 rounded-[30px] overflow-hidden p-4 border-2 border-off-black pointer-events-auto shadow-3d-card"
                 >
                   {/* Glass Backdrop Layer */}
                   <div
@@ -212,8 +202,8 @@ export function Navbar() {
 
         <div className="hidden md:flex items-center gap-4 relative z-10">
           <Button
-            variant="ghost"
-            className="h-[36px] px-4 rounded-full border border-off-black text-off-black bg-transparent hover:bg-off-black/5 active:bg-off-black/10 flex items-center gap-2 cursor-pointer font-normal"
+            variant="outline"
+            className="h-[36px] px-4 rounded-full text-off-black bg-transparent flex items-center gap-2 cursor-pointer font-bold !border-transparent"
             onClick={() => {
               setIsSettingsOpen(!isSettingsOpen);
               setSettingsRotation((prev) => prev + 180);
@@ -238,12 +228,7 @@ export function Navbar() {
                   damping: 18,
                   mass: 0.8
                 }}
-                className="absolute right-0 top-full min-w-[240px] z-50 mt-2 rounded-[30px] overflow-hidden p-6 border border-white/20 dark:border-white/10 flex flex-col gap-4 pointer-events-auto"
-                style={{
-                  boxShadow: theme === "dark"
-                    ? "0 20px 40px -15px rgba(0, 0, 0, 0.7), 0 10px 20px -10px rgba(0, 0, 0, 0.5)"
-                    : "0 20px 40px -15px rgba(0, 0, 0, 0.15), 0 10px 20px -10px rgba(0, 0, 0, 0.1)"
-                }}
+                className="absolute right-0 top-full min-w-[240px] z-50 mt-2 rounded-[30px] overflow-hidden p-6 border-2 border-off-black flex flex-col gap-4 pointer-events-auto shadow-3d-card"
               >
                 {/* Glass Backdrop Layer */}
                 <div
@@ -408,11 +393,7 @@ export function Navbar() {
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           className="md:hidden p-2 text-ink relative z-50 cursor-pointer outline-none border-none bg-transparent"
         >
-          {isMobileMenuOpen ? (
-            <X className="w-[24px] h-[24px]" />
-          ) : (
             <Menu className="w-[24px] h-[24px]" />
-          )}
         </button>
       </div>
 
@@ -442,12 +423,7 @@ export function Navbar() {
               animate={{ y: 0 }}
               exit={{ y: "100%" }}
               transition={{ type: "spring", damping: 25, stiffness: 220 }}
-              className="fixed bottom-0 left-0 right-0 max-h-[85vh] z-50 md:hidden rounded-t-[30px] border border-white/20 dark:border-white/10 p-6 flex flex-col pointer-events-auto overflow-hidden bg-transparent"
-              style={{
-                boxShadow: theme === "dark"
-                  ? "0 -20px 40px -15px rgba(0, 0, 0, 0.7)"
-                  : "0 -20px 40px -15px rgba(0, 0, 0, 0.15)"
-              }}
+              className="fixed bottom-0 left-0 right-0 max-h-[85vh] z-50 md:hidden rounded-t-[30px] border-t-2 border-x-2 border-off-black p-6 flex flex-col pointer-events-auto overflow-hidden bg-transparent shadow-[0_-12px_24px_0px_var(--shadow-3d-color)]"
             >
               {/* Glass Backdrop Layer */}
               <div

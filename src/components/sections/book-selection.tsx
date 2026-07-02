@@ -44,13 +44,35 @@ const books = [
 
 export function BookSelectionSection() {
   const { translate } = useLanguage();
+  const [isMobile, setIsMobile] = React.useState(false);
+
+  React.useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
+
   return (
-    <section id="explore" className="py-24 bg-section-explore border-b border-off-black/10 dark:border-white/10 relative overflow-hidden z-0">
-      {/* 3D Vocab Cloud Background */}
-      <div className="absolute inset-0 -z-10 pointer-events-none opacity-40 dark:opacity-30">
-        <ThreeDCanvas mode="constellation" onHoverWord={() => {}} />
-      </div>
-      <div className="container mx-auto px-6 max-w-[1432px]">
+    <section
+      id="explore"
+      className="w-full py-16 relative overflow-hidden z-0"
+    >
+      {/* 3D Vocab Cloud Background covering full width */}
+      {!isMobile && (
+        <div className="absolute inset-0 -z-10 pointer-events-none opacity-40 dark:opacity-30">
+          <ThreeDCanvas mode="constellation" onHoverWord={() => {}} />
+        </div>
+      )}
+
+      {/* Centered Floating 3D Glass Container */}
+      <div className="max-w-6xl mx-4 md:mx-auto py-16 px-6 md:px-12 liquid-glass border border-white/20 dark:border-white/10 rounded-[32px] shadow-3d-card relative z-10 overflow-hidden">
+        {/* Glass Backdrop Layer */}
+        <div className="liquid-glass-bg" />
+
+        <div className="w-full relative z-20">
         <div className="text-center mb-16">
           <h2 className="text-heading-lg font-heading text-gradient-heading mb-4">
             {translate("Choose Your Destination")}
@@ -131,6 +153,7 @@ export function BookSelectionSection() {
             </motion.div>
           ))}
         </div>
+      </div>
       </div>
     </section>
   );

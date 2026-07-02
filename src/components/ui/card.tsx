@@ -5,14 +5,14 @@ import { cn } from "@/lib/utils"
 const cardVariants = cva("w-full transition-all duration-200 font-mono", {
   variants: {
     variant: {
-      content: "liquid-glass rounded-[24px] p-10 transition-all duration-300",
-      shadowed: "liquid-glass rounded-[24px] p-10 shadow-lg transition-all duration-300",
-      feature: "liquid-glass rounded-[24px] p-10 transition-all duration-300",
+      content: "liquid-glass border-3d shadow-3d-card rounded-[24px] p-10 transition-all duration-300",
+      shadowed: "liquid-glass border-3d shadow-3d-card rounded-[24px] p-10 transition-all duration-300",
+      feature: "liquid-glass border-3d shadow-3d-card rounded-[24px] p-10 transition-all duration-300",
       subtle: "bg-transparent p-0 rounded-none",
-      saffron: "liquid-glass bg-honey-dew-glass-gradient rounded-[24px] p-10 text-ink shadow-sm hover:shadow-md transition-all duration-300",
-      lavender: "liquid-glass bg-sky-breeze-glass-gradient rounded-[24px] p-10 text-ink shadow-sm hover:shadow-md transition-all duration-300",
-      mint: "liquid-glass bg-sky-breeze-glass-gradient rounded-[24px] p-10 text-ink shadow-sm hover:shadow-md transition-all duration-300",
-      pink: "liquid-glass bg-sunset-violet-glass-gradient rounded-[24px] p-10 text-ink shadow-sm hover:shadow-md transition-all duration-300",
+      saffron: "liquid-glass border-3d shadow-3d-card bg-honey-dew-glass-gradient rounded-[24px] p-10 text-ink transition-all duration-300",
+      lavender: "liquid-glass border-3d shadow-3d-card bg-sky-breeze-glass-gradient rounded-[24px] p-10 text-ink transition-all duration-300",
+      mint: "liquid-glass border-3d shadow-3d-card bg-sky-breeze-glass-gradient rounded-[24px] p-10 text-ink transition-all duration-300",
+      pink: "liquid-glass border-3d shadow-3d-card bg-sunset-violet-glass-gradient rounded-[24px] p-10 text-ink transition-all duration-300",
     },
   },
   defaultVariants: {

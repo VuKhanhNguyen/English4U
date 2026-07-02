@@ -148,23 +148,32 @@ export function HeroSection({
 
       <div className="container mx-auto px-6 relative z-10 flex flex-col items-center text-center w-full">
         <h1 className={`text-display-sm md:text-display lg:text-display font-heading font-normal leading-[1.2] tracking-[-0.02em] text-ink max-w-4xl ${title2 ? 'min-h-[3.8em] sm:min-h-[2.5em] md:min-h-[2.5em]' : 'min-h-[1.9em] sm:min-h-[1.3em] md:min-h-[1.3em]'}`}>
-          <span>{t1}{hasStarted && (phase === "typing-1" || phase === "deleting-1") && (
-            <span className="animate-pulse inline-block ml-0.5 font-light text-ink">|</span>
-          )}</span>
+          <span className="bg-gradient-to-r from-off-black via-[#7d52a8] to-[#df5745] dark:from-stardust-gold dark:via-[#ffae7a] dark:to-white bg-clip-text text-transparent inline-block pb-1">
+            {t1}
+          </span>
+          {hasStarted && (phase === "typing-1" || phase === "deleting-1") && (
+            <span className="animate-pulse inline-block ml-0.5 font-light text-[#df5745] dark:text-[#ffae7a]">|</span>
+          )}
           {text2 && (
             <>
               <br />
-              <span>{t2}{hasStarted && (phase === "typing-2" || phase === "deleting-2") && (
-                <span className="animate-pulse inline-block ml-0.5 font-light text-ink">|</span>
-              )}</span>
+              <span className="bg-gradient-to-r from-off-black via-[#4e74e6] to-[#0cb88f] dark:from-white dark:via-[#9bb3f5] dark:to-[#6efac6] bg-clip-text text-transparent inline-block pb-1">
+                {t2}
+              </span>
+              {hasStarted && (phase === "typing-2" || phase === "deleting-2") && (
+                <span className="animate-pulse inline-block ml-0.5 font-light text-[#0cb88f] dark:text-[#6efac6]">|</span>
+              )}
             </>
           )}
         </h1>
 
         <p className="mt-6 text-subheading md:text-heading-sm font-mono font-normal tracking-[-0.02em] text-pale-stone max-w-2xl min-h-[8.5em] sm:min-h-[5.5em] md:min-h-[4em]">
-          <span>{t3}{hasStarted && (phase === "typing-3" || phase === "deleting-3" || phase === "paused") && (
-            <span className="animate-pulse inline-block ml-0.5 font-light text-ink">|</span>
-          )}</span>
+          <span className="bg-gradient-to-r from-pale-stone via-pale-stone/90 to-pale-stone/85 dark:from-[#eae6df] dark:via-[#eae6df]/90 dark:to-[#8c94a6] bg-clip-text text-transparent inline-block">
+            {t3}
+          </span>
+          {hasStarted && (phase === "typing-3" || phase === "deleting-3" || phase === "paused") && (
+            <span className="animate-pulse inline-block ml-0.5 font-light text-off-black dark:text-stardust-gold">|</span>
+          )}
         </p>
 
       </div>

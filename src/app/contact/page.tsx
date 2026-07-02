@@ -190,6 +190,7 @@ export default function ContactPage() {
   };
 
   return (
+      
     <div className="flex flex-col min-h-screen relative overflow-x-clip bg-paper-canvas text-ink">
       <style dangerouslySetInnerHTML={{__html: `
         .rich-editor:empty:before {
@@ -206,7 +207,11 @@ export default function ContactPage() {
         }
       `}} />
       <Navbar />
-
+<div className="relative z-0 w-full overflow-hidden">
+        <div 
+            className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-80 dark:opacity-20 dark:brightness-[0.35] pointer-events-none -z-10"
+            style={{ backgroundImage: "url('/imgs/bg8.png')" }}
+          /> 
       <main className="flex-grow pt-32 pb-24 md:pt-40 md:pb-32 z-10">
         <div className="mx-auto max-w-6xl w-full px-6 md:px-8 flex flex-col gap-12 md:gap-16">
           
@@ -579,6 +584,7 @@ export default function ContactPage() {
       </main>
 
       <Footer />
+    </div>
     </div>
   );
 }

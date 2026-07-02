@@ -552,7 +552,13 @@ export default function ResourcesPage() {
       </div>
 
       <Navbar />
-
+<div className="relative z-0 w-full overflow-hidden">
+        <div 
+            className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-80 dark:opacity-20 dark:brightness-[0.35] pointer-events-none -z-10"
+            style={{ backgroundImage: "url('/imgs/bg8.png')" }}
+          /> 
+        
+        
 
       <main className="flex-grow relative z-10 pt-[140px] pb-24">
         <Breadcrumb className="ml-20 mt-2.5 mb-5 text-xs">
@@ -1300,6 +1306,7 @@ export default function ResourcesPage() {
       </main>
 
       <Footer />
+    </div>
     </div>
   );
 }

@@ -1,12 +1,13 @@
 "use client";
 
 import * as React from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import { Search, X, List, ChevronUp, ChevronDown } from "lucide-react";
+import { motion, AnimatePresence, useAnimation } from "framer-motion";
+import { Search, X, List, ChevronUp, ChevronDown, Menu } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useLanguage } from "@/components/providers/language-provider";
 import { showToast } from "@/components/ui/toast";
 import Link from "next/link";
+import GradualBlur from "@/components/ui/gradual-blur";
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -864,6 +865,9 @@ export function LearningExplorerSection({
   const [searchQuery, setSearchQuery] = React.useState("");
   const [scrollActiveButton, setScrollActiveButton] = React.useState<"up" | "down" | null>(null);
 
+  const controls = useAnimation();
+  const isDraggingRef = React.useRef(false);
+
   React.useEffect(() => {
     if (typeof window === "undefined") return;
 
@@ -1067,7 +1071,12 @@ export function LearningExplorerSection({
   };
 
   return (
-    <section className={cn("py-16 md:py-24 bg-paper-canvas border-t border-off-black relative overflow-x-clip", className)}>
+    <section className={cn("py-16 md:py-24 bg-transparent border-t border-off-black relative overflow-x-clip z-0", className)}>
+      {/* Background Image Layer */}
+      <div 
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-80 dark:opacity-20 dark:brightness-[0.35] pointer-events-none -z-10"
+        style={{ backgroundImage: "url('/imgs/bg8.png')" }}
+      />
       
       {/* Subtle background gradient wash */}
       <div className="absolute top-0 right-0 w-[500px] h-[500px] rounded-full bg-sky-mint-gradient opacity-20 blur-[120px] pointer-events-none z-0" />
@@ -1077,16 +1086,17 @@ export function LearningExplorerSection({
         <div className={`flex flex-col md:flex-row justify-between items-end gap-4 ${hideHeader ? 'mb-4' : 'mb-12'}`}>
           {!hideHeader && (
             <div>
-              <h2 className="text-heading-lg font-heading text-ink mb-4">
+                 <h2 className="text-heading-lg font-heading bg-gradient-to-r from-off-black via-[#7d52a8] to-[#4e74e6] dark:from-stardust-gold dark:via-[#ffae7a] dark:to-white bg-clip-text text-transparent mb-4 inline-block pb-1">
                 {translate("Learning Explorer")}
               </h2>
-              <p className="text-body font-mono text-pale-stone max-w-xl">
+              <br />
+              <p className="text-body font-mono max-w-xl bg-gradient-to-r from-pale-stone via-pale-stone/90 to-pale-stone/85 dark:from-[#eae6df] dark:via-[#eae6df]/90 dark:to-[#8c94a6] bg-clip-text text-transparent inline-block">
                 {translate("Dive deep into the structured content. Expand a unit, select a category, use the search to quickly find specific rules or vocabulary.")}
               </p>
             </div>
           )}
 
- <Breadcrumb className="ml-5 mt-5 text-xs">
+              <Breadcrumb className="ml-5 mt-5 text-xs">
                 <BreadcrumbList>
                   <BreadcrumbItem>
                     <BreadcrumbLink href="/" asChild>
@@ -1110,7 +1120,7 @@ export function LearningExplorerSection({
             />
           </div> */}
         </div>
-
+        
         {/* Book Tabs - Hide if a specific level is requested */}
         {!bookLevel ? (
           <div className="mb-8">
@@ -1152,7 +1162,7 @@ export function LearningExplorerSection({
         {/* Units Accordion Layout (with Left Sidebar on Desktop) */}
         <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-start relative">
           {/* Desktop Left Sidebar */}
-          <aside data-lenis-prevent className="hidden md:flex md:col-span-4 lg:col-span-3 sticky top-[110px] h-[calc(100vh-150px)] flex-col bg-paper-canvas/90 dark:bg-zinc-900/40 backdrop-blur-md rounded-lg p-5 shadow-sm select-none overflow-hidden overscroll-y-auto">
+          <aside data-lenis-prevent className="hidden md:flex rounded-[24px] md:col-span-4 lg:col-span-3 sticky top-[110px] h-[calc(100vh-150px)] flex-col bg-paper-canvas/30 backdrop-blur-lg dark:bg-zinc-900/20 p-5 border-2 border-off-black/15 shadow-3d-card select-none overflow-hidden overscroll-y-auto">
             <div className="mb-4 shrink-0 pb-3 border-b border-off-black/5 dark:border-white/5">
               <h3 className="font-heading font-bold text-xs uppercase tracking-wider text-pale-stone mb-1">
                 {translate("Units Index")}
@@ -1171,10 +1181,10 @@ export function LearningExplorerSection({
                     data-unit-id={unit.id}
                     onClick={() => handleUnitClick(unit.id)}
                     className={cn(
-                      "w-full text-left px-4 py-3 rounded-lg transition-all duration-200 font-mono text-xs border flex flex-col gap-1 items-start cursor-pointer outline-none relative overflow-hidden",
+                      "w-full text-left px-4 py-3 rounded-[24px] transition-all duration-200 font-mono text-xs border-2 flex flex-col gap-1 items-start cursor-pointer outline-none relative overflow-hidden",
                       isActive
-                        ? "bg-atmosphere-wash/50 dark:bg-atmosphere-wash/20 border-off-black/20 dark:border-white/15 text-ink font-bold shadow-sm"
-                        : "bg-paper-canvas/20 border-off-black/5 dark:border-white/5 text-pale-stone hover:bg-atmosphere-wash/30 dark:hover:bg-atmosphere-wash/10 hover:text-ink hover:border-off-black/10 dark:hover:border-white/10"
+                        ? "bg-atmosphere-wash/50 dark:bg-atmosphere-wash/20 border-off-black text-ink font-bold shadow-[2px_2px_6px_0px_var(--shadow-3d-color)] translate-x-[1px] translate-y-[1px]"
+                        : "bg-paper-canvas/20 border-transparent text-pale-stone hover:bg-atmosphere-wash/30 dark:hover:bg-atmosphere-wash/10 hover:text-ink hover:border-off-black/20 hover:shadow-[1px_1px_3px_0px_var(--shadow-3d-color)]"
                     )}
                   >
                     {/* Active left indicator line */}
@@ -1849,15 +1859,69 @@ export function LearningExplorerSection({
 
     {/* Mobile FAB and Bottom Sheet Drawer */}
     <div className="md:hidden">
-      {/* Floating Action Button */}
+      {/* Floating Action Button (Draggable Bubble) */}
       <motion.button
-        whileHover={{ scale: 1.05 }}
-        whileTap={{ scale: 0.95 }}
-        onClick={() => setIsMobileDrawerOpen(true)}
-        className="fixed bottom-6 right-6 z-40 bg-indigo-600 text-white rounded-full px-5 py-3 shadow-xl flex items-center gap-2 border border-indigo-500 font-mono text-xs cursor-pointer hover:bg-indigo-700 transition-colors"
+        drag
+        dragElastic={0.1}
+        dragMomentum={false}
+        animate={controls}
+        onDragStart={() => {
+          isDraggingRef.current = true;
+        }}
+        onDragEnd={(event, info) => {
+          if (typeof window === "undefined") return;
+          const screenWidth = window.innerWidth;
+          const screenHeight = window.innerHeight;
+          const x = info.point.x;
+          
+          let targetX = 0;
+          if (x < screenWidth / 2) {
+            // Snap to left edge (16px padding from left)
+            targetX = 88 - screenWidth;
+          } else {
+            // Snap to right edge (16px padding from right)
+            targetX = 8;
+          }
+
+          // Constrain Y within safe vertical boundaries
+          let targetY = info.offset.y;
+          const initialY = screenHeight - 144; // Approx top position based on bottom-24
+          const currentY = initialY + targetY;
+          
+          if (currentY < 80) {
+            targetY = 224 - screenHeight;
+          } else if (currentY > screenHeight - 80) {
+            targetY = 64;
+          }
+
+          controls.start({
+            x: targetX,
+            y: targetY,
+            transition: { type: "spring", stiffness: 300, damping: 20 }
+          });
+          
+          setTimeout(() => {
+            isDraggingRef.current = false;
+          }, 50);
+        }}
+        onClick={() => {
+          if (isDraggingRef.current) return;
+          setIsMobileDrawerOpen(true);
+        }}
+        className="fixed bottom-24 right-6 z-40 w-12 h-12 rounded-full shadow-xl flex items-center justify-center border border-off-black/15 dark:border-white/15 text-ink cursor-pointer overflow-hidden bg-white/5 dark:bg-black/10 backdrop-blur-none"
+        style={{ touchAction: "none" }}
       >
-        <List className="w-4 h-4" />
-        <span>{translate("Syllabus Index")}</span>
+        {/* Gradual Blur Background */}
+        <GradualBlur
+          preset="smooth"
+          strength={15}
+          zIndex={0}
+          height="100%"
+          width="100%"
+          className="absolute inset-0 rounded-full overflow-hidden"
+          refractive={true}
+        />
+        <Menu className="w-5 h-5 relative z-10 text-ink" />
       </motion.button>
 
       {/* Drawer Overlay & Bottom Sheet */}
@@ -1879,7 +1943,7 @@ export function LearningExplorerSection({
               animate={{ y: 0 }}
               exit={{ y: "100%" }}
               transition={{ type: "spring", damping: 25, stiffness: 220 }}
-              className="fixed bottom-0 left-0 right-0 max-h-[80vh] bg-paper-canvas rounded-t-[32px] border-t border-off-black/20 shadow-2xl z-50 p-6 flex flex-col pointer-events-auto overflow-hidden"
+              className="fixed bottom-0 left-0 right-0 max-h-[80vh] bg-paper-canvas rounded-t-[32px] border-t-2 border-x-2 border-off-black shadow-[0_-12px_24px_0px_var(--shadow-3d-color)] z-50 p-6 flex flex-col pointer-events-auto overflow-hidden"
             >
               {/* Drag handle indicator */}
               <div className="w-12 h-1.5 bg-off-black/10 dark:bg-white/10 rounded-full mx-auto mb-6 shrink-0" />
@@ -1913,10 +1977,10 @@ export function LearningExplorerSection({
                       data-unit-id={unit.id}
                       onClick={() => handleUnitClick(unit.id)}
                       className={cn(
-                        "w-full text-left px-4 py-3 rounded-lg transition-all duration-200 font-mono text-xs border flex flex-col gap-1 items-start cursor-pointer outline-none relative overflow-hidden",
+                        "w-full text-left px-4 py-3 rounded-lg transition-all duration-200 font-mono text-xs border-2 flex flex-col gap-1 items-start cursor-pointer outline-none relative overflow-hidden",
                         isActive
-                          ? "bg-atmosphere-wash/50 dark:bg-atmosphere-wash/20 border-off-black/20 dark:border-white/15 text-ink font-bold shadow-sm"
-                          : "bg-paper-canvas/20 border-off-black/5 dark:border-white/5 text-pale-stone hover:bg-atmosphere-wash/30 dark:hover:bg-atmosphere-wash/10 hover:text-ink hover:border-off-black/10 dark:hover:border-white/10"
+                          ? "bg-atmosphere-wash/50 dark:bg-atmosphere-wash/20 border-off-black text-ink font-bold shadow-[2px_2px_6px_0px_var(--shadow-3d-color)] translate-x-[1px] translate-y-[1px]"
+                          : "bg-paper-canvas/20 border-transparent text-pale-stone hover:bg-atmosphere-wash/30 dark:hover:bg-atmosphere-wash/10 hover:text-ink hover:border-off-black/20 hover:shadow-[1px_1px_3px_0px_var(--shadow-3d-color)]"
                       )}
                     >
                       {isActive && (
@@ -1945,11 +2009,11 @@ export function LearningExplorerSection({
     <AnimatePresence>
       {scrollActiveButton && (
         <motion.div
-          initial={{ opacity: 0, scale: 0.8, x: 20 }}
-          animate={{ opacity: 1, scale: 1, x: 0 }}
-          exit={{ opacity: 0, scale: 0.8, x: 20 }}
+          initial={{ opacity: 0, scale: 0.8, y: 20 }}
+          animate={{ opacity: 1, scale: 1, y: 0 }}
+          exit={{ opacity: 0, scale: 0.8, y: 20 }}
           transition={{ type: "spring", stiffness: 300, damping: 25 }}
-          className="fixed right-4 top-1/2 -translate-y-1/2 z-50 md:hidden pointer-events-auto"
+          className="fixed bottom-6 left-1/2 -translate-x-1/2 z-50 md:hidden pointer-events-auto"
         >
           {scrollActiveButton === "up" ? (
             <motion.button
@@ -1976,6 +2040,7 @@ export function LearningExplorerSection({
       )}
     </AnimatePresence>
   </div>
+
 </section>
   );
 }

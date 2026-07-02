@@ -78,7 +78,7 @@ export default function RootLayout({
                 <PageTransitionLoader />
                 <SplashCursor />
                 {/* <TargetCursor /> */}
-                <GradualBlur preset="page-footer" zIndex={40} height="50px" />
+                <GradualBlur preset="page-footer" zIndex={40} height="36px"  />
                 <div className="fixed inset-0 pointer-events-none -z-10 overflow-hidden">
                   <ParallaxBackground />
                 </div>
