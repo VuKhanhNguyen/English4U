@@ -170,6 +170,16 @@ const useIntersectionObserver = (ref: React.RefObject<HTMLDivElement | null>, sh
 const GradualBlur: React.FC<GradualBlurProps> = props => {
   const containerRef = useRef<HTMLDivElement>(null);
   const [isHovered, setIsHovered] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    if (typeof window === 'undefined') return;
+    const media = window.matchMedia('(pointer: coarse) or (max-width: 768px)');
+    setIsMobile(media.matches);
+    const listener = (e: MediaQueryListEvent) => setIsMobile(e.matches);
+    media.addEventListener('change', listener);
+    return () => media.removeEventListener('change', listener);
+  }, []);
 
   const config = useMemo(() => {
     const presetConfig = props.preset && PRESETS[props.preset] ? PRESETS[props.preset] : {};
@@ -183,6 +193,18 @@ const GradualBlur: React.FC<GradualBlurProps> = props => {
 
   const blurDivs = useMemo(() => {
     const divs: React.ReactNode[] = [];
+    const direction = getGradientDirection(config.position);
+
+    if (isMobile) {
+      // Mobile optimization: Render a single simple gradient layer instead of multiple backdrop blurs
+      const divStyle: CSSProperties = {
+        background: `linear-gradient(${direction}, transparent 0%, var(--paper-canvas) 100%)`,
+        opacity: config.opacity,
+      };
+      divs.push(<div key="mobile-flat-fade" className="absolute inset-0" style={divStyle} />);
+      return divs;
+    }
+
     const increment = 100 / config.divCount;
     const currentStrength =
       isHovered && config.hoverIntensity ? config.strength * config.hoverIntensity : config.strength;
@@ -209,8 +231,6 @@ const GradualBlur: React.FC<GradualBlurProps> = props => {
       if (p3 <= 100) gradient += `, black ${p3}%`;
       if (p4 <= 100) gradient += `, transparent ${p4}%`;
 
-      const direction = getGradientDirection(config.position);
-
       const divStyle: CSSProperties = {
         maskImage: `linear-gradient(${direction}, ${gradient})`,
         WebkitMaskImage: `linear-gradient(${direction}, ${gradient})`,
@@ -227,7 +247,7 @@ const GradualBlur: React.FC<GradualBlurProps> = props => {
     }
 
     return divs;
-  }, [config, isHovered]);
+  }, [config, isHovered, isMobile]);
 
   const containerStyle: CSSProperties = useMemo(() => {
     const isVertical = ['top', 'bottom'].includes(config.position);

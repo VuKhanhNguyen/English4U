@@ -533,3 +533,46 @@ html.lenis body {
   transform: translate(4px, 4px) !important;
   box-shadow: 4px 4px 12px 0px var(--shadow-3d-color) !important;
 }
+
+/* Mobile and Touch Performance Optimizations */
+@media (pointer: coarse) {
+  /* Disable backdrop-filter on touch/mobile to prevent severe scroll lag and rasterization delay */
+  .liquid-glass-bg {
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+    background: rgba(255, 255, 255, 0.85) !important;
+  }
+  
+  .dark .liquid-glass-bg {
+    background: rgba(13, 17, 28, 0.9) !important;
+  }
+
+  /* Apply paint containment to liquid-glass cards so browser can skip rendering them when offscreen */
+  .liquid-glass {
+    contain: paint !important;
+  }
+
+  /* Simplify 3D button and card shadows to minimize rasterization overhead on mobile GPU */
+  .shadow-3d-btn {
+    box-shadow: 2px 2px 4px 0px var(--shadow-3d-color) !important;
+  }
+
+  .shadow-3d-card {
+    box-shadow: 3px 3px 8px 0px var(--shadow-3d-color) !important;
+  }
+
+  .shadow-3d-popup {
+    box-shadow: 4px 4px 12px 0px var(--shadow-3d-color) !important;
+  }
+
+  /* Disable hover transforms on touch screens to prevent sticky hover states and layout shifts */
+  .press-active:hover {
+    transform: none !important;
+    box-shadow: 2px 2px 4px 0px var(--shadow-3d-color) !important;
+  }
+  
+  .card-press-active:hover {
+    transform: none !important;
+    box-shadow: 3px 3px 8px 0px var(--shadow-3d-color) !important;
+  }
+}

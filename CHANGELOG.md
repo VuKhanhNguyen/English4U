@@ -8,7 +8,7 @@ All notable changes to the **English4U** project are documented below. This proj
 
 | Key Metrics         | Value / Badges                                                                                                                             |
 | :------------------ | :----------------------------------------------------------------------------------------------------------------------------------------- |
-| **Current Version** | ![Version](https://img.shields.io/badge/version-v1.6.4-blue.svg?style=for-the-badge&logo=git)                                              |
+| **Current Version** | ![Version](https://img.shields.io/badge/version-v1.6.5-blue.svg?style=for-the-badge&logo=git)                                              |
 | **Framework**       | ![Next.js](https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white)                                 |
 | **Styling**         | ![CSS](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)                                             |
 | **Language**        | ![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)                          |
@@ -38,7 +38,35 @@ gantt
     v1.6.2 Tactile 3D & Soft Shadows  :active, 2026-07-01, 2026-07-02
     v1.6.3 Mobile Optim & Redesigns   :active, 2026-07-02, 2026-07-02
     v1.6.4 Mobile Scroll & Lag Fixes   :active, 2026-07-02, 2026-07-02
+    v1.6.5 Mobile Render & Scroll Optim:active, 2026-07-03, 2026-07-03
 ```
+
+---
+
+## 🚀 v1.6.5 — Mobile Render & Scroll Optimizations
+
+> **Release Date:** July 3, 2026 • _Focus: Eliminating Heavy Backdrop Filters on Touch Devices, Optimizing 3D Shadows, and Simplifying Progressive Blurs_
+
+```
+┌──────────────────────────────────────────────────────────────────┐
+│  ✨ Highlights:                                                  │
+│  • Simplified GradualBlur on mobile/touch screens to render a    │
+│    single CSS gradient layer instead of 5 backdrop-blur layers   │
+│  • Disabled backdrop-filter on .liquid-glass-bg for touch screens│
+│    to eliminate scroll stutter in card-heavy interfaces          │
+│  • Applied CSS paint containment (contain: paint) to cards on    │
+│    mobile to allow browser rendering engine to skip off-screen rendering│
+│  • Optimized 3D button and card shadows to use smaller blur/spread│
+│    sizes on touch devices, reducing mobile GPU rasterization stress│
+│  • Disabled hover translations on mobile to prevent sticky states│
+└──────────────────────────────────────────────────────────────────┘
+```
+
+### ⚡ Rendering & Mobile Scroll Optimizations
+- **GradualBlur Performance**: Enhanced `<GradualBlur>` with a runtime `isMobile` check (using `matchMedia` pointer coarse & viewport size), replacing the heavy multi-layer blur cascade with a single, highly performant CSS gradient layer fading to `var(--paper-canvas)`.
+- **Mobile Backdrop-Filter Bypass**: Modified `.liquid-glass-bg` on mobile to disable `backdrop-filter: blur`, replacing it with a slightly more opaque solid alpha color to maintain text readability without the high drawing cost.
+- **CSS Paint Containment**: Added `contain: paint !important` to `.liquid-glass` cards on touch screens, instructing the rendering engine to clip and optimize paint updates outside the bounding box, saving viewport rasterization CPU cycles.
+- **3D Shadow Simplification**: Scaled down shadow sizes (`box-shadow`) on mobile screens to minimize blur calculations, and turned off hover transforms on `pointer: coarse` screens to avoid unnecessary layout triggers on tap events.
 
 ---
 
