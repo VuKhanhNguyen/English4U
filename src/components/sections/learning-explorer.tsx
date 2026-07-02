@@ -1225,9 +1225,9 @@ export function LearningExplorerSection({
                     key={unit.id}
                     value={unit.id}
                     id={`scroll-unit-${unit.id}`}
-                    className="border-b border-pale-stone scroll-mt-[110px]"
+                    className="border-b border-pale-stone scroll-mt-[110px] mx-4 sm:mx-6"
                   >
-                <AccordionTrigger className="text-subheading font-mono font-medium hover:no-underline py-5 text-ink">
+                <AccordionTrigger className="text-subheading font-mono font-medium hover:no-underline py-5 px-2 sm:px-4 text-left text-ink">
                   {unit.title}
                 </AccordionTrigger>
                 <AccordionContent className="pt-2 pb-6">

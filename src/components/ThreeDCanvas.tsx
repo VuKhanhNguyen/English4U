@@ -400,6 +400,7 @@ export default function ThreeDCanvas({ mode, onHoverWord }: ThreeDCanvasProps) {
           <ConstellationScene onHover={onHoverWord} />
         )}
         
+        {/* Temporarily commented out grammar code and global network to prevent mobile lag
         {mode === "book" && (
           <GlassmorphicBook />
         )}
@@ -407,6 +408,7 @@ export default function ThreeDCanvas({ mode, onHoverWord }: ThreeDCanvasProps) {
         {mode === "globe" && (
           <SolidEarthGlobe />
         )}
+        */}
 
         <OrbitControls 
           enableZoom={false} 

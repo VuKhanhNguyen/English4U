@@ -393,7 +393,8 @@ html.lenis body {
   z-index: -1 !important;
   pointer-events: none !important;
   backdrop-filter: blur(5px) !important;
-  filter: url(#liquid-glass-refraction) !important;
+  /* Disabled water wave refraction effect on desktop and mobile */
+  /* filter: url(#liquid-glass-refraction) !important; */
   background: rgba(255, 255, 255, 0.25) !important;
   border-radius: inherit !important;
 }

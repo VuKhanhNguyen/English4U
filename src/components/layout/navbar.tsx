@@ -703,7 +703,7 @@ const GlassFilter: React.FC = () => (
         <feDisplacementMap
           in="SourceGraphic"
           in2="softMap"
-          scale="30"
+          scale="0"
           xChannelSelector="R"
           yChannelSelector="G"
         />

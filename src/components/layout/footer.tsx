@@ -124,7 +124,7 @@ export function Footer() {
             {/* Social Icons */}
             <div className="flex items-center gap-3">
               <SocialIcon 
-                url="https://linkedin.com" 
+                url="https://www.linkedin.com/in/v%C5%A9-khanh-nguy%E1%BB%85n-020a563a9/" 
                 bgColor="transparent" 
                 fgColor="#8ea0b5" 
                 style={{ height: 35, width: 35 }}
@@ -134,7 +134,7 @@ export function Footer() {
                 className="hover:scale-110 transition-transform duration-200"
               />
               <SocialIcon 
-                url="https://facebook.com" 
+                url="https://www.facebook.com/vukhanh.nguyen.9461?locale=vi_VN" 
                 bgColor="transparent" 
                 fgColor="#8ea0b5" 
                 style={{ height: 35, width: 35 }}
@@ -144,7 +144,7 @@ export function Footer() {
                 className="hover:scale-110 transition-transform duration-200"
               />
               <SocialIcon 
-                url="https://github.com" 
+                url="https://github.com/VuKhanhNguyen" 
                 bgColor="transparent" 
                 fgColor="#8ea0b5" 
                 style={{ height: 35, width: 35 }}

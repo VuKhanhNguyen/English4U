@@ -45,8 +45,10 @@ const books = [
 export function BookSelectionSection() {
   const { translate } = useLanguage();
   const [isMobile, setIsMobile] = React.useState(false);
+  const [mounted, setMounted] = React.useState(false);
 
   React.useEffect(() => {
+    setMounted(true);
     const checkMobile = () => {
       setIsMobile(window.innerWidth <= 768);
     };
@@ -61,7 +63,7 @@ export function BookSelectionSection() {
       className="w-full py-16 relative overflow-hidden z-0"
     >
       {/* 3D Vocab Cloud Background covering full width */}
-      {!isMobile && (
+      {mounted && !isMobile && (
         <div className="absolute inset-0 -z-10 pointer-events-none opacity-40 dark:opacity-30">
           <ThreeDCanvas mode="constellation" onHoverWord={() => {}} />
         </div>

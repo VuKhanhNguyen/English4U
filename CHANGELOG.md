@@ -8,7 +8,7 @@ All notable changes to the **English4U** project are documented below. This proj
 
 | Key Metrics         | Value / Badges                                                                                                                             |
 | :------------------ | :----------------------------------------------------------------------------------------------------------------------------------------- |
-| **Current Version** | ![Version](https://img.shields.io/badge/version-v1.6.2-blue.svg?style=for-the-badge&logo=git)                                              |
+| **Current Version** | ![Version](https://img.shields.io/badge/version-v1.6.3-blue.svg?style=for-the-badge&logo=git)                                              |
 | **Framework**       | ![Next.js](https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white)                                 |
 | **Styling**         | ![CSS](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)                                             |
 | **Language**        | ![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)                          |
@@ -36,7 +36,43 @@ gantt
     v1.6.0 Cosmic Globe & Refraction :active, 2026-06-29, 2026-06-30
     v1.6.1 Backgrounds & Typography   :active, 2026-06-30, 2026-07-01
     v1.6.2 Tactile 3D & Soft Shadows  :active, 2026-07-01, 2026-07-02
+    v1.6.3 Mobile Optim & Redesigns   :active, 2026-07-02, 2026-07-02
 ```
+
+---
+
+## 🚀 v1.6.3 — Mobile Optimization & Contact Redesign
+
+> **Release Date:** July 2, 2026 • _Focus: Performance Optimizations, Mobile Lag Reductions, Contact Page Premium Glassmorphism, and Learning Explorer Spacing & Alignment Fixes_
+
+```
+┌──────────────────────────────────────────────────────────────────┐
+│  ✨ Highlights:                                                  │
+│  • Eliminated mobile WebGL initialization lag by safeguarding     │
+│    ThreeDCanvas with mounted/hydration checks and responsive bounds│
+│  • Disabled dynamic displacement filters & shimmer tickers globally│
+│  • Temporarily disabled unused 3D Grammar Book & Global Globe      │
+│  • Redesigned Contact Page to a premium responsive glassmorphic    │
+│    asymmetric layout with modern title gradients & unified cards  │
+│  • Fixed Mobile Learning Explorer unit titles alignment and       │
+│    shortened the unit dividers with horizontal margin indents      │
+└──────────────────────────────────────────────────────────────────┘
+
+### ⚡ Performance & Mobile Optimizations
+- **ThreeDCanvas Safeguard**: Added `mounted` state checking to prevent WebGL contexts from rendering on mobile devices during initial hydration/paint.
+- **Liquid Glass Displacements**: Commented out SVG wave refraction displacement filters on all cards and dropdowns to improve scrolling performance on both desktop and mobile.
+- **3D Scenes Restructuring**: Commented out the unused conditional rendering loops for the 3D Grammar Codex book and Global Network globe inside `<ThreeDCanvas>` to reduce render loop thread weight.
+
+### 🎨 Premium UI & Redesigns
+- **Contact Page**: Redesigned the entire route into a premium asymmetric dual-card interface.
+  - Wrapped both columns in `.liquid-glass .border-3d .shadow-3d-card` containers with generous responsive paddings (`p-6 sm:p-8 md:p-10`) and modern rounded corners (`rounded-[30px]`).
+  - Added a modern color-gradient text-gradient to the `"Keep in touch."` title.
+  - Aligned inputs, file uploads, text areas, and social media channels onto a layered, clean glass surface.
+  - Fixed responsive title scaling to prevent wrapping issues on small mobile devices.
+
+### 🐛 Layout & Bug Fixes
+- **Learning Explorer Title Alignment**: Added `text-left` and `px-2 sm:px-4` to the unit accordion triggers in `learning-explorer.tsx` to prevent default browser centering on mobile buttons.
+- **Unit Divider Line Length**: Indented `<AccordionItem>` elements using `mx-4 sm:mx-6` to make the bottom border lines shorter and avoid touching the outer card borders.
 
 ---
 

@@ -51,8 +51,10 @@ export function ThreeDWorkspace() {
   const [activeMode, setActiveMode] = useState<Mode>("constellation");
   const [hoveredWord, setHoveredWord] = useState<string | null>(null);
   const [isMobile, setIsMobile] = useState(false);
+  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
+    setMounted(true);
     const checkMobile = () => {
       setIsMobile(window.innerWidth <= 768);
     };
@@ -70,6 +72,7 @@ export function ThreeDWorkspace() {
       descVi: "Vũ trụ từ vựng 3D tương tác. Di chuột để tra cứu nhanh nguồn gốc ngữ nghĩa.",
       icon: Orbit
     },
+    /* Temporarily commented out grammar code and global network to prevent mobile lag
     {
       id: "book" as Mode,
       label: "Grammar Codex",
@@ -86,6 +89,7 @@ export function ThreeDWorkspace() {
       descVi: "Quả cầu tinh thể biểu trưng cho mạng lưới học viên kết nối toàn cầu.",
       icon: Globe
     }
+    */
   ];
 
   return (
@@ -210,7 +214,7 @@ export function ThreeDWorkspace() {
           
           {/* RIGHT PANEL - WebGL Canvas */}
           <div className="lg:col-span-7 w-full h-[400px] md:h-[500px] lg:h-[550px] select-none">
-            {isMobile ? (
+            {!mounted || isMobile ? (
               <div className="w-full h-full flex flex-col items-center justify-center p-8 rounded-3xl border border-off-black/10 dark:border-white/10 bg-paper-canvas/30 dark:bg-black/20 backdrop-blur-md text-center">
                 <div className="w-12 h-12 rounded-full border border-off-black/15 dark:border-white/15 bg-atmosphere-wash dark:bg-white/5 flex items-center justify-center mb-4 text-pale-stone">
                   <Sparkles className="w-6 h-6 text-stardust-gold/70 animate-pulse" />

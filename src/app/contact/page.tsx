@@ -212,16 +212,16 @@ export default function ContactPage() {
             className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-80 dark:opacity-20 dark:brightness-[0.35] pointer-events-none -z-10"
             style={{ backgroundImage: "url('/imgs/bg8.png')" }}
           /> 
-      <main className="flex-grow pt-32 pb-24 md:pt-40 md:pb-32 z-10">
+      <main className="flex-grow pt-28 pb-20 md:pt-36 md:pb-28 z-10">
         <div className="mx-auto max-w-6xl w-full px-6 md:px-8 flex flex-col gap-12 md:gap-16">
           
-          {/* Header Section (Typographic Brutalism) */}
-          <div className="flex flex-col gap-4 max-w-4xl mt-28">
+          {/* Header Section (Modern Typographic Gradient) */}
+          <div className="flex flex-col gap-4 max-w-4xl mt-12 md:mt-20">
             <motion.h1 
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, ease: "easeOut" }}
-              className="font-heading text-6xl sm:text-7xl md:text-8xl text-ink tracking-tight font-normal leading-[1.05]"
+              className="font-heading text-4xl sm:text-6xl md:text-8xl text-gradient-heading tracking-tight font-normal leading-[1.05] pb-1"
             >
               {translate("Keep in touch.")}
             </motion.h1>
@@ -229,7 +229,7 @@ export default function ContactPage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.1, ease: "easeOut" }}
-              className="font-mono text-sm md:text-base text-pale-stone max-w-2xl leading-relaxed mt-2"
+              className="font-mono text-xs sm:text-sm md:text-base text-pale-stone max-w-2xl leading-relaxed mt-2"
             >
               {translate("Get in touch for collaborations, questions, or just a friendly hello.")}
             </motion.p>
@@ -251,10 +251,11 @@ export default function ContactPage() {
               initial={{ opacity: 0, x: -30 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6, delay: 0.3, ease: "easeOut" }}
-              className="lg:col-span-5 bg-atmosphere-wash dark:bg-atmosphere-wash p-8 md:p-10 rounded-lg border border-ink/5 dark:border-white/5 flex flex-col gap-8"
+              className="lg:col-span-5 liquid-glass border-3d shadow-3d-card p-6 sm:p-8 md:p-10 rounded-[30px] flex flex-col gap-8 relative overflow-hidden"
             >
+              <div className="liquid-glass-bg" />
               {/* Avatar / Brand Illustration */}
-              <div className="relative w-full aspect-[4/3] rounded-md overflow-hidden bg-gradient-to-tr from-[#a0b5eb] to-[#ffa773] dark:from-[#1e1b4b] dark:to-[#311042] border border-ink/10 dark:border-white/10 flex items-center justify-center">
+              <div className="relative w-full aspect-[4/3] rounded-[20px] overflow-hidden bg-gradient-to-tr from-[#a0b5eb] to-[#ffa773] dark:from-[#1e1b4b] dark:to-[#311042] border border-ink/10 dark:border-white/10 flex items-center justify-center relative z-10">
                 <img
                   src="/imgs/contact-illustration.png"
                   alt="Contact Illustration"
@@ -267,7 +268,7 @@ export default function ContactPage() {
               </div>
 
               {/* Text Info */}
-              <div className="flex flex-col gap-6 font-mono text-sm text-ink">
+              <div className="flex flex-col gap-6 font-mono text-sm text-ink relative z-10">
                 <div className="flex items-start gap-3">
                   <Briefcase className="w-4 h-4 mt-1 text-pale-stone flex-shrink-0" />
                   <div>
@@ -309,13 +310,13 @@ export default function ContactPage() {
               </div>
 
               {/* Social Channels */}
-              <div className="flex flex-col gap-3 pt-4 border-t border-ink/10 dark:border-white/10">
+              <div className="flex flex-col gap-3 pt-4 border-t border-ink/10 dark:border-white/10 relative z-10">
                 <span className="font-mono text-[11px] uppercase tracking-wider text-pale-stone">
                   {translate("Find me on")}
                 </span>
                 <div className="flex items-center gap-3">
                   <SocialIcon 
-                    url="https://linkedin.com" 
+                    url="https://www.linkedin.com/in/v%C5%A9-khanh-nguy%E1%BB%85n-020a563a9/" 
                     bgColor="transparent" 
                     fgColor="currentColor" 
                     style={{ height: 40, width: 40 }}
@@ -324,7 +325,7 @@ export default function ContactPage() {
                     rel="noopener noreferrer"
                   />
                   <SocialIcon 
-                    url="https://facebook.com" 
+                    url="https://www.facebook.com/vukhanh.nguyen.9461?locale=vi_VN" 
                     bgColor="transparent" 
                     fgColor="currentColor" 
                     style={{ height: 40, width: 40 }}
@@ -333,7 +334,7 @@ export default function ContactPage() {
                     rel="noopener noreferrer"
                   />
                   <SocialIcon 
-                    url="https://github.com" 
+                    url="https://github.com/VuKhanhNguyen" 
                     bgColor="transparent" 
                     fgColor="currentColor" 
                     style={{ height: 40, width: 40 }}
@@ -345,27 +346,30 @@ export default function ContactPage() {
               </div>
             </motion.div>
 
-            {/* Right Column: Form Container */}
+            {/* Right Column: Form Card */}
             <motion.div 
               initial={{ opacity: 0, x: 30 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6, delay: 0.4, ease: "easeOut" }}
-              className="lg:col-span-7 flex flex-col gap-8"
+              className="lg:col-span-7 liquid-glass border-3d shadow-3d-card p-6 sm:p-8 md:p-10 rounded-[30px] flex flex-col gap-8 relative overflow-hidden"
             >
-              <div className="flex flex-col gap-3">
-                <h2 className="font-heading text-3xl md:text-4xl text-ink font-normal leading-tight">
-                  {translate("Let's create something together.")}
-                </h2>
-                <p className="font-sans text-base text-pale-stone leading-relaxed">
-                  {translate("Feel free to reach out via the form, or connect with me through social media.")}
-                </p>
-              </div>
+              <div className="liquid-glass-bg" />
+              
+              <div className="relative z-10 flex flex-col gap-8 w-full">
+                <div className="flex flex-col gap-3">
+                  <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl text-ink font-normal leading-tight">
+                    {translate("Let's create something together.")}
+                  </h2>
+                  <p className="font-sans text-xs sm:text-sm md:text-base text-pale-stone leading-relaxed">
+                    {translate("Feel free to reach out via the form, or connect with me through social media.")}
+                  </p>
+                </div>
 
-              {/* Form Submission */}
+                {/* Form Submission */}
               <form onSubmit={handleSubmit} className="flex flex-col gap-8">
                 
-                {/* Name Input */}
-                <div className="flex flex-col gap-2 group">
+                 {/* Name Input */}
+                <div className="flex flex-col gap-2 group relative z-10">
                   <label className="font-mono text-[11px] uppercase tracking-wider text-pale-stone transition-colors group-focus-within:text-ink dark:group-focus-within:text-white">
                     {translate("Name")}
                   </label>
@@ -375,12 +379,12 @@ export default function ContactPage() {
                     value={name}
                     onChange={(e) => setName(e.target.value)}
                     placeholder={translate("Enter your name")}
-                    className="bg-transparent border-b border-ink/20 dark:border-white/20 py-3 text-ink font-mono text-base outline-none focus:border-ink dark:focus:border-white transition-colors duration-250 placeholder-ink/30 dark:placeholder-white/20"
+                    className="bg-transparent border-b border-off-black/15 dark:border-white/10 py-3 text-ink font-mono text-base outline-none focus:border-ink dark:focus:border-white transition-colors duration-250 placeholder-ink/25 dark:placeholder-white/15"
                   />
                 </div>
 
                 {/* Email Input */}
-                <div className="flex flex-col gap-2 group">
+                <div className="flex flex-col gap-2 group relative z-10">
                   <label className="font-mono text-[11px] uppercase tracking-wider text-pale-stone transition-colors group-focus-within:text-ink dark:group-focus-within:text-white">
                     {translate("Email")}
                   </label>
@@ -390,21 +394,21 @@ export default function ContactPage() {
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     placeholder={translate("Enter your email")}
-                    className="bg-transparent border-b border-ink/20 dark:border-white/20 py-3 text-ink font-mono text-base outline-none focus:border-ink dark:focus:border-white transition-colors duration-250 placeholder-ink/30 dark:placeholder-white/20"
+                    className="bg-transparent border-b border-off-black/15 dark:border-white/10 py-3 text-ink font-mono text-base outline-none focus:border-ink dark:focus:border-white transition-colors duration-250 placeholder-ink/25 dark:placeholder-white/15"
                   />
                 </div>
 
                 {/* Rich Text Message Editor */}
-                <div className="flex flex-col gap-2 group">
+                <div className="flex flex-col gap-2 group relative z-10">
                   <label className="font-mono text-[11px] uppercase tracking-wider text-pale-stone">
                     {translate("Message")}
                   </label>
                   
                   {/* Editor Container */}
-                  <div className="flex flex-col border border-ink/20 dark:border-white/20 rounded-md overflow-hidden focus-within:border-ink dark:focus-within:border-white transition-colors duration-250">
+                  <div className="flex flex-col border border-off-black/15 dark:border-white/10 rounded-xl overflow-hidden focus-within:border-ink dark:focus-within:border-white transition-colors duration-250 bg-off-black/[0.01] dark:bg-black/25">
                     
                     {/* Formatting Toolbar */}
-                    <div className="flex items-center justify-between px-3 py-2 bg-atmosphere-wash/40 border-b border-ink/10 dark:border-white/10">
+                    <div className="flex items-center justify-between px-3 py-2 bg-atmosphere-wash/20 border-b border-off-black/10 dark:border-white/10">
                       <div className="flex items-center gap-1">
                         <button
                           type="button"
@@ -576,7 +580,8 @@ export default function ContactPage() {
                 </motion.div>
 
               </form>
-            </motion.div>
+            </div>
+          </motion.div>
 
           </div>
 
