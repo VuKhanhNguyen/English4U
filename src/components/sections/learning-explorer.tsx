@@ -874,37 +874,51 @@ export function LearningExplorerSection({
     let lastScrollTop = window.scrollY;
     let lastTime = Date.now();
     let hideTimeout: NodeJS.Timeout;
+    let currentDir: "up" | "down" | null = null;
+    let throttleTimeout: NodeJS.Timeout | null = null;
 
     const handleScroll = () => {
-      const currentScrollTop = window.scrollY;
-      const currentTime = Date.now();
-      const timeDiff = currentTime - lastTime;
+      if (throttleTimeout) return;
 
-      if (timeDiff > 0) {
-        const distDiff = Math.abs(currentScrollTop - lastScrollTop);
-        const speed = distDiff / timeDiff; // px per ms
+      throttleTimeout = setTimeout(() => {
+        throttleTimeout = null;
 
-        // If scroll speed exceeds threshold (e.g. 0.8px/ms)
-        if (speed > 0.8) {
-          const direction = currentScrollTop < lastScrollTop ? "up" : "down";
-          setScrollActiveButton(direction);
+        const currentScrollTop = window.scrollY;
+        const currentTime = Date.now();
+        const timeDiff = currentTime - lastTime;
 
-          // Clear previous timeout and set a new one to hide after 2.5 seconds
-          clearTimeout(hideTimeout);
-          hideTimeout = setTimeout(() => {
-            setScrollActiveButton(null);
-          }, 2500);
+        if (timeDiff > 0) {
+          const distDiff = Math.abs(currentScrollTop - lastScrollTop);
+          const speed = distDiff / timeDiff; // px per ms
+
+          // If scroll speed exceeds threshold (e.g. 0.8px/ms)
+          if (speed > 0.8) {
+            const direction = currentScrollTop < lastScrollTop ? "up" : "down";
+            
+            if (currentDir !== direction) {
+              currentDir = direction;
+              setScrollActiveButton(direction);
+            }
+
+            // Clear previous timeout and set a new one to hide after 2.5 seconds
+            clearTimeout(hideTimeout);
+            hideTimeout = setTimeout(() => {
+              currentDir = null;
+              setScrollActiveButton(null);
+            }, 2500);
+          }
         }
-      }
 
-      lastScrollTop = currentScrollTop;
-      lastTime = currentTime;
+        lastScrollTop = currentScrollTop;
+        lastTime = currentTime;
+      }, 100);
     };
 
     window.addEventListener("scroll", handleScroll, { passive: true });
     return () => {
       window.removeEventListener("scroll", handleScroll);
       clearTimeout(hideTimeout);
+      if (throttleTimeout) clearTimeout(throttleTimeout);
     };
   }, []);
 
@@ -943,6 +957,10 @@ export function LearningExplorerSection({
     if (typeof window === "undefined" || !("IntersectionObserver" in window)) return;
     if (!activeBook?.units) return;
 
+    // Avoid unnecessary scrollspy calculations and re-renders on mobile when index drawer is closed
+    const isMobile = window.innerWidth <= 768;
+    if (isMobile && !isMobileDrawerOpen) return;
+
     const observerOptions = {
       root: null,
       rootMargin: "-25% 0px -55% 0px",
@@ -967,7 +985,7 @@ export function LearningExplorerSection({
     return () => {
       observer.disconnect();
     };
-  }, [activeBook, selectedBookIndex]);
+  }, [activeBook, selectedBookIndex, isMobileDrawerOpen]);
 
   const sidebarScrollContainerRef = React.useRef<HTMLDivElement>(null);
   const mobileScrollContainerRef = React.useRef<HTMLDivElement>(null);

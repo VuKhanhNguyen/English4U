@@ -21,6 +21,7 @@ interface GridDot {
 
 const ParallaxBackground = memo(() => {
   const { theme } = useTheme();
+  const [isMobile, setIsMobile] = React.useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
   const canvasBackRef = useRef<HTMLCanvasElement>(null);
   const canvasFrontRef = useRef<HTMLCanvasElement>(null);
@@ -37,6 +38,16 @@ const ParallaxBackground = memo(() => {
   const isReducedMotion = useRef(false);
 
   useEffect(() => {
+    if (typeof window === "undefined") return;
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
+
+  useEffect(() => {
     // Check for prefers-reduced-motion
     if (typeof window === "undefined") return;
     const mediaQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
@@ -49,7 +60,7 @@ const ParallaxBackground = memo(() => {
   }, []);
 
   useEffect(() => {
-    if (typeof window === "undefined") return;
+    if (typeof window === "undefined" || isMobile) return;
     const canvasBack = canvasBackRef.current;
     const canvasFront = canvasFrontRef.current;
     if (!canvasBack || !canvasFront) return;
@@ -280,7 +291,21 @@ const ParallaxBackground = memo(() => {
       window.removeEventListener('scroll', handleScroll);
       window.removeEventListener('mousemove', handleMouseMove);
     };
-  }, [theme]);
+  }, [theme, isMobile]);
+
+  if (isMobile) {
+    return (
+      <div 
+        className="absolute inset-0 w-full h-full pointer-events-none overflow-hidden select-none -z-10 bg-transparent opacity-[0.4] dark:opacity-[0.25]"
+        style={{
+          backgroundImage: theme === 'dark' 
+            ? 'radial-gradient(rgba(246, 243, 241, 0.4) 1px, transparent 1px)' 
+            : 'radial-gradient(rgba(0, 0, 0, 0.15) 1px, transparent 1px)',
+          backgroundSize: '32px 32px'
+        }}
+      />
+    );
+  }
 
   return (
     <div 
