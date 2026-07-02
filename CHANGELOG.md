@@ -8,7 +8,7 @@ All notable changes to the **English4U** project are documented below. This proj
 
 | Key Metrics         | Value / Badges                                                                                                                             |
 | :------------------ | :----------------------------------------------------------------------------------------------------------------------------------------- |
-| **Current Version** | ![Version](https://img.shields.io/badge/version-v1.6.3-blue.svg?style=for-the-badge&logo=git)                                              |
+| **Current Version** | ![Version](https://img.shields.io/badge/version-v1.6.4-blue.svg?style=for-the-badge&logo=git)                                              |
 | **Framework**       | ![Next.js](https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white)                                 |
 | **Styling**         | ![CSS](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)                                             |
 | **Language**        | ![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)                          |
@@ -37,7 +37,34 @@ gantt
     v1.6.1 Backgrounds & Typography   :active, 2026-06-30, 2026-07-01
     v1.6.2 Tactile 3D & Soft Shadows  :active, 2026-07-01, 2026-07-02
     v1.6.3 Mobile Optim & Redesigns   :active, 2026-07-02, 2026-07-02
+    v1.6.4 Mobile Scroll & Lag Fixes   :active, 2026-07-02, 2026-07-02
 ```
+
+---
+
+## 🚀 v1.6.4 — Mobile Scroll Optimization & Lag Fixes
+
+> **Release Date:** July 2, 2026 • _Focus: Resolving Mobile Checkerboarding, Bypassing JS Smooth Scrolling on Touch Devices, and Throttling Scroll Event Listeners_
+
+```
+┌──────────────────────────────────────────────────────────────────┐
+│  ✨ Highlights:                                                  │
+│  • Bypassed Lenis Smooth Scroll on mobile devices to restore     │
+│    native hardware-accelerated momentum scrolling                 │
+│  • Bypassed Parallax Background canvas rendering on mobile,      │
+│    substituting it with a static, CSS-rendered dot grid pattern   │
+│  • Throttled scroll speed calculations and state changes in the   │
+│    Syllabus Learning Explorer to once every 100ms                │
+│  • Suspended IntersectionObserver scrollspy active unit tracking  │
+│    on mobile while the index drawer is closed                     │
+└──────────────────────────────────────────────────────────────────┘
+```
+
+### ⚡ Mobile Performance & Scroll Optimizations
+- **Native Scroll Restore**: Modified `<SmoothScrollProvider>` to conditionally bypass `<ReactLenis>` on screens under `768px`, eliminating heavy JavaScript-driven touch interpolation.
+- **Canvas Rendering Off-loading**: Optimised `<ParallaxBackground>` on mobile viewports by disabling dual 2D canvas initialization and `requestAnimationFrame` render loops, returning a simple, highly-efficient CSS `radial-gradient` pattern instead.
+- **Scroll Speed Listener Throttle**: Throttled `handleScroll` in `<LearningExplorerSection>` using a 100ms timer and added a local closure tracker to prevent redundant state updates on every scroll frame.
+- **Selective Scrollspy Observer**: Configured the IntersectionObserver scrollspy in `learning-explorer.tsx` to mount only when the mobile drawer is open (`isMobileDrawerOpen`), completely eliminating background re-render cascades during page scrolling.
 
 ---
 
