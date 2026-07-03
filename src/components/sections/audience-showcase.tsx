@@ -1,7 +1,6 @@
 "use client";
 
 import * as React from "react";
-import { motion } from "framer-motion";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Check, Calendar, Activity, GraduationCap } from "lucide-react";
@@ -39,8 +38,8 @@ export function AudienceShowcase() {
 
   return (
     <section className="py-24 bg-section-audience border-t border-off-black/10 dark:border-white/10">
-      <div className="container mx-auto px-6 max-w-[1432px]">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center max-w-6xl mx-auto px-6 md:px-12 lg:px-16">
+      <div className="container mx-auto px-4 sm:px-6 max-w-[1432px]">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center max-w-6xl mx-auto px-2 sm:px-6 md:px-12 lg:px-16">
           {/* Column 1: Info and Badges */}
           <div className="lg:col-span-5">
             <span className="section-badge">
@@ -84,10 +83,10 @@ export function AudienceShowcase() {
           </div>
 
           {/* Column 2: Visual Study Log Timeline */}
-          <div className="lg:col-span-7 flex justify-center">
+          <div className="lg:col-span-7 flex justify-center w-full">
             <Card
               variant="content"
-              className="w-full max-w-[480px] p-6 relative overflow-hidden"
+              className="w-full max-w-[480px] p-4 sm:p-6 relative overflow-hidden"
             >
               <div className="flex items-center justify-between pb-4 border-b border-off-black mb-6">
                 <div className="flex items-center gap-2">
@@ -110,30 +109,32 @@ export function AudienceShowcase() {
               </div>
 
               {/* Study Timeline Events */}
-              <div className="flex flex-col gap-6 relative font-mono">
-                {/* Timeline vertical bar */}
-                <div className="absolute left-[39px] top-2 bottom-2 w-px bg-off-black/20" />
-
+              <div className="flex flex-col relative font-mono">
                 {studyLogs.map((log, index) => (
                   <div
                     key={index}
-                    className="flex gap-4 items-start relative z-10"
+                    className="flex gap-2 sm:gap-4 items-stretch relative"
                   >
-                    <span className="text-caption text-pale-stone w-[55px] pt-1 text-right shrink-0">
+                    <span className="text-caption text-pale-stone w-[50px] sm:w-[55px] pt-1 text-right shrink-0">
                       {log.time}
                     </span>
 
-                    {/* Circle Indicator */}
-                    <div
-                      className={`w-[24px] h-[24px] rounded-md border border-off-black flex items-center justify-center shrink-0 ${
-                        log.status === "active" ? "bg-atmosphere-wash animate-pulse" : "bg-paper-canvas"
-                      }`}
-                    >
-                      <GraduationCap className="w-[12px] h-[12px] text-ink" />
+                    {/* Timeline bar and indicator column */}
+                    <div className="flex flex-col items-center shrink-0 relative pb-6">
+                      <div
+                        className={`w-[24px] h-[24px] rounded-md border border-off-black flex items-center justify-center shrink-0 relative z-10 ${
+                          log.status === "active" ? "bg-atmosphere-wash animate-pulse" : "bg-paper-canvas"
+                        }`}
+                      >
+                        <GraduationCap className="w-[12px] h-[12px] text-ink" />
+                      </div>
+                      {index < studyLogs.length - 1 && (
+                        <div className="w-px flex-grow bg-off-black/20 my-1 absolute top-6 bottom-0 left-1/2 -translate-x-1/2 z-0" />
+                      )}
                     </div>
 
                     {/* Log Details */}
-                    <div className="p-3 bg-paper-canvas border border-off-black rounded-lg flex-grow">
+                    <div className="p-2 sm:p-3 bg-paper-canvas border border-off-black rounded-lg flex-grow mb-6 last:mb-0">
                       <div className="flex justify-between items-center mb-1 gap-2 flex-wrap">
                         <p className="text-body-sm font-medium text-ink leading-relaxed">
                           {translate(log.action)}
@@ -153,4 +154,3 @@ export function AudienceShowcase() {
     </section>
   );
 }
-

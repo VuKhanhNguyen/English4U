@@ -34,7 +34,7 @@ export function Navbar() {
   return (
     <header className="fixed top-4 left-0 right-0 z-50 px-4 md:px-8 pointer-events-none font-abc-diatype-mono">
       <div
-        className={`relative mx-auto max-w-6xl w-full h-[64px] flex items-center justify-between px-6 rounded-full  border-off-black bg-white/5 dark:bg-black/10 backdrop-blur-none transition-all duration-300 pointer-events-auto shadow-[4px_4px_12px_0px_var(--shadow-3d-color)]`}
+        className={`relative mx-auto max-w-6xl w-full h-[64px] flex items-center justify-between px-6 rounded-full  border-off-black bg-white/5 dark:bg-black/10 backdrop-blur-md md:backdrop-blur-none transition-all duration-300 pointer-events-auto shadow-[4px_4px_12px_0px_var(--shadow-3d-color)]`}
       >
         {/* Gradual Blur & Refraction Background */}
         <GradualBlur
@@ -427,7 +427,7 @@ export function Navbar() {
             >
               {/* Glass Backdrop Layer */}
               <div
-                className="absolute inset-0 z-0 overflow-hidden rounded-t-[30px]"
+                className="absolute inset-0 z-0 overflow-hidden rounded-t-[30px] mobile-glass-backdrop"
                 style={{
                   backdropFilter: "blur(20px)",
                   filter: "url(#glass-distortion)",

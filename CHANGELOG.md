@@ -8,7 +8,7 @@ All notable changes to the **English4U** project are documented below. This proj
 
 | Key Metrics         | Value / Badges                                                                                                                             |
 | :------------------ | :----------------------------------------------------------------------------------------------------------------------------------------- |
-| **Current Version** | ![Version](https://img.shields.io/badge/version-v1.6.5-blue.svg?style=for-the-badge&logo=git)                                              |
+| **Current Version** | ![Version](https://img.shields.io/badge/version-v1.6.6-blue.svg?style=for-the-badge&logo=git)                                              |
 | **Framework**       | ![Next.js](https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white)                                 |
 | **Styling**         | ![CSS](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)                                             |
 | **Language**        | ![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)                          |
@@ -39,7 +39,48 @@ gantt
     v1.6.3 Mobile Optim & Redesigns   :active, 2026-07-02, 2026-07-02
     v1.6.4 Mobile Scroll & Lag Fixes   :active, 2026-07-02, 2026-07-02
     v1.6.5 Mobile Render & Scroll Optim:active, 2026-07-03, 2026-07-03
+    v1.6.6 Mobile Spacing & Glassmorphism:active, 2026-07-03, 2026-07-03
 ```
+
+---
+
+## 🚀 v1.6.6 — Mobile Spacing & Glassmorphism Refinement
+
+> **Release Date:** July 3, 2026 • _Focus: WebGL Context Loss Recovery, Mobile Viewport Layout Optimizations, and Frosted Glassmorphism Fallbacks_
+
+```
+┌──────────────────────────────────────────────────────────────────┐
+│  ✨ Highlights:                                                  │
+│  • Fixed WebGL context loss & memory leaks in SplashCursor       │
+│  • Restructured AudienceShowcase to a column-based timeline      │
+│    layout, reclaiming 101px of horizontal space on mobile       │
+│  • Optimized Contact & Resources mobile layouts & pagination     │
+│  • Added tactile float animations & active state cursor pointer  │
+│    overrides to the contact submit form controls                 │
+│  • Enabled hardware-accelerated frosted glassmorphism on mobile   │
+│    for Navbar, Units Index button, and syllabus sheets           │
+│  • Injected a single-layer backdrop-filter: blur fallback into  │
+│    GradualBlur on mobile touch screens for premium aesthetics    │
+└──────────────────────────────────────────────────────────────────┘
+```
+
+### 🐛 Stability & Context Loss Fixes
+- **WebGL Context Safeguards**: Enhanced `<SplashCursor>` with checks for `gl.isContextLost()` to stop rendering loop calls when WebGL contexts are destroyed (e.g. F12 viewport toggling), and handled null format extensions inside `initFramebuffers()` to prevent hydration crashes.
+- **Code Duplication Removal**: Cleaned up the codebase by overwriting `src/components/SplashCursor.tsx` to re-export directly from `src/components/ui/splash-cursor.tsx`, keeping logic centralized.
+
+### 📱 Responsive Layout & Spacing Optimizations
+- **AudienceShowcase Timeline**: Converted the timeline component from an absolute vertical bar with hardcoded offsets to a robust, flexbox column-based layout. Reclaimed **101px** of horizontal content width on small viewports, expanding detail cards from 96px to 197px wide (+105% width gain) without screen clipping.
+- **Resources Left-Alignment & Scrolling**: Left-aligned the page breadcrumbs inside the `.container` grid and implemented horizontal swiping (`overflow-x-auto`) with fixed circular touch targets (`shrink-0`) on mobile pagination buttons to prevent dashboard overflow.
+- **Contact Card Alignment**: Relocated page breadcrumbs inside the container grid and migrated the form card paddings to responsive spacing to keep elements from touching the viewport edges.
+
+### 🎨 Micro-interactions & Interactivity
+- **Form Float Effects**: Wrapped the Contact inputs inside floating wrapper cards styled with smooth hover and focus-within translations (`md:hover:-translate-y-1`) for a tactile desktop response.
+- **Submit Button Cursors**: Configured the contact submit button pointer events to allow active cursors even when disabled. Hovering shows a `cursor-not-allowed` icon when inputs are empty, changing to a pointer hand and background color translations when inputs are validated.
+
+### 🔮 Mobile Glassmorphism & Backdrop Blurs
+- **Frosted Overlays**: Added `backdrop-blur-md` and `bg-paper-canvas/80` to the mobile Navbar, floating Units Index toggle bubble, and slide-up syllabus bottom sheet, ensuring background elements blur elegantly on touch screens.
+- **SVG Filter Bypass**: Introduced `.mobile-glass-backdrop` in `globals.css` to disable complex SVG displacement filters (`filter: none !important`) on mobile viewports, preventing transparency and black block rendering bugs.
+- **Gradual Blur Footer Fallback**: Updated the mobile rendering loop in `gradual-blur.tsx` to return a single-layer `backdrop-filter: blur(8px) saturate(120%)` gradient fade, creating a smooth glass footer overlay on mobile devices.
 
 ---
 
@@ -112,6 +153,7 @@ gantt
 │  • Fixed Mobile Learning Explorer unit titles alignment and       │
 │    shortened the unit dividers with horizontal margin indents      │
 └──────────────────────────────────────────────────────────────────┘
+```
 
 ### ⚡ Performance & Mobile Optimizations
 - **ThreeDCanvas Safeguard**: Added `mounted` state checking to prevent WebGL contexts from rendering on mobile devices during initial hydration/paint.
@@ -239,6 +281,40 @@ gantt
 
 ---
 
+## 🚀 v1.6.0 — Cosmic 3D Globe & Dynamic Liquid Glass Refraction
+
+> **Release Date:** June 30, 2026 • _Focus: Realistic 3D Earth Globe, Scroll-Reactive Liquid Glass Filter, Vibrant Section Gradients & Layered Border Separation_
+
+```
+┌──────────────────────────────────────────────────────────────────┐
+│  ✨ Highlights:                                                  │
+│  • Realistic 3D Earth Globe with bump mapping & glow ring        │
+│  • Scroll-reactive SVG displacement refraction filter            │
+│  • Isolation of borders & text from refraction to keep them sharp│
+│  • Saturated three-color section gradient backgrounds            │
+│  • Smooth 24px bo góc (rounded) card styling upgrade             │
+└──────────────────────────────────────────────────────────────────┘
+```
+
+### 🌍 3D Earth Globe & Orbit System
+
+- **Realistic Earth Visualization:** Built a complete 3D Earth sphere with custom vertex/fragment shading, realistic land/sea continent outlines, atmospheric glow ring, and rotational animation.
+- **Particle Satellite Rings:** Retired the black-dot sphere and created three concentric orbiting stardust rings around the Earth representing B1, B2, and C1/C2 vocabulary streams.
+- **Context Loss Recovery:** Enhanced the WebGL renderer setup to gracefully catch `webglcontextlost` events and dynamically remount the canvas.
+
+### 🧪 Dynamic Liquid Glass Refraction
+
+- **Scroll-Reactive Refraction:** Created `LiquidGlassFilter` to compute real-time scroll velocity, warping the backdrop-filter in a fluid gợn sóng (ripple) motion during fast scrolling.
+- **Sharp Border Isolation:** Split the card aesthetics into an outer vector container (maintaining 100% crisp borders and readable text) and an inner `.liquid-glass-bg` layer containing the WebGL filter, avoiding jagged and broken lines.
+- **24px Rounding Upgrade:** Modernized the card variants' corner radii to `rounded-[24px]` for a sleeker visual appearance.
+
+### 🎨 Vibrant Three-Color Section Gradients
+
+- **Multi-tone gradients:** Formulated three-color gradient backgrounds (`bg-section-*`) for all 11 homepage sections to support colorful glass light refraction.
+- **Visual bridging:** Redesigned the color transitions for the playpen and explore sections to prevent clashing.
+
+---
+
 ## 🚀 v1.5.0 — Premium UX Refactoring & Mobile Responsiveness
 
 > **Release Date:** June 27, 2026 • _Focus: Gradient UI Cards, Interactive Micro-Animations, Responsive Tables, Directional Scroll-Nav & Hydration Fixes_
@@ -248,7 +324,7 @@ gantt
 │  ✨🌟Highlights:                                                │
 │  • Premium dynamic gradient background cards system              │
 │  • Buttery smooth spring micro-animations using Framer Motion    │
-│  • Complete redesign of grammar tables into stacked mobile cards │
+│  • Complete redesign of grammar tables into stacked mobile cards   │
 │  • Directional speed-sensitive scroll buttons overlay            │
 │  • React hydration & layout shift spacing fixes                  │
 └──────────────────────────────────────────────────────────────────┘

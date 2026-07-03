@@ -561,7 +561,12 @@ export default function ResourcesPage() {
         
 
       <main className="flex-grow relative z-10 pt-[140px] pb-24">
-        <Breadcrumb className="ml-20 mt-2.5 mb-5 text-xs">
+        {/* Soft background washes */}
+        <div className="absolute top-20 left-10 w-[500px] h-[500px] rounded-full bg-sky-mint-gradient opacity-15 blur-[120px] pointer-events-none -z-10" />
+        <div className="absolute bottom-20 right-10 w-[600px] h-[600px] rounded-full bg-sunset-violet-gradient opacity-15 blur-[120px] pointer-events-none -z-10" />
+
+        <div className="container mx-auto px-4 sm:px-6 max-w-[1432px]">
+          <Breadcrumb className="mt-2.5 mb-5 text-xs">
                 <BreadcrumbList>
                   <BreadcrumbItem>
                     <BreadcrumbLink href="/" asChild>
@@ -574,15 +579,8 @@ export default function ResourcesPage() {
                   </BreadcrumbItem>
                 </BreadcrumbList>
               </Breadcrumb>
-        {/* Soft background washes */}
-        <div className="absolute top-20 left-10 w-[500px] h-[500px] rounded-full bg-sky-mint-gradient opacity-15 blur-[120px] pointer-events-none -z-10" />
-        <div className="absolute bottom-20 right-10 w-[600px] h-[600px] rounded-full bg-sunset-violet-gradient opacity-15 blur-[120px] pointer-events-none -z-10" />
-
-
-
-        <div className="container mx-auto px-6 max-w-[1432px]">
           {/* Header Title Card */}
-          <Card variant="content" className="mb-12 flex flex-col lg:flex-row items-start lg:items-center justify-between !p-8 md:!p-12 relative overflow-hidden bg-paper-canvas/80 backdrop-blur-md">
+          <Card variant="content" className="mb-12 flex flex-col lg:flex-row items-start lg:items-center justify-between !p-4 sm:!p-8 md:!p-12 relative overflow-hidden bg-paper-canvas/80 backdrop-blur-md">
             <div className="absolute top-0 right-0 w-32 h-32 bg-atmosphere-wash/20 rounded-full blur-2xl pointer-events-none" />
             
             <div className="space-y-4 max-w-2xl mb-8 lg:mb-0">
@@ -633,7 +631,7 @@ export default function ResourcesPage() {
           </Card>
 
           {/* Interactive Search and Tab Dashboard */}
-          <Card variant="content" className="p-6 md:p-10 bg-paper-canvas/80 backdrop-blur-md shadow-subtle border border-off-black/85 relative">
+          <Card variant="content" className="p-3 sm:p-6 md:p-10 bg-paper-canvas/80 backdrop-blur-md shadow-subtle border border-off-black/85 relative">
             <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-6 mb-8 border-b border-off-black/15 pb-6">
               
               {/* Tab Selector Buttons */}
@@ -741,7 +739,7 @@ export default function ResourcesPage() {
                   {/* Mobile Card View */}
                   <div className="block md:hidden space-y-4">
                     {paginatedItems.map((row: any, idx) => (
-                      <div key={idx} className="p-5 border border-off-black/10 dark:border-white/10 rounded-2xl bg-paper-canvas/30 space-y-3 font-mono text-xs">
+                      <div key={idx} className="p-3 sm:p-4 border border-off-black/10 dark:border-white/10 rounded-2xl bg-paper-canvas/30 space-y-3 font-mono text-xs">
                         <div className="flex items-center justify-between border-b border-off-black/5 dark:border-white/5 pb-2">
                           <span className="text-[10px] font-bold text-pale-stone">#{ (currentPage - 1) * itemsPerPage + idx + 1 }</span>
                           <span className="bg-atmosphere-wash/20 border border-off-black/10 rounded-full px-2 py-0.5 text-[10px] text-pale-stone whitespace-nowrap inline-block">
@@ -817,7 +815,7 @@ export default function ResourcesPage() {
                   {/* Mobile Card View */}
                   <div className="block md:hidden space-y-4">
                     {paginatedItems.map((row: any, idx) => (
-                      <div key={idx} className="p-5 border border-off-black/10 dark:border-white/10 rounded-2xl bg-paper-canvas/30 space-y-3 font-mono text-xs">
+                      <div key={idx} className="p-3 sm:p-4 border border-off-black/10 dark:border-white/10 rounded-2xl bg-paper-canvas/30 space-y-3 font-mono text-xs">
                         <div className="flex items-center justify-between border-b border-off-black/5 dark:border-white/5 pb-2">
                           <span className="text-[10px] font-bold text-pale-stone">#{ (currentPage - 1) * itemsPerPage + idx + 1 }</span>
                           <span className="bg-atmosphere-wash/20 border border-off-black/10 rounded-full px-2 py-0.5 text-[10px] text-pale-stone whitespace-nowrap inline-block">
@@ -890,7 +888,7 @@ export default function ResourcesPage() {
                   {/* Mobile Card View */}
                   <div className="block md:hidden space-y-4">
                     {paginatedItems.map((row: any, idx) => (
-                      <div key={idx} className="p-5 border border-off-black/10 dark:border-white/10 rounded-2xl bg-paper-canvas/30 space-y-3 font-mono text-xs">
+                      <div key={idx} className="p-3 sm:p-4 border border-off-black/10 dark:border-white/10 rounded-2xl bg-paper-canvas/30 space-y-3 font-mono text-xs">
                         <div className="flex items-center justify-between border-b border-off-black/5 dark:border-white/5 pb-2">
                           <span className="text-[10px] font-bold text-pale-stone">#{ (currentPage - 1) * itemsPerPage + idx + 1 }</span>
                           <span className="bg-atmosphere-wash/20 border border-off-black/10 rounded-full px-2 py-0.5 text-[10px] text-pale-stone whitespace-nowrap inline-block">
@@ -1019,7 +1017,7 @@ export default function ResourcesPage() {
                     {paginatedItems.map((row: any, idx) => {
                       const parsedFamily = parseWordFormationMeaning(row.meaning);
                       return (
-                        <div key={idx} className="p-5 border border-off-black/10 dark:border-white/10 rounded-2xl bg-paper-canvas/30 space-y-3 font-mono text-xs">
+                        <div key={idx} className="p-3 sm:p-4 border border-off-black/10 dark:border-white/10 rounded-2xl bg-paper-canvas/30 space-y-3 font-mono text-xs">
                           <div className="flex items-center justify-between border-b border-off-black/5 dark:border-white/5 pb-2">
                             <span className="text-[10px] font-bold text-pale-stone">#{ (currentPage - 1) * itemsPerPage + idx + 1 }</span>
                             <span className="bg-atmosphere-wash/20 border border-off-black/10 rounded-full px-2 py-0.5 text-[10px] text-pale-stone whitespace-nowrap inline-block">
@@ -1116,7 +1114,7 @@ export default function ResourcesPage() {
                   {/* Mobile Card View */}
                   <div className="block md:hidden space-y-4">
                     {paginatedItems.map((row: any, idx) => (
-                      <div key={idx} className="p-5 border border-off-black/10 dark:border-white/10 rounded-2xl bg-paper-canvas/30 space-y-3 font-mono text-xs">
+                      <div key={idx} className="p-3 sm:p-4 border border-off-black/10 dark:border-white/10 rounded-2xl bg-paper-canvas/30 space-y-3 font-mono text-xs">
                         <div className="flex items-center justify-between border-b border-off-black/5 dark:border-white/5 pb-2">
                           <span className="text-[10px] font-bold text-pale-stone">#{ (currentPage - 1) * itemsPerPage + idx + 1 }</span>
                           <span className="bg-atmosphere-wash/20 border border-off-black/10 rounded-full px-2 py-0.5 text-[10px] text-pale-stone whitespace-nowrap inline-block">
@@ -1196,7 +1194,7 @@ export default function ResourcesPage() {
                   {/* Mobile Card View */}
                   <div className="block md:hidden space-y-4">
                     {paginatedItems.map((row: any, idx) => (
-                      <div key={idx} className="p-5 border border-off-black/10 dark:border-white/10 rounded-2xl bg-paper-canvas/30 space-y-3 font-mono text-xs">
+                      <div key={idx} className="p-3 sm:p-4 border border-off-black/10 dark:border-white/10 rounded-2xl bg-paper-canvas/30 space-y-3 font-mono text-xs">
                         <div className="flex items-center justify-between border-b border-off-black/5 dark:border-white/5 pb-2">
                           <span className="text-[10px] font-bold text-pale-stone">#{ (currentPage - 1) * itemsPerPage + idx + 1 }</span>
                           <span className="bg-atmosphere-wash/20 border border-off-black/10 rounded-full px-2 py-0.5 text-[10px] text-pale-stone whitespace-nowrap inline-block">
@@ -1237,12 +1235,12 @@ export default function ResourcesPage() {
                   {translate("of")} <span className="font-bold text-ink">{currentItems.length}</span> {translate("entries")}
                 </div>
                 
-                <div className="flex items-center gap-1.5">
+                <div className="flex items-center gap-1.5 max-w-full overflow-x-auto scrollbar-none py-1.5 px-2 justify-center sm:justify-end">
                   {/* First Page */}
                   <button
                     onClick={() => setCurrentPage(1)}
                     disabled={currentPage === 1}
-                    className="w-[36px] h-[36px] rounded-full border border-off-black hover:bg-atmosphere-wash/20 disabled:opacity-30 disabled:hover:bg-transparent transition-all cursor-pointer select-none font-bold text-xs flex items-center justify-center text-ink"
+                    className="w-[36px] h-[36px] shrink-0 rounded-full border border-off-black hover:bg-atmosphere-wash/20 disabled:opacity-30 disabled:hover:bg-transparent transition-all cursor-pointer select-none font-bold text-xs flex items-center justify-center text-ink"
                   >
                     <ChevronsLeft className="w-[16px] h-[16px]" />
                   </button>
@@ -1251,7 +1249,7 @@ export default function ResourcesPage() {
                   <button
                     onClick={() => setCurrentPage(prev => Math.max(prev - 1, 1))}
                     disabled={currentPage === 1}
-                    className="h-[36px] px-3 rounded-full border border-off-black hover:bg-atmosphere-wash/20 disabled:opacity-30 disabled:hover:bg-transparent transition-all cursor-pointer select-none font-bold text-xs flex items-center justify-center gap-1 text-ink"
+                    className="h-[36px] px-3 shrink-0 rounded-full border border-off-black hover:bg-atmosphere-wash/20 disabled:opacity-30 disabled:hover:bg-transparent transition-all cursor-pointer select-none font-bold text-xs flex items-center justify-center gap-1 text-ink"
                   >
                     <ChevronLeft className="w-[14px] h-[14px]" /> {translate("Prev")}
                   </button>
@@ -1260,7 +1258,7 @@ export default function ResourcesPage() {
                   {getPageNumbers().map((pageNum, idx) => {
                     if (pageNum === '...') {
                       return (
-                        <span key={`dots-${idx}`} className="text-xs text-pale-stone select-none font-bold">
+                        <span key={`dots-${idx}`} className="text-xs text-pale-stone select-none font-bold px-1 shrink-0">
                           ...
                         </span>
                       );
@@ -1270,7 +1268,7 @@ export default function ResourcesPage() {
                         key={`page-${pageNum}`}
                         onClick={() => setCurrentPage(Number(pageNum))}
                         className={cn(
-                          "w-[36px] h-[36px] rounded-full border text-xs transition-all cursor-pointer font-bold select-none",
+                          "w-[36px] h-[36px] shrink-0 rounded-full border text-xs transition-all cursor-pointer font-bold select-none",
                           currentPage === pageNum
                             ? "bg-off-black text-paper-canvas border-transparent"
                             : "border-off-black hover:bg-atmosphere-wash/20 text-ink"
@@ -1285,7 +1283,7 @@ export default function ResourcesPage() {
                   <button
                     onClick={() => setCurrentPage(prev => Math.min(prev + 1, totalPages))}
                     disabled={currentPage === totalPages}
-                    className="h-[36px] px-3 rounded-full border border-off-black hover:bg-atmosphere-wash/20 disabled:opacity-30 disabled:hover:bg-transparent transition-all cursor-pointer select-none font-bold text-xs flex items-center justify-center gap-1 text-ink"
+                    className="h-[36px] px-3 shrink-0 rounded-full border border-off-black hover:bg-atmosphere-wash/20 disabled:opacity-30 disabled:hover:bg-transparent transition-all cursor-pointer select-none font-bold text-xs flex items-center justify-center gap-1 text-ink"
                   >
                     {translate("Next")} <ChevronRight className="w-[14px] h-[14px]" />
                   </button>
@@ -1294,7 +1292,7 @@ export default function ResourcesPage() {
                   <button
                     onClick={() => setCurrentPage(totalPages)}
                     disabled={currentPage === totalPages}
-                    className="w-[36px] h-[36px] rounded-full border border-off-black hover:bg-atmosphere-wash/20 disabled:opacity-30 disabled:hover:bg-transparent transition-all cursor-pointer select-none font-bold text-xs flex items-center justify-center text-ink"
+                    className="w-[36px] h-[36px] shrink-0 rounded-full border border-off-black hover:bg-atmosphere-wash/20 disabled:opacity-30 disabled:hover:bg-transparent transition-all cursor-pointer select-none font-bold text-xs flex items-center justify-center text-ink"
                   >
                     <ChevronsRight className="w-[16px] h-[16px]" />
                   </button>

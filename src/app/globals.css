@@ -457,7 +457,7 @@ html.lenis body {
 .dark .bg-section-hero,
 .dark .bg-section-explore,
 .dark .bg-section-playpen,
-.dark .bg-section-workspace,
+.dark .dark.bg-section-workspace,
 .dark .bg-section-bento,
 .dark .bg-section-hierarchy,
 .dark .bg-section-audience,
@@ -536,13 +536,18 @@ html.lenis body {
 
 /* Mobile and Touch Performance Optimizations */
 @media (pointer: coarse) {
+  /* Disable SVG glass distortion filter on mobile touch devices to prevent transparency bugs and rendering lag */
+  .mobile-glass-backdrop {
+    filter: none !important;
+  }
+
   /* Disable backdrop-filter on touch/mobile to prevent severe scroll lag and rasterization delay */
   .liquid-glass-bg {
     backdrop-filter: none !important;
     -webkit-backdrop-filter: none !important;
     background: rgba(255, 255, 255, 0.85) !important;
   }
-  
+
   .dark .liquid-glass-bg {
     background: rgba(13, 17, 28, 0.9) !important;
   }
@@ -570,7 +575,7 @@ html.lenis body {
     transform: none !important;
     box-shadow: 2px 2px 4px 0px var(--shadow-3d-color) !important;
   }
-  
+
   .card-press-active:hover {
     transform: none !important;
     box-shadow: 3px 3px 8px 0px var(--shadow-3d-color) !important;

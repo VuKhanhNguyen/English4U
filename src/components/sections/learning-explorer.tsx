@@ -416,7 +416,7 @@ function RichGrammarRenderer({ richGrammar }: { richGrammar: any[] }) {
       {(richGrammar || []).map((section: any, sIdx: number) => (
         <div
           key={sIdx}
-          className="border border-off-black/20 rounded-md p-6 md:p-8 bg-paper-canvas shadow-subtle relative overflow-hidden"
+          className="border border-off-black/20 rounded-md p-4 sm:p-6 md:p-8 bg-paper-canvas shadow-subtle relative overflow-hidden"
         >
           {/* Subtle design element */}
           <div className="absolute top-0 right-0 w-24 h-24 bg-atmosphere-wash/10 rounded-full blur-xl pointer-events-none" />
@@ -519,7 +519,7 @@ function RichGrammarRenderer({ richGrammar }: { richGrammar: any[] }) {
                               {translate(group.type)}
                             </span>
                           </div>
-                          <div className="p-4 space-y-3 divide-y divide-off-black/5 dark:divide-white/5 font-mono">
+                          <div className="p-3 sm:p-4 space-y-3 divide-y divide-off-black/5 dark:divide-white/5 font-mono">
                             {group.items.map((item, iIdx) => (
                               <div key={iIdx} className={cn("space-y-1.5", iIdx > 0 && "pt-3")}>
                                 <div className="flex items-center gap-2 flex-wrap">
@@ -609,7 +609,7 @@ function RichGrammarRenderer({ richGrammar }: { richGrammar: any[] }) {
                       {(block.rows || []).map((row: string[], rIdx: number) => (
                         <div
                           key={rIdx}
-                          className="p-4 border border-off-black/10 dark:border-white/10 rounded-xl bg-paper-canvas/30 space-y-3 font-mono text-xs"
+                          className="p-3 sm:p-4 border border-off-black/10 dark:border-white/10 rounded-xl bg-paper-canvas/30 space-y-3 font-mono text-xs"
                         >
                           {(row || []).map((cell: string, cIdx: number) => {
                             const header = block.headers?.[cIdx];
@@ -654,7 +654,7 @@ function RichGrammarRenderer({ richGrammar }: { richGrammar: any[] }) {
                     {block.items ? (
                       <div className="space-y-4">
                         {(block.items || []).map((item: any, iIdx: number) => (
-                          <div key={iIdx} className="space-y-2 border border-off-black/10 rounded-lg p-4 bg-paper-canvas/50">
+                          <div key={iIdx} className="space-y-2 border border-off-black/10 rounded-lg p-3 sm:p-4 bg-paper-canvas/50">
                             <p className="font-bold text-ink flex items-center gap-2">
                               <span className="w-2 h-2 rounded-full bg-[#ffa773]" />
                               {translate(item.label)}
@@ -717,7 +717,7 @@ function RichGrammarRenderer({ richGrammar }: { richGrammar: any[] }) {
                         {/* Mobile View */}
                         <div className="block md:hidden space-y-3">
                           {(block.table || []).map((row: any, rIdx: number) => (
-                            <div key={rIdx} className="p-4 border border-off-black/10 dark:border-white/10 rounded-xl bg-paper-canvas/30 space-y-2">
+                            <div key={rIdx} className="p-3 sm:p-4 border border-off-black/10 dark:border-white/10 rounded-xl bg-paper-canvas/30 space-y-2">
                               <div className="flex items-center gap-2">
                                 <span className="text-xs font-bold text-indigo-600 dark:text-indigo-400 bg-atmosphere-wash/30 px-2.5 py-0.5 rounded font-mono">
                                   {row[0]}
@@ -1100,7 +1100,7 @@ export function LearningExplorerSection({
       <div className="absolute top-0 right-0 w-[500px] h-[500px] rounded-full bg-sky-mint-gradient opacity-20 blur-[120px] pointer-events-none z-0" />
       <div className="absolute bottom-0 left-0 w-[500px] h-[500px] rounded-full bg-sunset-violet-gradient opacity-15 blur-[120px] pointer-events-none z-0" />
 
-      <div className="container mx-auto px-6 max-w-[1432px] relative z-10">
+      <div className="container mx-auto px-4 sm:px-6 max-w-[1432px] relative z-10">
         <div className={`flex flex-col md:flex-row justify-between items-end gap-4 ${hideHeader ? 'mb-4' : 'mb-12'}`}>
           {!hideHeader && (
             <div>
@@ -1230,7 +1230,7 @@ export function LearningExplorerSection({
 
           {/* Main Content Accordion Card */}
           <div className="md:col-span-8 lg:col-span-9 min-w-0 w-full">
-            <Card variant="content" className="p-4 md:p-8">
+            <Card variant="content" className="p-3 sm:p-6 md:p-8">
               <Accordion
                 type="single"
                 collapsible
@@ -1243,7 +1243,7 @@ export function LearningExplorerSection({
                     key={unit.id}
                     value={unit.id}
                     id={`scroll-unit-${unit.id}`}
-                    className="border-b border-pale-stone scroll-mt-[110px] mx-4 sm:mx-6"
+                    className="border-b border-pale-stone scroll-mt-[110px] mx-1 sm:mx-6"
                   >
                 <AccordionTrigger className="text-subheading font-mono font-medium hover:no-underline py-5 px-2 sm:px-4 text-left text-ink">
                   {unit.title}
@@ -1349,7 +1349,7 @@ export function LearningExplorerSection({
                           {/* Mobile Card View */}
                           <div className="block md:hidden space-y-4">
                             {filterData(unit.grammar, ["structure", "usage", "example"]).map((row, idx) => (
-                              <div key={idx} className="p-5 border border-off-black/10 dark:border-white/10 rounded-2xl bg-paper-canvas/30 space-y-3 font-mono text-xs">
+                              <div key={idx} className="p-3 sm:p-4 border border-off-black/10 dark:border-white/10 rounded-2xl bg-paper-canvas/30 space-y-3 font-mono text-xs">
                                 <div className="flex flex-wrap items-center justify-between gap-2 border-b border-off-black/5 dark:border-white/5 pb-2">
                                   <span className="bg-atmosphere-wash border border-off-black/25 text-ink px-2.5 py-0.5 rounded-full font-bold">
                                     {row.structure}
@@ -1427,7 +1427,7 @@ export function LearningExplorerSection({
                       {/* Mobile Card View */}
                       <div className="block md:hidden space-y-4">
                         {filterData(unit.vocabulary, ["word", "type", "meaning", "example"]).map((row, idx) => (
-                          <div key={idx} className="p-5 border border-off-black/10 dark:border-white/10 rounded-2xl bg-paper-canvas/30 space-y-3 font-mono text-xs">
+                          <div key={idx} className="p-3 sm:p-4 border border-off-black/10 dark:border-white/10 rounded-2xl bg-paper-canvas/30 space-y-3 font-mono text-xs">
                             <div className="flex items-center justify-between border-b border-off-black/5 dark:border-white/5 pb-2">
                               <span className="text-sm font-bold text-ink">{row.word}</span>
                               <span className="inline-block text-[10px] font-mono text-off-black bg-transparent border border-off-black px-2 py-0.5 rounded-full">
@@ -1541,7 +1541,7 @@ export function LearningExplorerSection({
                         {filterData(unit.wordFormation, ["word", "type", "meaning", "example"]).map((row, idx) => {
                           const parsedFamily = parseWordFormationMeaning(row.meaning);
                           return (
-                            <div key={idx} className="p-5 border border-off-black/10 dark:border-white/10 rounded-2xl bg-paper-canvas/30 space-y-3 font-mono text-xs">
+                            <div key={idx} className="p-3 sm:p-4 border border-off-black/10 dark:border-white/10 rounded-2xl bg-paper-canvas/30 space-y-3 font-mono text-xs">
                               <div className="flex items-center justify-between border-b border-off-black/5 dark:border-white/5 pb-2">
                                 <span className="text-sm font-bold text-ink">{row.word}</span>
                                 <span className="inline-block text-[10px] font-mono text-off-black bg-transparent border border-off-black px-2.5 py-0.5 rounded-full">
@@ -1650,7 +1650,7 @@ export function LearningExplorerSection({
                       {/* Mobile Card View */}
                       <div className="block md:hidden space-y-4">
                         {filterData(unit.wordPatterns, ["verb", "pattern", "meaning", "example"]).map((row, idx) => (
-                          <div key={idx} className="p-5 border border-off-black/10 dark:border-white/10 rounded-2xl bg-paper-canvas/30 space-y-3 font-mono text-xs">
+                          <div key={idx} className="p-3 sm:p-4 border border-off-black/10 dark:border-white/10 rounded-2xl bg-paper-canvas/30 space-y-3 font-mono text-xs">
                             <div className="flex items-center justify-between border-b border-off-black/5 dark:border-white/5 pb-2">
                               <span className="text-sm font-bold text-ink">{row.verb}</span>
                               <span className="inline-block text-[10px] font-mono text-off-black bg-transparent border border-off-black px-2.5 py-0.5 rounded-full">
@@ -1722,7 +1722,7 @@ export function LearningExplorerSection({
                       {/* Mobile Card View */}
                       <div className="block md:hidden space-y-4">
                         {filterData(unit.phrasalVerbs, ["phrasalVerb", "meaning", "example"]).map((row, idx) => (
-                          <div key={idx} className="p-5 border border-off-black/10 dark:border-white/10 rounded-2xl bg-paper-canvas/30 space-y-3 font-mono text-xs">
+                          <div key={idx} className="p-3 sm:p-4 border border-off-black/10 dark:border-white/10 rounded-2xl bg-paper-canvas/30 space-y-3 font-mono text-xs">
                             <div className="border-b border-off-black/5 dark:border-white/5 pb-2">
                               <span className="text-sm font-bold text-ink">{row.phrasalVerb}</span>
                             </div>
@@ -1785,7 +1785,7 @@ export function LearningExplorerSection({
                       {/* Mobile Card View */}
                       <div className="block md:hidden space-y-4">
                         {filterData(unit.prepositionalPhrases, ["phrase", "meaning"]).map((row, idx) => (
-                          <div key={idx} className="p-5 border border-off-black/10 dark:border-white/10 rounded-2xl bg-paper-canvas/30 space-y-3 font-mono text-xs">
+                          <div key={idx} className="p-3 sm:p-4 border border-off-black/10 dark:border-white/10 rounded-2xl bg-paper-canvas/30 space-y-3 font-mono text-xs">
                             <div className="border-b border-off-black/5 dark:border-white/5 pb-2">
                               <span className="text-sm font-bold text-ink">{row.phrase}</span>
                             </div>
@@ -1849,7 +1849,7 @@ export function LearningExplorerSection({
                       {/* Mobile Card View */}
                       <div className="block md:hidden space-y-4">
                         {filterData(unit.collocations, ["word", "collocation", "meaning"]).map((row, idx) => (
-                          <div key={idx} className="p-5 border border-off-black/10 dark:border-white/10 rounded-2xl bg-paper-canvas/30 space-y-3 font-mono text-xs">
+                          <div key={idx} className="p-3 sm:p-4 border border-off-black/10 dark:border-white/10 rounded-2xl bg-paper-canvas/30 space-y-3 font-mono text-xs">
                             <div className="flex items-center justify-between border-b border-off-black/5 dark:border-white/5 pb-2">
                               <span className="text-[10px] font-bold text-off-black/55 uppercase">{translate("Base Word")}: {row.word}</span>
                             </div>
@@ -1926,7 +1926,7 @@ export function LearningExplorerSection({
           if (isDraggingRef.current) return;
           setIsMobileDrawerOpen(true);
         }}
-        className="fixed bottom-24 right-6 z-40 w-12 h-12 rounded-full shadow-xl flex items-center justify-center border border-off-black/15 dark:border-white/15 text-ink cursor-pointer overflow-hidden bg-white/5 dark:bg-black/10 backdrop-blur-none"
+        className="fixed bottom-24 right-6 z-40 w-12 h-12 rounded-full shadow-xl flex items-center justify-center border border-off-black/15 dark:border-white/15 text-ink cursor-pointer overflow-hidden bg-paper-canvas/80 dark:bg-zinc-950/80 backdrop-blur-md md:backdrop-blur-none"
         style={{ touchAction: "none" }}
       >
         {/* Gradual Blur Background */}
@@ -1961,7 +1961,7 @@ export function LearningExplorerSection({
               animate={{ y: 0 }}
               exit={{ y: "100%" }}
               transition={{ type: "spring", damping: 25, stiffness: 220 }}
-              className="fixed bottom-0 left-0 right-0 max-h-[80vh] bg-paper-canvas rounded-t-[32px] border-t-2 border-x-2 border-off-black shadow-[0_-12px_24px_0px_var(--shadow-3d-color)] z-50 p-6 flex flex-col pointer-events-auto overflow-hidden"
+              className="fixed bottom-0 left-0 right-0 max-h-[80vh] bg-paper-canvas/80 dark:bg-zinc-950/80 backdrop-blur-md rounded-t-[32px] border-t-2 border-x-2 border-off-black shadow-[0_-12px_24px_0px_var(--shadow-3d-color)] z-50 p-6 flex flex-col pointer-events-auto overflow-hidden"
             >
               {/* Drag handle indicator */}
               <div className="w-12 h-1.5 bg-off-black/10 dark:bg-white/10 rounded-full mx-auto mb-6 shrink-0" />

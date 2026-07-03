@@ -816,6 +816,10 @@ export default function SplashCursor({
       const filtering = ext.supportLinearFiltering ? gl.LINEAR : gl.NEAREST;
       gl.disable(gl.BLEND);
 
+      if (!rgba || !rg || !r) {
+        return;
+      }
+
       if (!dye) {
         dye = createDoubleFBO(dyeRes.width, dyeRes.height, rgba.internalFormat, rgba.format, texType, filtering);
       } else {
@@ -868,17 +872,21 @@ export default function SplashCursor({
     updateKeywords();
     initFramebuffers();
 
+    let animationFrameId: number | null = null;
     let lastUpdateTime = Date.now();
     let colorUpdateTimer = 0.0;
 
     function updateFrame() {
+      if (gl.isContextLost && gl.isContextLost()) {
+        return;
+      }
       const dt = calcDeltaTime();
       if (resizeCanvas()) initFramebuffers();
       updateColors(dt);
       applyInputs();
       step(dt);
       render(null);
-      requestAnimationFrame(updateFrame);
+      animationFrameId = requestAnimationFrame(updateFrame);
     }
 
     function calcDeltaTime() {
@@ -1304,6 +1312,10 @@ export default function SplashCursor({
       window.removeEventListener('touchend', onTouchEnd);
       document.body.removeEventListener('mousemove', handleFirstMouseMove);
       document.body.removeEventListener('touchstart', handleFirstTouchStart);
+
+      if (animationFrameId !== null) {
+        cancelAnimationFrame(animationFrameId);
+      }
 
       // Force lose WebGL context to prevent resource leaks in Next.js development mode
       try {

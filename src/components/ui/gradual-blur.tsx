@@ -196,9 +196,11 @@ const GradualBlur: React.FC<GradualBlurProps> = props => {
     const direction = getGradientDirection(config.position);
 
     if (isMobile) {
-      // Mobile optimization: Render a single simple gradient layer instead of multiple backdrop blurs
+      // Mobile optimization: Render a single simple gradient layer with a subtle backdrop filter
       const divStyle: CSSProperties = {
         background: `linear-gradient(${direction}, transparent 0%, var(--paper-canvas) 100%)`,
+        backdropFilter: `blur(8px) saturate(120%)`,
+        WebkitBackdropFilter: `blur(8px) saturate(120%)`,
         opacity: config.opacity,
       };
       divs.push(<div key="mobile-flat-fade" className="absolute inset-0" style={divStyle} />);
