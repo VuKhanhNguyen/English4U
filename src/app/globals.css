@@ -165,6 +165,38 @@
   display: inline-block;
 }
 
+.text-grad-about {
+  background: linear-gradient(to right, var(--nav-grad-blue) 0%, var(--nav-grad-blue) 40%, var(--nav-grad-white) 140%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  display: inline-block;
+}
+
+.text-grad-destination {
+  background: linear-gradient(to right, var(--nav-grad-blue) -40%, var(--nav-grad-white) 50%, var(--nav-grad-yellow) 140%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  display: inline-block;
+}
+
+.text-grad-resources {
+  background: linear-gradient(to right, var(--nav-grad-white) -20%, var(--nav-grad-yellow) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  display: inline-block;
+}
+
+.text-grad-contact {
+  background: linear-gradient(to right, var(--nav-grad-white) -100%, var(--nav-grad-yellow) 10%, var(--nav-grad-yellow) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  display: inline-block;
+}
+
 html, body {
   @apply font-abc-diatype-mono bg-paper-canvas text-ink;
 }
@@ -285,6 +317,9 @@ html.lenis body {
   --sidebar-accent-foreground: var(--off-black);
   --sidebar-border: var(--pale-stone);
   --sidebar-ring: var(--off-black);
+  --nav-grad-blue: #1b4fa3;
+  --nav-grad-white: #475569;
+  --nav-grad-yellow: #ea580c;
 }
 
 .dark {
@@ -337,6 +372,9 @@ html.lenis body {
   --sidebar-accent-foreground: var(--off-black);
   --sidebar-border: var(--pale-stone);
   --sidebar-ring: var(--off-black);
+  --nav-grad-blue: #60a5fa;
+  --nav-grad-white: #ffffff;
+  --nav-grad-yellow: #fbbf24;
 }
 
 @layer base {

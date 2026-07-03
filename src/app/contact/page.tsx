@@ -240,7 +240,7 @@ export default function ContactPage() {
           </Breadcrumb>
 
           {/* Header Section (Modern Typographic Capsule + Heading) */}
-          <div className="flex flex-col items-start gap-4 max-w-4xl mt-6 md:mt-10">
+          <div className="flex flex-col items-start gap-4 max-w-4xl">
             <motion.div
               initial={{ opacity: 0, scale: 0.95 }}
               animate={{ opacity: 1, scale: 1 }}

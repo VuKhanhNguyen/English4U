@@ -22,7 +22,34 @@ export function Navbar() {
   const { theme, setTheme } = useTheme();
   const { lang, setLang, translate } = useLanguage();
   const { isInstallable, isInstalled, installApp } = usePwa();
+  const isDark = theme === "dark";
+  const blueColor = isDark ? "#60a5fa" : "#1b4fa3";
+  const whiteColor = isDark ? "#ffffff" : "#475569";
+  const yellowColor = isDark ? "#fbbf24" : "#ea580c";
 
+  const getGradientStyle = (index: number): React.CSSProperties => {
+    let background = "";
+    if (index === 0) {
+      background = `linear-gradient(to right, ${blueColor} 0%, ${blueColor} 40%, ${whiteColor} 140%)`;
+    } else if (index === 1) {
+      background = `linear-gradient(to right, ${blueColor} -40%, ${whiteColor} 50%, ${yellowColor} 140%)`;
+    } else if (index === 2) {
+      background = `linear-gradient(to right, ${whiteColor} -20%, ${yellowColor} 100%)`;
+    } else if (index === 3) {
+      background = `linear-gradient(to right, ${whiteColor} -100%, ${yellowColor} 10%, ${yellowColor} 100%)`;
+    } else {
+      // Full Blue -> White -> Yellow gradient
+      background = `linear-gradient(to right, ${blueColor} 0%, ${whiteColor} 50%, ${yellowColor} 100%)`;
+    }
+
+    return {
+      backgroundImage: background,
+      WebkitBackgroundClip: "text",
+      WebkitTextFillColor: "transparent",
+      backgroundClip: "text",
+      display: "inline-block",
+    };
+  };
   React.useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
@@ -72,7 +99,7 @@ export function Navbar() {
             href="/"
             className="text-sm font-normal text-off-black px-[10px] py-[8px] hover:underline hover:decoration-off-black transition-all"
           >
-            {translate("About")}
+            <span className="text-grad-about" style={getGradientStyle(0)}>{translate("About")}</span>
           </Link>
 
           {/* Hover-activated dropdown */}
@@ -82,7 +109,7 @@ export function Navbar() {
             onMouseLeave={() => setIsDropdownOpen(false)}
           >
             <button className="flex items-center gap-1 text-sm font-normal text-off-black px-[10px] py-[8px] hover:underline hover:decoration-off-black transition-all outline-none cursor-pointer">
-              Destination{" "}
+              <span className="text-grad-destination" style={getGradientStyle(1)}>Destination</span>{" "}
               <ChevronDown
                 className={`w-[16px] h-[16px] transition-transform duration-200 ${isDropdownOpen ? "rotate-180" : ""}`}
               />
@@ -190,13 +217,13 @@ export function Navbar() {
             href="/resources"
             className="text-sm font-normal text-off-black px-[10px] py-[8px] hover:underline hover:decoration-off-black transition-all"
           >
-            {translate("Resources")}
+            <span className="text-grad-resources" style={getGradientStyle(2)}>{translate("Resources")}</span>
           </Link>
           <Link
             href="/contact"
             className="text-sm font-normal text-off-black px-[10px] py-[8px] hover:underline hover:decoration-off-black transition-all"
           >
-            {translate("Contact")}
+            <span className="text-grad-contact" style={getGradientStyle(3)}>{translate("Contact")}</span>
           </Link>
         </nav>
 
@@ -209,9 +236,10 @@ export function Navbar() {
               setSettingsRotation((prev) => prev + 180);
             }}
           >
-            {translate("Settings")}{" "}
+            <span style={getGradientStyle(4)}>{translate("Settings")}</span>{" "}
             <Settings
               className="w-[16px] h-[16px] transition-transform duration-500 ease-in-out"
+              stroke="url(#settings-grad)"
               style={{ transform: `rotate(${settingsRotation}deg)` }}
             />
           </Button>
@@ -658,8 +686,13 @@ export function Navbar() {
 
 // SVG Filter Component for Liquid Glass distortion
 const GlassFilter: React.FC = () => (
-  <svg style={{ display: "none" }}>
+  <svg style={{ width: 0, height: 0, position: "absolute", pointerEvents: "none", overflow: "hidden" }}>
     <defs>
+      <linearGradient id="settings-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+        <stop offset="0%" stopColor="var(--nav-grad-blue)" />
+        <stop offset="50%" stopColor="var(--nav-grad-white)" />
+        <stop offset="100%" stopColor="var(--nav-grad-yellow)" />
+      </linearGradient>
       <filter
         id="glass-distortion"
         x="-20%"

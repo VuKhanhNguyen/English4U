@@ -1,9 +1,8 @@
-const CACHE_NAME = "english4u-v1";
+const CACHE_NAME = "english4u-v2";
 const ASSETS = [
   "/",
   "/manifest.json",
-  "/imgs/logo2.png",
-  "/imgs/logo1.png"
+  "/imgs/iconApp.png"
 ];
 
 self.addEventListener("install", (event) => {

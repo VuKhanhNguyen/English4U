@@ -156,7 +156,7 @@ export function PwaProvider({ children }: { children: React.ReactNode }) {
               {/* Title & Description */}
               <div className="flex flex-col items-center text-center mt-2">
                 <img
-                  src="/imgs/logo2.png"
+                  src="/imgs/iconApp.png"
                   alt="English4U Logo"
                   className="w-16 h-16 rounded-md mb-3 shadow-md"
                 />

@@ -8,7 +8,7 @@ All notable changes to the **English4U** project are documented below. This proj
 
 | Key Metrics         | Value / Badges                                                                                                                             |
 | :------------------ | :----------------------------------------------------------------------------------------------------------------------------------------- |
-| **Current Version** | ![Version](https://img.shields.io/badge/version-v1.6.6-blue.svg?style=for-the-badge&logo=git)                                              |
+| **Current Version** | ![Version](https://img.shields.io/badge/version-v1.6.7-blue.svg?style=for-the-badge&logo=git)                                              |
 | **Framework**       | ![Next.js](https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white)                                 |
 | **Styling**         | ![CSS](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)                                             |
 | **Language**        | ![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)                          |
@@ -40,7 +40,37 @@ gantt
     v1.6.4 Mobile Scroll & Lag Fixes   :active, 2026-07-02, 2026-07-02
     v1.6.5 Mobile Render & Scroll Optim:active, 2026-07-03, 2026-07-03
     v1.6.6 Mobile Spacing & Glassmorphism:active, 2026-07-03, 2026-07-03
+    v1.6.7 PWA Icon & Navbar Gradients :active, 2026-07-03, 2026-07-03
 ```
+
+---
+
+## 🚀 v1.6.7 — PWA Install Icon & Navbar Gradient Polish
+
+> **Release Date:** July 3, 2026 • _Focus: PWA Installer Logo Customization, Dynamic Text Gradient Transitions, SVG Gradient Visibility Bugfixes, and React Style Conflict Mitigation_
+
+```
+┌──────────────────────────────────────────────────────────────────┐
+│  ✨ Highlights:                                                  │
+│  • Changed PWA manifest icons & apple-touch-icon to iconApp.png  │
+│  • Refactored sw.js cache structure & bumped version to v2       │
+│  • Created dynamic royal blue-white-orange text gradient links   │
+│  • Fixed SVG display:none bug to make gear gradient visible      │
+│  • Resolved React 19 style conflict (background shorthand warning)│
+└──────────────────────────────────────────────────────────────────┘
+```
+
+### 📱 PWA & Offline Improvements
+- **PWA Install Icon Customization**: Updated `manifest.json` and layout metadata `apple-touch-icon` to use `/imgs/iconApp.png` as the official installation logo on both desktop and mobile platforms, resolving the browser's default letter "E" fallback.
+- **Service Worker Cache Streamline**: De-duplicated cached logo assets in `sw.js` and bumped the service worker's `CACHE_NAME` to `"english4u-v2"`, forcing the browser to clear old caches and immediately show the updated PWA installer icon.
+
+### 🎨 Navbar & UI Gradients
+- **Seamless Continuous Text Gradients**: Implemented dynamic segment-based text gradients on the 4 main desktop menu items (About, Destination, Resources, Contact) using brand logo colors (Royal Blue $\to$ White/Grey $\to$ Yellow/Orange) for a premium, integrated visual flow.
+- **Gradient-Styled Settings Button & Gear Icon**: Applied the full three-color gradient to the Settings label text and configured the Lucide `<Settings>` gear icon outline to render with the gradient using SVG linearGradient stroke interpolation (`stroke="url(#settings-grad)"`).
+- **SVG Gradient Visibility Fix**: Modified the backdrop SVG definition container inside `navbar.tsx` from `display: "none"` to zero size absolute positioning (`width: 0, height: 0`), preventing Chrome and Safari from dropping the gradient definitions.
+
+### 🐛 React Compatibility & Fixes
+- **Style Property Warning Resolution**: Resolved React's console styling warning ("Updating shorthand style property (background) when a conflicting sub-property is set") by replacing the `background` shorthand with `backgroundImage` inside the text gradient generator.
 
 ---
 
