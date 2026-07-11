@@ -2,7 +2,7 @@
 
 import * as React from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Search, BookOpen, Layers, Bookmark, ArrowRight, Zap, RefreshCw, ChevronLeft, ChevronRight, ChevronsLeft, ChevronsRight, Link } from "lucide-react";
+import { Search, BookOpen, Layers, Bookmark, ArrowRight, Zap, RefreshCw, ChevronLeft, ChevronRight, ChevronsLeft, ChevronsRight, Link, Home } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 import { Navbar } from "@/components/layout/navbar";
@@ -485,9 +485,9 @@ export default function ResourcesPage() {
       label: "Vocabulary",
       count: vocabulary.length,
       unit: "words",
-      textColor: "text-ink",
-      borderColor: "border-l-ink/40 hover:border-l-ink hover:bg-ink/5",
-      activeStyle: "bg-ink/5 border-l-ink border-off-black/20",
+      textColor: "text-emerald-600 dark:text-emerald-400",
+      borderColor: "border-l-emerald-500/40 hover:border-l-emerald-500 hover:bg-emerald-500/5 dark:hover:bg-emerald-950/10",
+      activeStyle: "bg-emerald-500/10 border-l-emerald-500 border-emerald-500/20 dark:bg-emerald-500/5",
       gridClasses: "col-span-1 lg:col-span-4",
     },
     {
@@ -495,9 +495,9 @@ export default function ResourcesPage() {
       label: "Phrasal Verbs",
       count: phrasalVerbs.length,
       unit: "items",
-      textColor: "text-orange-600 dark:text-orange-500",
-      borderColor: "border-l-orange-500/40 hover:border-l-orange-500 hover:bg-orange-500/5",
-      activeStyle: "bg-orange-500/5 border-l-orange-500 border-orange-500/20",
+      textColor: "text-orange-600 dark:text-orange-400",
+      borderColor: "border-l-orange-500/40 hover:border-l-orange-500 hover:bg-orange-500/5 dark:hover:bg-orange-950/10",
+      activeStyle: "bg-orange-500/10 border-l-orange-500 border-orange-500/20 dark:bg-orange-500/5",
       gridClasses: "col-span-1 lg:col-span-4",
     },
     {
@@ -505,9 +505,9 @@ export default function ResourcesPage() {
       label: "Prepositional Phrases",
       count: prepositionalPhrases.length,
       unit: "phrases",
-      textColor: "text-indigo-600 dark:text-indigo-400",
-      borderColor: "border-l-indigo-600/40 hover:border-l-indigo-600 hover:bg-indigo-600/5",
-      activeStyle: "bg-indigo-600/5 border-l-indigo-600 border-indigo-600/20",
+      textColor: "text-sky-600 dark:text-sky-400",
+      borderColor: "border-l-sky-500/40 hover:border-l-sky-500 hover:bg-sky-500/5 dark:hover:bg-sky-950/10",
+      activeStyle: "bg-sky-500/10 border-l-sky-500 border-sky-500/20 dark:bg-sky-500/5",
       gridClasses: "col-span-1 lg:col-span-4",
     },
     {
@@ -516,8 +516,8 @@ export default function ResourcesPage() {
       count: wordFormation.length,
       unit: "forms",
       textColor: "text-teal-600 dark:text-teal-400",
-      borderColor: "border-l-teal-600/40 hover:border-l-teal-600 hover:bg-teal-600/5",
-      activeStyle: "bg-teal-600/5 border-l-teal-600 border-teal-600/20",
+      borderColor: "border-l-teal-500/40 hover:border-l-teal-500 hover:bg-teal-500/5 dark:hover:bg-teal-950/10",
+      activeStyle: "bg-teal-500/10 border-l-teal-500 border-teal-500/20 dark:bg-teal-500/5",
       gridClasses: "col-span-1 lg:col-span-4",
     },
     {
@@ -525,9 +525,9 @@ export default function ResourcesPage() {
       label: "Word Patterns",
       count: wordPatterns.length,
       unit: "patterns",
-      textColor: "text-red-600 dark:text-red-400",
-      borderColor: "border-l-red-600/40 hover:border-l-red-600 hover:bg-red-600/5",
-      activeStyle: "bg-red-600/5 border-l-red-600 border-red-600/20",
+      textColor: "text-rose-600 dark:text-rose-400",
+      borderColor: "border-l-rose-500/40 hover:border-l-rose-500 hover:bg-rose-500/5 dark:hover:bg-rose-950/10",
+      activeStyle: "bg-rose-500/10 border-l-rose-500 border-rose-500/20 dark:bg-rose-500/5",
       gridClasses: "col-span-1 lg:col-span-4",
     },
     {
@@ -535,9 +535,9 @@ export default function ResourcesPage() {
       label: "Collocations",
       count: collocations.length,
       unit: "items",
-      textColor: "text-violet-600 dark:text-violet-400",
-      borderColor: "border-l-violet-600/40 hover:border-l-violet-600 hover:bg-violet-600/5",
-      activeStyle: "bg-violet-600/5 border-l-violet-600 border-violet-600/20",
+      textColor: "text-amber-600 dark:text-amber-400",
+      borderColor: "border-l-amber-500/40 hover:border-l-amber-500 hover:bg-amber-500/5 dark:hover:bg-amber-950/10",
+      activeStyle: "bg-amber-500/10 border-l-amber-500 border-amber-500/20 dark:bg-amber-500/5",
       gridClasses: "col-span-1 lg:col-span-4",
     },
   ], [vocabulary.length, phrasalVerbs.length, prepositionalPhrases.length, wordFormation.length, wordPatterns.length, collocations.length]);
@@ -566,16 +566,22 @@ export default function ResourcesPage() {
         <div className="absolute bottom-20 right-10 w-[600px] h-[600px] rounded-full bg-sunset-violet-gradient opacity-15 blur-[120px] pointer-events-none -z-10" />
 
         <div className="container mx-auto px-4 sm:px-6 max-w-[1432px]">
-          <Breadcrumb className="mt-2.5 mb-5 text-xs">
+          <Breadcrumb className="w-max px-4 py-2 rounded-full bg-paper-canvas/50 dark:bg-zinc-950/30 backdrop-blur-md border border-off-black/10 dark:border-white/10 shadow-sm text-xs mt-2.5 mb-5 select-none font-mono">
                 <BreadcrumbList>
                   <BreadcrumbItem>
                     <BreadcrumbLink href="/" asChild>
-                      <NextLink href="/">{translate("Home")}</NextLink>
+                      <NextLink href="/" className="inline-flex items-center gap-1.5 hover:text-ink transition-colors">
+                        <Home className="w-3.5 h-3.5" />
+                        {translate("Home")}
+                      </NextLink>
                     </BreadcrumbLink>
                   </BreadcrumbItem>
                   <BreadcrumbSeparator />
                   <BreadcrumbItem>
-                    <BreadcrumbPage className="text-pale-stone font-medium">{translate("Resources")}</BreadcrumbPage>
+                    <BreadcrumbPage className="text-pale-stone font-medium inline-flex items-center gap-1.5">
+                      <BookOpen className="w-3.5 h-3.5 text-pale-stone" />
+                      {translate("Resources")}
+                    </BreadcrumbPage>
                   </BreadcrumbItem>
                 </BreadcrumbList>
               </Breadcrumb>
@@ -585,17 +591,17 @@ export default function ResourcesPage() {
             
             <div className="space-y-4 max-w-2xl mb-8 lg:mb-0">
               <div className="flex flex-wrap gap-2">
-                <span className="inline-block text-caption font-mono uppercase tracking-wider text-ink bg-atmosphere-wash px-3.5 py-1.5 rounded-full border border-off-black font-semibold">
+                <span className="px-3 py-1 rounded-full bg-sky-500/10 text-sky-600 dark:text-sky-400 text-xs border border-sky-500/20 font-mono font-bold uppercase tracking-wider">
                   B1
                 </span>
-                <span className="inline-block text-caption font-mono uppercase tracking-wider text-ink bg-orange-100 dark:bg-orange-900/30 px-3.5 py-1.5 rounded-full border border-orange-400/50 font-semibold">
+                <span className="px-3 py-1 rounded-full bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 text-xs border border-emerald-500/20 font-mono font-bold uppercase tracking-wider">
                   B2
                 </span>
-                <span className="inline-block text-caption font-mono uppercase tracking-wider text-pale-stone bg-transparent px-3.5 py-1.5 rounded-full border border-off-black/20 font-semibold">
+                <span className="px-3 py-1 rounded-full bg-amber-500/10 text-amber-600 dark:text-amber-400 text-xs border border-amber-500/20 font-mono font-bold uppercase tracking-wider">
                   C1 · C2
                 </span>
               </div>
-              <h1 className="text-heading-lg font-heading font-bold text-ink leading-tight">
+              <h1 className="text-heading-lg font-heading font-bold bg-gradient-to-r from-off-black via-[#10b981] to-[#0ea5e9] dark:from-stardust-gold dark:via-[#ffae7a] dark:to-white bg-clip-text text-transparent leading-tight mb-4 inline-block pb-1">
                 {translate("All-in-One Destination Synthesis")}
               </h1>
               
@@ -696,30 +702,30 @@ export default function ResourcesPage() {
                   {/* Desktop Table View */}
                   <div className="hidden md:block">
                     <Table>
-                      <TableHeader className="bg-atmosphere-wash/30 border-b border-off-black">
+                      <TableHeader className="bg-emerald-500/10 border-b border-emerald-500/20">
                         <TableRow className="hover:bg-transparent">
-                          <TableHead className="w-[80px] font-mono text-ink text-center">{translate("No.")}</TableHead>
-                          <TableHead className="w-[180px] font-mono text-ink">{translate("Word")}</TableHead>
-                          <TableHead className="w-[100px] font-mono text-ink">{translate("Type")}</TableHead>
-                          <TableHead className="font-mono text-ink">{translate("Meaning")}</TableHead>
-                          <TableHead className="font-mono text-ink">{translate("Example")}</TableHead>
-                          <TableHead className="w-[150px] font-mono text-ink">{translate("Source")}</TableHead>
+                          <TableHead className="w-[80px] font-mono text-emerald-700 dark:text-emerald-300 font-bold text-center">{translate("No.")}</TableHead>
+                          <TableHead className="w-[180px] font-mono text-emerald-700 dark:text-emerald-300 font-bold">{translate("Word")}</TableHead>
+                          <TableHead className="w-[100px] font-mono text-emerald-700 dark:text-emerald-300 font-bold">{translate("Type")}</TableHead>
+                          <TableHead className="font-mono text-emerald-700 dark:text-emerald-300 font-bold">{translate("Meaning")}</TableHead>
+                          <TableHead className="font-mono text-emerald-700 dark:text-emerald-300 font-bold">{translate("Example")}</TableHead>
+                          <TableHead className="w-[150px] font-mono text-emerald-700 dark:text-emerald-300 font-bold">{translate("Source")}</TableHead>
                         </TableRow>
                       </TableHeader>
                       <TableBody>
                         {paginatedItems.map((row: any, idx) => (
                           <TableRow key={idx} className="hover:bg-atmosphere-wash/10 transition-colors">
                             <TableCell className="font-mono text-ink text-center text-xs font-semibold">{(currentPage - 1) * itemsPerPage + idx + 1}</TableCell>
-                            <TableCell className="font-mono font-bold text-ink text-sm">{row.word}</TableCell>
+                            <TableCell className="font-mono font-semibold text-emerald-600 dark:text-emerald-400 text-sm">{row.word}</TableCell>
                             <TableCell>
-                              <span className="inline-block text-[11px] font-mono font-medium text-off-black bg-transparent border border-off-black px-2.5 py-0.5 rounded-full">
+                              <span className="px-2 py-0.5 rounded bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 text-xs border border-emerald-500/20 font-mono font-medium">
                                 {row.type}
                               </span>
                             </TableCell>
                             <TableCell className="font-mono text-off-black text-sm max-w-[280px] break-words">{translate(row.meaning, { lookupOnly: true })}</TableCell>
                             <TableCell className="font-mono italic text-pale-stone text-xs max-w-[320px] whitespace-pre-line">{row.example}</TableCell>
                             <TableCell className="font-mono text-xs text-pale-stone">
-                              <span className="bg-atmosphere-wash/20 border border-off-black/10 rounded-full px-2 py-0.5 text-[10px] whitespace-nowrap inline-block">
+                              <span className="px-2 py-0.5 rounded bg-sky-500/10 text-sky-600 dark:text-sky-400 text-[10px] border border-sky-500/20 whitespace-nowrap inline-block font-semibold">
                                 {formatSource(row.unitTitle, row.unitId)}
                               </span>
                             </TableCell>
@@ -742,14 +748,14 @@ export default function ResourcesPage() {
                       <div key={idx} className="p-3 sm:p-4 border border-off-black/10 dark:border-white/10 rounded-2xl bg-paper-canvas/30 space-y-3 font-mono text-xs">
                         <div className="flex items-center justify-between border-b border-off-black/5 dark:border-white/5 pb-2">
                           <span className="text-[10px] font-bold text-pale-stone">#{ (currentPage - 1) * itemsPerPage + idx + 1 }</span>
-                          <span className="bg-atmosphere-wash/20 border border-off-black/10 rounded-full px-2 py-0.5 text-[10px] text-pale-stone whitespace-nowrap inline-block">
-                            {formatSource(row.unitTitle, row.unitId)}
-                          </span>
+                          <span className="px-2 py-0.5 rounded bg-sky-500/10 text-sky-600 dark:text-sky-400 text-[10px] border border-sky-500/20 whitespace-nowrap inline-block font-semibold">
+                             {formatSource(row.unitTitle, row.unitId)}
+                           </span>
                         </div>
                         <div className="space-y-2">
                           <div className="flex items-baseline gap-2">
-                            <span className="text-sm font-bold text-ink">{row.word}</span>
-                            <span className="inline-block text-[10px] font-mono text-off-black bg-transparent border border-off-black px-2 py-0.5 rounded-full">
+                            <span className="text-sm font-bold text-emerald-600 dark:text-emerald-400">{row.word}</span>
+                            <span className="px-2 py-0.5 rounded bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 text-xs border border-emerald-500/20 font-mono font-medium">
                               {row.type}
                             </span>
                           </div>
@@ -778,13 +784,13 @@ export default function ResourcesPage() {
                   {/* Desktop Table View */}
                   <div className="hidden md:block">
                     <Table>
-                      <TableHeader className="bg-atmosphere-wash/30 border-b border-off-black">
+                      <TableHeader className="bg-orange-500/10 border-b border-orange-500/20">
                         <TableRow className="hover:bg-transparent">
-                          <TableHead className="w-[80px] font-mono text-ink text-center">{translate("STT")}</TableHead>
-                          <TableHead className="w-[200px] font-mono text-ink">{translate("Phrasal Verb")}</TableHead>
-                          <TableHead className="font-mono text-ink">{translate("Meaning")}</TableHead>
-                          <TableHead className="font-mono text-ink">{translate("Example")}</TableHead>
-                          <TableHead className="w-[150px] font-mono text-ink">{translate("Source")}</TableHead>
+                          <TableHead className="w-[80px] font-mono text-orange-700 dark:text-orange-300 font-bold text-center">{translate("STT")}</TableHead>
+                          <TableHead className="w-[200px] font-mono text-orange-700 dark:text-orange-300 font-bold">{translate("Phrasal Verb")}</TableHead>
+                          <TableHead className="font-mono text-orange-700 dark:text-orange-300 font-bold">{translate("Meaning")}</TableHead>
+                          <TableHead className="font-mono text-orange-700 dark:text-orange-300 font-bold">{translate("Example")}</TableHead>
+                          <TableHead className="w-[150px] font-mono text-orange-700 dark:text-orange-300 font-bold">{translate("Source")}</TableHead>
                         </TableRow>
                       </TableHeader>
                       <TableBody>
@@ -795,7 +801,7 @@ export default function ResourcesPage() {
                             <TableCell className="font-mono text-off-black text-sm max-w-[280px] break-words">{translate(row.meaning, { lookupOnly: true })}</TableCell>
                             <TableCell className="font-mono italic text-pale-stone text-xs max-w-[350px] whitespace-pre-line">{row.example}</TableCell>
                             <TableCell className="font-mono text-xs text-pale-stone">
-                              <span className="bg-atmosphere-wash/20 border border-off-black/10 rounded-full px-2 py-0.5 text-[10px] whitespace-nowrap inline-block">
+                              <span className="px-2 py-0.5 rounded bg-sky-500/10 text-sky-600 dark:text-sky-400 text-[10px] border border-sky-500/20 whitespace-nowrap inline-block font-semibold">
                                 {formatSource(row.unitTitle, row.unitId)}
                               </span>
                             </TableCell>
@@ -818,9 +824,9 @@ export default function ResourcesPage() {
                       <div key={idx} className="p-3 sm:p-4 border border-off-black/10 dark:border-white/10 rounded-2xl bg-paper-canvas/30 space-y-3 font-mono text-xs">
                         <div className="flex items-center justify-between border-b border-off-black/5 dark:border-white/5 pb-2">
                           <span className="text-[10px] font-bold text-pale-stone">#{ (currentPage - 1) * itemsPerPage + idx + 1 }</span>
-                          <span className="bg-atmosphere-wash/20 border border-off-black/10 rounded-full px-2 py-0.5 text-[10px] text-pale-stone whitespace-nowrap inline-block">
-                            {formatSource(row.unitTitle, row.unitId)}
-                          </span>
+                           <span className="px-2 py-0.5 rounded bg-sky-500/10 text-sky-600 dark:text-sky-400 text-[10px] border border-sky-500/20 whitespace-nowrap inline-block font-semibold">
+                             {formatSource(row.unitTitle, row.unitId)}
+                           </span>
                         </div>
                         <div className="space-y-2">
                           <span className="text-sm font-bold text-orange-600 dark:text-orange-400">{row.phrasalVerb}</span>
@@ -849,26 +855,26 @@ export default function ResourcesPage() {
                   {/* Desktop Table View */}
                   <div className="hidden md:block">
                     <Table>
-                      <TableHeader className="bg-atmosphere-wash/30 border-b border-off-black">
+                      <TableHeader className="bg-sky-500/10 border-b border-sky-500/20">
                         <TableRow className="hover:bg-transparent">
-                          <TableHead className="w-[80px] font-mono text-ink text-center">{translate("STT")}</TableHead>
-                          <TableHead className="w-[150px] font-mono text-ink">{translate("Base Word")}</TableHead>
-                          <TableHead className="w-[220px] font-mono text-ink font-semibold">{translate("Prepositional Phrase")}</TableHead>
-                          <TableHead className="font-mono text-ink">{translate("Meaning")}</TableHead>
-                          <TableHead className="font-mono text-ink">{translate("Example")}</TableHead>
-                          <TableHead className="w-[150px] font-mono text-ink">{translate("Source")}</TableHead>
+                          <TableHead className="w-[80px] font-mono text-sky-700 dark:text-sky-300 font-bold text-center">{translate("STT")}</TableHead>
+                          <TableHead className="w-[150px] font-mono text-sky-700 dark:text-sky-300 font-bold">{translate("Base Word")}</TableHead>
+                          <TableHead className="w-[220px] font-mono text-sky-700 dark:text-sky-300 font-bold">{translate("Prepositional Phrase")}</TableHead>
+                          <TableHead className="font-mono text-sky-700 dark:text-sky-300 font-bold">{translate("Meaning")}</TableHead>
+                          <TableHead className="font-mono text-sky-700 dark:text-sky-300 font-bold">{translate("Example")}</TableHead>
+                          <TableHead className="w-[150px] font-mono text-sky-700 dark:text-sky-300 font-bold">{translate("Source")}</TableHead>
                         </TableRow>
                       </TableHeader>
                       <TableBody>
                         {paginatedItems.map((row: any, idx) => (
                           <TableRow key={idx} className="hover:bg-atmosphere-wash/10 transition-colors">
                             <TableCell className="font-mono text-ink text-center text-xs font-semibold">{(currentPage - 1) * itemsPerPage + idx + 1}</TableCell>
-                            <TableCell className="font-mono font-medium text-ink text-sm bg-atmosphere-wash/5 font-semibold text-center">{extractBaseWord(row.phrase)}</TableCell>
-                            <TableCell className="font-mono font-bold text-indigo-600 dark:text-indigo-400 text-sm">{row.phrase}</TableCell>
+                            <TableCell className="font-mono text-emerald-600 dark:text-emerald-400 text-sm font-semibold text-center">{extractBaseWord(row.phrase)}</TableCell>
+                            <TableCell className="font-mono font-bold text-sky-600 dark:text-sky-400 text-sm">{row.phrase}</TableCell>
                             <TableCell className="font-mono text-off-black text-sm max-w-[250px] break-words">{translate(row.meaning, { lookupOnly: true })}</TableCell>
                             <TableCell className="font-mono italic text-pale-stone text-xs max-w-[300px] whitespace-pre-line">{row.example}</TableCell>
                             <TableCell className="font-mono text-xs text-pale-stone">
-                              <span className="bg-atmosphere-wash/20 border border-off-black/10 rounded-full px-2 py-0.5 text-[10px] whitespace-nowrap inline-block">
+                              <span className="px-2 py-0.5 rounded bg-sky-500/10 text-sky-600 dark:text-sky-400 text-[10px] border border-sky-500/20 whitespace-nowrap inline-block font-semibold">
                                 {formatSource(row.unitTitle, row.unitId)}
                               </span>
                             </TableCell>
@@ -891,15 +897,15 @@ export default function ResourcesPage() {
                       <div key={idx} className="p-3 sm:p-4 border border-off-black/10 dark:border-white/10 rounded-2xl bg-paper-canvas/30 space-y-3 font-mono text-xs">
                         <div className="flex items-center justify-between border-b border-off-black/5 dark:border-white/5 pb-2">
                           <span className="text-[10px] font-bold text-pale-stone">#{ (currentPage - 1) * itemsPerPage + idx + 1 }</span>
-                          <span className="bg-atmosphere-wash/20 border border-off-black/10 rounded-full px-2 py-0.5 text-[10px] text-pale-stone whitespace-nowrap inline-block">
-                            {formatSource(row.unitTitle, row.unitId)}
-                          </span>
+                           <span className="px-2 py-0.5 rounded bg-sky-500/10 text-sky-600 dark:text-sky-400 text-[10px] border border-sky-500/20 whitespace-nowrap inline-block font-semibold">
+                             {formatSource(row.unitTitle, row.unitId)}
+                           </span>
                         </div>
                         <div className="space-y-2">
                           <div className="flex items-baseline gap-2 flex-wrap">
-                            <span className="text-sm font-bold text-indigo-600 dark:text-indigo-400">{row.phrase}</span>
-                            <span className="text-[10px] text-pale-stone">({translate("Base Word")}: {extractBaseWord(row.phrase)})</span>
-                          </div>
+                            <span className="text-sm font-bold text-sky-600 dark:text-sky-400">{row.phrase}</span>
+                            <span className="text-[10px] text-emerald-600 dark:text-emerald-400 font-semibold">({translate("Base Word")}: {extractBaseWord(row.phrase)})</span>
+                          </div> 
                           <p className="text-off-black/75"><span className="font-bold text-ink">{translate("Meaning")}:</span> {translate(row.meaning, { lookupOnly: true })}</p>
                           {row.example && (
                             <p className="italic text-pale-stone leading-relaxed"><span className="font-bold text-ink not-italic">{translate("Example")}:</span> "{row.example}"</p>
@@ -925,14 +931,14 @@ export default function ResourcesPage() {
                   {/* Desktop Table View */}
                   <div className="hidden md:block">
                     <Table>
-                      <TableHeader className="bg-atmosphere-wash/30 border-b border-off-black">
+                      <TableHeader className="bg-teal-500/10 border-b border-teal-500/20">
                         <TableRow className="hover:bg-transparent">
-                          <TableHead className="w-[80px] font-mono text-ink text-center">{translate("STT")}</TableHead>
-                          <TableHead className="w-[150px] font-mono text-ink">{translate("Base Word")}</TableHead>
-                          <TableHead className="w-[200px] font-mono text-ink">{translate("Word Family")}</TableHead>
-                          <TableHead className="font-mono text-ink">{translate("Meaning")}</TableHead>
-                          <TableHead className="font-mono text-ink">{translate("Example")}</TableHead>
-                          <TableHead className="w-[150px] font-mono text-ink">{translate("Source")}</TableHead>
+                          <TableHead className="w-[80px] font-mono text-teal-700 dark:text-teal-300 font-bold text-center">{translate("STT")}</TableHead>
+                          <TableHead className="w-[150px] font-mono text-teal-700 dark:text-teal-300 font-bold">{translate("Base Word")}</TableHead>
+                          <TableHead className="w-[200px] font-mono text-teal-700 dark:text-teal-300 font-bold">{translate("Word Family")}</TableHead>
+                          <TableHead className="font-mono text-teal-700 dark:text-teal-300 font-bold">{translate("Meaning")}</TableHead>
+                          <TableHead className="font-mono text-teal-700 dark:text-teal-300 font-bold">{translate("Example")}</TableHead>
+                          <TableHead className="w-[150px] font-mono text-teal-700 dark:text-teal-300 font-bold">{translate("Source")}</TableHead>
                         </TableRow>
                       </TableHeader>
                       <TableBody>
@@ -969,15 +975,19 @@ export default function ResourcesPage() {
                                         <TableCell rowSpan={parsedFamily.length} className="font-mono text-ink text-center text-xs font-semibold pt-5 border-r border-off-black/5">
                                           {(currentPage - 1) * itemsPerPage + idx + 1}
                                         </TableCell>
-                                        <TableCell rowSpan={parsedFamily.length} className="font-mono font-bold text-ink text-sm pt-5 border-r border-off-black/5">
+                                        <TableCell rowSpan={parsedFamily.length} className="font-mono font-semibold text-emerald-600 dark:text-emerald-400 text-sm pt-5 border-r border-off-black/5">
                                           {row.word}
-                                          <span className="block text-[10px] text-pale-stone font-normal mt-0.5">({abbreviateType(row.type)})</span>
+                                          <span className="block mt-1 w-max px-1.5 py-0.5 rounded bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 text-[10px] border border-emerald-500/20 font-medium">
+                                            {abbreviateType(row.type)}
+                                          </span>
                                         </TableCell>
                                       </>
                                     )}
                                     
-                                    <TableCell className="font-mono font-bold text-teal-600 dark:text-teal-400 text-sm pt-5">
-                                      {formsStr}
+                                    <TableCell className="font-mono pt-5">
+                                      <span className="px-2 py-0.5 rounded bg-teal-500/10 text-teal-600 dark:text-teal-400 text-xs border border-teal-500/20 font-bold">
+                                        {formsStr}
+                                      </span>
                                     </TableCell>
                                     
                                     <TableCell className="font-mono text-off-black text-sm max-w-[280px] break-words pt-5">
@@ -990,7 +1000,7 @@ export default function ResourcesPage() {
                                     
                                     {fIdx === 0 && (
                                       <TableCell rowSpan={parsedFamily.length} className="font-mono text-xs text-pale-stone pt-5 border-l border-off-black/5">
-                                        <span className="bg-atmosphere-wash/20 border border-off-black/10 rounded-full px-2 py-0.5 text-[10px] whitespace-nowrap inline-block">
+                                        <span className="px-2 py-0.5 rounded bg-sky-500/10 text-sky-600 dark:text-sky-400 text-[10px] border border-sky-500/20 whitespace-nowrap inline-block font-semibold">
                                           {formatSource(row.unitTitle, row.unitId)}
                                         </span>
                                       </TableCell>
@@ -1020,14 +1030,16 @@ export default function ResourcesPage() {
                         <div key={idx} className="p-3 sm:p-4 border border-off-black/10 dark:border-white/10 rounded-2xl bg-paper-canvas/30 space-y-3 font-mono text-xs">
                           <div className="flex items-center justify-between border-b border-off-black/5 dark:border-white/5 pb-2">
                             <span className="text-[10px] font-bold text-pale-stone">#{ (currentPage - 1) * itemsPerPage + idx + 1 }</span>
-                            <span className="bg-atmosphere-wash/20 border border-off-black/10 rounded-full px-2 py-0.5 text-[10px] text-pale-stone whitespace-nowrap inline-block">
-                              {formatSource(row.unitTitle, row.unitId)}
-                            </span>
+                            <span className="px-2 py-0.5 rounded bg-sky-500/10 text-sky-600 dark:text-sky-400 text-[10px] border border-sky-500/20 whitespace-nowrap inline-block font-semibold">
+                               {formatSource(row.unitTitle, row.unitId)}
+                             </span>
                           </div>
                           <div className="space-y-1">
-                            <div className="text-sm font-bold text-ink">
-                              {row.word}
-                              <span className="text-[10px] text-pale-stone font-normal ml-1">({abbreviateType(row.type)})</span>
+                            <div className="flex items-center gap-2">
+                              <span className="text-sm font-bold text-emerald-600 dark:text-emerald-400">{row.word}</span>
+                              <span className="px-2 py-0.5 rounded bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 text-[10px] border border-emerald-500/20 font-medium">
+                                {abbreviateType(row.type)}
+                              </span>
                             </div>
                           </div>
                           <div className="space-y-4 pt-1">
@@ -1043,7 +1055,7 @@ export default function ResourcesPage() {
 
                               return (
                                 <div key={fIdx} className="space-y-2 border-b border-off-black/5 dark:border-white/5 last:border-b-0 pb-3 last:pb-0">
-                                  <p className="font-bold text-teal-600 dark:text-teal-400 text-xs bg-teal-500/10 px-2 py-0.5 rounded w-max">
+                                  <p className="px-2 py-0.5 rounded bg-teal-500/10 text-teal-600 dark:text-teal-400 text-xs border border-teal-500/20 font-bold w-max">
                                     {formsStr}
                                   </p>
                                   <p className="text-off-black/75"><span className="font-bold text-ink">{translate("Meaning")}:</span> {getWordFormationMeaning(row.meaning, fam.meaning, fIdx, translate, { lookupOnly: true })}</p>
@@ -1075,26 +1087,31 @@ export default function ResourcesPage() {
                   {/* Desktop Table View */}
                   <div className="hidden md:block">
                     <Table>
-                      <TableHeader className="bg-atmosphere-wash/30 border-b border-off-black">
+                      <TableHeader className="bg-rose-500/10 border-b border-rose-500/20">
                         <TableRow className="hover:bg-transparent">
-                          <TableHead className="w-[80px] font-mono text-ink text-center">{translate("STT")}</TableHead>
-                          <TableHead className="w-[160px] font-mono text-ink">{translate("Base Word")}</TableHead>
-                          <TableHead className="w-[240px] font-mono text-ink font-semibold">{translate("Word Pattern")}</TableHead>
-                          <TableHead className="font-mono text-ink">{translate("Meaning")}</TableHead>
-                          <TableHead className="font-mono text-ink">{translate("Example")}</TableHead>
-                          <TableHead className="w-[150px] font-mono text-ink">{translate("Source")}</TableHead>
+                          <TableHead className="w-[80px] font-mono text-rose-700 dark:text-rose-300 font-bold text-center">{translate("STT")}</TableHead>
+                          <TableHead className="w-[160px] font-mono text-rose-700 dark:text-rose-300 font-bold">{translate("Base Word")}</TableHead>
+                          <TableHead className="w-[240px] font-mono text-rose-700 dark:text-rose-300 font-bold">{translate("Word Pattern")}</TableHead>
+                          <TableHead className="font-mono text-rose-700 dark:text-rose-300 font-bold">{translate("Meaning")}</TableHead>
+                          <TableHead className="font-mono text-rose-700 dark:text-rose-300 font-bold">{translate("Example")}</TableHead>
+                          <TableHead className="w-[150px] font-mono text-rose-700 dark:text-rose-300 font-bold">{translate("Source")}</TableHead>
                         </TableRow>
                       </TableHeader>
                       <TableBody>
                         {paginatedItems.map((row: any, idx) => (
                           <TableRow key={idx} className="hover:bg-atmosphere-wash/10 transition-colors">
                             <TableCell className="font-mono text-ink text-center text-xs font-semibold">{(currentPage - 1) * itemsPerPage + idx + 1}</TableCell>
-                            <TableCell className="font-mono font-medium text-ink text-sm bg-atmosphere-wash/5 font-semibold text-center">{extractPatternBaseWord(row.verb)}</TableCell>
-                            <TableCell className="font-mono font-bold text-red-600 dark:text-red-400 text-sm">{row.verb} <span className="text-[10px] text-pale-stone font-normal italic">({abbreviateType(row.pattern)})</span></TableCell>
+                            <TableCell className="font-mono text-emerald-600 dark:text-emerald-400 text-sm font-semibold text-center">{extractPatternBaseWord(row.verb)}</TableCell>
+                            <TableCell className="font-mono font-bold text-rose-600 dark:text-rose-400 text-sm">
+                              {row.verb}{" "}
+                              <span className="inline-block px-1.5 py-0.5 rounded bg-rose-500/10 text-rose-600 dark:text-rose-400 text-[10px] border border-rose-500/20 font-mono font-medium ml-1">
+                                {abbreviateType(row.pattern)}
+                              </span>
+                            </TableCell>
                             <TableCell className="font-mono text-off-black text-sm max-w-[250px] break-words">{translate(row.meaning, { lookupOnly: true })}</TableCell>
                             <TableCell className="font-mono italic text-pale-stone text-xs max-w-[320px] whitespace-pre-line">{row.example}</TableCell>
                             <TableCell className="font-mono text-xs text-pale-stone">
-                              <span className="bg-atmosphere-wash/20 border border-off-black/10 rounded-full px-2 py-0.5 text-[10px] whitespace-nowrap inline-block">
+                              <span className="px-2 py-0.5 rounded bg-sky-500/10 text-sky-600 dark:text-sky-400 text-[10px] border border-sky-500/20 whitespace-nowrap inline-block font-semibold">
                                 {formatSource(row.unitTitle, row.unitId)}
                               </span>
                             </TableCell>
@@ -1117,16 +1134,18 @@ export default function ResourcesPage() {
                       <div key={idx} className="p-3 sm:p-4 border border-off-black/10 dark:border-white/10 rounded-2xl bg-paper-canvas/30 space-y-3 font-mono text-xs">
                         <div className="flex items-center justify-between border-b border-off-black/5 dark:border-white/5 pb-2">
                           <span className="text-[10px] font-bold text-pale-stone">#{ (currentPage - 1) * itemsPerPage + idx + 1 }</span>
-                          <span className="bg-atmosphere-wash/20 border border-off-black/10 rounded-full px-2 py-0.5 text-[10px] text-pale-stone whitespace-nowrap inline-block">
-                            {formatSource(row.unitTitle, row.unitId)}
-                          </span>
+                           <span className="px-2 py-0.5 rounded bg-sky-500/10 text-sky-600 dark:text-sky-400 text-[10px] border border-sky-500/20 whitespace-nowrap inline-block font-semibold">
+                             {formatSource(row.unitTitle, row.unitId)}
+                           </span>
                         </div>
                         <div className="space-y-2">
                           <div className="flex items-baseline gap-2 flex-wrap">
-                            <span className="text-sm font-bold text-red-600 dark:text-red-400">{row.verb}</span>
-                            <span className="text-[10px] text-pale-stone font-normal italic">({abbreviateType(row.pattern)})</span>
-                            <span className="text-[10px] text-pale-stone">({translate("Base Word")}: {extractPatternBaseWord(row.verb)})</span>
-                          </div>
+                            <span className="text-sm font-bold text-rose-600 dark:text-rose-400">{row.verb}</span>
+                            <span className="px-2 py-0.5 rounded bg-rose-500/10 text-rose-600 dark:text-rose-400 text-[10px] border border-rose-500/20 font-medium">
+                              {abbreviateType(row.pattern)}
+                            </span>
+                            <span className="text-[10px] text-emerald-600 dark:text-emerald-400 font-semibold">({translate("Base Word")}: {extractPatternBaseWord(row.verb)})</span>
+                          </div> 
                           <p className="text-off-black/75"><span className="font-bold text-ink">{translate("Meaning")}:</span> {translate(row.meaning, { lookupOnly: true })}</p>
                           {row.example && (
                             <p className="italic text-pale-stone leading-relaxed"><span className="font-bold text-ink not-italic">{translate("Example")}:</span> "{row.example}"</p>
@@ -1152,29 +1171,29 @@ export default function ResourcesPage() {
                   {/* Desktop Table View */}
                   <div className="hidden md:block">
                     <Table>
-                      <TableHeader className="bg-atmosphere-wash/30 border-b border-off-black">
+                      <TableHeader className="bg-amber-500/10 border-b border-amber-500/20">
                         <TableRow className="hover:bg-transparent">
-                          <TableHead className="w-[80px] font-mono text-ink text-center">{translate("STT")}</TableHead>
-                          <TableHead className="w-[160px] font-mono text-ink">{translate("Base Word")}</TableHead>
-                          <TableHead className="w-[280px] font-mono text-ink font-semibold">{translate("Collocation")}</TableHead>
-                          <TableHead className="font-mono text-ink">{translate("Meaning")}</TableHead>
-                          <TableHead className="w-[150px] font-mono text-ink">{translate("Source")}</TableHead>
+                          <TableHead className="w-[80px] font-mono text-amber-700 dark:text-amber-300 font-bold text-center">{translate("STT")}</TableHead>
+                          <TableHead className="w-[160px] font-mono text-amber-700 dark:text-amber-300 font-bold">{translate("Base Word")}</TableHead>
+                          <TableHead className="w-[280px] font-mono text-amber-700 dark:text-amber-300 font-bold">{translate("Collocation")}</TableHead>
+                          <TableHead className="font-mono text-amber-700 dark:text-amber-300 font-bold">{translate("Meaning")}</TableHead>
+                          <TableHead className="w-[150px] font-mono text-amber-700 dark:text-amber-300 font-bold">{translate("Source")}</TableHead>
                         </TableRow>
                       </TableHeader>
                       <TableBody>
                         {paginatedItems.map((row: any, idx) => (
                           <TableRow key={idx} className="hover:bg-atmosphere-wash/10 transition-colors">
                             <TableCell className="font-mono text-ink text-center text-xs font-semibold">{(currentPage - 1) * itemsPerPage + idx + 1}</TableCell>
-                            <TableCell className="font-mono font-medium text-ink text-sm bg-atmosphere-wash/5 font-semibold text-center">{row.word}</TableCell>
-                            <TableCell className="font-mono font-bold text-violet-600 dark:text-violet-400 text-sm">
+                            <TableCell className="font-mono text-emerald-600 dark:text-emerald-400 text-sm font-semibold text-center">{row.word}</TableCell>
+                            <TableCell className="font-mono font-bold text-amber-600 dark:text-amber-400 text-sm">
                               <span className="inline-flex items-center gap-1.5">
-                                <Link className="w-3 h-3 text-violet-400 shrink-0" />
+                                <Link className="w-3 h-3 text-amber-500 dark:text-amber-400 shrink-0" />
                                 {row.collocation}
                               </span>
                             </TableCell>
                             <TableCell className="font-mono text-off-black text-sm max-w-[300px] break-words">{translate(row.meaning, { lookupOnly: true })}</TableCell>
                             <TableCell className="font-mono text-xs text-pale-stone">
-                              <span className="bg-atmosphere-wash/20 border border-off-black/10 rounded-full px-2 py-0.5 text-[10px] whitespace-nowrap inline-block">
+                              <span className="px-2 py-0.5 rounded bg-sky-500/10 text-sky-600 dark:text-sky-400 text-[10px] border border-sky-500/20 whitespace-nowrap inline-block font-semibold">
                                 {formatSource(row.unitTitle, row.unitId)}
                               </span>
                             </TableCell>
@@ -1197,15 +1216,15 @@ export default function ResourcesPage() {
                       <div key={idx} className="p-3 sm:p-4 border border-off-black/10 dark:border-white/10 rounded-2xl bg-paper-canvas/30 space-y-3 font-mono text-xs">
                         <div className="flex items-center justify-between border-b border-off-black/5 dark:border-white/5 pb-2">
                           <span className="text-[10px] font-bold text-pale-stone">#{ (currentPage - 1) * itemsPerPage + idx + 1 }</span>
-                          <span className="bg-atmosphere-wash/20 border border-off-black/10 rounded-full px-2 py-0.5 text-[10px] text-pale-stone whitespace-nowrap inline-block">
-                            {formatSource(row.unitTitle, row.unitId)}
-                          </span>
+                           <span className="px-2 py-0.5 rounded bg-sky-500/10 text-sky-600 dark:text-sky-400 text-[10px] border border-sky-500/20 whitespace-nowrap inline-block font-semibold">
+                             {formatSource(row.unitTitle, row.unitId)}
+                           </span>
                         </div>
                         <div className="space-y-2">
                           <div className="flex items-baseline gap-2 flex-wrap">
-                            <span className="text-sm font-bold text-violet-600 dark:text-violet-400">{row.collocation}</span>
-                            <span className="text-[10px] text-pale-stone">({translate("Base Word")}: {row.word})</span>
-                          </div>
+                            <span className="text-sm font-bold text-amber-600 dark:text-amber-400">{row.collocation}</span>
+                            <span className="text-[10px] text-emerald-600 dark:text-emerald-400 font-semibold">({translate("Base Word")}: {row.word})</span>
+                          </div> 
                           <p className="text-off-black/75"><span className="font-bold text-ink">{translate("Meaning")}:</span> {translate(row.meaning, { lookupOnly: true })}</p>
                           {row.example && (
                             <p className="italic text-pale-stone leading-relaxed"><span className="font-bold text-ink not-italic">{translate("Example")}:</span> "{row.example}"</p>

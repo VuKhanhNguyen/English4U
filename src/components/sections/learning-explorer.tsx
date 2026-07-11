@@ -2,7 +2,7 @@
 
 import * as React from "react";
 import { motion, AnimatePresence, useAnimation } from "framer-motion";
-import { Search, X, List, ChevronUp, ChevronDown, Menu } from "lucide-react";
+import { Search, X, List, ChevronUp, ChevronDown, Menu, Home, BookOpen } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useLanguage } from "@/components/providers/language-provider";
 import { showToast } from "@/components/ui/toast";
@@ -184,7 +184,7 @@ function parseBoldAndItalic(text: string, baseKey: string): React.ReactNode[] {
     }
 
     parts.push(
-      <strong key={`${baseKey}-bold-${matchIndex}`} className="font-bold italic text-indigo-600 bg-indigo-600/10 px-1 py-0.5 rounded">
+      <strong key={`${baseKey}-bold-${matchIndex}`} className="font-bold italic text-teal-600 dark:text-teal-400 bg-teal-500/10 px-1 py-0.5 rounded border border-teal-500/20">
         {boldText}
       </strong>
     );
@@ -212,11 +212,11 @@ function renderSingleLineText(text: string, lineKey: string) {
     return (
       <span key={lineKey} className="inline-flex flex-wrap items-center gap-1.5 py-0.5">
         <span className="text-pale-stone font-mono text-xs not-italic">{injectFlags(prefix)}</span>
-        <span className="font-semibold text-indigo-600 dark:text-indigo-400 bg-indigo-50 dark:bg-indigo-950/30 px-1.5 py-0.5 rounded border border-indigo-100 dark:border-indigo-900/30 not-italic">
+        <span className="font-semibold text-sky-600 dark:text-sky-400 bg-sky-500/10 px-1.5 py-0.5 rounded border border-sky-500/20 not-italic">
           {parseBoldAndItalic(exampleText, `${lineKey}-ex`)}
         </span>
         {noteText && (
-          <span className="text-xs font-semibold text-amber-600 dark:text-amber-400 bg-amber-50 dark:bg-amber-950/30 px-2 py-0.5 rounded-full border border-amber-200 dark:border-amber-900/30 not-italic">
+          <span className="text-xs font-semibold text-amber-600 dark:text-amber-400 bg-amber-500/10 px-2 py-0.5 rounded-full border border-amber-500/20 not-italic">
             {noteText}
           </span>
         )}
@@ -247,7 +247,7 @@ function renderSingleLineText(text: string, lineKey: string) {
         href={url}
         target="_blank"
         rel="noopener noreferrer"
-        className="underline text-indigo-600 hover:text-indigo-800 font-bold"
+        className="underline text-sky-600 dark:text-sky-400 hover:text-sky-800 dark:hover:text-sky-300 font-bold"
       >
         {linkText}
       </a>
@@ -295,13 +295,13 @@ function renderTextWithLinks(text: string) {
 
     let lineClass = "";
     if (hasTick && !hasCross && !hasEx) {
-      lineClass = "text-teal-600 dark:text-teal-400 font-medium";
+      lineClass = "text-emerald-600 dark:text-emerald-400 font-medium";
     } else if (hasCross && !hasTick && !hasEx) {
-      lineClass = "text-red-600 dark:text-red-400 font-medium";
+      lineClass = "text-rose-600 dark:text-rose-400 font-medium";
     } else if (hasEx) {
       lineClass = "text-pale-stone italic";
     } else if (hasNote) {
-      lineClass = "text-amber-400 font-medium";
+      lineClass = "text-amber-600 dark:text-amber-400 font-medium";
     }
 
     const parsedLine = renderSingleLineText(line, `line-${lineIdx}`);
@@ -523,11 +523,11 @@ function RichGrammarRenderer({ richGrammar }: { richGrammar: any[] }) {
                             {group.items.map((item, iIdx) => (
                               <div key={iIdx} className={cn("space-y-1.5", iIdx > 0 && "pt-3")}>
                                 <div className="flex items-center gap-2 flex-wrap">
-                                  <span className="text-[10px] font-bold text-pale-stone/80 bg-paper-canvas dark:bg-black/30 border border-off-black/10 dark:border-white/5 px-2 py-0.5 rounded">
+                                  <span className="text-[10px] font-bold text-zinc-600 dark:text-zinc-400 bg-zinc-500/10 border border-zinc-500/20 px-2 py-0.5 rounded">
                                     {item.subject}
                                   </span>
                                   {item.form !== undefined && (
-                                    <span className="font-bold text-indigo-600 dark:text-indigo-400 text-xs">
+                                    <span className="px-2 py-0.5 rounded bg-sky-500/10 text-sky-600 dark:text-sky-400 text-xs border border-sky-500/20 font-bold">
                                       {item.form}
                                     </span>
                                   )}
@@ -704,7 +704,7 @@ function RichGrammarRenderer({ richGrammar }: { richGrammar: any[] }) {
                             <tbody>
                               {(block.table || []).map((row: any, rIdx: number) => (
                                 <tr key={rIdx} className="border-b border-off-black last:border-b-0 hover:bg-atmosphere-wash/10 transition-colors">
-                                  <td className="p-3 border-r border-off-black font-bold text-indigo-600 bg-atmosphere-wash/10 align-middle text-center">{row[0]}</td>
+                                  <td className="p-3 border-r border-off-black font-bold text-sky-600 dark:text-sky-400 bg-sky-500/5 align-middle text-center">{row[0]}</td>
                                   <td className="p-3 whitespace-pre-line text-off-black align-middle">
                                     {renderTextWithLinks(translate(row[1]))}
                                   </td>
@@ -719,7 +719,7 @@ function RichGrammarRenderer({ richGrammar }: { richGrammar: any[] }) {
                           {(block.table || []).map((row: any, rIdx: number) => (
                             <div key={rIdx} className="p-3 sm:p-4 border border-off-black/10 dark:border-white/10 rounded-xl bg-paper-canvas/30 space-y-2">
                               <div className="flex items-center gap-2">
-                                <span className="text-xs font-bold text-indigo-600 dark:text-indigo-400 bg-atmosphere-wash/30 px-2.5 py-0.5 rounded font-mono">
+                                <span className="px-2 py-0.5 rounded bg-sky-500/10 text-sky-600 dark:text-sky-400 text-xs border border-sky-500/20 font-bold font-mono">
                                   {row[0]}
                                 </span>
                                 <span className="text-[10px] font-bold text-pale-stone/75 uppercase tracking-wider">
@@ -757,7 +757,7 @@ function RichGrammarRenderer({ richGrammar }: { richGrammar: any[] }) {
                     )}
  
                     {block.note && (
-                      <div className="p-4 bg-honey-dew-gradient/10 border border-off-black/20 rounded-lg text-ink italic text-body-sm flex gap-3 items-center">
+                      <div className="p-4 bg-amber-500/5 border border-amber-500/20 rounded-lg text-ink italic text-body-sm flex gap-3 items-center">
                         <span className="text-xl">💡</span>
                         <span>{renderTextWithLinks(translate(block.note))}</span>
                       </div>
@@ -824,7 +824,7 @@ function RichGrammarRenderer({ richGrammar }: { richGrammar: any[] }) {
                     </div>
 
                     {block.note && (
-                      <div className="p-4 bg-atmosphere-wash/30 border border-off-black/20 rounded-lg text-ink font-semibold text-body-sm flex gap-3 items-center">
+                      <div className="p-4 bg-amber-500/5 border border-amber-500/20 rounded-lg text-ink font-semibold text-body-sm flex gap-3 items-center">
                         <span className="text-xl">⚠️</span>
                         <span>{renderTextWithLinks(translate(block.note))}</span>
                       </div>
@@ -1114,16 +1114,22 @@ export function LearningExplorerSection({
             </div>
           )}
 
-              <Breadcrumb className="ml-5 mt-5 text-xs">
+              <Breadcrumb className="w-max px-4 py-2 rounded-full bg-paper-canvas/50 dark:bg-zinc-950/30 backdrop-blur-md border border-off-black/10 dark:border-white/10 shadow-sm text-xs ml-5 mt-5 select-none font-mono">
                 <BreadcrumbList>
                   <BreadcrumbItem>
                     <BreadcrumbLink href="/" asChild>
-                      <Link href="/">{translate("Home")}</Link>
+                      <Link href="/" className="inline-flex items-center gap-1.5 hover:text-ink transition-colors">
+                        <Home className="w-3.5 h-3.5" />
+                        {translate("Home")}
+                      </Link>
                     </BreadcrumbLink>
                   </BreadcrumbItem>
                   <BreadcrumbSeparator />
                   <BreadcrumbItem>
-                    <BreadcrumbPage className="text-pale-stone font-medium">{activeBook.book}</BreadcrumbPage>
+                    <BreadcrumbPage className="text-pale-stone font-medium inline-flex items-center gap-1.5">
+                      <BookOpen className="w-3.5 h-3.5 text-pale-stone" />
+                      {activeBook.book}
+                    </BreadcrumbPage>
                   </BreadcrumbItem>
                 </BreadcrumbList>
               </Breadcrumb>
@@ -1158,7 +1164,7 @@ export function LearningExplorerSection({
         ) : (
           <Card variant="content" className="mb-6 flex flex-row items-center justify-between !p-6 md:!p-10">
             <div>
-              <span className="text-caption font-mono uppercase tracking-wider text-ink bg-atmosphere-wash px-3 py-1 rounded-full border border-off-black">
+              <span className="px-3 py-1 rounded-full bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 text-xs border border-emerald-500/20 font-mono font-bold uppercase tracking-wider">
                 {activeBook.book}
               </span>
               <h1 className="text-heading font-heading text-ink mt-3 mb-0">
@@ -1245,7 +1251,7 @@ export function LearningExplorerSection({
                     id={`scroll-unit-${unit.id}`}
                     className="border-b border-pale-stone scroll-mt-[110px] mx-1 sm:mx-6"
                   >
-                <AccordionTrigger className="text-subheading font-mono font-medium hover:no-underline py-5 px-2 sm:px-4 text-left text-ink">
+                <AccordionTrigger className="text-subheading font-mono font-medium hover:no-underline py-5 px-2 sm:px-4 text-left text-ink hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">
                   {unit.title}
                 </AccordionTrigger>
                 <AccordionContent className="pt-2 pb-6">
@@ -1303,13 +1309,13 @@ export function LearningExplorerSection({
                           {/* Desktop Table View */}
                           <div className="hidden md:block">
                             <Table>
-                              <TableHeader>
-                                <TableRow>
-                                  <TableHead className="w-[200px] font-mono text-ink">
+                              <TableHeader className="bg-sky-500/10 border-b border-sky-500/20">
+                                <TableRow className="hover:bg-transparent">
+                                  <TableHead className="w-[200px] font-mono text-sky-700 dark:text-sky-300 font-bold">
                                     {translate("Structure")}
                                   </TableHead>
-                                  <TableHead className="font-mono text-ink">{translate("Usage")}</TableHead>
-                                  <TableHead className="font-mono text-ink">{translate("Example")}</TableHead>
+                                  <TableHead className="font-mono text-sky-700 dark:text-sky-300 font-bold">{translate("Usage")}</TableHead>
+                                  <TableHead className="font-mono text-sky-700 dark:text-sky-300 font-bold">{translate("Example")}</TableHead>
                                 </TableRow>
                               </TableHeader>
                               <TableBody>
@@ -1319,8 +1325,10 @@ export function LearningExplorerSection({
                                   "example",
                                 ]).map((row, idx) => (
                                   <TableRow key={idx}>
-                                    <TableCell className="font-mono font-medium text-ink">
-                                      {row.structure}
+                                    <TableCell className="font-mono">
+                                      <span className="px-2 py-0.5 rounded bg-sky-500/10 text-sky-600 dark:text-sky-400 text-xs border border-sky-500/20 font-medium">
+                                        {row.structure}
+                                      </span>
                                     </TableCell>
                                     <TableCell className="font-mono text-off-black">{row.usage}</TableCell>
                                     <TableCell className="font-mono italic text-pale-stone">
@@ -1351,7 +1359,7 @@ export function LearningExplorerSection({
                             {filterData(unit.grammar, ["structure", "usage", "example"]).map((row, idx) => (
                               <div key={idx} className="p-3 sm:p-4 border border-off-black/10 dark:border-white/10 rounded-2xl bg-paper-canvas/30 space-y-3 font-mono text-xs">
                                 <div className="flex flex-wrap items-center justify-between gap-2 border-b border-off-black/5 dark:border-white/5 pb-2">
-                                  <span className="bg-atmosphere-wash border border-off-black/25 text-ink px-2.5 py-0.5 rounded-full font-bold">
+                                  <span className="px-2 py-0.5 rounded bg-sky-500/10 text-sky-600 dark:text-sky-400 text-xs border border-sky-500/20 font-bold">
                                     {row.structure}
                                   </span>
                                 </div>
@@ -1379,12 +1387,12 @@ export function LearningExplorerSection({
                       {/* Desktop Table View */}
                       <div className="hidden md:block">
                         <Table>
-                          <TableHeader className="bg-atmosphere-wash">
+                          <TableHeader className="bg-emerald-500/10 border-b border-emerald-500/20">
                             <TableRow className="hover:bg-transparent">
-                              <TableHead className="w-[150px] font-mono text-ink">{translate("Word")}</TableHead>
-                              <TableHead className="w-[100px] font-mono text-ink">{translate("Type")}</TableHead>
-                              <TableHead className="font-mono text-ink">{translate("Meaning")}</TableHead>
-                              <TableHead className="font-mono text-ink">{translate("Example")}</TableHead>
+                              <TableHead className="w-[150px] font-mono text-emerald-700 dark:text-emerald-300 font-bold">{translate("Word")}</TableHead>
+                              <TableHead className="w-[100px] font-mono text-emerald-700 dark:text-emerald-300 font-bold">{translate("Type")}</TableHead>
+                              <TableHead className="font-mono text-emerald-700 dark:text-emerald-300 font-bold">{translate("Meaning")}</TableHead>
+                              <TableHead className="font-mono text-emerald-700 dark:text-emerald-300 font-bold">{translate("Example")}</TableHead>
                             </TableRow>
                           </TableHeader>
                           <TableBody>
@@ -1395,11 +1403,11 @@ export function LearningExplorerSection({
                               "example",
                             ]).map((row, idx) => (
                               <TableRow key={idx}>
-                                <TableCell className="font-mono font-medium text-ink">
+                                <TableCell className="font-mono font-semibold text-emerald-700 dark:text-emerald-400">
                                   {row.word}
                                 </TableCell>
                                 <TableCell>
-                                  <span className="inline-block text-caption font-mono text-off-black bg-transparent border border-off-black px-2.5 py-0.5 rounded-full">
+                                  <span className="px-3 py-1 rounded-full bg-emerald-50 text-emerald-700 dark:bg-emerald-900/30 dark:text-emerald-300 text-[10px] font-bold uppercase tracking-wide border border-emerald-200/50 dark:border-emerald-800/50">
                                     {row.type}
                                   </span>
                                 </TableCell>
@@ -1429,8 +1437,8 @@ export function LearningExplorerSection({
                         {filterData(unit.vocabulary, ["word", "type", "meaning", "example"]).map((row, idx) => (
                           <div key={idx} className="p-3 sm:p-4 border border-off-black/10 dark:border-white/10 rounded-2xl bg-paper-canvas/30 space-y-3 font-mono text-xs">
                             <div className="flex items-center justify-between border-b border-off-black/5 dark:border-white/5 pb-2">
-                              <span className="text-sm font-bold text-ink">{row.word}</span>
-                              <span className="inline-block text-[10px] font-mono text-off-black bg-transparent border border-off-black px-2 py-0.5 rounded-full">
+                              <span className="text-sm font-bold text-emerald-600 dark:text-emerald-400">{row.word}</span>
+                              <span className="px-2 py-0.5 rounded bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 text-xs border border-emerald-500/20 font-mono font-medium">
                                 {row.type}
                               </span>
                             </div>
@@ -1456,11 +1464,11 @@ export function LearningExplorerSection({
                       {/* Desktop Table View */}
                       <div className="hidden md:block">
                         <Table>
-                          <TableHeader className="bg-atmosphere-wash">
+                          <TableHeader className="bg-teal-500/10 border-b border-teal-500/20">
                             <TableRow className="hover:bg-transparent">
-                              <TableHead className="w-[150px] font-mono text-ink">{translate("Word")}</TableHead>
-                              <TableHead className="w-[100px] font-mono text-ink">{translate("Type")}</TableHead>
-                              <TableHead className="font-mono text-ink">{translate("Word Family & Meanings")}</TableHead>
+                              <TableHead className="w-[150px] font-mono text-teal-700 dark:text-teal-300 font-bold">{translate("Word")}</TableHead>
+                              <TableHead className="w-[100px] font-mono text-teal-700 dark:text-teal-300 font-bold">{translate("Type")}</TableHead>
+                              <TableHead className="font-mono text-teal-700 dark:text-teal-300 font-bold">{translate("Word Family & Meanings")}</TableHead>
                             </TableRow>
                           </TableHeader>
                           <TableBody>
@@ -1473,11 +1481,11 @@ export function LearningExplorerSection({
                               const parsedFamily = parseWordFormationMeaning(row.meaning);
                               return (
                                 <TableRow key={idx} className="align-top">
-                                  <TableCell className="font-mono font-medium text-ink font-semibold pt-4">
+                                  <TableCell className="font-mono font-semibold text-emerald-600 dark:text-emerald-400 pt-4">
                                     {row.word}
                                   </TableCell>
                                   <TableCell className="pt-4">
-                                    <span className="inline-block text-caption font-mono text-off-black bg-transparent border border-off-black px-2.5 py-0.5 rounded-full">
+                                    <span className="px-2 py-0.5 rounded bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 text-xs border border-emerald-500/20 font-mono font-medium">
                                       {abbreviateType(row.type)}
                                     </span>
                                   </TableCell>
@@ -1488,7 +1496,7 @@ export function LearningExplorerSection({
                                         return (
                                           <div key={fIdx} className="py-2.5 px-2 flex flex-col md:flex-row gap-2 md:gap-6 justify-between items-start">
                                             <div className="md:w-[200px] shrink-0">
-                                              <span className="font-bold text-ink text-sm text-[#0f766e]">
+                                              <span className="px-2 py-0.5 rounded bg-teal-500/10 text-teal-600 dark:text-teal-400 text-xs border border-teal-500/20 font-mono font-semibold">
                                                 {formsStr}
                                               </span>
                                             </div>
@@ -1543,8 +1551,8 @@ export function LearningExplorerSection({
                           return (
                             <div key={idx} className="p-3 sm:p-4 border border-off-black/10 dark:border-white/10 rounded-2xl bg-paper-canvas/30 space-y-3 font-mono text-xs">
                               <div className="flex items-center justify-between border-b border-off-black/5 dark:border-white/5 pb-2">
-                                <span className="text-sm font-bold text-ink">{row.word}</span>
-                                <span className="inline-block text-[10px] font-mono text-off-black bg-transparent border border-off-black px-2.5 py-0.5 rounded-full">
+                                <span className="text-sm font-bold text-emerald-600 dark:text-emerald-400">{row.word}</span>
+                                <span className="px-2 py-0.5 rounded bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 text-xs border border-emerald-500/20 font-mono font-medium">
                                   {abbreviateType(row.type)}
                                 </span>
                               </div>
@@ -1553,7 +1561,7 @@ export function LearningExplorerSection({
                                   const formsStr = fam.forms.join(" / ");
                                   return (
                                     <div key={fIdx} className="space-y-2 border-b border-off-black/5 dark:border-white/5 last:border-b-0 pb-3 last:pb-0">
-                                      <p className="font-bold text-[#0f766e] dark:text-[#2dd4bf] text-xs bg-[#0f766e]/10 dark:bg-[#0f766e]/20 px-2.5 py-1 rounded-lg w-max">
+                                      <p className="px-2 py-0.5 rounded bg-teal-500/10 text-teal-600 dark:text-teal-400 text-xs border border-teal-500/20 font-mono font-bold w-max">
                                         {formsStr}
                                       </p>
                                        <p className="text-off-black text-xs leading-relaxed">{getWordFormationMeaning(row.meaning, fam.meaning, fIdx, translate)}</p>
@@ -1598,14 +1606,14 @@ export function LearningExplorerSection({
                       {/* Desktop Table View */}
                       <div className="hidden md:block">
                         <Table>
-                          <TableHeader className="bg-atmosphere-wash">
+                          <TableHeader className="bg-rose-500/10 border-b border-rose-500/20">
                             <TableRow className="hover:bg-transparent">
-                              <TableHead className="w-[200px] font-mono text-ink">
+                              <TableHead className="w-[200px] font-mono text-rose-700 dark:text-rose-300 font-bold">
                                 {translate("Word")}
                               </TableHead>
-                              <TableHead className="w-[100px] font-mono text-ink">{translate("Type")}</TableHead>
-                              <TableHead className="font-mono text-ink">{translate("Meaning")}</TableHead>
-                              <TableHead className="font-mono text-ink">{translate("Pattern & Example")}</TableHead>
+                              <TableHead className="w-[100px] font-mono text-rose-700 dark:text-rose-300 font-bold">{translate("Type")}</TableHead>
+                              <TableHead className="font-mono text-rose-700 dark:text-rose-300 font-bold">{translate("Meaning")}</TableHead>
+                              <TableHead className="font-mono text-rose-700 dark:text-rose-300 font-bold">{translate("Pattern & Example")}</TableHead>
                             </TableRow>
                           </TableHeader>
                           <TableBody>
@@ -1616,11 +1624,11 @@ export function LearningExplorerSection({
                               "example",
                             ]).map((row, idx) => (
                               <TableRow key={idx}>
-                                <TableCell className="font-mono font-medium text-ink font-semibold">
+                                <TableCell className="font-mono font-semibold text-emerald-600 dark:text-emerald-400">
                                   {row.verb}
                                 </TableCell>
                                 <TableCell>
-                                  <span className="inline-block text-caption font-mono text-off-black bg-transparent border border-off-black px-2.5 py-0.5 rounded-full">
+                                  <span className="px-2 py-0.5 rounded bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 text-xs border border-emerald-500/20 font-mono font-medium">
                                     {abbreviateType(row.pattern)}
                                   </span>
                                 </TableCell>
@@ -1652,8 +1660,8 @@ export function LearningExplorerSection({
                         {filterData(unit.wordPatterns, ["verb", "pattern", "meaning", "example"]).map((row, idx) => (
                           <div key={idx} className="p-3 sm:p-4 border border-off-black/10 dark:border-white/10 rounded-2xl bg-paper-canvas/30 space-y-3 font-mono text-xs">
                             <div className="flex items-center justify-between border-b border-off-black/5 dark:border-white/5 pb-2">
-                              <span className="text-sm font-bold text-ink">{row.verb}</span>
-                              <span className="inline-block text-[10px] font-mono text-off-black bg-transparent border border-off-black px-2.5 py-0.5 rounded-full">
+                              <span className="text-sm font-bold text-emerald-600 dark:text-emerald-400">{row.verb}</span>
+                              <span className="px-2 py-0.5 rounded bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 text-xs border border-emerald-500/20 font-mono font-medium">
                                 {abbreviateType(row.pattern)}
                               </span>
                             </div>
@@ -1679,13 +1687,13 @@ export function LearningExplorerSection({
                       {/* Desktop Table View */}
                       <div className="hidden md:block">
                         <Table>
-                          <TableHeader className="bg-atmosphere-wash">
+                          <TableHeader className="bg-orange-500/10 border-b border-orange-500/20">
                             <TableRow className="hover:bg-transparent">
-                              <TableHead className="w-[200px] font-mono text-ink">
+                              <TableHead className="w-[200px] font-mono text-orange-700 dark:text-orange-300 font-bold">
                                 {translate("Phrasal Verbs")}
                               </TableHead>
-                              <TableHead className="font-mono text-ink">{translate("Meaning")}</TableHead>
-                              <TableHead className="font-mono text-ink">{translate("Example")}</TableHead>
+                              <TableHead className="font-mono text-orange-700 dark:text-orange-300 font-bold">{translate("Meaning")}</TableHead>
+                              <TableHead className="font-mono text-orange-700 dark:text-orange-300 font-bold">{translate("Example")}</TableHead>
                             </TableRow>
                           </TableHeader>
                           <TableBody>
@@ -1695,7 +1703,7 @@ export function LearningExplorerSection({
                               "example",
                             ]).map((row, idx) => (
                               <TableRow key={idx}>
-                                <TableCell className="font-mono font-medium text-ink font-semibold">
+                                <TableCell className="font-mono font-semibold text-emerald-600 dark:text-emerald-400">
                                   {row.phrasalVerb}
                                 </TableCell>
                                 <TableCell className="font-mono text-off-black whitespace-pre-line">{translate(row.meaning)}</TableCell>
@@ -1724,7 +1732,7 @@ export function LearningExplorerSection({
                         {filterData(unit.phrasalVerbs, ["phrasalVerb", "meaning", "example"]).map((row, idx) => (
                           <div key={idx} className="p-3 sm:p-4 border border-off-black/10 dark:border-white/10 rounded-2xl bg-paper-canvas/30 space-y-3 font-mono text-xs">
                             <div className="border-b border-off-black/5 dark:border-white/5 pb-2">
-                              <span className="text-sm font-bold text-ink">{row.phrasalVerb}</span>
+                              <span className="text-sm font-bold text-emerald-600 dark:text-emerald-400">{row.phrasalVerb}</span>
                             </div>
                             <div className="space-y-2">
                               <p className="text-off-black/75"><span className="font-bold text-ink">{translate("Meaning")}:</span> {translate(row.meaning)}</p>
@@ -1748,12 +1756,12 @@ export function LearningExplorerSection({
                       {/* Desktop Table View */}
                       <div className="hidden md:block">
                         <Table>
-                          <TableHeader className="bg-atmosphere-wash">
+                          <TableHeader className="bg-sky-500/10 border-b border-sky-500/20">
                             <TableRow className="hover:bg-transparent">
-                              <TableHead className="w-[250px] font-mono text-ink">
+                              <TableHead className="w-[250px] font-mono text-sky-700 dark:text-sky-300 font-bold">
                                 {translate("Prepositional Phrase")}
                               </TableHead>
-                              <TableHead className="font-mono text-ink">{translate("Meaning")}</TableHead>
+                              <TableHead className="font-mono text-sky-700 dark:text-sky-300 font-bold">{translate("Meaning")}</TableHead>
                             </TableRow>
                           </TableHeader>
                           <TableBody>
@@ -1762,7 +1770,7 @@ export function LearningExplorerSection({
                               "meaning",
                             ]).map((row, idx) => (
                               <TableRow key={idx}>
-                                <TableCell className="font-mono font-medium text-ink font-semibold">
+                                <TableCell className="font-mono font-semibold text-emerald-600 dark:text-emerald-400">
                                   {row.phrase}
                                 </TableCell>
                                 <TableCell className="font-mono text-off-black whitespace-pre-line">{translate(row.meaning)}</TableCell>
@@ -1787,7 +1795,7 @@ export function LearningExplorerSection({
                         {filterData(unit.prepositionalPhrases, ["phrase", "meaning"]).map((row, idx) => (
                           <div key={idx} className="p-3 sm:p-4 border border-off-black/10 dark:border-white/10 rounded-2xl bg-paper-canvas/30 space-y-3 font-mono text-xs">
                             <div className="border-b border-off-black/5 dark:border-white/5 pb-2">
-                              <span className="text-sm font-bold text-ink">{row.phrase}</span>
+                              <span className="text-sm font-bold text-emerald-600 dark:text-emerald-400">{row.phrase}</span>
                             </div>
                             <p className="text-off-black/75 pt-1"><span className="font-bold text-ink">{translate("Meaning")}:</span> {translate(row.meaning)}</p>
                           </div>
@@ -1808,13 +1816,13 @@ export function LearningExplorerSection({
                       {/* Desktop Table View */}
                       <div className="hidden md:block">
                         <Table>
-                          <TableHeader className="bg-atmosphere-wash">
+                          <TableHeader className="bg-amber-500/10 border-b border-amber-500/20">
                             <TableRow className="hover:bg-transparent">
-                              <TableHead className="w-[150px] font-mono text-ink">
+                              <TableHead className="w-[150px] font-mono text-amber-700 dark:text-amber-300 font-bold">
                                 {translate("Base Word")}
                               </TableHead>
-                              <TableHead className="font-mono text-ink">{translate("Collocation")}</TableHead>
-                              <TableHead className="font-mono text-ink">{translate("Meaning")}</TableHead>
+                              <TableHead className="font-mono text-amber-700 dark:text-amber-300 font-bold">{translate("Collocation")}</TableHead>
+                              <TableHead className="font-mono text-amber-700 dark:text-amber-300 font-bold">{translate("Meaning")}</TableHead>
                             </TableRow>
                           </TableHeader>
                           <TableBody>
@@ -1824,10 +1832,10 @@ export function LearningExplorerSection({
                               "meaning",
                             ]).map((row, idx) => (
                               <TableRow key={idx}>
-                                <TableCell className="font-mono font-medium text-ink">
+                                <TableCell className="font-mono font-semibold text-emerald-600 dark:text-emerald-400">
                                   {row.word}
                                 </TableCell>
-                                <TableCell className="font-mono text-off-black font-medium">{row.collocation}</TableCell>
+                                <TableCell className="font-mono font-semibold text-teal-600 dark:text-teal-400">{row.collocation}</TableCell>
                                 <TableCell className="font-mono text-pale-stone">{translate(row.meaning)}</TableCell>
                               </TableRow>
                             ))}
@@ -1854,7 +1862,7 @@ export function LearningExplorerSection({
                               <span className="text-[10px] font-bold text-off-black/55 uppercase">{translate("Base Word")}: {row.word}</span>
                             </div>
                             <div className="space-y-2">
-                              <p className="text-sm font-bold text-[#0f766e] dark:text-[#2dd4bf]">{row.collocation}</p>
+                              <p className="text-sm font-bold text-teal-600 dark:text-teal-400">{row.collocation}</p>
                               <p className="text-off-black/75"><span className="font-bold text-ink">{translate("Meaning")}:</span> {translate(row.meaning)}</p>
                             </div>
                           </div>
