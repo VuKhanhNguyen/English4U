@@ -323,43 +323,61 @@ export function BentoFeatures() {
     </section>
 
     {/* Marquee slider bar */}
-    <div className="border-t border-off-black bg-off-black py-4 flex items-center overflow-hidden">
-      <div className="flex gap-12 whitespace-nowrap animate-marquee shrink-0">
+    <div className="border-y border-off-black/10 dark:border-white/10 bg-[#faf9f6] dark:bg-[#eae6df] py-5 flex items-center overflow-hidden">
+      <div className="flex gap-8 md:gap-12 items-center whitespace-nowrap animate-marquee shrink-0">
           {/* First loop */}
-          {sliderItems.map((item, idx) => (
-            <div key={idx} className="flex items-center gap-3">
-              <span
-                className="text-sm md:text-base font-normal font-mono tracking-tight uppercase italic"
-                style={itemGradients[idx % itemGradients.length]}
+          {englishLogos.map((logo, idx) => (
+            <React.Fragment key={`logo-1-${idx}`}>
+              <a
+                href={logo.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center shrink-0 hover:scale-105 transition-transform duration-300 ease-out"
               >
-                {translate(item)}
-              </span>
-              <span className="text-paper-canvas/30 text-lg select-none">·</span>
-            </div>
+                <img
+                  src={logo.src}
+                  alt={logo.alt}
+                  className="h-9 md:h-10 w-auto object-contain brightness-95 hover:brightness-100 transition-all duration-300"
+                />
+              </a>
+              <span className="text-zinc-300 dark:text-zinc-500/50 select-none font-extralight text-sm">|</span>
+            </React.Fragment>
           ))}
           {/* Second loop */}
-          {sliderItems.map((item, idx) => (
-            <div key={`dup-${idx}`} className="flex items-center gap-3">
-              <span
-                className="text-sm md:text-base font-normal font-mono tracking-tight uppercase italic"
-                style={itemGradients[idx % itemGradients.length]}
+          {englishLogos.map((logo, idx) => (
+            <React.Fragment key={`logo-2-${idx}`}>
+              <a
+                href={logo.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center shrink-0 hover:scale-105 transition-transform duration-300 ease-out"
               >
-                {translate(item)}
-              </span>
-              <span className="text-paper-canvas/30 text-lg select-none">·</span>
-            </div>
+                <img
+                  src={logo.src}
+                  alt={logo.alt}
+                  className="h-9 md:h-10 w-auto object-contain brightness-95 hover:brightness-100 transition-all duration-300"
+                />
+              </a>
+              <span className="text-zinc-300 dark:text-zinc-500/50 select-none font-extralight text-sm">|</span>
+            </React.Fragment>
           ))}
           {/* Third loop */}
-          {sliderItems.map((item, idx) => (
-            <div key={`dup2-${idx}`} className="flex items-center gap-3">
-              <span
-                className="text-sm md:text-base font-normal font-mono tracking-tight uppercase italic"
-                style={itemGradients[idx % itemGradients.length]}
+          {englishLogos.map((logo, idx) => (
+            <React.Fragment key={`logo-3-${idx}`}>
+              <a
+                href={logo.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center shrink-0 hover:scale-105 transition-transform duration-300 ease-out"
               >
-                {translate(item)}
-              </span>
-              <span className="text-paper-canvas/30 text-lg select-none">·</span>
-            </div>
+                <img
+                  src={logo.src}
+                  alt={logo.alt}
+                  className="h-9 md:h-10 w-auto object-contain brightness-95 hover:brightness-100 transition-all duration-300"
+                />
+              </a>
+              <span className="text-zinc-300 dark:text-zinc-500/50 select-none font-extralight text-sm">|</span>
+            </React.Fragment>
           ))}
       </div>
     </div>
@@ -367,39 +385,40 @@ export function BentoFeatures() {
   );
 }
 
-// Gradient text styles for marquee items — each item gets a unique vibrant gradient
-const itemGradients: React.CSSProperties[] = [
-  // Sky Blue → Mint
-  { background: "linear-gradient(90deg, #a0b5eb, #a7fccd)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text" },
-  // Amber → Orange glow
-  { background: "linear-gradient(90deg, #e2c161, #f37a0a)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text" },
-  // Sunset Orange → Violet Blue
-  { background: "linear-gradient(90deg, #ffa773, #a0b5eb)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text" },
-  // Soft Mint → Sky Blue
-  { background: "linear-gradient(90deg, #a7fccd, #a0b5eb)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text" },
-  // Warm Amber → Paper Canvas
-  { background: "linear-gradient(90deg, #e2c161, #f6f3f1)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text" },
-  // Violet → Orange
-  { background: "linear-gradient(90deg, #c4b5fd, #ffa773)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text" },
-  // Mint → Amber
-  { background: "linear-gradient(90deg, #a7fccd, #e2c161)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text" },
-  // Paper White → Sky Blue
-  { background: "linear-gradient(90deg, #f6f3f1, #a0b5eb)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text" },
-  // Orange → Mint
-  { background: "linear-gradient(90deg, #f37a0a, #a7fccd)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text" },
-  // Sky Blue → Amber
-  { background: "linear-gradient(90deg, #a0b5eb, #e2c161)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text" },
-];
-
-const sliderItems = [
-  "Word Patterns",
-  "Vocabulary Systems",
-  "Word Family Trees",
-  "IELTS Academic",
-  "VSTEP Masterclass",
-  "TOEIC Practice",
-  "Grammar Rules",
-  "Phrasal Verbs",
-  "Collocations Map",
-  "Prepositional Phrases",
+const englishLogos = [
+  {
+    src: "/imgs/english/british.png",
+    alt: "British Council",
+    href: "https://www.britishcouncil.org",
+  },
+  {
+    src: "/imgs/english/cambridge.png",
+    alt: "Cambridge English",
+    href: "https://www.cambridgeenglish.org",
+  },
+  {
+    src: "/imgs/english/cefr.png",
+    alt: "CEFR",
+    href: "https://www.coe.int/en/web/common-european-framework-reference-languages",
+  },
+  {
+    src: "/imgs/english/ielts.png",
+    alt: "IELTS",
+    href: "https://www.ielts.org",
+  },
+  {
+    src: "/imgs/english/toefl.png",
+    alt: "TOEFL",
+    href: "https://www.ets.org/toefl",
+  },
+  {
+    src: "/imgs/english/toeic.png",
+    alt: "TOEIC",
+    href: "https://www.ets.org/toeic",
+  },
+  {
+    src: "/imgs/english/vstep.png",
+    alt: "VSTEP",
+    href: "https://vstep.vnu.edu.vn",
+  },
 ];

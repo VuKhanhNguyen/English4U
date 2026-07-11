@@ -62,12 +62,12 @@ export function BookSelectionSection() {
       id="explore"
       className="w-full py-16 relative overflow-hidden z-0"
     >
-      {/* 3D Vocab Cloud Background covering full width */}
-      {mounted && !isMobile && (
+      {/* 3D Vocab Cloud Background covering full width (commented out per user request) */}
+      {/* {mounted && !isMobile && (
         <div className="absolute inset-0 -z-10 pointer-events-none opacity-40 dark:opacity-30">
           <ThreeDCanvas mode="constellation" onHoverWord={() => {}} />
         </div>
-      )}
+      )} */}
 
       {/* Centered Floating 3D Glass Container */}
       <div className="max-w-6xl mx-4 md:mx-auto py-16 px-6 md:px-12 liquid-glass border border-white/20 dark:border-white/10 rounded-[32px] shadow-3d-card relative z-10 overflow-hidden">

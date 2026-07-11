@@ -132,13 +132,57 @@ export function HeroSection({
     return () => clearTimeout(timer);
   }, [hasStarted, phase, t1, t2, t3]);
 
+  if (hideButtons) {
+    return (
+      <section className="relative min-h-[500px] flex flex-col items-center justify-start pt-[140px] pb-16 md:pt-[200px] md:pb-24 overflow-hidden border-b border-off-black/10 dark:border-white/10 bg-section-hero">
+        {/* Background image — lightly blurred, low opacity so starfield is visible */}
+        <div
+          className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat blur-[3px] scale-105 opacity-50 pointer-events-none"
+          style={{ backgroundImage: "url('/imgs/bgOwl1.png')" }}
+        />
+        {/* Soft overlay to keep text contrast */}
+        <div className="absolute inset-0 z-0 bg-paper-canvas/15 dark:bg-black/10 pointer-events-none" />
+
+        {/* Decorative diffused gradients on top of the overlay */}
+        <div className="absolute top-20 left-10 w-64 h-64 bg-sunset-violet-gradient rounded-full opacity-20 blur-3xl z-0 pointer-events-none" />
+        <div className="absolute bottom-20 right-10 w-80 h-80 bg-sky-mint-gradient rounded-full opacity-25 blur-3xl z-0 pointer-events-none" />
+
+        <div className="container mx-auto px-6 relative z-10 flex flex-col items-center text-center w-full">
+          <h1 className={`text-display-sm md:text-display lg:text-display font-heading font-normal leading-[1.2] tracking-[-0.02em] text-ink max-w-4xl ${title2 ? 'min-h-[3.8em] sm:min-h-[2.5em] md:min-h-[2.5em]' : 'min-h-[1.9em] sm:min-h-[1.3em] md:min-h-[1.3em]'}`}>
+            <span className="bg-gradient-to-r from-off-black via-[#7d52a8] to-[#df5745] dark:from-stardust-gold dark:via-[#ffae7a] dark:to-white bg-clip-text text-transparent inline-block pb-1">
+              {t1}
+            </span>
+            {hasStarted && (phase === "typing-1" || phase === "deleting-1") && (
+              <span className="animate-pulse inline-block ml-0.5 font-light text-[#df5745] dark:text-[#ffae7a]">|</span>
+            )}
+            {text2 && (
+              <>
+                <br />
+                <span className="bg-gradient-to-r from-off-black via-[#4e74e6] to-[#0cb88f] dark:from-white dark:via-[#9bb3f5] dark:to-[#6efac6] bg-clip-text text-transparent inline-block pb-1">
+                  {t2}
+                </span>
+                {hasStarted && (phase === "typing-2" || phase === "deleting-2") && (
+                  <span className="animate-pulse inline-block ml-0.5 font-light text-[#0cb88f] dark:text-[#6efac6]">|</span>
+                )}
+              </>
+            )}
+          </h1>
+
+          <p className="mt-6 text-subheading md:text-heading-sm font-mono font-normal tracking-[-0.02em] text-pale-stone max-w-2xl min-h-[8.5em] sm:min-h-[5.5em] md:min-h-[4em]">
+            <span className="bg-gradient-to-r from-pale-stone via-pale-stone/90 to-pale-stone/85 dark:from-[#eae6df] dark:via-[#eae6df]/90 dark:to-[#8c94a6] bg-clip-text text-transparent inline-block">
+              {t3}
+            </span>
+            {hasStarted && (phase === "typing-3" || phase === "deleting-3" || phase === "paused") && (
+              <span className="animate-pulse inline-block ml-0.5 font-light text-off-black dark:text-stardust-gold">|</span>
+            )}
+          </p>
+        </div>
+      </section>
+    );
+  }
+
   return (
-    <section className="relative min-h-[700px] sm:min-h-[740px] md:min-h-[800px] flex flex-col items-center justify-start pt-[140px] pb-16 md:pt-[200px] md:pb-24 overflow-hidden border-b border-off-black/10 dark:border-white/10 bg-section-hero">
-      {/* Background image — lightly blurred, low opacity so starfield is visible */}
-      <div
-        className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat blur-[3px] scale-105 opacity-50 pointer-events-none"
-        style={{ backgroundImage: "url('/imgs/bgOwl1.png')" }}
-      />
+    <section className="relative min-h-[750px] md:min-h-[800px] flex flex-col items-center justify-center pt-[140px] pb-16 md:pt-[180px] md:pb-24 overflow-hidden border-b border-off-black/10 dark:border-white/10 bg-section-hero">
       {/* Soft overlay to keep text contrast */}
       <div className="absolute inset-0 z-0 bg-paper-canvas/15 dark:bg-black/10 pointer-events-none" />
 
@@ -146,56 +190,163 @@ export function HeroSection({
       <div className="absolute top-20 left-10 w-64 h-64 bg-sunset-violet-gradient rounded-full opacity-20 blur-3xl z-0 pointer-events-none" />
       <div className="absolute bottom-20 right-10 w-80 h-80 bg-sky-mint-gradient rounded-full opacity-25 blur-3xl z-0 pointer-events-none" />
 
-      <div className="container mx-auto px-6 relative z-10 flex flex-col items-center text-center w-full">
-        <h1 className={`text-display-sm md:text-display lg:text-display font-heading font-normal leading-[1.2] tracking-[-0.02em] text-ink max-w-4xl ${title2 ? 'min-h-[3.8em] sm:min-h-[2.5em] md:min-h-[2.5em]' : 'min-h-[1.9em] sm:min-h-[1.3em] md:min-h-[1.3em]'}`}>
-          <span className="bg-gradient-to-r from-off-black via-[#7d52a8] to-[#df5745] dark:from-stardust-gold dark:via-[#ffae7a] dark:to-white bg-clip-text text-transparent inline-block pb-1">
-            {t1}
-          </span>
-          {hasStarted && (phase === "typing-1" || phase === "deleting-1") && (
-            <span className="animate-pulse inline-block ml-0.5 font-light text-[#df5745] dark:text-[#ffae7a]">|</span>
-          )}
-          {text2 && (
-            <>
-              <br />
-              <span className="bg-gradient-to-r from-off-black via-[#4e74e6] to-[#0cb88f] dark:from-white dark:via-[#9bb3f5] dark:to-[#6efac6] bg-clip-text text-transparent inline-block pb-1">
-                {t2}
+      <div className="container mx-auto px-6 relative z-10 w-full max-w-6xl">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center w-full">
+          {/* Left Column: Heading, description, and buttons (col-span-7) */}
+          <div className="lg:col-span-7 flex flex-col items-start text-left w-full">
+            <h1 className="text-display-sm md:text-display font-heading font-normal leading-[1.2] tracking-[-0.02em] text-ink text-left w-full relative">
+              {/* Invisible placeholder to prevent height shifts */}
+              <span className="invisible select-none pointer-events-none block pb-1">
+                {text1}
+                {text2 && (
+                  <>
+                    <br />
+                    {text2}
+                  </>
+                )}
               </span>
-              {hasStarted && (phase === "typing-2" || phase === "deleting-2") && (
-                <span className="animate-pulse inline-block ml-0.5 font-light text-[#0cb88f] dark:text-[#6efac6]">|</span>
-              )}
-            </>
-          )}
-        </h1>
 
-        <p className="mt-6 text-subheading md:text-heading-sm font-mono font-normal tracking-[-0.02em] text-pale-stone max-w-2xl min-h-[8.5em] sm:min-h-[5.5em] md:min-h-[4em]">
-          <span className="bg-gradient-to-r from-pale-stone via-pale-stone/90 to-pale-stone/85 dark:from-[#eae6df] dark:via-[#eae6df]/90 dark:to-[#8c94a6] bg-clip-text text-transparent inline-block">
-            {t3}
-          </span>
-          {hasStarted && (phase === "typing-3" || phase === "deleting-3" || phase === "paused") && (
-            <span className="animate-pulse inline-block ml-0.5 font-light text-off-black dark:text-stardust-gold">|</span>
-          )}
-        </p>
+              {/* Typing text overlay */}
+              <span className="absolute inset-x-0 top-0">
+                <span className="bg-gradient-to-r from-off-black via-[#7d52a8] to-[#df5745] dark:from-stardust-gold dark:via-[#ffae7a] dark:to-white bg-clip-text text-transparent inline-block pb-1">
+                  {t1}
+                </span>
+                {hasStarted && (phase === "typing-1" || phase === "deleting-1") && (
+                  <span className="animate-pulse inline-block ml-0.5 font-light text-[#df5745] dark:text-[#ffae7a]">|</span>
+                )}
+                {text2 && (
+                  <>
+                    <br />
+                    <span className="bg-gradient-to-r from-off-black via-[#4e74e6] to-[#0cb88f] dark:from-white dark:via-[#9bb3f5] dark:to-[#6efac6] bg-clip-text text-transparent inline-block pb-1">
+                      {t2}
+                    </span>
+                    {hasStarted && (phase === "typing-2" || phase === "deleting-2") && (
+                      <span className="animate-pulse inline-block ml-0.5 font-light text-[#0cb88f] dark:text-[#6efac6]">|</span>
+                    )}
+                  </>
+                )}
+              </span>
+            </h1>
 
+            <p className="mt-6 text-subheading md:text-heading-sm font-mono font-normal tracking-[-0.02em] text-pale-stone text-left max-w-xl w-full relative">
+              {/* Invisible placeholder to prevent height shifts */}
+              <span className="invisible select-none pointer-events-none block">
+                {text3}
+              </span>
+
+              {/* Typing text overlay */}
+              <span className="absolute inset-x-0 top-0 bg-gradient-to-r from-pale-stone via-pale-stone/90 to-pale-stone/85 dark:from-[#eae6df] dark:via-[#eae6df]/90 dark:to-[#8c94a6] bg-clip-text text-transparent">
+                {t3}
+                {hasStarted && (phase === "typing-3" || phase === "deleting-3" || phase === "paused") && (
+                  <span className="animate-pulse inline-block ml-0.5 font-light text-off-black dark:text-stardust-gold">|</span>
+                )}
+              </span>
+            </p>
+
+            <motion.div
+              className="flex flex-col sm:flex-row gap-4 mt-8 w-full sm:w-auto"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 3.5, ease: "easeOut" }}
+            >
+              <Button variant="primary" className="h-[48px] px-8 text-base cursor-pointer">
+                {translate("Explore Destination B1")}
+              </Button>
+              <Button
+                variant="ghost"
+                className="h-[48px] px-8 text-base cursor-pointer"
+              >
+                {translate("Start Learning")}
+              </Button>
+            </motion.div>
+          </div>
+
+          {/* Right Column: Learning Overview card widget with peeking owl mascot */}
+          <div className="lg:col-span-5 flex justify-center lg:justify-end w-full mt-8 lg:mt-0">
+            <div className="relative w-full max-w-sm overflow-visible">
+              {/* Zoomed-in circular Owl Mascot peeking from top-right */}
+              <div className="absolute -top-12 -right-4 w-20 h-20 rounded-full border-2 border-white dark:border-zinc-800 bg-white shadow-[0_8px_24px_rgba(0,0,0,0.15)] overflow-hidden z-30 pointer-events-none animate-bounce" style={{ animationDuration: '4s' }}>
+                <img
+                  src="/imgs/bgOwl1.png"
+                  alt="Owl Mascot"
+                  className="w-full h-full object-cover scale-[2.3] object-[49%_58%]"
+                />
+              </div>
+
+              <motion.div
+                className="w-full liquid-glass border border-white/20 dark:border-white/10 rounded-[24px] p-6 shadow-3d-card select-none"
+                initial={{ opacity: 0, scale: 0.95 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.8, delay: 1, ease: "easeOut" }}
+              >
+                {/* Glass Background */}
+                <div className="liquid-glass-bg" />
+
+                {/* Card Content */}
+                <div className="relative z-20 flex flex-col gap-5 text-ink font-mono">
+                  {/* Title Row */}
+                  <div className="flex items-center justify-between">
+                    <span className="text-sm font-bold tracking-tight">{translate("Learning Overview")}</span>
+                    <span className="text-xs flex items-center gap-1.5 text-zinc-500 dark:text-zinc-400">
+                      <span className="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse" />
+                      {translate("Today")}
+                    </span>
+                  </div>
+
+                  {/* Metrics Grid */}
+                  <div className="grid grid-cols-2 gap-4 border-t border-b border-off-black/10 dark:border-white/10 py-4">
+                    <div>
+                      <div className="text-[10px] uppercase tracking-wider text-zinc-400 dark:text-zinc-500">
+                        {translate("WORDS LEARNED")}
+                      </div>
+                      <div className="text-xl md:text-2xl font-bold mt-1 text-ink">
+                        2,483
+                      </div>
+                      <div className="text-xs text-green-600 dark:text-green-400 flex items-center gap-1 mt-1 font-bold">
+                        <span>↑</span> 126 {translate("this week")}
+                      </div>
+                    </div>
+                    <div>
+                      <div className="text-[10px] uppercase tracking-wider text-zinc-400 dark:text-zinc-500">
+                        {translate("LEARNING STREAK")}
+                      </div>
+                      <div className="text-xl md:text-2xl font-bold mt-1 text-ink">
+                        24 {translate("Days")}
+                      </div>
+                      <div className="text-xs text-green-600 dark:text-green-400 flex items-center gap-1 mt-1 font-bold">
+                        <span>↑</span> {translate("Keep Going")}
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Progress Bar (Daily Goal) */}
+                  <div>
+                    <div className="flex items-center justify-between text-xs text-zinc-400 dark:text-zinc-500 mb-2">
+                      <span>{translate("Daily Goal")}</span>
+                      <span className="font-bold text-ink">80%</span>
+                    </div>
+                    <div className="w-full h-3 bg-zinc-200 dark:bg-zinc-800 rounded-full overflow-hidden p-[2px] border border-off-black/10 dark:border-white/10">
+                      <div className="h-full bg-gradient-to-r from-emerald-400 to-teal-500 rounded-full w-[80%]" />
+                    </div>
+                  </div>
+
+                  {/* Current Level */}
+                  <div>
+                    <div className="text-[10px] uppercase tracking-wider text-zinc-400 dark:text-zinc-500">
+                      {translate("Current Level")}
+                    </div>
+                    <div className="text-sm font-bold text-ink mt-1 flex items-center gap-2">
+                      <span className="px-2 py-0.5 rounded bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 text-xs border border-emerald-500/20">B2</span>
+                      {translate("B2 Intermediate")}
+                    </div>
+                  </div>
+                </div>
+              </motion.div>
+            </div>
+          </div>
+        </div>
       </div>
-
-      {!hideButtons && (
-        <motion.div
-          className="absolute bottom-16 md:bottom-24 left-1/2 -translate-x-1/2 z-20 flex flex-col sm:flex-row gap-4 w-full max-w-xs sm:max-w-none sm:w-auto px-6 sm:px-0"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 3.5, ease: "easeOut" }}
-        >
-          <Button variant="primary" className="h-[48px] px-8 text-base w-full sm:w-auto cursor-pointer">
-            {translate("Explore Destination B1")}
-          </Button>
-          <Button
-            variant="ghost"
-            className="h-[48px] px-8 text-base w-full sm:w-auto cursor-pointer"
-          >
-            {translate("Start Learning")}
-          </Button>
-        </motion.div>
-      )}
     </section>
   );
 }
+

@@ -13,20 +13,37 @@ export default function Home() {
     <>
       <Navbar />
       <main className="flex-grow">
-        <HeroSection />
-        {/* <div className="relative z-0 w-full overflow-hidden">
-        <div 
-            className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-80 dark:opacity-20 dark:brightness-[0.35] pointer-events-none -z-10"
-            style={{ backgroundImage: "url('/imgs/bg12.png')" }}
-          /> */}
-        <BookSelectionSection />
-        {/* </div> */}
+        {/* Shared background video for Hero and Book Selection */}
+        <div className="relative z-0 w-full overflow-hidden">
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="absolute inset-0 w-full h-full object-cover opacity-80 dark:opacity-20 dark:brightness-[0.35] pointer-events-none -z-10"
+          >
+            <source
+              src="/video.mp4"
+              type="video/mp4"
+            />
+          </video>
+          <HeroSection />
+          <BookSelectionSection />
+        </div>
         {/* Above Slider: Shared Background Image bg6.png */}
         <div className="relative z-0 w-full overflow-hidden">
-          <div 
-            className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-80 dark:opacity-20 dark:brightness-[0.35] pointer-events-none -z-10"
-            style={{ backgroundImage: "url('/imgs/bg16.png')" }}
-          />
+         <video
+    autoPlay
+    loop
+    muted
+    playsInline
+    className="absolute inset-0 w-full h-full object-cover opacity-80 dark:opacity-20 dark:brightness-[0.35] pointer-events-none -z-10"
+  >
+    <source
+      src="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260503_101827_abebfeec-f243-466b-b494-7f6814c0fbbf.mp4"
+      type="video/mp4"
+    />
+  </video>
  
           <InteractivePlaypen />
           {/* <ThreeDWorkspace /> */}
@@ -35,10 +52,18 @@ export default function Home() {
 
         {/* Below Slider: Shared Background Image bg7.png */}
         <div className="relative z-0 w-full overflow-hidden">
-          <div 
-            className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-80 dark:opacity-25 dark:brightness-[0.35] pointer-events-none -z-10"
-            style={{ backgroundImage: "url('/imgs/bg17.png')" }}
-          />
+          <video
+    autoPlay
+    loop
+    muted
+    playsInline
+    className="absolute inset-0 w-full h-full object-cover opacity-80 dark:opacity-20 dark:brightness-[0.35] pointer-events-none -z-10"
+  >
+    <source
+      src="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260422_191657_800d4e1f-7ab3-41af-90b6-9bd3039eb294.mp4"
+      type="video/mp4"
+    />
+  </video>
           <VisualHierarchy />
           <AudienceShowcase />
         </div>
