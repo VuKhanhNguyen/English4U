@@ -143,13 +143,9 @@ export function HeroSection({
         {/* Soft overlay to keep text contrast */}
         <div className="absolute inset-0 z-0 bg-paper-canvas/15 dark:bg-black/10 pointer-events-none" />
 
-        {/* Decorative diffused gradients on top of the overlay */}
-        <div className="absolute top-20 left-10 w-64 h-64 bg-sunset-violet-gradient rounded-full opacity-20 blur-3xl z-0 pointer-events-none" />
-        <div className="absolute bottom-20 right-10 w-80 h-80 bg-sky-mint-gradient rounded-full opacity-25 blur-3xl z-0 pointer-events-none" />
-
         <div className="container mx-auto px-6 relative z-10 flex flex-col items-center text-center w-full">
-          <h1 className={`text-display-sm md:text-display lg:text-display font-heading font-normal leading-[1.2] tracking-[-0.02em] text-ink max-w-4xl ${title2 ? 'min-h-[3.8em] sm:min-h-[2.5em] md:min-h-[2.5em]' : 'min-h-[1.9em] sm:min-h-[1.3em] md:min-h-[1.3em]'}`}>
-            <span className="bg-gradient-to-r from-off-black via-[#7d52a8] to-[#df5745] dark:from-stardust-gold dark:via-[#ffae7a] dark:to-white bg-clip-text text-transparent inline-block pb-1">
+          <h1 className={`text-display-sm md:text-display lg:text-display font-heading font-normal leading-[1.2] tracking-[-0.02em] text-gradient-heading max-w-4xl ${title2 ? 'min-h-[3.8em] sm:min-h-[2.5em] md:min-h-[2.5em]' : 'min-h-[1.9em] sm:min-h-[1.3em] md:min-h-[1.3em]'}`}>
+            <span className="inline-block pb-1">
               {t1}
             </span>
             {hasStarted && (phase === "typing-1" || phase === "deleting-1") && (
@@ -158,8 +154,8 @@ export function HeroSection({
             {text2 && (
               <>
                 <br />
-                <span className="bg-gradient-to-r from-off-black via-[#4e74e6] to-[#0cb88f] dark:from-white dark:via-[#9bb3f5] dark:to-[#6efac6] bg-clip-text text-transparent inline-block pb-1">
-                  {t2}
+                <span className="inline-block pb-1">
+                  {text2}
                 </span>
                 {hasStarted && (phase === "typing-2" || phase === "deleting-2") && (
                   <span className="animate-pulse inline-block ml-0.5 font-light text-[#0cb88f] dark:text-[#6efac6]">|</span>
@@ -169,7 +165,7 @@ export function HeroSection({
           </h1>
 
           <p className="mt-6 text-subheading md:text-heading-sm font-mono font-normal tracking-[-0.02em] text-pale-stone max-w-2xl min-h-[8.5em] sm:min-h-[5.5em] md:min-h-[4em]">
-            <span className="bg-gradient-to-r from-pale-stone via-pale-stone/90 to-pale-stone/85 dark:from-[#eae6df] dark:via-[#eae6df]/90 dark:to-[#8c94a6] bg-clip-text text-transparent inline-block">
+            <span className="text-pale-stone dark:text-[#eae6df] inline-block">
               {t3}
             </span>
             {hasStarted && (phase === "typing-3" || phase === "deleting-3" || phase === "paused") && (
@@ -186,15 +182,11 @@ export function HeroSection({
       {/* Soft overlay to keep text contrast */}
       <div className="absolute inset-0 z-0 bg-paper-canvas/15 dark:bg-black/10 pointer-events-none" />
 
-      {/* Decorative diffused gradients on top of the overlay */}
-      <div className="absolute top-20 left-10 w-64 h-64 bg-sunset-violet-gradient rounded-full opacity-20 blur-3xl z-0 pointer-events-none" />
-      <div className="absolute bottom-20 right-10 w-80 h-80 bg-sky-mint-gradient rounded-full opacity-25 blur-3xl z-0 pointer-events-none" />
-
       <div className="container mx-auto px-6 relative z-10 w-full max-w-6xl">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center w-full">
           {/* Left Column: Heading, description, and buttons (col-span-7) */}
           <div className="lg:col-span-7 flex flex-col items-start text-left w-full">
-            <h1 className="text-display-sm md:text-display font-heading font-normal leading-[1.2] tracking-[-0.02em] text-ink text-left w-full relative">
+            <h1 className="text-display-sm md:text-display font-heading font-normal leading-[1.2] tracking-[-0.02em] text-gradient-heading text-left w-full relative">
               {/* Invisible placeholder to prevent height shifts */}
               <span className="invisible select-none pointer-events-none block pb-1">
                 {text1}
@@ -208,7 +200,7 @@ export function HeroSection({
 
               {/* Typing text overlay */}
               <span className="absolute inset-x-0 top-0">
-                <span className="bg-gradient-to-r from-off-black via-[#7d52a8] to-[#df5745] dark:from-stardust-gold dark:via-[#ffae7a] dark:to-white bg-clip-text text-transparent inline-block pb-1">
+                <span className="inline-block pb-1">
                   {t1}
                 </span>
                 {hasStarted && (phase === "typing-1" || phase === "deleting-1") && (
@@ -217,7 +209,7 @@ export function HeroSection({
                 {text2 && (
                   <>
                     <br />
-                    <span className="bg-gradient-to-r from-off-black via-[#4e74e6] to-[#0cb88f] dark:from-white dark:via-[#9bb3f5] dark:to-[#6efac6] bg-clip-text text-transparent inline-block pb-1">
+                    <span className="inline-block pb-1">
                       {t2}
                     </span>
                     {hasStarted && (phase === "typing-2" || phase === "deleting-2") && (
@@ -235,7 +227,7 @@ export function HeroSection({
               </span>
 
               {/* Typing text overlay */}
-              <span className="absolute inset-x-0 top-0 bg-gradient-to-r from-pale-stone via-pale-stone/90 to-pale-stone/85 dark:from-[#eae6df] dark:via-[#eae6df]/90 dark:to-[#8c94a6] bg-clip-text text-transparent">
+              <span className="absolute inset-x-0 top-0 text-pale-stone dark:text-[#eae6df]">
                 {t3}
                 {hasStarted && (phase === "typing-3" || phase === "deleting-3" || phase === "paused") && (
                   <span className="animate-pulse inline-block ml-0.5 font-light text-off-black dark:text-stardust-gold">|</span>
@@ -247,7 +239,7 @@ export function HeroSection({
               className="flex flex-col sm:flex-row gap-4 mt-8 w-full sm:w-auto"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 3.5, ease: "easeOut" }}
+              transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
             >
               <Button variant="primary" className="h-[48px] px-8 text-base cursor-pointer">
                 {translate("Explore Destination B1")}
@@ -265,7 +257,7 @@ export function HeroSection({
           <div className="lg:col-span-5 flex justify-center lg:justify-end w-full mt-8 lg:mt-0">
             <div className="relative w-full max-w-sm overflow-visible">
               {/* Zoomed-in circular Owl Mascot peeking from top-right */}
-              <div className="absolute -top-12 -right-4 w-20 h-20 rounded-full border-2 border-white dark:border-zinc-800 bg-white shadow-[0_8px_24px_rgba(0,0,0,0.15)] overflow-hidden z-30 pointer-events-none animate-bounce" style={{ animationDuration: '4s' }}>
+              <div className="absolute -top-12 -right-4 w-20 h-20 rounded-full border-2 border-white dark:border-zinc-800 bg-white shadow-[0_8px_24px_rgba(0,0,0,0.15)] overflow-hidden z-30 pointer-events-none">
                 <img
                   src="/imgs/bgOwl1.png"
                   alt="Owl Mascot"
@@ -274,7 +266,7 @@ export function HeroSection({
               </div>
 
               <motion.div
-                className="w-full liquid-glass border border-white/20 dark:border-white/10 rounded-[24px] p-6 shadow-3d-card select-none"
+                className="w-full liquid-glass rounded-sm p-6 select-none"
                 initial={{ opacity: 0, scale: 0.95 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.8, delay: 1, ease: "easeOut" }}
@@ -325,8 +317,8 @@ export function HeroSection({
                       <span>{translate("Daily Goal")}</span>
                       <span className="font-bold text-ink">80%</span>
                     </div>
-                    <div className="w-full h-3 bg-zinc-200 dark:bg-zinc-800 rounded-full overflow-hidden p-[2px] border border-off-black/10 dark:border-white/10">
-                      <div className="h-full bg-gradient-to-r from-emerald-400 to-teal-500 rounded-full w-[80%]" />
+                    <div className="w-full h-3 bg-zinc-200 dark:bg-zinc-800 rounded-sm overflow-hidden p-[2px] border border-off-black/10 dark:border-white/10">
+                      <div className="h-full bg-emerald-500 dark:bg-emerald-400 rounded-none w-[80%]" />
                     </div>
                   </div>
 
@@ -336,7 +328,7 @@ export function HeroSection({
                       {translate("Current Level")}
                     </div>
                     <div className="text-sm font-bold text-ink mt-1 flex items-center gap-2">
-                      <span className="px-2 py-0.5 rounded bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 text-xs border border-emerald-500/20">B2</span>
+                      <span className="px-2 py-0.5 rounded-sm bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 text-xs border border-emerald-500/20">B2</span>
                       {translate("B2 Intermediate")}
                     </div>
                   </div>

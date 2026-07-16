@@ -8,7 +8,7 @@ All notable changes to the **English4U** project are documented below. This proj
 
 | Key Metrics         | Value / Badges                                                                                                                             |
 | :------------------ | :----------------------------------------------------------------------------------------------------------------------------------------- |
-| **Current Version** | ![Version](https://img.shields.io/badge/version-v1.6.7-blue.svg?style=for-the-badge&logo=git)                                              |
+| **Current Version** | ![Version](https://img.shields.io/badge/version-v1.6.8-blue.svg?style=for-the-badge&logo=git)                                              |
 | **Framework**       | ![Next.js](https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white)                                 |
 | **Styling**         | ![CSS](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)                                             |
 | **Language**        | ![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)                          |
@@ -40,8 +40,47 @@ gantt
     v1.6.4 Mobile Scroll & Lag Fixes   :active, 2026-07-02, 2026-07-02
     v1.6.5 Mobile Render & Scroll Optim:active, 2026-07-03, 2026-07-03
     v1.6.6 Mobile Spacing & Glassmorphism:active, 2026-07-03, 2026-07-03
-    v1.6.7 PWA Icon & Navbar Gradients :active, 2026-07-03, 2026-07-03
+    v1.6.7 PWA Icon & Navbar Polish  :active, 2026-07-03, 2026-07-03
+    v1.6.8 Premium Brutalist & Cross-Page UX :active, 2026-07-15, 2026-07-16
 ```
+
+---
+
+## 🚀 v1.6.8 — Flat Brutalist Redesign & Cross-Page UX Consistency
+
+> **Release Date:** July 16, 2026 • _Focus: Flat Brutalist Theme Migration, Hardware-Accelerated Spotlight Backdrops, Cross-Page Design Alignment, Sticky Scroll Navigation Fixes, and Micro-Interaction Animations_
+
+```
+┌──────────────────────────────────────────────────────────────────┐
+│  ✨ Highlights:                                                  │
+│  • Replaced heavy glassmorphism blobs with a Flat Brutalist card │
+│    design system (solid borders, rigid 3D drop-shadow offsets)   │
+│  • Implemented GPU-accelerated interactive spotlight grid lines │
+│  • Unified layout, theme settings and background on all 4 pages  │
+│  • Fixed CSS sticky scrollspy index by converting containers from │
+│    overflow-hidden layout to overflow-x-clip                     │
+│  • Upgraded unit sidebars & breadcrumbs with fluid spring motion │
+└──────────────────────────────────────────────────────────────────┘
+```
+
+### 🎨 Flat Brutalist Design & Dark Mode
+- **Brutalist Card Token Layout**: Upgraded card borders globally (`.liquid-glass`) to use a sharp `2px` black border and solid `4px` offset shadow (`shadow-3d-card`), utilizing `var(--radius-sm)` (6px) rounded corners on cards, buttons, input fields, checkboxes, and tags.
+- **Vibrant Heading Gradients**: Applied high-contrast, theme-dependent CSS text gradients (`text-gradient-heading`, `text-gradient-badge`) to page hero headers, syllabus section headings, and category titles.
+- **Comfortable Dark Slate Navy Theme**: Optimized the dark theme palette to use a soft slate-navy (`var(--atmosphere-wash)`) background, stardust gold borders, and elegant offset shadows, offering excellent visual contrast while remaining comfortable for the eyes.
+
+### ⚡ GPU-Accelerated Spotlight Backdrop
+- **Interactive Mouse Spotlight Grid**: Created the `<InteractiveBackground />` component to render interactive grid spotlighting following the user's cursor, using global CSS custom variables to set coordinates without triggering React re-renders.
+- **GPU-bound Floating Auras**: Rendered dual ambient color auras floating slowly in the background, utilizing CSS animation keyframes and `will-change: transform` to run completely on the compositor thread (0% CPU scripting cost).
+
+### 🐛 Layout Fixes & Cross-page Consistency
+- **Syllabus Sidebar Sticky Scroll Fix**: Resolved standard sticky scroll breaks in `destination/[level]/page.tsx` and `resources/page.tsx` by replacing `<main>` container's `overflow-hidden` with `overflow-x-clip`, allowing the Left Sidebar Unit Index to stick relative to the viewport.
+- **Omnipresent Layout Architecture**: Unified pages (Home, Destination, Resources, Contact) to inherit the same layout wrapper (Navbar, InteractiveBackground, `<main className="bg-paper-canvas dark:bg-black relative overflow-x-clip">`, Footer).
+
+### 🎬 Delightful Micro-interactions
+- **Tactile Sidebar Units Navigation**: Upgraded the Left Sidebar Unit buttons to `<motion.button>` with spring hover translate-x (`x: 4`) and scale-up (`scale: 1.02`) physics.
+- **Accordion Label Transitions**: Added custom CSS translate-x transformations on accordion triggers to slide them gently to the right when hovered.
+- **Table Hover Effects**: Updated table body rows across all tabs (Grammar, Vocabulary, Word Formation, etc.) to use a smooth background fade-in transition and custom mouse pointer classes on hover.
+- **Breadcrumbs Entrance & Highlights**: Wrapped page breadcrumbs in dynamic motion entrance wrappers and added responsive bubble background highlights and icon scales on hover.
 
 ---
 

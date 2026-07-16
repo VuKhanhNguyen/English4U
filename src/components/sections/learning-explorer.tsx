@@ -476,7 +476,7 @@ function RichGrammarRenderer({ richGrammar }: { richGrammar: any[] }) {
                           {(block.rows || []).map((row: any, rIdx: number) => (
                             <tr
                               key={rIdx}
-                              className="border-b border-off-black last:border-b-0 font-mono hover:bg-atmosphere-wash/10 transition-colors"
+                              className="border-b border-off-black last:border-b-0 font-mono hover:bg-atmosphere-wash/15 dark:hover:bg-white/5 transition-all duration-200 cursor-default"
                             >
                               {row.type && (
                                 <td
@@ -573,7 +573,7 @@ function RichGrammarRenderer({ richGrammar }: { richGrammar: any[] }) {
                           {(block.rows || []).map((row: string[], rIdx: number) => (
                             <tr
                               key={rIdx}
-                              className="border-b border-off-black last:border-b-0 font-mono hover:bg-atmosphere-wash/10 transition-colors"
+                              className="border-b border-off-black last:border-b-0 font-mono hover:bg-atmosphere-wash/15 dark:hover:bg-white/5 transition-all duration-200 cursor-default"
                             >
                               {(row || []).map((cell: string, cIdx: number) => {
                                  const header = block.headers?.[cIdx];
@@ -703,7 +703,7 @@ function RichGrammarRenderer({ richGrammar }: { richGrammar: any[] }) {
                             </thead>
                             <tbody>
                               {(block.table || []).map((row: any, rIdx: number) => (
-                                <tr key={rIdx} className="border-b border-off-black last:border-b-0 hover:bg-atmosphere-wash/10 transition-colors">
+                                <tr key={rIdx} className="border-b border-off-black last:border-b-0 hover:bg-atmosphere-wash/15 dark:hover:bg-white/5 transition-all duration-200 cursor-default">
                                   <td className="p-3 border-r border-off-black font-bold text-sky-600 dark:text-sky-400 bg-sky-500/5 align-middle text-center">{row[0]}</td>
                                   <td className="p-3 whitespace-pre-line text-off-black align-middle">
                                     {renderTextWithLinks(translate(row[1]))}
@@ -792,7 +792,7 @@ function RichGrammarRenderer({ richGrammar }: { richGrammar: any[] }) {
                         </thead>
                         <tbody>
                           {(block.table || []).map((row: any, rIdx: number) => (
-                            <tr key={rIdx} className="border-b border-off-black last:border-b-0 hover:bg-atmosphere-wash/10 transition-colors">
+                            <tr key={rIdx} className="border-b border-off-black last:border-b-0 hover:bg-atmosphere-wash/15 dark:hover:bg-white/5 transition-all duration-200 cursor-default">
                               <td className="p-3 border-r border-off-black font-bold text-ink align-middle">{row[0]}</td>
                               <td className="p-3 border-r border-off-black text-pale-stone align-middle">{translate(row[1])}</td>
                               <td className="p-3 border-r border-off-black font-bold text-ink align-middle">{row[2]}</td>
@@ -1089,22 +1089,13 @@ export function LearningExplorerSection({
   };
 
   return (
-    <section className={cn("py-16 md:py-24 bg-transparent border-t border-off-black relative overflow-x-clip z-0", className)}>
-      {/* Background Image Layer */}
-      <div 
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-80 dark:opacity-20 dark:brightness-[0.35] pointer-events-none -z-10"
-        style={{ backgroundImage: "url('/imgs/bg8.png')" }}
-      />
-      
-      {/* Subtle background gradient wash */}
-      <div className="absolute top-0 right-0 w-[500px] h-[500px] rounded-full bg-sky-mint-gradient opacity-20 blur-[120px] pointer-events-none z-0" />
-      <div className="absolute bottom-0 left-0 w-[500px] h-[500px] rounded-full bg-sunset-violet-gradient opacity-15 blur-[120px] pointer-events-none z-0" />
+    <section className={cn("py-16 md:py-24 bg-transparent border-t border-off-black/15 dark:border-white/10 relative overflow-x-clip z-0", className)}>
 
       <div className="container mx-auto px-4 sm:px-6 max-w-[1432px] relative z-10">
         <div className={`flex flex-col md:flex-row justify-between items-end gap-4 ${hideHeader ? 'mb-4' : 'mb-12'}`}>
           {!hideHeader && (
             <div>
-                 <h2 className="text-heading-lg font-heading bg-gradient-to-r from-off-black via-[#7d52a8] to-[#4e74e6] dark:from-stardust-gold dark:via-[#ffae7a] dark:to-white bg-clip-text text-transparent mb-4 inline-block pb-1">
+                 <h2 className="text-heading-lg font-heading text-gradient-heading mb-4 pb-1">
                 {translate("Learning Explorer")}
               </h2>
               <br />
@@ -1114,25 +1105,32 @@ export function LearningExplorerSection({
             </div>
           )}
 
-              <Breadcrumb className="w-max px-4 py-2 rounded-full bg-paper-canvas/50 dark:bg-zinc-950/30 backdrop-blur-md border border-off-black/10 dark:border-white/10 shadow-sm text-xs ml-5 mt-5 select-none font-mono">
-                <BreadcrumbList>
-                  <BreadcrumbItem>
-                    <BreadcrumbLink href="/" asChild>
-                      <Link href="/" className="inline-flex items-center gap-1.5 hover:text-ink transition-colors">
-                        <Home className="w-3.5 h-3.5" />
-                        {translate("Home")}
-                      </Link>
-                    </BreadcrumbLink>
-                  </BreadcrumbItem>
-                  <BreadcrumbSeparator />
-                  <BreadcrumbItem>
-                    <BreadcrumbPage className="text-pale-stone font-medium inline-flex items-center gap-1.5">
-                      <BookOpen className="w-3.5 h-3.5 text-pale-stone" />
-                      {activeBook.book}
-                    </BreadcrumbPage>
-                  </BreadcrumbItem>
-                </BreadcrumbList>
-              </Breadcrumb>
+              <motion.div
+                initial={{ opacity: 0, y: -8, scale: 0.96 }}
+                animate={{ opacity: 1, y: 0, scale: 1 }}
+                transition={{ type: "spring", stiffness: 350, damping: 25, delay: 0.1 }}
+                className="w-max ml-5 mt-5"
+              >
+                <Breadcrumb className="px-4 py-2 rounded-full bg-paper-canvas/50 dark:bg-zinc-950/30 backdrop-blur-md border border-off-black/10 dark:border-white/10 shadow-sm text-xs select-none font-mono">
+                  <BreadcrumbList>
+                    <BreadcrumbItem>
+                      <BreadcrumbLink href="/" asChild>
+                        <Link href="/" className="group inline-flex items-center gap-1.5 hover:text-ink transition-all duration-200 hover:bg-atmosphere-wash/50 dark:hover:bg-white/10 px-2.5 py-0.5 rounded-full -mx-1">
+                          <Home className="w-3.5 h-3.5 group-hover:scale-110 transition-transform duration-200" />
+                          {translate("Home")}
+                        </Link>
+                      </BreadcrumbLink>
+                    </BreadcrumbItem>
+                    <BreadcrumbSeparator />
+                    <BreadcrumbItem>
+                      <BreadcrumbPage className="text-pale-stone font-medium inline-flex items-center gap-1.5 px-2.5 py-0.5">
+                        <BookOpen className="w-3.5 h-3.5 text-pale-stone" />
+                        {activeBook.book}
+                      </BreadcrumbPage>
+                    </BreadcrumbItem>
+                  </BreadcrumbList>
+                </Breadcrumb>
+              </motion.div>
 
           {/* <div className="w-full md:w-[280px] relative ml-auto z-10">
             <Search className="absolute left-3 top-1/2 -translate-y-1/2 text-pale-stone w-[16px] h-[16px]" />
@@ -1164,10 +1162,11 @@ export function LearningExplorerSection({
         ) : (
           <Card variant="content" className="mb-6 flex flex-row items-center justify-between !p-6 md:!p-10">
             <div>
-              <span className="px-3 py-1 rounded-full bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 text-xs border border-emerald-500/20 font-mono font-bold uppercase tracking-wider">
+              <span className="px-3 py-1 mr-3 rounded-full bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 text-xs border border-emerald-500/20 font-mono font-bold uppercase tracking-wider">
                 {activeBook.book}
               </span>
-              <h1 className="text-heading font-heading text-ink mt-3 mb-0">
+              <br/>
+              <h1 className="text-heading font-heading text-gradient-heading mt-3 mb-0">
                 {translate("Structured Syllabus Explorer")}
               </h1>
              
@@ -1200,10 +1199,13 @@ export function LearningExplorerSection({
                 const { prefix, main } = splitTitle(unit.title);
                 const isActive = activeUnitId === unit.id || expandedUnitId === unit.id;
                 return (
-                  <button
+                  <motion.button
                     key={unit.id}
                     data-unit-id={unit.id}
                     onClick={() => handleUnitClick(unit.id)}
+                    whileHover={{ scale: 1.02, x: 4 }}
+                    whileTap={{ scale: 0.98 }}
+                    transition={{ type: "spring", stiffness: 400, damping: 25 }}
                     className={cn(
                       "w-full text-left px-4 py-3 rounded-[24px] transition-all duration-200 font-mono text-xs border-2 flex flex-col gap-1 items-start cursor-pointer outline-none relative overflow-hidden",
                       isActive
@@ -1228,7 +1230,7 @@ export function LearningExplorerSection({
                       </span>
                     )}
                     <span className="line-clamp-2 text-left leading-normal">{main}</span>
-                  </button>
+                  </motion.button>
                 );
               })}
             </div>
@@ -1251,7 +1253,7 @@ export function LearningExplorerSection({
                     id={`scroll-unit-${unit.id}`}
                     className="border-b border-pale-stone scroll-mt-[110px] mx-1 sm:mx-6"
                   >
-                <AccordionTrigger className="text-subheading font-mono font-medium hover:no-underline py-5 px-2 sm:px-4 text-left text-ink hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">
+                <AccordionTrigger className="text-subheading font-mono font-medium hover:no-underline py-5 px-2 sm:px-4 text-left text-ink hover:text-emerald-600 dark:hover:text-emerald-400 hover:translate-x-1 transition-all duration-200">
                   {unit.title}
                 </AccordionTrigger>
                 <AccordionContent className="pt-2 pb-6">
@@ -1324,7 +1326,7 @@ export function LearningExplorerSection({
                                   "usage",
                                   "example",
                                 ]).map((row, idx) => (
-                                  <TableRow key={idx}>
+                                  <TableRow key={idx} className="hover:bg-atmosphere-wash/10 dark:hover:bg-white/5 transition-all duration-200 cursor-default">
                                     <TableCell className="font-mono">
                                       <span className="px-2 py-0.5 rounded bg-sky-500/10 text-sky-600 dark:text-sky-400 text-xs border border-sky-500/20 font-medium">
                                         {row.structure}
@@ -1402,7 +1404,7 @@ export function LearningExplorerSection({
                               "meaning",
                               "example",
                             ]).map((row, idx) => (
-                              <TableRow key={idx}>
+                              <TableRow key={idx} className="hover:bg-atmosphere-wash/10 dark:hover:bg-white/5 transition-all duration-200 cursor-default">
                                 <TableCell className="font-mono font-semibold text-emerald-700 dark:text-emerald-400">
                                   {row.word}
                                 </TableCell>
@@ -1480,7 +1482,7 @@ export function LearningExplorerSection({
                             ]).map((row, idx) => {
                               const parsedFamily = parseWordFormationMeaning(row.meaning);
                               return (
-                                <TableRow key={idx} className="align-top">
+                                <TableRow key={idx} className="align-top hover:bg-atmosphere-wash/10 dark:hover:bg-white/5 transition-all duration-200 cursor-default">
                                   <TableCell className="font-mono font-semibold text-emerald-600 dark:text-emerald-400 pt-4">
                                     {row.word}
                                   </TableCell>
@@ -1623,7 +1625,7 @@ export function LearningExplorerSection({
                               "meaning",
                               "example",
                             ]).map((row, idx) => (
-                              <TableRow key={idx}>
+                              <TableRow key={idx} className="hover:bg-atmosphere-wash/10 dark:hover:bg-white/5 transition-all duration-200 cursor-default">
                                 <TableCell className="font-mono font-semibold text-emerald-600 dark:text-emerald-400">
                                   {row.verb}
                                 </TableCell>
@@ -1702,7 +1704,7 @@ export function LearningExplorerSection({
                               "meaning",
                               "example",
                             ]).map((row, idx) => (
-                              <TableRow key={idx}>
+                              <TableRow key={idx} className="hover:bg-atmosphere-wash/10 dark:hover:bg-white/5 transition-all duration-200 cursor-default">
                                 <TableCell className="font-mono font-semibold text-emerald-600 dark:text-emerald-400">
                                   {row.phrasalVerb}
                                 </TableCell>
@@ -1769,7 +1771,7 @@ export function LearningExplorerSection({
                               "phrase",
                               "meaning",
                             ]).map((row, idx) => (
-                              <TableRow key={idx}>
+                              <TableRow key={idx} className="hover:bg-atmosphere-wash/10 dark:hover:bg-white/5 transition-all duration-200 cursor-default">
                                 <TableCell className="font-mono font-semibold text-emerald-600 dark:text-emerald-400">
                                   {row.phrase}
                                 </TableCell>
@@ -1831,7 +1833,7 @@ export function LearningExplorerSection({
                               "collocation",
                               "meaning",
                             ]).map((row, idx) => (
-                              <TableRow key={idx}>
+                              <TableRow key={idx} className="hover:bg-atmosphere-wash/10 dark:hover:bg-white/5 transition-all duration-200 cursor-default">
                                 <TableCell className="font-mono font-semibold text-emerald-600 dark:text-emerald-400">
                                   {row.word}
                                 </TableCell>

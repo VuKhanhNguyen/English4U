@@ -7,7 +7,7 @@ import { cn } from "@/lib/utils";
 
 import { Navbar } from "@/components/layout/navbar";
 import { Footer } from "@/components/layout/footer";
-import FloatingLines from "@/components/FloatingLines";
+import { InteractiveBackground } from "@/components/ui/interactive-background";
 import { useLanguage } from "@/components/providers/language-provider";
 import NextLink from "next/link";
 import {
@@ -543,48 +543,38 @@ export default function ResourcesPage() {
   ], [vocabulary.length, phrasalVerbs.length, prepositionalPhrases.length, wordFormation.length, wordPatterns.length, collocations.length]);
 
   return (
-    <div className="flex flex-col min-h-screen relative overflow-hidden">
-      {/* Base background color */}
-      <div className="fixed inset-0 bg-pale-ash -z-20" />
-      {/* FloatingLines animation layer */}
-      <div className="fixed inset-0 pointer-events-none -z-10 overflow-hidden">
-        <FloatingLines />
-      </div>
-
+    <>
       <Navbar />
-<div className="relative z-0 w-full overflow-hidden">
-        <div 
-            className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-80 dark:opacity-20 dark:brightness-[0.35] pointer-events-none -z-10"
-            style={{ backgroundImage: "url('/imgs/bg8.png')" }}
-          /> 
-        
-        
-
-      <main className="flex-grow relative z-10 pt-[140px] pb-24">
-        {/* Soft background washes */}
-        <div className="absolute top-20 left-10 w-[500px] h-[500px] rounded-full bg-sky-mint-gradient opacity-15 blur-[120px] pointer-events-none -z-10" />
-        <div className="absolute bottom-20 right-10 w-[600px] h-[600px] rounded-full bg-sunset-violet-gradient opacity-15 blur-[120px] pointer-events-none -z-10" />
+      <main className="flex-grow bg-paper-canvas dark:bg-black relative overflow-x-clip pt-[140px] pb-24">
+        <InteractiveBackground />
 
         <div className="container mx-auto px-4 sm:px-6 max-w-[1432px]">
-          <Breadcrumb className="w-max px-4 py-2 rounded-full bg-paper-canvas/50 dark:bg-zinc-950/30 backdrop-blur-md border border-off-black/10 dark:border-white/10 shadow-sm text-xs mt-2.5 mb-5 select-none font-mono">
-                <BreadcrumbList>
-                  <BreadcrumbItem>
-                    <BreadcrumbLink href="/" asChild>
-                      <NextLink href="/" className="inline-flex items-center gap-1.5 hover:text-ink transition-colors">
-                        <Home className="w-3.5 h-3.5" />
-                        {translate("Home")}
-                      </NextLink>
-                    </BreadcrumbLink>
-                  </BreadcrumbItem>
-                  <BreadcrumbSeparator />
-                  <BreadcrumbItem>
-                    <BreadcrumbPage className="text-pale-stone font-medium inline-flex items-center gap-1.5">
-                      <BookOpen className="w-3.5 h-3.5 text-pale-stone" />
-                      {translate("Resources")}
-                    </BreadcrumbPage>
-                  </BreadcrumbItem>
-                </BreadcrumbList>
-              </Breadcrumb>
+          <motion.div
+            initial={{ opacity: 0, y: -8, scale: 0.96 }}
+            animate={{ opacity: 1, y: 0, scale: 1 }}
+            transition={{ type: "spring", stiffness: 350, damping: 25, delay: 0.1 }}
+            className="w-max mt-2.5 mb-5"
+          >
+            <Breadcrumb className="px-4 py-2 rounded-full bg-paper-canvas/50 dark:bg-zinc-950/30 backdrop-blur-md border border-off-black/10 dark:border-white/10 shadow-sm text-xs select-none font-mono">
+              <BreadcrumbList>
+                <BreadcrumbItem>
+                  <BreadcrumbLink href="/" asChild>
+                    <NextLink href="/" className="group inline-flex items-center gap-1.5 hover:text-ink transition-all duration-200 hover:bg-atmosphere-wash/50 dark:hover:bg-white/10 px-2.5 py-0.5 rounded-full -mx-1">
+                      <Home className="w-3.5 h-3.5 group-hover:scale-110 transition-transform duration-200" />
+                      {translate("Home")}
+                    </NextLink>
+                  </BreadcrumbLink>
+                </BreadcrumbItem>
+                <BreadcrumbSeparator />
+                <BreadcrumbItem>
+                  <BreadcrumbPage className="text-pale-stone font-medium inline-flex items-center gap-1.5 px-2.5 py-0.5">
+                    <BookOpen className="w-3.5 h-3.5 text-pale-stone" />
+                    {translate("Resources")}
+                  </BreadcrumbPage>
+                </BreadcrumbItem>
+              </BreadcrumbList>
+            </Breadcrumb>
+          </motion.div>
           {/* Header Title Card */}
           <Card variant="content" className="mb-12 flex flex-col lg:flex-row items-start lg:items-center justify-between !p-4 sm:!p-8 md:!p-12 relative overflow-hidden bg-paper-canvas/80 backdrop-blur-md">
             <div className="absolute top-0 right-0 w-32 h-32 bg-atmosphere-wash/20 rounded-full blur-2xl pointer-events-none" />
@@ -601,7 +591,7 @@ export default function ResourcesPage() {
                   C1 · C2
                 </span>
               </div>
-              <h1 className="text-heading-lg font-heading font-bold bg-gradient-to-r from-off-black via-[#10b981] to-[#0ea5e9] dark:from-stardust-gold dark:via-[#ffae7a] dark:to-white bg-clip-text text-transparent leading-tight mb-4 inline-block pb-1">
+              <h1 className="text-heading-lg font-heading font-bold text-gradient-heading leading-tight mb-4 pb-1">
                 {translate("All-in-One Destination Synthesis")}
               </h1>
               
@@ -1321,9 +1311,7 @@ export default function ResourcesPage() {
           </Card>
         </div>
       </main>
-
       <Footer />
-    </div>
-    </div>
+    </>
   );
 }

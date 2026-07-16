@@ -56,24 +56,24 @@ export function AudienceShowcase() {
 
             <div className="flex flex-col gap-4 font-mono">
               <div className="flex items-center gap-3">
-                <div className="w-[20px] h-[20px] rounded-md bg-atmosphere-wash border border-off-black flex items-center justify-center">
-                  <Check className="w-[12px] h-[12px] text-ink" />
+                <div className="w-[20px] h-[20px] rounded-sm bg-atmosphere-wash border-2 border-ink dark:border-off-black flex items-center justify-center">
+                  <Check className="w-[12px] h-[12px] text-ink font-bold" />
                 </div>
                 <span className="text-body-sm font-medium text-ink">
                   {translate("Self-Guided Exam Revision")}
                 </span>
               </div>
               <div className="flex items-center gap-3">
-                <div className="w-[20px] h-[20px] rounded-md bg-atmosphere-wash border border-off-black flex items-center justify-center">
-                  <Check className="w-[12px] h-[12px] text-ink" />
+                <div className="w-[20px] h-[20px] rounded-sm bg-atmosphere-wash border-2 border-ink dark:border-off-black flex items-center justify-center">
+                  <Check className="w-[12px] h-[12px] text-ink font-bold" />
                 </div>
                 <span className="text-body-sm font-medium text-ink">
                   {translate("Commute & Mobile Friendly Tables")}
                 </span>
               </div>
               <div className="flex items-center gap-3">
-                <div className="w-[20px] h-[20px] rounded-md bg-atmosphere-wash border border-off-black flex items-center justify-center">
-                  <Check className="w-[12px] h-[12px] text-ink" />
+                <div className="w-[20px] h-[20px] rounded-sm bg-atmosphere-wash border-2 border-ink dark:border-off-black flex items-center justify-center">
+                  <Check className="w-[12px] h-[12px] text-ink font-bold" />
                 </div>
                 <span className="text-body-sm font-medium text-ink">
                   {translate("100% Client-Side Search Efficiency")}
@@ -88,9 +88,9 @@ export function AudienceShowcase() {
               variant="content"
               className="w-full max-w-[480px] p-4 sm:p-6 relative overflow-hidden"
             >
-              <div className="flex items-center justify-between pb-4 border-b border-off-black mb-6">
+              <div className="flex items-center justify-between pb-4 border-b border-ink dark:border-off-black mb-6">
                 <div className="flex items-center gap-2">
-                  <div className="w-[28px] h-[28px] rounded-md bg-paper-canvas border border-off-black flex items-center justify-center">
+                  <div className="w-[28px] h-[28px] rounded-sm bg-paper-canvas border-2 border-ink dark:border-off-black flex items-center justify-center">
                     <Activity className="w-[14px] h-[14px] text-ink" />
                   </div>
                   <div>
@@ -103,7 +103,7 @@ export function AudienceShowcase() {
                   </div>
                 </div>
 
-                <Badge className="border-off-black bg-transparent text-ink text-caption font-mono rounded-md flex items-center gap-1">
+                <Badge className="border-2 border-ink dark:border-off-black bg-transparent text-ink text-caption font-mono rounded-sm flex items-center gap-1">
                   <Calendar className="w-[10px] h-[10px]" /> {translate("Today")}
                 </Badge>
               </div>
@@ -122,24 +122,24 @@ export function AudienceShowcase() {
                     {/* Timeline bar and indicator column */}
                     <div className="flex flex-col items-center shrink-0 relative pb-6">
                       <div
-                        className={`w-[24px] h-[24px] rounded-md border border-off-black flex items-center justify-center shrink-0 relative z-10 ${
+                        className={`w-[24px] h-[24px] rounded-sm border-2 border-ink dark:border-off-black flex items-center justify-center shrink-0 relative z-10 ${
                           log.status === "active" ? "bg-atmosphere-wash animate-pulse" : "bg-paper-canvas"
                         }`}
                       >
                         <GraduationCap className="w-[12px] h-[12px] text-ink" />
                       </div>
                       {index < studyLogs.length - 1 && (
-                        <div className="w-px flex-grow bg-off-black/20 my-1 absolute top-6 bottom-0 left-1/2 -translate-x-1/2 z-0" />
+                        <div className="w-px flex-grow bg-ink/20 dark:bg-white/20 my-1 absolute top-6 bottom-0 left-1/2 -translate-x-1/2 z-0" />
                       )}
                     </div>
 
                     {/* Log Details */}
-                    <div className="p-2 sm:p-3 bg-paper-canvas border border-off-black rounded-lg flex-grow mb-6 last:mb-0">
+                    <div className="p-2 sm:p-3 bg-paper-canvas border-2 border-ink dark:border-off-black rounded-sm flex-grow mb-6 last:mb-0">
                       <div className="flex justify-between items-center mb-1 gap-2 flex-wrap">
                         <p className="text-body-sm font-medium text-ink leading-relaxed">
                           {translate(log.action)}
                         </p>
-                        <Badge className="text-[10px] px-2 py-0.5 rounded-md border border-off-black font-mono text-ink bg-atmosphere-wash shrink-0">
+                        <Badge className="text-[10px] px-2 py-0.5 rounded-sm border-2 border-ink dark:border-off-black font-mono text-ink bg-atmosphere-wash shrink-0">
                           {log.level}
                         </Badge>
                       </div>

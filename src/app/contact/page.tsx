@@ -14,6 +14,7 @@ import {
   Bold, Italic, Underline, List, Image as ImageIcon, Trash2, X, Home 
 } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import { InteractiveBackground } from "@/components/ui/interactive-background";
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -200,7 +201,7 @@ export default function ContactPage() {
 
   return (
       
-    <div className="flex flex-col min-h-screen relative overflow-x-clip bg-paper-canvas text-ink">
+    <div className="flex flex-col min-h-screen relative overflow-x-clip bg-paper-canvas dark:bg-black text-ink">
       <style dangerouslySetInnerHTML={{__html: `
         .rich-editor:empty:before {
           content: attr(data-placeholder);
@@ -216,34 +217,37 @@ export default function ContactPage() {
         }
       `}} />
       <Navbar />
-      <div className="relative z-0 w-full overflow-hidden">
-        <div 
-            className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-80 dark:opacity-20 dark:brightness-[0.35] pointer-events-none -z-10"
-            style={{ backgroundImage: "url('/imgs/bg8.png')" }}
-          /> 
-      <main className="flex-grow pt-[140px] pb-24 z-10">
+      <InteractiveBackground />
+      <main className="flex-grow pt-[140px] pb-24 z-10 relative">
         <div className="container mx-auto px-4 sm:px-6 max-w-6xl relative z-10 flex flex-col gap-8 md:gap-12">
           
           {/* Breadcrumb home > contact */}
-          <Breadcrumb className="w-max px-4 py-2 rounded-full bg-paper-canvas/50 dark:bg-zinc-950/30 backdrop-blur-md border border-off-black/10 dark:border-white/10 shadow-sm text-xs mt-2.5 mb-2 select-none font-mono">
-            <BreadcrumbList>
-              <BreadcrumbItem>
-                <BreadcrumbLink href="/" asChild>
-                  <NextLink href="/" className="inline-flex items-center gap-1.5 hover:text-ink transition-colors">
-                    <Home className="w-3.5 h-3.5" />
-                    {translate("Home")}
-                  </NextLink>
-                </BreadcrumbLink>
-              </BreadcrumbItem>
-              <BreadcrumbSeparator />
-              <BreadcrumbItem>
-                <BreadcrumbPage className="text-pale-stone font-medium inline-flex items-center gap-1.5">
-                  <Mail className="w-3.5 h-3.5 text-pale-stone" />
-                  {translate("Contact")}
-                </BreadcrumbPage>
-              </BreadcrumbItem>
-            </BreadcrumbList>
-          </Breadcrumb>
+          <motion.div
+            initial={{ opacity: 0, y: -8, scale: 0.96 }}
+            animate={{ opacity: 1, y: 0, scale: 1 }}
+            transition={{ type: "spring", stiffness: 350, damping: 25, delay: 0.1 }}
+            className="w-max mt-2.5 mb-2"
+          >
+            <Breadcrumb className="px-4 py-2 rounded-full bg-paper-canvas/50 dark:bg-zinc-950/30 backdrop-blur-md border border-off-black/10 dark:border-white/10 shadow-sm text-xs select-none font-mono">
+              <BreadcrumbList>
+                <BreadcrumbItem>
+                  <BreadcrumbLink href="/" asChild>
+                    <NextLink href="/" className="group inline-flex items-center gap-1.5 hover:text-ink transition-all duration-200 hover:bg-atmosphere-wash/50 dark:hover:bg-white/10 px-2.5 py-0.5 rounded-full -mx-1">
+                      <Home className="w-3.5 h-3.5 group-hover:scale-110 transition-transform duration-200" />
+                      {translate("Home")}
+                    </NextLink>
+                  </BreadcrumbLink>
+                </BreadcrumbItem>
+                <BreadcrumbSeparator />
+                <BreadcrumbItem>
+                  <BreadcrumbPage className="text-pale-stone font-medium inline-flex items-center gap-1.5 px-2.5 py-0.5">
+                    <Mail className="w-3.5 h-3.5 text-pale-stone" />
+                    {translate("Contact")}
+                  </BreadcrumbPage>
+                </BreadcrumbItem>
+              </BreadcrumbList>
+            </Breadcrumb>
+          </motion.div>
 
           {/* Header Section (Modern Typographic Capsule + Heading) */}
           <div className="flex flex-col items-start gap-4 max-w-4xl">
@@ -403,7 +407,7 @@ export default function ContactPage() {
               
               <div className="relative z-10 flex flex-col gap-6 w-full">
                 <div className="flex flex-col gap-3">
-                  <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl text-ink font-normal leading-tight">
+                  <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl text-gradient-heading font-normal leading-tight">
                     {translate("Let's create something together.")}
                   </h2>
                   <p className="font-sans text-xs sm:text-sm md:text-base text-pale-stone leading-relaxed">
@@ -635,7 +639,6 @@ export default function ContactPage() {
       </main>
 
       <Footer />
-    </div>
     </div>
   );
 }

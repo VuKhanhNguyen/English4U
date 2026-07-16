@@ -95,15 +95,15 @@ export function InteractivePlaypen() {
                       setActiveTab(tab.id);
                       setSimulatedSearch("");
                     }}
-                    className={`flex items-center justify-between p-4 rounded-lg border-2 text-left transition-all duration-200 cursor-pointer ${
+                    className={`flex items-center justify-between p-4 rounded-sm border-2 text-left transition-all duration-200 cursor-pointer ${
                       activeTab === tab.id
-                        ? "bg-atmosphere-wash border-off-black/15 shadow-[2px_2px_6px_0px_var(--shadow-3d-color)] text-ink font-bold dark:bg-atmosphere-wash/20 translate-x-[1px] translate-y-[1px]"
-                        : "bg-paper-canvas/30 border-off-black/10 shadow-[3px_3px_8px_0px_var(--shadow-3d-color)] text-off-black/60 hover:bg-paper-canvas/50 hover:border-off-black/15 hover:shadow-[4px_4px_12px_var(--shadow-3d-color)] hover:text-off-black"
+                        ? "bg-atmosphere-wash border-ink shadow-[2px_2px_0px_0px_var(--ink)] text-ink font-bold dark:bg-atmosphere-wash/20 dark:border-off-black dark:shadow-[2px_2px_0px_0px_var(--off-black)] translate-x-[2px] translate-y-[2px]"
+                        : "bg-paper-canvas/30 border-ink/40 shadow-[4px_4px_0px_0px_var(--ink)] text-ink/75 hover:bg-paper-canvas/50 hover:border-ink hover:shadow-[6px_6px_0px_0px_var(--ink)] hover:text-ink dark:border-off-black/40 dark:shadow-[4px_4px_0px_0px_var(--off-black)] dark:hover:border-off-black dark:hover:shadow-[6px_6px_0px_0px_var(--off-black)]"
                     }`}
                   >
                     <div className="flex items-center gap-3">
                       <div
-                        className={`p-2 rounded-md border-2 border-off-black/15 ${activeTab === tab.id ? "bg-off-black dark:bg-white dark:border-white" : "bg-paper-canvas shadow-[1px_1px_3px_var(--shadow-3d-color)]"}`}
+                        className={`p-2 rounded-sm border-2 border-ink dark:border-off-black ${activeTab === tab.id ? "bg-off-black dark:bg-white" : "bg-paper-canvas"}`}
                       >
                         <Icon className={`w-[16px] h-[16px] ${activeTab === tab.id ? "text-paper-canvas dark:text-black" : "text-ink"}`} />
                       </div>
@@ -122,12 +122,12 @@ export function InteractivePlaypen() {
           <div className="lg:col-span-7">
             <Card
               variant="content"
-              className="relative overflow-hidden !border-white/40 dark:!border-white/10"
+              className="relative overflow-hidden"
             >
               {/* Simulated Header */}
               <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center pb-6 gap-4 mb-6">
                 <div>
-                  <span className="text-[10px] font-bold uppercase tracking-wider text-ink bg-atmosphere-wash px-3 py-1 rounded-md border-2 border-off-black/15 shadow-[2px_2px_4px_var(--shadow-3d-color)]">
+                  <span className="text-[10px] font-bold uppercase tracking-wider text-ink bg-atmosphere-wash px-3 py-1 rounded-sm border-2 border-ink shadow-[2px_2px_0px_0px_var(--ink)] dark:border-off-black dark:shadow-[2px_2px_0px_0px_var(--off-black)]">
                     {translate("Live Playground")}
                   </span>
                   <h3 className="text-heading font-normal text-ink mt-2.5">
@@ -139,10 +139,10 @@ export function InteractivePlaypen() {
                 <div className="relative w-full sm:w-[220px]">
                   <Search className="absolute left-3 top-1/2 -translate-y-1/2 text-off-black/40 w-[14px] h-[14px]" />
                   <Input
-                    placeholder={translate("Type to filter...")}
+                    placeholder={translate("Search grammar, vocabulary...")}
                     value={simulatedSearch}
                     onChange={(e) => setSimulatedSearch(e.target.value)}
-                    className="pl-9 bg-paper-canvas border-2 border-off-black/15 shadow-[2px_2px_6px_var(--shadow-3d-color)] text-xs rounded-lg h-[36px] w-full"
+                    className="pl-9 bg-paper-canvas border-2 border-ink shadow-[2px_2px_0px_0px_var(--ink)] dark:border-off-black dark:shadow-[2px_2px_0px_0px_var(--off-black)] text-xs rounded-sm h-[36px] w-full"
                   />
                 </div>
               </div>
@@ -173,9 +173,9 @@ export function InteractivePlaypen() {
                           .map((row, idx) => (
                             <div
                               key={idx}
-                              className="p-6 bg-atmosphere-wash rounded-lg border-2 border-off-black/15 shadow-[3px_3px_8px_var(--shadow-3d-color)]"
+                              className="p-6 bg-atmosphere-wash rounded-sm border-2 border-ink shadow-[3px_3px_0px_0px_var(--ink)] dark:border-off-black dark:shadow-[3px_3px_0px_0px_var(--off-black)]"
                             >
-                              <p className="text-xs font-bold text-paper-canvas bg-off-black px-3 py-1 rounded-md border-2 border-off-black/15 shadow-[2px_2px_4px_var(--shadow-3d-color)] inline-block mb-3">
+                              <p className="text-xs font-bold text-paper-canvas bg-off-black px-3 py-1 rounded-sm border-2 border-ink dark:border-off-black shadow-[2px_2px_0px_0px_var(--ink)] dark:shadow-[2px_2px_0px_0px_var(--off-black)] inline-block mb-3">
                                 {row.structure}
                               </p>
                               <p className="text-xs font-normal text-off-black/60 mb-2">
@@ -200,7 +200,7 @@ export function InteractivePlaypen() {
                               .includes(simulatedSearch.toLowerCase()),
                         ).length === 0 && (
                           <div className="text-center py-12 text-xs text-off-black/50">
-                            {translate("No matching structures found.")}
+                            {translate("No structures found. Try searching 'wish' or 'present'.")}
                           </div>
                         )}
                       </div>
@@ -222,14 +222,14 @@ export function InteractivePlaypen() {
                           .map((row, idx) => (
                             <div
                               key={idx}
-                              className="p-6 bg-atmosphere-wash rounded-lg border-2 border-off-black/15 shadow-[3px_3px_8px_var(--shadow-3d-color)] flex flex-col justify-between h-[150px]"
+                              className="p-6 bg-atmosphere-wash rounded-sm border-2 border-ink shadow-[3px_3px_0px_0px_var(--ink)] dark:border-off-black dark:shadow-[3px_3px_0px_0px_var(--off-black)] flex flex-col justify-between h-[150px]"
                             >
                               <div>
                                 <div className="flex justify-between items-center mb-3">
                                   <h4 className="text-sm font-normal text-ink">
                                     {row.word}
                                   </h4>
-                                  <Badge className="border-2 border-off-black/15 text-[9px] font-bold rounded-md px-2 py-0.5 bg-paper-canvas text-off-black shadow-[1px_1px_3px_var(--shadow-3d-color)]">
+                                  <Badge className="border-2 border-ink dark:border-off-black text-[9px] font-bold rounded-sm px-2 py-0.5 bg-paper-canvas text-ink shadow-[1px_1px_0px_0px_var(--ink)] dark:shadow-[1px_1px_0px_0px_var(--off-black)]">
                                     {translate(row.type)}
                                   </Badge>
                                 </div>
@@ -250,7 +250,7 @@ export function InteractivePlaypen() {
                               .includes(simulatedSearch.toLowerCase()),
                         ).length === 0 && (
                           <div className="col-span-2 text-center py-12 text-xs text-off-black/50">
-                            {translate("No matching vocabulary found.")}
+                            {translate("No vocabulary found. Try searching 'effort' or 'make'.")}
                           </div>
                         )}
                       </div>
@@ -269,13 +269,13 @@ export function InteractivePlaypen() {
                           .map((row, idx) => (
                             <div
                               key={idx}
-                              className="p-6 bg-atmosphere-wash rounded-lg border-2 border-off-black/15 shadow-[3px_3px_8px_var(--shadow-3d-color)] overflow-x-auto"
+                              className="p-6 bg-atmosphere-wash rounded-sm border-2 border-ink shadow-[3px_3px_0px_0px_var(--ink)] dark:border-off-black dark:shadow-[3px_3px_0px_0px_var(--off-black)]"
                             >
-                              <h4 className="text-xs font-bold uppercase tracking-wider text-paper-canvas bg-off-black px-3 py-1 rounded-md border-2 border-off-black/15 shadow-[2px_2px_4px_var(--shadow-3d-color)] inline-block mb-4">
+                              <h4 className="text-xs font-bold uppercase tracking-wider text-paper-canvas bg-off-black px-3 py-1 rounded-sm border-2 border-ink dark:border-off-black shadow-[2px_2px_0px_0px_var(--ink)] dark:shadow-[2px_2px_0px_0px_var(--off-black)] inline-block mb-4">
                                 {translate("Root")}: {row.root}
                               </h4>
-                              <div className="grid grid-cols-4 gap-2 text-center min-w-[400px]">
-                                <div className="p-3 bg-paper-canvas border-2 border-off-black/15 shadow-[2px_2px_6px_var(--shadow-3d-color)] rounded-lg">
+                              <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 text-center w-full">
+                                <div className="p-3 bg-paper-canvas border-2 border-ink dark:border-off-black shadow-[2px_2px_0px_0px_var(--ink)] dark:shadow-[2px_2px_0px_0px_var(--off-black)] rounded-sm">
                                   <p className="text-[9px] font-normal text-off-black/40 uppercase">
                                     {translate("Noun")}
                                   </p>
@@ -283,7 +283,7 @@ export function InteractivePlaypen() {
                                     {row.noun}
                                   </p>
                                 </div>
-                                <div className="p-3 bg-paper-canvas border-2 border-off-black/15 shadow-[2px_2px_6px_var(--shadow-3d-color)] rounded-lg">
+                                <div className="p-3 bg-paper-canvas border-2 border-ink dark:border-off-black shadow-[2px_2px_0px_0px_var(--ink)] dark:shadow-[2px_2px_0px_0px_var(--off-black)] rounded-sm">
                                   <p className="text-[9px] font-normal text-off-black/40 uppercase">
                                     {translate("Verb")}
                                   </p>
@@ -291,7 +291,7 @@ export function InteractivePlaypen() {
                                     {row.verb}
                                   </p>
                                 </div>
-                                <div className="p-3 bg-paper-canvas border-2 border-off-black/15 shadow-[2px_2px_6px_var(--shadow-3d-color)] rounded-lg">
+                                <div className="p-3 bg-paper-canvas border-2 border-ink dark:border-off-black shadow-[2px_2px_0px_0px_var(--ink)] dark:shadow-[2px_2px_0px_0px_var(--off-black)] rounded-sm">
                                   <p className="text-[9px] font-normal text-off-black/40 uppercase">
                                     {translate("Adj")}
                                   </p>
@@ -299,7 +299,7 @@ export function InteractivePlaypen() {
                                     {row.adj}
                                   </p>
                                 </div>
-                                <div className="p-3 bg-paper-canvas border-2 border-off-black/15 shadow-[2px_2px_6px_var(--shadow-3d-color)] rounded-lg">
+                                <div className="p-3 bg-paper-canvas border-2 border-ink dark:border-off-black shadow-[2px_2px_0px_0px_var(--ink)] dark:shadow-[2px_2px_0px_0px_var(--off-black)] rounded-sm">
                                   <p className="text-[9px] font-normal text-off-black/40 uppercase">
                                     {translate("Adv")}
                                   </p>
@@ -318,7 +318,7 @@ export function InteractivePlaypen() {
                               .includes(simulatedSearch.toLowerCase()),
                         ).length === 0 && (
                           <div className="text-center py-12 text-xs text-off-black/50">
-                            {translate("No matching root words found.")}
+                            {translate("No root words found. Try searching 'struct' or 'form'.")}
                           </div>
                         )}
                       </div>
