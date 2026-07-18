@@ -65,7 +65,7 @@ export function InteractivePlaypen() {
   const [simulatedSearch, setSimulatedSearch] = React.useState("");
 
   return (
-    <section className="py-24 bg-section-playpen border-t border-off-black/10 dark:border-white/10 font-abc-diatype-mono">
+    <section className="py-24 bg-section-playpen border-t border-zinc-200/50 dark:border-zinc-800/50 font-sans">
       <div className="max-w-6xl mx-auto px-6 md:px-12 lg:px-16">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           {/* Column 1: Info and Action */}
@@ -95,22 +95,22 @@ export function InteractivePlaypen() {
                       setActiveTab(tab.id);
                       setSimulatedSearch("");
                     }}
-                    className={`flex items-center justify-between p-4 rounded-sm border-2 text-left transition-all duration-200 cursor-pointer ${
+                    className={`flex items-center justify-between p-4 rounded-2xl border text-left transition-all duration-200 cursor-pointer ${
                       activeTab === tab.id
-                        ? "bg-atmosphere-wash border-ink shadow-[2px_2px_0px_0px_var(--ink)] text-ink font-bold dark:bg-atmosphere-wash/20 dark:border-off-black dark:shadow-[2px_2px_0px_0px_var(--off-black)] translate-x-[2px] translate-y-[2px]"
-                        : "bg-paper-canvas/30 border-ink/40 shadow-[4px_4px_0px_0px_var(--ink)] text-ink/75 hover:bg-paper-canvas/50 hover:border-ink hover:shadow-[6px_6px_0px_0px_var(--ink)] hover:text-ink dark:border-off-black/40 dark:shadow-[4px_4px_0px_0px_var(--off-black)] dark:hover:border-off-black dark:hover:shadow-[6px_6px_0px_0px_var(--off-black)]"
+                        ? "bg-blue-50/70 border-blue-100 dark:bg-blue-950/20 dark:border-blue-900/30 text-blue-600 dark:text-blue-400 font-semibold shadow-sm"
+                        : "bg-transparent border-transparent text-zinc-600 hover:bg-zinc-100/50 hover:text-zinc-900 dark:text-zinc-400 dark:hover:bg-zinc-800/40 dark:hover:text-zinc-200"
                     }`}
                   >
                     <div className="flex items-center gap-3">
                       <div
-                        className={`p-2 rounded-sm border-2 border-ink dark:border-off-black ${activeTab === tab.id ? "bg-off-black dark:bg-white" : "bg-paper-canvas"}`}
+                        className={`p-2 rounded-xl border ${activeTab === tab.id ? "bg-blue-600 border-blue-600 text-white dark:bg-blue-500 dark:border-blue-500" : "bg-zinc-100 border-zinc-200 dark:bg-zinc-800 dark:border-zinc-700 text-zinc-600 dark:text-zinc-400"}`}
                       >
-                        <Icon className={`w-[16px] h-[16px] ${activeTab === tab.id ? "text-paper-canvas dark:text-black" : "text-ink"}`} />
+                        <Icon className="w-[16px] h-[16px]" />
                       </div>
                       <span className="font-normal text-sm">{translate(tab.label)}</span>
                     </div>
                     <ArrowRight
-                      className={`w-[14px] h-[14px] transition-transform duration-200 ${activeTab === tab.id ? "translate-x-1 opacity-100" : "opacity-0"}`}
+                      className={`w-[14px] h-[14px] transition-transform duration-200 ${activeTab === tab.id ? "translate-x-1 opacity-100 text-blue-600 dark:text-blue-400" : "opacity-0"}`}
                     />
                   </motion.button>
                 );
@@ -127,7 +127,7 @@ export function InteractivePlaypen() {
               {/* Simulated Header */}
               <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center pb-6 gap-4 mb-6">
                 <div>
-                  <span className="text-[10px] font-bold uppercase tracking-wider text-ink bg-atmosphere-wash px-3 py-1 rounded-sm border-2 border-ink shadow-[2px_2px_0px_0px_var(--ink)] dark:border-off-black dark:shadow-[2px_2px_0px_0px_var(--off-black)]">
+                  <span className="text-[10px] font-bold uppercase tracking-wider text-blue-600 dark:text-blue-400 bg-blue-500/10 px-3 py-1 rounded-full border border-blue-500/20 font-mono">
                     {translate("Live Playground")}
                   </span>
                   <h3 className="text-heading font-normal text-ink mt-2.5">
@@ -137,12 +137,12 @@ export function InteractivePlaypen() {
 
                 {/* Search Bar Mock */}
                 <div className="relative w-full sm:w-[220px]">
-                  <Search className="absolute left-3 top-1/2 -translate-y-1/2 text-off-black/40 w-[14px] h-[14px]" />
+                  <Search className="absolute left-3 top-1/2 -translate-y-1/2 text-zinc-400 w-[14px] h-[14px]" />
                   <Input
-                    placeholder={translate("Search grammar, vocabulary...")}
+                    placeholder={translate("Search grammar...")}
                     value={simulatedSearch}
                     onChange={(e) => setSimulatedSearch(e.target.value)}
-                    className="pl-9 bg-paper-canvas border-2 border-ink shadow-[2px_2px_0px_0px_var(--ink)] dark:border-off-black dark:shadow-[2px_2px_0px_0px_var(--off-black)] text-xs rounded-sm h-[36px] w-full"
+                    className="pl-9 bg-zinc-50 border border-zinc-200 dark:bg-zinc-800/40 dark:border-zinc-800 text-xs rounded-full h-[36px] w-full shadow-inner focus-visible:ring-2 focus-visible:ring-blue-500/50"
                   />
                 </div>
               </div>
@@ -173,20 +173,20 @@ export function InteractivePlaypen() {
                           .map((row, idx) => (
                             <div
                               key={idx}
-                              className="p-6 bg-atmosphere-wash rounded-sm border-2 border-ink shadow-[3px_3px_0px_0px_var(--ink)] dark:border-off-black dark:shadow-[3px_3px_0px_0px_var(--off-black)]"
+                              className="p-6 bg-zinc-50/50 dark:bg-zinc-900/30 rounded-2xl border border-zinc-200/40 dark:border-zinc-800/60 shadow-sm"
                             >
-                              <p className="text-xs font-bold text-paper-canvas bg-off-black px-3 py-1 rounded-sm border-2 border-ink dark:border-off-black shadow-[2px_2px_0px_0px_var(--ink)] dark:shadow-[2px_2px_0px_0px_var(--off-black)] inline-block mb-3">
+                              <p className="text-xs font-semibold text-blue-600 dark:text-blue-400 bg-blue-500/10 px-3 py-1 rounded-full border border-blue-500/20 inline-block mb-3 font-mono">
                                 {row.structure}
                               </p>
-                              <p className="text-xs font-normal text-off-black/60 mb-2">
+                              <p className="text-sm font-normal text-zinc-600 dark:text-zinc-400 mb-2">
                                 {translate("Usage")}:{" "}
-                                <span className="text-ink font-normal">
+                                <span className="text-ink font-semibold">
                                   {translate(row.usage)}
                                 </span>
                               </p>
-                              <p className="text-xs italic font-normal text-off-black/50">
+                              <p className="text-sm italic font-normal text-zinc-500 dark:text-zinc-500">
                                 {translate("Example")}:{" "}
-                                <span className="text-ink not-italic font-normal">
+                                <span className="text-blue-600 dark:text-blue-400 not-italic font-medium">
                                   "{row.example}"
                                 </span>
                               </p>
@@ -222,22 +222,22 @@ export function InteractivePlaypen() {
                           .map((row, idx) => (
                             <div
                               key={idx}
-                              className="p-6 bg-atmosphere-wash rounded-sm border-2 border-ink shadow-[3px_3px_0px_0px_var(--ink)] dark:border-off-black dark:shadow-[3px_3px_0px_0px_var(--off-black)] flex flex-col justify-between h-[150px]"
+                              className="p-6 bg-zinc-50/50 dark:bg-zinc-900/30 rounded-2xl border border-zinc-200/40 dark:border-zinc-800/60 shadow-sm flex flex-col justify-between h-[150px]"
                             >
                               <div>
                                 <div className="flex justify-between items-center mb-3">
-                                  <h4 className="text-sm font-normal text-ink">
+                                  <h4 className="text-sm font-semibold text-ink">
                                     {row.word}
                                   </h4>
-                                  <Badge className="border-2 border-ink dark:border-off-black text-[9px] font-bold rounded-sm px-2 py-0.5 bg-paper-canvas text-ink shadow-[1px_1px_0px_0px_var(--ink)] dark:shadow-[1px_1px_0px_0px_var(--off-black)]">
+                                  <Badge className="border border-zinc-200/50 dark:border-zinc-700 text-[9px] font-bold rounded-full px-2 py-0.5 bg-zinc-100 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-400 font-mono">
                                     {translate(row.type)}
                                   </Badge>
                                 </div>
-                                <p className="text-[11px] text-off-black/70 line-clamp-2 leading-relaxed">
+                                <p className="text-xs text-zinc-600 dark:text-zinc-400 line-clamp-2 leading-relaxed">
                                   {translate(row.meaning)}
                                 </p>
                               </div>
-                              <p className="text-[10px] italic font-normal text-off-black/40 truncate">
+                              <p className="text-xs italic font-normal text-zinc-400 dark:text-zinc-500 truncate">
                                 "{row.example}"
                               </p>
                             </div>
@@ -269,41 +269,41 @@ export function InteractivePlaypen() {
                           .map((row, idx) => (
                             <div
                               key={idx}
-                              className="p-6 bg-atmosphere-wash rounded-sm border-2 border-ink shadow-[3px_3px_0px_0px_var(--ink)] dark:border-off-black dark:shadow-[3px_3px_0px_0px_var(--off-black)]"
+                              className="p-6 bg-zinc-50/50 dark:bg-zinc-900/30 rounded-2xl border border-zinc-200/40 dark:border-zinc-800/60 shadow-sm"
                             >
-                              <h4 className="text-xs font-bold uppercase tracking-wider text-paper-canvas bg-off-black px-3 py-1 rounded-sm border-2 border-ink dark:border-off-black shadow-[2px_2px_0px_0px_var(--ink)] dark:shadow-[2px_2px_0px_0px_var(--off-black)] inline-block mb-4">
+                              <h4 className="text-xs font-bold uppercase tracking-wider text-blue-600 dark:text-blue-400 bg-blue-500/10 px-3 py-1 rounded-full border border-blue-500/20 inline-block mb-4 font-mono">
                                 {translate("Root")}: {row.root}
                               </h4>
                               <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 text-center w-full">
-                                <div className="p-3 bg-paper-canvas border-2 border-ink dark:border-off-black shadow-[2px_2px_0px_0px_var(--ink)] dark:shadow-[2px_2px_0px_0px_var(--off-black)] rounded-sm">
-                                  <p className="text-[9px] font-normal text-off-black/40 uppercase">
+                                <div className="p-3 bg-white dark:bg-zinc-800/50 border border-zinc-200/50 dark:border-zinc-800/50 shadow-sm rounded-xl">
+                                  <p className="text-[9px] font-semibold text-zinc-400 uppercase font-mono">
                                     {translate("Noun")}
                                   </p>
-                                  <p className="text-xs font-normal text-ink mt-1">
+                                  <p className="text-xs font-semibold text-zinc-800 dark:text-zinc-200 mt-1">
                                     {row.noun}
                                   </p>
                                 </div>
-                                <div className="p-3 bg-paper-canvas border-2 border-ink dark:border-off-black shadow-[2px_2px_0px_0px_var(--ink)] dark:shadow-[2px_2px_0px_0px_var(--off-black)] rounded-sm">
-                                  <p className="text-[9px] font-normal text-off-black/40 uppercase">
+                                <div className="p-3 bg-white dark:bg-zinc-800/50 border border-zinc-200/50 dark:border-zinc-800/50 shadow-sm rounded-xl">
+                                  <p className="text-[9px] font-semibold text-zinc-400 uppercase font-mono">
                                     {translate("Verb")}
                                   </p>
-                                  <p className="text-xs font-normal text-ink mt-1">
+                                  <p className="text-xs font-semibold text-zinc-800 dark:text-zinc-200 mt-1">
                                     {row.verb}
                                   </p>
                                 </div>
-                                <div className="p-3 bg-paper-canvas border-2 border-ink dark:border-off-black shadow-[2px_2px_0px_0px_var(--ink)] dark:shadow-[2px_2px_0px_0px_var(--off-black)] rounded-sm">
-                                  <p className="text-[9px] font-normal text-off-black/40 uppercase">
+                                <div className="p-3 bg-white dark:bg-zinc-800/50 border border-zinc-200/50 dark:border-zinc-800/50 shadow-sm rounded-xl">
+                                  <p className="text-[9px] font-semibold text-zinc-400 uppercase font-mono">
                                     {translate("Adj")}
                                   </p>
-                                  <p className="text-xs font-normal text-ink mt-1">
+                                  <p className="text-xs font-semibold text-zinc-800 dark:text-zinc-200 mt-1">
                                     {row.adj}
                                   </p>
                                 </div>
-                                <div className="p-3 bg-paper-canvas border-2 border-ink dark:border-off-black shadow-[2px_2px_0px_0px_var(--ink)] dark:shadow-[2px_2px_0px_0px_var(--off-black)] rounded-sm">
-                                  <p className="text-[9px] font-normal text-off-black/40 uppercase">
+                                <div className="p-3 bg-white dark:bg-zinc-800/50 border border-zinc-200/50 dark:border-zinc-800/50 shadow-sm rounded-xl">
+                                  <p className="text-[9px] font-semibold text-zinc-400 uppercase font-mono">
                                     {translate("Adv")}
                                   </p>
-                                  <p className="text-xs font-normal text-ink mt-1">
+                                  <p className="text-xs font-semibold text-zinc-800 dark:text-zinc-200 mt-1">
                                     {row.adv}
                                   </p>
                                 </div>

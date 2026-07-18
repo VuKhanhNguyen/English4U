@@ -27,7 +27,7 @@ export function BentoFeatures() {
     >
       <div className="max-w-6xl mx-auto px-6 md:px-12 lg:px-16">
         {/* Header */}
-        <div className="text-center mb-16 font-abc-diatype-mono">
+        <div className="text-center mb-16 font-sans">
           <span className="section-badge">
             <span className="text-gradient-badge">
               {translate("Interactive Bento Showcase")}
@@ -43,7 +43,7 @@ export function BentoFeatures() {
         </div>
 
         {/* Bento Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 auto-rows-auto md:auto-rows-[300px] font-abc-diatype-mono">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 auto-rows-auto md:auto-rows-[300px] font-sans">
           {/* Card 1: Smart Search Filter (Col Span 2) */}
           <motion.div
             className="md:col-span-2 md:row-span-1"
@@ -57,7 +57,7 @@ export function BentoFeatures() {
             >
               <div>
                 <div className="flex items-center justify-between mb-4">
-                  <Badge className="border-2 border-ink dark:border-off-black font-normal rounded-sm px-3 py-0.5 text-xs bg-paper-canvas text-ink">
+                  <Badge className="border border-zinc-200/50 dark:border-zinc-800/50 font-semibold rounded-full px-3 py-0.5 text-xs bg-zinc-100 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-400">
                     {translate("Fast Search")}
                   </Badge>
                   <Search className="w-[16px] h-[16px] text-ink/40 group-hover:scale-110 group-hover:rotate-6 transition-transform duration-300" />
@@ -71,15 +71,15 @@ export function BentoFeatures() {
               </div>
 
               {/* Interactive Search Mock */}
-              <div className="bg-atmosphere-wash border-2 border-ink dark:border-off-black rounded-sm p-2 px-4 flex gap-2 items-center overflow-x-auto">
-                <span className="text-xs font-normal text-ink/60 shrink-0">
+              <div className="bg-zinc-50 border border-zinc-200/50 dark:bg-zinc-900/30 dark:border-zinc-800/50 rounded-2xl p-2 px-4 flex gap-2 items-center overflow-x-auto shadow-inner">
+                <span className="text-xs font-normal text-zinc-400 dark:text-zinc-500 shrink-0">
                   {translate("Try typing:")}
                 </span>
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                   onClick={() => setSearchHighlight("grammar")}
-                  className={`px-3 py-1 text-xs rounded-sm border-2 font-normal cursor-pointer transition-all ${searchHighlight === "grammar" ? "bg-off-black text-paper-canvas border-off-black" : "bg-paper-canvas border-ink/40 text-ink"}`}
+                  className={`px-3 py-1 text-xs rounded-full border font-semibold cursor-pointer transition-all ${searchHighlight === "grammar" ? "bg-blue-600 text-white border-blue-600 shadow-sm" : "bg-transparent border-zinc-200/50 dark:border-zinc-800 text-zinc-600 dark:text-zinc-400 hover:bg-zinc-100 dark:hover:bg-zinc-800"}`}
                 >
                   grammar
                 </motion.button>
@@ -87,7 +87,7 @@ export function BentoFeatures() {
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                   onClick={() => setSearchHighlight("noun")}
-                  className={`px-3 py-1 text-xs rounded-sm border-2 font-normal cursor-pointer transition-all ${searchHighlight === "noun" ? "bg-off-black text-paper-canvas border-off-black" : "bg-paper-canvas border-ink/40 text-ink"}`}
+                  className={`px-3 py-1 text-xs rounded-full border font-semibold cursor-pointer transition-all ${searchHighlight === "noun" ? "bg-blue-600 text-white border-blue-600 shadow-sm" : "bg-transparent border-zinc-200/50 dark:border-zinc-800 text-zinc-600 dark:text-zinc-400 hover:bg-zinc-100 dark:hover:bg-zinc-800"}`}
                 >
                   noun
                 </motion.button>
@@ -95,11 +95,11 @@ export function BentoFeatures() {
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                   onClick={() => setSearchHighlight("phrase")}
-                  className={`px-3 py-1 text-xs rounded-sm border-2 font-normal cursor-pointer transition-all ${searchHighlight === "phrase" ? "bg-off-black text-paper-canvas border-off-black" : "bg-paper-canvas border-ink/40 text-ink"}`}
+                  className={`px-3 py-1 text-xs rounded-full border font-semibold cursor-pointer transition-all ${searchHighlight === "phrase" ? "bg-blue-600 text-white border-blue-600 shadow-sm" : "bg-transparent border-zinc-200/50 dark:border-zinc-800 text-zinc-600 dark:text-zinc-400 hover:bg-zinc-100 dark:hover:bg-zinc-800"}`}
                 >
                   phrase
                 </motion.button>
-                <span className="text-xs font-normal bg-atmosphere-wash text-ink px-3 py-1 rounded-sm border-2 border-ink dark:border-off-black shrink-0 ml-auto">
+                <span className="text-xs font-semibold bg-blue-500/10 text-blue-600 dark:text-blue-400 px-3 py-1 rounded-full border border-blue-500/20 shrink-0 ml-auto font-mono">
                   {searchHighlight === "grammar"
                     ? "Present Simple..."
                     : searchHighlight === "noun"
@@ -126,7 +126,7 @@ export function BentoFeatures() {
             >
               <div>
                 <div className="flex items-center justify-between mb-4">
-                  <Badge className="border-2 border-ink dark:border-off-black font-normal rounded-sm px-3 py-0.5 text-xs bg-paper-canvas text-ink">
+                  <Badge className="border border-zinc-200/50 dark:border-zinc-800/50 font-semibold rounded-full px-3 py-0.5 text-xs bg-zinc-100 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-400">
                     {translate("UX Customization")}
                   </Badge>
                   {bentoTheme === "light" ? (
@@ -143,15 +143,15 @@ export function BentoFeatures() {
 
               {/* Switched Pill Box */}
               <div
-                className={`p-2 rounded-sm border-2 flex justify-between items-center transition-all ${
+                className={`p-2 rounded-2xl border flex justify-between items-center transition-all ${
                   bentoTheme === "dark"
-                    ? "bg-slate-900/10 border-off-black"
-                    : "bg-atmosphere-wash border-ink"
+                    ? "bg-slate-950/20 border-zinc-800"
+                    : "bg-zinc-50 border-zinc-100"
                 }`}
               >
-                <span className="text-xs font-normal ml-2 text-ink">{translate("Selected Mode:")}</span>
+                <span className="text-xs font-normal ml-2 text-zinc-500 dark:text-zinc-400">{translate("Selected Mode:")}</span>
                 <div
-                  className="text-xs px-3 py-1 rounded-sm border-2 font-normal flex items-center gap-1 bg-off-black text-paper-canvas border-off-black"
+                  className="text-xs px-3 py-1 rounded-full border font-semibold flex items-center gap-1 bg-blue-600 text-white border-blue-600 shadow-sm"
                 >
                   {bentoTheme === "dark" ? translate("Dark Mode") : translate("Light Mode")}
                   <Check className="w-[12px] h-[12px]" />
@@ -173,7 +173,7 @@ export function BentoFeatures() {
             >
               <div>
                 <div className="flex items-center justify-between mb-4">
-                  <Badge className="border-2 border-ink dark:border-off-black font-normal rounded-sm px-3 py-0.5 text-xs bg-paper-canvas text-ink">
+                  <Badge className="border border-zinc-200/50 dark:border-zinc-800/50 font-semibold rounded-full px-3 py-0.5 text-xs bg-zinc-100 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-400">
                     {translate("Linguistics")}
                   </Badge>
                   <Sparkles className="w-[16px] h-[16px] text-ink/40 group-hover:scale-110 group-hover:rotate-12 transition-transform duration-300" />
@@ -188,17 +188,17 @@ export function BentoFeatures() {
 
               {/* Interactive Suffix/Prefix Tree Mock */}
               <div className="flex items-center gap-2 justify-center py-1">
-                <span className="text-xs font-normal px-3 py-1 bg-paper-canvas border-2 border-ink dark:border-off-black rounded-sm shrink-0 text-ink">
+                <span className="text-xs font-semibold px-3 py-1.5 bg-blue-500/10 border border-blue-500/20 rounded-full shrink-0 text-blue-600 dark:text-blue-400 font-mono">
                   struct-
                 </span>
-                <span className="text-ink/40 text-xs font-normal">
+                <span className="text-zinc-400 text-xs font-bold">
                   →
                 </span>
                 <div className="flex flex-col gap-1.5">
-                  <span className="text-[10px] font-normal px-2.5 py-1 bg-atmosphere-wash border-2 border-ink dark:border-off-black rounded-sm text-center text-ink">
+                  <span className="text-[10px] font-medium px-2.5 py-1 bg-zinc-100 border border-zinc-200/50 dark:bg-zinc-800/40 dark:border-zinc-800 text-zinc-600 dark:text-zinc-400 rounded-full text-center font-mono animate-none">
                     -ure (noun)
                   </span>
-                  <span className="text-[10px] font-normal px-2.5 py-1 bg-atmosphere-wash border-2 border-ink dark:border-off-black rounded-sm text-center text-ink">
+                  <span className="text-[10px] font-medium px-2.5 py-1 bg-zinc-100 border border-zinc-200/50 dark:bg-zinc-800/40 dark:border-zinc-800 text-zinc-600 dark:text-zinc-400 rounded-full text-center font-mono animate-none">
                     -ural (adj)
                   </span>
                 </div>
@@ -219,7 +219,7 @@ export function BentoFeatures() {
             >
               <div>
                 <div className="flex items-center justify-between mb-4">
-                  <Badge className="border-2 border-ink dark:border-off-black font-normal rounded-sm px-3 py-0.5 text-xs bg-paper-canvas text-ink">
+                  <Badge className="border border-zinc-200/50 dark:border-zinc-800/50 font-semibold rounded-full px-3 py-0.5 text-xs bg-zinc-100 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-400">
                     {translate("Fluency Map")}
                   </Badge>
                   <Layers className="w-[16px] h-[16px] text-ink/40 group-hover:scale-110 group-hover:translate-y-[-2px] transition-transform duration-300" />
@@ -233,15 +233,15 @@ export function BentoFeatures() {
               </div>
 
               {/* Connected Bubbles illustration */}
-              <div className="flex justify-around items-center bg-atmosphere-wash border-2 border-ink dark:border-off-black rounded-sm p-3 h-[74px] relative">
-                <div className="absolute left-[35%] right-[35%] h-0.5 border-t border-dashed border-ink/20 dark:border-off-black/20 z-0" />
-                <div className="z-10 bg-off-black text-paper-canvas border-2 border-off-black rounded-sm px-4 py-1.5 text-xs font-normal shadow-sm dark:bg-white dark:text-black">
+              <div className="flex justify-around items-center bg-zinc-50 dark:bg-zinc-900/30 border border-zinc-200/40 dark:border-zinc-800/60 rounded-2xl p-3 h-[74px] relative">
+                <div className="absolute left-[35%] right-[35%] h-0.5 border-t border-dashed border-zinc-300 dark:border-zinc-700 z-0" />
+                <div className="z-10 bg-blue-600 text-white border border-blue-600 rounded-full px-4 py-1.5 text-xs font-semibold shadow-sm">
                   make
                 </div>
-                <div className="z-10 bg-paper-canvas border-2 border-ink dark:border-off-black rounded-sm px-3 py-1 text-[11px] font-normal text-ink text-center">
+                <div className="z-10 bg-white dark:bg-zinc-800 border border-zinc-200/50 dark:border-zinc-700 rounded-full px-3 py-1 text-[11px] font-medium text-zinc-800 dark:text-zinc-200 text-center shadow-sm">
                   an effort
                 </div>
-                <div className="z-10 bg-paper-canvas border-2 border-ink dark:border-off-black rounded-sm px-3 py-1 text-[11px] font-normal text-ink text-center">
+                <div className="z-10 bg-white dark:bg-zinc-800 border border-zinc-200/50 dark:border-zinc-700 rounded-full px-3 py-1 text-[11px] font-medium text-zinc-800 dark:text-zinc-200 text-center shadow-sm">
                   a phone call
                 </div>
               </div>
@@ -261,7 +261,7 @@ export function BentoFeatures() {
             >
               <div>
                 <div className="flex items-center justify-between mb-4">
-                  <Badge className="border-2 border-ink dark:border-off-black font-normal rounded-sm px-3 py-0.5 text-xs bg-paper-canvas text-ink">
+                  <Badge className="border border-zinc-200/50 dark:border-zinc-800/50 font-semibold rounded-full px-3 py-0.5 text-xs bg-zinc-100 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-400">
                     {translate("Coverage")}
                   </Badge>
                   <BookOpen className="w-[16px] h-[16px] text-ink/60 group-hover:scale-110 group-hover:-rotate-6 transition-transform duration-300" />
@@ -276,27 +276,27 @@ export function BentoFeatures() {
 
               {/* Grid of level badges */}
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 md:gap-4 mt-6">
-                <div className="p-3 sm:p-4 bg-atmosphere-wash border-2 border-ink dark:border-off-black rounded-sm shadow-[3px_3px_0px_0px_var(--ink)] dark:shadow-[3px_3px_0px_0px_var(--off-black)] flex flex-col justify-center">
-                  <p className="text-[10px] font-normal text-ink/60 dark:text-white/60 uppercase tracking-wider">
+                <div className="p-3 sm:p-4 bg-zinc-50/50 dark:bg-zinc-900/30 border border-zinc-200/50 dark:border-zinc-800/50 rounded-2xl flex flex-col justify-center shadow-sm">
+                  <p className="text-[10px] font-semibold text-zinc-400 dark:text-zinc-500 uppercase tracking-wider font-mono">
                     {translate("Intermediate")}
                   </p>
-                  <p className="text-sm font-normal text-ink mt-1">
+                  <p className="text-sm font-semibold text-ink mt-1">
                     {translate("B1 Syllabus")}
                   </p>
                 </div>
-                <div className="p-3 sm:p-4 bg-atmosphere-wash border-2 border-ink dark:border-off-black rounded-sm shadow-[3px_3px_0px_0px_var(--ink)] dark:shadow-[3px_3px_0px_0px_var(--off-black)] flex flex-col justify-center">
-                  <p className="text-[10px] font-normal text-ink/60 dark:text-white/60 uppercase tracking-wider">
+                <div className="p-3 sm:p-4 bg-zinc-50/50 dark:bg-zinc-900/30 border border-zinc-200/50 dark:border-zinc-800/50 rounded-2xl flex flex-col justify-center shadow-sm">
+                  <p className="text-[10px] font-semibold text-zinc-400 dark:text-zinc-500 uppercase tracking-wider font-mono">
                     {translate("Upper-Inter")}
                   </p>
-                  <p className="text-sm font-normal text-ink mt-1">
+                  <p className="text-sm font-semibold text-ink mt-1">
                     {translate("B2 Syllabus")}
                   </p>
                 </div>
-                <div className="p-3 sm:p-4 bg-atmosphere-wash border-2 border-ink dark:border-off-black rounded-sm shadow-[3px_3px_0px_0px_var(--ink)] dark:shadow-[3px_3px_0px_0px_var(--off-black)] flex flex-col justify-center">
-                  <p className="text-[10px] font-normal text-ink/60 dark:text-white/60 uppercase tracking-wider">
+                <div className="p-3 sm:p-4 bg-zinc-50/50 dark:bg-zinc-900/30 border border-zinc-200/50 dark:border-zinc-800/50 rounded-2xl flex flex-col justify-center shadow-sm">
+                  <p className="text-[10px] font-semibold text-zinc-400 dark:text-zinc-500 uppercase tracking-wider font-mono">
                     {translate("Proficient")}
                   </p>
-                  <p className="text-sm font-normal text-ink mt-1">
+                  <p className="text-sm font-semibold text-ink mt-1">
                     {translate("C1 & C2 Syllabus")}
                   </p>
                 </div>

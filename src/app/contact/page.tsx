@@ -295,7 +295,7 @@ export default function ContactPage() {
               initial={{ opacity: 0, x: -30 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6, delay: 0.3, ease: "easeOut" }}
-              className="lg:col-span-5 liquid-glass border-3d shadow-3d-card p-4 sm:p-8 md:p-10 rounded-[30px] flex flex-col gap-8 relative overflow-hidden"
+              className="lg:col-span-5 liquid-glass p-4 sm:p-8 md:p-10 relative overflow-hidden"
             >
               <div className="liquid-glass-bg" />
               {/* Avatar / Brand Illustration */}
@@ -401,7 +401,7 @@ export default function ContactPage() {
               initial={{ opacity: 0, x: 30 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6, delay: 0.4, ease: "easeOut" }}
-              className="lg:col-span-7 liquid-glass border-3d shadow-3d-card p-4 sm:p-8 md:p-10 rounded-[30px] flex flex-col gap-8 relative overflow-hidden"
+              className="lg:col-span-7 liquid-glass p-4 sm:p-8 md:p-10 relative overflow-hidden"
             >
               <div className="liquid-glass-bg" />
               
@@ -429,7 +429,7 @@ export default function ContactPage() {
                       value={name}
                       onChange={(e) => setName(e.target.value)}
                       placeholder={translate("Enter your name")}
-                      className="w-full bg-atmosphere-wash/5 focus:bg-atmosphere-wash/10 border border-off-black/10 dark:border-white/10 focus:border-off-black dark:focus:border-white rounded-xl px-4 py-3 text-ink font-mono text-sm outline-none transition-all duration-250 placeholder-ink/25 dark:placeholder-white/15 shadow-sm"
+                      className="w-full bg-white/5 dark:bg-black/20 focus:bg-white/10 dark:focus:bg-black/35 border border-zinc-200/50 dark:border-zinc-800 focus:border-blue-500 dark:focus:border-blue-500 rounded-xl px-4 py-3 text-ink font-sans text-sm outline-none transition-all duration-200 placeholder-ink/25 dark:placeholder-white/15 shadow-sm"
                     />
                   </div>
 
@@ -444,7 +444,7 @@ export default function ContactPage() {
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
                       placeholder={translate("Enter your email")}
-                      className="w-full bg-atmosphere-wash/5 focus:bg-atmosphere-wash/10 border border-off-black/10 dark:border-white/10 focus:border-off-black dark:focus:border-white rounded-xl px-4 py-3 text-ink font-mono text-sm outline-none transition-all duration-250 placeholder-ink/25 dark:placeholder-white/15 shadow-sm"
+                      className="w-full bg-white/5 dark:bg-black/20 focus:bg-white/10 dark:focus:bg-black/35 border border-zinc-200/50 dark:border-zinc-800 focus:border-blue-500 dark:focus:border-blue-500 rounded-xl px-4 py-3 text-ink font-sans text-sm outline-none transition-all duration-200 placeholder-ink/25 dark:placeholder-white/15 shadow-sm"
                     />
                   </div>
 
@@ -455,10 +455,10 @@ export default function ContactPage() {
                     </label>
                     
                     {/* Editor Container */}
-                    <div className="flex flex-col border border-off-black/15 dark:border-white/10 rounded-xl overflow-hidden focus-within:border-ink dark:focus-within:border-white transition-colors duration-250 bg-off-black/[0.01] dark:bg-black/25">
+                    <div className="flex flex-col border border-zinc-200/50 dark:border-zinc-800 rounded-xl overflow-hidden focus-within:border-blue-500 dark:focus-within:border-blue-500 transition-colors duration-200 bg-white/5 dark:bg-black/20">
                       
                       {/* Formatting Toolbar */}
-                      <div className="flex items-center justify-between px-3 py-2 bg-atmosphere-wash/20 border-b border-off-black/10 dark:border-white/10">
+                      <div className="flex items-center justify-between px-3 py-2 bg-white/10 dark:bg-black/15 border-b border-zinc-200/50 dark:border-zinc-800">
                         <div className="flex items-center gap-1">
                           <button
                             type="button"
@@ -528,7 +528,7 @@ export default function ContactPage() {
                       />
 
                       {/* Bottom Status Bar (Character limit & alert) */}
-                      <div className="flex items-center justify-between px-4 py-2 bg-atmosphere-wash/10 border-t border-ink/5 dark:border-white/5 font-mono text-[10px] text-pale-stone">
+                      <div className="flex items-center justify-between px-4 py-2 bg-white/5 dark:bg-black/10 border-t border-zinc-200/50 dark:border-zinc-800/80 font-mono text-[10px] text-pale-stone">
                         <span>{translate("Character Limit")}</span>
                         <span className={isOverLimit ? "text-red-500 font-bold" : ""}>
                           {textLength} / 2000
@@ -614,7 +614,7 @@ export default function ContactPage() {
                       disabled={isPending || isOverLimit || textLength === 0 || !name || !email}
                       variant="primary"
                       size="primary"
-                      className="w-full sm:w-fit font-mono font-medium tracking-wide flex items-center justify-center gap-2 px-8 py-4 bg-off-black hover:bg-neutral-800 dark:bg-white dark:hover:bg-neutral-100 text-paper-canvas dark:text-black border border-transparent rounded-lg shadow-md active:opacity-90 transition-all duration-200 pointer-events-auto cursor-pointer disabled:pointer-events-auto disabled:cursor-not-allowed"
+                      className="w-full sm:w-fit font-sans font-semibold tracking-wide flex items-center justify-center gap-2 px-8 py-4 bg-blue-600 hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600 text-white border border-transparent rounded-full shadow-lg hover:shadow-xl active:scale-95 transition-all duration-200 pointer-events-auto cursor-pointer disabled:pointer-events-auto disabled:cursor-not-allowed"
                     >
                       {isPending ? (
                         <>

@@ -576,7 +576,7 @@ export default function ResourcesPage() {
             </Breadcrumb>
           </motion.div>
           {/* Header Title Card */}
-          <Card variant="content" className="mb-12 flex flex-col lg:flex-row items-start lg:items-center justify-between !p-4 sm:!p-8 md:!p-12 relative overflow-hidden bg-paper-canvas/80 backdrop-blur-md">
+          <Card variant="content" className="mb-12 flex flex-col lg:flex-row items-start lg:items-center justify-between !p-4 sm:!p-8 md:!p-12 relative overflow-hidden">
             <div className="absolute top-0 right-0 w-32 h-32 bg-atmosphere-wash/20 rounded-full blur-2xl pointer-events-none" />
             
             <div className="space-y-4 max-w-2xl mb-8 lg:mb-0">
@@ -627,7 +627,7 @@ export default function ResourcesPage() {
           </Card>
 
           {/* Interactive Search and Tab Dashboard */}
-          <Card variant="content" className="p-3 sm:p-6 md:p-10 bg-paper-canvas/80 backdrop-blur-md shadow-subtle border border-off-black/85 relative">
+          <Card variant="content" className="p-3 sm:p-6 md:p-10 relative">
             <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-6 mb-8 border-b border-off-black/15 pb-6">
               
               {/* Tab Selector Buttons */}
@@ -660,7 +660,7 @@ export default function ResourcesPage() {
               <div className="w-full lg:w-[300px] relative z-10">
                 <Input
                   placeholder={translate("Type keyword to filter data...")}
-                  className="pl-11 pr-4 py-3 bg-paper-canvas/90 backdrop-blur-md border border-off-black rounded-full text-ink placeholder:text-pale-stone text-sm shadow-sm hover:border-off-black/70 focus:border-off-black transition-all"
+                  className="pl-11 pr-4 py-3 bg-white/5 dark:bg-black/20 backdrop-blur-md border border-zinc-200/50 dark:border-zinc-800 rounded-full text-ink placeholder:text-pale-stone text-sm shadow-sm hover:border-zinc-300 dark:hover:border-zinc-750 focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-all"
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
                 />
@@ -1235,7 +1235,7 @@ export default function ResourcesPage() {
 
             {/* Pagination Controls */}
             {totalPages > 1 && (
-              <div className="flex flex-col sm:flex-row items-center justify-between gap-4 mt-8 pt-6 border-t border-off-black/15 font-mono text-sm text-ink">
+              <div className="flex flex-col sm:flex-row items-center justify-between gap-4 mt-8 pt-6 border-t border-zinc-200/50 dark:border-zinc-800/80 font-mono text-sm text-ink">
                 <div className="text-xs text-pale-stone">
                   {translate("Showing")} <span className="font-bold text-ink">{(currentPage - 1) * itemsPerPage + 1}</span> {translate("to")}{" "}
                   <span className="font-bold text-ink">
@@ -1249,7 +1249,7 @@ export default function ResourcesPage() {
                   <button
                     onClick={() => setCurrentPage(1)}
                     disabled={currentPage === 1}
-                    className="w-[36px] h-[36px] shrink-0 rounded-full border border-off-black hover:bg-atmosphere-wash/20 disabled:opacity-30 disabled:hover:bg-transparent transition-all cursor-pointer select-none font-bold text-xs flex items-center justify-center text-ink"
+                    className="w-[36px] h-[36px] shrink-0 rounded-full border border-zinc-200/50 dark:border-zinc-800 hover:bg-blue-600/10 hover:text-blue-600 dark:hover:text-blue-400 disabled:opacity-30 disabled:hover:bg-transparent transition-all cursor-pointer select-none font-bold text-xs flex items-center justify-center text-ink"
                   >
                     <ChevronsLeft className="w-[16px] h-[16px]" />
                   </button>
@@ -1258,7 +1258,7 @@ export default function ResourcesPage() {
                   <button
                     onClick={() => setCurrentPage(prev => Math.max(prev - 1, 1))}
                     disabled={currentPage === 1}
-                    className="h-[36px] px-3 shrink-0 rounded-full border border-off-black hover:bg-atmosphere-wash/20 disabled:opacity-30 disabled:hover:bg-transparent transition-all cursor-pointer select-none font-bold text-xs flex items-center justify-center gap-1 text-ink"
+                    className="h-[36px] px-3 shrink-0 rounded-full border border-zinc-200/50 dark:border-zinc-800 hover:bg-blue-600/10 hover:text-blue-600 dark:hover:text-blue-400 disabled:opacity-30 disabled:hover:bg-transparent transition-all cursor-pointer select-none font-bold text-xs flex items-center justify-center gap-1 text-ink"
                   >
                     <ChevronLeft className="w-[14px] h-[14px]" /> {translate("Prev")}
                   </button>
@@ -1279,8 +1279,8 @@ export default function ResourcesPage() {
                         className={cn(
                           "w-[36px] h-[36px] shrink-0 rounded-full border text-xs transition-all cursor-pointer font-bold select-none",
                           currentPage === pageNum
-                            ? "bg-off-black text-paper-canvas border-transparent"
-                            : "border-off-black hover:bg-atmosphere-wash/20 text-ink"
+                            ? "bg-blue-600 text-white border-transparent"
+                            : "border-zinc-200/50 dark:border-zinc-800 hover:bg-blue-600/10 hover:text-blue-600 dark:hover:text-blue-400 text-ink"
                         )}
                       >
                         {pageNum}
@@ -1292,7 +1292,7 @@ export default function ResourcesPage() {
                   <button
                     onClick={() => setCurrentPage(prev => Math.min(prev + 1, totalPages))}
                     disabled={currentPage === totalPages}
-                    className="h-[36px] px-3 shrink-0 rounded-full border border-off-black hover:bg-atmosphere-wash/20 disabled:opacity-30 disabled:hover:bg-transparent transition-all cursor-pointer select-none font-bold text-xs flex items-center justify-center gap-1 text-ink"
+                    className="h-[36px] px-3 shrink-0 rounded-full border border-zinc-200/50 dark:border-zinc-800 hover:bg-blue-600/10 hover:text-blue-600 dark:hover:text-blue-400 disabled:opacity-30 disabled:hover:bg-transparent transition-all cursor-pointer select-none font-bold text-xs flex items-center justify-center gap-1 text-ink"
                   >
                     {translate("Next")} <ChevronRight className="w-[14px] h-[14px]" />
                   </button>
@@ -1301,7 +1301,7 @@ export default function ResourcesPage() {
                   <button
                     onClick={() => setCurrentPage(totalPages)}
                     disabled={currentPage === totalPages}
-                    className="w-[36px] h-[36px] shrink-0 rounded-full border border-off-black hover:bg-atmosphere-wash/20 disabled:opacity-30 disabled:hover:bg-transparent transition-all cursor-pointer select-none font-bold text-xs flex items-center justify-center text-ink"
+                    className="w-[36px] h-[36px] shrink-0 rounded-full border border-zinc-200/50 dark:border-zinc-800 hover:bg-blue-600/10 hover:text-blue-600 dark:hover:text-blue-400 disabled:opacity-30 disabled:hover:bg-transparent transition-all cursor-pointer select-none font-bold text-xs flex items-center justify-center text-ink"
                   >
                     <ChevronsRight className="w-[16px] h-[16px]" />
                   </button>

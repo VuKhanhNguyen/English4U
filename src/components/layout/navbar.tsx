@@ -127,11 +127,11 @@ export function Navbar() {
                     damping: 18,
                     mass: 0.8
                   }}
-                  className="absolute left-0 top-full min-w-[180px] z-50 mt-2 rounded-[30px] overflow-hidden p-4 border-2 border-off-black pointer-events-auto shadow-3d-card"
+                  className="absolute left-0 top-full min-w-[180px] z-50 mt-2 rounded-[24px] overflow-hidden p-4 border border-zinc-200/50 dark:border-zinc-800/50 pointer-events-auto shadow-xl"
                 >
                   {/* Glass Backdrop Layer */}
                   <div
-                    className="absolute inset-0 z-0 overflow-hidden rounded-[30px]"
+                    className="absolute inset-0 z-0 overflow-hidden rounded-[24px]"
                     style={{
                       backdropFilter: "blur(10px)",
                       filter: "url(#glass-distortion)",
@@ -147,7 +147,7 @@ export function Navbar() {
                   />
                   {/* Outer & Inner Specular Border Highlight */}
                   <div
-                    className="absolute inset-0 z-20 rounded-[30px] overflow-hidden pointer-events-none"
+                    className="absolute inset-0 z-20 rounded-[24px] overflow-hidden pointer-events-none"
                     style={{
                       boxShadow:
                         theme === "dark"
@@ -256,11 +256,11 @@ export function Navbar() {
                   damping: 18,
                   mass: 0.8
                 }}
-                className="absolute right-0 top-full min-w-[240px] z-50 mt-2 rounded-[30px] overflow-hidden p-6 border-2 border-off-black flex flex-col gap-4 pointer-events-auto shadow-3d-card"
+                className="absolute right-0 top-full min-w-[240px] z-50 mt-2 rounded-[24px] overflow-hidden p-6 border border-zinc-200/50 dark:border-zinc-800/50 flex flex-col gap-4 pointer-events-auto shadow-xl"
               >
                 {/* Glass Backdrop Layer */}
                 <div
-                  className="absolute inset-0 z-0 overflow-hidden rounded-[30px]"
+                  className="absolute inset-0 z-0 overflow-hidden rounded-[24px]"
                   style={{
                     backdropFilter: "blur(10px)",
                     filter: "url(#glass-distortion)",
@@ -276,7 +276,7 @@ export function Navbar() {
                 />
                 {/* Outer & Inner Specular Border Highlight */}
                 <div
-                  className="absolute inset-0 z-20 rounded-[30px] overflow-hidden pointer-events-none"
+                  className="absolute inset-0 z-20 rounded-[24px] overflow-hidden pointer-events-none"
                   style={{
                     boxShadow:
                       theme === "dark"
@@ -451,11 +451,11 @@ export function Navbar() {
               animate={{ y: 0 }}
               exit={{ y: "100%" }}
               transition={{ type: "spring", damping: 25, stiffness: 220 }}
-              className="fixed bottom-0 left-0 right-0 max-h-[85vh] z-50 md:hidden rounded-t-[30px] border-t-2 border-x-2 border-off-black p-6 flex flex-col pointer-events-auto overflow-hidden bg-transparent shadow-[0_-12px_24px_0px_var(--shadow-3d-color)]"
+              className="fixed bottom-0 left-0 right-0 max-h-[85vh] z-50 md:hidden rounded-t-[24px] border-t border-x border-zinc-200/50 dark:border-zinc-800/50 p-6 flex flex-col pointer-events-auto overflow-hidden bg-transparent shadow-[0_-12px_30px_0px_rgba(0,0,0,0.08)]"
             >
               {/* Glass Backdrop Layer */}
               <div
-                className="absolute inset-0 z-0 overflow-hidden rounded-t-[30px] mobile-glass-backdrop"
+                className="absolute inset-0 z-0 overflow-hidden rounded-t-[24px] mobile-glass-backdrop"
                 style={{
                   backdropFilter: "blur(20px)",
                   filter: "url(#glass-distortion)",
@@ -472,7 +472,7 @@ export function Navbar() {
               
               {/* Inner Specular Border Highlight */}
               <div
-                className="absolute inset-0 z-20 rounded-t-[30px] overflow-hidden pointer-events-none"
+                className="absolute inset-0 z-20 rounded-t-[24px] overflow-hidden pointer-events-none"
                 style={{
                   boxShadow:
                     theme === "dark"

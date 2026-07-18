@@ -6,7 +6,7 @@ const Table = React.forwardRef<
   HTMLTableElement,
   React.HTMLAttributes<HTMLTableElement>
 >(({ className, ...props }, ref) => (
-  <div className="relative w-full overflow-auto rounded-lg border border-off-black">
+  <div className="relative w-full overflow-auto rounded-xl border border-zinc-200/50 dark:border-zinc-800 bg-white/5 dark:bg-black/10 backdrop-blur-md">
     <table
       ref={ref}
       className={cn("w-full caption-bottom text-sm", className)}
@@ -20,7 +20,7 @@ const TableHeader = React.forwardRef<
   HTMLTableSectionElement,
   React.HTMLAttributes<HTMLTableSectionElement>
 >(({ className, ...props }, ref) => (
-  <thead ref={ref} className={cn("[&_tr]:border-b border-off-black bg-paper-canvas", className)} {...props} />
+  <thead ref={ref} className={cn("[&_tr]:border-b border-zinc-200/50 dark:border-zinc-800 bg-atmosphere-wash/40 dark:bg-white/5", className)} {...props} />
 ))
 TableHeader.displayName = "TableHeader"
 
@@ -30,7 +30,7 @@ const TableBody = React.forwardRef<
 >(({ className, ...props }, ref) => (
   <tbody
     ref={ref}
-    className={cn("[&_tr:last-child]:border-0 bg-paper-canvas", className)}
+    className={cn("[&_tr:last-child]:border-0 bg-transparent", className)}
     {...props}
   />
 ))
@@ -42,7 +42,7 @@ const TableFooter = React.forwardRef<
 >(({ className, ...props }, ref) => (
   <tfoot
     ref={ref}
-    className={cn("border-t border-off-black bg-paper-canvas font-medium [&>tr]:last:border-b-0", className)}
+    className={cn("border-t border-zinc-200/50 dark:border-zinc-800 bg-atmosphere-wash/20 dark:bg-white/5 font-medium [&>tr]:last:border-b-0", className)}
     {...props}
   />
 ))
@@ -55,7 +55,7 @@ const TableRow = React.forwardRef<
   <tr
     ref={ref}
     className={cn(
-      "border-b border-off-black transition-colors hover:bg-atmosphere-wash/40 data-[state=selected]:bg-atmosphere-wash/70",
+      "border-b border-zinc-200/50 dark:border-zinc-800 transition-colors hover:bg-atmosphere-wash/20 dark:hover:bg-white/5 data-[state=selected]:bg-atmosphere-wash/30",
       className
     )}
     {...props}

@@ -411,12 +411,12 @@ function RichGrammarRenderer({ richGrammar }: { richGrammar: any[] }) {
       {(richGrammar || []).map((section: any, sIdx: number) => (
         <div
           key={sIdx}
-          className="border border-off-black/20 rounded-md p-4 sm:p-6 md:p-8 bg-paper-canvas shadow-subtle relative overflow-hidden"
+          className="liquid-glass p-4 sm:p-6 md:p-8 relative overflow-hidden"
         >
           {/* Subtle design element */}
           <div className="absolute top-0 right-0 w-24 h-24 bg-atmosphere-wash/10 rounded-full blur-xl pointer-events-none" />
           
-          <h3 className="text-subheading font-heading font-bold text-ink mb-6 pb-2 border-b border-off-black/10 flex items-center justify-between">
+          <h3 className="text-subheading font-heading font-bold text-ink mb-6 pb-2 border-b border-zinc-200/50 dark:border-zinc-800 flex items-center justify-between">
             {translate(section.title)}
           </h3>
           <div className="space-y-8">
@@ -425,7 +425,7 @@ function RichGrammarRenderer({ richGrammar }: { richGrammar: any[] }) {
                 return (
                   <h4
                     key={bIdx}
-                    className="text-body font-bold text-ink font-mono mt-6 mb-3 border-l-4 border-off-black pl-3"
+                    className="text-body font-bold text-ink font-mono mt-6 mb-3 border-l-4 border-blue-600 dark:border-blue-500 pl-3"
                   >
                     {translate(block.content)}
                   </h4>
@@ -453,14 +453,14 @@ function RichGrammarRenderer({ richGrammar }: { richGrammar: any[] }) {
                       </h5>
                     )}
                     {/* Desktop View */}
-                    <div className="hidden md:block overflow-x-auto border border-off-black rounded-lg bg-paper-canvas">
+                    <div className="hidden md:block overflow-x-auto border border-zinc-200/50 dark:border-zinc-800 rounded-xl bg-white/5 dark:bg-black/10 backdrop-blur-md">
                       <table className="w-full text-sm border-collapse text-left min-w-[500px]">
                         <thead>
-                          <tr className="bg-atmosphere-wash border-b border-off-black font-mono text-ink">
+                          <tr className="bg-atmosphere-wash/20 dark:bg-white/5 border-b border-zinc-200/50 dark:border-zinc-800 font-mono text-ink">
                             {(block.headers || []).map((h: string, hIdx: number) => (
                               <th
                                 key={hIdx}
-                                className="p-3 border-r border-off-black last:border-r-0 font-bold whitespace-nowrap"
+                                className="p-3 border-r border-zinc-200/50 dark:border-zinc-800 last:border-r-0 font-bold whitespace-nowrap"
                               >
                                 {translate(h)}
                               </th>
@@ -471,23 +471,23 @@ function RichGrammarRenderer({ richGrammar }: { richGrammar: any[] }) {
                           {(block.rows || []).map((row: any, rIdx: number) => (
                             <tr
                               key={rIdx}
-                              className="border-b border-off-black last:border-b-0 font-mono hover:bg-atmosphere-wash/15 dark:hover:bg-white/5 transition-all duration-200 cursor-default"
+                              className="border-b border-zinc-200/50 dark:border-zinc-800 last:border-b-0 font-mono hover:bg-atmosphere-wash/15 dark:hover:bg-white/5 transition-all duration-200 cursor-default"
                             >
                               {row.type && (
                                 <td
-                                  className="p-3 border-r border-off-black font-bold bg-atmosphere-wash/20 align-middle text-ink"
+                                  className="p-3 border-r border-zinc-200/50 dark:border-zinc-800 font-bold bg-atmosphere-wash/10 align-middle text-ink"
                                   rowSpan={row.rowspan}
                                 >
                                   {translate(row.type)}
                                 </td>
                               )}
                               {row.subject && (
-                                <td className="p-3 border-r border-off-black text-ink whitespace-pre-line align-middle">
+                                <td className="p-3 border-r border-zinc-200/50 dark:border-zinc-800 text-ink whitespace-pre-line align-middle">
                                   {row.subject}
                                 </td>
                               )}
                               {row.form !== undefined && (
-                                <td className="p-3 border-r border-off-black text-ink font-semibold whitespace-pre-line align-middle">
+                                <td className="p-3 border-r border-zinc-200/50 dark:border-zinc-800 text-ink font-semibold whitespace-pre-line align-middle">
                                   {row.form}
                                 </td>
                               )}
@@ -507,14 +507,14 @@ function RichGrammarRenderer({ richGrammar }: { richGrammar: any[] }) {
                       {mobileGroups.map((group, gIdx) => (
                         <div
                           key={gIdx}
-                          className="border border-off-black/15 dark:border-white/10 rounded-xl overflow-hidden bg-paper-canvas/30"
+                          className="border border-zinc-200/50 dark:border-zinc-800 rounded-2xl overflow-hidden bg-white/5 dark:bg-black/10 backdrop-blur-md"
                         >
-                          <div className="bg-atmosphere-wash/40 dark:bg-atmosphere-wash/10 px-4 py-2.5 border-b border-off-black/15 dark:border-white/10">
+                          <div className="bg-white/10 dark:bg-white/5 px-4 py-2.5 border-b border-zinc-200/50 dark:border-zinc-800">
                             <span className="font-bold text-ink text-xs font-mono">
                               {translate(group.type)}
                             </span>
                           </div>
-                          <div className="p-3 sm:p-4 space-y-3 divide-y divide-off-black/5 dark:divide-white/5 font-mono">
+                          <div className="p-3 sm:p-4 space-y-3 divide-y divide-zinc-200/50 dark:divide-zinc-800 font-mono">
                             {group.items.map((item, iIdx) => (
                               <div key={iIdx} className={cn("space-y-1.5", iIdx > 0 && "pt-3")}>
                                 <div className="flex items-center gap-2 flex-wrap">
@@ -550,14 +550,14 @@ function RichGrammarRenderer({ richGrammar }: { richGrammar: any[] }) {
                       </h5>
                     )}
                     {/* Desktop View */}
-                    <div className="hidden md:block overflow-x-auto border border-off-black rounded-lg bg-paper-canvas">
+                    <div className="hidden md:block overflow-x-auto border border-zinc-200/50 dark:border-zinc-800 rounded-xl bg-white/5 dark:bg-black/10 backdrop-blur-md">
                       <table className="w-full text-sm border-collapse text-left min-w-[600px]">
                         <thead>
-                          <tr className="bg-atmosphere-wash border-b border-off-black font-mono text-ink">
+                          <tr className="bg-atmosphere-wash/20 dark:bg-white/5 border-b border-zinc-200/50 dark:border-zinc-800 font-mono text-ink">
                             {(block.headers || []).map((h: string, hIdx: number) => (
                               <th
                                 key={hIdx}
-                                className="p-3 border-r border-off-black last:border-r-0 font-bold whitespace-nowrap"
+                                className="p-3 border-r border-zinc-200/50 dark:border-zinc-800 last:border-r-0 font-bold whitespace-nowrap"
                               >
                                 {translate(h)}
                               </th>
@@ -568,7 +568,7 @@ function RichGrammarRenderer({ richGrammar }: { richGrammar: any[] }) {
                           {(block.rows || []).map((row: string[], rIdx: number) => (
                             <tr
                               key={rIdx}
-                              className="border-b border-off-black last:border-b-0 font-mono hover:bg-atmosphere-wash/15 dark:hover:bg-white/5 transition-all duration-200 cursor-default"
+                              className="border-b border-zinc-200/50 dark:border-zinc-800 last:border-b-0 font-mono hover:bg-atmosphere-wash/15 dark:hover:bg-white/5 transition-all duration-200 cursor-default"
                             >
                               {(row || []).map((cell: string, cIdx: number) => {
                                  const header = block.headers?.[cIdx];
@@ -587,7 +587,7 @@ function RichGrammarRenderer({ richGrammar }: { richGrammar: any[] }) {
                                  return (
                                    <td
                                      key={cIdx}
-                                     className="p-3 border-r border-off-black last:border-r-0 text-ink whitespace-pre-line align-top"
+                                     className="p-3 border-r border-zinc-200/50 dark:border-zinc-800 last:border-r-0 text-ink whitespace-pre-line align-top"
                                    >
                                      {renderTextWithLinks(skipTranslation ? cell : translate(cell))}
                                    </td>
@@ -604,7 +604,7 @@ function RichGrammarRenderer({ richGrammar }: { richGrammar: any[] }) {
                       {(block.rows || []).map((row: string[], rIdx: number) => (
                         <div
                           key={rIdx}
-                          className="p-3 sm:p-4 border border-off-black/10 dark:border-white/10 rounded-xl bg-paper-canvas/30 space-y-3 font-mono text-xs"
+                          className="p-3 sm:p-4 border border-zinc-200/50 dark:border-zinc-800 rounded-xl bg-white/5 dark:bg-black/10 backdrop-blur-md space-y-3 font-mono text-xs"
                         >
                           {(row || []).map((cell: string, cIdx: number) => {
                             const header = block.headers?.[cIdx];
@@ -649,7 +649,7 @@ function RichGrammarRenderer({ richGrammar }: { richGrammar: any[] }) {
                     {block.items ? (
                       <div className="space-y-4">
                         {(block.items || []).map((item: any, iIdx: number) => (
-                          <div key={iIdx} className="space-y-2 border border-off-black/10 rounded-lg p-3 sm:p-4 bg-paper-canvas/50">
+                          <div key={iIdx} className="space-y-2 border border-zinc-200/50 dark:border-zinc-800 rounded-xl p-3 sm:p-4 bg-white/5 dark:bg-black/10 backdrop-blur-md">
                             <p className="font-bold text-ink flex items-center gap-2">
                               <span className="w-2 h-2 rounded-full bg-[#ffa773]" />
                               {translate(item.label)}
@@ -684,11 +684,11 @@ function RichGrammarRenderer({ richGrammar }: { richGrammar: any[] }) {
                     {block.table && (
                       <>
                         {/* Desktop View */}
-                        <div className="hidden md:block overflow-x-auto border border-off-black rounded-lg">
+                        <div className="hidden md:block overflow-x-auto border border-zinc-200/50 dark:border-zinc-800 rounded-xl bg-white/5 dark:bg-black/10 backdrop-blur-md">
                           <table className="w-full text-sm border-collapse text-left min-w-[450px]">
                             <thead>
-                              <tr className="bg-atmosphere-wash border-b border-off-black font-mono text-ink">
-                                <th className="p-3 border-r border-off-black font-bold w-[100px]">
+                              <tr className="bg-atmosphere-wash/20 dark:bg-white/5 border-b border-zinc-200/50 dark:border-zinc-800 font-mono text-ink">
+                                <th className="p-3 border-r border-zinc-200/50 dark:border-zinc-800 font-bold w-[100px]">
                                   {translate("Pronunciation")}
                                 </th>
                                 <th className="p-3 font-bold">
@@ -698,8 +698,8 @@ function RichGrammarRenderer({ richGrammar }: { richGrammar: any[] }) {
                             </thead>
                             <tbody>
                               {(block.table || []).map((row: any, rIdx: number) => (
-                                <tr key={rIdx} className="border-b border-off-black last:border-b-0 hover:bg-atmosphere-wash/15 dark:hover:bg-white/5 transition-all duration-200 cursor-default">
-                                  <td className="p-3 border-r border-off-black font-bold text-sky-600 dark:text-sky-400 bg-sky-500/5 align-middle text-center">{row[0]}</td>
+                                <tr key={rIdx} className="border-b border-zinc-200/50 dark:border-zinc-800 last:border-b-0 hover:bg-atmosphere-wash/15 dark:hover:bg-white/5 transition-all duration-200 cursor-default">
+                                  <td className="p-3 border-r border-zinc-200/50 dark:border-zinc-800 font-bold text-sky-600 dark:text-sky-400 bg-sky-500/5 align-middle text-center">{row[0]}</td>
                                   <td className="p-3 whitespace-pre-line text-off-black align-middle">
                                     {renderTextWithLinks(translate(row[1]))}
                                   </td>
@@ -712,7 +712,7 @@ function RichGrammarRenderer({ richGrammar }: { richGrammar: any[] }) {
                         {/* Mobile View */}
                         <div className="block md:hidden space-y-3">
                           {(block.table || []).map((row: any, rIdx: number) => (
-                            <div key={rIdx} className="p-3 sm:p-4 border border-off-black/10 dark:border-white/10 rounded-xl bg-paper-canvas/30 space-y-2">
+                            <div key={rIdx} className="p-3 sm:p-4 border border-zinc-200/50 dark:border-zinc-800 rounded-xl bg-white/5 dark:bg-black/10 backdrop-blur-md space-y-2">
                               <div className="flex items-center gap-2">
                                 <span className="px-2 py-0.5 rounded bg-sky-500/10 text-sky-600 dark:text-sky-400 text-xs border border-sky-500/20 font-bold font-mono">
                                   {row[0]}
@@ -767,17 +767,17 @@ function RichGrammarRenderer({ richGrammar }: { richGrammar: any[] }) {
                       {renderTextWithLinks(translate(block.description))}
                     </p>
                     {/* Desktop View */}
-                    <div className="hidden md:block overflow-x-auto border border-off-black rounded-lg bg-paper-canvas">
+                    <div className="hidden md:block overflow-x-auto border border-zinc-200/50 dark:border-zinc-800 rounded-xl bg-white/5 dark:bg-black/10 backdrop-blur-md">
                       <table className="w-full text-sm border-collapse text-left min-w-[550px]">
                         <thead>
-                          <tr className="bg-atmosphere-wash border-b border-off-black font-mono text-ink">
-                            <th className="p-3 border-r border-off-black font-bold">
+                          <tr className="bg-atmosphere-wash/20 dark:bg-white/5 border-b border-zinc-200/50 dark:border-zinc-800 font-mono text-ink">
+                            <th className="p-3 border-r border-zinc-200/50 dark:border-zinc-800 font-bold">
                               {translate("Stative Verb")}
                             </th>
-                            <th className="p-3 border-r border-off-black font-bold">
+                            <th className="p-3 border-r border-zinc-200/50 dark:border-zinc-800 font-bold">
                               {translate("Meaning")}
                             </th>
-                            <th className="p-3 border-r border-off-black font-bold">
+                            <th className="p-3 border-r border-zinc-200/50 dark:border-zinc-800 font-bold">
                               {translate("Stative Verb")}
                             </th>
                             <th className="p-3 font-bold">
@@ -787,10 +787,10 @@ function RichGrammarRenderer({ richGrammar }: { richGrammar: any[] }) {
                         </thead>
                         <tbody>
                           {(block.table || []).map((row: any, rIdx: number) => (
-                            <tr key={rIdx} className="border-b border-off-black last:border-b-0 hover:bg-atmosphere-wash/15 dark:hover:bg-white/5 transition-all duration-200 cursor-default">
-                              <td className="p-3 border-r border-off-black font-bold text-ink align-middle">{row[0]}</td>
-                              <td className="p-3 border-r border-off-black text-pale-stone align-middle">{translate(row[1])}</td>
-                              <td className="p-3 border-r border-off-black font-bold text-ink align-middle">{row[2]}</td>
+                            <tr key={rIdx} className="border-b border-zinc-200/50 dark:border-zinc-800 last:border-b-0 hover:bg-atmosphere-wash/15 dark:hover:bg-white/5 transition-all duration-200 cursor-default">
+                              <td className="p-3 border-r border-zinc-200/50 dark:border-zinc-800 font-bold text-ink align-middle">{row[0]}</td>
+                              <td className="p-3 border-r border-zinc-200/50 dark:border-zinc-800 text-pale-stone align-middle">{translate(row[1])}</td>
+                              <td className="p-3 border-r border-zinc-200/50 dark:border-zinc-800 font-bold text-ink align-middle">{row[2]}</td>
                               <td className="p-3 text-pale-stone align-middle">{translate(row[3])}</td>
                             </tr>
                           ))}
@@ -803,13 +803,13 @@ function RichGrammarRenderer({ richGrammar }: { richGrammar: any[] }) {
                       {(block.table || []).map((row: any, rIdx: number) => (
                         <React.Fragment key={rIdx}>
                           {row[0] && (
-                            <div className="p-3 border border-off-black/10 dark:border-white/10 rounded-xl bg-paper-canvas/30 flex justify-between items-center gap-4 text-xs">
+                            <div className="p-3 border border-zinc-200/50 dark:border-zinc-800 rounded-xl bg-white/5 dark:bg-black/10 backdrop-blur-md flex justify-between items-center gap-4 text-xs">
                               <span className="font-bold text-ink">{row[0]}</span>
                               <span className="text-pale-stone text-right">{translate(row[1])}</span>
                             </div>
                           )}
                           {row[2] && (
-                            <div className="p-3 border border-off-black/10 dark:border-white/10 rounded-xl bg-paper-canvas/30 flex justify-between items-center gap-4 text-xs">
+                            <div className="p-3 border border-zinc-200/50 dark:border-zinc-800 rounded-xl bg-white/5 dark:bg-black/10 backdrop-blur-md flex justify-between items-center gap-4 text-xs">
                               <span className="font-bold text-ink">{row[2]}</span>
                               <span className="text-pale-stone text-right">{translate(row[3])}</span>
                             </div>
@@ -947,7 +947,7 @@ export function LearningExplorerSection({
   };
 
   return (
-    <section className={cn("py-16 md:py-24 bg-transparent border-t border-off-black/15 dark:border-white/10 relative overflow-x-clip z-0", className)}>
+    <section className={cn("py-16 md:py-24 bg-transparent border-t border-zinc-200/50 dark:border-zinc-800 relative z-0", className)}>
 
       <div className="container mx-auto px-4 sm:px-6 max-w-[1432px] relative z-10">
         <div className={`flex flex-col md:flex-row justify-between items-end gap-4 ${hideHeader ? 'mb-4' : 'mb-12'}`}>
@@ -1043,8 +1043,12 @@ export function LearningExplorerSection({
         {/* Units Accordion Layout (with Left Sidebar on Desktop) */}
         <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-start relative">
           {/* Desktop Left Sidebar */}
-          <aside data-lenis-prevent className="hidden md:flex rounded-[24px] md:col-span-4 lg:col-span-3 sticky top-[110px] h-[calc(100vh-150px)] flex-col bg-paper-canvas/30 backdrop-blur-lg dark:bg-zinc-900/20 p-5 border-2 border-off-black/15 shadow-3d-card select-none overflow-hidden">
-            <div className="mb-4 shrink-0 pb-3 border-b border-off-black/5 dark:border-white/5">
+          <aside
+            data-lenis-prevent
+            className="hidden md:flex rounded-[24px] md:col-span-4 lg:col-span-3 h-[calc(100vh-150px)] flex-col liquid-glass p-5 select-none overflow-hidden"
+            style={{ position: "sticky", top: "110px" }}
+          >
+            <div className="mb-4 shrink-0 pb-3 border-b border-zinc-200/50 dark:border-zinc-800">
               <h3 className="font-heading font-bold text-xs uppercase tracking-wider text-pale-stone mb-1">
                 {translate("Units Index")}
               </h3>
@@ -1074,8 +1078,8 @@ export function LearningExplorerSection({
                       className={cn(
                         "w-full h-full text-left p-3 flex flex-col gap-0.5 justify-center items-start font-mono text-xs border-2 transition-all duration-200 select-none cursor-pointer rounded-2xl",
                         isActive
-                          ? "bg-atmosphere-wash/50 dark:bg-atmosphere-wash/20 border-off-black text-ink font-bold"
-                          : "bg-paper-canvas/40 border-transparent text-pale-stone/80 hover:text-ink hover:border-off-black/10"
+                          ? "bg-blue-600/10 dark:bg-blue-500/20 border-blue-600 dark:border-blue-500 text-blue-600 dark:text-blue-400 font-bold shadow-sm"
+                          : "bg-white/5 dark:bg-black/10 border-transparent text-pale-stone/80 hover:text-ink hover:bg-white/10 dark:hover:bg-black/20"
                       )}
                     >
                       {prefix && (

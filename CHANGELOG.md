@@ -8,7 +8,7 @@ All notable changes to the **English4U** project are documented below. This proj
 
 | Key Metrics         | Value / Badges                                                                                                                             |
 | :------------------ | :----------------------------------------------------------------------------------------------------------------------------------------- |
-| **Current Version** | ![Version](https://img.shields.io/badge/version-v1.6.8-blue.svg?style=for-the-badge&logo=git)                                              |
+| **Current Version** | ![Version](https://img.shields.io/badge/version-v1.7.0-blue.svg?style=for-the-badge&logo=git)                                              |
 | **Framework**       | ![Next.js](https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white)                                 |
 | **Styling**         | ![CSS](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)                                             |
 | **Language**        | ![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)                          |
@@ -42,7 +42,60 @@ gantt
     v1.6.6 Mobile Spacing & Glassmorphism:active, 2026-07-03, 2026-07-03
     v1.6.7 PWA Icon & Navbar Polish  :active, 2026-07-03, 2026-07-03
     v1.6.8 Premium Brutalist & Cross-Page UX :active, 2026-07-15, 2026-07-16
+    section Modern SaaS Redesign
+    v1.7.0 SaaS Glassmorphic & 3D Coverflow :active, 2026-07-18, 2026-07-19
 ```
+
+---
+
+## 🚀 v1.7.0 — Modern SaaS Glassmorphic Redesign & 3D Coverflow Gallery
+
+> **Release Date:** July 19, 2026 • _Focus: Complete Visual Theme Migration from Flat Brutalist to Modern SaaS/Glassmorphic, 3D Coverflow Destination Selector, Sticky Sidebar Fix, Premium Book Cover Generation, and Dynamic Detail Panels_
+
+```
+┌──────────────────────────────────────────────────────────────────┐
+│  ✨ Highlights:                                                  │
+│  • Full visual migration from Flat Brutalist to Modern SaaS with │
+│    glassmorphic translucent cards, pill buttons, and soft shadows│
+│  • 3D Coverflow Gallery for "Choose Your Destination" selector   │
+│  • AI-generated premium abstract book covers for B1, B2, C1/C2  │
+│  • Fixed sticky sidebar index with CSS specificity override      │
+│  • Dynamic animated detail panel synced to active coverflow card │
+│  • Floating contact chat bubbles (Chatbot AI, Zalo, Messenger)  │
+└──────────────────────────────────────────────────────────────────┘
+```
+
+### 🎨 Modern SaaS Glassmorphic Design System
+- **Card System Overhaul**: Replaced all flat brutalist cards (solid 2px black borders, rigid 3D drop-shadow offsets) with a premium glassmorphic system in [globals.css](file:///k:/ProjectGitHub/English4U/english4u/src/app/globals.css) — translucent `rgba(255,255,255,0.6)` backgrounds with `backdrop-filter: blur(24px) saturate(120%)`, soft `inset` specular highlights, and smooth `rounded-[24px]` corners.
+- **Typography Migration**: Switched the global font stack from monospace (`font-abc-diatype-mono`) to clean sans-serif (`Inter` / `Untitled Sans`) across [globals.css](file:///k:/ProjectGitHub/English4U/english4u/src/app/globals.css), [card.tsx](file:///k:/ProjectGitHub/English4U/english4u/src/components/ui/card.tsx), and body text elements. Monospace is now reserved for code blocks and metric badges.
+- **Pill Button Variants**: Redesigned all button variants in [button.tsx](file:///k:/ProjectGitHub/English4U/english4u/src/components/ui/button.tsx) to `rounded-full` pill shapes with smooth hover scale (`1.03`), active tap shrink (`0.98`), and subtle drop shadows on primary CTAs.
+- **Section Badge Capsules**: Standardized `.section-badge` styling as rounded pill badges with soft blue backdrop tint and matching translucent borders.
+- **Data Table Glassmorphism**: Upgraded [data-table.tsx](file:///k:/ProjectGitHub/English4U/english4u/src/components/ui/data-table.tsx) with translucent borders (`border-zinc-200/50` / `border-zinc-800`), transparent body elements, and subtle backdrop blur on the wrapper.
+- **Dark Mode Refinement**: Calibrated dark theme cards to `rgba(11, 15, 25, 0.65)` with warm white `0.08` opacity borders and refined inner specular shadows for depth.
+
+### 🎠 3D Coverflow Destination Selector
+- **New Component**: Created [coverflow-gallery.tsx](file:///k:/ProjectGitHub/English4U/english4u/src/components/ui/coverflow-gallery.tsx) — a reusable 3D coverflow carousel built from the user's `coverflowGalery.md` template. Features CSS 3D transforms with `preserve-3d`, configurable tilt/rotation/gap/opacity, keyboard navigation, optional autoplay, and interactive card click callbacks (`onActiveCardClick`, `onActiveCardChange`).
+- **Book Selection Redesign**: Refactored [book-selection.tsx](file:///k:/ProjectGitHub/English4U/english4u/src/components/sections/book-selection.tsx) — replaced the static 3-column card grid with the 3D Coverflow Gallery. A dynamic glassmorphic detail panel beneath the gallery animates (`framer-motion` `AnimatePresence`) in sync with the active slide, showing the book title, unit count badge, description, and a contextual CTA button.
+- **AI-Generated Book Covers**: Generated three premium abstract glassmorphic book cover images using AI:
+  - `destination-b1.png` — Cyan and deep blue glass spheres with neon accents
+  - `destination-b2.png` — Saffron, warm orange, and copper-gold metallic lines
+  - `destination-c1-c2.png` — Deep violet, sunset purple, and neon pink chrome rings
+- **Responsive Gallery**: Card dimensions adapt on mobile (`260×260px`) vs desktop (`360×360px`), with adjusted gap spacing for comfortable touch interaction.
+
+### 📌 Sticky Sidebar Index Fix
+- **Root Cause Resolution**: The Units Index sidebar in the Learning Explorer was unable to use CSS `position: sticky` because the `.liquid-glass` class in `globals.css` applied `position: relative !important`, overriding Tailwind's `sticky` utility. Additionally, parent containers (`<main>` and `<section>`) used `overflow-x-clip`, which breaks sticky scroll context propagation.
+- **Fix Applied**:
+  1. Removed `!important` from `position: relative` in the `.liquid-glass` class definition.
+  2. Removed `overflow-x-clip` from the `<main>` tag in [destination/[level]/page.tsx](file:///k:/ProjectGitHub/English4U/english4u/src/app/destination/%5Blevel%5D/page.tsx) and the `<section>` tag in [learning-explorer.tsx](file:///k:/ProjectGitHub/English4U/english4u/src/components/sections/learning-explorer.tsx).
+  3. Applied inline `style={{ position: "sticky", top: "110px" }}` on the sidebar `<aside>` element for maximum CSS specificity.
+
+### 🗨️ Floating Contact Chat Bubbles
+- **New Component**: Added [ContactBubbles.tsx](file:///k:/ProjectGitHub/English4U/english4u/src/components/ui/ContactBubbles.tsx) — a vertical group of floating contact icons (Chatbot AI, Zalo, Messenger) fixed at the bottom-right corner of the viewport with gentle floating animations.
+
+### 🔄 Cross-Page Style Alignment
+- **Resources Page**: Replaced solid backgrounds and heavy borders with translucent glassmorphic cards, rounded-full search capsules, and clean gray pagination controls.
+- **Contact Page**: Migrated panels to borderless `liquid-glass` grids, modernized form inputs with `font-sans` and thin `border-zinc-200/50` frames, restyled the send button as a rounded-full blue SaaS pill.
+- **Learning Explorer**: Transformed the units index sidebar into a translucent `liquid-glass` drawer, updated coverflow tab triggers with active blue gradient borders, and redesigned grammar/pronunciation tables.
 
 ---
 

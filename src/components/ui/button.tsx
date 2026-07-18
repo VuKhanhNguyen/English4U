@@ -5,28 +5,28 @@ import { cva, type VariantProps } from "class-variance-authority"
 import { cn } from "@/lib/utils"
 
 const buttonVariants = cva(
-  "inline-flex items-center justify-center whitespace-nowrap text-sm font-abc-diatype-mono font-normal transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-off-black disabled:pointer-events-none disabled:opacity-50 select-none cursor-pointer",
+  "inline-flex items-center justify-center whitespace-nowrap text-sm font-sans font-semibold transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 disabled:pointer-events-none disabled:opacity-50 select-none cursor-pointer active:scale-98 active:duration-75",
   {
     variants: {
       variant: {
         primary:
-          "border-3d shadow-3d-btn press-active bg-off-black text-paper-canvas hover:bg-ink hover:text-paper-canvas font-bold",
-        default: "border-3d shadow-3d-btn press-active bg-primary text-primary-foreground font-bold hover:bg-primary/90",
+          "bg-blue-600 text-white hover:bg-blue-700 border border-transparent shadow-[0_4px_12px_rgba(37,99,235,0.15)] hover:shadow-[0_6px_16px_rgba(37,99,235,0.25)]",
+        default: "bg-blue-600 text-white hover:bg-blue-700 border border-transparent shadow-sm",
         destructive:
-          "border-3d shadow-3d-btn press-active bg-destructive text-destructive-foreground font-bold hover:bg-destructive/90",
+          "bg-red-600 text-white hover:bg-red-700 border border-transparent",
         outline:
-          "border-3d shadow-3d-btn press-active bg-background text-ink font-bold hover:bg-accent hover:text-accent-foreground",
+          "border border-zinc-200 dark:border-zinc-800 bg-transparent text-ink hover:bg-zinc-50 dark:hover:bg-zinc-900/50",
         secondary:
-          "border-3d shadow-3d-btn press-active bg-secondary text-secondary-foreground font-bold hover:bg-secondary/80",
-        ghost: "hover:bg-accent hover:text-accent-foreground",
-        link: "text-primary underline-offset-4 hover:underline",
+          "bg-zinc-100 dark:bg-zinc-800/85 text-ink hover:bg-zinc-200 dark:hover:bg-zinc-700",
+        ghost: "hover:bg-zinc-100 dark:hover:bg-zinc-900 text-ink",
+        link: "text-blue-600 dark:text-blue-400 underline-offset-4 hover:underline",
       },
       size: {
-        primary: "p-4 rounded-sm",
-        default: "h-10 px-4 py-2 rounded-sm",
-        sm: "h-9 rounded-sm px-3",
-        lg: "h-11 rounded-sm px-8",
-        icon: "h-10 w-10 rounded-sm",
+        primary: "h-12 px-8 rounded-full text-base",
+        default: "h-10 px-6 rounded-full text-sm",
+        sm: "h-9 rounded-full px-4 text-xs",
+        lg: "h-12 rounded-full px-8 text-base",
+        icon: "h-10 w-10 rounded-full",
       },
     },
     defaultVariants: {

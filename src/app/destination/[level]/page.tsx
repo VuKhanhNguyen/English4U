@@ -36,7 +36,7 @@ export default async function DestinationPage({
   return (
     <>
       <Navbar />
-      <main className="flex-grow bg-paper-canvas dark:bg-black relative overflow-x-clip">
+      <main className="flex-grow bg-paper-canvas dark:bg-black relative">
         <LiquidShaderBackground src="/imgs/backgroundLiquid.png" className="opacity-50 dark:opacity-30 pointer-events-none z-0" />
         <HeroSection
           hideButtons={true}
