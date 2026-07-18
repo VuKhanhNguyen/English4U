@@ -2,7 +2,7 @@ import { Navbar } from "@/components/layout/navbar";
 import { Footer } from "@/components/layout/footer";
 import { HeroSection } from "@/components/sections/hero";
 import { LearningExplorerSection } from "@/components/sections/learning-explorer";
-import { InteractiveBackground } from "@/components/ui/interactive-background";
+import LiquidShaderBackground from "@/components/ui/LiquidShaderBackground";
 import { notFound } from "next/navigation";
 
 interface DestinationPageProps {
@@ -37,7 +37,7 @@ export default async function DestinationPage({
     <>
       <Navbar />
       <main className="flex-grow bg-paper-canvas dark:bg-black relative overflow-x-clip">
-        <InteractiveBackground />
+        <LiquidShaderBackground src="/imgs/backgroundLiquid.png" className="opacity-50 dark:opacity-30 pointer-events-none z-0" />
         <HeroSection
           hideButtons={true}
           title1="Learning Explorer"

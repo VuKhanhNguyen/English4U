@@ -55,13 +55,55 @@ export function PwaProvider({ children }: { children: React.ReactNode }) {
     window.addEventListener("beforeinstallprompt", handleBeforeInstallPrompt);
     window.addEventListener("appinstalled", handleAppInstalled);
 
-    // 4. Register Service Worker
+    // 4. Register Service Worker & Listen for Updates
     if ("serviceWorker" in navigator) {
-      // Register after page load to prevent blocking initial load
+      let refreshing = false;
+
+      // Handle controller change (fires when a new Service Worker takes over)
+      navigator.serviceWorker.addEventListener("controllerchange", () => {
+        if (refreshing) return;
+        
+        // Only trigger update toast if there was an active service worker before (not on first load)
+        if (navigator.serviceWorker.controller) {
+          refreshing = true;
+          showToast({
+            title: "Update Available",
+            message: "A new version of English4U is ready. Click refresh to update.",
+            variant: "success",
+            duration: 10000,
+            position: "top-right",
+            actions: {
+              label: "Refresh",
+              onClick: () => {
+                window.location.reload();
+              }
+            }
+          });
+        }
+      });
+
       const registerSW = () => {
         navigator.serviceWorker.register("/sw.js")
           .then((reg) => {
             console.log("Service Worker registered successfully with scope:", reg.scope);
+
+            // Check if there is already a waiting service worker when the page loads
+            if (reg.waiting) {
+              showToast({
+                title: "Update Available",
+                message: "A new version of English4U is ready. Click refresh to update.",
+                variant: "success",
+                duration: 10000,
+                position: "top-right",
+                actions: {
+                  label: "Refresh",
+                  onClick: () => {
+                    reg.waiting?.postMessage({ type: "SKIP_WAITING" });
+                    window.location.reload();
+                  }
+                }
+              });
+            }
           })
           .catch((err) => {
             console.error("Service Worker registration failed:", err);

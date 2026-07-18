@@ -101,12 +101,7 @@ const b2Data = {
 
 import { Card } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
-import {
-  Accordion,
-  AccordionItem,
-  AccordionTrigger,
-  AccordionContent,
-} from "@/components/ui/accordion";
+import CoverflowCarousel from "@/components/ui/coverflow-carousel";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 import {
   Table,
@@ -804,7 +799,7 @@ function RichGrammarRenderer({ richGrammar }: { richGrammar: any[] }) {
                     </div>
 
                     {/* Mobile Grid/List View */}
-                    <div className="block md:hidden grid grid-cols-1 gap-2.5">
+                    <div className="grid md:hidden grid-cols-1 gap-2.5">
                       {(block.table || []).map((row: any, rIdx: number) => (
                         <React.Fragment key={rIdx}>
                           {row[0] && (
@@ -863,64 +858,9 @@ export function LearningExplorerSection({
   const [selectedBookIndex, setSelectedBookIndex] =
     React.useState(initialIndex);
   const [searchQuery, setSearchQuery] = React.useState("");
-  const [scrollActiveButton, setScrollActiveButton] = React.useState<"up" | "down" | null>(null);
 
   const controls = useAnimation();
   const isDraggingRef = React.useRef(false);
-
-  React.useEffect(() => {
-    if (typeof window === "undefined") return;
-
-    let lastScrollTop = window.scrollY;
-    let lastTime = Date.now();
-    let hideTimeout: NodeJS.Timeout;
-    let currentDir: "up" | "down" | null = null;
-    let throttleTimeout: NodeJS.Timeout | null = null;
-
-    const handleScroll = () => {
-      if (throttleTimeout) return;
-
-      throttleTimeout = setTimeout(() => {
-        throttleTimeout = null;
-
-        const currentScrollTop = window.scrollY;
-        const currentTime = Date.now();
-        const timeDiff = currentTime - lastTime;
-
-        if (timeDiff > 0) {
-          const distDiff = Math.abs(currentScrollTop - lastScrollTop);
-          const speed = distDiff / timeDiff; // px per ms
-
-          // If scroll speed exceeds threshold (e.g. 0.8px/ms)
-          if (speed > 0.8) {
-            const direction = currentScrollTop < lastScrollTop ? "up" : "down";
-            
-            if (currentDir !== direction) {
-              currentDir = direction;
-              setScrollActiveButton(direction);
-            }
-
-            // Clear previous timeout and set a new one to hide after 2.5 seconds
-            clearTimeout(hideTimeout);
-            hideTimeout = setTimeout(() => {
-              currentDir = null;
-              setScrollActiveButton(null);
-            }, 2500);
-          }
-        }
-
-        lastScrollTop = currentScrollTop;
-        lastTime = currentTime;
-      }, 100);
-    };
-
-    window.addEventListener("scroll", handleScroll, { passive: true });
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-      clearTimeout(hideTimeout);
-      if (throttleTimeout) clearTimeout(throttleTimeout);
-    };
-  }, []);
 
   React.useEffect(() => {
     if (bookLevel) {
@@ -940,118 +880,36 @@ export function LearningExplorerSection({
 
   const [expandedUnitId, setExpandedUnitId] = React.useState<string | undefined>(undefined);
   const [activeUnitId, setActiveUnitId] = React.useState<string | null>(null);
+  const [activeUnitIndex, setActiveUnitIndex] = React.useState(0);
   const [isMobileDrawerOpen, setIsMobileDrawerOpen] = React.useState(false);
 
   React.useEffect(() => {
     if (activeBook?.units?.[0]?.id) {
       setExpandedUnitId(activeBook.units[0].id);
       setActiveUnitId(activeBook.units[0].id);
+      setActiveUnitIndex(0);
     } else {
       setExpandedUnitId(undefined);
       setActiveUnitId(null);
+      setActiveUnitIndex(0);
     }
   }, [selectedBookIndex, activeBook]);
 
-  // Scrollspy effect using IntersectionObserver
-  React.useEffect(() => {
-    if (typeof window === "undefined" || !("IntersectionObserver" in window)) return;
-    if (!activeBook?.units) return;
-
-    // Avoid unnecessary scrollspy calculations and re-renders on mobile when index drawer is closed
-    const isMobile = window.innerWidth <= 768;
-    if (isMobile && !isMobileDrawerOpen) return;
-
-    const observerOptions = {
-      root: null,
-      rootMargin: "-25% 0px -55% 0px",
-      threshold: 0,
-    };
-
-    const handleIntersection = (entries: IntersectionObserverEntry[]) => {
-      const visibleEntry = entries.find(entry => entry.isIntersecting);
-      if (visibleEntry) {
-        const unitId = visibleEntry.target.id.replace("scroll-unit-", "");
-        setActiveUnitId(unitId);
-      }
-    };
-
-    const observer = new IntersectionObserver(handleIntersection, observerOptions);
-
-    activeBook.units.forEach((unit: any) => {
-      const el = document.getElementById(`scroll-unit-${unit.id}`);
-      if (el) observer.observe(el);
-    });
-
-    return () => {
-      observer.disconnect();
-    };
-  }, [activeBook, selectedBookIndex, isMobileDrawerOpen]);
-
-  const sidebarScrollContainerRef = React.useRef<HTMLDivElement>(null);
-  const mobileScrollContainerRef = React.useRef<HTMLDivElement>(null);
-
-  // Auto-scroll desktop sidebar container to active unit item
-  React.useEffect(() => {
-    if (!activeUnitId || !sidebarScrollContainerRef.current) return;
-
-    const container = sidebarScrollContainerRef.current;
-    const activeElement = container.querySelector(
-      `[data-unit-id="${activeUnitId}"]`
-    ) as HTMLElement;
-
-    if (activeElement) {
-      const containerHeight = container.clientHeight;
-      const elemTop = activeElement.offsetTop;
-      const elemHeight = activeElement.clientHeight;
-
-      container.scrollTo({
-        top: elemTop - containerHeight / 2 + elemHeight / 2,
-        behavior: "smooth",
-      });
+  const handleActiveUnitIndexChange = (index: number) => {
+    setActiveUnitIndex(index);
+    const unit = activeBook.units[index];
+    if (unit) {
+      setExpandedUnitId(unit.id);
+      setActiveUnitId(unit.id);
     }
-  }, [activeUnitId]);
-
-  // Auto-scroll mobile drawer to active item when opened
-  React.useEffect(() => {
-    if (!isMobileDrawerOpen || !activeUnitId) return;
-
-    const timer = setTimeout(() => {
-      if (!mobileScrollContainerRef.current) return;
-      const container = mobileScrollContainerRef.current;
-      const activeElement = container.querySelector(
-        `[data-unit-id="${activeUnitId}"]`
-      ) as HTMLElement;
-
-      if (activeElement) {
-        const containerHeight = container.clientHeight;
-        const elemTop = activeElement.offsetTop;
-        const elemHeight = activeElement.clientHeight;
-
-        container.scrollTo({
-          top: elemTop - containerHeight / 2 + elemHeight / 2,
-          behavior: "instant" as ScrollBehavior,
-        });
-      }
-    }, 100);
-
-    return () => clearTimeout(timer);
-  }, [isMobileDrawerOpen, activeUnitId]);
+  };
 
   const handleUnitClick = (unitId: string) => {
-    setExpandedUnitId(unitId);
-    setActiveUnitId(unitId);
+    const idx = activeBook.units.findIndex((u: any) => u.id === unitId);
+    if (idx !== -1) {
+      handleActiveUnitIndexChange(idx);
+    }
     setIsMobileDrawerOpen(false);
-
-    // Smooth scroll with native scrollIntoView
-    setTimeout(() => {
-      const element = document.getElementById(`scroll-unit-${unitId}`);
-      if (element) {
-        element.scrollIntoView({
-          behavior: "smooth",
-          block: "start",
-        });
-      }
-    }, 100);
   };
 
   const splitTitle = (title: string) => {
@@ -1185,7 +1043,7 @@ export function LearningExplorerSection({
         {/* Units Accordion Layout (with Left Sidebar on Desktop) */}
         <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-start relative">
           {/* Desktop Left Sidebar */}
-          <aside data-lenis-prevent className="hidden md:flex rounded-[24px] md:col-span-4 lg:col-span-3 sticky top-[110px] h-[calc(100vh-150px)] flex-col bg-paper-canvas/30 backdrop-blur-lg dark:bg-zinc-900/20 p-5 border-2 border-off-black/15 shadow-3d-card select-none overflow-hidden overscroll-y-auto">
+          <aside data-lenis-prevent className="hidden md:flex rounded-[24px] md:col-span-4 lg:col-span-3 sticky top-[110px] h-[calc(100vh-150px)] flex-col bg-paper-canvas/30 backdrop-blur-lg dark:bg-zinc-900/20 p-5 border-2 border-off-black/15 shadow-3d-card select-none overflow-hidden">
             <div className="mb-4 shrink-0 pb-3 border-b border-off-black/5 dark:border-white/5">
               <h3 className="font-heading font-bold text-xs uppercase tracking-wider text-pale-stone mb-1">
                 {translate("Units Index")}
@@ -1194,77 +1052,83 @@ export function LearningExplorerSection({
                 {activeBook.book}
               </p>
             </div>
-            <div ref={sidebarScrollContainerRef} className="flex-1 overflow-y-auto relative pr-1 space-y-1.5 scrollbar-thin scrollbar-thumb-off-black/10 dark:scrollbar-thumb-white/10">
-              {activeBook?.units?.map((unit: any) => {
-                const { prefix, main } = splitTitle(unit.title);
-                const isActive = activeUnitId === unit.id || expandedUnitId === unit.id;
-                return (
-                  <motion.button
-                    key={unit.id}
-                    data-unit-id={unit.id}
-                    onClick={() => handleUnitClick(unit.id)}
-                    whileHover={{ scale: 1.02, x: 4 }}
-                    whileTap={{ scale: 0.98 }}
-                    transition={{ type: "spring", stiffness: 400, damping: 25 }}
-                    className={cn(
-                      "w-full text-left px-4 py-3 rounded-[24px] transition-all duration-200 font-mono text-xs border-2 flex flex-col gap-1 items-start cursor-pointer outline-none relative overflow-hidden",
-                      isActive
-                        ? "bg-atmosphere-wash/50 dark:bg-atmosphere-wash/20 border-off-black text-ink font-bold shadow-[2px_2px_6px_0px_var(--shadow-3d-color)] translate-x-[1px] translate-y-[1px]"
-                        : "bg-paper-canvas/20 border-transparent text-pale-stone hover:bg-atmosphere-wash/30 dark:hover:bg-atmosphere-wash/10 hover:text-ink hover:border-off-black/20 hover:shadow-[1px_1px_3px_0px_var(--shadow-3d-color)]"
-                    )}
-                  >
-                    {/* Active left indicator line */}
-                    {isActive && (
-                      <motion.div
-                        layoutId="active-indicator"
-                        className="absolute left-0 top-0 bottom-0 w-1 bg-ink dark:bg-white"
-                        transition={{ type: "spring", stiffness: 350, damping: 30 }}
-                      />
-                    )}
-                    {prefix && (
-                      <span className={cn(
-                        "text-[10px] uppercase font-bold tracking-wider",
-                        isActive ? "text-ink" : "text-pale-stone/70"
-                      )}>
-                        {prefix}
-                      </span>
-                    )}
-                    <span className="line-clamp-2 text-left leading-normal">{main}</span>
-                  </motion.button>
-                );
-              })}
+            <div className="flex-1 relative w-full h-full min-h-[300px] overflow-hidden">
+              <CoverflowCarousel
+                items={activeBook?.units || []}
+                activeIndex={activeUnitIndex}
+                onChangeActiveIndex={handleActiveUnitIndexChange}
+                activeWidth={240}
+                activeHeight={80}
+                restWidth={215}
+                restHeight={50}
+                gap={12}
+                radius={10}
+                showArrows={true}
+                arrowSize={28}
+                arrowColor="var(--color-ink)"
+                arrowBackground="rgba(var(--color-paper-canvas-rgb), 0.8)"
+                renderItem={(unit: any, index: number, isActive: boolean) => {
+                  const { prefix, main } = splitTitle(unit.title);
+                  return (
+                    <div
+                      className={cn(
+                        "w-full h-full text-left p-3 flex flex-col gap-0.5 justify-center items-start font-mono text-xs border-2 transition-all duration-200 select-none cursor-pointer rounded-2xl",
+                        isActive
+                          ? "bg-atmosphere-wash/50 dark:bg-atmosphere-wash/20 border-off-black text-ink font-bold"
+                          : "bg-paper-canvas/40 border-transparent text-pale-stone/80 hover:text-ink hover:border-off-black/10"
+                      )}
+                    >
+                      {prefix && (
+                        <span className={cn(
+                          "text-[9px] uppercase font-bold tracking-wider leading-none",
+                          isActive ? "text-ink" : "text-pale-stone/70"
+                        )}>
+                          {prefix}
+                        </span>
+                      )}
+                      <span className="line-clamp-2 leading-tight text-left text-[11px]">{main}</span>
+                    </div>
+                  );
+                }}
+              />
             </div>
           </aside>
 
-          {/* Main Content Accordion Card */}
+          {/* Main Content Card for Active Unit */}
           <div className="md:col-span-8 lg:col-span-9 min-w-0 w-full">
-            <Card variant="content" className="p-3 sm:p-6 md:p-8">
-              <Accordion
-                type="single"
-                collapsible
-                value={expandedUnitId}
-                onValueChange={setExpandedUnitId}
-                className="w-full"
-              >
-                {(activeBook?.units || []).map((unit: any) => (
-                  <AccordionItem
-                    key={unit.id}
-                    value={unit.id}
-                    id={`scroll-unit-${unit.id}`}
-                    className="border-b border-pale-stone scroll-mt-[110px] mx-1 sm:mx-6"
-                  >
-                <AccordionTrigger className="text-subheading font-mono font-medium hover:no-underline py-5 px-2 sm:px-4 text-left text-ink hover:text-emerald-600 dark:hover:text-emerald-400 hover:translate-x-1 transition-all duration-200">
-                  {unit.title}
-                </AccordionTrigger>
-                <AccordionContent className="pt-2 pb-6">
-                  <Tabs
-                    defaultValue={
-                      unit.richGrammar || (unit.grammar && unit.grammar.length > 0)
-                        ? "grammar"
-                        : "vocabulary"
-                    }
-                    className="w-full mt-4"
-                  >
+            <Card variant="content" className="p-4 sm:p-6 md:p-8">
+              <AnimatePresence mode="wait">
+                {activeBook?.units?.[activeUnitIndex] && (() => {
+                  const unit = activeBook.units[activeUnitIndex] as any;
+                  const { prefix, main } = splitTitle(unit.title);
+                  return (
+                    <motion.div
+                      key={`${selectedBookIndex}-${activeUnitIndex}`}
+                      initial={{ opacity: 0, y: 15 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      exit={{ opacity: 0, y: -15 }}
+                      transition={{ duration: 0.25, ease: "easeInOut" }}
+                      className="w-full"
+                    >
+                      {/* Active Unit Header */}
+                      <div className="border-b border-pale-stone/30 pb-4 mb-6">
+                        <span className="px-3 py-1 rounded-full bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 text-xs border border-emerald-500/20 font-mono font-bold uppercase tracking-wider">
+                          {prefix || `Unit ${activeUnitIndex + 1}`}
+                        </span>
+                        <h2 className="text-heading font-heading text-ink mt-3 mb-2">
+                          {main}
+                        </h2>
+                      </div>
+
+                      {/* Active Unit Content Tabs */}
+                      <Tabs
+                        defaultValue={
+                          unit.richGrammar || (unit.grammar && unit.grammar.length > 0)
+                            ? "grammar"
+                            : "vocabulary"
+                        }
+                        className="w-full mt-4"
+                      >
                     <TabsList className="mb-6 flex-wrap h-auto p-1 rounded-lg">
                       {(unit.richGrammar || (unit.grammar && unit.grammar.length > 0)) && (
                         <TabsTrigger value="grammar" className="rounded-md">{translate("Grammar")}</TabsTrigger>
@@ -1877,13 +1741,13 @@ export function LearningExplorerSection({
                       </div>
                     </TabsContent>
                   </Tabs>
-                </AccordionContent>
-              </AccordionItem>
-            ))}
-          </Accordion>
-        </Card>
-      </div>
-    </div>
+                    </motion.div>
+                  );
+                })()}
+              </AnimatePresence>
+            </Card>
+          </div>
+        </div>
 
     {/* Mobile FAB and Bottom Sheet Drawer */}
     <div className="md:hidden">
@@ -1994,79 +1858,52 @@ export function LearningExplorerSection({
                 </button>
               </div>
 
-              {/* Drawer list */}
-              <div ref={mobileScrollContainerRef} className="flex-1 overflow-y-auto relative space-y-2 pb-8 pr-1 scrollbar-thin">
-                {activeBook?.units?.map((unit: any) => {
-                  const { prefix, main } = splitTitle(unit.title);
-                  const isActive = activeUnitId === unit.id || expandedUnitId === unit.id;
-                  return (
-                    <button
-                      key={unit.id}
-                      data-unit-id={unit.id}
-                      onClick={() => handleUnitClick(unit.id)}
-                      className={cn(
-                        "w-full text-left px-4 py-3 rounded-lg transition-all duration-200 font-mono text-xs border-2 flex flex-col gap-1 items-start cursor-pointer outline-none relative overflow-hidden",
-                        isActive
-                          ? "bg-atmosphere-wash/50 dark:bg-atmosphere-wash/20 border-off-black text-ink font-bold shadow-[2px_2px_6px_0px_var(--shadow-3d-color)] translate-x-[1px] translate-y-[1px]"
-                          : "bg-paper-canvas/20 border-transparent text-pale-stone hover:bg-atmosphere-wash/30 dark:hover:bg-atmosphere-wash/10 hover:text-ink hover:border-off-black/20 hover:shadow-[1px_1px_3px_0px_var(--shadow-3d-color)]"
-                      )}
-                    >
-                      {isActive && (
-                        <div className="absolute left-0 top-0 bottom-0 w-1 bg-ink dark:bg-white" />
-                      )}
-                      {prefix && (
-                        <span className={cn(
-                          "text-[10px] uppercase font-bold tracking-wider",
-                          isActive ? "text-ink" : "text-pale-stone/70"
-                        )}>
-                          {prefix}
-                        </span>
-                      )}
-                      <span className="leading-normal text-left">{main}</span>
-                    </button>
-                  );
-                })}
+              {/* Drawer list with CoverflowCarousel */}
+              <div className="flex-1 relative w-full h-[400px] min-h-[350px] overflow-hidden">
+                <CoverflowCarousel
+                  items={activeBook?.units || []}
+                  activeIndex={activeUnitIndex}
+                  onChangeActiveIndex={handleActiveUnitIndexChange}
+                  activeWidth={280}
+                  activeHeight={80}
+                  restWidth={250}
+                  restHeight={50}
+                  gap={12}
+                  radius={10}
+                  showArrows={true}
+                  arrowSize={28}
+                  arrowColor="var(--color-ink)"
+                  arrowBackground="rgba(var(--color-paper-canvas-rgb), 0.8)"
+                  renderItem={(unit: any, index: number, isActive: boolean) => {
+                    const { prefix, main } = splitTitle(unit.title);
+                    return (
+                      <div
+                        className={cn(
+                          "w-full h-full text-left p-3 flex flex-col gap-0.5 justify-center items-start font-mono text-xs border-2 transition-all duration-200 select-none cursor-pointer rounded-2xl",
+                          isActive
+                            ? "bg-atmosphere-wash/50 dark:bg-atmosphere-wash/20 border-off-black text-ink font-bold"
+                            : "bg-paper-canvas/40 border-transparent text-pale-stone/80 hover:text-ink hover:border-off-black/10"
+                        )}
+                      >
+                        {prefix && (
+                          <span className={cn(
+                            "text-[9px] uppercase font-bold tracking-wider leading-none",
+                            isActive ? "text-ink" : "text-pale-stone/70"
+                          )}>
+                            {prefix}
+                          </span>
+                        )}
+                        <span className="line-clamp-2 leading-tight text-left text-[11px]">{main}</span>
+                      </div>
+                    );
+                  }}
+                />
               </div>
             </motion.div>
           </>
         )}
       </AnimatePresence>
     </div>
-
-    {/* Mobile speed-sensitive floating scroll-up/scroll-down buttons */}
-    <AnimatePresence>
-      {scrollActiveButton && (
-        <motion.div
-          initial={{ opacity: 0, scale: 0.8, y: 20 }}
-          animate={{ opacity: 1, scale: 1, y: 0 }}
-          exit={{ opacity: 0, scale: 0.8, y: 20 }}
-          transition={{ type: "spring", stiffness: 300, damping: 25 }}
-          className="fixed bottom-6 left-1/2 -translate-x-1/2 z-50 md:hidden pointer-events-auto"
-        >
-          {scrollActiveButton === "up" ? (
-            <motion.button
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.9 }}
-              onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-              className="w-12 h-12 rounded-full flex items-center justify-center bg-paper-canvas/90 dark:bg-zinc-950/90 backdrop-blur-md border border-off-black/15 dark:border-white/15 text-ink shadow-lg cursor-pointer hover:bg-atmosphere-wash/45 dark:hover:bg-atmosphere-wash/25 transition-colors"
-              aria-label="Scroll to top"
-            >
-              <ChevronUp className="w-6 h-6" />
-            </motion.button>
-          ) : (
-            <motion.button
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.9 }}
-              onClick={() => window.scrollTo({ top: document.documentElement.scrollHeight, behavior: "smooth" })}
-              className="w-12 h-12 rounded-full flex items-center justify-center bg-paper-canvas/90 dark:bg-zinc-950/90 backdrop-blur-md border border-off-black/15 dark:border-white/15 text-ink shadow-lg cursor-pointer hover:bg-atmosphere-wash/45 dark:hover:bg-atmosphere-wash/25 transition-colors"
-              aria-label="Scroll to bottom"
-            >
-              <ChevronDown className="w-6 h-6" />
-            </motion.button>
-          )}
-        </motion.div>
-      )}
-    </AnimatePresence>
   </div>
 
 </section>

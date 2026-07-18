@@ -7,7 +7,7 @@ import { cn } from "@/lib/utils";
 
 import { Navbar } from "@/components/layout/navbar";
 import { Footer } from "@/components/layout/footer";
-import { InteractiveBackground } from "@/components/ui/interactive-background";
+import LiquidShaderBackground from "@/components/ui/LiquidShaderBackground";
 import { useLanguage } from "@/components/providers/language-provider";
 import NextLink from "next/link";
 import {
@@ -546,7 +546,7 @@ export default function ResourcesPage() {
     <>
       <Navbar />
       <main className="flex-grow bg-paper-canvas dark:bg-black relative overflow-x-clip pt-[140px] pb-24">
-        <InteractiveBackground />
+        <LiquidShaderBackground src="/imgs/backgroundLiquid.png" className="opacity-50 dark:opacity-30 pointer-events-none z-0" />
 
         <div className="container mx-auto px-4 sm:px-6 max-w-[1432px]">
           <motion.div

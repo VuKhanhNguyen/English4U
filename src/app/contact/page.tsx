@@ -14,7 +14,7 @@ import {
   Bold, Italic, Underline, List, Image as ImageIcon, Trash2, X, Home 
 } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
-import { InteractiveBackground } from "@/components/ui/interactive-background";
+import LiquidShaderBackground from "@/components/ui/LiquidShaderBackground";
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -217,7 +217,7 @@ export default function ContactPage() {
         }
       `}} />
       <Navbar />
-      <InteractiveBackground />
+      <LiquidShaderBackground src="/imgs/backgroundLiquid.png" className="opacity-50 dark:opacity-30 pointer-events-none" />
       <main className="flex-grow pt-[140px] pb-24 z-10 relative">
         <div className="container mx-auto px-4 sm:px-6 max-w-6xl relative z-10 flex flex-col gap-8 md:gap-12">
           
@@ -634,11 +634,11 @@ export default function ContactPage() {
             </motion.div>
 
           </div>
-
         </div>
       </main>
-
-      <Footer />
+      <div className="relative z-10">
+        <Footer />
+      </div>
     </div>
   );
 }

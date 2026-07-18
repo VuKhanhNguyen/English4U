@@ -14,6 +14,7 @@ import { ThemeProvider } from "@/components/providers/theme-provider";
 import { cn } from "@/lib/utils";
 import Toaster from "@/components/ui/toast";
 import { PwaProvider } from "@/components/providers/pwa-provider";
+import ContactBubbles from "@/components/ui/ContactBubbles";
 
 const ibmPlexMono = IBM_Plex_Mono({
   subsets: ["latin"],
@@ -84,6 +85,7 @@ export default function RootLayout({
                 </div>
                 <Toaster defaultPosition="top-right"/>
                 <LiquidGlassFilter />
+                <ContactBubbles />
                 {children}
               </PwaProvider>
             </LanguageProvider>
