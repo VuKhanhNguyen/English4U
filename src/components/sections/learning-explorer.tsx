@@ -8,6 +8,7 @@ import { useLanguage } from "@/components/providers/language-provider";
 import { showToast } from "@/components/ui/toast";
 import Link from "next/link";
 import GradualBlur from "@/components/ui/gradual-blur";
+import GlassSurface from "@/components/GlassSurface";
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -453,7 +454,7 @@ function RichGrammarRenderer({ richGrammar }: { richGrammar: any[] }) {
                       </h5>
                     )}
                     {/* Desktop View */}
-                    <div className="hidden md:block overflow-x-auto border border-zinc-200/50 dark:border-zinc-800 rounded-xl bg-white/5 dark:bg-black/10 backdrop-blur-md">
+                    <div className="hidden md:block overflow-x-auto border border-zinc-200/50 dark:border-zinc-800 rounded-lg bg-white/5 dark:bg-black/10 backdrop-blur-md">
                       <table className="w-full text-sm border-collapse text-left min-w-[500px]">
                         <thead>
                           <tr className="bg-atmosphere-wash/20 dark:bg-white/5 border-b border-zinc-200/50 dark:border-zinc-800 font-mono text-ink">
@@ -507,7 +508,7 @@ function RichGrammarRenderer({ richGrammar }: { richGrammar: any[] }) {
                       {mobileGroups.map((group, gIdx) => (
                         <div
                           key={gIdx}
-                          className="border border-zinc-200/50 dark:border-zinc-800 rounded-2xl overflow-hidden bg-white/80 dark:bg-zinc-900/60 backdrop-blur-md"
+                          className="border border-zinc-200/50 dark:border-zinc-800 rounded-lg overflow-hidden bg-white/80 dark:bg-zinc-900/60 backdrop-blur-md"
                         >
                           <div className="bg-white/10 dark:bg-white/5 px-4 py-2.5 border-b border-zinc-200/50 dark:border-zinc-800">
                             <span className="font-bold text-ink text-xs font-mono">
@@ -550,7 +551,7 @@ function RichGrammarRenderer({ richGrammar }: { richGrammar: any[] }) {
                       </h5>
                     )}
                     {/* Desktop View */}
-                    <div className="hidden md:block overflow-x-auto border border-zinc-200/50 dark:border-zinc-800 rounded-xl bg-white/80 dark:bg-zinc-900/60 backdrop-blur-md">
+                    <div className="hidden md:block overflow-x-auto border border-zinc-200/50 dark:border-zinc-800 rounded-lg bg-white/80 dark:bg-zinc-900/60 backdrop-blur-md">
                       <table className="w-full text-sm border-collapse text-left min-w-[600px]">
                         <thead>
                           <tr className="bg-atmosphere-wash/20 dark:bg-white/5 border-b border-zinc-200/50 dark:border-zinc-800 font-mono text-ink">
@@ -604,7 +605,7 @@ function RichGrammarRenderer({ richGrammar }: { richGrammar: any[] }) {
                       {(block.rows || []).map((row: string[], rIdx: number) => (
                         <div
                           key={rIdx}
-                          className="p-3 sm:p-4 border border-zinc-200/50 dark:border-zinc-800 rounded-xl bg-white/80 dark:bg-zinc-900/60 backdrop-blur-md space-y-3 font-mono text-xs"
+                          className="p-3 sm:p-4 border border-zinc-200/50 dark:border-zinc-800 rounded-lg bg-white/80 dark:bg-zinc-900/60 backdrop-blur-md space-y-3 font-mono text-xs"
                         >
                           {(row || []).map((cell: string, cIdx: number) => {
                             const header = block.headers?.[cIdx];
@@ -649,7 +650,7 @@ function RichGrammarRenderer({ richGrammar }: { richGrammar: any[] }) {
                     {block.items ? (
                       <div className="space-y-4">
                         {(block.items || []).map((item: any, iIdx: number) => (
-                          <div key={iIdx} className="space-y-2 border border-zinc-200/50 dark:border-zinc-800 rounded-xl p-3 sm:p-4 bg-white/80 dark:bg-zinc-900/60 backdrop-blur-md">
+                          <div key={iIdx} className="space-y-2 border border-zinc-200/50 dark:border-zinc-800 rounded-lg p-3 sm:p-4 bg-white/80 dark:bg-zinc-900/60 backdrop-blur-md">
                             <p className="font-bold text-ink flex items-center gap-2">
                               <span className="w-2 h-2 rounded-full bg-[#ffa773]" />
                               {translate(item.label)}
@@ -684,7 +685,7 @@ function RichGrammarRenderer({ richGrammar }: { richGrammar: any[] }) {
                     {block.table && (
                       <>
                         {/* Desktop View */}
-                        <div className="hidden md:block overflow-x-auto border border-zinc-200/50 dark:border-zinc-800 rounded-xl bg-white/80 dark:bg-zinc-900/60 backdrop-blur-md">
+                        <div className="hidden md:block overflow-x-auto border border-zinc-200/50 dark:border-zinc-800 rounded-lg bg-white/80 dark:bg-zinc-900/60 backdrop-blur-md">
                           <table className="w-full text-sm border-collapse text-left min-w-[450px]">
                             <thead>
                               <tr className="bg-atmosphere-wash/20 dark:bg-white/5 border-b border-zinc-200/50 dark:border-zinc-800 font-mono text-ink">
@@ -712,7 +713,7 @@ function RichGrammarRenderer({ richGrammar }: { richGrammar: any[] }) {
                         {/* Mobile View */}
                         <div className="block md:hidden space-y-3">
                           {(block.table || []).map((row: any, rIdx: number) => (
-                            <div key={rIdx} className="p-3 sm:p-4 border border-zinc-200/50 dark:border-zinc-800 rounded-xl bg-white/80 dark:bg-zinc-900/60 backdrop-blur-md space-y-2">
+                            <div key={rIdx} className="p-3 sm:p-4 border border-zinc-200/50 dark:border-zinc-800 rounded-lg bg-white/80 dark:bg-zinc-900/60 backdrop-blur-md space-y-2">
                               <div className="flex items-center gap-2">
                                 <span className="px-2 py-0.5 rounded bg-sky-500/10 text-sky-600 dark:text-sky-400 text-xs border border-sky-500/20 font-bold font-mono">
                                   {row[0]}
@@ -767,7 +768,7 @@ function RichGrammarRenderer({ richGrammar }: { richGrammar: any[] }) {
                       {renderTextWithLinks(translate(block.description))}
                     </p>
                     {/* Desktop View */}
-                    <div className="hidden md:block overflow-x-auto border border-zinc-200/50 dark:border-zinc-800 rounded-xl bg-white/80 dark:bg-zinc-900/60 backdrop-blur-md">
+                    <div className="hidden md:block overflow-x-auto border border-zinc-200/50 dark:border-zinc-800 rounded-lg bg-white/80 dark:bg-zinc-900/60 backdrop-blur-md">
                       <table className="w-full text-sm border-collapse text-left min-w-[550px]">
                         <thead>
                           <tr className="bg-atmosphere-wash/20 dark:bg-white/5 border-b border-zinc-200/50 dark:border-zinc-800 font-mono text-ink">
@@ -803,13 +804,13 @@ function RichGrammarRenderer({ richGrammar }: { richGrammar: any[] }) {
                       {(block.table || []).map((row: any, rIdx: number) => (
                         <React.Fragment key={rIdx}>
                           {row[0] && (
-                            <div className="p-3 border border-zinc-200/50 dark:border-zinc-800 rounded-xl bg-white/80 dark:bg-zinc-900/60 backdrop-blur-md flex justify-between items-center gap-4 text-xs">
+                            <div className="p-3 border border-zinc-200/50 dark:border-zinc-800 rounded-lg bg-white/80 dark:bg-zinc-900/60 backdrop-blur-md flex justify-between items-center gap-4 text-xs">
                               <span className="font-bold text-ink">{row[0]}</span>
                               <span className="text-pale-stone text-right">{translate(row[1])}</span>
                             </div>
                           )}
                           {row[2] && (
-                            <div className="p-3 border border-zinc-200/50 dark:border-zinc-800 rounded-xl bg-white/80 dark:bg-zinc-900/60 backdrop-blur-md flex justify-between items-center gap-4 text-xs">
+                            <div className="p-3 border border-zinc-200/50 dark:border-zinc-800 rounded-lg bg-white/80 dark:bg-zinc-900/60 backdrop-blur-md flex justify-between items-center gap-4 text-xs">
                               <span className="font-bold text-ink">{row[2]}</span>
                               <span className="text-pale-stone text-right">{translate(row[3])}</span>
                             </div>
@@ -1066,7 +1067,7 @@ export function LearningExplorerSection({
                 restWidth={215}
                 restHeight={50}
                 gap={12}
-                radius={10}
+                radius={8}
                 showArrows={true}
                 arrowSize={28}
                 arrowColor="var(--color-ink)"
@@ -1076,7 +1077,7 @@ export function LearningExplorerSection({
                   return (
                     <div
                       className={cn(
-                        "w-full h-full text-left p-3 flex flex-col gap-0.5 justify-center items-start font-mono text-xs border-2 transition-all duration-200 select-none cursor-pointer rounded-2xl",
+                        "w-full h-full text-left p-3 flex flex-col gap-0.5 justify-center items-start font-mono text-xs border-2 transition-all duration-200 select-none cursor-pointer rounded-[12px]",
                         isActive
                           ? "bg-blue-600/10 dark:bg-blue-500/20 border-blue-600 dark:border-blue-500 text-blue-600 dark:text-blue-400 font-bold shadow-sm"
                           : "bg-white/5 dark:bg-black/10 border-transparent text-pale-stone/80 hover:text-ink hover:bg-white/10 dark:hover:bg-black/20"
@@ -1227,7 +1228,7 @@ export function LearningExplorerSection({
                           {/* Mobile Card View */}
                           <div className="block md:hidden space-y-4">
                             {filterData(unit.grammar, ["structure", "usage", "example"]).map((row, idx) => (
-                              <div key={idx} className="p-3 sm:p-4 border border-off-black/10 dark:border-white/10 rounded-2xl bg-paper-canvas/30 space-y-3 font-mono text-xs">
+                              <div key={idx} className="p-3 sm:p-4 border border-off-black/10 dark:border-white/10 rounded-lg bg-paper-canvas/30 space-y-3 font-mono text-xs">
                                 <div className="flex flex-wrap items-center justify-between gap-2 border-b border-off-black/5 dark:border-white/5 pb-2">
                                   <span className="px-2 py-0.5 rounded bg-sky-500/10 text-sky-600 dark:text-sky-400 text-xs border border-sky-500/20 font-bold">
                                     {row.structure}
@@ -1240,7 +1241,7 @@ export function LearningExplorerSection({
                               </div>
                             ))}
                             {filterData(unit.grammar, ["structure", "usage", "example"]).length === 0 && (
-                              <div className="text-center py-8 font-mono text-xs text-pale-stone border border-dashed border-off-black/20 rounded-2xl bg-paper-canvas/10">
+                              <div className="text-center py-8 font-mono text-xs text-pale-stone border border-dashed border-off-black/20 rounded-lg bg-paper-canvas/10">
                                 {translate("No data found.")}
                               </div>
                             )}
@@ -1305,7 +1306,7 @@ export function LearningExplorerSection({
                       {/* Mobile Card View */}
                       <div className="block md:hidden space-y-4">
                         {filterData(unit.vocabulary, ["word", "type", "meaning", "example"]).map((row, idx) => (
-                          <div key={idx} className="p-3 sm:p-4 border border-off-black/10 dark:border-white/10 rounded-2xl bg-paper-canvas/30 space-y-3 font-mono text-xs">
+                          <div key={idx} className="p-3 sm:p-4 border border-off-black/10 dark:border-white/10 rounded-lg bg-paper-canvas/30 space-y-3 font-mono text-xs">
                             <div className="flex items-center justify-between border-b border-off-black/5 dark:border-white/5 pb-2">
                               <span className="text-sm font-bold text-emerald-600 dark:text-emerald-400">{row.word}</span>
                               <span className="px-2 py-0.5 rounded bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 text-xs border border-emerald-500/20 font-mono font-medium">
@@ -1319,7 +1320,7 @@ export function LearningExplorerSection({
                           </div>
                         ))}
                         {filterData(unit.vocabulary, ["word"]).length === 0 && (
-                          <div className="text-center py-8 font-mono text-xs text-pale-stone border border-dashed border-off-black/20 rounded-2xl bg-paper-canvas/10">
+                          <div className="text-center py-8 font-mono text-xs text-pale-stone border border-dashed border-off-black/20 rounded-lg bg-paper-canvas/10">
                             {translate("No data found.")}
                           </div>
                         )}
@@ -1419,7 +1420,7 @@ export function LearningExplorerSection({
                         {filterData(unit.wordFormation, ["word", "type", "meaning", "example"]).map((row, idx) => {
                           const parsedFamily = parseWordFormationMeaning(row.meaning);
                           return (
-                            <div key={idx} className="p-3 sm:p-4 border border-off-black/10 dark:border-white/10 rounded-2xl bg-paper-canvas/30 space-y-3 font-mono text-xs">
+                            <div key={idx} className="p-3 sm:p-4 border border-off-black/10 dark:border-white/10 rounded-lg bg-paper-canvas/30 space-y-3 font-mono text-xs">
                               <div className="flex items-center justify-between border-b border-off-black/5 dark:border-white/5 pb-2">
                                 <span className="text-sm font-bold text-emerald-600 dark:text-emerald-400">{row.word}</span>
                                 <span className="px-2 py-0.5 rounded bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 text-xs border border-emerald-500/20 font-mono font-medium">
@@ -1461,7 +1462,7 @@ export function LearningExplorerSection({
                           );
                         })}
                         {filterData(unit.wordFormation, ["word"]).length === 0 && (
-                          <div className="text-center py-8 font-mono text-xs text-pale-stone border border-dashed border-off-black/20 rounded-2xl bg-paper-canvas/10">
+                          <div className="text-center py-8 font-mono text-xs text-pale-stone border border-dashed border-off-black/20 rounded-lg bg-paper-canvas/10">
                             {translate("No data found.")}
                           </div>
                         )}
@@ -1528,7 +1529,7 @@ export function LearningExplorerSection({
                       {/* Mobile Card View */}
                       <div className="block md:hidden space-y-4">
                         {filterData(unit.wordPatterns, ["verb", "pattern", "meaning", "example"]).map((row, idx) => (
-                          <div key={idx} className="p-3 sm:p-4 border border-off-black/10 dark:border-white/10 rounded-2xl bg-paper-canvas/30 space-y-3 font-mono text-xs">
+                          <div key={idx} className="p-3 sm:p-4 border border-off-black/10 dark:border-white/10 rounded-lg bg-paper-canvas/30 space-y-3 font-mono text-xs">
                             <div className="flex items-center justify-between border-b border-off-black/5 dark:border-white/5 pb-2">
                               <span className="text-sm font-bold text-emerald-600 dark:text-emerald-400">{row.verb}</span>
                               <span className="px-2 py-0.5 rounded bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 text-xs border border-emerald-500/20 font-mono font-medium">
@@ -1542,7 +1543,7 @@ export function LearningExplorerSection({
                           </div>
                         ))}
                         {filterData(unit.wordPatterns, ["verb"]).length === 0 && (
-                          <div className="text-center py-8 font-mono text-xs text-pale-stone border border-dashed border-off-black/20 rounded-2xl bg-paper-canvas/10">
+                          <div className="text-center py-8 font-mono text-xs text-pale-stone border border-dashed border-off-black/20 rounded-lg bg-paper-canvas/10">
                             {translate("No data found.")}
                           </div>
                         )}
@@ -1600,7 +1601,7 @@ export function LearningExplorerSection({
                       {/* Mobile Card View */}
                       <div className="block md:hidden space-y-4">
                         {filterData(unit.phrasalVerbs, ["phrasalVerb", "meaning", "example"]).map((row, idx) => (
-                          <div key={idx} className="p-3 sm:p-4 border border-off-black/10 dark:border-white/10 rounded-2xl bg-paper-canvas/30 space-y-3 font-mono text-xs">
+                          <div key={idx} className="p-3 sm:p-4 border border-off-black/10 dark:border-white/10 rounded-lg bg-paper-canvas/30 space-y-3 font-mono text-xs">
                             <div className="border-b border-off-black/5 dark:border-white/5 pb-2">
                               <span className="text-sm font-bold text-emerald-600 dark:text-emerald-400">{row.phrasalVerb}</span>
                             </div>
@@ -1611,7 +1612,7 @@ export function LearningExplorerSection({
                           </div>
                         ))}
                         {filterData(unit.phrasalVerbs, ["phrasalVerb"]).length === 0 && (
-                          <div className="text-center py-8 font-mono text-xs text-pale-stone border border-dashed border-off-black/20 rounded-2xl bg-paper-canvas/10">
+                          <div className="text-center py-8 font-mono text-xs text-pale-stone border border-dashed border-off-black/20 rounded-lg bg-paper-canvas/10">
                             {translate("No data found.")}
                           </div>
                         )}
@@ -1663,7 +1664,7 @@ export function LearningExplorerSection({
                       {/* Mobile Card View */}
                       <div className="block md:hidden space-y-4">
                         {filterData(unit.prepositionalPhrases, ["phrase", "meaning"]).map((row, idx) => (
-                          <div key={idx} className="p-3 sm:p-4 border border-off-black/10 dark:border-white/10 rounded-2xl bg-paper-canvas/30 space-y-3 font-mono text-xs">
+                          <div key={idx} className="p-3 sm:p-4 border border-off-black/10 dark:border-white/10 rounded-lg bg-paper-canvas/30 space-y-3 font-mono text-xs">
                             <div className="border-b border-off-black/5 dark:border-white/5 pb-2">
                               <span className="text-sm font-bold text-emerald-600 dark:text-emerald-400">{row.phrase}</span>
                             </div>
@@ -1671,7 +1672,7 @@ export function LearningExplorerSection({
                           </div>
                         ))}
                         {filterData(unit.prepositionalPhrases, ["phrase"]).length === 0 && (
-                          <div className="text-center py-8 font-mono text-xs text-pale-stone border border-dashed border-off-black/20 rounded-2xl bg-paper-canvas/10">
+                          <div className="text-center py-8 font-mono text-xs text-pale-stone border border-dashed border-off-black/20 rounded-lg bg-paper-canvas/10">
                             {translate("No data found.")}
                           </div>
                         )}
@@ -1727,7 +1728,7 @@ export function LearningExplorerSection({
                       {/* Mobile Card View */}
                       <div className="block md:hidden space-y-4">
                         {filterData(unit.collocations, ["word", "collocation", "meaning"]).map((row, idx) => (
-                          <div key={idx} className="p-3 sm:p-4 border border-off-black/10 dark:border-white/10 rounded-2xl bg-paper-canvas/30 space-y-3 font-mono text-xs">
+                          <div key={idx} className="p-3 sm:p-4 border border-off-black/10 dark:border-white/10 rounded-lg bg-paper-canvas/30 space-y-3 font-mono text-xs">
                             <div className="flex items-center justify-between border-b border-off-black/5 dark:border-white/5 pb-2">
                               <span className="text-[10px] font-bold text-off-black/55 uppercase">{translate("Base Word")}: {row.word}</span>
                             </div>
@@ -1738,7 +1739,7 @@ export function LearningExplorerSection({
                           </div>
                         ))}
                         {filterData(unit.collocations, ["word"]).length === 0 && (
-                          <div className="text-center py-8 font-mono text-xs text-pale-stone border border-dashed border-off-black/20 rounded-2xl bg-paper-canvas/10">
+                          <div className="text-center py-8 font-mono text-xs text-pale-stone border border-dashed border-off-black/20 rounded-lg bg-paper-canvas/10">
                             {translate("No data found.")}
                           </div>
                         )}
@@ -1760,40 +1761,36 @@ export function LearningExplorerSection({
         drag
         dragElastic={0.1}
         dragMomentum={false}
+        whileHover={{ scale: 1.08 }}
+        whileTap={{ scale: 0.95 }}
         animate={controls}
         onDragStart={() => {
           isDraggingRef.current = true;
         }}
         onDragEnd={(event, info) => {
           if (typeof window === "undefined") return;
-          const screenWidth = window.innerWidth;
           const screenHeight = window.innerHeight;
-          const x = info.point.x;
           
-          let targetX = 0;
-          if (x < screenWidth / 2) {
-            // Snap to left edge (16px padding from left)
-            targetX = 88 - screenWidth;
-          } else {
-            // Snap to right edge (16px padding from right)
-            targetX = 8;
-          }
+          // Always snap horizontally to left edge (x = 0 relative to bottom-6 left-6 position)
+          const targetX = 0;
 
           // Constrain Y within safe vertical boundaries
           let targetY = info.offset.y;
-          const initialY = screenHeight - 144; // Approx top position based on bottom-24
+          const initialY = screenHeight - 72; // Button initial top Y position (bottom-6)
           const currentY = initialY + targetY;
+          const minY = 80;
+          const maxY = screenHeight - 80;
           
-          if (currentY < 80) {
-            targetY = 224 - screenHeight;
-          } else if (currentY > screenHeight - 80) {
-            targetY = 64;
+          if (currentY < minY) {
+            targetY = minY - initialY;
+          } else if (currentY > maxY) {
+            targetY = maxY - initialY;
           }
 
           controls.start({
             x: targetX,
             y: targetY,
-            transition: { type: "spring", stiffness: 300, damping: 20 }
+            transition: { type: "spring", stiffness: 300, damping: 22 }
           });
           
           setTimeout(() => {
@@ -1804,20 +1801,25 @@ export function LearningExplorerSection({
           if (isDraggingRef.current) return;
           setIsMobileDrawerOpen(true);
         }}
-        className="fixed bottom-24 right-6 z-40 w-12 h-12 rounded-full shadow-xl flex items-center justify-center border border-off-black/15 dark:border-white/15 text-ink cursor-pointer overflow-hidden bg-paper-canvas/80 dark:bg-zinc-950/80 backdrop-blur-md md:backdrop-blur-none"
+        className="fixed bottom-6 left-6 z-40 w-12 h-12 rounded-full shadow-xl flex items-center justify-center cursor-pointer border-none bg-transparent p-0 outline-none"
         style={{ touchAction: "none" }}
       >
-        {/* Gradual Blur Background */}
-        <GradualBlur
-          preset="smooth"
-          strength={15}
-          zIndex={0}
-          height="100%"
-          width="100%"
-          className="absolute inset-0 rounded-full overflow-hidden"
-          refractive={true}
-        />
-        <Menu className="w-5 h-5 relative z-10 text-ink" />
+        {/* Liquid Glass Background */}
+        <GlassSurface
+          width={48}
+          height={48}
+          borderRadius={9999}
+          borderWidth={0.08}
+          brightness={65}
+          opacity={0.9}
+          blur={12}
+          displace={0.3}
+          backgroundOpacity={0.15}
+          saturation={1.2}
+          className="w-full h-full rounded-full flex items-center justify-center text-ink shadow-[0_8px_20px_rgba(0,0,0,0.15)] border border-off-black/15 dark:border-white/15 overflow-hidden"
+        >
+          <Menu className="w-5 h-5 relative z-10 text-ink" />
+        </GlassSurface>
       </motion.button>
 
       {/* Drawer Overlay & Bottom Sheet */}
@@ -1873,7 +1875,7 @@ export function LearningExplorerSection({
                   restWidth={250}
                   restHeight={50}
                   gap={12}
-                  radius={10}
+                  radius={8}
                   showArrows={true}
                   arrowSize={28}
                   arrowColor="var(--color-ink)"
@@ -1883,7 +1885,7 @@ export function LearningExplorerSection({
                     return (
                       <div
                         className={cn(
-                          "w-full h-full text-left p-3 flex flex-col gap-0.5 justify-center items-start font-mono text-xs border-2 transition-all duration-200 select-none cursor-pointer rounded-2xl",
+                          "w-full h-full text-left p-3 flex flex-col gap-0.5 justify-center items-start font-mono text-xs border-2 transition-all duration-200 select-none cursor-pointer rounded-lg",
                           isActive
                             ? "bg-atmosphere-wash/50 dark:bg-atmosphere-wash/20 border-off-black text-ink font-bold"
                             : "bg-paper-canvas/40 border-transparent text-pale-stone/80 hover:text-ink hover:border-off-black/10"

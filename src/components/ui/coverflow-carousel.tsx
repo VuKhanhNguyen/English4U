@@ -315,8 +315,18 @@ export default function CoverflowCarousel<T>({
     ensureRunning()
   }, [ensureRunning])
 
+  // Dragging state & refs for mouse/touch vertical drag scrolling
+  const [isPointerDragging, setIsPointerDragging] = React.useState(false)
+  const isDraggingRef = useRef(false)
+  const dragStartYRef = useRef(0)
+  const dragStartPosRef = useRef(0)
+  const lastMoveYRef = useRef(0)
+  const lastMoveTimeRef = useRef(0)
+  const isPointerDownRef = useRef(false)
+
   const goTo = useCallback(
     (index: number) => {
+      if (isDraggingRef.current) return
       const cur = targetRef.current
       const wrapped = ((cur % count) + count) % count
       let d = index - wrapped
@@ -327,6 +337,73 @@ export default function CoverflowCarousel<T>({
     },
     [ensureRunning, count]
   )
+
+  const handlePointerDown = (e: React.PointerEvent<HTMLDivElement>) => {
+    if (e.button !== undefined && e.button !== 0) return
+    isPointerDownRef.current = true
+    dragStartYRef.current = e.clientY
+    dragStartPosRef.current = pos.get()
+    lastMoveYRef.current = e.clientY
+    lastMoveTimeRef.current = performance.now()
+    isDraggingRef.current = false
+  }
+
+  useEffect(() => {
+    const handlePointerMove = (e: PointerEvent) => {
+      if (!isPointerDownRef.current) return
+      const dy = e.clientY - dragStartYRef.current
+      
+      if (!isDraggingRef.current && Math.abs(dy) > 4) {
+        isDraggingRef.current = true
+        setIsPointerDragging(true)
+      }
+
+      if (isDraggingRef.current) {
+        const stepHeight = sizing.restHeight + gap
+        const deltaIndex = -dy / stepHeight
+        const nextPos = dragStartPosRef.current + deltaIndex
+        pos.set(nextPos)
+
+        lastMoveYRef.current = e.clientY
+        lastMoveTimeRef.current = performance.now()
+      }
+    }
+
+    const handlePointerUp = (e: PointerEvent) => {
+      if (!isPointerDownRef.current) return
+      isPointerDownRef.current = false
+
+      if (isDraggingRef.current) {
+        const now = performance.now()
+        const dt = (now - lastMoveTimeRef.current) / 1000
+        const dyVelocity = dt > 0 ? (e.clientY - lastMoveYRef.current) / dt : 0
+        
+        let rounded = Math.round(pos.get())
+        if (Math.abs(dyVelocity) > 200) {
+          const flickStep = Math.round(-dyVelocity / 400)
+          const clampedFlick = Math.max(-3, Math.min(3, flickStep))
+          rounded += clampedFlick
+        }
+
+        targetRef.current = rounded
+        ensureRunning()
+
+        setTimeout(() => {
+          isDraggingRef.current = false
+          setIsPointerDragging(false)
+        }, 50)
+      }
+    }
+
+    window.addEventListener("pointermove", handlePointerMove)
+    window.addEventListener("pointerup", handlePointerUp)
+    window.addEventListener("pointercancel", handlePointerUp)
+    return () => {
+      window.removeEventListener("pointermove", handlePointerMove)
+      window.removeEventListener("pointerup", handlePointerUp)
+      window.removeEventListener("pointercancel", handlePointerUp)
+    }
+  }, [pos, sizing, gap, ensureRunning])
 
   // Keyboard navigation
   const isHoveredRef = useRef(false)
@@ -399,6 +476,8 @@ export default function CoverflowCarousel<T>({
     overflow: "hidden",
     userSelect: "none",
     outline: "none",
+    touchAction: "none",
+    cursor: isPointerDragging ? "grabbing" : "grab",
   }
 
   const cards = items.map((item, i) => {
@@ -432,6 +511,7 @@ export default function CoverflowCarousel<T>({
     <div
       ref={containerRef}
       tabIndex={0}
+      onPointerDown={handlePointerDown}
       onMouseEnter={() => {
         isHoveredRef.current = true
       }}

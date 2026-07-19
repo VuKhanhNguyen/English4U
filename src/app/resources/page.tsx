@@ -768,7 +768,7 @@ export default function ResourcesPage() {
                   {/* Mobile Card View */}
                   <div className="block md:hidden space-y-4">
                     {paginatedItems.map((row: any, idx) => (
-                      <div key={idx} className="p-3 sm:p-4 border border-off-black/10 dark:border-white/10 rounded-2xl bg-paper-canvas/30 space-y-3 font-mono text-xs">
+                      <div key={idx} className="p-3 sm:p-4 border border-off-black/10 dark:border-white/10 rounded-lg bg-paper-canvas/30 space-y-3 font-mono text-xs">
                         <div className="flex items-center justify-between border-b border-off-black/5 dark:border-white/5 pb-2">
                           <span className="text-[10px] font-bold text-pale-stone">#{ (currentPage - 1) * itemsPerPage + idx + 1 }</span>
                           <span className="px-2 py-0.5 rounded bg-sky-500/10 text-sky-600 dark:text-sky-400 text-[10px] border border-sky-500/20 whitespace-nowrap inline-block font-semibold">
@@ -844,7 +844,7 @@ export default function ResourcesPage() {
                   {/* Mobile Card View */}
                   <div className="block md:hidden space-y-4">
                     {paginatedItems.map((row: any, idx) => (
-                      <div key={idx} className="p-3 sm:p-4 border border-off-black/10 dark:border-white/10 rounded-2xl bg-paper-canvas/30 space-y-3 font-mono text-xs">
+                      <div key={idx} className="p-3 sm:p-4 border border-off-black/10 dark:border-white/10 rounded-lg bg-paper-canvas/30 space-y-3 font-mono text-xs">
                         <div className="flex items-center justify-between border-b border-off-black/5 dark:border-white/5 pb-2">
                           <span className="text-[10px] font-bold text-pale-stone">#{ (currentPage - 1) * itemsPerPage + idx + 1 }</span>
                            <span className="px-2 py-0.5 rounded bg-sky-500/10 text-sky-600 dark:text-sky-400 text-[10px] border border-sky-500/20 whitespace-nowrap inline-block font-semibold">
@@ -917,7 +917,7 @@ export default function ResourcesPage() {
                   {/* Mobile Card View */}
                   <div className="block md:hidden space-y-4">
                     {paginatedItems.map((row: any, idx) => (
-                      <div key={idx} className="p-3 sm:p-4 border border-off-black/10 dark:border-white/10 rounded-2xl bg-paper-canvas/30 space-y-3 font-mono text-xs">
+                      <div key={idx} className="p-3 sm:p-4 border border-off-black/10 dark:border-white/10 rounded-lg bg-paper-canvas/30 space-y-3 font-mono text-xs">
                         <div className="flex items-center justify-between border-b border-off-black/5 dark:border-white/5 pb-2">
                           <span className="text-[10px] font-bold text-pale-stone">#{ (currentPage - 1) * itemsPerPage + idx + 1 }</span>
                            <span className="px-2 py-0.5 rounded bg-sky-500/10 text-sky-600 dark:text-sky-400 text-[10px] border border-sky-500/20 whitespace-nowrap inline-block font-semibold">
@@ -1050,7 +1050,7 @@ export default function ResourcesPage() {
                     {paginatedItems.map((row: any, idx) => {
                       const parsedFamily = parseWordFormationMeaning(row.meaning);
                       return (
-                        <div key={idx} className="p-3 sm:p-4 border border-off-black/10 dark:border-white/10 rounded-2xl bg-paper-canvas/30 space-y-3 font-mono text-xs">
+                        <div key={idx} className="p-3 sm:p-4 border border-off-black/10 dark:border-white/10 rounded-lg bg-paper-canvas/30 space-y-3 font-mono text-xs">
                           <div className="flex items-center justify-between border-b border-off-black/5 dark:border-white/5 pb-2">
                             <span className="text-[10px] font-bold text-pale-stone">#{ (currentPage - 1) * itemsPerPage + idx + 1 }</span>
                             <span className="px-2 py-0.5 rounded bg-sky-500/10 text-sky-600 dark:text-sky-400 text-[10px] border border-sky-500/20 whitespace-nowrap inline-block font-semibold">
@@ -1154,7 +1154,7 @@ export default function ResourcesPage() {
                   {/* Mobile Card View */}
                   <div className="block md:hidden space-y-4">
                     {paginatedItems.map((row: any, idx) => (
-                      <div key={idx} className="p-3 sm:p-4 border border-off-black/10 dark:border-white/10 rounded-2xl bg-paper-canvas/30 space-y-3 font-mono text-xs">
+                      <div key={idx} className="p-3 sm:p-4 border border-off-black/10 dark:border-white/10 rounded-lg bg-paper-canvas/30 space-y-3 font-mono text-xs">
                         <div className="flex items-center justify-between border-b border-off-black/5 dark:border-white/5 pb-2">
                           <span className="text-[10px] font-bold text-pale-stone">#{ (currentPage - 1) * itemsPerPage + idx + 1 }</span>
                            <span className="px-2 py-0.5 rounded bg-sky-500/10 text-sky-600 dark:text-sky-400 text-[10px] border border-sky-500/20 whitespace-nowrap inline-block font-semibold">
@@ -1236,7 +1236,7 @@ export default function ResourcesPage() {
                   {/* Mobile Card View */}
                   <div className="block md:hidden space-y-4">
                     {paginatedItems.map((row: any, idx) => (
-                      <div key={idx} className="p-3 sm:p-4 border border-off-black/10 dark:border-white/10 rounded-2xl bg-paper-canvas/30 space-y-3 font-mono text-xs">
+                      <div key={idx} className="p-3 sm:p-4 border border-off-black/10 dark:border-white/10 rounded-lg bg-paper-canvas/30 space-y-3 font-mono text-xs">
                         <div className="flex items-center justify-between border-b border-off-black/5 dark:border-white/5 pb-2">
                           <span className="text-[10px] font-bold text-pale-stone">#{ (currentPage - 1) * itemsPerPage + idx + 1 }</span>
                            <span className="px-2 py-0.5 rounded bg-sky-500/10 text-sky-600 dark:text-sky-400 text-[10px] border border-sky-500/20 whitespace-nowrap inline-block font-semibold">

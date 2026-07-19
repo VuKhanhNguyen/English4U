@@ -51,17 +51,27 @@ export function HeroSection({
             )}
           </h1>
 
-          <TextType
-            key={text3}
-            text={text3}
-            as="p"
-            typingSpeed={25}
-            deletingSpeed={12}
-            pauseDuration={4000}
-            loop={true}
-            className="mt-6 text-subheading md:text-heading-sm font-mono font-normal tracking-[-0.02em] text-pale-stone dark:text-[#eae6df] max-w-2xl min-h-[4em]"
-            cursorClassName="font-light text-off-black dark:text-stardust-gold"
-          />
+          <div className="relative mt-6 max-w-2xl w-full">
+            <p
+              className="text-subheading md:text-heading-sm font-mono font-normal tracking-[-0.02em] opacity-0 pointer-events-none select-none text-center"
+              aria-hidden="true"
+            >
+              {text3}
+            </p>
+            <div className="absolute inset-0 flex items-center justify-center">
+              <TextType
+                key={text3}
+                text={text3}
+                as="p"
+                typingSpeed={25}
+                deletingSpeed={12}
+                pauseDuration={4000}
+                loop={true}
+                className="text-subheading md:text-heading-sm font-mono font-normal tracking-[-0.02em] text-pale-stone dark:text-[#eae6df] text-center w-full"
+                cursorClassName="font-light text-off-black dark:text-stardust-gold"
+              />
+            </div>
+          </div>
         </div>
       </section>
     );
@@ -90,20 +100,31 @@ export function HeroSection({
               )}
             </h1>
 
-            <TextType
-              key={text3}
-              text={text3}
-              as="p"
-              typingSpeed={25}
-              deletingSpeed={12}
-              pauseDuration={4000}
-              loop={true}
-              className="mt-6 text-subheading md:text-heading-sm font-sans font-normal tracking-[-0.02em] text-pale-stone dark:text-[#eae6df] text-left max-w-xl w-full min-h-[4em]"
-              cursorClassName="font-light text-off-black dark:text-stardust-gold"
-            />
+            {/* Typewriter wrapper reserving full text height to prevent layout shift */}
+            <div className="relative mt-6 max-w-xl w-full">
+              <p
+                className="text-subheading md:text-heading-sm font-sans font-normal tracking-[-0.02em] opacity-0 pointer-events-none select-none text-left"
+                aria-hidden="true"
+              >
+                {text3}
+              </p>
+              <div className="absolute inset-0">
+                <TextType
+                  key={text3}
+                  text={text3}
+                  as="p"
+                  typingSpeed={25}
+                  deletingSpeed={12}
+                  pauseDuration={4000}
+                  loop={true}
+                  className="text-subheading md:text-heading-sm font-sans font-normal tracking-[-0.02em] text-pale-stone dark:text-[#eae6df] text-left w-full"
+                  cursorClassName="font-light text-off-black dark:text-stardust-gold"
+                />
+              </div>
+            </div>
 
             <motion.div
-              className="flex flex-col sm:flex-row gap-4 mt-8 w-full sm:w-auto"
+              className="flex flex-col sm:flex-row gap-4 mt-10 sm:mt-12 w-full sm:w-auto"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
