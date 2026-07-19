@@ -10,7 +10,7 @@ import { useLanguage } from "@/components/providers/language-provider";
 import { useTheme } from "@/components/providers/theme-provider";
 import { showToast } from "@/components/ui/toast";
 import { usePwa } from "@/components/providers/pwa-provider";
-import GradualBlur from "@/components/ui/gradual-blur";
+import GlassSurface from "@/components/GlassSurface";
 
 export function Navbar() {
   const [isScrolled, setIsScrolled] = React.useState(false);
@@ -60,19 +60,22 @@ export function Navbar() {
 
   return (
     <header className="fixed top-4 left-0 right-0 z-50 px-4 md:px-8 pointer-events-none font-abc-diatype-mono">
-      <div
-        className={`relative mx-auto max-w-6xl w-full h-[64px] flex items-center justify-between px-6 rounded-full  border-off-black bg-white/5 dark:bg-black/10 backdrop-blur-md md:backdrop-blur-none transition-all duration-300 pointer-events-auto shadow-[4px_4px_12px_0px_var(--shadow-3d-color)]`}
+      <GlassSurface
+        width="100%"
+        height={64}
+        borderRadius={9999}
+        borderWidth={0.06}
+        brightness={isDark ? 40 : 80}
+        opacity={isDark ? 0.85 : 0.95}
+        blur={12}
+        displace={0.4}
+        backgroundOpacity={isDark ? 0.15 : 0.08}
+        saturation={1.2}
+        distortionScale={-140}
+        className="mx-auto max-w-6xl w-full pointer-events-auto shadow-[4px_4px_20px_0px_var(--shadow-3d-color)]"
+        style={{ overflow: "visible" }}
       >
-        {/* Gradual Blur & Refraction Background */}
-        <GradualBlur
-          preset="smooth"
-          strength={15}
-          zIndex={0}
-          height="100%"
-          width="100%"
-          className="absolute inset-0 rounded-full overflow-hidden"
-          refractive={true}
-        />
+        <div className="w-full h-full flex items-center justify-between px-3 md:px-5 relative z-10">
 
         <Link
           href="/"
@@ -423,7 +426,8 @@ export function Navbar() {
         >
             <Menu className="w-[24px] h-[24px]" />
         </button>
-      </div>
+        </div>
+      </GlassSurface>
 
       <AnimatePresence>
         {isMobileMenuOpen && (

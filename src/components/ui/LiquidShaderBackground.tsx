@@ -21,7 +21,12 @@ const VERTEX_SHADER_SOURCE = `
 `;
 
 const FRAGMENT_SHADER_SOURCE = `
+  #ifdef GL_FRAGMENT_PRECISION_HIGH
+  precision highp float;
+  #else
   precision mediump float;
+  #endif
+
   varying vec2 v_uv;
   uniform sampler2D u_texture;
   uniform vec2 u_resolution;
@@ -34,9 +39,11 @@ const FRAGMENT_SHADER_SOURCE = `
   uniform float u_chromatic_aberration;
   uniform float u_speed;
 
-  // Simple pseudo-random hash
+  // Safe hash without floating-point overflow
   float hash(vec2 p) {
-    return fract(sin(dot(p, vec2(127.1, 311.7))) * 43758.5453123);
+    p = fract(p * vec2(123.34, 456.21));
+    p += dot(p, p + 45.32);
+    return fract(p.x * p.y);
   }
 
   // 2D Noise
@@ -48,12 +55,11 @@ const FRAGMENT_SHADER_SOURCE = `
                mix(hash(i + vec2(0.0, 1.0)), hash(i + vec2(1.0, 1.0)), u.x), u.y);
   }
 
-  // Fractal Brownian Motion (FBM) noise - Unrolled for strict WebGL 1.0 compatibility
+  // Fractal Brownian Motion (FBM) noise - Unrolled for WebGL 1.0 compatibility
   float fbm(vec2 p) {
     float v = 0.0;
     float a = 0.5;
-    vec2 shift = vec2(100.0);
-    // Constant rotation matrix (cos(0.5) = 0.87758, sin(0.5) = 0.47943)
+    vec2 shift = vec2(10.0);
     mat2 rot = mat2(0.87758, 0.47943, -0.47943, 0.87758);
     
     // Iteration 1
@@ -123,7 +129,7 @@ const FRAGMENT_SHADER_SOURCE = `
       if (dist_from_front < width) {
         float strength = 1.0 - (dist_from_front / width);
         float decay = pow(1.0 - (u_click_time / 1.6), 2.0); // Fades over time
-        float wave = sin(dist_from_front * (2.0 * 3.14159265 / width)) * 0.5 + 0.5;
+        float wave = sin(dist_from_front * (6.2831853 / width)) * 0.5 + 0.5;
         click_disp = normalize(click_diff) * wave * strength * decay * 0.045 * u_distortion_intensity;
       }
     }
@@ -194,7 +200,10 @@ export default function LiquidShaderBackground({
       gl.shaderSource(shader, source);
       gl.compileShader(shader);
       if (!gl.getShaderParameter(shader, gl.COMPILE_STATUS)) {
-        console.error("Shader compilation error:", gl.getShaderInfoLog(shader));
+        const info = gl.getShaderInfoLog(shader);
+        if (info) {
+          console.warn("WebGL Shader compilation note:", info);
+        }
         gl.deleteShader(shader);
         return null;
       }

@@ -34,7 +34,7 @@ const Card = React.forwardRef<HTMLDivElement, CardProps>(
         {...props}
       >
         {isGlass && <div className="liquid-glass-bg" />}
-        {children}
+        <div className="relative z-10 w-full h-full">{children}</div>
       </div>
     )
   }

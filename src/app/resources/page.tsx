@@ -10,6 +10,7 @@ import { Footer } from "@/components/layout/footer";
 import LiquidShaderBackground from "@/components/ui/LiquidShaderBackground";
 import { useLanguage } from "@/components/providers/language-provider";
 import NextLink from "next/link";
+import GlitchText from "@/components/GlitchText";
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -486,9 +487,9 @@ export default function ResourcesPage() {
       count: vocabulary.length,
       unit: "words",
       textColor: "text-emerald-600 dark:text-emerald-400",
-      borderColor: "border-l-emerald-500/40 hover:border-l-emerald-500 hover:bg-emerald-500/5 dark:hover:bg-emerald-950/10",
-      activeStyle: "bg-emerald-500/10 border-l-emerald-500 border-emerald-500/20 dark:bg-emerald-500/5",
-      gridClasses: "col-span-1 lg:col-span-4",
+      accentBg: "bg-emerald-500",
+      borderColor: "hover:border-emerald-500/50 hover:bg-emerald-500/5 dark:hover:bg-emerald-950/20",
+      activeStyle: "bg-emerald-500/10 border-emerald-500 dark:bg-emerald-500/15 shadow-sm ring-1 ring-emerald-500/30",
     },
     {
       key: "phrasalVerbs",
@@ -496,9 +497,9 @@ export default function ResourcesPage() {
       count: phrasalVerbs.length,
       unit: "items",
       textColor: "text-orange-600 dark:text-orange-400",
-      borderColor: "border-l-orange-500/40 hover:border-l-orange-500 hover:bg-orange-500/5 dark:hover:bg-orange-950/10",
-      activeStyle: "bg-orange-500/10 border-l-orange-500 border-orange-500/20 dark:bg-orange-500/5",
-      gridClasses: "col-span-1 lg:col-span-4",
+      accentBg: "bg-orange-500",
+      borderColor: "hover:border-orange-500/50 hover:bg-orange-500/5 dark:hover:bg-orange-950/20",
+      activeStyle: "bg-orange-500/10 border-orange-500 dark:bg-orange-500/15 shadow-sm ring-1 ring-orange-500/30",
     },
     {
       key: "prepositionalPhrases",
@@ -506,9 +507,9 @@ export default function ResourcesPage() {
       count: prepositionalPhrases.length,
       unit: "phrases",
       textColor: "text-sky-600 dark:text-sky-400",
-      borderColor: "border-l-sky-500/40 hover:border-l-sky-500 hover:bg-sky-500/5 dark:hover:bg-sky-950/10",
-      activeStyle: "bg-sky-500/10 border-l-sky-500 border-sky-500/20 dark:bg-sky-500/5",
-      gridClasses: "col-span-1 lg:col-span-4",
+      accentBg: "bg-sky-500",
+      borderColor: "hover:border-sky-500/50 hover:bg-sky-500/5 dark:hover:bg-sky-950/20",
+      activeStyle: "bg-sky-500/10 border-sky-500 dark:bg-sky-500/15 shadow-sm ring-1 ring-sky-500/30",
     },
     {
       key: "wordFormation",
@@ -516,9 +517,9 @@ export default function ResourcesPage() {
       count: wordFormation.length,
       unit: "forms",
       textColor: "text-teal-600 dark:text-teal-400",
-      borderColor: "border-l-teal-500/40 hover:border-l-teal-500 hover:bg-teal-500/5 dark:hover:bg-teal-950/10",
-      activeStyle: "bg-teal-500/10 border-l-teal-500 border-teal-500/20 dark:bg-teal-500/5",
-      gridClasses: "col-span-1 lg:col-span-4",
+      accentBg: "bg-teal-500",
+      borderColor: "hover:border-teal-500/50 hover:bg-teal-500/5 dark:hover:bg-teal-950/20",
+      activeStyle: "bg-teal-500/10 border-teal-500 dark:bg-teal-500/15 shadow-sm ring-1 ring-teal-500/30",
     },
     {
       key: "wordPatterns",
@@ -526,9 +527,9 @@ export default function ResourcesPage() {
       count: wordPatterns.length,
       unit: "patterns",
       textColor: "text-rose-600 dark:text-rose-400",
-      borderColor: "border-l-rose-500/40 hover:border-l-rose-500 hover:bg-rose-500/5 dark:hover:bg-rose-950/10",
-      activeStyle: "bg-rose-500/10 border-l-rose-500 border-rose-500/20 dark:bg-rose-500/5",
-      gridClasses: "col-span-1 lg:col-span-4",
+      accentBg: "bg-rose-500",
+      borderColor: "hover:border-rose-500/50 hover:bg-rose-500/5 dark:hover:bg-rose-950/20",
+      activeStyle: "bg-rose-500/10 border-rose-500 dark:bg-rose-500/15 shadow-sm ring-1 ring-rose-500/30",
     },
     {
       key: "collocations",
@@ -536,9 +537,9 @@ export default function ResourcesPage() {
       count: collocations.length,
       unit: "items",
       textColor: "text-amber-600 dark:text-amber-400",
-      borderColor: "border-l-amber-500/40 hover:border-l-amber-500 hover:bg-amber-500/5 dark:hover:bg-amber-950/10",
-      activeStyle: "bg-amber-500/10 border-l-amber-500 border-amber-500/20 dark:bg-amber-500/5",
-      gridClasses: "col-span-1 lg:col-span-4",
+      accentBg: "bg-amber-500",
+      borderColor: "hover:border-amber-500/50 hover:bg-amber-500/5 dark:hover:bg-amber-950/20",
+      activeStyle: "bg-amber-500/10 border-amber-500 dark:bg-amber-500/15 shadow-sm ring-1 ring-amber-500/30",
     },
   ], [vocabulary.length, phrasalVerbs.length, prepositionalPhrases.length, wordFormation.length, wordPatterns.length, collocations.length]);
 
@@ -576,53 +577,85 @@ export default function ResourcesPage() {
             </Breadcrumb>
           </motion.div>
           {/* Header Title Card */}
-          <Card variant="content" className="mb-12 flex flex-col lg:flex-row items-start lg:items-center justify-between !p-4 sm:!p-8 md:!p-12 relative overflow-hidden">
-            <div className="absolute top-0 right-0 w-32 h-32 bg-atmosphere-wash/20 rounded-full blur-2xl pointer-events-none" />
-            
-            <div className="space-y-4 max-w-2xl mb-8 lg:mb-0">
-              <div className="flex flex-wrap gap-2">
-                <span className="px-3 py-1 rounded-full bg-sky-500/10 text-sky-600 dark:text-sky-400 text-xs border border-sky-500/20 font-mono font-bold uppercase tracking-wider">
-                  B1
-                </span>
-                <span className="px-3 py-1 rounded-full bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 text-xs border border-emerald-500/20 font-mono font-bold uppercase tracking-wider">
-                  B2
-                </span>
-                <span className="px-3 py-1 rounded-full bg-amber-500/10 text-amber-600 dark:text-amber-400 text-xs border border-amber-500/20 font-mono font-bold uppercase tracking-wider">
-                  C1 · C2
+          <Card variant="content" className="mb-12 !p-6 sm:!p-10 md:!p-12 relative overflow-hidden">
+            <div className="absolute top-0 right-0 w-80 h-80 bg-blue-500/10 rounded-full blur-3xl pointer-events-none" />
+            <div className="absolute bottom-0 left-0 w-80 h-80 bg-purple-500/10 rounded-full blur-3xl pointer-events-none" />
+
+            <div className="relative z-10">
+              {/* Top Meta Bar */}
+              <div className="flex items-center justify-between gap-4 mb-6">
+                <div className="flex flex-wrap items-center gap-2">
+                  <span className="px-3 py-1 rounded-full bg-sky-500/10 text-sky-600 dark:text-sky-400 text-xs border border-sky-500/20 font-mono font-bold uppercase tracking-wider">
+                    B1
+                  </span>
+                  <span className="px-3 py-1 rounded-full bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 text-xs border border-emerald-500/20 font-mono font-bold uppercase tracking-wider">
+                    B2
+                  </span>
+                  <span className="px-3 py-1 rounded-full bg-amber-500/10 text-amber-600 dark:text-amber-400 text-xs border border-amber-500/20 font-mono font-bold uppercase tracking-wider">
+                    C1 · C2
+                  </span>
+                </div>
+
+                <span className="text-[11px] font-mono font-semibold text-pale-stone flex items-center gap-1.5 px-3 py-1 rounded-full bg-paper-canvas/60 dark:bg-zinc-900/60 border border-off-black/10 dark:border-white/10 shrink-0">
+                  <span className="w-2 h-2 rounded-full bg-emerald-500 animate-ping" />
+                  3,500+ {translate("Records")}
                 </span>
               </div>
-              <h1 className="text-heading-lg font-heading font-bold text-gradient-heading leading-tight mb-4 pb-1">
-                {translate("All-in-One Destination Synthesis")}
-              </h1>
-              
-              <p className="text-body font-mono text-pale-stone">
-                {translate("A unified compilation of all vocabulary, phrasal verbs, prepositional phrases, word formations, word patterns, and collocations across Destination B1, B2, C1 & C2. Search the entire database instantly.")}
-              </p>
-            </div>
 
-            <div className="mt-8 lg:mt-0 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-12 gap-y-5 gap-x-4 lg:gap-x-2 w-full lg:w-[650px] shrink-0 font-mono border-t lg:border-t-0 lg:border-l border-off-black/10 pt-6 lg:pt-0 lg:pl-8">
-              {stats.map((stat) => {
-                const isActive = activeTab === stat.key;
-                return (
-                  <div
-                    key={stat.key}
-                    onClick={() => setActiveTab(stat.key)}
-                    className={cn(
-                      "flex flex-col justify-between p-3.5 rounded-xl border border-off-black/10 dark:border-white/10 transition-all duration-300 cursor-pointer select-none border-l-4 hover:scale-[1.02] active:scale-[0.98]",
-                      stat.borderColor,
-                      stat.gridClasses,
-                      isActive ? stat.activeStyle : "bg-transparent"
-                    )}
-                  >
-                    <p className="text-[10px] sm:text-caption text-pale-stone uppercase tracking-wider mb-1">
-                      {translate(stat.label)}
-                    </p>
-                    <p className={cn("text-body sm:text-subheading font-bold leading-none mt-1 whitespace-nowrap", stat.textColor)}>
-                      {stat.count} <span className="text-xs sm:text-caption font-normal text-pale-stone">{translate(stat.unit)}</span>
-                    </p>
+              {/* Main Grid Content */}
+              <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+                {/* Left Column: Heading & Description */}
+                <div className="lg:col-span-6 flex flex-col justify-center">
+                  <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-heading font-bold leading-tight mb-4 pb-1">
+                    <GlitchText className="text-gradient-heading" enableOnHover={false}>
+                      {translate("All-in-One Destination Synthesis")}
+                    </GlitchText>
+                  </h1>
+
+                  <p className="text-sm sm:text-base font-mono text-pale-stone leading-relaxed">
+                    {translate("A unified compilation of all vocabulary, phrasal verbs, prepositional phrases, word formations, word patterns, and collocations across Destination B1, B2, C1 & C2. Search the entire database instantly.")}
+                  </p>
+                </div>
+
+                {/* Right Column: 6 Interactive Stat Cards Grid */}
+                <div className="lg:col-span-6 w-full">
+                  <div className="grid grid-cols-2 sm:grid-cols-3 gap-3.5 sm:gap-4 font-mono">
+                    {stats.map((stat) => {
+                      const isActive = activeTab === stat.key;
+                      return (
+                        <div
+                          key={stat.key}
+                          onClick={() => setActiveTab(stat.key)}
+                          className={cn(
+                            "flex flex-col justify-between p-4 rounded-xl border transition-all duration-300 cursor-pointer select-none relative overflow-hidden group hover:scale-[1.03] active:scale-[0.98]",
+                            isActive 
+                              ? stat.activeStyle 
+                              : cn("bg-paper-canvas/40 dark:bg-zinc-900/40 border-off-black/10 dark:border-white/10", stat.borderColor)
+                          )}
+                        >
+                          {/* Top Accent Dot & Label */}
+                          <div className="flex items-center justify-between mb-3">
+                            <span className={cn("w-2.5 h-2.5 rounded-full shrink-0", stat.accentBg)} />
+                            <span className="text-[10px] sm:text-caption font-bold text-pale-stone uppercase tracking-wider text-right">
+                              {translate(stat.label)}
+                            </span>
+                          </div>
+
+                          {/* Count & Unit */}
+                          <div>
+                            <p className={cn("text-lg sm:text-2xl font-bold leading-tight", stat.textColor)}>
+                              {stat.count}
+                            </p>
+                            <p className="text-[11px] font-normal text-pale-stone mt-0.5">
+                              {translate(stat.unit)}
+                            </p>
+                          </div>
+                        </div>
+                      );
+                    })}
                   </div>
-                );
-              })}
+                </div>
+              </div>
             </div>
           </Card>
 

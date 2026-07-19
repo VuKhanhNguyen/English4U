@@ -24,6 +24,7 @@ import {
   BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb";
 import NextLink from "next/link";
+import GlitchText from "@/components/GlitchText";
 
 export default function ContactPage() {
   const { translate } = useLanguage();
@@ -264,9 +265,11 @@ export default function ContactPage() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, ease: "easeOut" }}
-              className="font-heading text-4xl sm:text-6xl md:text-8xl text-gradient-heading tracking-tight font-normal leading-[1.05] pb-1"
+              className="font-heading text-4xl sm:text-6xl md:text-8xl tracking-tight font-normal leading-[1.05] pb-1"
             >
-              {translate("Keep in touch.")}
+              <GlitchText className="text-gradient-heading" enableOnHover={false}>
+                {translate("Keep in touch.")}
+              </GlitchText>
             </motion.h1>
             
             <motion.p 
@@ -407,8 +410,10 @@ export default function ContactPage() {
               
               <div className="relative z-10 flex flex-col gap-6 w-full">
                 <div className="flex flex-col gap-3">
-                  <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl text-gradient-heading font-normal leading-tight">
-                    {translate("Let's create something together.")}
+                  <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl font-normal leading-tight">
+                    <GlitchText className="text-gradient-heading" enableOnHover={false}>
+                      {translate("Let's create something together.")}
+                    </GlitchText>
                   </h2>
                   <p className="font-sans text-xs sm:text-sm md:text-base text-pale-stone leading-relaxed">
                     {translate("Feel free to reach out via the form, or connect with me through social media.")}

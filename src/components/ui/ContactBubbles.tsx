@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { MessageCircle, X } from "lucide-react";
+import { X } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 export default function ContactBubbles() {
@@ -116,7 +116,7 @@ export default function ContactBubbles() {
       <button
         onClick={() => setIsOpen(!isOpen)}
         className={cn(
-          "w-14 h-14 rounded-full border-2 border-ink dark:border-off-black bg-paper-canvas dark:bg-atmosphere-wash text-ink dark:text-off-black flex items-center justify-center z-50 cursor-pointer",
+          "w-14 h-14 rounded-full border-2 border-ink dark:border-off-black bg-paper-canvas dark:bg-atmosphere-wash text-ink dark:text-off-black flex items-center justify-center z-50 cursor-pointer overflow-hidden p-0",
           "shadow-[4px_4px_0px_0px_var(--ink)] dark:shadow-[4px_4px_0px_0px_var(--off-black)]",
           "hover:translate-x-[-2px] hover:translate-y-[-2px] hover:shadow-[6px_6px_0px_0px_var(--ink)] dark:hover:shadow-[6px_6px_0px_0px_var(--off-black)]",
           "active:translate-x-[2px] active:translate-y-[2px] active:shadow-[2px_2px_0px_0px_var(--ink)] dark:active:shadow-[2px_2px_0px_0px_var(--off-black)]",
@@ -126,12 +126,16 @@ export default function ContactBubbles() {
         <motion.div
           animate={{ rotate: isOpen ? 180 : 0 }}
           transition={{ duration: 0.3 }}
-          className="flex items-center justify-center"
+          className="w-full h-full flex items-center justify-center"
         >
           {isOpen ? (
             <X className="w-6 h-6" />
           ) : (
-            <MessageCircle className="w-6 h-6" />
+            <img
+              src="/imgs/contactBubble.png"
+              alt="Contact"
+              className="w-full h-full object-cover"
+            />
           )}
         </motion.div>
       </button>

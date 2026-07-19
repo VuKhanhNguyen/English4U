@@ -507,7 +507,7 @@ function RichGrammarRenderer({ richGrammar }: { richGrammar: any[] }) {
                       {mobileGroups.map((group, gIdx) => (
                         <div
                           key={gIdx}
-                          className="border border-zinc-200/50 dark:border-zinc-800 rounded-2xl overflow-hidden bg-white/5 dark:bg-black/10 backdrop-blur-md"
+                          className="border border-zinc-200/50 dark:border-zinc-800 rounded-2xl overflow-hidden bg-white/80 dark:bg-zinc-900/60 backdrop-blur-md"
                         >
                           <div className="bg-white/10 dark:bg-white/5 px-4 py-2.5 border-b border-zinc-200/50 dark:border-zinc-800">
                             <span className="font-bold text-ink text-xs font-mono">
@@ -550,7 +550,7 @@ function RichGrammarRenderer({ richGrammar }: { richGrammar: any[] }) {
                       </h5>
                     )}
                     {/* Desktop View */}
-                    <div className="hidden md:block overflow-x-auto border border-zinc-200/50 dark:border-zinc-800 rounded-xl bg-white/5 dark:bg-black/10 backdrop-blur-md">
+                    <div className="hidden md:block overflow-x-auto border border-zinc-200/50 dark:border-zinc-800 rounded-xl bg-white/80 dark:bg-zinc-900/60 backdrop-blur-md">
                       <table className="w-full text-sm border-collapse text-left min-w-[600px]">
                         <thead>
                           <tr className="bg-atmosphere-wash/20 dark:bg-white/5 border-b border-zinc-200/50 dark:border-zinc-800 font-mono text-ink">
@@ -604,7 +604,7 @@ function RichGrammarRenderer({ richGrammar }: { richGrammar: any[] }) {
                       {(block.rows || []).map((row: string[], rIdx: number) => (
                         <div
                           key={rIdx}
-                          className="p-3 sm:p-4 border border-zinc-200/50 dark:border-zinc-800 rounded-xl bg-white/5 dark:bg-black/10 backdrop-blur-md space-y-3 font-mono text-xs"
+                          className="p-3 sm:p-4 border border-zinc-200/50 dark:border-zinc-800 rounded-xl bg-white/80 dark:bg-zinc-900/60 backdrop-blur-md space-y-3 font-mono text-xs"
                         >
                           {(row || []).map((cell: string, cIdx: number) => {
                             const header = block.headers?.[cIdx];
@@ -649,7 +649,7 @@ function RichGrammarRenderer({ richGrammar }: { richGrammar: any[] }) {
                     {block.items ? (
                       <div className="space-y-4">
                         {(block.items || []).map((item: any, iIdx: number) => (
-                          <div key={iIdx} className="space-y-2 border border-zinc-200/50 dark:border-zinc-800 rounded-xl p-3 sm:p-4 bg-white/5 dark:bg-black/10 backdrop-blur-md">
+                          <div key={iIdx} className="space-y-2 border border-zinc-200/50 dark:border-zinc-800 rounded-xl p-3 sm:p-4 bg-white/80 dark:bg-zinc-900/60 backdrop-blur-md">
                             <p className="font-bold text-ink flex items-center gap-2">
                               <span className="w-2 h-2 rounded-full bg-[#ffa773]" />
                               {translate(item.label)}
@@ -684,7 +684,7 @@ function RichGrammarRenderer({ richGrammar }: { richGrammar: any[] }) {
                     {block.table && (
                       <>
                         {/* Desktop View */}
-                        <div className="hidden md:block overflow-x-auto border border-zinc-200/50 dark:border-zinc-800 rounded-xl bg-white/5 dark:bg-black/10 backdrop-blur-md">
+                        <div className="hidden md:block overflow-x-auto border border-zinc-200/50 dark:border-zinc-800 rounded-xl bg-white/80 dark:bg-zinc-900/60 backdrop-blur-md">
                           <table className="w-full text-sm border-collapse text-left min-w-[450px]">
                             <thead>
                               <tr className="bg-atmosphere-wash/20 dark:bg-white/5 border-b border-zinc-200/50 dark:border-zinc-800 font-mono text-ink">
@@ -712,7 +712,7 @@ function RichGrammarRenderer({ richGrammar }: { richGrammar: any[] }) {
                         {/* Mobile View */}
                         <div className="block md:hidden space-y-3">
                           {(block.table || []).map((row: any, rIdx: number) => (
-                            <div key={rIdx} className="p-3 sm:p-4 border border-zinc-200/50 dark:border-zinc-800 rounded-xl bg-white/5 dark:bg-black/10 backdrop-blur-md space-y-2">
+                            <div key={rIdx} className="p-3 sm:p-4 border border-zinc-200/50 dark:border-zinc-800 rounded-xl bg-white/80 dark:bg-zinc-900/60 backdrop-blur-md space-y-2">
                               <div className="flex items-center gap-2">
                                 <span className="px-2 py-0.5 rounded bg-sky-500/10 text-sky-600 dark:text-sky-400 text-xs border border-sky-500/20 font-bold font-mono">
                                   {row[0]}
@@ -767,7 +767,7 @@ function RichGrammarRenderer({ richGrammar }: { richGrammar: any[] }) {
                       {renderTextWithLinks(translate(block.description))}
                     </p>
                     {/* Desktop View */}
-                    <div className="hidden md:block overflow-x-auto border border-zinc-200/50 dark:border-zinc-800 rounded-xl bg-white/5 dark:bg-black/10 backdrop-blur-md">
+                    <div className="hidden md:block overflow-x-auto border border-zinc-200/50 dark:border-zinc-800 rounded-xl bg-white/80 dark:bg-zinc-900/60 backdrop-blur-md">
                       <table className="w-full text-sm border-collapse text-left min-w-[550px]">
                         <thead>
                           <tr className="bg-atmosphere-wash/20 dark:bg-white/5 border-b border-zinc-200/50 dark:border-zinc-800 font-mono text-ink">
@@ -803,13 +803,13 @@ function RichGrammarRenderer({ richGrammar }: { richGrammar: any[] }) {
                       {(block.table || []).map((row: any, rIdx: number) => (
                         <React.Fragment key={rIdx}>
                           {row[0] && (
-                            <div className="p-3 border border-zinc-200/50 dark:border-zinc-800 rounded-xl bg-white/5 dark:bg-black/10 backdrop-blur-md flex justify-between items-center gap-4 text-xs">
+                            <div className="p-3 border border-zinc-200/50 dark:border-zinc-800 rounded-xl bg-white/80 dark:bg-zinc-900/60 backdrop-blur-md flex justify-between items-center gap-4 text-xs">
                               <span className="font-bold text-ink">{row[0]}</span>
                               <span className="text-pale-stone text-right">{translate(row[1])}</span>
                             </div>
                           )}
                           {row[2] && (
-                            <div className="p-3 border border-zinc-200/50 dark:border-zinc-800 rounded-xl bg-white/5 dark:bg-black/10 backdrop-blur-md flex justify-between items-center gap-4 text-xs">
+                            <div className="p-3 border border-zinc-200/50 dark:border-zinc-800 rounded-xl bg-white/80 dark:bg-zinc-900/60 backdrop-blur-md flex justify-between items-center gap-4 text-xs">
                               <span className="font-bold text-ink">{row[2]}</span>
                               <span className="text-pale-stone text-right">{translate(row[3])}</span>
                             </div>

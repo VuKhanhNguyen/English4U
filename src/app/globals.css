@@ -441,7 +441,7 @@ html.lenis body {
 .liquid-glass-bg {
   position: absolute !important;
   inset: 0 !important;
-  z-index: 1 !important;
+  z-index: 0 !important;
   background: radial-gradient(circle at 100% 0%, rgba(96, 165, 250, 0.03), transparent 50%),
               radial-gradient(circle at 0% 100%, rgba(59, 130, 246, 0.02), transparent 50%) !important;
   pointer-events: none !important;
@@ -456,32 +456,32 @@ html.lenis body {
 .liquid-glass {
   position: relative;
   overflow: hidden !important;
-  background: rgba(255, 255, 255, 0.6) !important;
-  backdrop-filter: blur(24px) saturate(120%) !important;
-  -webkit-backdrop-filter: blur(24px) saturate(120%) !important;
-  border: 1px solid rgba(255, 255, 255, 0.5) !important;
-  box-shadow: 0 10px 30px -10px rgba(31, 38, 135, 0.04), 0 1px 3px 0 rgba(0, 0, 0, 0.01), inset 1px 1px 0px 0px rgba(255, 255, 255, 0.6) !important;
+  background: rgba(255, 255, 255, 0.85) !important;
+  backdrop-filter: blur(20px) saturate(120%) !important;
+  -webkit-backdrop-filter: blur(20px) saturate(120%) !important;
+  border: 1px solid rgba(255, 255, 255, 0.8) !important;
+  box-shadow: 0 10px 30px -10px rgba(31, 38, 135, 0.04), 0 1px 3px 0 rgba(0, 0, 0, 0.01), inset 1px 1px 0px 0px rgba(255, 255, 255, 0.8) !important;
   border-radius: 24px !important;
   transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
 }
 
 .liquid-glass:hover {
   transform: translateY(-2px);
-  background: rgba(255, 255, 255, 0.7) !important;
-  box-shadow: 0 20px 40px -15px rgba(31, 38, 135, 0.08), 0 1px 3px 0 rgba(0, 0, 0, 0.01), inset 1px 1px 0px 0px rgba(255, 255, 255, 0.7) !important;
+  background: rgba(255, 255, 255, 0.92) !important;
+  box-shadow: 0 20px 40px -15px rgba(31, 38, 135, 0.08), 0 1px 3px 0 rgba(0, 0, 0, 0.01), inset 1px 1px 0px 0px rgba(255, 255, 255, 0.9) !important;
 }
 
 .liquid-glass:active {
   transform: translateY(0px);
-  background: rgba(255, 255, 255, 0.55) !important;
-  box-shadow: 0 5px 15px -5px rgba(31, 38, 135, 0.04), inset 1px 1px 0px 0px rgba(255, 255, 255, 0.5) !important;
+  background: rgba(255, 255, 255, 0.8) !important;
+  box-shadow: 0 5px 15px -5px rgba(31, 38, 135, 0.04), inset 1px 1px 0px 0px rgba(255, 255, 255, 0.7) !important;
 }
 
 .dark .liquid-glass {
-  background: rgba(11, 15, 25, 0.65) !important;
-  backdrop-filter: blur(24px) saturate(120%) !important;
-  -webkit-backdrop-filter: blur(24px) saturate(120%) !important;
-  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  background: rgba(11, 15, 25, 0.82) !important;
+  backdrop-filter: blur(20px) saturate(120%) !important;
+  -webkit-backdrop-filter: blur(20px) saturate(120%) !important;
+  border: 1px solid rgba(255, 255, 255, 0.12) !important;
   box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.3), 0 1px 3px 0 rgba(0, 0, 0, 0.1), inset 1px 1px 0px 0px rgba(255, 255, 255, 0.05) !important;
   border-radius: 24px !important;
 }
@@ -625,16 +625,22 @@ html.lenis body {
   .liquid-glass-bg {
     backdrop-filter: none !important;
     -webkit-backdrop-filter: none !important;
-    background: rgba(255, 255, 255, 0.85) !important;
+    background: transparent !important;
+    z-index: 0 !important;
   }
 
-  .dark .liquid-glass-bg {
-    background: rgba(13, 17, 28, 0.9) !important;
-  }
-
-  /* Apply paint containment to liquid-glass cards so browser can skip rendering them when offscreen */
+  /* High contrast solid card background on mobile for clear text visibility */
   .liquid-glass {
     contain: paint !important;
+    background: rgba(255, 255, 255, 0.94) !important;
+    backdrop-filter: blur(10px) !important;
+    -webkit-backdrop-filter: blur(10px) !important;
+  }
+
+  .dark .liquid-glass {
+    background: rgba(11, 15, 25, 0.94) !important;
+    backdrop-filter: blur(10px) !important;
+    -webkit-backdrop-filter: blur(10px) !important;
   }
 
   /* Simplify 3D button and card shadows to minimize rasterization overhead on mobile GPU */

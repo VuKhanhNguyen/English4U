@@ -8,7 +8,7 @@ All notable changes to the **English4U** project are documented below. This proj
 
 | Key Metrics         | Value / Badges                                                                                                                             |
 | :------------------ | :----------------------------------------------------------------------------------------------------------------------------------------- |
-| **Current Version** | ![Version](https://img.shields.io/badge/version-v1.7.0-blue.svg?style=for-the-badge&logo=git)                                              |
+| **Current Version** | ![Version](https://img.shields.io/badge/version-v1.8.0-blue.svg?style=for-the-badge&logo=git)                                              |
 | **Framework**       | ![Next.js](https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white)                                 |
 | **Styling**         | ![CSS](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)                                             |
 | **Language**        | ![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)                          |
@@ -44,7 +44,52 @@ gantt
     v1.6.8 Premium Brutalist & Cross-Page UX :active, 2026-07-15, 2026-07-16
     section Modern SaaS Redesign
     v1.7.0 SaaS Glassmorphic & 3D Coverflow :active, 2026-07-18, 2026-07-19
+    section Glitch & Typography
+    v1.8.0 GlitchText & TextType SaaS  :active, 2026-07-19, 2026-07-19
 ```
+
+---
+
+## 🚀 v1.8.0 — GlitchText Headings, TextType Integration & SaaS Layout Balance
+
+> **Release Date:** July 19, 2026 • _Focus: Page Heading GlitchText Upgrade, React-Bits TextType Integration, Resources Header Card 2-Column Redesign, Navbar GlassSurface Component, WebGL Shader Fix, and Mobile Card Readability_
+
+```
+┌──────────────────────────────────────────────────────────────────┐
+│  ✨ Highlights:                                                  │
+│  • Replaced page headings with GlitchText component while         │
+│    preserving gradient text styles (text-gradient-heading)       │
+│  • Integrated @react-bits/TextType-JS-CSS for smooth GSAP-driven │
+│    typewriter subtitle animations with blinking cursor           │
+│  • Redesigned Resources page header card into a balanced 2-column│
+│    grid, eliminating right-side empty space                      │
+│  • Aligned live database badge (3,500+ Records) to top-right     │
+│  • Upgraded Navbar container to GlassSurface component           │
+│  • Fixed WebGL GLSL shader compilation error in LiquidShader     │
+│  • Enhanced mobile card text contrast and z-index layering       │
+└──────────────────────────────────────────────────────────────────┘
+```
+
+### ⚡ GlitchText & Typography System
+- **Gradient Text Compatibility**: Refactored `GlitchText` CSS and component implementation to allow text gradient classes (`text-gradient-heading`) without hardcoded white text or dark background boxes on pseudo-elements.
+- **Recursive Text Extraction**: Added `extractText()` helper in `GlitchText.tsx` to safely extract plain text from React nodes and fragments, eliminating `[object Object]` stringification bugs in `data-text`.
+- **TypeScript Conversion**: Converted `GlitchText` to native `GlitchText.tsx` and removed duplicate `.jsx` proxy files to resolve Next.js Turbopack module factory conflicts.
+- **Page Headings Migration**: Applied `GlitchText` to main headings on Contact page (`"Keep in touch."`, `"Let's create something together."`), Resources page (`"All-in-One Destination Synthesis"`), and Hero section (`"Master English"`, `"Grammar & Vocabulary"`).
+
+### ✍️ React-Bits TextType Integration
+- **New Component**: Integrated `@react-bits/TextType-JS-CSS` (`TextType.tsx` / `TextType.css`) featuring GSAP-powered smooth character typing, configurable pause/delete speeds, and custom blinking cursors (`|`).
+- **Hero Subtitle Upgrade**: Replaced manual `useState`/`useEffect` typewriter code loops in `HeroSection` with the `TextType` component.
+
+### 🎨 Resources Page Header Redesign
+- **Balanced 2-Column Grid**: Redesigned `ResourcesPage` header card into a symmetrical 12-column grid layout (`grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center`). Left column (`lg:col-span-6`) contains badges, GlitchText title, and description text; right column (`lg:col-span-6`) houses the 6 resource category stat cards in a clean 2x3 grid, eliminating empty white space.
+- **Top Meta Bar Alignment**: Positioned the `3,500+ Records` live database counter badge cleanly on the far right of the top meta bar, aligned with the outer card boundary.
+- **Interactive Stat Cards**: Enhanced stat cards with colorful accent indicator dots, count metrics, hover scale transitions (`hover:scale-[1.03]`), and glowing active ring highlights.
+
+### 🔍 Navbar GlassSurface & WebGL Fixes
+- **GlassSurface Navbar Integration**: Applied `GlassSurface` component (`GlassSurface.jsx`) to `navbar.tsx` with responsive light/dark surface parameters.
+- **Shader Compilation Fix**: Fixed WebGL GLSL fragment shader `hash()` precision overflow in `LiquidShaderBackground.tsx` to prevent GPU driver compilation errors.
+- **Mobile Card Readability**: Wrapped card children inside `relative z-10` containers across `card.tsx`, `globals.css`, and `learning-explorer.tsx` so text sits above background glass layers on touch screens.
+- **Contact Bubbles Asset**: Updated floating contact widget toggle button to use `/imgs/contactBubble.png`.
 
 ---
 
