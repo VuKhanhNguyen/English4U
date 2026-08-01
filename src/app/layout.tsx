@@ -77,7 +77,7 @@ export default function RootLayout({
             <LanguageProvider>
               <PwaProvider>
                 <PageTransitionLoader />
-                <SplashCursor />
+                {/* <SplashCursor /> */}
                 {/* <TargetCursor /> */}
                 <GradualBlur preset="page-footer" zIndex={40} height="20px"  />
                 <div className="fixed inset-0 pointer-events-none -z-10 overflow-hidden">

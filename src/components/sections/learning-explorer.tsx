@@ -1885,7 +1885,7 @@ export function LearningExplorerSection({
                     return (
                       <div
                         className={cn(
-                          "w-full h-full text-left p-3 flex flex-col gap-0.5 justify-center items-start font-mono text-xs border-2 transition-all duration-200 select-none cursor-pointer rounded-lg",
+                          "w-full h-full text-left p-3 flex flex-col gap-0.5 justify-center items-start font-mono text-xs border-2 transition-all duration-200 select-none cursor-pointer rounded-[12px]",
                           isActive
                             ? "bg-atmosphere-wash/50 dark:bg-atmosphere-wash/20 border-off-black text-ink font-bold"
                             : "bg-paper-canvas/40 border-transparent text-pale-stone/80 hover:text-ink hover:border-off-black/10"

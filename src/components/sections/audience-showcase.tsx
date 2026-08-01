@@ -3,7 +3,14 @@
 import * as React from "react";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Check, Calendar, Activity, GraduationCap } from "lucide-react";
+import {
+  Check,
+  Calendar,
+  Activity,
+  Search,
+  BookOpen,
+  Sparkles,
+} from "lucide-react";
 import { useLanguage } from "@/components/providers/language-provider";
 
 const studyLogs = [
@@ -11,25 +18,30 @@ const studyLogs = [
     time: "09:30 AM",
     action: "Completed Unit 1 Grammar table",
     level: "B1",
-    status: "success",
+    icon: Check,
+    color: "text-emerald-600 dark:text-emerald-400 bg-emerald-500/10 border-emerald-500/30",
   },
   {
     time: "11:15 AM",
     action: "Filtered 12 Phrasal Verbs in Search",
     level: "B2",
-    status: "search",
+    icon: Search,
+    color: "text-sky-600 dark:text-sky-400 bg-sky-500/10 border-sky-500/30",
   },
   {
     time: "02:40 PM",
     action: "Reviewed Word Formation tree for 'Structure'",
     level: "C1 & C2",
-    status: "success",
+    icon: Sparkles,
+    color: "text-purple-600 dark:text-purple-400 bg-purple-500/10 border-purple-500/30",
   },
   {
     time: "05:10 PM",
     action: "Tested collocations for verb 'make'",
     level: "B2",
-    status: "active",
+    icon: BookOpen,
+    color: "text-blue-600 dark:text-blue-400 bg-blue-500/10 border-blue-500/30",
+    active: true,
   },
 ];
 
@@ -86,66 +98,69 @@ export function AudienceShowcase() {
           <div className="lg:col-span-7 flex justify-center w-full">
             <Card
               variant="content"
-              className="w-full max-w-[480px] p-4 sm:p-6 relative overflow-hidden"
+              className="w-full max-w-[520px] p-6 sm:p-8 relative overflow-hidden font-sans"
             >
-              <div className="flex items-center justify-between pb-4 border-b border-zinc-200/50 dark:border-zinc-800/50 mb-6 font-sans">
-                <div className="flex items-center gap-2">
-                  <div className="w-[28px] h-[28px] rounded-full bg-blue-500/10 border border-blue-500/20 flex items-center justify-center">
-                    <Activity className="w-[14px] h-[14px] text-blue-600 dark:text-blue-400" />
+              {/* Card Header */}
+              <div className="flex items-center justify-between pb-5 border-b border-zinc-200/50 dark:border-zinc-800/50 mb-6">
+                <div className="flex items-center gap-3">
+                  <div className="w-[34px] h-[34px] rounded-xl bg-blue-500/10 border border-blue-500/20 flex items-center justify-center">
+                    <Activity className="w-[18px] h-[18px] text-blue-600 dark:text-blue-400" />
                   </div>
                   <div>
-                    <h3 className="text-xs font-semibold text-ink">
+                    <h3 className="text-sm font-semibold text-ink">
                       {translate("Self-Study Dashboard")}
                     </h3>
-                    <p className="text-caption text-pale-stone font-sans">
+                    <p className="text-xs text-pale-stone font-sans mt-0.5">
                       {translate("Live progress log visualization")}
                     </p>
                   </div>
                 </div>
 
-                <Badge className="border border-zinc-200/50 dark:border-zinc-800/50 bg-zinc-100 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-400 text-caption font-mono rounded-full flex items-center gap-1 px-3 py-0.5">
-                  <Calendar className="w-[10px] h-[10px]" /> {translate("Today")}
-                </Badge>
+                <div className="flex items-center gap-1.5 px-3 py-1 rounded-lg border border-zinc-200/50 dark:border-zinc-800/50 bg-zinc-100/80 dark:bg-zinc-800/60 text-zinc-600 dark:text-zinc-400 text-xs font-mono">
+                  <Calendar className="w-[12px] h-[12px]" />
+                  <span>{translate("Today")}</span>
+                </div>
               </div>
 
-              {/* Study Timeline Events */}
-              <div className="flex flex-col relative font-sans">
-                {studyLogs.map((log, index) => (
-                  <div
-                    key={index}
-                    className="flex gap-2 sm:gap-4 items-stretch relative"
-                  >
-                    <span className="text-caption text-pale-stone w-[50px] sm:w-[55px] pt-1 text-right shrink-0 font-mono">
-                      {log.time}
-                    </span>
+              {/* Progress Tree Timeline */}
+              <div className="flex flex-col font-sans">
+                {studyLogs.map((log, index) => {
+                  const Icon = log.icon;
+                  return (
+                    <div key={index} className="flex gap-3 sm:gap-4 items-start relative group">
+                      {/* Time Column (single line) */}
+                      <span className="text-xs text-pale-stone w-[70px] sm:w-[78px] pt-2.5 text-right shrink-0 font-mono font-medium whitespace-nowrap">
+                        {log.time}
+                      </span>
 
-                    {/* Timeline bar and indicator column */}
-                    <div className="flex flex-col items-center shrink-0 relative pb-6">
-                      <div
-                        className={`w-[26px] h-[26px] rounded-full border border-zinc-200/50 dark:border-zinc-800 flex items-center justify-center shrink-0 relative z-10 ${
-                          log.status === "active" ? "bg-blue-500/20 border-blue-500/30 text-blue-600 dark:text-blue-400 animate-pulse" : "bg-zinc-50 dark:bg-zinc-900 text-zinc-400"
-                        }`}
-                      >
-                        <GraduationCap className="w-[12px] h-[12px]" />
+                      {/* Node Circle & Tree Vertical Stem */}
+                      <div className="flex flex-col items-center shrink-0 self-stretch">
+                        <div
+                          className={`w-[30px] h-[30px] rounded-full border flex items-center justify-center shrink-0 transition-transform group-hover:scale-110 z-10 ${log.color} ${
+                            log.active ? "ring-4 ring-blue-500/15 animate-pulse" : ""
+                          }`}
+                        >
+                          <Icon className="w-[13px] h-[13px]" />
+                        </div>
+                        {index < studyLogs.length - 1 && (
+                          <div className="w-[2px] flex-grow bg-zinc-200 dark:bg-zinc-800 my-1.5 rounded-full group-hover:bg-blue-400/40 transition-colors" />
+                        )}
                       </div>
-                      {index < studyLogs.length - 1 && (
-                        <div className="w-px flex-grow bg-zinc-200/60 dark:bg-zinc-800 my-1 absolute top-7 bottom-0 left-1/2 -translate-x-1/2 z-0" />
-                      )}
-                    </div>
 
-                    {/* Log Details */}
-                    <div className="p-3 bg-zinc-50/50 dark:bg-zinc-900/30 border border-zinc-200/40 dark:border-zinc-800/60 rounded-2xl flex-grow mb-6 last:mb-0 shadow-sm">
-                      <div className="flex justify-between items-center mb-1 gap-2 flex-wrap">
-                        <p className="text-body-sm font-semibold text-ink leading-relaxed">
-                          {translate(log.action)}
-                        </p>
-                        <Badge className="text-[9px] px-2 py-0.5 rounded-full border border-blue-200/50 dark:border-blue-900/30 bg-blue-50 dark:bg-blue-950/20 text-blue-600 dark:text-blue-400 font-mono shrink-0">
-                          {log.level}
-                        </Badge>
+                      {/* Log Card - rounded-xl (rounded-[12px]) */}
+                      <div className="flex-grow p-3.5 sm:p-4 bg-zinc-50/60 dark:bg-zinc-900/30 border border-zinc-200/50 dark:border-zinc-800/60 rounded-xl mb-4 last:mb-0 transition-all group-hover:border-blue-500/30 dark:group-hover:border-blue-500/30 group-hover:shadow-sm">
+                        <div className="flex items-center justify-between gap-3">
+                          <p className="text-xs sm:text-sm font-medium text-ink leading-relaxed">
+                            {translate(log.action)}
+                          </p>
+                          <span className="px-2.5 py-1 text-xs font-semibold font-mono rounded-lg border border-blue-500/20 bg-blue-500/10 text-blue-600 dark:text-blue-400 shrink-0">
+                            {log.level}
+                          </span>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                ))}
+                  );
+                })}
               </div>
             </Card>
           </div>

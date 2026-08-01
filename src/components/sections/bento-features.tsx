@@ -43,7 +43,7 @@ export function BentoFeatures() {
         </div>
 
         {/* Bento Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 auto-rows-auto md:auto-rows-[300px] font-sans">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:grid-rows-[300px_300px_auto] font-sans">
           {/* Card 1: Smart Search Filter (Col Span 2) */}
           <motion.div
             className="md:col-span-2 md:row-span-1"
@@ -250,14 +250,14 @@ export function BentoFeatures() {
 
           {/* Card 5: Full Syllabus Grid (Col Span 3) */}
           <motion.div
-            className="md:col-span-3 md:row-span-1"
+            className="md:col-span-3"
             whileHover={{ y: -6, scale: 1.01 }}
             whileTap={{ scale: 0.99 }}
             transition={{ type: "spring", stiffness: 260, damping: 20 }}
           >
             <Card
               variant="content"
-              className="h-full flex flex-col justify-between overflow-hidden relative group min-h-[350px] md:min-h-0 md:h-full p-8 md:p-12 transition-all duration-300"
+              className="flex flex-col justify-between overflow-hidden relative group p-6 sm:p-8 md:p-10 transition-all duration-300"
             >
               <div>
                 <div className="flex items-center justify-between mb-4">
@@ -266,7 +266,7 @@ export function BentoFeatures() {
                   </Badge>
                   <BookOpen className="w-[16px] h-[16px] text-ink/60 group-hover:scale-110 group-hover:-rotate-6 transition-transform duration-300" />
                 </div>
-                <h3 className="text-heading font-normal text-ink mb-2 tracking-tight">
+                <h3 className="text-heading font-normal text-ink mb-3 tracking-tight">
                   {translate("100% Comprehensive Syllabus Coverage")}
                 </h3>
                 <p className="text-body-sm text-pale-stone leading-relaxed max-w-2xl">
@@ -275,8 +275,8 @@ export function BentoFeatures() {
               </div>
 
               {/* Grid of level badges */}
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 md:gap-4 mt-6">
-                <div className="p-3 sm:p-4 bg-zinc-50/50 dark:bg-zinc-900/30 border border-zinc-200/50 dark:border-zinc-800/50 rounded-2xl flex flex-col justify-center shadow-sm">
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 md:gap-4 mt-6 md:mt-8">
+                <div className="p-3.5 sm:p-4 bg-zinc-50/50 dark:bg-zinc-900/30 border border-zinc-200/50 dark:border-zinc-800/50 rounded-2xl flex flex-col justify-center shadow-sm">
                   <p className="text-[10px] font-semibold text-zinc-400 dark:text-zinc-500 uppercase tracking-wider font-mono">
                     {translate("Intermediate")}
                   </p>
@@ -284,7 +284,7 @@ export function BentoFeatures() {
                     {translate("B1 Syllabus")}
                   </p>
                 </div>
-                <div className="p-3 sm:p-4 bg-zinc-50/50 dark:bg-zinc-900/30 border border-zinc-200/50 dark:border-zinc-800/50 rounded-2xl flex flex-col justify-center shadow-sm">
+                <div className="p-3.5 sm:p-4 bg-zinc-50/50 dark:bg-zinc-900/30 border border-zinc-200/50 dark:border-zinc-800/50 rounded-2xl flex flex-col justify-center shadow-sm">
                   <p className="text-[10px] font-semibold text-zinc-400 dark:text-zinc-500 uppercase tracking-wider font-mono">
                     {translate("Upper-Inter")}
                   </p>
@@ -292,7 +292,7 @@ export function BentoFeatures() {
                     {translate("B2 Syllabus")}
                   </p>
                 </div>
-                <div className="p-3 sm:p-4 bg-zinc-50/50 dark:bg-zinc-900/30 border border-zinc-200/50 dark:border-zinc-800/50 rounded-2xl flex flex-col justify-center shadow-sm">
+                <div className="p-3.5 sm:p-4 bg-zinc-50/50 dark:bg-zinc-900/30 border border-zinc-200/50 dark:border-zinc-800/50 rounded-2xl flex flex-col justify-center shadow-sm">
                   <p className="text-[10px] font-semibold text-zinc-400 dark:text-zinc-500 uppercase tracking-wider font-mono">
                     {translate("Proficient")}
                   </p>
