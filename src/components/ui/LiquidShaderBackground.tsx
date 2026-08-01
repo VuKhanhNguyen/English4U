@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useEffect, useRef, useState } from "react";
+import { useAnimation } from "@/components/providers/animation-provider";
 
 interface LiquidShaderBackgroundProps {
   src: string;
@@ -163,6 +164,7 @@ export default function LiquidShaderBackground({
   speed = 0.5,
   className = "",
 }: LiquidShaderBackgroundProps) {
+  const { animationEnabled } = useAnimation();
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
   const [webglSupported, setWebglSupported] = useState(true);
@@ -180,6 +182,8 @@ export default function LiquidShaderBackground({
   });
 
   useEffect(() => {
+    if (!animationEnabled) return;
+
     const canvas = canvasRef.current;
     if (!canvas) return;
 
@@ -423,10 +427,10 @@ export default function LiquidShaderBackground({
         console.warn("Error cleaning up WebGL context:", err);
       }
     };
-  }, [src, distortionStrength, chromaticAberration, speed]);
+  }, [src, distortionStrength, chromaticAberration, speed, animationEnabled]);
 
-  // Fallback Rendering if WebGL is unavailable
-  if (!webglSupported) {
+  // Fallback Rendering if WebGL is unavailable or animation is disabled
+  if (!animationEnabled || !webglSupported) {
     return (
       <div
         ref={containerRef}

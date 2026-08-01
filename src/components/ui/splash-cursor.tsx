@@ -1,5 +1,6 @@
 'use client';
 import React, { useEffect, useRef } from 'react';
+import { useAnimation } from '@/components/providers/animation-provider';
 
 interface ColorRGB {
   r: number;
@@ -72,9 +73,12 @@ export default function SplashCursor({
   RAINBOW_MODE = true,
   COLOR = '#ff0000'
 }: SplashCursorProps) {
+  const { animationEnabled } = useAnimation();
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
   useEffect(() => {
+    if (!animationEnabled) return;
+
     const canvas = canvasRef.current;
     if (!canvas) return;
 
@@ -1343,8 +1347,11 @@ export default function SplashCursor({
     BACK_COLOR,
     TRANSPARENT,
     RAINBOW_MODE,
-    COLOR
+    COLOR,
+    animationEnabled
   ]);
+
+  if (!animationEnabled) return null;
 
   return (
     <div className="fixed top-0 left-0 z-[1] pointer-events-none w-full h-full">

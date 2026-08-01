@@ -8,6 +8,7 @@ import { ChevronDown, Menu, Settings, Sun, Moon, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/components/providers/language-provider";
 import { useTheme } from "@/components/providers/theme-provider";
+import { useAnimation } from "@/components/providers/animation-provider";
 import { showToast } from "@/components/ui/toast";
 import { usePwa } from "@/components/providers/pwa-provider";
 import GlassSurface from "@/components/GlassSurface";
@@ -21,6 +22,7 @@ export function Navbar() {
   const [isMobileDestinationsOpen, setIsMobileDestinationsOpen] = React.useState(false);
   const { theme, setTheme } = useTheme();
   const { lang, setLang, translate } = useLanguage();
+  const { animationEnabled, setAnimationEnabled } = useAnimation();
   const { isInstallable, isInstalled, installApp } = usePwa();
   const isDark = theme === "dark";
   const blueColor = isDark ? "#60a5fa" : "#1b4fa3";
@@ -376,6 +378,41 @@ export function Navbar() {
                     </div>
                   </div>
 
+                  <hr className="border-t border-off-black/10 dark:border-white/10" />
+
+                  {/* Animation selection */}
+                  <div className="flex items-center justify-between">
+                    <span className="text-xs font-bold text-ink">{translate("Animation")}</span>
+                    <div className="flex bg-off-black/5 dark:bg-white/10 border border-off-black/10 dark:border-white/10 p-1 rounded-full">
+                      <motion.button
+                        whileHover={{ scale: 1.08 }}
+                        whileTap={{ scale: 0.92 }}
+                        transition={{ type: "spring", stiffness: 450, damping: 14 }}
+                        onClick={() => setAnimationEnabled(true)}
+                        className={`px-3 py-1 text-xs rounded-full font-bold cursor-pointer transition-all duration-200 ${
+                          animationEnabled
+                            ? "border border-off-black/15 dark:border-white/15 shadow-sm bg-white/80 dark:bg-white/20 text-ink"
+                            : "text-ink/50 hover:text-ink"
+                        }`}
+                      >
+                        ON
+                      </motion.button>
+                      <motion.button
+                        whileHover={{ scale: 1.08 }}
+                        whileTap={{ scale: 0.92 }}
+                        transition={{ type: "spring", stiffness: 450, damping: 14 }}
+                        onClick={() => setAnimationEnabled(false)}
+                        className={`px-3 py-1 text-xs rounded-full font-bold cursor-pointer transition-all duration-200 ${
+                          !animationEnabled
+                            ? "border border-off-black/15 dark:border-white/15 shadow-sm bg-white/80 dark:bg-white/20 text-ink"
+                            : "text-ink/50 hover:text-ink"
+                        }`}
+                      >
+                        OFF
+                      </motion.button>
+                    </div>
+                  </div>
+
                   {isInstalled && (
                     <>
                       <hr className="border-t border-off-black/10 dark:border-white/10" />
@@ -644,6 +681,33 @@ export function Navbar() {
                         <span className={lang === "vi" ? "opacity-0" : "relative z-10"}>
                           VI
                         </span>
+                      </button>
+                    </div>
+                  </div>
+
+                  {/* Animation Select */}
+                  <div className="flex items-center justify-between">
+                    <span className="text-sm font-medium text-ink">{translate("Animation")}</span>
+                    <div className="flex bg-off-black/5 dark:bg-white/10 border border-off-black/10 dark:border-white/10 p-1 rounded-full">
+                      <button
+                        onClick={() => setAnimationEnabled(true)}
+                        className={`px-4 py-1.5 text-xs rounded-full font-bold cursor-pointer transition-all duration-200 border-none bg-transparent ${
+                          animationEnabled
+                            ? "border border-off-black/15 dark:border-white/15 shadow-sm bg-white dark:bg-white/20 text-ink"
+                            : "text-ink/50 hover:text-ink"
+                        }`}
+                      >
+                        ON
+                      </button>
+                      <button
+                        onClick={() => setAnimationEnabled(false)}
+                        className={`px-4 py-1.5 text-xs rounded-full font-bold cursor-pointer transition-all duration-200 border-none bg-transparent ${
+                          !animationEnabled
+                            ? "border border-off-black/15 dark:border-white/15 shadow-sm bg-white dark:bg-white/20 text-ink"
+                            : "text-ink/50 hover:text-ink"
+                        }`}
+                      >
+                        OFF
                       </button>
                     </div>
                   </div>

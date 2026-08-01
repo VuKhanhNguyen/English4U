@@ -11,6 +11,7 @@ import PageTransitionLoader from "@/components/ui/page-transition-loader";
 import SmoothScrollProvider from "@/components/providers/smooth-scroll-provider";
 import { LanguageProvider } from "@/components/providers/language-provider";
 import { ThemeProvider } from "@/components/providers/theme-provider";
+import { AnimationProvider } from "@/components/providers/animation-provider";
 import { cn } from "@/lib/utils";
 import Toaster from "@/components/ui/toast";
 import { PwaProvider } from "@/components/providers/pwa-provider";
@@ -75,19 +76,21 @@ export default function RootLayout({
         <SmoothScrollProvider>
           <ThemeProvider>
             <LanguageProvider>
-              <PwaProvider>
-                <PageTransitionLoader />
-                {/* <SplashCursor /> */}
-                {/* <TargetCursor /> */}
-                <GradualBlur preset="page-footer" zIndex={40} height="20px"  />
-                <div className="fixed inset-0 pointer-events-none -z-10 overflow-hidden">
-                  <ParallaxBackground />
-                </div>
-                <Toaster defaultPosition="top-right"/>
-                <LiquidGlassFilter />
-                <ContactBubbles />
-                {children}
-              </PwaProvider>
+              <AnimationProvider>
+                <PwaProvider>
+                  <PageTransitionLoader />
+                  <SplashCursor />
+                  {/* <TargetCursor /> */}
+                  <GradualBlur preset="page-footer" zIndex={40} height="20px"  />
+                  <div className="fixed inset-0 pointer-events-none -z-10 overflow-hidden">
+                    <ParallaxBackground />
+                  </div>
+                  <Toaster defaultPosition="top-right"/>
+                  <LiquidGlassFilter />
+                  <ContactBubbles />
+                  {children}
+                </PwaProvider>
+              </AnimationProvider>
             </LanguageProvider>
           </ThemeProvider>
         </SmoothScrollProvider>

@@ -7,6 +7,8 @@ import { useLanguage } from "@/components/providers/language-provider";
 import GlitchText from "@/components/GlitchText";
 import TextType from "@/components/TextType";
 
+import { FloatingItem } from "@/components/ui/floating-items";
+
 export interface HeroSectionProps {
   hideButtons?: boolean;
   title1?: string;
@@ -79,6 +81,76 @@ export function HeroSection({
 
   return (
     <section className="relative min-h-[750px] md:min-h-[800px] flex flex-col items-center justify-center pt-[140px] pb-16 md:pt-[180px] md:pb-24 overflow-hidden border-b border-off-black/10 dark:border-white/10 bg-section-hero">
+      {/* 
+        ========================================================================
+        HERO FLOATING ITEMS CONFIGURATION (5 ITEMS BEHIND CONTENT)
+        Cấu hình vị trí 5 item trôi nền Hero (Bạn có thể tùy chỉnh top/left/right/size/opacity tại đây):
+        ========================================================================
+      */}
+      {/* 1. Mascot Cú (Owl) - Phía trên bên trái */}
+      <FloatingItem
+        src="/imgs/itemFloat/owl.png"
+        alt="Owl Mascot Item"
+        size={85}
+        duration={5.0}
+        yOffset={16}
+        rotateOffset={8}
+        alwaysAnimate={true}
+        className="hidden md:block absolute top-[160px] left-[14%] z-0 opacity-60 pointer-events-none"
+      />
+
+      {/* 2. Badge Destination B1 - Phía trên bên phải */}
+      <FloatingItem
+        src="/imgs/itemFloat/b1.png"
+        alt="Destination B1 Badge"
+        size={78}
+        duration={4.4}
+        delay={0.6}
+        yOffset={14}
+        rotateOffset={-7}
+        alwaysAnimate={true}
+        className="hidden md:block absolute top-[170px] right-[16%] z-0 opacity-60 pointer-events-none"
+      />
+
+      {/* 3. Badge Destination B2 - Phía dưới bên trái */}
+      <FloatingItem
+        src="/imgs/itemFloat/b2.png"
+        alt="Destination B2 Badge"
+        size={80}
+        duration={4.8}
+        delay={1.2}
+        yOffset={15}
+        rotateOffset={6}
+        alwaysAnimate={true}
+        className="hidden md:block absolute bottom-[150px] left-[8%] z-0 opacity-60 pointer-events-none"
+      />
+
+      {/* 4. Badge Destination C1 - Ở giữa trung tâm phía sau */}
+      <FloatingItem
+        src="/imgs/itemFloat/c1.png"
+        alt="Destination C1 Badge"
+        size={82}
+        duration={5.2}
+        delay={0.3}
+        yOffset={18}
+        rotateOffset={-9}
+        alwaysAnimate={true}
+        className="hidden lg:block absolute top-[50%] left-[45%] -translate-x-1/2 z-0 opacity-50 pointer-events-none"
+      />
+
+      {/* 5. Badge Destination C2 - Phía dưới bên phải */}
+      <FloatingItem
+        src="/imgs/itemFloat/c2.png"
+        alt="Destination C2 Badge"
+        size={84}
+        duration={5.6}
+        delay={0.9}
+        yOffset={20}
+        rotateOffset={10}
+        alwaysAnimate={true}
+        className="hidden md:block absolute bottom-[80px] right-[10%] z-0 opacity-60 pointer-events-none"
+      />
+
       {/* Soft overlay */}
       <div className="absolute inset-0 z-0 bg-paper-canvas/15 dark:bg-black/10 pointer-events-none" />
 
