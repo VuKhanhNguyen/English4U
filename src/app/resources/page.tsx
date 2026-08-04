@@ -33,76 +33,76 @@ import {
 } from "@/components/ui/data-table";
 
 // Import all B1 units
-import unit1 from "@/data/b1/unit1.json";
-import unit2 from "@/data/b1/unit2.json";
-import unit3 from "@/data/b1/unit3.json";
-import unit4 from "@/data/b1/unit4.json";
-import unit5 from "@/data/b1/unit5.json";
-import unit6 from "@/data/b1/unit6.json";
-import unit7 from "@/data/b1/unit7.json";
-import unit8 from "@/data/b1/unit8.json";
-import unit9 from "@/data/b1/unit9.json";
-import unit10_11 from "@/data/b1/unit10_11.json";
-import unit12 from "@/data/b1/unit12.json";
-import unit13 from "@/data/b1/unit13.json";
-import unit14 from "@/data/b1/unit14.json";
-import unit15 from "@/data/b1/unit15.json";
-import unit16 from "@/data/b1/unit16.json";
-import unit17 from "@/data/b1/unit17.json";
-import unit18 from "@/data/b1/unit18.json";
-import unit19 from "@/data/b1/unit19.json";
-import unit20 from "@/data/b1/unit20.json";
-import unit21 from "@/data/b1/unit21.json";
-import unit22 from "@/data/b1/unit22.json";
-import unit23 from "@/data/b1/unit23.json";
-import unit24 from "@/data/b1/unit24.json";
-import unit25 from "@/data/b1/unit25.json";
-import unit26 from "@/data/b1/unit26.json";
-import unit27 from "@/data/b1/unit27.json";
-import unit28_29 from "@/data/b1/unit28_29.json";
-import unit30 from "@/data/b1/unit30.json";
-import unit31 from "@/data/b1/unit31.json";
-import unit32 from "@/data/b1/unit32.json";
-import unit33 from "@/data/b1/unit33.json";
-import unit34 from "@/data/b1/unit34.json";
-import unit35 from "@/data/b1/unit35.json";
-import unit36 from "@/data/b1/unit36.json";
-import unit37 from "@/data/b1/unit37.json";
-import unit38 from "@/data/b1/unit38.json";
-import unit39 from "@/data/b1/unit39.json";
-import unit40 from "@/data/b1/unit40.json";
-import unit41 from "@/data/b1/unit41.json";
-import unit42 from "@/data/b1/unit42.json";
+import unit1 from "@/data/b1/unit1/unit1.json";
+import unit2 from "@/data/b1/unit2/unit2.json";
+import unit3 from "@/data/b1/unit3/unit3.json";
+import unit4 from "@/data/b1/unit4/unit4.json";
+import unit5 from "@/data/b1/unit5/unit5.json";
+import unit6 from "@/data/b1/unit6/unit6.json";
+import unit7 from "@/data/b1/unit7/unit7.json";
+import unit8 from "@/data/b1/unit8/unit8.json";
+import unit9 from "@/data/b1/unit9/unit9.json";
+import unit10_11 from "@/data/b1/unit10_11/unit10_11.json";
+import unit12 from "@/data/b1/unit12/unit12.json";
+import unit13 from "@/data/b1/unit13/unit13.json";
+import unit14 from "@/data/b1/unit14/unit14.json";
+import unit15 from "@/data/b1/unit15/unit15.json";
+import unit16 from "@/data/b1/unit16/unit16.json";
+import unit17 from "@/data/b1/unit17/unit17.json";
+import unit18 from "@/data/b1/unit18/unit18.json";
+import unit19 from "@/data/b1/unit19/unit19.json";
+import unit20 from "@/data/b1/unit20/unit20.json";
+import unit21 from "@/data/b1/unit21/unit21.json";
+import unit22 from "@/data/b1/unit22/unit22.json";
+import unit23 from "@/data/b1/unit23/unit23.json";
+import unit24 from "@/data/b1/unit24/unit24.json";
+import unit25 from "@/data/b1/unit25/unit25.json";
+import unit26 from "@/data/b1/unit26/unit26.json";
+import unit27 from "@/data/b1/unit27/unit27.json";
+import unit28_29 from "@/data/b1/unit28_29/unit28_29.json";
+import unit30 from "@/data/b1/unit30/unit30.json";
+import unit31 from "@/data/b1/unit31/unit31.json";
+import unit32 from "@/data/b1/unit32/unit32.json";
+import unit33 from "@/data/b1/unit33/unit33.json";
+import unit34 from "@/data/b1/unit34/unit34.json";
+import unit35 from "@/data/b1/unit35/unit35.json";
+import unit36 from "@/data/b1/unit36/unit36.json";
+import unit37 from "@/data/b1/unit37/unit37.json";
+import unit38 from "@/data/b1/unit38/unit38.json";
+import unit39 from "@/data/b1/unit39/unit39.json";
+import unit40 from "@/data/b1/unit40/unit40.json";
+import unit41 from "@/data/b1/unit41/unit41.json";
+import unit42 from "@/data/b1/unit42/unit42.json";
 
 // Import all B2 units
-import b2unit1 from "@/data/b2/unit1.json";
-import b2unit2 from "@/data/b2/unit2.json";
-import b2unit3 from "@/data/b2/unit3.json";
-import b2unit4 from "@/data/b2/unit4.json";
-import b2unit5 from "@/data/b2/unit5.json";
-import b2unit6 from "@/data/b2/unit6.json";
-import b2unit7 from "@/data/b2/unit7.json";
-import b2unit8 from "@/data/b2/unit8.json";
-import b2unit9 from "@/data/b2/unit9.json";
-import b2unit10 from "@/data/b2/unit10.json";
-import b2unit11 from "@/data/b2/unit11.json";
-import b2unit12 from "@/data/b2/unit12.json";
-import b2unit13 from "@/data/b2/unit13.json";
-import b2unit14 from "@/data/b2/unit14.json";
-import b2unit15 from "@/data/b2/unit15.json";
-import b2unit16 from "@/data/b2/unit16.json";
-import b2unit17 from "@/data/b2/unit17.json";
-import b2unit18 from "@/data/b2/unit18.json";
-import b2unit19 from "@/data/b2/unit19.json";
-import b2unit20 from "@/data/b2/unit20.json";
-import b2unit21 from "@/data/b2/unit21.json";
-import b2unit22 from "@/data/b2/unit22.json";
-import b2unit23 from "@/data/b2/unit23.json";
-import b2unit24 from "@/data/b2/unit24.json";
-import b2unit25 from "@/data/b2/unit25.json";
-import b2unit26 from "@/data/b2/unit26.json";
-import b2unit27 from "@/data/b2/unit27.json";
-import b2unit28 from "@/data/b2/unit28.json";
+import b2unit1 from "@/data/b2/unit1/unit1.json";
+import b2unit2 from "@/data/b2/unit2/unit2.json";
+import b2unit3 from "@/data/b2/unit3/unit3.json";
+import b2unit4 from "@/data/b2/unit4/unit4.json";
+import b2unit5 from "@/data/b2/unit5/unit5.json";
+import b2unit6 from "@/data/b2/unit6/unit6.json";
+import b2unit7 from "@/data/b2/unit7/unit7.json";
+import b2unit8 from "@/data/b2/unit8/unit8.json";
+import b2unit9 from "@/data/b2/unit9/unit9.json";
+import b2unit10 from "@/data/b2/unit10/unit10.json";
+import b2unit11 from "@/data/b2/unit11/unit11.json";
+import b2unit12 from "@/data/b2/unit12/unit12.json";
+import b2unit13 from "@/data/b2/unit13/unit13.json";
+import b2unit14 from "@/data/b2/unit14/unit14.json";
+import b2unit15 from "@/data/b2/unit15/unit15.json";
+import b2unit16 from "@/data/b2/unit16/unit16.json";
+import b2unit17 from "@/data/b2/unit17/unit17.json";
+import b2unit18 from "@/data/b2/unit18/unit18.json";
+import b2unit19 from "@/data/b2/unit19/unit19.json";
+import b2unit20 from "@/data/b2/unit20/unit20.json";
+import b2unit21 from "@/data/b2/unit21/unit21.json";
+import b2unit22 from "@/data/b2/unit22/unit22.json";
+import b2unit23 from "@/data/b2/unit23/unit23.json";
+import b2unit24 from "@/data/b2/unit24/unit24.json";
+import b2unit25 from "@/data/b2/unit25/unit25.json";
+import b2unit26 from "@/data/b2/unit26/unit26.json";
+import b2unit27 from "@/data/b2/unit27/unit27.json";
+import b2unit28 from "@/data/b2/unit28/unit28.json";
 
 // Collect all B1 units
 const b1Units = [
@@ -267,14 +267,24 @@ function parseWordFormationMeaning(meaning: string): WordFamilyItem[] {
     if (part.includes(":")) {
       const [formStr, ...meaningParts] = part.split(":");
       const formMeaning = meaningParts.join(":").trim();
-      const currentForms = formStr.split("/").map(f => f.trim());
+      const rawForms = formStr.split("/").map(f => f.trim()).filter(Boolean);
+      const expandedForms: string[] = [];
+      for (const rf of rawForms) {
+        const sub = rf.split(/\s+or\s+/i).map(s => s.trim()).filter(Boolean);
+        expandedForms.push(...sub);
+      }
+
       items.push({
-        forms: [...pendingForms, ...currentForms],
+        forms: [...pendingForms, ...expandedForms],
         meaning: formMeaning
       });
       pendingForms = [];
     } else {
-      pendingForms.push(part.trim());
+      const rawForms = part.split("/").map(f => f.trim()).filter(Boolean);
+      for (const rf of rawForms) {
+        const sub = rf.split(/\s+or\s+/i).map(s => s.trim()).filter(Boolean);
+        pendingForms.push(...sub);
+      }
     }
   }
   
@@ -288,7 +298,102 @@ function parseWordFormationMeaning(meaning: string): WordFamilyItem[] {
   return items;
 }
 
-// Helper to get translated word formation meaning from the translated whole row meaning
+// Helper to determine if an example line accurately belongs to a specific WordFamilyItem
+function isExampleForForm(exLine: string, fam: WordFamilyItem, allFamilyItems: WordFamilyItem[]): boolean {
+  if (!exLine) return false;
+  if (allFamilyItems.length <= 1) return true;
+
+  const cleanLine = exLine.toLowerCase().replace(/^(ex\d*:|ex:)\s*/i, "");
+  const tokens = cleanLine.match(/[a-z]+/g) || [];
+
+  for (const token of tokens) {
+    let maxMatchScore = 0;
+    let bestFam: WordFamilyItem | null = null;
+
+    for (const item of allFamilyItems) {
+      for (const rawF of item.forms) {
+        const f = rawF.replace(/\(([^)]+)\)/g, "$1").toLowerCase().trim();
+        if (!f) continue;
+
+        if (token === f || token.startsWith(f) || (token.includes(f) && f.length >= 4)) {
+          const score = (token === f ? 1000 : 0) + f.length;
+          if (score > maxMatchScore) {
+            maxMatchScore = score;
+            bestFam = item;
+          }
+        }
+      }
+    }
+
+    if (bestFam === fam) {
+      return true;
+    }
+  }
+
+  return false;
+}
+
+// Helper to infer part-of-speech tag for derived forms in a word family
+function inferWordType(forms: string[], baseWord: string, baseType: string): string {
+  if (!forms || forms.length === 0) return baseType || "";
+
+  const cleanBase = (baseWord || "").toLowerCase().trim();
+  const cleanBaseType = (baseType || "").toLowerCase().trim();
+
+  for (const rawF of forms) {
+    const f = rawF.replace(/\(([^)]+)\)/g, "$1").toLowerCase().trim();
+    if (!f) continue;
+
+    if (f === cleanBase) {
+      return cleanBaseType;
+    }
+
+    if (f.endsWith("ly") && !["family", "ugly", "friendly", "lovely", "silly", "early", "daily"].includes(f)) {
+      return "adverb";
+    }
+
+    if (
+      f.endsWith("ise") || f.endsWith("ize") || f.endsWith("ify") || f.endsWith("fy") ||
+      (f.endsWith("ate") && !["climate", "state", "gate", "plate"].includes(f)) ||
+      ["lengthen", "shorten", "widen", "deepen", "threaten", "frighten", "strengthen", "weaken", "darken", "brighten", "loosen", "tighten"].includes(f)
+    ) {
+      return "verb";
+    }
+
+    if (
+      f.endsWith("tion") || f.endsWith("sion") || f.endsWith("ment") ||
+      f.endsWith("ness") || f.endsWith("ance") || f.endsWith("ence") ||
+      f.endsWith("ity") || f.endsWith("ty") || f.endsWith("ship") ||
+      f.endsWith("hood") || f.endsWith("dom") || f.endsWith("ist") ||
+      f.endsWith("ian") || f.endsWith("or") || f.endsWith("ess") ||
+      f.endsWith("er") || f.endsWith("ee") || f.endsWith("ism") ||
+      f.endsWith("ure") || f.endsWith("age") || f.endsWith("cy") ||
+      f.endsWith("alism") || f.endsWith("ry") || f.endsWith("ery") ||
+      f.endsWith("ics") || f.endsWith("ology")
+    ) {
+      return "noun";
+    }
+
+    if (
+      f.endsWith("ive") || f.endsWith("ic") || f.endsWith("ical") ||
+      f.endsWith("able") || f.endsWith("ible") || f.endsWith("ous") ||
+      f.endsWith("ious") || f.endsWith("eous") || f.endsWith("ful") ||
+      f.endsWith("less") || f.endsWith("ish") || f.endsWith("ant") ||
+      f.endsWith("ent") || f.endsWith("al") || f.endsWith("ary") ||
+      f.endsWith("ory") || f.endsWith("ed") || f.endsWith("y")
+    ) {
+      return "adjective";
+    }
+
+    if (/^(in|un|im|ir|dis|non)/.test(f)) {
+      return "adjective";
+    }
+  }
+
+  return cleanBaseType;
+}
+
+// Helper to get translated word formation meaning from dictionary or Google Translate fallback
 function getWordFormationMeaning(
   rowMeaning: string,
   famMeaning: string,
@@ -296,6 +401,13 @@ function getWordFormationMeaning(
   translateFn: (text: string, options?: any) => string,
   options?: any
 ): string {
+  // 1. Try direct dictionary lookup for individual sub-meaning first
+  const directTrans = translateFn(famMeaning, options);
+  if (directTrans && directTrans !== famMeaning) {
+    return directTrans;
+  }
+
+  // 2. Fallback to translated whole row if dictionary maps full row string
   const translatedWhole = translateFn(rowMeaning, options);
   if (translatedWhole && translatedWhole !== rowMeaning) {
     const transParts = translatedWhole.split(/\s+\/\s+/);
@@ -308,7 +420,8 @@ function getWordFormationMeaning(
       return part.trim();
     }
   }
-  return translateFn(famMeaning, options);
+
+  return directTrans || famMeaning;
 }
 
 export default function ResourcesPage() {
@@ -975,14 +1088,9 @@ export default function ResourcesPage() {
                                   row.word.toLowerCase().includes(query) || 
                                   fam.forms.some(f => f.toLowerCase().includes(query))
                                 );
-                                
-                                // Extract examples for this specific form
+                                                                // Extract examples for this specific form
                                 const filteredExamples = row.example ? row.example.split("\n").filter((exLine: string) => {
-                                  const containsForm = fam.forms.some(f => {
-                                    const stem = f.replace(/\(([^)]+)\)/g, '$1').toLowerCase();
-                                    return exLine.toLowerCase().includes(stem);
-                                  });
-                                  return containsForm || parsedFamily.length === 1;
+                                  return isExampleForForm(exLine, fam, parsedFamily);
                                 }).join("\n") : "";
 
                                 return (
@@ -1008,9 +1116,14 @@ export default function ResourcesPage() {
                                     )}
                                     
                                     <TableCell className="font-mono pt-5">
-                                      <span className="px-2 py-0.5 rounded bg-teal-500/10 text-teal-600 dark:text-teal-400 text-xs border border-teal-500/20 font-bold">
-                                        {formsStr}
-                                      </span>
+                                      <div className="flex items-center gap-1.5 flex-wrap">
+                                        <span className="px-2 py-0.5 rounded bg-teal-500/10 text-teal-600 dark:text-teal-400 text-xs border border-teal-500/20 font-bold">
+                                          {formsStr}
+                                        </span>
+                                        <span className="px-1.5 py-0.5 rounded bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 text-[10px] border border-emerald-500/20 font-mono font-medium">
+                                          {abbreviateType(inferWordType(fam.forms, row.word, row.type))}
+                                        </span>
+                                      </div>
                                     </TableCell>
                                     
                                     <TableCell className="font-mono text-off-black text-sm max-w-[280px] break-words pt-5">
@@ -1069,18 +1182,19 @@ export default function ResourcesPage() {
                             {parsedFamily.map((fam, fIdx) => {
                               const formsStr = fam.forms.join(" / ");
                               const filteredExamples = row.example ? row.example.split("\n").filter((exLine: string) => {
-                                const containsForm = fam.forms.some(f => {
-                                  const stem = f.replace(/\(([^)]+)\)/g, '$1').toLowerCase();
-                                  return exLine.toLowerCase().includes(stem);
-                                });
-                                return containsForm || parsedFamily.length === 1;
-                              }).join("\n") : "";
+                                return isExampleForForm(exLine, fam, parsedFamily);
+                              }).join("\n") : "";;
 
                               return (
                                 <div key={fIdx} className="space-y-2 border-b border-off-black/5 dark:border-white/5 last:border-b-0 pb-3 last:pb-0">
-                                  <p className="px-2 py-0.5 rounded bg-teal-500/10 text-teal-600 dark:text-teal-400 text-xs border border-teal-500/20 font-bold w-max">
-                                    {formsStr}
-                                  </p>
+                                  <div className="flex items-center gap-1.5 flex-wrap">
+                                    <span className="px-2 py-0.5 rounded bg-teal-500/10 text-teal-600 dark:text-teal-400 text-xs border border-teal-500/20 font-bold">
+                                      {formsStr}
+                                    </span>
+                                    <span className="px-1.5 py-0.5 rounded bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 text-[10px] border border-emerald-500/20 font-mono font-medium">
+                                      {abbreviateType(inferWordType(fam.forms, row.word, row.type))}
+                                    </span>
+                                  </div>
                                   <p className="text-off-black/75"><span className="font-bold text-ink">{translate("Meaning")}:</span> {getWordFormationMeaning(row.meaning, fam.meaning, fIdx, translate, { lookupOnly: true })}</p>
                                   {filteredExamples && (
                                     <p className="italic text-pale-stone leading-relaxed whitespace-pre-line"><span className="font-bold text-ink not-italic">{translate("Example")}:</span> {filteredExamples}</p>

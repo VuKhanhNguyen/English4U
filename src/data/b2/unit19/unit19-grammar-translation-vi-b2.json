@@ -1,0 +1,67 @@
+{
+      "__B2_UNIT_19_GRAMMAR_COMMENT__": "----------------- UNIT 19: QUESTIONS, QUESTION TAGS, INDIRECT QUESTIONS -----------------",
+  "Unit 19: Questions, question tags, indirect questions": "Unit 19: Câu hỏi, câu hỏi đuôi, câu hỏi gián tiếp",
+  "Questions": "Câu hỏi",
+  "Used to ask for information. Formed by inverting the subject and auxiliary verb, or using do/does/did for main verbs.": "Được sử dụng để yêu cầu cung cấp thông tin. Thành lập bằng cách đảo chủ ngữ và trợ động từ, hoặc mượn do/does/did đối với động từ thường.",
+  "Question tags": "Câu hỏi đuôi",
+  "Used to ask for agreement or check information. Formed with an auxiliary verb/modal and a personal pronoun.": "Được sử dụng để yêu cầu sự đồng ý hoặc kiểm tra thông tin. Thành lập bằng một trợ động từ/động từ khuyết thiếu và một đại từ nhân xưng.",
+  "Indirect questions": "Câu hỏi gián tiếp",
+  "Used to ask for information in a polite way. Formed with a polite phrase followed by a clause in statement word order.": "Được sử dụng để yêu cầu thông tin một cách lịch sự. Thành lập bằng một cụm từ lịch sự theo sau là mệnh đề ở trật tự câu khẳng định.",
+
+  "A) QUESTIONS": "A) CÂU HỎI",
+  "1. QUESTION FORMULAS BY VERB TYPE": "1. CÔNG THỨC CÂU HỎI THEO LOẠI ĐỘNG TỪ",
+  "Questions Table": "Bảng công thức câu hỏi",
+  "Verb Type": "Loại động từ",
+  "Formula & Example": "Công thức & Ví dụ",
+  "Be as main verb": "Be là động từ chính",
+  "Be as auxiliary verb": "Be là trợ động từ",
+  "Have as auxiliary verb": "Have là trợ động từ",
+  "have / mean / other main verbs": "have / mean / động từ thường khác",
+  "Modals (Can, could, should, might...)": "Động từ khuyết thiếu (Can, could, should, might...)",
+
+  "2. WH- QUESTIONS": "2. CÂU HỎI TỪ ĐỂ HỎI (WH- QUESTIONS)",
+  "Wh- Words": "Từ để hỏi",
+  "Question Word": "Từ để hỏi",
+  "Example": "Ví dụ",
+
+  "3. WH- SUBJECT & OBJECT QUESTIONS NOTE": "3. LƯU Ý VỀ CÂU HỎI CHỦ NGỮ & TÂN NGỮ",
+  "With \"who\" and \"what\", we do not use an auxiliary verb (do/does/did) if the question word is the subject of the sentence. We use an auxiliary verb if the question word is the object of the sentence.": "Với \"who\" và \"what\", chúng ta không mượn trợ động từ (do/does/did) nếu từ để hỏi đóng vai trò là chủ ngữ của câu. Chúng ta mượn trợ động từ nếu từ để hỏi đóng vai trò là tân ngữ của câu.",
+
+  "B) QUESTION TAGS": "B) CÂU HỎI ĐUÔI (QUESTION TAGS)",
+  "1. GENERAL RULES": "1. CÁC QUY TẮC CHUNG",
+  "Used to ask someone to agree with us (falling intonation) or to check if something is true (rising intonation).": "Được dùng để yêu cầu ai đó đồng ý với mình (hạ giọng xuống) hoặc kiểm tra xem vấn đề gì đó đúng hay không (lên giọng).",
+  "**Positive sentence → negative question tag**": "**Câu khẳng định → câu hỏi đuôi phủ định**",
+  "**Negative sentence → positive question tag**": "**Câu phủ định → câu hỏi đuôi khẳng định**",
+
+  "2. FORMULAS & SPECIAL CASES BY VERB TYPE": "2. CÔNG THỨC & CÁC TRƯỜNG HỢP ĐẶC BIỆT THEO LOẠI ĐỘNG TỪ",
+  "Question Tags Reference": "Bảng câu hỏi đuôi tham khảo",
+  "Sentence & Question tag": "Câu & Câu hỏi đuôi",
+  "Auxiliary verbs": "Trợ động từ",
+  "Modals": "Động từ khuyết thiếu",
+  "Have as main verb": "Have là động từ chính",
+  "Other main verbs": "Các động từ khác",
+  "Let's": "Với Let's",
+  "Imperatives / Commands": "Sai khiến, mệnh lệnh",
+  "There is/are": "There's là chủ ngữ",
+  "Everyone / no one / someone": "Với \"everyone\", \"no one\" và \"someone\"",
+  "→ Use a plural question tag (pronoun 'they')\nEveryone's going to be there, aren't they?\nNo one wants to come, do they?\nSomeone's been in here, haven't they?": "→ Câu hỏi đuôi ở dạng số nhiều (đại từ 'they').\nEveryone's going to be there, aren't they?\nNo one wants to come, do they?\nSomeone's been in here, haven't they?",
+  "Negative words (no, little, no one, never, nobody, hardly, seldom, scarcely, barely, none, neither)": "Với các từ mang nghĩa phủ định (no, little, no one, never, nobody, hardly, seldom, scarcely, barely, none, neither)",
+  "→ The sentence is considered negative, so the question tag is positive.\nNobody knows about this, do they?": "→ Câu đó được coi là câu phủ định, do đó câu hỏi đuôi ở dạng khẳng định.\nNobody knows about this, do they?",
+  "have got": "Với \"have got\"",
+
+  "C) INDIRECT QUESTIONS": "C) CÂU HỎI GIÁN TIẾP (INDIRECT QUESTIONS)",
+  "1. PURPOSE & FORMULA": "1. MỤC ĐÍCH & CÔNG THỨC",
+  "Used to ask for information or make requests in a polite way.": "Sử dụng để yêu cầu thông tin hoặc đưa ra yêu cầu một cách lịch sự.",
+  "**Formula:** [polite phrase] + clause (subject + verb word order)": "**Công thức:** [cụm từ lịch sự] + mệnh đề (trật tự chủ ngữ + động từ)",
+
+  "2. COMPARISON OF POLITE INTRODUCTIONS": "2. SO SÁNH CÁC CỤM TỪ LỊCH SỰ MỞ ĐẦU",
+  "Indirect Questions Table": "Bảng câu hỏi gián tiếp",
+  "Introductory Polite Phrase": "Cụm từ lịch sự mở đầu",
+  "Example Indirect Question": "Ví dụ câu hỏi gián tiếp",
+
+  "3. IMPORTANT NOTES": "3. CÁC LƯU Ý QUAN TRỌNG",
+  "Do not use question word order (verb before subject) after the polite phrase.": "Không sử dụng trật tự từ của câu hỏi (động từ đứng trước chủ ngữ) phía sau cụm từ lịch sự.",
+  "If the indirect question starts with a question word (who, what, where, etc.) and the polite introduction is a question, we still put a question mark at the end.": "Nếu câu hỏi gián tiếp bắt đầu bằng từ để hỏi (who, what, where, v.v.) và cụm từ lịch sự mở đầu là câu hỏi, chúng ta vẫn đặt dấu chấm hỏi ở cuối.",
+
+  "For Yes/No questions, we use 'if' or 'whether' to connect the polite phrase with the clause.\nEX: I wonder if / whether you have read this book.": "Với câu hỏi Có/Không (Yes/No questions), chúng ta dùng 'if' hoặc 'whether' để nối cụm từ lịch sự với mệnh đề.\nEX: I wonder if / whether you have read this book."
+}

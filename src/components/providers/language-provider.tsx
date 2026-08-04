@@ -1,23 +1,19 @@
 "use client";
 
 import React, { createContext, useContext, useState, useEffect, useRef } from "react";
-import vocabTranslations from "@/data/vocab-translation-vi.json";
-import grammarTranslations from "@/data/grammar-translation-vi.json";
+import { b1Translations } from "@/data/b1-translations";
 import headerFooterTranslations from "@/data/header_footer-translation-vi.json";
 import aboutTranslations from "@/data/about-translation-vi.json";
-import vocabTranslationsB2 from "@/data/vocab-translation-vi-b2.json";
-import grammarTranslationsB2 from "@/data/grammar-translation-vi-b2.json";
+import { b2Translations } from "@/data/b2-translations";
 import resourcesTranslations from "@/data/resources-translation-vi.json";
 import contactTranslations from "@/data/contact-translation-vi.json";
 import { showToast } from "@/components/ui/toast";
 
 const customTranslations = {
-  ...vocabTranslations,
-  ...grammarTranslations,
+  ...b1Translations,
+  ...b2Translations,
   ...headerFooterTranslations,
   ...aboutTranslations,
-  ...vocabTranslationsB2,
-  ...grammarTranslationsB2,
   ...resourcesTranslations,
   ...contactTranslations,
 };

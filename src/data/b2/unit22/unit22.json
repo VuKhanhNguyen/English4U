@@ -1,0 +1,776 @@
+{
+  "id": "b2-unit-22",
+  "title": "Unit 22: Money and shopping",
+  "grammar": [],
+  "vocabulary": [
+    {
+      "word": "economic",
+      "type": "adj",
+      "meaning": "relating to trade, industry, and money",
+      "example": "The country is facing a severe economic crisis."
+    },
+    {
+      "word": "economical",
+      "type": "adj",
+      "meaning": "using money, time, etc. carefully without wasting any",
+      "example": "This small car is very economical on fuel."
+    },
+    {
+      "word": "receipt",
+      "type": "n",
+      "meaning": "a document showing that money has been paid",
+      "example": "Make sure you get a receipt for the camera."
+    },
+    {
+      "word": "bill",
+      "type": "n",
+      "meaning": "a document showing how much money you owe for goods or services",
+      "example": "Could we have the bill, please?"
+    },
+    {
+      "word": "make",
+      "type": "n",
+      "meaning": "a product made by a particular company",
+      "example": "What make is your car?"
+    },
+    {
+      "word": "brand",
+      "type": "n",
+      "meaning": "a type of product made by a particular company, that has its own name",
+      "example": "It is important to build a strong brand."
+    },
+    {
+      "word": "bargain",
+      "type": "n",
+      "meaning": "something on sale at a lower price than its true value",
+      "example": "This jacket was a real bargain at only $20."
+    },
+    {
+      "word": "sale",
+      "type": "n",
+      "meaning": "an event or period during which a shop sells goods at lower prices than usual",
+      "example": "I bought these boots in the January sales."
+    },
+    {
+      "word": "discount",
+      "type": "n",
+      "meaning": "a reduction in the usual price of something",
+      "example": "They offer a 10% discount to students."
+    },
+    {
+      "word": "offer",
+      "type": "n",
+      "meaning": "a special reduced price or opportunity for a limited time",
+      "example": "The shop has a special offer on digital cameras."
+    },
+    {
+      "word": "price",
+      "type": "n",
+      "meaning": "the amount of money for which something is sold",
+      "example": "The price of petrol has gone up again."
+    },
+    {
+      "word": "cost",
+      "type": "n",
+      "meaning": "the amount of money needed to buy, do, or make something",
+      "example": "We have to keep the cost of the project down."
+    },
+    {
+      "word": "change",
+      "type": "n",
+      "meaning": "coins rather than paper money, or the money returned when paying more than the price",
+      "example": "Here is your change and your receipt."
+    },
+    {
+      "word": "cash",
+      "type": "n",
+      "meaning": "money in the form of notes and coins",
+      "example": "Will you be paying in cash or by credit card?"
+    },
+    {
+      "word": "wealth",
+      "type": "n",
+      "meaning": "a large amount of money or valuable possessions",
+      "example": "His wealth is estimated at over $100 million."
+    },
+    {
+      "word": "fortune",
+      "type": "n",
+      "meaning": "a large amount of money",
+      "example": "She made a fortune from her business."
+    },
+    {
+      "word": "till",
+      "type": "n",
+      "meaning": "a drawer for money in a shop",
+      "example": "Please pay at the till."
+    },
+    {
+      "word": "checkout",
+      "type": "n",
+      "meaning": "the place in a shop where you pay for goods",
+      "example": "There was a long queue at the checkout."
+    },
+    {
+      "word": "products",
+      "type": "n",
+      "meaning": "things that are made to be sold or used",
+      "example": "They sell a wide range of organic products."
+    },
+    {
+      "word": "goods",
+      "type": "n",
+      "meaning": "possessions and items that can be moved and sold",
+      "example": "The company produces leather goods."
+    },
+    {
+      "word": "refund",
+      "type": "v",
+      "meaning": "to give back money, especially because goods are not satisfactory",
+      "example": "We will refund your money if you are not satisfied."
+    },
+    {
+      "word": "exchange",
+      "type": "v",
+      "meaning": "to give something and receive something of the same kind in return",
+      "example": "Can I exchange this shirt for a larger one?"
+    },
+    {
+      "word": "fake",
+      "type": "adj",
+      "meaning": "not real, made to look like something valuable or genuine in order to deceive",
+      "example": "He was arrested for using a fake passport."
+    },
+    {
+      "word": "plastic",
+      "type": "adj",
+      "meaning": "made of plastic",
+      "example": "We should avoid using single-use plastic bags."
+    },
+    {
+      "word": "invoice",
+      "type": "n",
+      "meaning": "an official document listing goods or services provided and their prices",
+      "example": "We sent them an invoice for the work completed."
+    },
+    {
+      "word": "sales",
+      "type": "n",
+      "meaning": "the department that sells a company's products, or the amount of goods sold",
+      "example": "Our sales have increased by 15% this month."
+    },
+    {
+      "word": "unbeatable",
+      "type": "adj",
+      "meaning": "impossible to defeat or improve upon; extremely good value",
+      "example": "Our prices are unbeatable."
+    },
+    {
+      "word": "washing powder",
+      "type": "n",
+      "meaning": "soap in the form of powder used for washing clothes",
+      "example": "She put a scoop of washing powder into the washing machine."
+    },
+    {
+      "word": "sack",
+      "type": "n",
+      "meaning": "a large bag made of strong material",
+      "example": "They bought a sack of potatoes."
+    },
+    {
+      "word": "will",
+      "type": "n",
+      "meaning": "a legal document stating a person's wishes regarding the disposal of their property after death",
+      "example": "He left all his money to charity in his will."
+    },
+    {
+      "word": "attic",
+      "type": "n",
+      "meaning": "a space or room just below the roof of a house",
+      "example": "We stored our old suitcases in the attic."
+    },
+    {
+      "word": "engagement ring",
+      "type": "n",
+      "meaning": "a ring given to someone to show that they are engaged to be married",
+      "example": "She showed her friends her beautiful engagement ring."
+    },
+    {
+      "word": "crisps",
+      "type": "n",
+      "meaning": "very thin slices of potato that have been fried till crunchy and eaten cold",
+      "example": "He ate a packet of crisps with his lunch."
+    },
+    {
+      "word": "crisis",
+      "type": "n",
+      "meaning": "a time of intense difficulty, trouble, or danger",
+      "example": "The country is facing an economic crisis."
+    },
+    {
+      "word": "head for",
+      "type": "phr",
+      "meaning": "move in the direction of",
+      "example": "We decided to head for the beach."
+    },
+    {
+      "word": "recreation",
+      "type": "n",
+      "meaning": "activity done for enjoyment when one is not working",
+      "example": "The park is used for leisure and recreation."
+    },
+    {
+      "word": "interest",
+      "type": "n",
+      "meaning": "money paid regularly at a particular rate for the use of money lent",
+      "example": "The bank charges high interest on loans."
+    },
+    {
+      "word": "affair programme",
+      "type": "n",
+      "meaning": "a television or radio programme about current political or social issues",
+      "example": "He likes watching current affairs programmes on TV."
+    }
+  ],
+  "phrasalVerbs": [
+    {
+      "phrasalVerb": "bank on",
+      "meaning": "depend on sth happening",
+      "example": "EX: I'm banking on getting a promotion next month."
+    },
+    {
+      "phrasalVerb": "come across",
+      "meaning": "find something or meet someone by chance",
+      "example": "EX: I came across an old photo of my parents in the drawer."
+    },
+    {
+      "phrasalVerb": "come by",
+      "meaning": "get something, especially something that is hard to get",
+      "example": "EX: Good jobs are hard to come by these days."
+    },
+    {
+      "phrasalVerb": "come into",
+      "meaning": "inherit money or property",
+      "example": "EX: She came into a lot of money when her grandfather died."
+    },
+    {
+      "phrasalVerb": "do without",
+      "meaning": "manage without having something",
+      "example": "EX: We will have to do without a car for a while."
+    },
+    {
+      "phrasalVerb": "get by",
+      "meaning": "manage to survive or live financially",
+      "example": "EX: It is difficult to get by on such a low salary."
+    },
+    {
+      "phrasalVerb": "get through",
+      "meaning": "use all of something, or finish something",
+      "example": "EX: We got through a lot of money on our holiday."
+    },
+    {
+      "phrasalVerb": "give away",
+      "meaning": "give something for free, or reveal a secret",
+      "example": "EX: They are giving away free samples of the new perfume."
+    },
+    {
+      "phrasalVerb": "live on",
+      "meaning": "use money to buy the things you need in life",
+      "example": "EX: They have to live on his pension."
+    },
+    {
+      "phrasalVerb": "look round",
+      "meaning": "examine a place",
+      "example": "EX: We spent the afternoon looking round the old town."
+    },
+    {
+      "phrasalVerb": "make out",
+      "meaning": "write all the necessary information on a cheque, etc.",
+      "example": "EX: Who should I make the cheque out to?"
+    },
+    {
+      "phrasalVerb": "make up for",
+      "meaning": "provide something good to balance or reduce the bad effect of something else",
+      "example": "EX: The nice weather made up for the bad hotel."
+    },
+    {
+      "phrasalVerb": "put by",
+      "meaning": "save money for a later time",
+      "example": "EX: We try to put by a little money every month for our holiday."
+    },
+    {
+      "phrasalVerb": "save up (for)",
+      "meaning": "save money for a specific purpose",
+      "example": "EX: She is saving up for a new laptop."
+    }
+  ],
+  "prepositionalPhrases": [],
+  "collocations": [
+    {
+      "word": "amount",
+      "collocation": "an amount of sth",
+      "meaning": "a quantity of something"
+    },
+    {
+      "word": "amount",
+      "collocation": "in large/small amounts",
+      "meaning": "in large or small quantities"
+    },
+    {
+      "word": "amount",
+      "collocation": "amount to",
+      "meaning": "add up to a total"
+    },
+    {
+      "word": "charge",
+      "collocation": "charge sb (an amount of money)",
+      "meaning": "ask someone to pay a certain amount"
+    },
+    {
+      "word": "charge",
+      "collocation": "pay a charge",
+      "meaning": "pay an amount of money for a service or privilege"
+    },
+    {
+      "word": "charge",
+      "collocation": "take charge of sth/doing",
+      "meaning": "accept responsibility for something"
+    },
+    {
+      "word": "charge",
+      "collocation": "in charge (of sth/doing)",
+      "meaning": "responsible for or in control of something"
+    },
+    {
+      "word": "demand",
+      "collocation": "in demand",
+      "meaning": "wanted by a lot of people"
+    },
+    {
+      "word": "demand",
+      "collocation": "on demand",
+      "meaning": "done or available whenever someone asks"
+    },
+    {
+      "word": "demand",
+      "collocation": "a demand for sth",
+      "meaning": "a strong request or need for something"
+    },
+    {
+      "word": "debt",
+      "collocation": "in debt (to sb)",
+      "meaning": "owing money to someone"
+    },
+    {
+      "word": "debt",
+      "collocation": "get in/into debt",
+      "meaning": "start to owe money"
+    },
+    {
+      "word": "debt",
+      "collocation": "clear a debt",
+      "meaning": "pay off a debt completely"
+    },
+    {
+      "word": "debt",
+      "collocation": "owe sb a debt of gratitude",
+      "meaning": "feel very grateful to someone for their help"
+    },
+    {
+      "word": "enough",
+      "collocation": "have enough of sth",
+      "meaning": "have a sufficient quantity of something"
+    },
+    {
+      "word": "enough",
+      "collocation": "have enough sth to do",
+      "meaning": "have sufficient things to perform an action"
+    },
+    {
+      "word": "enough",
+      "collocation": "enough is enough",
+      "meaning": "used to say that you will not tolerate any more of something"
+    },
+    {
+      "word": "expense",
+      "collocation": "at sb's own expense",
+      "meaning": "paid for by oneself rather than someone else"
+    },
+    {
+      "word": "expense",
+      "collocation": "go to the expense of",
+      "meaning": "spend money on something"
+    },
+    {
+      "word": "expense",
+      "collocation": "business expense",
+      "meaning": "costs incurred in the running of a business"
+    },
+    {
+      "word": "expense",
+      "collocation": "expense account",
+      "meaning": "an arrangement where an employer pays for business-related travel, meals, etc."
+    },
+    {
+      "word": "fortune",
+      "collocation": "make a fortune",
+      "meaning": "earn a large amount of money"
+    },
+    {
+      "word": "fortune",
+      "collocation": "earn a fortune",
+      "meaning": "earn a lot of money"
+    },
+    {
+      "word": "fortune",
+      "collocation": "cost (you) a fortune",
+      "meaning": "be extremely expensive"
+    },
+    {
+      "word": "fortune",
+      "collocation": "make your fortune",
+      "meaning": "become rich by working hard or being successful"
+    },
+    {
+      "word": "increase",
+      "collocation": "an increase in sth of (a certain amount)",
+      "meaning": "a rise in the amount or level of something"
+    },
+    {
+      "word": "increase",
+      "collocation": "a wage increase",
+      "meaning": "an increase in salary"
+    },
+    {
+      "word": "increase",
+      "collocation": "a price increase",
+      "meaning": "a rise in the cost of something"
+    },
+    {
+      "word": "least",
+      "collocation": "at least",
+      "meaning": "not less than; at the minimum"
+    },
+    {
+      "word": "least",
+      "collocation": "at the very least",
+      "meaning": "used to emphasize that a quantity is the absolute minimum"
+    },
+    {
+      "word": "least",
+      "collocation": "last but not least",
+      "meaning": "importantly, despite being mentioned after everyone else"
+    },
+    {
+      "word": "least",
+      "collocation": "to say the least",
+      "meaning": "used to suggest that the reality is more extreme than what you are saying"
+    },
+    {
+      "word": "money",
+      "collocation": "make/earn/win/save/have money",
+      "meaning": "obtain, keep, or possess money"
+    },
+    {
+      "word": "money",
+      "collocation": "spend money on sth/doing",
+      "meaning": "use money to buy goods or services"
+    },
+    {
+      "word": "money",
+      "collocation": "short of money",
+      "meaning": "not having enough money"
+    },
+    {
+      "word": "money",
+      "collocation": "do sth for the money",
+      "meaning": "perform an action solely to earn money"
+    },
+    {
+      "word": "notice",
+      "collocation": "notice sb doing/do",
+      "meaning": "observe someone performing an action"
+    },
+    {
+      "word": "notice",
+      "collocation": "take notice of sth",
+      "meaning": "pay attention to something"
+    },
+    {
+      "word": "notice",
+      "collocation": "at short notice",
+      "meaning": "only a short time before something happens"
+    },
+    {
+      "word": "notice",
+      "collocation": "give sb notice of",
+      "meaning": "inform someone in advance about something"
+    },
+    {
+      "word": "profit",
+      "collocation": "make a profit from sth",
+      "meaning": "earn more money than you spent from a transaction"
+    },
+    {
+      "word": "save",
+      "collocation": "save money",
+      "meaning": "keep money instead of spending it"
+    },
+    {
+      "word": "save",
+      "collocation": "save time",
+      "meaning": "do something faster to have more time available"
+    },
+    {
+      "word": "save",
+      "collocation": "save sth for later",
+      "meaning": "keep something to use at a future time"
+    },
+    {
+      "word": "shopping",
+      "collocation": "do the shopping",
+      "meaning": "buy food and other items for the household"
+    },
+    {
+      "word": "shopping",
+      "collocation": "go shopping",
+      "meaning": "visit shops to buy things"
+    },
+    {
+      "word": "shopping",
+      "collocation": "shopping centre",
+      "meaning": "a large building containing many shops"
+    },
+    {
+      "word": "shopping",
+      "collocation": "window shopping",
+      "meaning": "looking at goods in shop windows without buying them"
+    }
+  ],
+  "wordPatterns": [
+    {
+      "verb": "afford to do",
+      "pattern": "verb",
+      "meaning": "have enough money to perform an action",
+      "example": "EX: I can't afford to buy a new car."
+    },
+    {
+      "verb": "argue with sb",
+      "pattern": "verb",
+      "meaning": "speak angrily to someone because you disagree",
+      "example": "EX: Don't argue with your parents."
+    },
+    {
+      "verb": "argue about sth/doing",
+      "pattern": "verb",
+      "meaning": "disagree angrily about a topic or action",
+      "example": "EX: They are always arguing about money."
+    },
+    {
+      "verb": "argue that",
+      "pattern": "verb",
+      "meaning": "give reasons to support an opinion",
+      "example": "EX: The economist argued that taxes should be lowered."
+    },
+    {
+      "verb": "beg sb (for sth)",
+      "pattern": "verb",
+      "meaning": "ask someone for something in an anxious or humble way",
+      "example": "EX: They begged us for help."
+    },
+    {
+      "verb": "beg sb to do",
+      "pattern": "verb",
+      "meaning": "ask someone anxiously to perform an action",
+      "example": "EX: She begged him not to leave."
+    },
+    {
+      "verb": "belong to sb/sth",
+      "pattern": "verb",
+      "meaning": "be the property of someone or something",
+      "example": "EX: This book belongs to the library."
+    },
+    {
+      "verb": "borrow sth from sb",
+      "pattern": "verb",
+      "meaning": "take and use something belonging to someone else with the intention of returning it",
+      "example": "EX: Can I borrow a pen from you?"
+    },
+    {
+      "verb": "charge sb for sth/doing",
+      "pattern": "verb",
+      "meaning": "ask someone for money in exchange for something or an action",
+      "example": "EX: The hotel charged us $10 for breakfast."
+    },
+    {
+      "verb": "demand sth from sb",
+      "pattern": "verb",
+      "meaning": "ask for something forcefully from someone",
+      "example": "EX: They demanded an apology from him."
+    },
+    {
+      "verb": "demand that",
+      "pattern": "verb",
+      "meaning": "request forcefully that something should happen",
+      "example": "EX: The workers demanded that their wages be increased."
+    },
+    {
+      "verb": "forget to do",
+      "pattern": "verb",
+      "meaning": "fail to remember to perform a planned action",
+      "example": "EX: Don't forget to lock the door when you leave."
+    },
+    {
+      "verb": "forget doing",
+      "pattern": "verb",
+      "meaning": "fail to remember a past event or action",
+      "example": "EX: I will never forget visiting Paris for the first time."
+    },
+    {
+      "verb": "forget about sth/doing",
+      "pattern": "verb",
+      "meaning": "stop thinking about a topic or action",
+      "example": "EX: Let's forget about work and enjoy our dinner."
+    },
+    {
+      "verb": "forget if/whether",
+      "pattern": "verb",
+      "meaning": "not remember if a statement is true",
+      "example": "EX: I forget whether they have got children or not."
+    },
+    {
+      "verb": "lend sth to sb",
+      "pattern": "verb",
+      "meaning": "allow someone to use something on the understanding that they will return it",
+      "example": "EX: She lent her car to her brother."
+    },
+    {
+      "verb": "lend sb sth",
+      "pattern": "verb",
+      "meaning": "allow someone to use your property temporarily",
+      "example": "EX: Can you lend me your pen for a second?"
+    },
+    {
+      "verb": "pay sb for sth/doing",
+      "pattern": "verb",
+      "meaning": "give someone money for their work or services",
+      "example": "EX: He paid the builder for repairing the roof."
+    },
+    {
+      "verb": "pay sth (to sb)",
+      "pattern": "verb",
+      "meaning": "give an amount of money to someone",
+      "example": "EX: You have to pay the rent to the landlord tomorrow."
+    },
+    {
+      "verb": "profit from sth/doing",
+      "pattern": "verb",
+      "meaning": "gain an advantage or money from a situation or action",
+      "example": "EX: Many companies profited from the new law."
+    },
+    {
+      "verb": "save sb from sth/doing",
+      "pattern": "verb",
+      "meaning": "rescue someone from danger or a bad situation",
+      "example": "EX: The doctor saved him from dying."
+    },
+    {
+      "verb": "save sth for sth/sb",
+      "pattern": "verb",
+      "meaning": "keep something for a particular purpose or person",
+      "example": "EX: She saved some cake for her children."
+    },
+    {
+      "verb": "spend sth (on sth/sb/doing)",
+      "pattern": "verb",
+      "meaning": "use money or time on something or an action",
+      "example": "EX: He spent $50 on a new shirt."
+    }
+  ],
+  "wordFormation": [
+    {
+      "word": "accept",
+      "type": "verb",
+      "meaning": "accept: to receive or agree to something offered / acceptance: the action of consenting to receive or undertake something / acceptable or unacceptable: suitable, satisfactory (or not allowable) / acceptably or unacceptably: in an acceptable (or unacceptable) manner",
+      "example": "EX: Please accept our apologies.\nEX: The university sent her a letter of acceptance.\nEX: She is very accepting of other cultures.\nEX: His behaviour was completely unacceptable.\nEX: Her behaviour was not acceptably by the standards of the school."
+    },
+    {
+      "word": "assist",
+      "type": "verb",
+      "meaning": "assist: to help or support someone in a task or work / assistance: help or support provided to someone / assistant: a person who helps or supports a leader/manager",
+      "example": "EX: The army arrived to assist in the search.\nEX: Can I be of any assistance?\nEX: He works as a shop assistant."
+    },
+    {
+      "word": "day",
+      "type": "noun",
+      "meaning": "day: a 24-hour period, or the time between sunrise and sunset / daily: done, produced, or occurring every day",
+      "example": "EX: It was a beautiful sunny day.\nEX: Stress is a part of everyday life.\nEX: The newspaper is published daily."
+    },
+    {
+      "word": "economy",
+      "type": "noun",
+      "meaning": "economy: the system of trade, industry, and wealth in a country / economic: relating to the economy or economics / economical: giving good value or return in relation to money or time / economically: with regard to the economy or money / economics: the branch of knowledge concerned with wealth production / economist: an expert in economics",
+      "example": "EX: The economy is growing steadily.\nEX: She decided to study economics at university.\nEX: He is a well-known economist.\nEX: The country is facing economic problems.\nEX: It is uneconomical to run the heating all day.\nEX: Economically, this would be a bad decision."
+    },
+    {
+      "word": "end",
+      "type": "verb",
+      "meaning": "end: the final part or conclusion of something / ending: an action or event that terminates something / endless: having or seeming to have no end or limit / endlessly: continuously, without stopping",
+      "example": "EX: We came to the end of the road.\nEX: The film has a happy ending.\nEX: They faced unending difficulties.\nEX: We had an endless discussion about it.\nEX: She talked endlessly about her problems."
+    },
+    {
+      "word": "finance",
+      "type": "noun",
+      "meaning": "finance: the management of large amounts of money / financial: relating to finance or money matters / financially: in terms of money or financial affairs",
+      "example": "EX: The finance minister presented the budget to the parliament.\nEX: We need to manage our finances carefully.\nEX: The company is facing financial difficulties.\nEX: She is financially independent."
+    },
+    {
+      "word": "expense",
+      "type": "noun",
+      "meaning": "expense: the cost required for something; money spent / expensive or inexpensive: costing a lot of money (or cheap) / expensively or inexpensively: in an expensive (or cheap) manner",
+      "example": "EX: We went to a lot of expense for the wedding.\nEX: You can claim your travel expenses.\nEX: The government's expenditure on education has increased.\nEX: This watch is very expensive.\nEX: They live expensively."
+    },
+    {
+      "word": "invest",
+      "type": "verb",
+      "meaning": "invest: to put money, effort, or time into something for profit/gain / investment: the action or process of investing money / investor: a person or organization that puts money into financial schemes",
+      "example": "EX: He decided to invest in the stock market.\nEX: They are trying to attract foreign investors.\nEX: The new factory is a major investment."
+    },
+    {
+      "word": "luxury",
+      "type": "noun",
+      "meaning": "luxury: a state of great comfort, elegance, and expense / luxurious: extremely comfortable, elegant, or enjoyable / luxuriously: in a rich, comfortable, and elegant manner",
+      "example": "EX: They live in luxury.\nEX: We can't afford such luxuries.\nEX: They stayed at a luxurious hotel.\nEX: They live luxuriously."
+    },
+    {
+      "word": "pay",
+      "type": "verb",
+      "meaning": "pay: to give money for goods or services received / payment: an amount paid, or the act of paying / payee: a person to whom money is paid / payer: a person who pays money",
+      "example": "EX: How much did you pay for this shirt?\nEX: The bank received the payment yesterday.\nEX: The rent is payable on the first of the month."
+    },
+    {
+      "word": "poor",
+      "type": "adjective",
+      "meaning": "poor: lacking money, possessions, or good quality / poorly: badly or inadequately / poverty: the state of being extremely poor",
+      "example": "EX: He grew up in a poor family.\nEX: Millions of people live in poverty.\nEX: The children were poorly dressed."
+    },
+    {
+      "word": "real",
+      "type": "adjective",
+      "meaning": "real or unreal: actually existing and not imagined (or imaginary) / really: in actual fact; truly / reality: the state of things as they actually exist / realise or realize: to become fully aware of, or achieve a goal / realistic or unrealistic: showing sensible idea of what can be done (or unworkable)",
+      "example": "EX: This is a real gold watch.\nEX: We must face reality.\nEX: The plan was brought to realisation.\nEX: I suddenly realised I had lost my keys.\nEX: It is unrealistic to expect them to finish today.\nEX: I really don't know what to do.\nEX: Realistically, we should start early."
+    },
+    {
+      "word": "value",
+      "type": "noun",
+      "meaning": "value: the regard that something is held to deserve; importance or worth / valuable or invaluable: worth a lot of money (or extremely useful/precious) / valueless: having no financial or practical worth / valuation: an estimation of something's worth",
+      "example": "EX: The value of the house has increased.\nEX: They obtained a valuation of the property.\nEX: She gave me a valuable gold ring.\nEX: The painting was found to be valueless.\nEX: They need to know that their time is going to be used valuably."
+    },
+    {
+      "word": "wealth",
+      "type": "noun",
+      "meaning": "wealth: an abundance of valuable possessions or money / wealthy: having a great deal of money or assets; rich",
+      "example": "EX: His wealth has grown over the years.\nEX: They are a wealthy family."
+    }
+  ]
+}
