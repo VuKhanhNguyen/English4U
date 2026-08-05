@@ -7,6 +7,8 @@ import aboutTranslations from "@/data/about-translation-vi.json";
 import { b2Translations } from "@/data/b2-translations";
 import resourcesTranslations from "@/data/resources-translation-vi.json";
 import contactTranslations from "@/data/contact-translation-vi.json";
+import userProfileTranslations from "@/data/user_profile-translation-vi.json";
+import loginRegisterTranslations from "@/data/login_register-translation-vi.json";
 import { showToast } from "@/components/ui/toast";
 
 const customTranslations = {
@@ -16,6 +18,8 @@ const customTranslations = {
   ...aboutTranslations,
   ...resourcesTranslations,
   ...contactTranslations,
+  ...userProfileTranslations,
+  ...loginRegisterTranslations,
 };
 
 type Language = "en" | "vi";

@@ -8,7 +8,7 @@ All notable changes to the **English4U** project are documented below. This proj
 
 | Key Metrics         | Value / Badges                                                                                                                             |
 | :------------------ | :----------------------------------------------------------------------------------------------------------------------------------------- |
-| **Current Version** | ![Version](https://img.shields.io/badge/version-v1.8.0-blue.svg?style=for-the-badge&logo=git)                                              |
+| **Current Version** | ![Version](https://img.shields.io/badge/version-v2.0.0-blue.svg?style=for-the-badge&logo=git)                                              |
 | **Framework**       | ![Next.js](https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white)                                 |
 | **Styling**         | ![CSS](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)                                             |
 | **Language**        | ![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)                          |
@@ -46,7 +46,63 @@ gantt
     v1.7.0 SaaS Glassmorphic & 3D Coverflow :active, 2026-07-18, 2026-07-19
     section Glitch & Typography
     v1.8.0 GlitchText & TextType SaaS  :active, 2026-07-19, 2026-07-19
+    section Full-Stack Auth & Backend
+    v2.0.0 Spring Boot 3, JWT & OAuth2 :active, 2026-08-05, 2026-08-06
 ```
+
+---
+
+## 🚀 v2.0.0 — Spring Boot 3 Backend Architecture, Full-Stack JWT Auth, Google & GitHub OAuth2, Cloudinary Storage & Profile Hero Redesign
+
+> **Release Date:** August 06, 2026 • _Focus: Production Java Spring Boot 3 REST API Backend, Full-Stack HTTP-Only Cookie JWT Authentication, Google & GitHub OAuth2 Social Login, Cloudinary Image Storage, Facebook-Style Overlapping Profile Hero Banner, Session Expired Warning Modal, Confirm Logout Dialog, and EN/VI i18n System_
+
+```
+┌──────────────────────────────────────────────────────────────────┐
+│  ✨ Highlights:                                                  │
+│  • Full-stack Java Spring Boot 3 REST Backend (Java 17, JPA, MySQL)│
+│  • Secure HTTP-Only Cookie JWT Authentication System            │
+│  • Google & GitHub OAuth2 Social Login Integration & Handlers    │
+│  • Cloudinary Java SDK Integration for Avatar & Cover Uploads    │
+│  • Facebook-Style Profile Hero Banner (208px overlapping avatar) │
+│  • Global Session Expired Popup Modal with Auto-Redirect to /login│
+│  • Universal Confirm Logout Modal with double-confirmation flow │
+│  • EN/VI i18n Translation Dictionaries & Auth Form Toggle Pills  │
+│  • Expanded Auth Form Card padding and spacious input typography │
+└──────────────────────────────────────────────────────────────────┘
+```
+
+### ☕ Java Spring Boot 3 Backend Architecture (`english4u-backend`)
+- **Core Technology Stack**: Initialized production Java Spring Boot 3 REST API service using Java 17, Spring Security 6, Spring Data JPA, Hibernate, Lombok, and MySQL 8.
+- **JWT Security Interceptor**: Built `JwtAuthenticationFilter` using `jjwt 0.12.6` to parse and validate HTTP-Only bearer cookies (`accessToken` & `refreshToken`) on protected API routes while rejecting unauthenticated access with clean HTTP 401 JSON payloads.
+- **REST Endpoints**:
+  - `/api/v1/auth/register`: User registration with BCrypt password hashing and `ROLE_USER` assignment.
+  - `/api/v1/auth/login`: User login returning HTTP-Only JWT cookies.
+  - `/api/v1/auth/refresh`: Access token refresh flow using refresh token cookie.
+  - `/api/v1/auth/logout`: Secure cookie destruction and security context cleanup.
+  - `/api/v1/auth/me`: Current user session details endpoint.
+  - `/api/v1/users/profile`: Full name, avatar URL, and cover photo profile updates.
+  - `/api/v1/upload/image`: Multipart image file upload endpoint.
+
+### 🔑 Google & GitHub OAuth2 Social Authentication
+- **OAuth2 Client Integration**: Integrated `spring-boot-starter-oauth2-client` with custom `OAuth2SuccessHandler` class (`OAuth2SuccessHandler.java`).
+- **Auto-Provisioning**: Automatically provisions new database accounts with `ROLE_USER`, `email`, `fullName`, and `avatarUrl` upon successful OAuth2 callback from Google or GitHub.
+- **Spring Security Endpoint Mapping**: Permitted OAuth2 authorization routes (`/oauth2/authorization/*`) and redirection callback URIs (`/login/oauth2/code/*`).
+- **Social Login Buttons**: Added responsive Google (SVG logo) and GitHub (Octocat logo) login/register buttons to `LoginForm` and `RegisterForm` with an `"OR CONTINUE WITH"` divider.
+
+### ☁️ Cloudinary Storage & Facebook-Style Profile Hero Banner
+- **Cloudinary Integration**: Added Cloudinary Java SDK (`com.cloudinary:cloudinary-http44:1.39.0`) and configured `CloudinaryConfig`, `CloudinaryService`, and `UploadController`.
+- **Hero Cover Photo**: Redesigned `/profile` hero banner with high-impact cover photo (`user.coverUrl`, height `h-64 sm:h-80 md:h-96`) and a glassmorphic `"Edit Cover"` camera button.
+- **Overlapping Avatar**: Designed 208px prominent overlapping circular avatar (`w-40 sm:w-48 md:w-52`, `-mt-24 sm:-mt-28 md:-mt-32`) with specular ring borders (`ring-8 ring-paper-canvas dark:ring-zinc-950`) and a 1-click camera upload button.
+
+### 🛡️ Global Auth Modals & Session Security
+- **Session Expired Warning Modal**: Implemented `auth:unauthorized` event listener in `AuthContext` to trigger a Framer Motion warning modal when JWT tokens expire or 401 errors occur. Clicking **OK** redirects to `/login`.
+- **Confirm Logout Dialog**: Replaced instant logout actions across Desktop Navbar, Mobile Drawer, and Profile Page with a sleek modal asking *"Are you sure you want to log out of your account?"* with **Cancel** and **Logout** options.
+
+### 🌐 EN/VI i18n System & Auth Form Toggle
+- **Translation Dictionaries**: Created `user_profile-translation-vi.json` and `login_register-translation-vi.json` for full Vietnamese translation coverage.
+- **LanguageProvider Merge**: Merged dictionaries into `LanguageProvider` for instant cross-application locale switching.
+- **Auth Form Toggle Pills**: Added glassmorphic `EN | VI` toggle pills at the top of `LoginForm` and `RegisterForm`.
+- **Spacious Layout Polish**: Expanded auth card container width (`max-w-lg`) and padding (`p-8 sm:p-10 md:p-12`) with increased input field spacing (`space-y-6 sm:space-y-7`).
 
 ---
 

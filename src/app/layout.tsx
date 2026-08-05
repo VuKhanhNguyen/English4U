@@ -15,6 +15,7 @@ import { AnimationProvider } from "@/components/providers/animation-provider";
 import { cn } from "@/lib/utils";
 import Toaster from "@/components/ui/toast";
 import { PwaProvider } from "@/components/providers/pwa-provider";
+import { AuthProvider } from "@/context/AuthContext";
 import ContactBubbles from "@/components/ui/ContactBubbles";
 
 const ibmPlexMono = IBM_Plex_Mono({
@@ -77,19 +78,21 @@ export default function RootLayout({
           <ThemeProvider>
             <LanguageProvider>
               <AnimationProvider>
-                <PwaProvider>
-                  <PageTransitionLoader />
-                  <SplashCursor />
-                  {/* <TargetCursor /> */}
-                  <GradualBlur preset="page-footer" zIndex={40} height="20px"  />
-                  <div className="fixed inset-0 pointer-events-none -z-10 overflow-hidden">
-                    <ParallaxBackground />
-                  </div>
-                  <Toaster defaultPosition="top-right"/>
-                  <LiquidGlassFilter />
-                  <ContactBubbles />
-                  {children}
-                </PwaProvider>
+                <AuthProvider>
+                  <PwaProvider>
+                    <PageTransitionLoader />
+                    <SplashCursor />
+                    {/* <TargetCursor /> */}
+                    <GradualBlur preset="page-footer" zIndex={40} height="20px"  />
+                    <div className="fixed inset-0 pointer-events-none -z-10 overflow-hidden">
+                      <ParallaxBackground />
+                    </div>
+                    <Toaster defaultPosition="top-right"/>
+                    <LiquidGlassFilter />
+                    <ContactBubbles />
+                    {children}
+                  </PwaProvider>
+                </AuthProvider>
               </AnimationProvider>
             </LanguageProvider>
           </ThemeProvider>
