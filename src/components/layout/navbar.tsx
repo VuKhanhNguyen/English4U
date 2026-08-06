@@ -2,8 +2,9 @@
 
 import * as React from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
-import { ChevronDown, Menu, Settings, Sun, Moon, X, User, LogOut, ChevronRight, LogIn, UserPlus, Sparkles, Globe } from "lucide-react";
+import { ChevronDown, Menu, Settings, Sun, Moon, X, User, LogOut, ChevronRight, LogIn, UserPlus, Sparkles, Globe, Home, Compass, FolderOpen, Mail } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/components/providers/language-provider";
@@ -15,6 +16,7 @@ import { useAuth } from "@/context/AuthContext";
 import GlassSurface from "@/components/GlassSurface";
 
 export function Navbar() {
+  const pathname = usePathname();
   const { user, isAuthenticated, confirmLogout } = useAuth();
   const [isScrolled, setIsScrolled] = React.useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = React.useState(false);
@@ -31,6 +33,59 @@ export function Navbar() {
   const blueColor = isDark ? "#60a5fa" : "#1b4fa3";
   const whiteColor = isDark ? "#ffffff" : "#475569";
   const yellowColor = isDark ? "#ea580c" : "#ea580c";
+
+  const activeTab = React.useMemo(() => {
+    if (!pathname) return "home";
+    if (pathname === "/" || pathname === "/home") return "home";
+    if (pathname.startsWith("/destination")) return "destination";
+    if (pathname.startsWith("/resources")) return "resources";
+    if (pathname.startsWith("/contact")) return "contact";
+    if (pathname.startsWith("/profile") || pathname.startsWith("/login") || pathname.startsWith("/register")) return "profile";
+    return "home";
+  }, [pathname]);
+
+  const mobileNavItems = React.useMemo(() => [
+    {
+      id: "home",
+      label: translate("Home"),
+      href: "/home",
+      icon: Home,
+      activeBg: "bg-purple-100/90 border-purple-300 text-purple-900 dark:bg-purple-500/25 dark:border-purple-500/40 dark:text-purple-200",
+      iconColor: "text-purple-600 dark:text-purple-400",
+    },
+    {
+      id: "destination",
+      label: "Destination",
+      href: "/destination/b1",
+      icon: Compass,
+      activeBg: "bg-amber-100/90 border-amber-300 text-amber-900 dark:bg-amber-500/25 dark:border-amber-500/40 dark:text-amber-200",
+      iconColor: "text-amber-600 dark:text-amber-400",
+    },
+    {
+      id: "resources",
+      label: translate("Resources"),
+      href: "/resources",
+      icon: FolderOpen,
+      activeBg: "bg-emerald-100/90 border-emerald-300 text-emerald-900 dark:bg-emerald-500/25 dark:border-emerald-500/40 dark:text-emerald-200",
+      iconColor: "text-emerald-600 dark:text-emerald-400",
+    },
+    {
+      id: "contact",
+      label: translate("Contact"),
+      href: "/contact",
+      icon: Mail,
+      activeBg: "bg-rose-100/90 border-rose-300 text-rose-900 dark:bg-rose-500/25 dark:border-rose-500/40 dark:text-rose-200",
+      iconColor: "text-rose-600 dark:text-rose-400",
+    },
+    {
+      id: "profile",
+      label: isAuthenticated ? (user?.fullName?.split(" ")[0] || "Profile") : translate("Login"),
+      href: isAuthenticated ? "/profile" : "/login",
+      icon: User,
+      activeBg: "bg-cyan-100/90 border-cyan-300 text-cyan-900 dark:bg-cyan-500/25 dark:border-cyan-500/40 dark:text-cyan-200",
+      iconColor: "text-cyan-600 dark:text-cyan-400",
+    },
+  ], [translate, isAuthenticated, user]);
 
   React.useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
@@ -115,10 +170,10 @@ export function Navbar() {
         {/* Desktop Nav */}
         <nav className="hidden md:flex items-center gap-4 relative z-10">
           <Link
-            href="/"
+            href="/home"
             className="text-sm font-normal text-off-black px-[10px] py-[8px] hover:underline hover:decoration-off-black transition-all"
           >
-            <span className="text-grad-about" style={getGradientStyle(0)}>{translate("About")}</span>
+            <span className="text-grad-about" style={getGradientStyle(0)}>{translate("Home")}</span>
           </Link>
 
           {/* Hover-activated dropdown */}
@@ -523,12 +578,13 @@ export function Navbar() {
           )}
         </div>
 
-        {/* Mobile Menu Toggle */}
+        {/* Mobile Settings Gear Button in Top Header */}
         <button
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-          className="md:hidden p-2 text-ink relative z-50 cursor-pointer outline-none border-none bg-transparent"
+          className="md:hidden p-2 text-ink relative z-50 cursor-pointer outline-none border-none bg-transparent flex items-center justify-center rounded-full hover:bg-off-black/5 dark:hover:bg-white/10 transition-colors"
+          title="Settings"
         >
-            <Menu className="w-[24px] h-[24px]" />
+            <Settings className="w-[20px] h-[20px]" />
         </button>
         </div>
       </GlassSurface>
@@ -651,11 +707,11 @@ export function Navbar() {
                 {/* Nav Links */}
                 <nav className="flex flex-col gap-2">
                   <Link
-                    href="/#about"
+                    href="/home"
                     onClick={() => setIsMobileMenuOpen(false)}
                     className="text-lg font-normal text-off-black py-3 px-4 hover:bg-off-black/5 dark:hover:bg-white/10 rounded-2xl transition-all"
                   >
-                    {translate("About")}
+                    {translate("Home")}
                   </Link>
 
                   {/* Expandable Destination link */}
@@ -868,6 +924,121 @@ export function Navbar() {
           </>
         )}
       </AnimatePresence>
+
+      {/* Mobile Floating Bottom Dock Navigation Bar (Matching User Image) */}
+      <div className="fixed bottom-4 left-3 right-3 z-50 md:hidden pointer-events-auto flex flex-col items-center">
+        {/* Destination Submenu Popover if active/clicked */}
+        <AnimatePresence>
+          {isMobileDestinationsOpen && (
+            <motion.div
+              initial={{ opacity: 0, y: 12, scale: 0.92 }}
+              animate={{ opacity: 1, y: 0, scale: 1 }}
+              exit={{ opacity: 0, y: 12, scale: 0.92 }}
+              transition={{ type: "spring", stiffness: 400, damping: 25 }}
+              className="mb-3 w-full max-w-xs rounded-[24px] p-2 bg-white/95 dark:bg-black/95 backdrop-blur-2xl border border-zinc-200/80 dark:border-zinc-800 shadow-[0_12px_35px_rgba(0,0,0,0.12)] dark:shadow-[0_12px_40px_rgba(0,0,0,0.6)] flex flex-col gap-1 text-zinc-900 dark:text-white z-50"
+            >
+              <div className="px-3 py-1.5 text-[11px] font-bold text-zinc-400 uppercase tracking-wider border-b border-zinc-100 dark:border-zinc-800/80 flex items-center justify-between">
+                <span>Destination Level</span>
+                <button
+                  onClick={() => setIsMobileDestinationsOpen(false)}
+                  className="text-zinc-400 hover:text-zinc-600 dark:hover:text-zinc-300 p-0.5 border-none bg-transparent cursor-pointer"
+                >
+                  <X className="w-3.5 h-3.5" />
+                </button>
+              </div>
+              <Link
+                href="/destination/b1"
+                onClick={() => setIsMobileDestinationsOpen(false)}
+                className="flex items-center justify-between px-3 py-2.5 rounded-xl text-xs font-semibold text-zinc-800 dark:text-zinc-200 hover:bg-zinc-100 dark:hover:bg-white/10 transition-colors"
+              >
+                <span>Destination B1</span>
+                <ChevronRight className="w-4 h-4 text-zinc-400 dark:text-zinc-500" />
+              </Link>
+              <Link
+                href="/destination/b2"
+                onClick={() => setIsMobileDestinationsOpen(false)}
+                className="flex items-center justify-between px-3 py-2.5 rounded-xl text-xs font-semibold text-zinc-800 dark:text-zinc-200 hover:bg-zinc-100 dark:hover:bg-white/10 transition-colors"
+              >
+                <span>Destination B2</span>
+                <ChevronRight className="w-4 h-4 text-zinc-400 dark:text-zinc-500" />
+              </Link>
+              <button
+                onClick={(e) => {
+                  e.preventDefault();
+                  setIsMobileDestinationsOpen(false);
+                  showToast({
+                    title: "Under Development",
+                    message: "Destination C1 & C2 is currently under development. Stay tuned!",
+                    variant: "warning",
+                    position: "top-right",
+                  });
+                }}
+                className="w-full flex items-center justify-between px-3 py-2.5 rounded-xl text-xs font-semibold text-zinc-500 dark:text-zinc-400 hover:bg-zinc-100 dark:hover:bg-white/5 transition-colors border-none bg-transparent cursor-pointer text-left"
+              >
+                <span>Destination C1 & C2</span>
+                <span className="text-[10px] bg-amber-500/20 text-amber-700 dark:text-amber-300 px-2 py-0.5 rounded-full font-bold">Soon</span>
+              </button>
+            </motion.div>
+          )}
+        </AnimatePresence>
+
+        {/* Mobile Dock Container matching the photo design & theme modes */}
+        <div className="w-full max-w-md bg-[#faf8f5]/90 dark:bg-[#0c0c0f]/95 backdrop-blur-2xl border border-zinc-200/90 dark:border-white/15 shadow-[0_10px_30px_rgba(0,0,0,0.08)] dark:shadow-[0_12px_40px_rgba(0,0,0,0.6)] rounded-full p-1.5 flex items-center justify-around relative">
+          {mobileNavItems.map((item) => {
+            const Icon = item.icon;
+            const isActive = activeTab === item.id;
+
+            return (
+              <div key={item.id} className="relative flex items-center justify-center">
+                {item.id === "destination" ? (
+                  <button
+                    onClick={() => {
+                      setIsMobileDestinationsOpen(!isMobileDestinationsOpen);
+                    }}
+                    className="relative z-10 flex items-center justify-center border-none bg-transparent outline-none cursor-pointer py-1 px-1"
+                  >
+                    {isActive ? (
+                      <motion.div
+                        layoutId="mobile-nav-pill"
+                        className={`flex items-center gap-2 px-4 py-2 rounded-full border shadow-xs ${item.activeBg}`}
+                        transition={{ type: "spring", stiffness: 450, damping: 32 }}
+                      >
+                        <Icon className={`w-4 h-4 ${item.iconColor}`} />
+                        <span className="text-xs font-bold whitespace-nowrap tracking-tight">{item.label}</span>
+                      </motion.div>
+                    ) : (
+                      <div className="p-2.5 rounded-full text-zinc-400 hover:text-zinc-700 dark:text-zinc-400 dark:hover:text-white transition-colors">
+                        <Icon className="w-5 h-5" />
+                      </div>
+                    )}
+                  </button>
+                ) : (
+                  <Link
+                    href={item.href}
+                    onClick={() => setIsMobileDestinationsOpen(false)}
+                    className="relative z-10 flex items-center justify-center outline-none cursor-pointer py-1 px-1"
+                  >
+                    {isActive ? (
+                      <motion.div
+                        layoutId="mobile-nav-pill"
+                        className={`flex items-center gap-2 px-4 py-2 rounded-full border shadow-xs ${item.activeBg}`}
+                        transition={{ type: "spring", stiffness: 450, damping: 32 }}
+                      >
+                        <Icon className={`w-4 h-4 ${item.iconColor}`} />
+                        <span className="text-xs font-bold whitespace-nowrap tracking-tight">{item.label}</span>
+                      </motion.div>
+                    ) : (
+                      <div className="p-2.5 rounded-full text-zinc-400 hover:text-zinc-700 dark:text-zinc-400 dark:hover:text-white transition-colors">
+                        <Icon className="w-5 h-5" />
+                      </div>
+                    )}
+                  </Link>
+                )}
+              </div>
+            );
+          })}
+        </div>
+      </div>
       <GlassFilter />
     </header>
   );

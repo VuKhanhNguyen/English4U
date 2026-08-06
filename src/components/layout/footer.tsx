@@ -55,10 +55,10 @@ export function Footer() {
               <ul className="flex flex-col gap-3">
                 <li>
                   <Link 
-                    href="/#about" 
+                    href="/home" 
                     className="text-[#8ea0b5] hover:text-white transition-colors text-sm underline decoration-[#8ea0b5]/50 hover:decoration-white"
                   >
-                    {translate("About")}
+                    {translate("Home")}
                   </Link>
                 </li>
                 <li>

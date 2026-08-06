@@ -39,7 +39,7 @@ export default function ContactBubbles() {
   ];
 
   return (
-    <div className="fixed bottom-6 right-6 z-50 flex items-center justify-center select-none">
+    <div className="fixed bottom-25 right-6 z-50 flex items-center justify-center select-none">
       {/* Expanded arc menu items */}
       <AnimatePresence>
         {isOpen &&
