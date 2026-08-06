@@ -8,7 +8,7 @@ All notable changes to the **English4U** project are documented below. This proj
 
 | Key Metrics         | Value / Badges                                                                                                                             |
 | :------------------ | :----------------------------------------------------------------------------------------------------------------------------------------- |
-| **Current Version** | ![Version](https://img.shields.io/badge/version-v2.0.0-blue.svg?style=for-the-badge&logo=git)                                              |
+| **Current Version** | ![Version](https://img.shields.io/badge/version-v2.1.0-blue.svg?style=for-the-badge&logo=git)                                              |
 | **Framework**       | ![Next.js](https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white)                                 |
 | **Styling**         | ![CSS](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)                                             |
 | **Language**        | ![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)                          |
@@ -48,7 +48,62 @@ gantt
     v1.8.0 GlitchText & TextType SaaS  :active, 2026-07-19, 2026-07-19
     section Full-Stack Auth & Backend
     v2.0.0 Spring Boot 3, JWT & OAuth2 :active, 2026-08-05, 2026-08-06
+    section Advanced Auth & Caching
+    v2.1.0 Redis, Mail OTP & OAuth2 Flow :active, 2026-08-06, 2026-08-07
 ```
+
+---
+
+## 🚀 v2.1.0 — Redis Caching & Token Blacklist, Mail OTP Password Recovery, Multi-Step OTP UI, Google OAuth2 Rehydration & Containerized Docker Architecture
+
+> **Release Date:** August 07, 2026 • _Focus: Redis Caching & Distributed Token Security (Refresh Token Whitelist & Access Token Blacklist), Email Verification OTP System with Thymeleaf HTML Templates, Anti-Spam Redis Rate Limiting, Multi-Step OTP Password Reset UI (6-digit Auto-Focus Inputs & 60s Resend Timer), Google OAuth2 Redirect Rehydration Handler, and Full-Stack Docker Container Orchestration_
+
+```
+┌──────────────────────────────────────────────────────────────────┐
+│  ✨ Highlights:                                                  │
+│  • Redis Caching & Token Security (Refresh Whitelist & Blacklist)│
+│  • Redis Rate Limiting (Anti-spam 10 requests / 15 mins for OTP) │
+│  • JavaMailSender + Thymeleaf HTML Email Template for OTPs       │
+│  • Full Multi-Step Password Recovery Flow (/forgot-password)     │
+│  • 6-Digit Auto-Focus OTP Input with 60s Resend Countdown Timer  │
+│  • Google OAuth2 Rehydration Handler (/oauth2/redirect)          │
+│  • Containerized Docker Orchestration (Spring Boot, MySQL, Redis)│
+│  • Whitelisted Auth Endpoints in api-client.ts to prevent false 401s│
+└──────────────────────────────────────────────────────────────────┘
+```
+
+### ⚡ Backend Spring Boot Architecture (`english4u-backend`)
+- **Redis Token Management & Security**:
+  - `RedisTokenService` & `RedisTokenServiceImpl`: Persistent Refresh Token Whitelisting (`RT:<email>`) in Redis with configurable TTL.
+  - Access Token Blacklisting (`BL:<accessToken>`) on logout with remaining token TTL to prevent token reuse.
+  - `JwtAuthenticationFilter`: Integrated Redis Blacklist verification (`redisTokenService.isAccessBlacklisted(jwt)`) before authenticating requests.
+  - User Token Revocation: Automatically revokes all active Refresh Tokens for a user on password reset to force logout across all active devices.
+- **Email Service & Password Reset (Forgot / Reset Password)**:
+  - `OTPService` & `OTPServiceImpl`: Generates 6-digit numeric OTPs stored in Redis (`OTP:FORGOT:<email>`) with 5-minute TTL.
+  - **Redis Rate Limiting**: Anti-spam rate limiting enforced via Redis (`RATE_LIMIT:FORGOT:<email>`), capping reset requests to 10 requests / 15 minutes.
+  - `EmailService` & `EmailServiceImpl`: Generates styled HTML emails via Thymeleaf template `templates/mail/reset-password-email.html`. Includes Dev Mode console log fallback for local testing without real SMTP.
+  - `PasswordResetController`: Exposes `/api/v1/auth/forgot-password`, `/api/v1/auth/verify-otp`, and `/api/v1/auth/reset-password`.
+- **OAuth2 & Spring Security**:
+  - `CustomOAuth2UserService` & `OAuth2SuccessHandler`: Handles Google & GitHub login callbacks, stores Refresh Tokens in Redis, issues HTTP-Only Cookies, and redirects to `/oauth2/redirect`.
+  - `SecurityConfig`: Permitted public access to password recovery and OAuth2 endpoints.
+
+### 🎨 Frontend Next.js App Router (`english4u`)
+- **Social Login Component**:
+  - `SocialLoginButtons.tsx`: Reusable component for Google & GitHub social auth buttons integrated in `LoginForm` and `RegisterForm`.
+- **Multi-Step Password Recovery UI**:
+  - `ForgotPasswordForm.tsx`: Step 1 Email input form triggering OTP generation.
+  - `OTPVerifyForm.tsx`: Step 2 OTP verification featuring 6 individual numeric inputs with auto-focus, backspace navigation, paste support, and a 60-second countdown timer for the Resend OTP button.
+  - `ResetPasswordForm.tsx`: Step 3 New password form with client-side validation and success confirmation.
+  - `src/app/(auth)/forgot-password/page.tsx` & `src/app/(auth)/reset-password/page.tsx`: Pages built with English4U's Liquid Glass UI theme.
+- **OAuth2 Redirect Handler & State Management**:
+  - `src/app/oauth2/redirect/page.tsx`: OAuth2 callback handler fetching `/auth/me`, re-hydrating `AuthContext`, and executing full page navigation (`window.location.href`) to `/home` to ensure Navbar and layout cache update immediately without requiring manual `Ctrl+Shift+R`.
+  - `api-client.ts`: Updated `isAuthEndpoint` whitelist to include `/auth/forgot-password`, `/auth/verify-otp`, and `/auth/reset-password` to prevent false "Session Expired" popups.
+
+### 🐳 Containerized Docker Infrastructure
+- **Docker Compose Orchestration**: Containerized multi-service environment (`english4u-backend` on Spring Boot 3, `english4u-mysql` on MySQL 8.0, `english4u-redis` on Redis 7-alpine).
+- **Environment Synchronization**: Synced `MAIL_USERNAME` and `MAIL_PASSWORD` env vars between `.env`, `docker-compose.yml`, and `application.properties`.
+
+---
 
 ---
 

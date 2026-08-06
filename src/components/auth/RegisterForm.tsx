@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
+import { SocialLoginButtons } from "@/components/auth/SocialLoginButtons";
 import { User, Mail, Lock, Eye, EyeOff, Loader2, UserPlus, AlertCircle, CheckCircle2, Globe } from "lucide-react";
 import { useAuth } from "@/context/AuthContext";
 import { useLanguage } from "@/components/providers/language-provider";
@@ -76,6 +77,16 @@ export const RegisterForm: React.FC = () => {
     setError(null);
     setSuccessMessage(null);
 
+    const trimmedFullName = fullName.trim();
+    const fullNameRegex = /^[\p{L}]+(\s+[\p{L}]+)*$/u;
+
+    if (!trimmedFullName || !fullNameRegex.test(trimmedFullName)) {
+      setError(
+        translate("Full name must contain only letters and spaces, without numbers or special characters")
+      );
+      return;
+    }
+
     // Client-side validations
     if (password.length < 6) {
       setError(translate("Password must be at least 6 characters."));
@@ -90,7 +101,7 @@ export const RegisterForm: React.FC = () => {
     setIsLoading(true);
 
     try {
-      await register({ fullName, email, password });
+      await register({ fullName: trimmedFullName, email, password });
       setSuccessMessage(translate("Registration Successful"));
       setTimeout(() => {
         router.push("/login");
@@ -290,36 +301,8 @@ export const RegisterForm: React.FC = () => {
         </button>
       </div>
 
-      {/* Social Auth Divider */}
-      <div className="relative my-6 flex items-center justify-center">
-        <div className="absolute inset-0 flex items-center">
-          <div className="w-full border-t border-ink/10 dark:border-white/10" />
-        </div>
-        <div className="relative px-3 bg-paper-canvas dark:bg-zinc-950 text-[11px] font-mono text-pale-stone uppercase tracking-wider">
-          {translate("Or continue with")}
-        </div>
-      </div>
-
-      {/* Social Buttons (Google & GitHub) */}
-      <div className="grid grid-cols-2 gap-3">
-        <button
-          type="button"
-          onClick={() => handleSocialAuth("google")}
-          className="flex items-center justify-center gap-2.5 py-3 px-4 rounded-2xl bg-white/10 dark:bg-white/5 border border-zinc-200/50 dark:border-zinc-800/50 hover:bg-white/20 dark:hover:bg-white/10 text-ink text-xs font-mono font-bold transition-all hover:scale-[1.02] active:scale-[0.98] cursor-pointer shadow-sm"
-        >
-          <GoogleIcon />
-          <span>Google</span>
-        </button>
-
-        <button
-          type="button"
-          onClick={() => handleSocialAuth("github")}
-          className="flex items-center justify-center gap-2.5 py-3 px-4 rounded-2xl bg-white/10 dark:bg-white/5 border border-zinc-200/50 dark:border-zinc-800/50 hover:bg-white/20 dark:hover:bg-white/10 text-ink text-xs font-mono font-bold transition-all hover:scale-[1.02] active:scale-[0.98] cursor-pointer shadow-sm"
-        >
-          <GitHubIcon />
-          <span>GitHub</span>
-        </button>
-      </div>
+      {/* Social Buttons */}
+      <SocialLoginButtons />
 
       {/* Bottom Switch Link */}
       <p className="text-center text-xs sm:text-sm text-pale-stone dark:text-gray-400 font-sans pt-4">

@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import Link from "next/link";
+import { SocialLoginButtons } from "@/components/auth/SocialLoginButtons";
 import { Mail, Lock, Eye, EyeOff, Loader2, LogIn, AlertCircle, Globe } from "lucide-react";
 import { useAuth } from "@/context/AuthContext";
 import { useLanguage } from "@/components/providers/language-provider";
@@ -138,10 +139,16 @@ export const LoginForm: React.FC = () => {
 
       {/* Password Input */}
       <div className="space-y-2">
-        <div className="flex justify-between items-center">
-          <label className="block text-xs font-semibold uppercase tracking-wider text-pale-stone dark:text-gray-400 mb-2">
+        <div className="flex justify-between items-center mb-2">
+          <label className="block text-xs font-semibold uppercase tracking-wider text-pale-stone dark:text-gray-400">
             {translate("Password")}
           </label>
+          <Link
+            href="/forgot-password"
+            className="text-xs font-semibold text-blue-600 dark:text-blue-400 hover:underline"
+          >
+            {translate("Forgot Password?")}
+          </Link>
         </div>
         <div className="relative">
           <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none text-gray-400">
@@ -186,36 +193,8 @@ export const LoginForm: React.FC = () => {
         </button>
       </div>
 
-      {/* Social Auth Divider */}
-      <div className="relative my-6 flex items-center justify-center">
-        <div className="absolute inset-0 flex items-center">
-          <div className="w-full border-t border-ink/10 dark:border-white/10" />
-        </div>
-        <div className="relative px-3 bg-paper-canvas dark:bg-zinc-950 text-[11px] font-mono text-pale-stone uppercase tracking-wider">
-          {translate("Or continue with")}
-        </div>
-      </div>
-
-      {/* Social Buttons (Google & GitHub) */}
-      <div className="grid grid-cols-2 gap-3">
-        <button
-          type="button"
-          onClick={() => handleSocialAuth("google")}
-          className="flex items-center justify-center gap-2.5 py-3 px-4 rounded-2xl bg-white/10 dark:bg-white/5 border border-zinc-200/50 dark:border-zinc-800/50 hover:bg-white/20 dark:hover:bg-white/10 text-ink text-xs font-mono font-bold transition-all hover:scale-[1.02] active:scale-[0.98] cursor-pointer shadow-sm"
-        >
-          <GoogleIcon />
-          <span>Google</span>
-        </button>
-
-        <button
-          type="button"
-          onClick={() => handleSocialAuth("github")}
-          className="flex items-center justify-center gap-2.5 py-3 px-4 rounded-2xl bg-white/10 dark:bg-white/5 border border-zinc-200/50 dark:border-zinc-800/50 hover:bg-white/20 dark:hover:bg-white/10 text-ink text-xs font-mono font-bold transition-all hover:scale-[1.02] active:scale-[0.98] cursor-pointer shadow-sm"
-        >
-          <GitHubIcon />
-          <span>GitHub</span>
-        </button>
-      </div>
+      {/* Social Buttons */}
+      <SocialLoginButtons />
 
       {/* Bottom Switch Link */}
       <p className="text-center text-xs sm:text-sm text-pale-stone dark:text-gray-400 font-sans pt-4">

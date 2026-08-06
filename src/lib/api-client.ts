@@ -57,7 +57,10 @@ async function customFetch<T>(endpoint: string, options: RequestOptions = {}): P
       const isAuthEndpoint =
         endpoint.includes("/auth/login") ||
         endpoint.includes("/auth/register") ||
-        endpoint.includes("/auth/refresh");
+        endpoint.includes("/auth/refresh") ||
+        endpoint.includes("/auth/forgot-password") ||
+        endpoint.includes("/auth/verify-otp") ||
+        endpoint.includes("/auth/reset-password");
 
       if (isAuthEndpoint) {
         const errorData = await response.json().catch(() => ({}));

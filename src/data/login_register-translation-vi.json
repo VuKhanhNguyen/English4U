@@ -24,6 +24,7 @@
   "Registration Successful": "Đăng ký thành công",
   "Please fill in all required fields": "Vui lòng điền đầy đủ các thông tin bắt buộc",
   "Passwords do not match": "Mật khẩu xác nhận không khớp nhau",
+  "Full name must contain only letters and spaces, without numbers or special characters": "Họ và tên chỉ được chứa chữ cái và khoảng trắng, không bắt đầu hoặc chứa số và ký tự đặc biệt",
   "Back to Home": "Quay lại trang chủ",
   "Account Created": "Đã tạo tài khoản"
 }
