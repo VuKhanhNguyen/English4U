@@ -74,6 +74,34 @@ export default function RootLayout({
             `,
           }}
         />
+        <Script
+          id="chunk-error-recovery"
+          strategy="beforeInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function() {
+                function handleChunkError(e) {
+                  var err = (e && (e.reason || e.error)) || e;
+                  var msg = (err && (err.message || err.toString())) || '';
+                  if (msg.indexOf('ChunkLoadError') !== -1 || msg.indexOf('Failed to load chunk') !== -1 || msg.indexOf('Loading chunk') !== -1) {
+                    var key = 'english4u_chunk_reload';
+                    if (!sessionStorage.getItem(key)) {
+                      sessionStorage.setItem(key, '1');
+                      window.location.reload();
+                    }
+                  }
+                }
+                window.addEventListener('error', handleChunkError, true);
+                window.addEventListener('unhandledrejection', handleChunkError);
+                window.addEventListener('load', function() {
+                  setTimeout(function() {
+                    sessionStorage.removeItem('english4u_chunk_reload');
+                  }, 3000);
+                });
+              })();
+            `,
+          }}
+        />
         <SmoothScrollProvider>
           <ThemeProvider>
             <LanguageProvider>
